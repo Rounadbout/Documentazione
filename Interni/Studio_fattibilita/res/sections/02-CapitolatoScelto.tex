@@ -2,28 +2,52 @@
 
 \subsection{Informazioni generali}
 	\begin{itemize}
-		\item \textbf{Nome: } \NomeProgetto{}; 
-		\item \textbf{Proponente: } \Proponente;
-		\item \textbf{Committente: } \TV{} e \RC{}. 
+		\item \textbf{Nome:} \NomeProgetto{}; 
+		\item \textbf{Proponente:} \Proponente;
+		\item \textbf{Committente:} \TV{} e \RC{}. 
 	\end{itemize}
 
 \subsection{Descrizione}
+Etherless è una piattaforma cloud che permette agli sviluppatori di fare il deploy di funzioni javascript nel cloud e far pagare gli utenti finali per la relativa esecuzione tramite l'utilizzo di smart-contract. 
 
 \subsection{Obiettivo finale}
+La struttura richiesta per Etherless si compone di 3 moduli principali: 
+\begin{itemize}
+	\item \textbf{Etherless-cli:} è il modulo con cui gli sviluppatori interagiscono con Etherless. Supporta diversi comandi, tramite i quali lo sviluppatore può: 
+		\begin{itemize}
+			\item configurare il proprio account; 
+			\item eseguire il deploy di funzioni javascript; 
+			\item visualizzare la lista delle funzioni di cui ha già svolto il deploy; 
+			\item richiedere l'esecuzione di una funzione e visualizzarne il risultato; 
+			\item visualizzare i log relativi all'esecuzione di una specifica funzione; 
+		\end{itemize}  
+	\item \textbf{Etherless-smart:} un insieme di Ethereum smart-contract che gestiscono la comunicazione tra \textit{Etherless-cli} e \textit{Etherless-server} e i pagamenti in ETH necessari per l'esecuzione delle funzioni; 
+	\item \textbf{Etherless-server:} si occupa di ascoltare gli eventi emessi da \textit{Etherless-smart} e di far eseguire le funzioni così richieste. I risultati ottenuti vengono trasmessi tramite un ulteriore evento nella blockchain e mostrati all'utente attraverso \textit{Etherless-cli};  
+\end{itemize}
 
 \subsection{Tecnologie coinvolte}
 	\begin{itemize}
-		\item 
+		\item \textbf{Ethereum:} piattaforma che permette ai suoi utenti di scrivere applicazioni decentralizzate (dette DAPP) che usano la tecnologia blockchain;
+		\item \textbf{Ethereum Virtual Machine (EVM):} macchina virtuale distribuita sulla rete Ethereum; 
+		\item \textbf{Solidity:} linguaggio usato per la codifica degli smart-contract; 
+		\item \textbf{Serverless Framework:} framework per la realizzazione di applicazioni che vengono eseguite in architetture serverless (come AWS Lambda, Google Cloud Functions, Microsoft Azure Functions); 
+		\item \textbf{Typescript 3.6:} Linguaggio che supporta JavaScript ES6, introducendo alcune funzionalità, tra cui la tipizzazione;
+		\item \textbf{ESLint:} tool di analisi statica del codice e syntax checking; 
+		\item \textbf{AWS Lambda:} consente di eseguire codice in risposta a determinati eventi, senza dover effettuare il provisioning né gestire server.
 	\end{itemize}
 
 \subsection{Aspetti positivi}
 	\begin{itemize}
-		\item 
+		\item La blockchain e le tecnologie serverless sono argomenti che hanno suscitato un notevole interesse negli ultimi anni; per questo la relativa conoscenza potrebbe essere positiva da un punto di vista curricolare; 
+		\item la conoscenza di TypeScript e JavaScript è molto richiesta, oltre ad essere la base di svariate librerie e framework; 
+		\item il tema principale del progetto è stato accolto con molto interesse dal gruppo, che si è dimostrato disponibile ad approfondire l'argomento. 
 	\end{itemize}
 
 \subsection{Criticità}
 	\begin{itemize}
-		\item 
+		\item L'azienda ha sede all'estero, quindi la comunicazione con i referenti sarà meno agevole rispetto ad aziende che si trovano nel territorio nazionale; 
+		\item il capitolato richiede l'utilizzo di tecnologie recenti, la cui documentazione potrebbe non essere pienamente esaustiva e il cui apprendimento richiederà una mole di studio non indifferente. 
 	\end{itemize}
 
 \subsection{Esito}
+  Il progetto è stato subito accolto caldamente dai componenti del gruppo, le sfide tecnologiche sono stimolanti e gli argomenti trattati sono di interesse. Con questo progetto tutti i componenti del team avranno l’opportunità di studiare un campo dell’informatica che all’università è poco trattato, potendo aggiungere al proprio bagaglio curricolare delle voci particolarmente interessanti.
