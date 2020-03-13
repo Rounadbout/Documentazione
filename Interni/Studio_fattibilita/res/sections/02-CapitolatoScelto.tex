@@ -8,7 +8,7 @@
 	\end{itemize}
 
 \subsection{Descrizione}
-Etherless è una piattaforma cloud che permette agli sviluppatori di fare il deploy di funzioni javascript nel cloud e far pagare gli utenti finali per la relativa esecuzione tramite l'utilizzo di smart-contract. 
+Etherless è una piattaforma cloud che permette agli sviluppatori di fare il deploy di funzioni javascript nel cloud e far pagare gli utenti finali per la relativa esecuzione tramite l'utilizzo di smart-contract. Etherless si basa sull'integrazione di due tecnologie: Serverless e Ethereum. Ethereum viene utilizzato per la gestione dei pagamenti e la richiesta di esecuzione di funzioni. Serverless, invece, per l'effettiva esecuzione di tali funzioni. La comunicazione tra queste due tecnologie è resa possibile tramite l'ascolto e l'emissione di eventi Ethereum. 
 
 \subsection{Obiettivo finale}
 La struttura richiesta per Etherless si compone di 3 moduli principali: 
@@ -21,6 +21,8 @@ La struttura richiesta per Etherless si compone di 3 moduli principali:
 			\item richiedere l'esecuzione di una funzione e visualizzarne il risultato; 
 			\item visualizzare i log relativi all'esecuzione di una specifica funzione; 
 		\end{itemize}  
+	A seconda del comando, \textit{Etherless-cli} si occuperà di emettere o rimanere in attesa di un determinato evento Ethereum. 
+	
 	\item \textbf{Etherless-smart:} un insieme di Ethereum smart-contract che gestiscono la comunicazione tra \textit{Etherless-cli} e \textit{Etherless-server} e i pagamenti in ETH necessari per l'esecuzione delle funzioni; 
 	\item \textbf{Etherless-server:} si occupa di ascoltare gli eventi emessi da \textit{Etherless-smart} e di far eseguire le funzioni così richieste. I risultati ottenuti vengono trasmessi tramite un ulteriore evento nella blockchain e mostrati all'utente attraverso \textit{Etherless-cli};  
 \end{itemize}
