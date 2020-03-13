@@ -1,0 +1,30 @@
+\subsection{Capitolato d'appalto C4: Predire in Grafana}
+	\subsubsection{Introduzione al capitolato}
+	\begin{itemize}
+		\item \textbf{Nome:} Predire in Grafana
+		\item \textbf{Proponente:} Zucchetti Spa
+		\item \textbf{Committenti:} \TV, \RC
+	\end{itemize}
+	
+	\subsubsection{Descrizione}
+	Attualmente il proponente fa ampio uso del progetto open-source di 	nome Grafana per monitorare la "liveliness" dei propri sistemi, ovvero per avere una visione generale sullo stato di operatività di essi in tempo reale. Il proponente desidera estendere tali capacità aggiungendo un complesso sistema di previsioni che, basandosi sui dati raccolti, riescano a segnalare potenziali irregolarità in arrivo sui singoli componenti o quanto meno identificare le singole zone di intervento.
+	
+	\subsubsection{Obiettivo Finale}
+	Il prodotto finale richiesto è composto da due plug-in scritti in Javascript che, oltre a gestire Grafana, applicano Support Vector Machine (SVM) e/o Regressione Lineare (RL) al flusso dei dati ricevuti per allarmi o segnalazioni tra gli operatori del servizio Cloud e la linea di produzione del software. Tali plug-in devono essere in grado di applicare gli algoritmi sopra citati a nodi della rete specifici in base ai dati che ricevono in input. Le previsioni ottenute saranno successivamente inserite all'interno del sistema di monitoraggio di Grafana come se fossero dati realmente registrati. Sarà di conseguenza possibile visualizzare i grafici e la dashboard aggiornate con le previsioni del sistema. Il prodotto  finale può inoltre avere alcune funzionalità opzionali, tra le quali essere in grado di scatenare degli alert se i nodi collegati alle previsioni raggiungono o superano certi livelli di soglia oppure applicare delle trasformazioni alle misure lette dal campo per ottenere delle regressioni esponenziali o logaritmiche oltre a quelle lineari.
+	
+	\subsection{Tecnologie Coinvolte}
+	\begin{itemize}
+		\item \textbf{Javascript:} linguaggio di programmazione lato client in cui sono stati sviluppati Grafana e alcune delle librerie consigliate per gli algoritmi SVM e RL.
+		\item \textbf{Grafana:} Progetto open-source che permette il monitoraggio dei dati in tempo reale.
+		\item \textbf{Github:} Piattaforma ospitante di progetti e librerie open-source.
+		\item \textbf{Orange Canvas:} Strumento che permette di comprendere meglio la SVM e la RL.
+	\end{itemize}
+	
+	\subsubsection{Aspetti Positivi}
+		La collaborazione con un proponente di importanza mondiale, quale la Zucchetti Spa, è un'esperienza che offre la possibilità di crescita sia a livello personale che professionale, oltre a rappresentare un primo passo importante verso il mondo del lavoro. Il progetto offre varie opportunità di apprendimento di nuovi concetti 	informatici e matematici, potenzialmente riutilizzabili in un secondo momento, vista 	la politica di "maximum reliability" dei servizi Cloud sempre più numerosi. Apprezziamo inoltre la decisione del proponente di condividere il prodotto finale come progetto open-source, in modo tale da renderlo disponibile ad un numero 	sempre maggiore di utenti.
+	
+	\subsubsection{Criticità}
+		Il progetto richiede la conoscenza di argomenti il cui approfondimento può impiegare più tempo di quellodisponibile. Nessuno dei membri del team ha avuto l'opportunità di affrontare argomenti di tale natura.
+	
+	\subsubsection{Esito}
+		Vista la scarsa preparazione dei membri del team nell'ambito dei modelli di apprendimento automatico, la relativa complessità degli argomenti trattati e le alte aspettative da parte del proponente si è deciso di non proporsi per la realizzazione del capitolato.

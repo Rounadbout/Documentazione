@@ -1,0 +1,64 @@
+\subsection{Capitolato d'appalto C5: Stalker}
+	\subsubsection{Introduzione al capitolato}
+	\begin{itemize}
+		\item \textbf{Nome:} Stalker
+		\item \textbf{Proponente:} Imola Informatica
+		\item \textbf{Committenti:} \TV, \RC
+	\end{itemize}
+	
+	\subsubsection{Descrizione}
+	La normativa vigente in materia di sicurezza regolamenta la gestione delle presenze nei locali pubblici ed aperti al pubblico prevedendo una serie di precauzioni ed adempimenti volti a garantire uno sfollamento sicuro in caso di emergenze e bisogno. La verifica dell'applicazione di tali vincoli è attualmente compito di persone fisiche ed è conseguentemente soggetta a errori di natura umana.
+	Si vuole automatizzare tale processo creando una rete di smartphone appartenenti ai visitatori del locale in questione. Basandosi sullo stato di tale rete e/o sulla posizione dei dispositivi recuperata tramite GPS, sarà possibile risalire al numero totale di individui presenti in una certa area geografica. Sarà inoltre possibile, per le reti adeguatamente configurate, identificare univocamente ogni client collegato alla rete, una funzionalità fondamentale per verificare la presenza dei dipendenti nel posto di lavoro.
+	
+	\subsubsection{Obiettivo Finale}
+	Il prodotto finale prevede un server dotato di UI e un applicazione sviluppata per Android oppure iOS.\\
+	Per comprendere meglio il problema definiamo i suguenti concetti:
+	\begin{itemize}
+		\item \textbf{Organizzazione:} Un soggetto che ha interesse a tracciare le presenze delle persone all’interno dei propri luoghi, in maniera anonima o autenticata.
+		\item \textbf{Luogo:} Spazio fisico indentificato da un insieme di coordinate geografiche. Ciascun luogo è riconducibile ad una organizzazione. 
+		\item \textbf{Tracciatura:}  rilevamento della presenza all’interno di un luogo. Può essere:
+		\begin{itemize}
+			\item \textbf{anonima:} quando il soggetto non è autenticato nell’organizzazione di riferimento;
+			\item \textbf{autenticata:} quando il soggetto è autenticato nell’organizzazione di riferimento.
+		\end{itemize}
+	\end{itemize}
+	Il server deve svolgere i seguenti compiti:
+	\begin{itemize}
+		\item -Permettere la registrazione delle organizzazioni e la definizione della loro struttura tramite una mappa interattiva, permettendo l'inserimento e la gestione dei luoghi ad essa appartenenti.
+		\item Nel caso in cui l'organizzazione decida di implementare una tracciatura autenticata deve essere possibile prevedere una procedura di autenticazione, specifica per l'organizzazione stessa.
+		\item Fornire un tipo di autenticazione che permetta di gestire le autorizzazioni degli utenti. In base al livello di autorizzazione del singolo utente sarà possibile fare ricerche e analisi statistiche sui dati registrati dall'organizzazione.
+	\end{itemize}
+	L'applicazione per smartphone riguarda maggiormente gli individui tracciati e deve avere le seguenti funzionalità:
+	\begin{itemize}
+		\item Consultare la lista delle organizzazioni disponibili.
+		\item Fare il Log In nella propria organizzazione, anche come utente anonimo se la propria organizzazione prevede la tracciatura autenticata.
+		\item Visualizzare il tempo reale della propria presenza e lo storico degli accessi.
+	\end{itemize}
+	Il sistema inoltre deve essere facilmente scalabile secondo la politica della scalabilità orizzontale per permettere la tracciatura anche in luoghi molto affollati, come le fiere. Per garantire tale funzionalità è necessario implementare dei test di carico che dimostrino il corretto funzionamento in situazioni normali, di carico e di sovraccarico.\\
+	Sono inoltre richiesti test di sistema con copertura di test $>=80\%$ correlata di report, e la completa documentazione per quanto riguarda:
+	\begin{itemize}
+		\item scelte implementative e progettuali effettuate e relative motivazioni;
+		\item problemi aperti e eventuali soluzioni proposte da esplorare
+	\end{itemize}
+	\subsection{Tecnologie Coinvolte}
+	\begin{itemize}
+		\item \textbf{Java:} Linguaggio di programmazione per applicazioni Android(versione 8 o superiori).
+		\item \textbf{Swift:} Linguaggio di programmazione per applicazioni iOS.
+		\item \textbf{python o nodejs:} sviluppo del server back-end.
+		\item \textbf{Javascript:} linguaggio di programmazione lato client.
+		\item \textbf{Android Studio oppure XCode:} IDE di sviluppo per applicazioni per Android e iOS.
+		\item \textbf{Protocolli asincroni:} per le comunicazioni mobile-server
+		\item \textbf{Pattern di Publisher/Subscriber:} utilizzo dell’IAAS Kubernetes o di un PAAS, Openshift o Rancher, per il rilascio delle componenti del Server nonché per la gestione della scalabilità orizzontale.
+		\item \textbf{API Rest:} API attraverso le quali sia possibile utilizzare l'applicativo. In alternativa è possibile utilizzare \textbf{gRPC3} come soluzione alternativa
+	\end{itemize}
+	
+	\subsubsection{Aspetti Positivi}
+		Apprezziamo l'approccio semplice con cui si tenta di risolvere un problema di grande calibro particolarmente importante nella società di oggi. Stalker, oltre ad eliminare potenziali errori umani, rafforza e migliora i sistemi di sicurezza già presenti in modo elegante e non intrusivo.
+		Inoltre, Il prodotto aiuta l'avanzamento tecnologico eliminando la necessità di registri cartacei per quanto riguarda la gestione della presenza nel posto di lavoro e il conteggio delle ore lavorative svolte.
+		Sono svariate le casistiche in cui questo progetto può dare valore aggiuntivo all'organizzazione ricevente, dalle piccole aziende alle fiere di dimensione notevoli. Di conseguenza, visto il numero elevato di potenziali utenti, pensiamo che questo progetto sia un ottimo modo per investire il nostro tempo.
+	
+	\subsubsection{Criticità}
+		Le tecnologie coinvolte sono numerose e maggiormente sconosciute ai membri del team. Lo studio di tali tecnologie e lo svolgimento del lavoro richiesto può facilmente impiegare più tempo di quello disponibile.
+	
+	\subsubsection{Esito}
+		Senz'altro trattasi di uno dei progetti più interessanti con svariate possibilità di applicazione. Purtroppo però, non essendo più tra i capitolati disponibili, non è stato possibile candidarsi.
