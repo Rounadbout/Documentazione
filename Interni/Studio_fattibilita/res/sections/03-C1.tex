@@ -2,16 +2,16 @@
 
 \subsubsection{Informazioni generali}
 	\begin{itemize}
-		\item \textbf{Nome:} Autonomous Highlights Platform; 
+		\item \textbf{Nome:} Autonomous Highlights\ped{\emph{G}} Platform; 
 		\item \textbf{Proponente:} Zero12;
 		\item \textbf{Committente:} \TV{} e \RC{}. 
 	\end{itemize}
 
 \subsubsection{Descrizione}
-Creare una piattaforma web che riceve in input dei video di eventi sportivi come una partita di calcio, F1, Moto GP e crea in autonomia un video di massimo 5 minuti contenente i suoi momenti salienti. 
+Creare una piattaforma web che riceve in input dei video di eventi sportivi, come una partita di calcio o una gara di F1/Moto GP, e crea in autonomia un video di massimo 5 minuti contenente i suoi momenti salienti. 
 
 \subsubsection{Obiettivo finale}
-Viene richiesto che la piattaforma sia dotata di un modello di machine learning in grado di identificare ogni momento importante dell’evento.
+Viene richiesto che la piattaforma sia dotata di un modello\ped{\emph{G}} di machine learning\ped{\emph{G}} in grado di identificare ogni momento importante dell’evento.
 Il flusso di generazione di tale video deve essere così strutturato:
 	\begin{itemize}
 		\item caricamento del video;
@@ -22,27 +22,27 @@ Il flusso di generazione di tale video deve essere così strutturato:
 
 \subsubsection{Tecnologie coinvolte}
 	\begin{itemize}
-		\item \textbf{Elastic Container Service o Elastic Kubernetes Service:} è un servizio di orchestrazione di contenitori altamente dimensionabile ad elevate
+		\item \textbf{Elastic Container Service}\ped{\emph{G}} \textbf{o Elastic Kubernetes Service:} è un servizio di orchestrazione di contenitori altamente dimensionabile ad elevate
 		prestazioni; 
-		\item \textbf{DynamoDB:} database NoSQL dalle alte performance ideale per la conservazione di tag o altre informazioni a supporto dell'applicativo; 
-		\item \textbf{AWS Transcode:} servizio gestito per la conversione ed elaborazione di diversi formati video; 
-		\item \textbf{Sage Maker:} servizio completamente gestito che copre l'intero flusso di lavoro dell'apprendimento automatico per etichettare e preparare i
-		dati, scegliere un algoritmo, formare il modello, ottimizzarlo per la distribuzione, effettuare previsioni e intraprendere azioni; 
-		\item \textbf{AWS Rekognition video:} servizio di analisi video basato su apprendimento approfondito; è in grado di riconoscere i movimenti delle persone
+		\item \textbf{DynamoDB:} database NoSQL\ped{\emph{G}} dalle alte performance, ideale per la conservazione di tag o altre informazioni a supporto dell'applicativo; 
+		\item \textbf{AWS}\ped{\emph{G}} \textbf{Transcode:} servizio gestito per la conversione ed elaborazione di diversi formati video; 
+		\item \textbf{Sage Maker}\ped{\emph{G}}\textbf{:} servizio completamente gestito che copre l'intero flusso di lavoro dell'apprendimento automatico\ped{\emph{G}}: etichettazione e preparazione dei
+		dati, scelta di un algoritmo, formazione del modello\ped{\emph{G}}, ottimizzazione di quest'ultimo per la distribuzione, generazione di previsioni ed avvio di azioni; 
+		\item \textbf{AWS}\ped{\emph{G}} \textbf{Rekognition video:} servizio di analisi video basato su apprendimento approfondito\ped{\emph{G}}; è in grado di riconoscere i movimenti delle persone
 		in un fotogramma e di riconoscere soggetti, volti, oggetti, celebrità e contenuti inappropriati. 
 	\end{itemize}
 
 \subsubsection{Aspetti positivi}
 	\begin{itemize}
 		\item Tutte le tecnologie coinvolte sono ben documentate; 
-		\item il proponente zero12 fornisce attività di formazione sulle principali tecnologie AWS e wireframe dell’interfaccia della console web di analisi e controllo dello stato di elaborazione dei video per la generazione del video di highlights.
+		\item il proponente zero12 fornisce attività di formazione sulle principali tecnologie AWS\ped{\emph{G}} e wireframe\ped{\emph{G}}, utilizzate dall’interfaccia della console web di analisi e controllo dello stato di elaborazione dei video, per la generazione del video di highlights\ped{\emph{G}}.
 	\end{itemize}
 
 \subsubsection{Criticità}
 	\begin{itemize}
-		\item Il proponente non fornisce alcun data-set per effettuare il training del modello di machine learning; 
+		\item Il proponente non fornisce alcun data-set per effettuare il training del modello\ped{\emph{G}} di machine learning\ped{\emph{G}}; 
 		\item l'identificazione manuale di tutti i momenti principali di un evento sportivo è un'azione ripetitiva e costosa in termini di tempo. 
 	\end{itemize}
 
 \subsubsection{Esito}
-Il capitolato non è risultato molto stimolante, in quanto lo sviluppo di alcune componenti sembra caratterizzato da attività ripetitive. Si è quindi deciso di non considerare questa proposta. 
+Il capitolato\ped{\emph{G}} non è risultato molto stimolante, in quanto lo sviluppo di alcune componenti sembra caratterizzato da attività ripetitive. Si è quindi deciso di non considerare questa proposta. 

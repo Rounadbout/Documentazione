@@ -8,47 +8,47 @@
 	\end{itemize}
 
 \subsection{Descrizione}
-Etherless è una piattaforma cloud che permette agli sviluppatori di fare il deploy di funzioni javascript nel cloud e far pagare gli utenti finali per la relativa esecuzione tramite l'utilizzo di smart-contract. Etherless si basa sull'integrazione di due tecnologie: Serverless e Ethereum. Ethereum viene utilizzato per la gestione dei pagamenti e la richiesta di esecuzione di funzioni. Serverless, invece, per l'effettiva esecuzione di tali funzioni. La comunicazione tra queste due tecnologie è resa possibile tramite l'ascolto e l'emissione di eventi Ethereum. 
+Etherless è una piattaforma cloud\ped{\emph{G}} che permette agli sviluppatori di effettuare il deploy di funzioni javascript\ped{\emph{G}} al suo interno e far pagare gli utenti finali per la loro esecuzione da remoto, tramite l'utilizzo di smart-contract\ped{\emph{G}}. Etherless si basa sull'integrazione di due tecnologie: Serverless\ped{\emph{G}} e Ethereum\ped{\emph{G}}. Ethereum\ped{\emph{G}} viene utilizzato per la gestione dei pagamenti e delle richieste di esecuzione di funzioni. Serverless\ped{\emph{G}}, invece, per l'effettiva esecuzione di tali funzioni. La comunicazione tra queste due tecnologie è resa possibile tramite l'ascolto e l'emissione di eventi\ped{\emph{G}} Ethereum\ped{\emph{G}}.
 
 \subsection{Obiettivo finale}
-La struttura richiesta per Etherless si compone di 3 moduli principali: 
+La struttura richiesta per Etherless si compone di 3 moduli\ped{\emph{G}} principali: 
 \begin{itemize}
-	\item \textbf{Etherless-cli:} è il modulo con cui gli sviluppatori interagiscono con Etherless. Supporta diversi comandi, tramite i quali lo sviluppatore può: 
+	\item \textbf{Etherless-cli:} è il modulo\ped{\emph{G}} con cui gli sviluppatori interagiscono con Etherless. Supporta diversi comandi, tramite i quali lo sviluppatore può: 
 		\begin{itemize}
 			\item configurare il proprio account; 
-			\item eseguire il deploy di funzioni javascript; 
+			\item eseguire il deploy di funzioni javascript\ped{\emph{G}}; 
 			\item visualizzare la lista delle funzioni di cui ha già svolto il deploy; 
 			\item richiedere l'esecuzione di una funzione e visualizzarne il risultato; 
 			\item visualizzare i log relativi all'esecuzione di una specifica funzione; 
 		\end{itemize}  
-	A seconda del comando, \textit{Etherless-cli} si occuperà di emettere o rimanere in attesa di un determinato evento Ethereum. 
+	A seconda del comando, \textit{Etherless-cli} si occuperà di emettere o rimanere in attesa di un determinato evento\ped{\emph{G}} Ethereum\ped{\emph{G}}. 
 	
-	\item \textbf{Etherless-smart:} un insieme di Ethereum smart-contract che gestiscono la comunicazione tra \textit{Etherless-cli} e \textit{Etherless-server} e i pagamenti in ETH necessari per l'esecuzione delle funzioni; 
-	\item \textbf{Etherless-server:} si occupa di ascoltare gli eventi emessi da \textit{Etherless-smart} e di far eseguire le funzioni così richieste. I risultati ottenuti vengono trasmessi tramite un ulteriore evento nella blockchain e mostrati all'utente attraverso \textit{Etherless-cli};  
+	\item \textbf{Etherless-smart:} un insieme di Ethereum\ped{\emph{G}} smart-contract\ped{\emph{G}} che gestiscono la comunicazione tra \textit{Etherless-cli} e \textit{Etherless-server}, ed i pagamenti in ETH\ped{\emph{G}} necessari per l'esecuzione delle funzioni; 
+	\item \textbf{Etherless-server:} si occupa di ascoltare gli eventi\ped{\emph{G}} trasmessi da \textit{Etherless-smart} e di avviare l'esecuzione delle funzioni così richieste. I risultati ottenuti vengono inviati tramite un ulteriore evento\ped{\emph{G}} nella blockchain\ped{\emph{G}} e mostrati all'utente attraverso \textit{Etherless-cli};  
 \end{itemize}
 
 \subsection{Tecnologie coinvolte}
 	\begin{itemize}
-		\item \textbf{Ethereum:} piattaforma che permette ai suoi utenti di scrivere applicazioni decentralizzate (dette DAPP) che usano la tecnologia blockchain;
-		\item \textbf{Ethereum Virtual Machine (EVM):} macchina virtuale distribuita sulla rete Ethereum; 
-		\item \textbf{Solidity:} linguaggio usato per la codifica degli smart-contract; 
-		\item \textbf{Serverless Framework:} framework per la realizzazione di applicazioni che vengono eseguite in architetture serverless (come AWS Lambda, Google Cloud Functions, Microsoft Azure Functions); 
-		\item \textbf{Typescript 3.6:} Linguaggio che supporta JavaScript ES6, introducendo alcune funzionalità, tra cui la tipizzazione;
-		\item \textbf{ESLint:} tool di analisi statica del codice e syntax checking; 
-		\item \textbf{AWS Lambda:} consente di eseguire codice in risposta a determinati eventi, senza dover effettuare il provisioning né gestire server.
+		\item \textbf{Ethereum}\ped{\emph{G}}\textbf{:} piattaforma che permette ai suoi utenti di scrivere applicazioni decentralizzate (dette \DJ Apps\ped{\emph{G}}) che usano la tecnologia blockchain\ped{\emph{G}};
+		\item \textbf{Ethereum}\ped{\emph{G}} \textbf{Virtual Machine}\ped{\emph{G}} \textbf{(EVM}\ped{\emph{G}}\textbf{):} macchina virtuale distribuita sulla rete Ethereum\ped{\emph{G}}; 
+		\item \textbf{Solidity:} linguaggio usato per la codifica degli smart-contract\ped{\emph{G}}; 
+		\item \textbf{Serverless}\ped{\emph{G}} \textbf{Framework}\ped{\emph{G}}\textbf{:} framework\ped{\emph{G}} per la realizzazione di applicazioni che vengono eseguite in architetture serverless\ped{\emph{G}} (come AWS\ped{\emph{G}} Lambda, Google Cloud\ped{\emph{G}} Functions, Microsoft Azure Functions); 
+		\item \textbf{Typescript}\ped{\emph{G}} \textbf{3.6:} Linguaggio che supporta JavaScript\ped{\emph{G}} ES6, introducendo alcune funzionalità, tra cui la tipizzazione;
+		\item \textbf{ESLint}\ped{\emph{G}}\textbf{:} tool di analisi statica del codice e syntax checking; 
+		\item \textbf{AWS}\ped{\emph{G}} \textbf{Lambda:} consente di eseguire codice in risposta a determinati eventi\ped{\emph{G}}, senza dover effettuare il provisioning né gestire server.
 	\end{itemize}
 
 \subsection{Aspetti positivi}
 	\begin{itemize}
-		\item La blockchain e le tecnologie serverless sono argomenti che hanno suscitato un notevole interesse negli ultimi anni; per questo la relativa conoscenza potrebbe essere positiva da un punto di vista curricolare; 
-		\item la conoscenza di TypeScript e JavaScript è molto richiesta, oltre ad essere la base di svariate librerie e framework; 
+		\item La blockchain\ped{\emph{G}} e le tecnologie serverless\ped{\emph{G}} sono argomenti che hanno suscitato un notevole interesse generale negli ultimi anni; per questo la relativa conoscenza potrebbe essere positiva da un punto di vista curricolare; 
+		\item la conoscenza di TypeScript\ped{\emph{G}} e JavaScript\ped{\emph{G}} è molto richiesta, oltre ad essere la base di svariate librerie e framework\ped{\emph{G}}; 
 		\item il tema principale del progetto è stato accolto con molto interesse dal gruppo, che si è dimostrato disponibile ad approfondire l'argomento. 
 	\end{itemize}
 
 \subsection{Criticità}
 	\begin{itemize}
 		\item L'azienda ha sede all'estero, quindi la comunicazione con i referenti sarà meno agevole rispetto ad aziende che si trovano nel territorio nazionale; 
-		\item il capitolato richiede l'utilizzo di tecnologie recenti, la cui documentazione potrebbe non essere pienamente esaustiva e il cui apprendimento richiederà una mole di studio non indifferente. 
+		\item il capitolato\ped{\emph{G}} richiede l'utilizzo di tecnologie recenti, la cui documentazione potrebbe non essere pienamente esaustiva e il cui apprendimento richiederà una mole di studio non indifferente. 
 	\end{itemize}
 
 \subsection{Esito}
