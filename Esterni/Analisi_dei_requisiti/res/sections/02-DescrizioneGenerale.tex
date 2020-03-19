@@ -14,7 +14,7 @@ Nello specifico:
 			\item elencare tutte le funzioni disponibili nella piattaforma; 
 			\item visualizzare i dettagli di una determinata funzione; 
 			\item visualizzare la propria cronologia di esecuzione di funzioni; 
-			\item ricercare funzioni in base ad un termine di ricerca; 
+			\item ricercare funzioni in base ad un termine di ricerca. 
 		%	\item visualizzare i dettagli relativi all'esecuzione di una specifica funzione; 
 		\end{enumerate}
 		
@@ -22,14 +22,14 @@ Nello specifico:
 		\begin{enumerate}[a.]
 			\item caricare all'interno della piattaforma delle proprie funzioni JavaScript; 
 			\item eliminare una funzione da loro precedentemente caricata; 
-			\item modificare le informazioni e il codice relativo ad una loro funzione
+			\item modificare le informazioni e il codice relativo ad una loro funzione.
 		\end{enumerate}
 	\end{itemize}
 
 \subsection{Analisi della struttura}
 Il prodotto si divide nelle seguenti parti: 
 \begin{itemize}
-	\item \textbf{Etherless-cli:} interfaccia a linea di comando tramite la quale i vari utenti della piattaforma interagiscono con Etherless; 
+	\item \textbf{Etherless-cli:} interfaccia a linea di comando tramite cui i vari utenti della piattaforma interagiscono con Etherless; 
 	\item \textbf{Etherless-smart:} insieme di smart-contract che si occupano della gestione della comunicazione tra \textit{Etherless-cli} ed \textit{Etherless-server} e del pagamento richiesto per l'esecuzione delle funzioni; 
 	\item \textbf{Etherless-server:} si occupa di ascoltare gli eventi trasmessi da \textit{Etherless-smart} e di avviare l'esecuzione delle funzioni così richieste. I risultati ottenuti vengono inviati tramite un ulteriore evento nella blockchain e mostrati all'utente attraverso \textit{Etherless-cli};  
 \end{itemize}
@@ -48,8 +48,8 @@ Il prodotto si divide nelle seguenti parti:
 	\item \textbf{etherless-mylist:} visualizzazione del nome delle funzioni di cui l'utente corrente ha eseguito il deploy;  
 	\item \textbf{etherless-info:} visualizzazione di informazioni più dettagliate di una determinata funzione; 
 	\item \textbf{etherless-search:} elenco delle funzioni con nome simile ad un termine inserito; 
-	\item \textbf{etherless-delete:} eliminazione di una funzione 
-	\item \textbf{etherless-logs:} visualizza<ione dei log di esecuzione di una specifica funzione;
+	\item \textbf{etherless-delete:} eliminazione di una determinata funzione;
+	\item \textbf{etherless-logs:} visualizzazione dei log di esecuzione di una specifica funzione;
 	\item \textbf{etherless-history:} visualizzazione della cronologia di esecuzione dell'utente corrente; 
 	\item \textbf{etherless-exit:} chiusura dell'applicativo. 
 \end{itemize}
@@ -58,7 +58,7 @@ Il prodotto si divide nelle seguenti parti:
 Viene richiesto che:  
 	\begin{itemize}
 		\item gli smart-contract possano essere aggiornati; 
-		\item \textit{Etherless} venga sviluppato utilizzando Typescript 3.6, in particolare facendo riferimento all'approccio di promise/async-await; 
+		\item \textit{Etherless} sia sviluppato utilizzando Typescript 3.6, in particolare facendo riferimento all'approccio di promise/async-await; 
 		\item typescript-eslint deve essere utilizzato come rinforzo di ESLint durante il processo di sviluppo; 
 		\item \textit{Etherless-server} deve essere implementato usando il framework Serverless. 
 	\end{itemize}
