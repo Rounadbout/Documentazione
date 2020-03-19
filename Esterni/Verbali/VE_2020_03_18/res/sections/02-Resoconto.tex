@@ -1,10 +1,10 @@
 \section{Verbale}
-\subsection{Presentazioni dei membri del grupo \Gruppo}
-Ogni membro del gruppo \Gruppo si é presentato per nome ai referenti di RedBabel, i quali a loro volta hanno illustrato la propria posizione nell'azienda e rispetto allo svolgimento del progetto collaborativo Etherless;
+\subsection{Presentazioni dei membri del gruppo \Gruppo}
+Ogni membro del gruppo \Gruppo{} si é presentato per nome ai referenti di RedBabel, i quali a loro volta hanno illustrato la propria posizione nell'azienda e rispetto allo svolgimento del progetto collaborativo Etherless.
 
 \subsection{Decisioni riguardo la collaborazione tra gruppo e Proponente}
-I referenti hanno esposto la volontá di utilizzare un canale sul workspace %aggiungere link al workspace
-Slack per la comunicazione diretta con i membri del gruppo. Quindi é stato creato un canale \#roundabout all'interno del workspace \textit{math-unipd}, che verrá utilizzato per avere una comunicazione frequente e snella tra gruppo e Proponente.\\
+I referenti hanno esposto la volontá di utilizzare un canale sulla piattaforma %aggiungere link al workspace
+Slack per la comunicazione diretta con i membri del gruppo. Quindi é stato creato un canale \href{https://app.slack.com/client/T38RC2RNJ/C010A7JDJBH}{\#roundabout} all'interno del workspace \href{https://unipd-math.slack.com}{unipd}, che verrá utilizzato per avere una comunicazione frequente e concisa tra gruppo e Proponente.\\
 I referenti hanno inoltre esposto alcune richieste:
 \begin{description}
 	\item[Lingua:] utilizzo della lingua inglese:
@@ -12,10 +12,10 @@ I referenti hanno inoltre esposto alcune richieste:
 			\item all'interno del codice del prodotto (ad esempio: nomi di variabili, commenti ecc.);
 			\item per la stesura della documentazione del prodotto software (es. README).
 		\end{itemize}
-	\item[Documenti:] i referenti hanno espresso particolare interesse per quanto riguarda particolari documenti:
+	\item[Documentazione:] i referenti hanno espresso particolare interesse per quanto riguarda specifici documenti:
 		\begin{itemize}
-			\item documenti che illustrano e informano l'utente sull' utilizzo del prodotto in modo chiaro e corretto (es. README);
-			\item documenti che giustifichino le scelte progettuali effettuate durante lo sviluppo.
+			\item documenti che illustrano ed informano l'utente sull'utilizzo del prodotto in modo chiaro e corretto (es. README);
+			\item documenti che giustificano le scelte progettuali effettuate durante lo sviluppo.
 		\end{itemize}
 \end{description}
 
@@ -23,13 +23,13 @@ I referenti hanno inoltre esposto alcune richieste:
 I membri del gruppo hanno poi esposto una serie di domande volte a chiarire dei dubbi su parti del capitolato\ped{\emph{G}} e varie tecnologie da utilizzare.
 Di seguito si trova un riassunto delle informazioni estrapolate dalla discussione:
 \begin{description}
-	\item[Distinzione tra le tipologie di utenti:] la scelta sulla suddivisione delle tipologie di utenti da distinguere nell'applicativo viene lasciata al team di sviluppo, che dovrá valutare la necessitá della feature rispetto alle difficoltá di implementazione;
-	\item[Pagamenti:] la scelta della modalitá di pagamento per l'esecuzione di una funzione tra \textit{escrow} (Vedi figura \ref{fig:escrow}) e \textit{upfront}(pagamento immediato prima della ricezione del risultato), é lasciata al team;
+	\item[Distinzione tra le tipologie di utenti:] la scelta relativa alla suddivisione delle tipologie di utenti in \textit{Users} e \textit{Developers}, viene lasciata al team di sviluppo. Quest'ultimo deve valutare la necessitá di questa feature, considerando l'efficienza e la difficoltá di implementazione;
+	\item[Pagamenti:] la scelta della modalitá di pagamento per l'esecuzione di una funzione, tra \textit{escrow} (Come da esempio citato nel documento del capitolato\ped{\emph{G}}) e \textit{upfront} (pagamento immediato prima della ricezione del risultato), é lasciata al team. Anche in questo caso devono essere effettuate le opportune valutazioni;
 	\item[Gas limit:] come riferimento alla definizione di Gas limit é stato indicato il seguente link \href{https://bitcoin.stackexchange.com/questions/39132/what-is-gas-limit-in-ethereum}{What is Gas limit in Ethereum\ped{\emph{G}}?};
-	\item[Enviroment:] sottolineata la necessitá di avere ambienti Locali, di Test e di Staging; mentre un ambiente di Produzione non é richiesto. I vari ambienti (\textit{environments}) devono mantenere lo stesso codice del prodotto, a meno di variabili d'ambiente e simili; mentre differiscono per la rete Ethereum utilizzata:
+	\item[Environment:] sottolineata la necessitá di avere ambienti Locali, di Test e di Staging; mentre un ambiente di Produzione non é richiesto. I vari ambienti (\textit{environments}) devono mantenere lo stesso codice del prodotto, a meno di variabili d'ambiente e simili; mentre differiscono per la rete Ethereum utilizzata:
 	\begin{itemize}
 		\item Ethereum\ped{\emph{G}} testrpc, fornito da Truffle, per l'ambiente Locale;
-		\item Analogamente al punto precedente per l'ambiente di Test;
+		\item Analogamente al punto precedente, per l'ambiente di Test;
 		\item Ethereum\ped{\emph{G}} Ropsten, per l'ambiente di Staging
 	\end{itemize}
 \end{description}
