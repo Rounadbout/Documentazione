@@ -1,0 +1,77 @@
+\section{Descrizione generale}
+
+\subsection{Obiettivi del prodotto}
+Il progetto \NomeProgetto{} ha come obiettivo finale creare una piattaforma per permettere agli sviluppatori di fare il deploy di funzioni JavaScript, preoccupandosi solamente della relativa codifica e non dell'architettura sottostante. Allo stesso tempo, tali funzioni vengono messe a disposizione agli altri utenti, che possono eseguirle e pagare secondo un modello Caas (Computation As a Service), cioè solamente per il tempo e le risorse richieste dalla loro esecuzione.
+
+\subsection{Funzionalità del prodotto}
+L'applicativo deve fornire la possibilità agli sviluppatori di caricare nel cloud le proprie funzioni e renderle disponibili secondo un'ideologia Faas (Function As A Service). Gli utenti finali possono usufruire di tali servizi pagando; in questo modo gli sviluppatori non si devono preoccupare della gestione dell'infrastruttura alla base dei servizi e possono guadagnare ad ogni esecuzione di una funzione da loro caricata. \\
+Nello specifico: 
+	\begin{itemize}
+		\item gli utenti finali e gli sviluppatori possono: 
+		\begin{enumerate}[a.]
+			\item autenticarsi all'interno della rete Ethereum; 
+			\item eseguire una funzione presente della piattaforma e visualizzarne i risultati; 
+			\item elencare tutte le funzioni disponibili nella piattaforma; 
+			\item visualizzare i dettagli di una determinata funzione; 
+			\item visualizzare la propria cronologia di esecuzione di funzioni; 
+			\item ricercare funzioni in base ad un termine di ricerca; 
+		%	\item visualizzare i dettagli relativi all'esecuzione di una specifica funzione; 
+		\end{enumerate}
+		
+		\item gli sviluppatori possono: 
+		\begin{enumerate}[a.]
+			\item caricare all'interno della piattaforma delle proprie funzioni JavaScript; 
+			\item eliminare una funzione da loro precedentemente caricata; 
+			\item modificare le informazioni e il codice relativo ad una loro funzione
+		\end{enumerate}
+	\end{itemize}
+
+\subsection{Analisi della struttura}
+Il prodotto si divide nelle seguenti parti: 
+\begin{itemize}
+	\item \textbf{Etherless-cli:} interfaccia a linea di comando tramite la quale i vari utenti della piattaforma interagiscono con Etherless; 
+	\item \textbf{Etherless-smart:} insieme di smart-contract che si occupano della gestione della comunicazione tra \textit{Etherless-cli} ed \textit{Etherless-server} e del pagamento richiesto per l'esecuzione delle funzioni; 
+	\item \textbf{Etherless-server:} si occupa di ascoltare gli eventi trasmessi da \textit{Etherless-smart} e di avviare l'esecuzione delle funzioni così richieste. I risultati ottenuti vengono inviati tramite un ulteriore evento nella blockchain e mostrati all'utente attraverso \textit{Etherless-cli};  
+\end{itemize}
+
+\subsubsection{Comandi disponibili}
+\textit{Etherless-cli} mette a disposizione dell'utente i seguenti comandi: 
+\begin{itemize}
+	\item \textbf{etherless-init:} avvio dell'applicativo; 
+	\item \textbf{etherless-login:} esecuzione della procedura di autenticazione all'interno della rete Ethereum; 
+	\item \textbf{etherless-signup:} creazione di un nuovo wallet all'interno della rete Ethereum; 
+	\item \textbf{etherless-logout:} esecuzione del logout dalla propria utenza; 
+	\item \textbf{etherless-whoami:} visualizzazione dell'indirizzo associato all'utenza corrente; 
+	\item \textbf{etherless-list:} elenco di tutte le funzioni disponibili all'interno della piattaforma \NomeProgetto{}; 
+	\item \textbf{etherless-deploy:} esecuzione del deploy di una determinata funzione;  
+	\item \textbf{etherless-run:} esecuzione di una funzione e visualizzazione del relativo risultato; 
+	\item \textbf{etherless-mylist:} visualizzazione del nome delle funzioni di cui l'utente corrente ha eseguito il deploy;  
+	\item \textbf{etherless-info:} visualizzazione di informazioni più dettagliate di una determinata funzione; 
+	\item \textbf{etherless-search:} elenco delle funzioni con nome simile ad un termine inserito; 
+	\item \textbf{etherless-delete:} eliminazione di una funzione 
+	\item \textbf{etherless-logs:} visualizza<ione dei log di esecuzione di una specifica funzione;
+	\item \textbf{etherless-history:} visualizzazione della cronologia di esecuzione dell'utente corrente; 
+	\item \textbf{etherless-exit:} chiusura dell'applicativo. 
+\end{itemize}
+
+\subsubsection{Vincoli implementativi}
+Viene richiesto che:  
+	\begin{itemize}
+		\item gli smart-contract possano essere aggiornati; 
+		\item \textit{Etherless} venga sviluppato utilizzando Typescript 3.6, in particolare facendo riferimento all'approccio di promise/async-await; 
+		\item typescript-eslint deve essere utilizzato come rinforzo di ESLint durante il processo di sviluppo; 
+		\item \textit{Etherless-server} deve essere implementato usando il framework Serverless. 
+	\end{itemize}
+
+\subsubsection{Ambienti di esecuzione}
+Viene inoltre richiesto che il progetto possa funzionare nei seguenti ambienti di esecuzione: 
+	\begin{itemize}
+		\item \textbf{Locale:} viene simulata una rete Ethereum all'interno della macchina locale, per tale scopo può essere utilizzata la rete Ethereum  testrpc messa a disposizione da Truffle; 
+		\item \textbf{Test:} ambiente di test, in cui vengono eseguiti i test di verifica; la rete può coincidere con quella usata in ambiente locale; 
+		\item \textbf{Staging:} ambiente pubblicamente accessibile, per tale scopo può essere usata la testnet Ropsten di Ethereum;
+		\item \textbf{Produzione:} non richiesto, ma il progetto deve essere pronto per la produzione. In questo caso si fa riferimento alla Ethereum mainnet. 
+	\end{itemize}
+
+\subsubsection{Vincoli generali}
+L'utente, per usufruire del servizio, deve possedere una connessione internet e aver installato NodeJs e il modulo relativo a \textit{Etherless-cli}. \\ 
+Per la gestione del servizio, e quindi l'esecuzione di \textit{Etherless-server}, oltre ai requisiti già indicati è necessario avere un'utenza AWS e aver completato correttamente la relativa configurazione. 
