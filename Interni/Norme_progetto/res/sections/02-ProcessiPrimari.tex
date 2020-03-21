@@ -1,13 +1,166 @@
 \section{Processi Primari}
-\subsection{Fornitura}
-\subsubsection{Scopo}
-\subsubsection{Aspettative}
-\subsubsection{Descrizione}
-\subsubsection{Attività}
-\subsubsection{Strumenti}
-\subsection{Sviluppo}
-\subsubsection{Scopo}
-\subsubsection{Aspettative}
-\subsubsection{Descrizione}
-\subsubsection{Attività}
-\subsubsection{Strumenti}
+    \subsection{Fornitura}
+        \subsubsection{Descrizione}
+        Il processo di fornitura ha lo scopo di determinare l'insieme delle attività necessarie allo svolgimento del progetto. Tale processo è composto dalle seguenti fasi:
+        \begin{itemize}
+            \item{avvio}
+            \item{preparazione di risposta alle richieste}
+            \item{contrattazione}
+            \item{pianificazione}
+            \item{esecuzione e controllo}
+            \item{revisione e valutazione}
+            \item{consegna e completamento}
+        \end{itemize}
+         In questa sezione vengono esposte le regole che i membri del team \Gruppo{} si impegnano a rispettare nel corso delle fasi di progettazione, sviluppo e consegna della piattaforma \NomeProgetto{} per diventare fornitori nei confronti della proponente \Proponente{} e dei committenti \TV{} e \RC{}. \\
+         L'obiettivo del gruppo è quello di mantenere un costante dialogo con la proponente al fine di comprenderne a fondo le richieste, instaurare un rapporto di collaborazione ed avere un riscontro efficace sul lavoro svolto.
+        
+        \subsubsection{Studio di Fattibilità}
+        Lo \SdF{} viene redatto dagli analisti ed indica per ogni capitolato:
+        \begin{itemize}
+            \item{\textbf{Informazioni generali}: sezione che include il nome del progetto, della proponente e dei committenti;}
+            \item{\textbf{Descrizione}: breve descrizione del capitolato sotto analisi;}
+            \item{\textbf{Obiettivo finale}: rappresenta il dominio applicativo del prodotto software da sviluppare, ovvero il suo ambito di utilizzo;}
+            \item{\textbf{Tecnologie coinvolte}: descrive le tecnologie necessarie al raggiungimento dell'obiettivo finale, illustrandone il dominio tecnologico;}
+            \item{\textbf{Aspetti positivi}: elementi del capitolato che hanno entusiasmato il team;}
+            \item{\textbf{Criticità}: elementi del capitolato che hanno messo il team in difficoltà;}
+            \item{\textbf{Esito}: posizione finale del team nei confronti del capitolato;}
+        \end{itemize}
+        
+        \subsubsection{Piano di Progetto}
+        Il Responsabile di Progetto, con l'aiuto degli Amministratori, redige un \PdP{} volto a pianificare le attività del team. Tale documento contiene:
+        \begin{itemize}
+        		\item{\textit{Mancano riferimenti}}
+        \end{itemize}
+        
+        \subsubsection{Piano di Qualifica}
+        Gli Amministratori ed i Verificatori redigono il \PdQ, volto a raccogliere le metriche e le strategie per garantire la qualità sia dei processi attuati che del prodotto nel tempo. Tale documento contiene:
+        \begin{itemize}
+        		\item{\textit{Mancano riferimenti}}
+        \end{itemize}
+        
+        \subsubsection{Strumenti}
+        Di seguito vengono elencati gli strumenti usati durante il processo di fornitura:
+        
+    \subsection{Sviluppo}
+        \subsubsection{Descrizione}
+        Il processo di sviluppo racchiude le attività ed i compiti che devono essere effettivamente svolti per realizzare il prodotto richiesto.
+       Lo standard ISO/IEC 12207-1995 identifica come componenti del processo di sviluppo le seguenti attività:
+        \begin{itemize}
+            \item{implementazione di processo}
+            \item{analisi dei requisiti (di sistema e del software)}
+            \item{design architetturale (di sistema e del software)}
+            \item{design dettagliato del software}
+            \item{codifica e testing del software}
+            \item{integrazione (di sistema e del software)}
+            \item{qualification testing (di sistema e del software)}
+            \item{installazione del software}
+            \item{acceptance test del software}
+        \end{itemize}
+        In particolare, l'obbiettivo del team è quello di sviluppare un prodotto software che supera i test e soddisfa le richieste e i requisiti fissati dalla proponente.
+            
+            \subsubsection{Analisi dei requisiti}
+            Compito degli Analisti è di redigere l'\AdR, che individua appunto i requisiti. Questi vengono definiti al fine di:
+            \begin{itemize}
+        		\item{descrivere lo scopo del lavoro;}
+		\item{fornire ai Progettisti riferimenti specifici ed affidabili;}
+		\item{fissare funzionalità e requisiti concordati con il cliente;}
+		\item{fornire una base per raffinamenti successivi al fine di garantire un miglioramento continuo del prodotto e del processo di sviluppo;}
+		\item{facilitare le revisioni del codice;}
+		\item{fornire ai Verificatori riferimenti circa i casi d'uso principali ed alternativi;}
+		\item{stimare i costi.}
+        	   \end{itemize}
+                 
+                 Il documento redatto deve seguire le specifiche riportate:
+                 
+                \subsubsubsection{Casi d'uso}
+                Dopo aver identificato i casi d'uso, compito degli Analisti è quello di elencarli con un grado di precisione che va dal generico verso il dettaglio.
+                Il codice di ogni caso d'uso segue la dicitura: 
+                \begin{center}
+                \textbf{UC[codice\_padre].[codice\_identificativo]}
+                \end{center}
+                
+                \begin{itemize}
+                 	\item{\textbf{Codice padre}: numero che identifica univocamente i casi d'uso generici;}
+			\item{\textbf{Codice identificativo}: numero progressivo che identifica i sottocasi specifici.}
+                \end{itemize}
+                
+                Ogni caso d'uso viene inoltre definito mediante la seguente struttura:
+                \begin{itemize}
+                \item{\textit{Mancano riferimenti}}
+                \end{itemize}
+                
+                \subsubsubsection{Requisiti}
+                	Durante l'attività di Analisi dei Requisiti è compito degli Analisti stilare una lista di requisiti emersi, seguendo per ogni requisito la dicitura:
+                    \begin{center}
+                    \textbf{R[Importanza][Tipologia][Codice]}
+                    \end{center}
+                    
+                    Dove:
+                    \begin{itemize}
+                        	\item{\textbf{Importanza}: indica il grado di importanza del requisito ai fini del progetto. Può assumere i valori:}
+                        	\begin{itemize}
+                                	\item{1: requisito obbligatorio ai fini del progetto, irrinunciabile per gli stakeholders;}
+                                	\item{2: requisito desiderabile. Non strettamente necessario ai fini del progetto ma che porta valore aggiunto;}
+                                	\item{3: requisito opzionale, contrattabile più avanti nel progetto.}
+                        	\end{itemize}
+                        	\item{\textbf{Tipologia}: classe a cui appartiene il requisito in questione. Può assumere i valori:}
+                        	\begin{itemize}
+                        		\item{F: funzionale;}
+                        		\item{P: prestazionale;}
+                        		\item{Q: qualitativo;}
+                        		\item{V: vincolo.}
+                        	\end{itemize}
+                        	\item{\textbf{Codice}: identificatore univoco del requisito}.
+                    \end{itemize}
+                    
+                    Il codice stabilito secondo la convenzione precedente, una volta associato ad un requisito, non può più essere cambiato.
+                    
+                    Ciascun requisito deve inoltre essere accompagnato dalle sue fonti, dalle sue relazioni di dipendenza con altri requisiti, da una descrizione che ne specifichi a parole lo scopo e dalla sua importanza.
+                    
+                \subsubsubsection{UML}
+                \textit{Mancano riferimenti}
+                
+            \subsubsection{Progettazione}
+            L'attività di progettazione segue il procedimento inverso rispetto all'analisi, in quanto rimette insieme le parti specificando le funzionalità dei sottoinsiemi. Il suo scopo è quello di definire una soluzione del problema soddisfacente per tutti gli stakeholders in relazione ai requisiti specificati nel documento \AdR{}, garantendo cioè che il prodotto sviluppato soddisfi le proprietà e i bisogni specificati. Il risultato di tale processo è la realizzazione dell'architettura di sistema.
+            E' compito dei Progettisti svolgere tale attività, che è suddivisibile in due parti:
+            \begin{itemize}
+            	\item{\textbf{Technology baseline}: contiene le specifiche della progettazione ad alto livello, l'elenco dei diagrammi UML utilizzati per la realizzazione dell'architettura ed i test di verifica (in particolare i test di integrazione);}
+		\item{\textbf{Product baseline}: approfondisce l'attività di progettazione della Technology baseline e definisce i test necessari alla verifica (in particolare quelli di unità).}
+	     \end{itemize}
+	     
+                \subsubsubsection{Design Patterns}
+                	Durante l'attività di progettazione si ha la necessità di adottare opportune soluzioni progettuali a problemi ricorrenti. Tali soluzioni devono essere flessibili e consentire una certa libertà d'uso ai Programmatori: per questo i Progettisti devono descrivere i design pattern utilizzati per l'architettura, accompagnandoli ad una descrizione ed un diagramma per esporne significato e struttura.
+	
+                \subsubsubsection{Diagrammi UML}
+                Al fine di rendere più chiare le scelte progettuali adottate e ridurre le ambiguità vengono usati vari tipi di diagrammi UML 2.0, tra cui:
+                \begin{itemize}
+                		\item{\textbf{Diagrammi delle attività}: permettono di descrivere il flusso di operazioni di un'attività. Possono descrivere procedure che esulano dal software;}
+			\item{\textbf{Diagrammi delle classi}: descrivono relazioni, metodi e attributi di classe e tipi;}
+			\item{\textbf{Diagrammi dei package}: illustrano raggruppamenti di classi;}
+			\item{\textbf{Diagrammi di sequenza}: rappresentano sequenze di azioni sotto forma di scelte ben definite.}
+                \end{itemize}
+                
+             \subsubsection{Codifica}
+             E' l'attività che permette di concretizzare la soluzione architetturale trovata durante la progettazione mediante la programmazione vera e propria.
+             Questa sezione vuole fissare norme e convenzioni riguardanti la stesura di codice al fine di ottenere codice leggibile ed uniforme, agevolare le fasi di manutenzione, verifica e validazione e migliorare la qualità del prodotto.
+             	\subsubsubsection{Indentazione}
+		I blocchi innestati devono essere correttamente indentati, usando per ciascun livello di indentazione quattro (4) spazi, fatta eccezione per i commenti. Si consiglia di configurare adeguatamente il proprio IDE al fine di rispettare tale norma.
+		\subsubsubsection{Parentesizzazione}
+		Le parentesi di delimitazione dei costrutti vanno inserite in linea e non al di sotto di essi.
+		\subsubsubsection{Lunghezza dei metodi}
+		Ove possibile, preferire metodi brevi (poche righe di codice) e che assolvono al minor numero di compiti possibile.
+		\subsubsubsection{Univocità dei nomi}
+		Classi, variabili e metodi devono avere un nome univoco ed esplicativo (nome parlante) al fine di evitare ambiguità e di far capire ad eventuali lettori del codice che non ne siano anche i programmatori lo scopo di quel preciso elemento.
+		\subsubsubsection{Classi}
+		I nomi delle classi devono iniziare con la lettera maiuscola (ad esempio: NomeClasse).
+		\subsubsubsection{Costanti}
+		Le costanti devono essere scritte usando solo lettere maiuscole (ad esempio: COSTANTE). Nel caso siano composte da più parole, queste devono essere separate dal carattere speciale underscore (ad esempio: NOME\_COSTANTE).
+		\subsubsubsection{Metodi}
+		I nomi dei metodi devono iniziare con una lettera minuscola e, nel caso siano composti da più parole, quelle successive devono iniziare con una lettera maiuscola (e.g: nomeMetodo).
+		\subsubsubsection{Lingua}
+		Il codice, così come i commenti a questo riferiti, deve essere scritto in lingua inglese.
+                	\subsubsubsection{Ricorsione}
+		L'uso della ricorsione va evitato quanto più possibile.
+                
+        \subsubsection{Strumenti}
+        Di seguito vengono elencati gli strumenti usati durante il processo di sviluppo:
