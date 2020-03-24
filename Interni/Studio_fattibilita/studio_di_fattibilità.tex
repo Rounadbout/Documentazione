@@ -1,0 +1,43 @@
+\documentclass[a4paper]{article}
+
+\input{../../Latex/common_commands.tex}
+\input{config/commands.tex}
+\input{../../Latex/configs.tex}
+
+\begin{document}
+
+	% copertina 
+	\input{../../Latex/copertina.tex}
+	
+	% diario delle modifiche 
+	\input{./res/sections/changelog.tex} 
+	\pagebreak
+	
+	% indice 
+	\tableofcontents 
+	\pagebreak
+		
+	% sezioni 
+	\input{./res/sections/01-Intro.tex}
+	\pagebreak
+	
+	\input{./res/sections/02-CapitolatoScelto.tex}
+	\pagebreak
+	
+	\section{Valutazione capitolati rimanenti}
+	\input{./res/sections/03-C1.tex}
+	\pagebreak
+	
+	\input{./res/sections/04-C3.tex}
+	\pagebreak
+	
+	\input{./res/sections/05-C4.tex}
+	\pagebreak
+	
+	\input{./res/sections/06-C5.tex}
+	\pagebreak
+	
+	\input{./res/sections/07-C6.tex}
+	\pagebreak
+	
+\end{document}
