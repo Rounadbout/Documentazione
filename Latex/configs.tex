@@ -2,6 +2,7 @@
 \usepackage{geometry}
 \usepackage{hyperref} %  link
 \usepackage{graphicx} %immagini
+\usepackage{titlesec} %per creazione di una section personalizzata
 
 % package per la lingua / caratteri 
 \usepackage[italian]{babel} 
@@ -52,4 +53,25 @@
 \counterwithin{table}{subsection}
 \counterwithin{figure}{subsection}
 
+% definizione del comando subsubsubsection
+\titleclass{\subsubsubsection}{straight}[\subsection]
 
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+
+\titleformat{\subsubsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\def\toclevel@subsubsubsection{4}
+\def\toclevel@paragraph{5}
+\def\toclevel@paragraph{6}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\def\l@paragraph{\@dottedtocline{5}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{6}{14em}{6em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
