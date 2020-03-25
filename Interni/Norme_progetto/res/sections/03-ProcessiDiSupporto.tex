@@ -1,15 +1,15 @@
 \section{Processi di Supporto}
   \subsection{Documentazione}
     \subsubsection{Descrizione}
-      Questa sezione fornisce le norme per la stesura, la verifica e l'approvazione dei documenti. Tali regole vanno seguite in tutti i documenti ufficiali, prodotti durante il ciclo di vita del software, permettendo di ottenere sempre coerenza e validità degli stessi.
+      Questa sezione fornisce le norme per la stesura, la verifica e l'approvazione dei documenti. Tali regole vanno seguite in tutti i documenti ufficiali, prodotti durante il ciclo di vita del software, garantendo così la coerenza e la validità degli stessi.
 
     \subsubsection{Ciclo di vita dei documenti}
       Ogni documento attraversa diversi stadi:
       \begin{itemize}
-        \item \textbf{Creazione e strutturazione del documento:} il documento viene creato nella sua directory di appartenenza (secondo le indicazioni nella sezione "Documenti interni ed esterni"), e viene stesa la sua struttura generale. Viene utilizzato un template \LaTeX{} (descritto nella sezione \textsection3.1.5.1);
+        \item \textbf{Creazione e strutturazione del documento:} il documento viene creato nella sua directory di appartenenza (secondo le indicazioni presenti nella sezione "Documenti interni ed esterni"), e viene stesa la sua struttura generale. Viene utilizzato un template \LaTeX{} (descritto nella sezione \textsection3.1.5.1);
         \item \textbf{Stesura:} scrittura effettiva dei contenuti del documento da parte di un redattore;
-        \item \textbf{Verifica:} attività eseguita dai \textit{Verificatori}, i quali si occupano di controllare che il documento sia conforme alle \textit{\NdP{}}, sia sintatticamente che semanticamente. Alla fine di ogni controllo, il resoconto della verifica viene consegnato al \textit{Responsabile di Progetto} che provvede a notificare il redattore in caso di errori, riportando il documento al passo di "Stesura". Quando l'attività di verifica non rileva ulteriori errori, il responsabile passa il documento alla fase di "Approvazione";
-        \item \textbf{Approvazione:} in questa fase il verificatore ha terminato i controlli con esito positivo, comunicandoli al responsabile, il quale si occupa di approvare il documento e preparare il rilascio.
+        \item \textbf{Verifica:} attività eseguita dai Verificatori, i quali si occupano di controllare che il documento sia conforme alle \textit{\NdP{}}, sia sintatticamente che semanticamente. Alla fine di ogni controllo, il resoconto della verifica viene consegnato al Responsabile di Progetto che provvede a notificare il redattore in caso di errori, riportando il documento al passo di "Stesura". Quando l'attività di verifica finale non rileva ulteriori errori, il Responsabile passa il documento alla fase di "Approvazione";
+        \item \textbf{Approvazione:} in questa fase i Verificatori hanno terminato i controlli finali con esito positivo, comunicandoli al Responsabile, il quale si occupa di approvare il documento e preparare il rilascio.
       \end{itemize}
 
     \subsubsection{Documenti interni ed esterni}
@@ -20,55 +20,55 @@
       \end{itemize}
 
     \subsubsection{Documenti presenti}
-      Di seguito sono elencati i documenti ufficiali che verranno prodotti e la loro classificazione in uso interno o esterno:
-      \subsubsubsection{\NdP{}}
+      Di seguito sono elencati i documenti ufficiali che verranno prodotti e la loro classificazione in uso Interno o Esterno.
+      \subsubsubsection{Norme di Progetto}
         Documento ad uso Interno.\\
-        (Questo stesso documento) Lo scopo delle \textit{\NdP{}} è descritto nella sezione \textsection1.1 "Scopo del Documento"\\
+        Lo scopo delle \textit{\NdP{}} è descritto nella sezione \textsection1.1 "Scopo del Documento", di questo stesso documento.\\
 
-      \subsubsubsection{\SdF{}}
+      \subsubsubsection{Studio di Fattibilità}
         Documento ad uso Interno.\\
         Lo \textit{\SdF{}} ha l'obiettivo di esporre (brevemente) ogni capitolato\ped{\emph{G}} e di elencare per ognuno gli aspetti positivi e le criticità che il team ha individuato.
 
-      \subsubsubsection{\Glossario{}}
+      \subsubsubsection{Glossario}
         Documento ad uso Esterno.\\
        	Il \Glossario{}  ha lo scopo di disambiguare alcuni termini che compaiono all'interno dei documenti e vengono utilizzati nelle comunicazioni interne.
 
-      \subsubsubsection{\AdR{}}
+      \subsubsubsection{Analisi dei Requisiti}
         Documento ad uso Esterno.\\
         Lo  scopo  dell'\textit{\AdR{}} è di esporre dettagliatamente i requisiti individuati per lo sviluppo del capitolato\ped{\emph{G}} scelto C2 - \NomeProgetto{}.
 
-      \subsubsubsection{\PdP{}}
+      \subsubsubsection{Piano di Progetto}
         Documento ad uso Esterno.\\
         Lo scopo del \textit{\PdP{}} è di organizzare le attività in modo da gestire le risorse disponibili in termini di tempo e "forza lavoro
 
-      \subsubsubsection{\PdQ{}}
+      \subsubsubsection{Piano di Qualifica}
         Documento ad uso Esterno.\\
         Lo scopo del \textit{\PdQ{}} è di presentare i metodi di verifica e validazione implementati dal gruppo, per garantire la qualità del prodotto e dei processi adottati.
 
     \subsubsection{Struttura dei documenti}
       \subsubsubsection{Template \LaTeX}
-        Per uniformare la struttura dei documenti il gruppo ha deciso di creare un template \LaTeX{} da riutilizzare per la stesura di tutti i documenti ufficiali. Il template è contenuto nella cartella \LaTeX{}, la cui struttura è la seguente:
+        Per uniformare la struttura dei documenti il gruppo ha deciso di creare un template \LaTeX{}, da utilizzare per la stesura di tutti i documenti ufficiali. Il template è contenuto nella cartella \LaTeX{}, la cui struttura è la seguente:
         \begin{itemize}
-          \item \textbf{common\_commands.tex:} file che contiene la definizione di nuovi comandi \LaTeX per l'inserimento nel flusso di testo di termini ricorrenti:
+          \item \textbf{common\_commands.tex:} file che contiene la definizione di nuovi comandi \LaTeX{} per l'inserimento nel flusso di testo di termini ricorrenti:
             \begin{itemize}
-              \item \textbf{informazioni sul gruppo:} nome del gruppo e indirizzo email;
-              \item \textbf{informazioni sul progetto:} nome del progetto e nomi del Proponente e del Committente;
-              \item \textbf{membri del gruppo:} nomi dei membri del gruppo \Gruppo;
-              \item \textbf{nomi dei documenti:} nomi dei documenti ufficiali.
+              \item \textbf{Informazioni sul gruppo:} nome del gruppo e indirizzo email;
+              \item \textbf{Informazioni sul progetto:} nome del progetto e nomi del Proponente e del Committente;
+              \item \textbf{Membri del gruppo:} nomi dei membri del gruppo \Gruppo;
+              \item \textbf{Nomi dei documenti:} nomi dei documenti ufficiali.
             \end{itemize}
-          \item \textbf{configs.tex:} contiene l'inclusione dei necessari pacchetti \LaTeX e la definizione dell'aspetto grafico generale dei documenti;
-          \item \textbf{copertina.tex:} contiene il codice \LaTeX per la copertina, ovvero la prima pagina di ogni documento (la cui struttura è descritta nella sezione \textsection3.1.5.2);
-          \item \textbf{Template:} directory che contiene la struttura "classica" di un documento (la sua struttura viene descritta di seguito).
+          \item \textbf{configs.tex:} contiene i comandi per l'inclusione dei necessari pacchetti \LaTeX{} e la definizione dell'aspetto grafico generale dei documenti;
+          \item \textbf{copertina.tex:} contiene il codice \LaTeX{} per la copertina, ovvero la prima pagina di ogni documento (la cui struttura è descritta nella sezione \textsection3.1.5.2);
+          \item \textbf{Template:} directory che contiene la struttura "classica" di un documento (quest'ultima viene descritta di seguito).
         \end{itemize}
-        La directory Template ha la struttura seguente:
+        La directory Template ha la seguente struttura:
         \begin{itemize}
-          \item \textbf{config:} directory che contiene un solo file: "commands.tex", all'interno del quale sono specificati dei comandi specifici per il documento considerato (es. nome del documento, stato di approvazione, ecc...). I comandi devono essere modificati in riferimento al singolo documento;
+          \item \textbf{config:} directory che contiene un solo file: "commands.tex", all'interno del quale sono inseriti dei comandi specifici per il documento considerato (es. nome del documento, stato di approvazione, ecc...). I comandi devono essere adeguatamente modificati per ogni rispettivo documento;
           \item \textbf{res:} directory che contiene due cartelle:
             \begin{itemize}
               \item \textbf{img:} contiene le immagini utilizzate all'interno del documento;
               \item \textbf{sections:} contiene le varie sezioni del documento e un file "changelog.tex", ovvero il codice per il registro delle modifiche.
             \end{itemize}
-          \item \textbf{document.tex} il file contiene la struttura generica di un documento, includendo le sezioni necessarie contenute nella cartella res.
+          \item \textbf{document.tex:} il file contiene la struttura generica di un documento, includendo le sezioni necessarie contenute nella cartella res.
         \end{itemize}
         %da espandere
 
@@ -79,29 +79,32 @@
           \item Nome del gruppo e nome del capitolato\ped{\emph{G}} scelto: \Gruppo{} - \NomeProgetto{};
           \item Nome del documento (nel caso dei Verbali accompagnato dalla data della riunione).
         \end{itemize}
-        Queste informazioni sono seguite da una struttura tabellare che contiene informazioni pertinenti al singolo documento:
+        Queste informazioni sono seguite da una struttura tabellare, che contiene dettagli pertinenti al singolo documento:
         \begin{itemize}
-          \item \textbf{Versione:} versione attuale del documento del documento (vedi sezione \textsection3.2);%aggiungere sezione norme di Versionamento
-          \item \textbf{Approvazione:} nome e cognome del \textit{Responsabile di progetto};
+          \item \textbf{Versione:} versione attuale del documento (vedi sezione \textsection3.2);%aggiungere sezione norme di Versionamento
+          \item \textbf{Approvazione:} nome e cognome del Responsabile di progetto;
           \item \textbf{Redazione:} nome e cognome dei Redattori del documento;
-          \item \textbf{Verifica:} nome e cognome di \textit{Verificatori};
+          \item \textbf{Verifica:} nome e cognome dei Verificatori;
           \item \textbf{Stato:} stato del ciclo di vita in cui si trova il documento (vedi sezione \textsection3.1.4.1 paragrafo "Ciclo di vita dei documenti");
           \item \textbf{Uso:} indica se il documento è ad uso Interno o Esterno;
           \item \textbf{Destinato a:} elenco dei destinatari del documento (vedi sezione \textsection3.1.4.1 paragrafo del singolo documento);
-          \item \textbf{Descrizione:} descrizione breve del documento;
+    	\end{itemize}
+    	Tale struttura è infine seguita da alcune informazioni aggiuntive, allineate al centro del documento:
+    	\begin{itemize}
+          \item \textbf{Descrizione:} breve descrizione del documento;
           \item \textbf{Email:} indirizzo email del gruppo \Gruppo{}.
-        \end{itemize}
+   		\end{itemize}
 
       \subsubsubsection{Registro delle modifiche}
-        Inizia nella seconda pagina del documento e contiene un registro delle modifiche apportate al documento, strutturate in forma tabellare.\\
-        Questa sezione è presente anche nei Verbali di riunione, nei quali si limita alla stesura, la verifica e l'approvazione del documento in questo ordine, per evitare modifiche retroattive ai verbali.\\
-        Ogni riga rappresenta una modifica ed è suddivisa in quattro colonne:
+        Inizia nella seconda pagina del documento e contiene un resoconto delle modifiche apportate al documento, strutturate in forma tabellare.\\
+        Questa sezione è presente anche nei Verbali di riunione, nei quali si limita alla stesura, la verifica e l'approvazione del documento in questo ordine, per evitare modifiche retroattive ai Verbali.\\
+        Ogni riga rappresenta una modifica ed è suddivisa in cinque colonne:
         \begin{itemize}
           \item \textbf{Versione:} aggiornamento progressivo della versione:
           \item \textbf{Data:} data della modifica;
-          \item \textbf{Nominativo:} nome e cognome del membro del gruppo che ha effettuato la modifica.
+          \item \textbf{Nominativo:} nome e cognome del membro del gruppo che ha effettuato la modifica;
           \item \textbf{Ruolo:} ruolo ricoperto in quel momento dal membro del team che ha effettuato la modifica;
-          \item \textbf{Descrizione:} descrizione breve della modifica effettuata.
+          \item \textbf{Descrizione:} breve descrizione della modifica effettuata.
         \end{itemize}
 
       \subsubsubsection{Indice}
@@ -122,23 +125,22 @@
         \end{itemize}
 
       \subsubsubsection{Verbali}
-        Seguono la stessa struttura generale degli altri documenti ma hanno un'organizzazione specifica del contenuto, in particolare sono suddivisi in:
+        Seguono la stessa struttura generale degli altri documenti, ma hanno un'organizzazione specifica del contenuto, in particolare sono suddivisi in:
         \begin{itemize}
-          \item \textbf{Informazioni generali:} che contengono le informazioni dell'incontro e l'ordine del giorno:
-            \begin{itemize}
-              \item le informazioni dell'incontro sono:
+          \item \textbf{Informazioni generali:} che contengono le informazioni dell'incontro e l'ordine del giorno.
+          
+             Le informazioni dell'incontro sono:
                \begin{itemize}
-                 \item \textbf{Luogo:} il luogo dove si è svolta la riunione ( in alternativa il mezzo utilizzato es.Skype);
+                 \item \textbf{Luogo:} il luogo dove si è svolta la riunione (in alternativa il mezzo utilizzato es. Skype);
                  \item \textbf{Data:} il giorno in cui si è svolta la riunione;
                  \item \textbf{Ora di inizio:} l'orario di inizio della riunione;
                  \item \textbf{Ora di fine:} l'orario di fine della riunione;
                  \item \textbf{Partecipanti:} elenco dei partecipanti alla riunione;
                  \item \textbf{Segretario:} redattore del verbale.
                \end{itemize}
-              \item l'ordine del giorno contiene un elenco degli argomenti di discussione previsti per l'incontro.
-            \end{itemize}
-          \item \textbf{Verbale:} che contiene la descrizione e un riassunto degli argomenti elencati nell'Ordine del giorno, suddivisi in sezioni;
-          \item \textbf{Riepilogo:} contiene il riepilogo delle decisioni prese durante la riunione, in forma tabellare. Ogni decisione è identificata da un codice scritto in forma:
+			L'ordine del giorno contiene un elenco degli argomenti di discussione previsti per l'incontro.
+          \item \textbf{Verbale:} che contiene la descrizione e un riassunto degli argomenti elencati nell'ordine del giorno, suddivisi in sezioni;
+          \item \textbf{Riepilogo:} contiene il resoconto delle decisioni prese durante la riunione, in forma tabellare. Ogni decisione è identificata da un codice scritto in forma:
           \begin{center}
             \textbf{V[T]\_1.[numero progressivo]}
           \end{center}
@@ -149,17 +151,17 @@
       \subsubsubsection{Nomi dei file}
         I nomi dei file seguono le seguenti regole:
         \begin{itemize}
-          \item sono composti di diverse parole, con la prima lettera minuscola, fatta eccezione per i verbali che, come descritto in seguito, iniziano per VI oppure VE;
+          \item sono composti di diverse parole, con la prima lettera minuscola, fatta eccezione per i Verbali che, come descritto in seguito, iniziano per VI oppure VE;
           \item ogni parola è separata da un underscore;
-          \item il nome del file corrisponde al nome del documento senza escludere le preposizioni, fatta eccezione per i verbali che seguono un tipo diverso di nominazione, come descritto in seguito.
+          \item il nome del file corrisponde al nome del documento senza escludere le preposizioni, ad eccezione dei Verbali, come già menzionato.
         \end{itemize}
-        I Verbali seguono delle regole differenti per la loro unicità rispetto ad altri documenti. Sono nominati seguendo la struttura:
+        I Verbali seguono quindi delle regole differenti, a causa della loro unicità rispetto ad altri documenti. Sono nominati seguendo la struttura:
         \begin{center}
           \textbf{{V[T]\_[data]}}
         \end{center}
         \begin{itemize}
           \item \textbf{[T]:} indica il tipo di verbale che puó essere Interno (I) o Esterno (E);
-          \item \textbf{[data]:} indica la data della riunione in formato "YYYY\_MM\_DD", ovvero anno(YYYY), mese(MM) e giorno(DD) separati da underscore.
+          \item \textbf{[data]:} indica la data della riunione in formato "YYYY\_MM\_DD", ovvero anno (YYYY), mese (MM) e giorno (DD), separati da underscore.
         \end{itemize}
         Esempi di nomi corretti:
         \begin{itemize}
@@ -176,56 +178,57 @@
         \end{itemize}
         Quando all'interno del testo vengono riferiti dei particolari documenti (es.: \AdR), vanno seguite le seguenti regole:
         \begin{itemize}
-          \item indicare con lettera maiuscola le iniziali (es.: \AdR), senza la versione del documento, il tutto in corsivo;
+          \item indicare con lettera maiuscola le iniziali (es. \AdR), senza la versione del documento, il tutto in corsivo;
           \item se si fa riferimento al documento vero e proprio o a qualcosa in esso contenuto, va aggiunta la versione del documento nel formato
           \begin{center}
               \textbf{v[X].[Y].[Z]}
           \end{center}
-          (es.: riferendosi ad una sezione specifica "[...] come indicato nella \textsection5.1 dell' \AdR v1.1.0[...]").
+          (es. Riferendosi ad una sezione specifica "[\dots{}] come indicato nella \textsection5.1 dell'\AdR{} v1.1.0[\dots{}]").
         \end{itemize}
-      \subsubsubsection{Termini del \Glossario}
+      \subsubsubsection{Termini del Glossario}
+      	Le norme relative ai termini da inserire nel Glossario sono:
         \begin{itemize}
           \item ogni termine del \Glossario{} deve essere contrassegnato, in ogni sua istanza, da una G maiuscola a pedice;
           \item le istanze dei termini del \Glossario{} presenti nei titoli, non necessitano della G maiuscola a pedice.
         \end{itemize}
 
       \subsubsubsection{Elenchi puntati}
-          Ogni voce di un elenco puntato deveaderire alle norme seguenti:
+          Ogni voce di un elenco puntato deve aderire alle norme seguenti:
           \begin{itemize}
             \item deve iniziare con la lettera minuscola;
             \item deve essere seguita da un ";", fatta eccezione per l'ultimo elemento che deve essere seguito da un punto;
-            \item puó iniziare con dei termini in grassetto nel caso in cui il resto della voce sia una descrizione di quei termini.
+            \item puó iniziare con dei termini in grassetto e/o con prima lettera maiuscola nel caso in cui il resto della voce sia una descrizione di quei termini.
           \end{itemize}
 
       \subsubsubsection{Date e orari}
-        Le date devono essere scritte usando il formato
+        Le date devono essere scritte usando il formato:
         \begin{center}
           \textbf{YYYY-MM-DD}
         \end{center}
-        ovvero anno in quattro cifre(YYYY), mese in due cifre(MM) e giorno in due cifre(DD).\\
-        Gli orari devono essere scritti usando il formato
+        ovvero anno in quattro cifre (YYYY), mese in due cifre (MM) e giorno in due cifre (DD).\\
+        Gli orari devono essere scritti usando il formato:
         \begin{center}
           \textbf{HH.MM}
         \end{center}
         ovvero l'ora in due cifre (HH) e i minuti in due cifre (MM).
 
       \subsubsubsection{Tabelle e Immagini}
-        Le tabelle hanno sempre un titolo e un numero, e vengono indicizzate separatamente dal normale contenuto.\\
-        Le immagini sono accompagnate da una didascalia e da un numero, anch'esse sono indicizzate separatamente.
+        Le tabelle sono sempre corredate da un titolo ed un'indicizzazione separata dal normale contenuto.\\
+        Le immagini sono accompagnate da una didascalia ed un'indicizzazione, anch'essa separata dal normale contenuto.
 
       \subsubsubsection{Sigle e abbreviazioni}
-        Nella stesura dei documenti possono essere riferite diverse sigle:
+        Nella stesura dei documenti possono venire menzionate diverse sigle:
         \begin{itemize}
-          \item sigle per i ruoli di progetto;
+          \item sigle per i ruoli di progetto:
             \begin{itemize}
-              \item \textbf{Rp:}Responsabile di Progetto;
-              \item \textbf{As:}Amministratore;
-              \item \textbf{An:}Analista;
-              \item \textbf{Pt:}Progettista;
-              \item \textbf{Pr:}Programmatore;
-              \item \textbf{Vf:}Verificatore.
+              \item \textbf{Rp:} Responsabile di Progetto;
+              \item \textbf{As:} Amministratore;
+              \item \textbf{An:} Analista;
+              \item \textbf{Pt:} Progettista;
+              \item \textbf{Pr:} Programmatore;
+              \item \textbf{Vf:} Verificatore.
             \end{itemize}
-          \item sigle per i nomi dei documenti;
+          \item sigle per i nomi dei documenti:
             \begin{itemize}
               \item \textbf{SdF:} Studio di Fattibilità;
               \item \textbf{PdQ:} Piano di Qualifica;
@@ -234,7 +237,7 @@
               \item \textbf{AdR:} Analisi dei Requisiti;
               \item \textbf{G:} Glossario.
             \end{itemize}
-          \item sigle per le fasi del progetto;
+          \item sigle per le fasi del progetto:
             \begin{itemize}
               \item \textbf{RR:} Revisione dei Requisiti;
               \item \textbf{RP:} Revisione di Progettazione;
@@ -248,18 +251,18 @@
         Per la stesura della documentazione si è scelto il linguaggio di markup \LaTeX. Nonostante non sia di immediata comprensione, quest'ultimo permette di scrivere documenti in modo collaborativo, modulare e scalabile.
 
       \subsubsubsection{File condivisi di Microsoft Teams}
-        Si utilizza la condivisione di file interna a Microsoft Teams per file utili non ufficiali. Questa piattaforma infatti offre un'integrazione per il lavoro simultaneo sugli stessi file, che si presenta utile per l'organizzazione interna del lavoro di gruppo.
+        Si utilizza la condivisione di file interna a Microsoft Teams per file utili non ufficiali. Questa piattaforma offre infatti funzionalità per il lavoro simultaneo sugli stessi file, che risulta utile per l'organizzazione interna del lavoro di gruppo.
 
       \subsubsubsection{Editor di testo}
-        Si ha deliberato la scelta dell'editor di testo ai singoli membri del gruppo per permettere un lavoro piú efficiente, in quanto ognuno presenta familiarità con diversi editor e ambienti di lavoro.
+        Si è demandata la scelta dell'editor di testo ai singoli membri del gruppo per permettere un lavoro piú efficiente, data la familiarità di ognuno con diversi editor e ambienti di lavoro.
 
   \subsection{Gestione della configurazione}
     \subsubsection{Descrizione}
-      Questo processo, definisce le norme utili alla predisposizione di un workspace ordinato e accessibile, andando a controllare e automatizzare lo stato dei documenti e delle componenti software. Si compone di una serie di attività:
+      Questo processo, definisce le norme utili alla predisposizione di un workspace ordinato e accessibile, andando a controllare e automatizzare lo stato dei documenti e delle componenti software. Si compone di una serie di attività, di seguito descritte.
       %da aggiungere
     \subsubsection{Versionamento}
       \subsubsubsection{Codice di versione}
-        Tutti i documenti prodotti vengono conservati in una repository e devono essere versionati tramite un codice. I numeri di versione rispettano la struttura seguente:
+        Tutti i documenti prodotti vengono conservati in una repository e devono essere versionati tramite un sistema identificativo. I numeri di versione rispettano la struttura seguente:
         \begin{center}
           \textbf{X.Y.Z}
         \end{center}
@@ -268,12 +271,12 @@
           \item \textbf{X:} rappresenta una versione completa del documento pronta al rilascio esterno:
             \begin{itemize}
               \item parte da 0 (puó soltanto aumentare);
-              \item incrementa soltanto dopo l'approvazione del documento da parte del Responsabile di progetto.
+              \item viene incrementato soltanto dopo l'approvazione del documento da parte del Responsabile di progetto.
             \end{itemize}
-          \item \textbf{Y:} rappresenta una versione del documento che è stata soggetto di verifica da parte di un Verificatore:
+          \item \textbf{Y:} rappresenta una versione del documento che è stata oggetto di verifica, da parte di un Verificatore:
             \begin{itemize}
               \item parte da 0;
-              \item incrementato ad ogni verifica;
+              \item viene incrementato ad ogni verifica;
               \item si resetta ad ogni incremento di X.
             \end{itemize}
           \item \textbf{Z:} rappresenta una versione del documento in fase di stesura:
@@ -285,61 +288,61 @@
         \end{itemize}
 
       \subsubsubsection{Strumenti}
-        Vengono utilizzati Git come VCS distribuito e GitHub per ospitare la repository.
+        Vengono utilizzati Git come VCS distribuito e GitHub per ospitare la repository di progetto.
 
       \subsubsubsection{Repository}
-        La versione ufficiale del progetto viene mantenuta in una repository remota GitHub, appartenete alla \textit{GitHub organization} del gruppo \Gruppo{}, al link:
+        La versione ufficiale della documentazione viene mantenuta in una repository remota nel sito GitHub, appartenete alla \textit{GitHub organization} del gruppo \Gruppo{}, al link:
         \begin{center}
           \url{https://github.com/Rounadbout/Documentazione}
         \end{center}
-        Ogni membro del gruppo lavora su una copia locale della repository sul proprio computer, interagendo con il VCS e la repository remota sia linea di comando, sia tramite software come GitHub Desktop e GitKraken.
+        Ogni membro del gruppo lavora su una copia locale della repository sul proprio computer, interagendo con il VCS e la repository remota sia attraverso linea di comando, sia tramite software come GitHub Desktop e GitKraken.
 
       \subsubsubsection{Utilizzo di Git}
-        Per sfruttare in modo efficace le funzionalità offerte da Git e promuovere il lavoro collaborativo, la repository è strutturata in vari branch, ognuno relativo a una particolare feature o componente del progetto (es.: un branch per la stesura delle \NdP chiamato feature/norme\_di\_progetto). Dunque ogni membro del gruppo che deve lavorare su una certa componente del progetto deve:
+        Per sfruttare in modo efficace le funzionalità offerte da Git e promuovere il lavoro collaborativo, la repository è strutturata in vari branch, ognuno relativo ad una particolare feature o componente del progetto (es. Un branch per la stesura delle \NdP{} chiamato feature/norme\_di\_progetto). Dunque ogni membro del gruppo che necessita di operare su una certa componente del progetto deve:
         \begin{itemize}
           \item scegliere il branch adatto su cui lavorare;
-          \item spostarsi sull'apposito branch;
-          \item effettuare un pull dal repository remoto per avere una copia aggiornata nella propria repository locale;
+          \item spostarsi su tale branch;
+          \item effettuare un pull dal repository remoto per trasferire una copia aggiornata nella propria repository locale;
           \item svolgere il lavoro;
           \item eseguire un commit del lavoro svolto, allegando una descrizione;
-          \item eseguire il push sulla repository remota.
+          \item eseguire il push delle modifiche sulla repository remota.
         \end{itemize}
 
       \subsubsubsection{Gestione delle modifiche}
         Tutte le modifiche effettuate nei documenti vengono memorizzate all'interno del "Registro delle modifiche" situato in ogni documento nella pagina successiva alla copertina, come descritto nella sezione \textsection3.1.5.3.\\
-        Ad ogni modifica corrisponde un commit Git al quale è opportuno allegare un commento in modo da facilitare il rintracciamento delle modifiche.
+        Ad ogni modifica corrisponde un commit Git, al quale è opportuno allegare un commento in modo da facilitare il tracciamento delle modifiche e del lavoro svolto, tramite Issue.
 
 % Da espandere e discutere con tutti la sezione di gestione della qualità
   \subsection{Gestione della qualità}
-    Da espandere e discutere con tutti la sezione di gestione della qualità
+    Da espandere e discutere con tutti la sezione di gestione della qualità...
     \subsubsection{Descrizione}
-      La qualità del prodotto viene garantita dai processi di Verifica e Validazione, oltre a servirsi di eventuali metriche da discutere
+      La qualità del prodotto viene garantita dai processi di Verifica e Validazione, oltre che attraverso eventuali metriche da discutere...
 
 % Da valutare e discutere l'espansione delle sezioni seguenti di Verifica e Validazione
   \subsection{Verifica}
     \subsubsection{Descrizione}
-      Il processo di Verifica determina se il prodotto di un'attività sia conforme o meno alle specifiche e alle aspettative già individuate, individuando quindi possibili difetti nel software e nella documentazione e permettendo prodotti corretti e completi.
+      Il processo di Verifica determina se il prodotto di un'attività sia conforme o meno alle specifiche e alle aspettative già confermate, individuando quindi possibili difetti nel software e nella documentazione, e garantendo prodotti corretti e completi.
 
     \subsubsection{Attività}
       \subsubsubsection{Analisi}
-        \paragraph{Analisi statica}
-          L'Analisi statica riguarda sia la documentazione che il codice, valutandone la conformità alle norme stabilite e la correttezza senza l'esecuzione del prodotto software. L'Analisi statica si serve di metodi formali (eseguiti da macchine) e metodi manuali (attuati solo per prodotti semplici); i metodi manuali sono:
+        \subsubsubsection*{Analisi statica}
+          L'Analisi statica riguarda sia la documentazione che il codice, e valuta la conformità alle norme stabilite e la sua correttezza formale, senza l'esecuzione del prodotto software. Questo tipo di analisi, si serve di metodi formali (implementati tramite macchine) e metodi manuali (implementati solo per prodotti semplici).\\ I metodi manuali sono:
           \begin{itemize}
             \item \textbf{walkthrough:} analisi dei documenti (o diversi file) nella loro interezza, per ricercare eventuali difetti identificati da un Verificatore, che andranno eventualmente corretti dallo sviluppatore (o redattore del documento);
-            \item \textbf{inspection:} analisi mirata dell'oggetto di verifica da parte di un Verificatore, che utilizza delle liste di controllo per ceracre difetti specifici in sezioni specifiche. Alcuni erroro comunio sono elencati di seguito:
+            \item \textbf{inspection:} analisi mirata dell'oggetto di verifica da parte di un Verificatore, che utilizza delle liste di controllo per cercare difetti specifici in sezioni specifiche. Alcuni errori comuni sono elencati di seguito:
               \begin{itemize}
                 \item formato di date (YYYY-MM-DD);
                 \item formato di elenchi puntati (punteggiatura alla fine di ogni elemento ";" o ".");
-                \item stile del testo per termini particolari (es.: termini in corsivo);
+                \item stile del testo per termini particolari (es. Termini in corsivo);
                 \item tempo verbale (il presente è sempre preferibile).
               \end{itemize}
           \end{itemize}
 
-        \paragraph{Analisi dinamica}
-          L'Analisi dinamica richiede l'esecuzione del prodotto software e viene effettuata tramite una suite di test che verificano il prodotto stesso.
+        \subsubsubsection*{Analisi dinamica}
+          L'Analisi dinamica richiede l'esecuzione del prodotto software e viene effettuata tramite una suite di test, che garantisce nel complesso la verifica del prodotto stesso.
 
       \subsubsubsection{Test}
-        Sono la parte costituente dell'Analisi dinamica hanno lo scopo di verificare il corretto funzionamento del codice. I test, per essere ben scritti, devono essere:
+        Sono parte costituente dell'Analisi dinamica e hanno lo scopo di verificare il corretto funzionamento del codice. I test, per poter essere considerati ben scritti, devono essere:
         \begin{itemize}
           \item \textbf{Ripetibili:} quindi devono specificare:
             \begin{itemize}
@@ -347,14 +350,14 @@
               \item l'input e l'output atteso;
               \item metodi di interpretazione dei risultati.
             \end{itemize}
-          \item \textbf{Automatizzati:} quindi devono basarsi su strumenti che ne permettano l'esecuzione automatica e registrino i risultati.
+          \item \textbf{Automatizzati:} quindi devono basarsi su strumenti che ne permettano l'esecuzione automatica, ne registrino i risultati e provvedano a notificare i soggetti ad essi interessati.
         \end{itemize}
         Esistono diversi tipi di test:
         \begin{itemize}
           \item \textbf{Test di unità:} riguardano il funzionamento di singole unità di software;
-          \item \textbf{Test di integrazione:} test eseguiti per la verifica della corretta integrazione di multiple unità in una sola componente. I componenti vengono verificati maniera incrementale, con l'aggiunta di altre unità o gruppi di unità corretti, fino ad arrivare al sistema completo;
-          \item \textbf{Test di sistema:} test del sistema nella sua interezza e confronto dei risultati con le direttive identificate nell'\AdR in modo da accertare la copertura dei requisiti funzionali. Introduce il processo di Validazione;
-          \item \textbf{Test di regressione:} utili a controllare che eventuali mofifiche al sistema non compromettano funzionalita testate in precedenza. Consiste nella riesecuzione di test esistenti per l'unità mofificata e altre unità connesse aquest'ultima.
+          \item \textbf{Test di integrazione:} test eseguiti per verificare la corretta integrazione di multiple unità in un unica componente. I componenti vengono verificati in maniera incrementale, con l'aggiunta di altre unità o gruppi di unità corretti, fino ad arrivare al sistema completo;
+          \item \textbf{Test di sistema:} test del sistema nella sua interezza e confronto dei risultati con quanto richiesto dall'\AdR{}, così da accertare la copertura dei requisiti funzionali. Introduce il processo di Validazione;
+          \item \textbf{Test di regressione:} utili a controllare che eventuali modifiche al sistema non compromettano funzionalità già testate in precedenza. Consiste nella reiterazione di test già esistenti, per l'unità modificata ed altre unità connesse a quest'ultima.
         \end{itemize}
 
     \subsubsection{Strumenti}
@@ -362,8 +365,8 @@
 
   \subsection{Validazione}
     \subsubsection{Descrizione}
-      Il processo di Validazione stabilisce se il prodotto soddisfa i requisiti forniti dal cliente eseguendo un test completo sul sistema, di conseguenza va eseguito in seguito al processo di Verifica, il quale predispone l'esecuzione di tale test.
+      Il processo di Validazione stabilisce se il prodotto soddisfa i requisiti richiesti, eseguendo un test completo sul sistema. Di conseguenza va eseguito in seguito al processo di Verifica, il quale predispone il software per l'esecuzione di tale test.
 
     \subsubsection{Attività}
       \subsubsubsection{Test di accettazione}
-        Nel procesdo di Validazione viene eseguito il test di accettazione (detto anche collaudo) ovvero un test molto simile a quello di sistema ma eseguito in collaborazione con il Committente. Nello specifico è mirato a accertare e confermare il soddisfacimento dei requisiti specificati nel capitolato e analizzati nel documento "\AdR".
+        Nel processo di Validazione viene eseguito il Test di accettazione (detto anche collaudo), ovvero un test molto simile a quello di sistema, ma eseguito in collaborazione con il Committente. Questo test, nello specifico, è mirato a accertare e confermare il soddisfacimento dei requisiti specificati nel capitolato e analizzati nel documento "\AdR{}".
