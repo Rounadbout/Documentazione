@@ -2,15 +2,16 @@
 Durante lo sviluppo di un progetto complesso è possibile incorrere in problematiche che potrebbero rallentare o impedire il normale proseguimento del progetto. Risulta quindi necessario effettuare un'approfondita attività di analisi dei fattori di rischio per cercare di evitare o rendere il più ininfluenti possibili le eventuali problematiche che potrebbero presentarsi.
 Il risultato di questa analisi è presentata in forma tabellare dove ciascuna voce rappresenta un fattore di rischio ed è costruita tramite le seguenti quattro attività:
 \begin{itemize}
-	\item \textbf{Individuazione}: vengono identificati i potenziali fattori di rischio che potrebbero causare situazioni problematiche durante lo sviluppo del progetto;
-	\item \textbf{Analisi}: viene studiato ciascun fattore di rischio. Questo studio consiste nell'assegnare a ciascun fattore la probabilità che esso si verifichi, un indice di gravità e l'impatto che avrebbe sul progetto nel caso in cui si verifichi;
-	\item \textbf{Pianificazione di controllo e mitigazione}: si pianifica una metodologia per evitare che i rischi individuati si verifichino e si stabilisce preventivamente come procedere nel caso in cui il rischio si verifichi;
-	%piano di contingenza
-	\item \textbf{Monitoraggio}: attività continua nella quale la situazione è tenuta sotto controllo per prevenire il verificarsi dei rischi o, nel peggiore dei casi, per intervenire tempestivamente e mitigarli;
-	%identificazione di metodologie di rilevamento dei rischi
+		\item \textbf{Individuazione}: vengono identificati i potenziali fattori di rischio che potrebbero causare situazioni problematiche durante lo sviluppo del progetto;
+		\item \textbf{Analisi}: viene studiato ciascun fattore di rischio. Questo studio consiste nell'assegnare a ciascun fattore la probabilità che esso si verifichi, un indice di gravità e l'impatto che avrebbe sul progetto nel caso in cui si verifichi;
+		\item \textbf{Pianificazione di controllo e mitigazione}: si pianifica una metodologia per evitare che i rischi individuati si verifichino e si stabilisce preventivamente come procedere nel caso in cui il rischio si verifichi. \\
+		Questa attività consiste nell'elaborazione di un piano di contingenza per delineare preventivamente le azioni da intraprendere per evitare o mitigare l'insorgere dei problemi individuati;
+		\item \textbf{Monitoraggio}: attività continua nella quale la situazione è tenuta sotto controllo per prevenire il verificarsi dei rischi o, nel peggiore dei casi, per intervenire tempestivamente e mitigarli; \\
+
 \end{itemize}
 
-Per semplificarne la gestione ed evitare possibili ambiguità si è deciso di raggruppare le varie tipologie di fattori di rischio in questo modo:
+
+Si è deciso di raggruppare le varie tipologie di fattori di rischio in questo modo:
 \begin{itemize}
 	\item \textbf{RT}: Rischi Tecnologici;
 	\item \textbf{RO}: Rischi Organizzativi;
@@ -18,128 +19,174 @@ Per semplificarne la gestione ed evitare possibili ambiguità si è deciso di ra
 	\item \textbf{RR}: Rischi legati ai Requisiti.
 \end{itemize}
 
+Inoltre per semplificarne la gestione ed evitare possibili ambiguità ciascun rischio verrà identificato da:
+\begin{itemize}
+	\item ID: [tipologia]-[N] \\
+		dove:
+		\begin{itemize}
+			\item tipologia: una delle tipologie sopra indicate;
+			\item N: numero identificativo che, per ciascuna tipologia, parte da 1 e viene incrementato ad ogni nuovo rischio individuato.
+		\end{itemize}
+	\item Nome;
+	\item Descrizione;
+	\item Rilevazione;
+	\item Grado di rischio;
+	\item Piano di contingenza.
+\end{itemize}
 
-%\rowcolors{2}{lightRowColor}{darkRowColor}
 \begin{longtable}{ 
-		>{\centering}p{0.075\textwidth} 
-		>{\centering}p{0.15\textwidth}
-		>{\centering}p{0.3\textwidth} 
-		>{\centering}p{0.3\textwidth} 
-		>{\centering}p{0.15\textwidth} }
+		>{\centering}p{0.15\textwidth} 
+		>{\centering}p{0.28\textwidth} 
+		>{\centering}p{0.28\textwidth} 
+		>{\centering\arraybackslash}p{0.15\textwidth} }	
 	
+	\caption {Analisi dei rischi del progetto} \label{tabAnalisi} \\
 	\coloredTableHead
-	\textbf{\color{white}Codice} & 
-	\textbf{\color{white}Nome} & 
+	\textbf{\color{white}ID Nome} & 
 	\textbf{\color{white}Descrizione} & 
-	\textbf{\color{white}Rilevamento} &
+	\textbf{\color{white}Rilevazione} &
 	\textbf{\color{white}Grado di rischio} 
-	\tabularnewline  
+	\tabularnewline 
+	\endfirsthead
+	
+	
+	\caption* {Tabella \ref{tabAnalisi}: continua} \\
+	\coloredTableHead
+	\textbf{\color{white}ID} \\ \textbf{\color{white}Nome} & 
+	\textbf{\color{white}Descrizione} & 
+	\textbf{\color{white}Rilevazione} &
+	\textbf{\color{white}Grado di rischio} 
+	\tabularnewline 
 	\endhead
 	
-	% contenuto tabella 
+	% Contenuto tabella 
 	% Codice & Nome & Descrizione & Rilevamento & Grado di rischio \\
+	
 	\rowcolor{lightRowColor}
-	RT-1 & Tecnologie da utilizzare &
-	  &
-	  & \\
-	 \rowcolor{lightRowColor}
-	 \multicolumn{2}{c}{\textbf{Piano di contingenza}} &
-	 \multicolumn{3}{c}{Testo} \\
+	RT-1 \\ Tecnologie da utilizzare
+		&
+		Alcune delle teconologie necessarie allo sviluppo del progetto risultano poco o del tutto sconosciute ad alcuni membri del gruppo e inoltre, essendo tecnologie recenti, la documentazione potrebbe essere scarsa o non del tutto completa.
+		&
+		Ciascun componente del gruppo ha già espresso il livello di conoscenza rispetto a queste teconologie ed è necessario che, non appena qualcuno riscontri un problema riguardo all'uso di qualcuna di esse, lo notifichi immediatamente al resto dei componenti.
+		&
+		Probabilità: \textbf{ALTA} Pericolosità: \textbf{MEDIA} \\
+		
+		\rowcolor{lightRowColor}
+		\textbf{Piano di contingenza}
+		&
+		\multicolumn{3}{c}{I Proponenti e i componenti del gruppo più esperti hanno condiviso del materiale utile per lo studio di queste tecnologie. Nel caso in cui questo materiale si riveli non sufficiente, i Proponenti si sono resi disponibili a chiarire eventuali dubbi che potrebbero insorgere durante lo sviluppo.} \\
 	
 	\rowcolor{darkRowColor}
-	RT-2 & Guasti hardware &
-	  &
-	  & \\
-	 \rowcolor{darkRowColor}
-	 \multicolumn{2}{c}{\textbf{Piano di contingenza}} &
-	 \multicolumn{3}{c}{Testo} \\
-	
+	RT-2 \\ Guasti hardware
+		&
+		Durante lo sviluppo potrebbero esserci malfunzionamenti di uno o più strumenti di lavoro.
+		&
+		Appena un componente nota un malfunzionamento è necessario che lo riferisca agli altri in modo da evitare possibili rallentamenti o impedimenti per il normale proseguimento.
+		&
+		Probabilità: \textbf{MEDIA} Pericolosità: \textbf{BASSA} \\
+		
+		\rowcolor{darkRowColor}
+		\textbf{Piano di contingenza} & \multicolumn{3}{l}{Se il malfunzionamento non può essere risolto in breve tempo è necessario che componente possa continuare a lavorare su un altro dispositivo. Il cambio di dispositivo è reso molto semplice grazie all'utilizzo di un repository GitHub e di strumenti collaborativi online. } \\
+
 	\rowcolor{lightRowColor}
-	RT-3 & Guasti software &
-	  &
-	  & \\
-	 \rowcolor{lightRowColor}
-	 \multicolumn{2}{c}{\textbf{Piano di contingenza}} &
-	 \multicolumn{3}{c}{Testo} \\
+	RO-1 \\ Inesperienza
+		&
+		Tenendo conto della poca esperienza dei componenti del gruppo in un progetto complesso è possibile che non sia semplice per alcuni riuscire ad ambientarsi in questa nuova realtà simile a ciò che succede nel mondo del lavoro.
+		&
+		È necessario che ciascun componente del gruppo esponga le proprie problematiche così che gli altri componenti possano essere utili per dare un aiuto in modo da essere il più produttivi possibile.
+		&
+		Probabilità: \textbf{ALTA} Pericolosità: \textbf{MEDIA} \\
+		
+		\rowcolor{lightRowColor}
+		\textbf{Piano di contingenza} & \multicolumn{3}{l}{È importante che ciscun componente si adoperi per limitare il più possibile eventuali difficoltà o lacune dovute all'inesperienza.} \\
 
 	\rowcolor{darkRowColor}
-	RO-1 & Calcolo tempistiche &  
-	  &
-	  & \\
-	 \rowcolor{darkRowColor}
-	 \multicolumn{2}{c}{\textbf{Piano di contingenza}} &
-	 \multicolumn{3}{c}{Testo} \\
-	
+		RO-2 \\ Calcolo dei tempi e dei costi
+		&
+		Rischio causato anche dall'inesperienza sopra esposta. È possibile che i tempi e i costi preventivati si rivelino imprecisi con l'avanzamento del progetto.
+		&
+		Nel caso in cui un componente riscontri un discostamento dalle ore di lavoro preventivate per ciascuna attività dovrà farlo presente al Responsabile.
+		&
+		Probabilità: \textbf{ALTA} Pericolosità: \textbf{ALTA} \\
+		
+		\rowcolor{darkRowColor}
+		\textbf{Piano di contingenza} & \multicolumn{3}{l}{Il Responsabile, nel caso in cui una stima oraria risulti non sufficiente per portare a termine una specifica attività provvederà ad assegnare più risorse in modo da cercare di evitare o limitare eventuali rallentamenti al lavoro. Se ciò bastasse e ci dovessero essere variazioni importanti al preventivo iniziale il responsabile provvederà a comunicarlo al Committente.} \\
+
 	\rowcolor{lightRowColor}
-	RO-2 & Calcolo costi delle attività &  
-	  &
-	  & \\
-	 \rowcolor{lightRowColor}
-	 \multicolumn{2}{c}{\textbf{Piano di contingenza}} &
-	 \multicolumn{3}{c}{Testo} \\
-	
+	RO-3 \\ Impegni personali
+		&
+		Considerando la possibilità che in alcuni momenti uno o più componenti del gruppo abbiano degli impegni accademici o impegni personali che potrebbero portare ad un rallentamento del lavoro.
+		&
+		È essenziale che tutti gli impegni vengano notificati al Responsabile appena il componente interessato ne viene a conoscenza.
+		&
+		Probabilità: \textbf{MEDIA} Pericolosità: \textbf{MEDIA} \\
+		
+		\rowcolor{lightRowColor}
+		\textbf{Piano di contingenza} & \multicolumn{3}{l}{Il Responsabile provvederà ad apportare delle modifiche organizzative per evitare o limitare rallentamenti ai lavori.} \\
+
+	\rowcolor{lightRowColor}
+	RI-1 \\ Comunicazione interna
+		&
+		Potrebbero esserci momenti nei quali uno o più componenti potrebbero non essere reperibili. Ciò potrebbe portare a dei rallentamenti del lavoro qualora non si riuscisse a comunicare con la persona desiderata per una decisione importante o per l'insorgere di qualche problematica interna che potrebbe essere legata ad essa.
+		&
+		È necessario che ciascun componente riferisca al Responsabile eventuali momenti nei quali potrebbe non essere reperibile.
+		&
+		Probabilità: \textbf{BASSA} Pericolosità: \textbf{MEDIA} \\
+		
+		\rowcolor{lightRowColor}
+		\textbf{Piano di contingenza} & \multicolumn{3}{l}{È stato concordato con tutti i componenti di svolgere almeno due incontri a settimana per comunicare l'avanzamento del lavoro e per chiarire eventuali dubbi. Nel caso in cui un componente non riuscisse a partecipare all'incontro è tenuto a comunicare al Responsabile l'avanzamento del proprio lavoro in modo che possa riferirlo agli altri componenti.} \\
+
 	\rowcolor{darkRowColor}
-	RO-3 & Impegni accademici &
-	  &
-	  & \\
-	 \rowcolor{darkRowColor}
-	 \multicolumn{2}{c}{\textbf{Piano di contingenza}} &
-	 \multicolumn{3}{c}{Testo} \\
-	
+	RI-2 \\ Comunicazione esterna
+		&
+		Poichè i Proponenti hanno sede all'estero potrebbero esserci problemi qualora avessimo la necessità di contattarli.
+		&
+		A seguito di un colloquio con i Proponenti abbiamo creato un canale sulla piattaforma Slack per poter comunicare con loro in maniera facile e rapida. Inoltre si sono resi disponibili ad incontri per via telematica qualora ne avessimo bisogno, a patto di richiederli con due o tre giorni di preavviso in modo che possano verificare la loro disponibilità.
+		&
+		Probabilità: \textbf{BASSA} Pericolosità: \textbf{MEDIA} \\
+		
+		\rowcolor{darkRowColor}
+		\textbf{Piano di contingenza} & \multicolumn{3}{l}{Qualora si presentasse la necessità di organizzare un incontro con i Proponenti è necessario che il gruppo proponga la data e l'ora in cui desiderano avvenga l'incontro con almeno due o tre giorni di preavviso e, nel caso in cui i proponenti non siano disponibili, concordare per svolgere l'incontro in un altro momento.} \\
+
 	\rowcolor{lightRowColor}
-	RO-4 & Impegni personali &
-	  &
-	  & \\
-	 \rowcolor{lightRowColor}
-	 \multicolumn{2}{c}{\textbf{Piano di contingenza}} &
-	 \multicolumn{3}{c}{Testo} \\
-	
+	RI-3 \\ Contrasti interni
+		&
+		Lavorando in gruppo è possibile che si creino delle tensioni o dei contrasti tra due o più componenti, per esempio qualora alcuni di essi non riescano a trovare dei punti d'intesa riguardo ad un qualsiasi argomento.
+		&
+		Nel momento in cui un componente riscontri una situazione del genere è essenziale che la comunichi immediatamente al Responsabile.
+		&
+		Probabilità: \textbf{BASSA} Pericolosità: \textbf{ALTA} \\
+		
+		\rowcolor{lightRowColor}
+		\textbf{Piano di contingenza} & \multicolumn{3}{l}{Il Responsabile provvederà a comunicare con i componenti interessati per risolvere l'eventuale tensione o conflitto.} \\
+
 	\rowcolor{darkRowColor}
-	RO-5 & Ritardi &
-	  &
-	  & \\
-	 \rowcolor{darkRowColor}
-	 \multicolumn{2}{c}{\textbf{Piano di contingenza}} &
-	 \multicolumn{3}{c}{Testo} \\
-	
+	RR-1 \\ Analisi dei requisiti incompleta
+		&
+		È possibile che alcuni requisiti vengano interpretati male dal gruppo. Se ciò accade all'inizio del progetto questa problematica può essere risolta senza gravi conseguenze sul normale proseguimento del progetto e si aggrava quanto più il tempo passa e potrebbe diventare molto seria.
+		&
+		Sono i Proponenti che potrebbero notificare al gruppo che alcuni requisiti sono stati mal interpretati.
+		&
+		Probabilità: \textbf{MEDIA} Pericolosità: \textbf{ALTA} \\
+		
+		\rowcolor{darkRowColor}
+		\textbf{Piano di contingenza} & \multicolumn{3}{l}{È necessario redigere al meglio l'\AdR{} e mantenere una buona comunicazione con i Proponenti in modo da chiarire tutti i dubbi che potrebbero insorgere e avere dei riscontri sulla correttezza dei requisiti individuati.} \\
+
 	\rowcolor{lightRowColor}
-	RI-1 & Comunicazione interna &
-	  &
-	  & \\
-	 \rowcolor{lightRowColor}
-	 \multicolumn{2}{c}{\textbf{Piano di contingenza}} &
-	 \multicolumn{3}{c}{Testo} \\
+		RR-2 \\ Modifica dei requisiti
+		&
+		Questa problematica si verifica quando i Proponenti modificano qualche richiesta iniziale.
+		&
+		Sono i Proponenti che devono comunicare al gruppo eventuali modifiche ai requisiti.
+		&
+		Probabilità: \textbf{BASSA} Pericolosità: \textbf{ALTA} \\
 	
-	\rowcolor{darkRowColor}
-	RI-2 & Comunicazione esterna &
-	  &
-	  & \\
-	 \rowcolor{darkRowColor}
-	 \multicolumn{2}{c}{\textbf{Piano di contingenza}} &
-	 \multicolumn{3}{c}{Testo} \\
-	
-	\rowcolor{lightRowColor}
-	RI-3 & Contrasti interni &
-	  &
-	  & \\
-	 \rowcolor{lightRowColor}
-	 \multicolumn{2}{c}{\textbf{Piano di contingenza}} &
-	 \multicolumn{3}{c}{Testo} \\
-	
-	\rowcolor{darkRowColor}
-	RR-1 & Analisi dei requisiti incompleta &
-	  &
-	  & \\
-	 \rowcolor{darkRowColor}
-	 \multicolumn{2}{c}{\textbf{Piano di contingenza}} &
-	 \multicolumn{3}{c}{Testo} \\
-	
-	\rowcolor{lightRowColor}
-	RR-2 & Modifica dei requisiti &
-	  &
-	  & \\
-	 \rowcolor{lightRowColor}
-	 \multicolumn{2}{c}{\textbf{Piano di contingenza}} &
-	 \multicolumn{3}{c}{Testo} \\
+		\rowcolor{lightRowColor}
+		\textbf{Piano di contingenza} & \multicolumn{3}{l}{Effettuare di nuovo l'\AdR{}} \\
+
+	%\rowcolor{lightRowColor}
+	%R- \\  & & & \\
+	%\rowcolor{lightRowColor}
+	%\textbf{Piano di contingenza} & \multicolumn{3}{l}{Testo} \\
     	        
 \end{longtable}
