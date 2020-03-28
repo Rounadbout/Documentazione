@@ -1,20 +1,20 @@
 \section{Verbale}
 \subsection{Presentazioni dei membri del gruppo \Gruppo}
-Ogni membro del gruppo \Gruppo{} si é presentato per nome ai referenti di RedBabel, i quali a loro volta hanno illustrato la propria posizione nell'azienda e rispetto allo svolgimento del progetto collaborativo Etherless.
+Ogni membro del gruppo \Gruppo{} si é presentato per nome ai referenti di \Proponente{}, i quali a loro volta hanno illustrato la propria posizione nell'azienda e rispetto allo svolgimento del progetto collaborativo \NomeProgetto{}.
 
 \subsection{Decisioni riguardo la collaborazione tra gruppo e Proponente}
 I referenti hanno esposto la volontá di utilizzare un canale sulla piattaforma %aggiungere link al workspace
-Slack per la comunicazione diretta con i membri del gruppo. Quindi é stato creato un canale \href{https://app.slack.com/client/T38RC2RNJ/C010A7JDJBH}{\#roundabout} all'interno del workspace \href{https://unipd-math.slack.com}{unipd}, che verrá utilizzato per avere una comunicazione frequente e concisa tra gruppo e Proponente.\\
+Slack\ped{\textit{G}} per la comunicazione diretta con i membri del gruppo. Quindi é stato creato un canale \href{https://app.slack.com/client/T38RC2RNJ/C010A7JDJBH}{\#roundabout} all'interno del workspace \href{https://unipd-math.slack.com}{unipd}, che verrá utilizzato per avere una comunicazione frequente e concisa tra gruppo e Proponente\ped{\textit{G}}.\\
 I referenti hanno inoltre esposto alcune richieste:
 \begin{description}
 	\item[Lingua:] utilizzo della lingua inglese:
 		\begin{itemize}
-			\item all'interno del codice del prodotto (ad esempio: nomi di variabili, commenti ecc.);
-			\item per la stesura della documentazione del prodotto software (es. README).
+			\item all'interno del codice del prodotto\ped{\textit{G}} (ad esempio: nomi di variabili, commenti ecc.);
+			\item per la stesura della documentazione del prodotto\ped{\textit{G}} software (es. README).
 		\end{itemize}
 	\item[Documentazione:] i referenti hanno espresso particolare interesse per quanto riguarda specifici documenti:
 		\begin{itemize}
-			\item documenti che illustrano ed informano l'utente sull'utilizzo del prodotto in modo chiaro e corretto (es. README);
+			\item documenti che illustrano ed informano l'utente sull'utilizzo del prodotto\ped{\textit{G}} in modo chiaro e corretto (es. README);
 			\item documenti che giustificano le scelte progettuali effettuate durante lo sviluppo.
 		\end{itemize}
 \end{description}
@@ -24,21 +24,21 @@ I membri del gruppo hanno poi esposto una serie di domande volte a chiarire dei 
 Di seguito si trova un riassunto delle informazioni estrapolate dalla discussione:
 \begin{description}
 	\item[Distinzione tra le tipologie di utenti:] la scelta relativa alla suddivisione delle tipologie di utenti in \textit{Users} e \textit{Developers}, viene lasciata al team di sviluppo. Quest'ultimo deve valutare la necessitá di questa feature, considerando l'efficienza e la difficoltá di implementazione;
-	\item[Pagamenti:] la scelta della modalitá di pagamento per l'esecuzione di una funzione, tra \textit{escrow} (come da esempio citato nel documento del capitolato\ped{\emph{G}}) e \textit{upfront} (pagamento immediato prima della ricezione del risultato), è lasciata al team. Anche in questo caso devono essere effettuate le opportune valutazioni;
-	\item[Gas limit:] come riferimento alla definizione di Gas limit è stato indicato il seguente link \href{https://bitcoin.stackexchange.com/questions/39132/what-is-gas-limit-in-ethereum}{What is Gas limit in Ethereum\ped{\emph{G}}?};
-	\item[Environment:] sottolineata la necessitá di avere ambienti Locali, di Test e di Staging; mentre un ambiente di Produzione non é richiesto. I vari ambienti (\textit{environments}) devono mantenere lo stesso codice del prodotto, a meno di variabili d'ambiente e simili; mentre differiscono per la rete Ethereum utilizzata:
+	\item[Pagamenti:] la scelta della modalitá di pagamento per l'esecuzione di una funzione, tra \textit{escrow}\ped{\textit{G}} (come da esempio citato nel documento del capitolato\ped{\emph{G}}) e \textit{upfront}\ped{\textit{G}} (pagamento immediato prima della ricezione del risultato), è lasciata al team. Anche in questo caso devono essere effettuate le opportune valutazioni;
+	\item[Gas limit\ped{\textit{G}}:] come riferimento alla definizione di Gas limit\ped{\textit{G}} è stato indicato il seguente link \href{https://bitcoin.stackexchange.com/questions/39132/what-is-gas-limit-in-ethereum}{What is Gas limit\ped{\textit{G}} in Ethereum\ped{\emph{G}}?};
+	\item[Environment:] sottolineata la necessitá di avere ambienti\ped{\textit{G}} Locali, di Test e di Staging\ped{\textit{G}}; mentre un ambiente\ped{\textit{G}} di Produzione non é richiesto. I vari ambienti\ped{\textit{G}} (\textit{environments}\ped{\textit{G}}) devono mantenere lo stesso codice del prodotto\ped{\textit{G}}, a meno di variabili d'ambiente\ped{\textit{G}} e simili; mentre differiscono per la rete Ethereum\ped{\textit{G}} utilizzata:
 	\begin{itemize}
-		\item Ethereum\ped{\emph{G}} testrpc, fornito da Truffle, per l'ambiente Locale;
-		\item Analogamente al punto precedente, per l'ambiente di Test;
-		\item Ethereum\ped{\emph{G}} Ropsten, per l'ambiente di Staging
+		\item Ethereum\ped{\emph{G}} testrpc, fornito da Truffle\ped{\textit{G}}, per l'ambiente Locale;
+		\item analogamente al punto precedente, per l'ambiente\ped{\textit{G}} di Test;
+		\item Ethereum\ped{\emph{G}} Ropsten\ped{\textit{G}}, per l'ambiente\ped{\textit{G}} di Staging\ped{\textit{G}}.
 	\end{itemize}
 \end{description}
 
 \subsection{Tecnologie individuate}
 Sono state individuate una serie di tecnologie da utilizzare per lo sviluppo:
 \begin{itemize}
-	\item \textbf{Javascript:} come linguaggio principale e come unico linguaggio per le funzioni caricabili in AWS\ped{\emph{G}} Lambda, si é individuato Javascript\ped{\emph{G}} (Typescript\ped{\emph{G}} in particolare);
-	\item \textbf{pattern Async-await};
-	\item \textbf{OpenZeppelin:} standard per applicazioni blockchain\ped{\emph{G}} sicure \url{https://blog.zeppelin.solutions};
-	\item altre tecnologie giá descritte nel capitolato\ped{\emph{G}} \url{https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C2.pdf}.
+	\item \textbf{Javascript\ped{\textit{G}}}\textbf{:} come linguaggio principale e come unico linguaggio per le funzioni caricabili in AWS\ped{\emph{G}} Lambda, si é individuato Javascript\ped{\emph{G}} (Typescript\ped{\emph{G}} in particolare);
+	\item \textbf{pattern Async-await}\ped{\textit{G}};
+	\item \textbf{OpenZeppelin}\ped{\textit{G}}\textbf{:} standard per applicazioni blockchain\ped{\emph{G}} sicure \url{https://blog.zeppelin.solutions};
+	\item altre tecnologie giá descritte nel capitolato\ped{\emph{G}}  \url{https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C2.pdf}.
 \end{itemize}
