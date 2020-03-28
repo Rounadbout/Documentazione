@@ -1,0 +1,12 @@
+\subsubsection{UC15.3 - Inserimento percorso file sorgente}
+\begin{itemize}
+	\item \textbf{Attori primari:} \us{};
+	\item \textbf{Descrizione:} l'utente inserisce il comando \pedit{} \textit{–c file\_path} indicando la volontà di voler modificare il codice associato alla funzione tramite il flag \textit{-c}, e inserendo successivamente il percorso del file sorgente nel campo \textit{file\_path}; 
+	\item \textbf{Scenario principale:} l'utente inserisce il percorso del file contente il codice aggiornato dalla funzione. 
+	\item \textbf{Estensioni:} 
+	\begin{itemize}
+		\item \textbf{UC15.5:} se l'utente inserisce il percorso di un file non presente viene visualizzato un apposito messaggio di errore. 
+	\end{itemize}
+	\item \textbf{Precondizione:} l’utente ha inserito all’interno della CLI il comando \edit{}; 
+	\item \textbf{Postcondizione:} l’utente ha inserito il percorso del file contenente il codice aggiornato della funzione.
+\end{itemize}

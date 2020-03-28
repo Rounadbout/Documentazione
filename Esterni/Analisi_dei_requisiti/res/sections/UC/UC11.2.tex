@@ -1,0 +1,17 @@
+\subsubsection{UC11.2 - Visualizzazione lista funzioni}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=\ucs]{./res/img/UC11.2.png}
+	\caption {UC11 - Ricerca funzione per nome}
+\end{figure}
+\begin{itemize}
+	\item \textbf{Attori primari:} \ua{};
+	\item \textbf{Descrizione:} viene visualizzata la lista ritornata dal comando search
+	\item \textbf{Scenario principale:} viene visualizzata una lista di tutte le funzioni che nel nome contengono il termine di ricerca specificato;
+	\item \textbf{Estensioni:} 
+	\begin{itemize}
+		\item \textbf{UC11.3:} non viene trovata alcuna funzione il cui nome contiene il termine di ricerca. Viene di conseguenza visualizzato un messaggio di errore;
+	\end{itemize}
+	\item \textbf{Precondizione:} l’utente ha inserito ed eseguito correttamente il comando \search{};
+	\item \textbf{Postcondizione:} la CLI riporta la lista di funzioni ritornata dal comando \search{}.
+\end{itemize}
