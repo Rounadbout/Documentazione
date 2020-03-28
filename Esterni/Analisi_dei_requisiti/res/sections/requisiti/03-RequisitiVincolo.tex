@@ -1,1 +1,42 @@
 \subsection{Requisiti di vincolo}
+
+\def\arraystretch{1.75}
+\rowcolors{2}{lightRowColor}{darkRowColor}
+\begin{longtable}{ 
+		>{\centering}p{0.10\textwidth} 
+		>{}p{0.35\textwidth} 
+		>{\centering}p{0.25\textwidth}
+		>{\centering}p{0.15\textwidth} }
+	
+	\coloredTableHead
+	\textbf{\color{white}Requisito} & 
+	\centering\textbf{\color{white}Descrizione} & 
+	\centering\textbf{\color{white}Classificazione} &
+	\textbf{\color{white}Fonti} 
+	\endhead
+	
+	\rowcolor{white}\caption[]{(continua)}\\
+	\coloredTableHead 
+	\textbf{\color{white}Requisito} &
+	\centering\textbf{\color{white}Descrizione} &
+	\centering\textbf{\color{white}Classificazione} &
+	\textbf{\color{white}Fonti} 
+	\endhead
+	
+	R1V1 & Gli smart contract devono essere scritti in Solidity & \ob & Verbale \tabularnewline
+	R1V2 & Gli smart contract devono poter essere aggiornati & \ob & Capitolato \tabularnewline
+	R1V3 & L'applicativo deve essere sviluppato utilizzando TypeScript 3.6 & \ob & Capitolato \tabularnewline
+	R1V3.1 & Deve essere utilizzato il meccanismo delle promise/async-await come approccio principale & \ob & Capitolato \tabularnewline
+	R1V4 & Il modulo \textit{Etherless-server} deve essere implementato utilizzando il Framework Serverless & \ob & Capitolato \tabularnewline
+	R1V5 & Il progetto deve utilizzare i seguenti ambienti di sviluppo: 
+			ambiente di sviluppo locale, ambiente di testing e ambiente di staging 				& \ob & Capitolato \tabularnewline
+	R2V5.1 & Gli ambienti per la fase di sviluppo locale e testing possono fare utilizzo
+			 della rete testrpc fornita dal framework Truffle 									& \de & Capitolato \tabularnewline
+	R2V5.2 & Per la fase di staging è desiderabile l'utilizzo della rete Ethereum Ropsten		& \de & Capitolato \tabularnewline
+	R1V5.3 & Durante la fase di staging l'applicativo deve essere pubblicamente accessibile 	& \ob & Capitolato \tabularnewline
+	R1V5.4 & Al termine del progetto il prodotto deve essere pronto per la produzione 			& \ob & Capitolato \tabularnewline
+	R3V5.4.1 & L'ambiente di produzione deve fare utilizzo dell'Ethereum main network 			& \op & Capitolato \tabularnewline
+	R3V6 & Il sistema di pagamento deve seguire un meccanismo di escrow 						& \op & Verbale \tabularnewline
+	
+	
+\end{longtable}

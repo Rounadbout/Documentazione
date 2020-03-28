@@ -1,14 +1,17 @@
 \subsection{Requisiti di qualità}
 
+\def\arraystretch{1.75}
 \rowcolors{2}{lightRowColor}{darkRowColor}
 \begin{longtable}{ 
-		>{\centering}p{0.17\textwidth} 
-		>{}p{0.53\textwidth} 
-		>{\centering}p{0.25\textwidth} }
+		>{\centering}p{0.10\textwidth} 
+		>{}p{0.35\textwidth} 
+		>{\centering}p{0.25\textwidth}
+		>{\centering}p{0.15\textwidth} }
 	
 	\coloredTableHead
 	\textbf{\color{white}Requisito} & 
 	\centering\textbf{\color{white}Descrizione} & 
+	\centering\textbf{\color{white}Classificazione} &
 	\textbf{\color{white}Fonti} 
 	\endhead
 	 
@@ -16,6 +19,7 @@
 	 \coloredTableHead 
 	 \textbf{\color{white}Requisito} &
 	 \centering\textbf{\color{white}Descrizione} &
+	 \centering\textbf{\color{white}Classificazione} &
 	 \textbf{\color{white}Fonti} 
 	 \endhead
 	
@@ -23,18 +27,23 @@
 	R1Q1 &  La progettazione e la codifica devono rispettare le norme e 
 			le metriche definite nei documenti 
 			\textit{Norme di Progetto v1.0.0} 
-			e \textit{Piano di Qualifica v1.0.0} 							& Interno \tabularnewline
-	R1Q2 & Il sistema deve essere pubblicato con licenza MIT 				& Capitolato \tabularnewline
+			e \textit{Piano di Qualifica v1.0.0} 							& Obbligatorio & Interno \tabularnewline
+	R1Q2 & Il sistema deve essere pubblicato con licenza MIT 				& Obbligatorio & Capitolato \tabularnewline
 	R1Q3 & Il codice sorgente di \textit{Etherless} deve essere pubblicato
-			e versionato usando Github o GitLab 							& Capitolato \tabularnewline
-	R1Q4 & Deve essere redatto un manuale sviluppatore 						& Capitolato \tabularnewline
-	R1Q5 & Deve essere redatto un manuale utente 							& Capitolato \tabularnewline
+			e versionato usando Github o GitLab 							& Obbligatorio & Capitolato \tabularnewline
+	R1Q4 & Deve essere redatto un manuale sviluppatore 						& Obbligatorio & Capitolato \tabularnewline
+	R1Q4.1 & Il manuale sviluppatore deve contenere le informazioni per
+				eseguire e fare il deploy dei moduli						& Obbligatorio & Capitolato \tabularnewline
+	R1Q5 & Deve essere redatto un manuale utente 							& Obbligatorio & Capitolato \tabularnewline
+	R1Q5.1 & Il manuale utente deve contenere tutte le informazioni
+				necessarie all'utente finale per utilizzare correttamente 
+				il sistema 													& Obbligatorio & Capitolato \tabularnewline
 	R1Q6 & La documentazione per l'utilizzo del software deve essere 
-		 	scritta in lingua inglese. 										& Verbale .... \tabularnewline
+		 	scritta in lingua inglese. 										& Obbligatorio & Verbale 2020-03-18, VE\_1.2  \tabularnewline
 	R1Q7 & Nella scrittura del codice JavaScript deve essere seguita 
 			la guida sullo stile di programmazione Airbnb JavaScript 
-			style guide 													& Verbale VE\_2020\_03\_18, VE\_1.2 \tabularnewline
+			style guide 													& Obbligatorio & Verbale venerdì ? \tabularnewline
 	R1Q8 & Lo sviluppo del codice JavaScript deve essere supportato 
-			dal software di analisi statica del codice ESLint 				& Capitolato \tabularnewline
+			dal software di analisi statica del codice ESLint 				& Obbligatorio & Capitolato \tabularnewline
 \end{longtable}
 
