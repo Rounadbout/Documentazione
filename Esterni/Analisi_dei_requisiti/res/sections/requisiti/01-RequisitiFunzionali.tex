@@ -8,12 +8,13 @@
 		>{\centering}p{0.25\textwidth}
 		>{\centering}p{0.15\textwidth} }
 	
+	\caption{Tabella dei requisiti funzionali} \\
 	\coloredTableHead
 	\textbf{\color{white}Requisito} & 
 	\centering\textbf{\color{white}Descrizione} & 
 	\centering\textbf{\color{white}Classificazione} &
 	\textbf{\color{white}Fonti} 
-	\endhead
+	\endfirsthead
 	
 	\rowcolor{white}\caption[]{(continua)}\\
 	\coloredTableHead 
@@ -23,7 +24,180 @@
 	\textbf{\color{white}Fonti} 
 	\endhead
 
+	% init
+	R2F1 & L'utente può leggere una breve guida iniziale riguardante l'applicativo
+			e i comandi per effettuare l'accesso 									& \de & Interno \\ UC1 \tabularnewline
 
+	% help
+	R2F2 & L'utente può richiedere di visualizzare una descrizione più approfondita
+		 per ogni comando messo a disposizione da \textit{Etherless-cli}			& \de & Interno \\ UC2 \tabularnewline
+	R2F2.1 & Per ottenere informazioni specifiche su un comando, l'utente deve
+		inserire il comando "help" seguito dal nome del comando di suo interesse	& \de & Interno \\ UC2.1 \tabularnewline
+	R2F2.2 & Se il comando di cui si vogliono avere maggiori informazioni non
+		è tra quelli messi a disposizione da \textit{Etherless-cli} deve essere
+		mostrato un messaggio di errore												& \de & Interno \\ UC2.2 \tabularnewline
 
+	% signup
+	R1F3 & Un utente non registrato può richiedere la creazione di un nuovo account
+			 all'interno della rete Ethereum 										& \ob & Capitolato \\ UC3 \tabularnewline
+	R1F3.1 & Una volta creato il nuovo account, il sistema deve mostrare nella 
+			CLI le credenziali a esso relative										& \ob & UC3.1 \tabularnewline
+	R1F3.1.1 & A seguito del completamento della procedura di registrazione viene
+			mostrato l'address associato al nuovo account creato 					& \ob & UC3.1 \tabularnewline
+	R1F3.1.2 & A seguito del completamento della procedura di registrazione viene
+			mostrato la private key associata al nuovo account creato 				& \ob & UC3.1 \tabularnewline
+	R2F3.1.3 & A seguito del completamento della procedura di registrazione viene
+			mostrata la mnemonic phrase associata al nuovo account creato 			& \de & UC3.1 \tabularnewline
+	R2F3.2 & L'utente può richiedere che le credenziali dell'account creato durante
+			la procedura di registrazione siano salvate su un file 					& \de & UC4 \tabularnewline
+
+	%login
+	R1F4 & Un utente può effettuare il login 										& \ob & Capitolato \tabularnewline
+	R1F4.1 & Un utente si può autenticare manualmente tramite l'utilizzo 
+			del comando "login" 													& \ob & Interno \\ UC5 \tabularnewline
+	R1F4.1.1 & Per completare la procedura di login manuale l'utente deve inserire
+			 il proprio address														& \ob & Interno UC5.1.1 \tabularnewline
+	R1F4.1.2 & Per completare la proceduta di login manuale l'utente deve inserire
+			 la propria private key 												& \ob & Interno UC5.2 \tabularnewline
+	R2F4.1.3 & L'utente può decidere di completare la procedura di login manuale 
+			 utilizzando la propria mnemonic phrase al posto della private key		& \de & Interno \\ UC5.3 \tabularnewline
+	R2F4.2 & Durante la procedura di login manuale l'utente può richiedere che
+			 le proprie credenziali siano memorizzate per accessi futuri 			& \de & Interno \\ UC6 \tabularnewline
+	R2F4.3 & L'utente si può autenticare tramite login automatico 					& \de & Interno \\ UC7 \tabularnewline
+	
+	% logout
+	R1F5 & L'utente può effettuare il logout 										& \ob & Capitolato \\ UC6 \tabularnewline 
+	
+	% whoami
+	R2F6 & L'utente può richiedere di visualizzare l'address 
+			associato alla sessione corrente 										& \de & UC9 \tabularnewline
+	
+	% info
+	R1F7 & L'utente può richiedere di vedere i dettagli relativi ad una funzione
+		tramite il comando "info"													& \ob & Interno \\ UC10 \tabularnewline
+	R1F7.1 & Per visualizzare i dettagli di una funzione, l'utente deve inserire 
+		il nome della funzione di interesse											& \ob & Interno \\ UC10.1 \tabularnewline
+	R1F7.2 & Nel caso in cui l'utente richieda di visualizzare i dettagli di una 
+		funzione non presente nel sistema, deve essere mostrato un messaggio di
+		errore															 			& \ob & Interno \\ UC10.2 \tabularnewline
+	
+	% search 
+	R2F8 & Il sistema deve permettere all'utente di cercare una funzione 
+		attraverso una keyword 														& \de & Interno \\ UC11 \tabularnewline
+	R2F8.1 & Per effettuare la ricerca è necessario che l'utente inserisca 
+		una keyword 																& \de & Interno \\ UC11.1 \tabularnewline
+	R2F8.2 & A seguito di una ricerca il sistema deve mostrare la lista di
+	 tutte le funzioni che presentano la keyword indicata 
+	 all'interno del proprio nome													& \de & Interno \\ UC11.2 \tabularnewline
+	R2F8.2.1 & La visualizzazione di un risultato di ricerca include
+		 la firma della funzione													& \de & Interno \\ UC11.2.1 \tabularnewline
+  	R2F8.2.2 & La visualizzazione di un risultato di ricerca include
+		  il costo di esecuzione della funzione										& \de & Interno \\ UC11.2.1 \tabularnewline
+  	R2F8.2.3 & La visualizzazione di un risultato di ricerca include
+		  l'indirizzo del creatore della funzione									& \de & Interno \\ UC11.2.1 \tabularnewline
+	R2F8.3 & Se una ricerca non porta a nessun risultato deve essere mostrato un 
+		messaggio di errore 														& \de & Interno \\ UC11.3 	\tabularnewline	
+	
+	% run 
+	R1F9 & L'utente deve essere in grado di eseguire le funzioni messe a 
+		disposizione da \textit{Etherless} attraverso il comando "run" 				& \ob & Capitolato \\ UC12 \tabularnewline
+	R1F9.1 & Per eseguire una funzione è necessario inserire il relativo nome 		& \ob & Capitolato \\ UC12.1 \tabularnewline
+	R1F9.1.1 & Nel caso in cui il nome inserito a seguito del comando "run" non 
+		corrisponda ad alcuna funzione presente nel sistema, deve essere 
+		visualizzato un messaggio di errore											& \ob & Interno \\ UC12.4 \tabularnewline 
+	R1F9.2 & L'esecuzione di una funzione necessita dell'inserimento dei parametri 
+		da lei richiesti 															& \ob & Capitolato \\ UC12.2 \tabularnewline
+	R1F9.2.1 & Se l'utente tenta di eseguire una funzione inserendo un numero 
+		di parametri che non coincide con quanto richiesto, deve essere 
+		visualizzato un messaggio di errore 										& \ob & Interno \\ UC12.5 \tabularnewline
+	R1F9.3 & A seguito dell'esecuzione di una funzione il sistema deve mostrare 
+		all'utente i relativi risultati 											& \ob & Capitolato \\ UC12.3 \tabularnewline
+	R1F9.4 & Nel caso in cui l'utente richieda di eseguire una funzione senza 
+		avere credito sufficiente, deve essere mostrato un messaggio di errore		& \ob & Interno \\ UC19 \tabularnewline
+	
+	% list  
+	R1F10 & L'utente deve essere in grado di visualizzare tutte le funzioni 
+		disponibili in \textit{Etherless} tramite il comando "list" 				& \ob & Capitolato \\ UC13.1 \tabularnewline
+	R2F10.1 & L'utente può richiede di visualizzare solo le funzioni da 
+		lui caricate tramite l'utilizzo di un apposito flag 						& \ob & Interno \\ UC13.2 \tabularnewline
+	R1F10.2 & La visualizzazione di un elemento della lista ottenuta a seguito 
+		del comando "list" include il nome della funzione 							& \ob & Interno \\ UC13.1.1 \tabularnewline
+	R1F10.3 & La visualizzazione di un elemento della lista ottenuta a seguito 
+		del comando "list" include il costo di esecuzione della funzione 			& \ob & Interno \\ UC13.1.1 \tabularnewline
+	R1F10.4 & La visualizzazione di un elemento della lista ottenuta a seguito 
+		del comando "list" include il creatore della funzione 						& \ob & Interno \\ UC13.1.1 \tabularnewline
+	R1F10.5 & Nel caso in cui il risultato del comando "list" sia vuoto, deve 
+		essere visualizzato un apposito messaggio 									& \ob & Interno \\ UC13.3 \tabularnewline
+	
+	%deploy
+	R1F11 & L'utente deve essere in grado di eseguire il deploy di una propria
+		funzione all'interno della piattaforma \textit{Etherless} 					& \ob & Capitolato \\ UC14 \tabularnewline
+	R1F11.1 & Per eseguire il deploy l'utente deve inserire il percorso del file 
+		contenente il codice della funzione 										& \ob & Capitolato \\ UC14.1 \tabularnewline
+	R2F11.1.2 & Se il formato del file indicato durante la procedura di deploy
+		non è supportato dall'applicativo deve essere mostrato un messaggio di 
+		errore																		& \de & Interno \\ UC14.5 \tabularnewline
+	R1F11.1.3 & Se il file indicato durante la procedura di deploy non esiste, 
+		deve essere visualizzato un messaggio di errore								& \ob & Interno \\ UC14.4 \tabularnewline
+	R1F11.2 & Per eseguire il deploy l'utente deve inserire il nome della 
+		funzione considerata 														& \ob & Capitolato \\ UC14.2 \tabularnewline
+	R1F11.1.1 & Nel caso in cui il nome della funzione di cui si tenta di fare 
+		il deploy sia troppo lungo, deve essere visualizzato un messaggio di errore & \ob & Interno \\ UC14.7 \tabularnewline
+	R1F11.1.2 & Nel caso in cui il nome della funzione di cui si tenta di fare 
+		il deploy sia già usato nel sistema, deve essere visualizzato un messaggio 
+		di errore																	& \ob & Interno \\ UC14.6 \tabularnewline
+	R2F11.3 & Per eseguire il deploy l'utente deve inserire una descrizione 
+		della funzione 																& \de & Interno \\ UC14.3  \tabularnewline
+	R2F11.3.1 & Se la descrizione inserita durante la procedura di deploy supera la 
+		lunghezza massima, deve essere mostrato un messaggio di errore 				& \de & Interno \\ UC14.8  \tabularnewline
+	
+	% modify 
+	R1F12 & L'utente deve essere in grado di modificare le informazioni relative 
+		ad una funzione da lui caricata 											& \ob & Interno \\ UC15 \tabularnewline
+	R1F12.1 & Per eseguire la procedura di modifica è necessario che l'utente 
+		indichi il nome della funzione che vuole modificare 							& \ob & Interno \\ UC15.1.1 \tabularnewline
+	R1F12.1.1 & Nel caso in cui, durante la procedura di modifica, l'utente 
+		inserisca il nome di una funzione non presente all'interno della piattaforma
+		\textit{Etherless}, deve essere mostrato un messaggio di errore				& \ob & Interno \\ UC15.1.2 \tabularnewline
+	R1F12.1.2 & Nel caso in cui, durante la procedura di modifica, l'utente 
+		inserisca il nome di una funzione che non è di sua proprietà, deve essere 
+		mostrato un messaggio di errore												& \ob & Interno \\ UC15.1.3 \tabularnewline
+	R1F12.2 & Il sistema deve permettere all'utente di modificare la descrizione 
+		associata ad una propria funzione 											& \ob & Interno \\ UC15.2 \tabularnewline
+	R1F12.2.1 & L'utente deve visualizzare un errore nel caso in cui, durante 
+		la procedura di modifica, venga inserita una descrizione di lunghezza
+		superiore a quella massima consentita 										& \ob & Interno \\ UC15.4 \tabularnewline
+	R1F12.3 & Il sistema deve permettere all'utente di aggiornare il codice di 
+		una propria funzione 														& \ob & Interno \\ UC15.2 \tabularnewline	
+	R1F12.3.1 & Se il file indicato durante la procedura di aggiornamento del 
+		codice di una funzione non esiste, deve essere mostrato un messaggio di 
+		errore																		& \ob & Interno \\ UC15.5 \tabularnewline
+		
+	% history
+	R2F13 & L'utente deve essere in grado di visualizzare la propria cronologia 
+		di richieste di esecuzione 													& \de & Interno \\ UC16 \tabularnewline
+	R2F13.1 & L'utente deve poter essere in grado di richiedere di visualizzare
+		solo una porzione della propria cronologia di esecuzione 					& \de & Interno \\ UC16.1 \tabularnewline
+	R2F13.2 & La visualizzazione di un elemento della cronologia include 
+		l'identificativo della richiesta di esecuzione 								& \de & Interno \\ UC16.2 \tabularnewline
+	R2F13.3 & La visualizzazione di un elemento della cronologia include 
+		il nome della funzione richiesta 											& \de & Interno \\ UC16.2 \tabularnewline				
+	R2F13.4 & La visualizzazione di un elemento della cronologia include 
+		il valore dei parametri indicati nella chiamata alla funzione				& \de & Interno \\ UC16.2 \tabularnewline
+	R2F13.5 & La visualizzazione di un elemento della cronologia include 
+		il risultato della richiesta di esecuzione									& \de & Interno \\ UC16.2 \tabularnewline
+	R2F13.6 & La visualizzazione di un elemento della cronologia include 
+		la data e orario della richiesta 											& \de & Interno \\ UC16.2 \tabularnewline
+	
+	% delete
+	R1F14 & L'utente deve essere in grado di eliminare una funzione da lui caricata & \ob & Capitolato \\ UC18 \tabularnewline
+	R1F14.1 & Per eseguire l'operazione di eliminazione l'utente deve inserire 
+		il nome della funzione da eliminare 										& \ob & Capitolato \\ UC18.1 \tabularnewline
+	R1F14.1.1 & Nel caso in cui il nome inserito durante la procedura di eliminazione
+		non si riferisca ad alcuna funzione presente all'interno del sistema, deve 
+		essere mostrato un messaggio di errore										& \ob & Interno \\ UC18.2 \tabularnewline
+	R1F14.1.2 & Nel caso in cui la funzione considerata nella procedura di eliminazione
+		non sia di proprietà dell'utente, deve essere visualizzato un messaggio 
+		di errore																	& \ob & Interno \\ UC18.3 \tabularnewline
 
 \end{longtable}
