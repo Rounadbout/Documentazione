@@ -41,15 +41,15 @@
 	R1F3 & Un utente non registrato può richiedere la creazione di un nuovo account
 			 all'interno della rete Ethereum 										& \ob & Capitolato \\ UC3 \tabularnewline
 	R1F3.1 & Una volta creato il nuovo account, il sistema deve mostrare nella 
-			CLI le credenziali a esso relative										& \ob & UC3.1 \tabularnewline
+			CLI le credenziali a esso relative										& \ob & Interno \\ UC3.1 \tabularnewline
 	R1F3.1.1 & A seguito del completamento della procedura di registrazione viene
-			mostrato l'address associato al nuovo account creato 					& \ob & UC3.1 \tabularnewline
+			mostrato l'address associato al nuovo account creato 					& \ob & Interno \\ UC3.1 \tabularnewline
 	R1F3.1.2 & A seguito del completamento della procedura di registrazione viene
-			mostrato la private key associata al nuovo account creato 				& \ob & UC3.1 \tabularnewline
+			mostrato la private key associata al nuovo account creato 				& \ob & Interno \\ UC3.1 \tabularnewline
 	R2F3.1.3 & A seguito del completamento della procedura di registrazione viene
-			mostrata la mnemonic phrase associata al nuovo account creato 			& \de & UC3.1 \tabularnewline
+			mostrata la mnemonic phrase associata al nuovo account creato 			& \de & Interno \\ UC3.1 \tabularnewline
 	R2F3.2 & L'utente può richiedere che le credenziali dell'account creato durante
-			la procedura di registrazione siano salvate su un file 					& \de & UC4 \tabularnewline
+			la procedura di registrazione siano salvate su un file 					& \de & Interno \\ UC4 \tabularnewline
 
 	%login
 	R1F4 & Un utente può effettuare il login 										& \ob & Capitolato \tabularnewline
@@ -66,11 +66,11 @@
 	R2F4.3 & L'utente si può autenticare tramite login automatico 					& \de & Interno \\ UC7 \tabularnewline
 	
 	% logout
-	R1F5 & L'utente può effettuare il logout 										& \ob & Capitolato \\ UC6 \tabularnewline 
+	R1F5 & L'utente può effettuare il logout 										& \ob & Capitolato \\ UC8 \tabularnewline 
 	
 	% whoami
 	R2F6 & L'utente può richiedere di visualizzare l'address 
-			associato alla sessione corrente 										& \de & UC9 \tabularnewline
+			associato alla sessione corrente 										& \de & Interno \\ UC9 \tabularnewline
 	
 	% info
 	R1F7 & L'utente può richiedere di vedere i dettagli relativi ad una funzione
@@ -119,7 +119,7 @@
 	R1F10 & L'utente deve essere in grado di visualizzare tutte le funzioni 
 		disponibili in \textit{Etherless} tramite il comando "list" 				& \ob & Capitolato \\ UC13.1 \tabularnewline
 	R2F10.1 & L'utente può richiede di visualizzare solo le funzioni da 
-		lui caricate tramite l'utilizzo di un apposito flag 						& \ob & Interno \\ UC13.2 \tabularnewline
+		lui caricate tramite l'utilizzo di un apposito flag 						& \de & Interno \\ UC13.2 \tabularnewline
 	R1F10.2 & La visualizzazione di un elemento della lista ottenuta a seguito 
 		del comando "list" include il nome della funzione 							& \ob & Interno \\ UC13.1.1 \tabularnewline
 	R1F10.3 & La visualizzazione di un elemento della lista ottenuta a seguito 
@@ -134,23 +134,26 @@
 		funzione all'interno della piattaforma \textit{Etherless} 					& \ob & Capitolato \\ UC14 \tabularnewline
 	R1F11.1 & Per eseguire il deploy l'utente deve inserire il percorso del file 
 		contenente il codice della funzione 										& \ob & Capitolato \\ UC14.1 \tabularnewline
-	R2F11.1.2 & Se il formato del file indicato durante la procedura di deploy
+	R2F11.1.1 & Se il formato del file indicato durante la procedura di deploy
 		non è supportato dall'applicativo deve essere mostrato un messaggio di 
 		errore																		& \de & Interno \\ UC14.5 \tabularnewline
-	R1F11.1.3 & Se il file indicato durante la procedura di deploy non esiste, 
+	R1F11.1.2 & Se il file indicato durante la procedura di deploy non esiste, 
 		deve essere visualizzato un messaggio di errore								& \ob & Interno \\ UC14.4 \tabularnewline
 	R1F11.2 & Per eseguire il deploy l'utente deve inserire il nome della 
 		funzione considerata 														& \ob & Capitolato \\ UC14.2 \tabularnewline
-	R1F11.1.1 & Nel caso in cui il nome della funzione di cui si tenta di fare 
+	R1F11.2.1 & Nel caso in cui il nome della funzione di cui si tenta di fare 
 		il deploy sia troppo lungo, deve essere visualizzato un messaggio di errore & \ob & Interno \\ UC14.7 \tabularnewline
-	R1F11.1.2 & Nel caso in cui il nome della funzione di cui si tenta di fare 
+	R1F11.2.2 & Nel caso in cui il nome della funzione di cui si tenta di fare 
 		il deploy sia già usato nel sistema, deve essere visualizzato un messaggio 
 		di errore																	& \ob & Interno \\ UC14.6 \tabularnewline
 	R2F11.3 & Per eseguire il deploy l'utente deve inserire una descrizione 
 		della funzione 																& \de & Interno \\ UC14.3  \tabularnewline
 	R2F11.3.1 & Se la descrizione inserita durante la procedura di deploy supera la 
 		lunghezza massima, deve essere mostrato un messaggio di errore 				& \de & Interno \\ UC14.8  \tabularnewline
-	
+	R1F11.4 & Nel caso in cui l'utente tenti di eseguire il deploy di una funzione
+		senza avere il credito necessario, deve essere visualizzato un messaggio 
+		di errore & \ob & Interno \\ UC19 \tabularnewline
+
 	% modify 
 	R1F12 & L'utente deve essere in grado di modificare le informazioni relative 
 		ad una funzione da lui caricata 											& \ob & Interno \\ UC15 \tabularnewline
@@ -168,7 +171,7 @@
 		la procedura di modifica, venga inserita una descrizione di lunghezza
 		superiore a quella massima consentita 										& \ob & Interno \\ UC15.4 \tabularnewline
 	R1F12.3 & Il sistema deve permettere all'utente di aggiornare il codice di 
-		una propria funzione 														& \ob & Interno \\ UC15.2 \tabularnewline	
+		una propria funzione 														& \ob & Interno \\ UC15.3 \tabularnewline	
 	R1F12.3.1 & Se il file indicato durante la procedura di aggiornamento del 
 		codice di una funzione non esiste, deve essere mostrato un messaggio di 
 		errore																		& \ob & Interno \\ UC15.5 \tabularnewline
