@@ -37,7 +37,8 @@ Il prodotto si divide nelle seguenti parti:
 \subsubsection{Comandi disponibili}
 \textit{Etherless-cli} mette a disposizione dell'utente i seguenti comandi: 
 \begin{itemize}
-	\item \textbf{etherless-init:} avvio dell'applicativo; 
+	\item \textbf{etherless-init:} avvio dell'applicativo e visualizzazione guida introduttiva; 
+	\item \textbf{etherless-help:} visualizzazione della descrizione completa di un comando messo a disposizione da \textit{Etherless-cli}; 
 	\item \textbf{etherless-login:} esecuzione della procedura di autenticazione all'interno della rete Ethereum; 
 	\item \textbf{etherless-signup:} creazione di un nuovo wallet all'interno della rete Ethereum; 
 	\item \textbf{etherless-logout:} esecuzione del logout dalla propria utenza; 
@@ -45,23 +46,12 @@ Il prodotto si divide nelle seguenti parti:
 	\item \textbf{etherless-list:} elenco di tutte le funzioni disponibili all'interno della piattaforma \NomeProgetto{}; 
 	\item \textbf{etherless-deploy:} esecuzione del deploy di una determinata funzione;  
 	\item \textbf{etherless-run:} esecuzione di una funzione e visualizzazione del relativo risultato; 
-	\item \textbf{etherless-mylist:} visualizzazione del nome delle funzioni di cui l'utente corrente ha eseguito il deploy;  
-	\item \textbf{etherless-info:} visualizzazione di informazioni più dettagliate di una determinata funzione; 
-	\item \textbf{etherless-search:} elenco delle funzioni con nome simile ad un termine inserito; 
+	\item \textbf{etherless-modify:} permette di modificare le informazioni associate ad una funzione; 
+	\item \textbf{etherless-info:} visualizzazione di una descrizione dettagliata di una determinata funzione; 
+	\item \textbf{etherless-search:} elenco delle funzioni con nome contenente un termine inserito; 
 	\item \textbf{etherless-delete:} eliminazione di una determinata funzione;
-	\item \textbf{etherless-logs:} visualizzazione dei log di esecuzione di una specifica funzione;
-	\item \textbf{etherless-history:} visualizzazione della cronologia di esecuzione dell'utente corrente; 
-	\item \textbf{etherless-exit:} chiusura dell'applicativo. 
+	\item \textbf{etherless-history:} visualizzazione della cronologia di esecuzione dell'utente corrente;  
 \end{itemize}
-
-\subsubsection{Vincoli implementativi}
-Viene richiesto che:  
-	\begin{itemize}
-		\item gli smart-contract possano essere aggiornati; 
-		\item \textit{Etherless} sia sviluppato utilizzando Typescript 3.6, in particolare facendo riferimento all'approccio di promise/async-await; 
-		\item typescript-eslint deve essere utilizzato come rinforzo di ESLint durante il processo di sviluppo; 
-		\item \textit{Etherless-server} deve essere implementato usando il framework Serverless. 
-	\end{itemize}
 
 \subsubsection{Ambienti di esecuzione}
 Viene inoltre richiesto che il progetto possa funzionare nei seguenti ambienti di esecuzione: 
