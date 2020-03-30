@@ -1,0 +1,48 @@
+\subsection{Capitolato C1 - Autonomous Highlights Platform}
+
+\subsubsection{Informazioni generali}
+	\begin{itemize}
+		\item \textbf{Nome:} Autonomous Highlights\ped{\emph{G}} Platform; 
+		\item \textbf{Proponente}\ped{\textit{G}}{:} Zero12;
+		\item \textbf{Committente}\ped{\textit{G}}{:} \TV{} e \RC{}. 
+	\end{itemize}
+
+\subsubsection{Descrizione}
+Creare una piattaforma Web che riceve in input dei video di eventi sportivi, come una partita di calcio o una gara di F1/Moto GP, e crea in autonomia un video di massimo 5 minuti contenente i suoi momenti salienti. 
+
+\subsubsection{Obiettivo finale}
+Viene richiesto che la piattaforma sia dotata di un modello\ped{\emph{G}} di machine learning\ped{\emph{G}} in grado di identificare ogni momento importante dell’evento.
+Il flusso di generazione di tale video deve essere così strutturato:
+	\begin{itemize}
+		\item caricamento del video;
+		\item identificazione dei momenti salienti;
+		\item estrazione delle corrispondenti parti di video;
+		\item generazione del video di sintesi. 
+	\end{itemize}
+
+\subsubsection{Tecnologie coinvolte}
+	\begin{itemize}
+		\item \textbf{Elastic Container Service}\ped{\emph{G}} \textbf{o Elastic Kubernetes Service:} è un servizio di orchestrazione di contenitori altamente dimensionabile ad elevate
+		prestazioni; 
+		\item \textbf{DynamoDB:} database NoSQL\ped{\emph{G}} dalle alte performance, ideale per la conservazione di tag o altre informazioni a supporto dell'applicativo; 
+		\item \textbf{AWS}\ped{\emph{G}} \textbf{Transcode:} servizio gestito per la conversione ed elaborazione di diversi formati video; 
+		\item \textbf{Sage Maker}\ped{\emph{G}}\textbf{:} servizio completamente gestito che copre l'intero flusso di lavoro dell'apprendimento automatico\ped{\emph{G}}: etichettazione e preparazione dei
+		dati, scelta di un algoritmo, formazione del modello\ped{\emph{G}}, ottimizzazione di quest'ultimo per la distribuzione, generazione di previsioni ed avvio di azioni; 
+		\item \textbf{AWS}\ped{\emph{G}} \textbf{Rekognition video:} servizio di analisi video basato su apprendimento approfondito\ped{\emph{G}}; è in grado di riconoscere i movimenti delle persone
+		in un fotogramma e di riconoscere soggetti, volti, oggetti, celebrità e contenuti inappropriati. 
+	\end{itemize}
+
+\subsubsection{Aspetti positivi}
+	\begin{itemize}
+		\item Tutte le tecnologie coinvolte sono ben documentate; 
+		\item il Proponente Zero12 fornisce attività di formazione sulle principali tecnologie AWS\ped{\emph{G}} e Wireframe\ped{\emph{G}}, utilizzate dall’interfaccia della console Web di analisi e controllo dello stato di elaborazione dei video, per la generazione del video di highlights\ped{\emph{G}}.
+	\end{itemize}
+
+\subsubsection{Criticità}
+	\begin{itemize}
+		\item Il Proponente non fornisce alcun data-set\ped{\textit{G}} per effettuare il training\ped{\textit{G}} del modello\ped{\emph{G}} di machine learning\ped{\emph{G}}; 
+		\item l'identificazione manuale di tutti i momenti principali di un evento sportivo è un'azione ripetitiva e costosa in termini di tempo. 
+	\end{itemize}
+
+\subsubsection{Esito}
+Il capitolato\ped{\emph{G}} non è risultato molto stimolante, in quanto lo sviluppo di alcune componenti sembra caratterizzato da attività ripetitive. Si è quindi deciso di non considerare questa proposta. 

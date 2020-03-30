@@ -1,0 +1,34 @@
+ 
+% SOSTITUIRE "PATH" CON IL PERCORSO CHE PERMETTE DI ARRIVARE ALLA CARTELLA "Latex"
+
+\documentclass[a4paper]{article}
+
+\input{PATH/Latex/common_commands.tex}
+\input{config/commands.tex}
+\input{PATH/Latex/configs.tex}
+
+\begin{document}
+
+	% copertina 
+	\input{PATH/Latex/copertina.tex}
+	
+	% diario delle modifiche 
+	\input{./res/sections/changelog.tex} 
+	\pagebreak
+	
+	% indice 
+	\tableofcontents 
+	\pagebreak
+	
+	% lista delle figure
+	\listoffigures
+	\pagebreak
+	
+	% lista delle tabelle 
+	\listoftables
+	\pagebreak
+		
+	% sezioni 
+	% .... 
+	
+\end{document}
