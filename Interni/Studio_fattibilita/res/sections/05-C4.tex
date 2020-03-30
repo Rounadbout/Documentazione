@@ -1,34 +1,34 @@
 \subsection{Capitolato d'appalto C4: Predire in Grafana}
 	\subsubsection{Introduzione al capitolato}
 	\begin{itemize}
-		\item \textbf{Nome:} Predire in Grafana\ped{\emph{G}}
-		\item \textbf{Proponente:} Zucchetti Spa
-		\item \textbf{Committenti:} \TV, \RC
+		\item \textbf{Nome:} Predire in Grafana\ped{\emph{G}};
+		\item \textbf{Proponente}\ped{\textit{G}}\textbf{:} Zucchetti S.p.A;
+		\item \textbf{Committente}\ped{\textit{G}}\textbf{:} \TV, \RC.
 	\end{itemize}
 	
 	\subsubsection{Descrizione}
-	Attualmente il proponente fa ampio uso del progetto open-source\ped{\emph{G}} di 	nome Grafana\ped{\emph{G}} per monitorare la "liveliness" dei propri sistemi, ovvero per avere una visione generale sullo stato di operatività di essi in tempo reale. Il proponente desidera estendere tali capacità aggiungendo un complesso sistema di previsioni che, basandosi sui dati raccolti, riescano a segnalare potenziali irregolarità in arrivo sui singoli componenti o quanto meno identificare le singole zone di intervento.
+	Attualmente il Proponente fa ampio uso del progetto open-source\ped{\emph{G}} di 	nome Grafana\ped{\emph{G}} per monitorare la "liveliness" dei propri sistemi, ovvero per avere una visione generale sullo stato di operatività di essi in tempo reale. Il Proponente desidera estendere tali capacità aggiungendo un complesso sistema di previsioni che, basandosi sui dati raccolti, riescano a segnalare potenziali irregolarità in arrivo sui singoli componenti o quanto meno identificare le singole zone di intervento.
 	
 	\subsubsection{Obiettivo Finale}
-	Il prodotto finale richiesto è composto da due plug-in\ped{\emph{G}} scritti in Javascript\ped{\emph{G}} che, oltre a gestire Grafana\ped{\emph{G}}, applicano Support Vector Machine (SVM) e/o Regressione Lineare (RL) al flusso dei dati ricevuti per allarmi o segnalazioni tra gli operatori del servizio Cloud e la linea di produzione del software. Tali plug-in\ped{\emph{G}} devono essere in grado di applicare gli algoritmi sopra citati a nodi della rete specifici in base ai dati che ricevono in input. Le previsioni ottenute saranno successivamente inserite all'interno del sistema di monitoraggio di Grafana\ped{\emph{G}} come se fossero dati realmente registrati. Sarà di conseguenza possibile visualizzare i grafici e la dashboard\ped{\emph{G}} aggiornate con le previsioni del sistema. Il prodotto  finale può inoltre avere alcune funzionalità opzionali, tra le quali essere in grado di scatenare degli alert se i nodi collegati alle previsioni raggiungono o superano certi livelli di soglia oppure applicare delle trasformazioni alle misure lette dal campo per ottenere delle regressioni esponenziali o logaritmiche oltre a quelle lineari.
+	Il prodotto\ped{\textit{G}} finale richiesto è composto da due plug-in\ped{\emph{G}} scritti in Javascript\ped{\emph{G}} che, oltre a gestire Grafana\ped{\emph{G}}, applicano Support Vector Machine\ped{\textit{G}} (SVM\ped{\textit{G}}) e/o Regressione Lineare\ped{\textit{G}} (RL) al flusso dei dati ricevuti per allarmi o segnalazioni tra gli operatori del servizio Cloud\ped{\textit{G}} e la linea di produzione del software. Tali plug-in\ped{\emph{G}} devono essere in grado di applicare gli algoritmi sopra citati a nodi della rete specifici in base ai dati che ricevono in input. Le previsioni ottenute saranno successivamente inserite all'interno del sistema di monitoraggio di Grafana\ped{\emph{G}} come se fossero dati realmente registrati. Sarà di conseguenza possibile visualizzare i grafici e la dashboard\ped{\emph{G}} aggiornate con le previsioni del sistema. Il prodotto\ped{\textit{G}} finale può inoltre avere alcune funzionalità opzionali, tra le quali essere in grado di scatenare degli alert se i nodi collegati alle previsioni raggiungono o superano certi livelli di soglia oppure applicare delle trasformazioni alle misure lette dal campo per ottenere delle regressioni esponenziali o logaritmiche oltre a quelle lineari.
 	
 	\subsection{Tecnologie Coinvolte}
 	\begin{itemize}
-		\item \textbf{Javascript}\ped{\emph{G}}\textbf{:} linguaggio di programmazione lato client con il quale sono stati sviluppati Grafana\ped{\emph{G}} e alcune delle librerie consigliate per gli algoritmi SVM e RL.
-		\item \textbf{Grafana}\ped{\emph{G}}\textbf{:} Progetto open-source\ped{\emph{G}} che permette il monitoraggio dei dati in tempo reale.
-		\item \textbf{Github}\ped{\emph{G}}\textbf{:} Piattaforma ospitante di progetti e librerie open-source\ped{\emph{G}}.
-		\item \textbf{Orange Canvas}\ped{\emph{G}}\textbf{:} Strumento che permette di comprendere meglio la SVM e la RL.
+		\item \textbf{Javascript}\ped{\emph{G}}\textbf{:} linguaggio di programmazione lato client con il quale sono stati sviluppati Grafana\ped{\emph{G}} e alcune delle librerie consigliate per gli algoritmi SVM\ped{\textit{G}} e RL\ped{\textit{G}}.
+		\item \textbf{Grafana}\ped{\emph{G}}\textbf{:} progetto open-source\ped{\emph{G}} che permette il monitoraggio dei dati in tempo reale.
+		\item \textbf{Github}\ped{\emph{G}}\textbf{:} piattaforma ospitante di progetti e librerie open-source\ped{\emph{G}}.
+		\item \textbf{Orange Canvas}\ped{\emph{G}}\textbf{:} strumento che permette di comprendere meglio la SVM\ped{\textit{G}} e la RL\ped{\textit{G}}.
 	\end{itemize}
 	
 	\subsubsection{Aspetti Positivi}
 	\begin{itemize}
-		\item La collaborazione con un proponente di importanza mondiale, quale la Zucchetti Spa, è un'esperienza che offre la possibilità di crescita sia a livello personale che professionale, oltre a rappresentare un primo passo importante verso il mondo del lavoro; 
-		\item il progetto offre varie opportunità di apprendimento di nuovi concetti informatici e matematici, potenzialmente riutilizzabili in un secondo momento, vista la politica di "maximum reliability" dei servizi Cloud sempre più numerosi; 
-		\item apprezziamo inoltre la decisione del proponente di condividere il prodotto finale come progetto open-source\ped{\emph{G}}, in modo tale da renderlo disponibile ad un numero sempre maggiore di utenti.
+		\item La collaborazione con un Proponente di importanza mondiale, quale la Zucchetti S.p.A., è un'esperienza che offre la possibilità di crescita sia a livello personale che professionale, oltre a rappresentare un primo passo importante verso il mondo del lavoro; 
+		\item il progetto offre varie opportunità di apprendimento di nuovi concetti informatici e matematici, potenzialmente riutilizzabili in un secondo momento, vista la politica di "maximum reliability" dei servizi Cloud\ped{\textit{G}} sempre più numerosi; 
+		\item apprezziamo inoltre la decisione del Proponente di condividere il prodotto\ped{\textit{G}} finale come progetto open-source\ped{\emph{G}}, in modo tale da renderlo disponibile ad un numero sempre maggiore di utenti.
 	\end{itemize}
 
 	\subsubsection{Criticità}
 		Il progetto richiede la conoscenza di argomenti il cui approfondimento può impiegare più tempo di quello disponibile. In particolare nessuno dei membri del team ha avuto l'opportunità di affrontare argomenti di tale natura.
 	
 	\subsubsection{Esito}
-		Vista la scarsa preparazione dei membri del team nell'ambito dei modelli di apprendimento automatico, la relativa complessità degli argomenti trattati e le alte aspettative da parte del proponente si è deciso di non proporsi per la realizzazione del capitolato\ped{\emph{G}}.
+		Vista la scarsa preparazione dei membri del team nell'ambito dei modelli di apprendimento automatico\ped{\textit{G}}, la relativa complessità degli argomenti trattati e le alte aspettative da parte del Proponente si è deciso di non proporsi per la realizzazione del capitolato\ped{\emph{G}}.

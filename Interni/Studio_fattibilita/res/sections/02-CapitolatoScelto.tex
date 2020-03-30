@@ -3,8 +3,8 @@
 \subsection{Informazioni generali}
 	\begin{itemize}
 		\item \textbf{Nome:} \NomeProgetto{}; 
-		\item \textbf{Proponente:} \Proponente;
-		\item \textbf{Committente:} \TV{} e \RC{}. 
+		\item \textbf{Proponente}\ped{\textit{G}}\textbf{:} \Proponente{};
+		\item \textbf{Committente}\ped{\textit{G}}\textbf{:} \TV{} e \RC{}. 
 	\end{itemize}
 
 \subsection{Descrizione}
@@ -13,25 +13,25 @@ Etherless è una piattaforma cloud\ped{\emph{G}} che permette agli sviluppatori 
 \subsection{Obiettivo finale}
 La struttura richiesta per Etherless si compone di 3 moduli\ped{\emph{G}} principali: 
 \begin{itemize}
-	\item \textbf{Etherless-cli:} è il modulo\ped{\emph{G}} con cui gli sviluppatori interagiscono con Etherless. Supporta diversi comandi, tramite i quali lo sviluppatore può: 
+	\item \textbf{Etherless-cli}\ped{\textit{G}}\textbf{:} è il modulo\ped{\emph{G}} con cui gli sviluppatori interagiscono con Etherless. Supporta diversi comandi, tramite i quali lo sviluppatore può: 
 		\begin{itemize}
 			\item configurare il proprio account; 
-			\item eseguire il deploy di funzioni javascript\ped{\emph{G}}; 
-			\item visualizzare la lista delle funzioni di cui ha già svolto il deploy; 
+			\item eseguire il deploy\ped{\textit{G}} di funzioni javascript\ped{\emph{G}}; 
+			\item visualizzare la lista delle funzioni di cui ha già svolto il deploy\ped{\textit{G}}; 
 			\item richiedere l'esecuzione di una funzione e visualizzarne il risultato; 
-			\item visualizzare i log relativi all'esecuzione di una specifica funzione; 
+			\item visualizzare i log\ped{\textit{G}} relativi all'esecuzione di una specifica funzione; 
 		\end{itemize}  
-	A seconda del comando, \textit{Etherless-cli} si occuperà di emettere o rimanere in attesa di un determinato evento\ped{\emph{G}} Ethereum\ped{\emph{G}}. 
+	A seconda del comando, \textit{Etherless-cli\ped{\textit{G}}} si occuperà di emettere o rimanere in attesa di un determinato evento\ped{\emph{G}} Ethereum\ped{\emph{G}}. 
 	
-	\item \textbf{Etherless-smart:} un insieme di Ethereum\ped{\emph{G}} smart-contract\ped{\emph{G}} che gestiscono la comunicazione tra \textit{Etherless-cli} e \textit{Etherless-server}, ed i pagamenti in ETH\ped{\emph{G}} necessari per l'esecuzione delle funzioni; 
-	\item \textbf{Etherless-server:} si occupa di ascoltare gli eventi\ped{\emph{G}} trasmessi da \textit{Etherless-smart} e di avviare l'esecuzione delle funzioni così richieste. I risultati ottenuti vengono inviati tramite un ulteriore evento\ped{\emph{G}} nella blockchain\ped{\emph{G}} e mostrati all'utente attraverso \textit{Etherless-cli};  
+	\item \textbf{Etherless-smart:} un insieme di Ethereum\ped{\emph{G}} smart-contract\ped{\emph{G}} che gestiscono la comunicazione tra \textit{Etherless-cli\ped{\textit{G}}} e \textit{Etherless-server}, ed i pagamenti in ETH\ped{\emph{G}} necessari per l'esecuzione delle funzioni; 
+	\item \textbf{Etherless-server:} si occupa di ascoltare gli eventi\ped{\emph{G}} trasmessi da \textit{Etherless-smart} e di avviare l'esecuzione delle funzioni così richieste. I risultati ottenuti vengono inviati tramite un ulteriore evento\ped{\emph{G}} nella blockchain\ped{\emph{G}} e mostrati all'utente attraverso \textit{Etherless-cli\ped{\textit{G}}};  
 \end{itemize}
 
 \subsection{Tecnologie coinvolte}
 	\begin{itemize}
 		\item \textbf{Ethereum}\ped{\emph{G}}\textbf{:} piattaforma che permette ai suoi utenti di scrivere applicazioni decentralizzate (dette \DJ Apps\ped{\emph{G}}) che usano la tecnologia blockchain\ped{\emph{G}};
 		\item \textbf{Ethereum}\ped{\emph{G}} \textbf{Virtual Machine}\ped{\emph{G}} \textbf{(EVM}\ped{\emph{G}}\textbf{):} macchina virtuale distribuita sulla rete Ethereum\ped{\emph{G}}; 
-		\item \textbf{Solidity:} linguaggio usato per la codifica degli smart-contract\ped{\emph{G}}; 
+		\item \textbf{Solidity}\ped{\textit{G}}\textbf{:} linguaggio usato per la codifica degli smart-contract\ped{\emph{G}}; 
 		\item \textbf{Serverless}\ped{\emph{G}} \textbf{Framework}\ped{\emph{G}}\textbf{:} framework\ped{\emph{G}} per la realizzazione di applicazioni che vengono eseguite in architetture serverless\ped{\emph{G}} (come AWS\ped{\emph{G}} Lambda, Google Cloud\ped{\emph{G}} Functions, Microsoft Azure Functions); 
 		\item \textbf{Typescript}\ped{\emph{G}} \textbf{3.6:} Linguaggio che supporta JavaScript\ped{\emph{G}} ES6, introducendo alcune funzionalità, tra cui la tipizzazione;
 		\item \textbf{ESLint}\ped{\emph{G}}\textbf{:} tool di analisi statica del codice e syntax checking; 
