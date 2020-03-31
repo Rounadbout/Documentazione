@@ -50,25 +50,27 @@
         \subsubsection{Strumenti}
         Di seguito vengono elencati gli strumenti usati durante il processo di fornitura:
         
-    \subsection{Sviluppo}
-        \subsubsection{Descrizione}
-        Il processo di sviluppo contiene le attività ed i compiti che devono essere svolti per produrre il software richiesto. Esso viene svolto in conformità allo standard ISO/IEC 12207-1995, comprendendo perciò le seguenti attività:
-        \begin{itemize}
-        \item{Analisi dei Requisiti;}
-        \item{Progettazione;}
-        \item{Codifica.}
-        \end{itemize}
-	In particolare, l'obiettivo del team è quello di sviluppare un prodotto\ped{\textit{G}} software che superi i test, soddisfi le richieste ed i requisiti, fissati dal Proponente\ped{\textit{G}}.
+	\subsection{Sviluppo}
+		\subsubsection{Descrizione}
+		Il processo di sviluppo contiene le attività ed i compiti che devono essere svolti per produrre il software richiesto. Esso viene svolto in conformità allo standard ISO/IEC 12207:1995, comprendendo perciò le seguenti attività:
+		\begin{itemize}
+			\item{Analisi dei Requisiti;}
+			\item{Progettazione;}
+			\item{Codifica.}
+		\end{itemize}
+		
+		In particolare, l'obiettivo del team è quello di sviluppare un prodotto\ped{\textit{G}} software che superi i test, soddisfi le richieste ed i requisiti, fissati dal Proponente\ped{\textit{G}}.
         
-            \subsubsection{Attività}
+        \subsubsection{Attività}
             \subsubsubsection{Analisi dei Requisiti}
-           Nell'\AdR{} gli Analisti individuano ed elencano tutti i requisiti richiesti dal Proponente\ped{\textit{G}} per il progetto in questione. Tali requisiti possono derivare da:
-           \begin{itemize}
-           		\item{capitolato\ped{\textit{G}} d'appalto;}
-				\item{verbali di riunioni interne o esterne;}
-				\item{casi d'uso.}
-           \end{itemize}
-           E sono fondamentali per:
+           	Nell'\AdR{} gli Analisti individuano ed elencano tutti i requisiti richiesti dal Proponente\ped{\textit{G}} per il progetto in questione. Tali requisiti possono derivare da:
+	        \begin{itemize}
+	           		\item{capitolato\ped{\textit{G}} d'appalto;}
+					\item{verbali di riunioni interne o esterne;}
+					\item{casi d'uso.}
+	    	\end{itemize}
+           	
+           	E sono fondamentali per:
             \begin{itemize}
         		\item{descrivere lo scopo del lavoro;}
 				\item{fornire ai Progettisti riferimenti specifici ed affidabili;}
@@ -77,83 +79,130 @@
 				\item{facilitare le revisioni del codice;}
 				\item{stimare i costi in base alla quantità di lavoro prevista.}
         	\end{itemize}                 
-                 \subsubsubsection*{Requisiti}
-                 
- 				    Ogni requisito emerso durante l'attività di analisi dev'essere descritto dalla seguente struttura:
-                    \begin{itemize}
-                    	\item{codice identificativo;}
-                     	\item{fonti;} 
-                     	\item{relazioni di dipendenza con altri requisiti;}
-                      	\item{descrizione;}
-                      	\item{importanza.}
-                     \end{itemize}
-                     
-                	\noindent Ogni requisito dev'essere corredato da un codice identificativo, che segue la dicitura: 
-                    \begin{center}
-                    \textbf{R[Importanza][Tipologia][Codice]}
-                    \end{center}
-                    Dove:
-                    \begin{itemize}
-                        	\item{\textbf{Importanza}: indica il grado di importanza del requisito ai fini del progetto. Può assumere i valori:}
-                        	\begin{itemize}
-                                	\item{\textbf{1}: requisito obbligatorio ai fini del progetto, irrinunciabile per gli stakeholders;}
-                                	\item{\textbf{2}: requisito desiderabile. Non strettamente necessario ai fini del progetto ma che porta valore aggiunto;}
-                                	\item{\textbf{3}: requisito opzionale, contrattabile più avanti nel progetto.}
-                        	\end{itemize}
-                        	\item{\textbf{Tipologia}: classe a cui appartiene il requisito in questione. Può assumere i valori:}
-                        	\begin{itemize}
-                        		\item{\textbf{F}: funzionale;}
-                        		\item{\textbf{P}: prestazionale;}
-                        		\item{\textbf{Q}: qualitativo;}
-                        		\item{\textbf{V}: vincolo.}
-                        	\end{itemize}
-                        	\item{\textbf{Codice}: identificatore univoco del requisito}.
-                    \end{itemize}
-                    
-                    \noindent Il codice stabilito secondo la convenzione precedente, una volta associato ad un requisito, non può più essere modificato.
-                    
-                \subsubsubsection*{Casi d'uso}
-                                Dopo aver identificato i casi d'uso\ped{\textit{G}}, compito degli Analisti è quello di elencarli con un grado di precisione che va dal generale al particolare, usando la struttura:
+             
+            \subsubsubsection*{Casi d'uso}
+			Dopo aver identificato i casi d'uso\ped{\textit{G}}, compito degli Analisti è quello di elencarli con un grado di precisione che va dal generale al particolare, usando la struttura:
+			\begin{itemize}
+		    	\item{\textbf{codice identificativo}}; 
+		    	\item{\textbf{titolo}}; 
+		    	\item{\textbf{diagramma UML}}; 
+		    	\item{\textbf{attori primari}}; 
+		    	\item{\textbf{attori secondari}}; 
+		    	\item{\textbf{descrizione}}; 
+		    	\item{\textbf{scenario principale}}; 
+	    		\item{\textbf{specializzazioni (se presenti)}}; 
+		    	\item{\textbf{inclusioni (se presenti)}}; 
+		    	\item{\textbf{estensioni (se presenti)}}; 
+		    	\item{\textbf{precondizione}};
+		    	\item{\textbf{postcondizione}}. 
+			\end{itemize}
+			
+			\noindent Ogni caso d'uso dev'essere corredato da un codice identificativo, che segue la dicitura: 
+			\begin{center}
+				\textbf{UC[codice\_padre].[codice\_figlio]}
+			\end{center}
+			
+			\noindent Dove:
+			\begin{itemize}
+	         	\item{\textbf{Codice padre}: numero che identifica univocamente i casi d'uso generici;}
+	         	\item{\textbf{Codice figlio}: numero progressivo che identifica i sottocasi. Può a sua volta includere altri livelli.}
+			\end{itemize}
+             
+            \subsubsubsection*{Requisiti}   
+			Ogni requisito emerso durante l'attività di analisi dev'essere descritto dalla seguente struttura:
+            	\begin{itemize}
+                   	\item{codice identificativo;}
+                   	\item{fonti;} 
+                   	\item{relazioni di dipendenza con altri requisiti;}
+                   	\item{descrizione;}
+                   	\item{importanza.}
+     			\end{itemize}
+		                 
+            	\noindent Ogni requisito dev'essere corredato da un codice identificativo, che segue la dicitura: 
+				\begin{center}
+					\textbf{R[Importanza][Tipologia][Codice]}
+				\end{center}
+			
+				Dove:
+				\begin{itemize}
+				   	\item{\textbf{Importanza}: indica il grado di importanza del requisito ai fini del progetto. Può assumere i valori:}
+				   	\begin{itemize}
+				           	\item{\textbf{1}: requisito obbligatorio ai fini del progetto, irrinunciabile per gli stakeholders;}
+				           	\item{\textbf{2}: requisito desiderabile: non strettamente necessario ai fini del progetto ma che porta valore aggiunto;}
+				           	\item{\textbf{3}: requisito opzionale, contrattabile più avanti nel progetto.}
+				   	\end{itemize}
+				   	
+				   	\item{\textbf{Tipologia}: classe a cui appartiene il requisito in questione. Può assumere i valori:}
+				   	\begin{itemize}
+				   		\item{\textbf{F}: funzionale;}
+				   		\item{\textbf{P}: prestazionale;}
+				   		\item{\textbf{Q}: qualitativo;}
+				   		\item{\textbf{V}: vincolo.}
+				   	\end{itemize}
+				   	
+				   	\item{\textbf{Codice}: identificatore univoco del requisito}.
+				\end{itemize}
+	            \noindent Il codice stabilito secondo la convenzione precedente, una volta associato ad un requisito, non può più essere modificato. \\
+  
+                \noindent Inoltre per ogni requisito bisogna indicare: 
                 \begin{itemize}
-                \item{\textit{Mancano riferimenti}}
-                \end{itemize}
-
-                \noindent Ogni caso d'uso dev'essere corredato da un codice identificativo, che segue la dicitura: 
-                \begin{center}
-                \textbf{UC[codice\_padre].[codice\_figlio]}
-                \end{center}
-                
-                \noindent Dove:
-                \begin{itemize}
-                 	\item{\textbf{Codice padre}: numero che identifica univocamente i casi d'uso generici;}
-			\item{\textbf{Codice figlio}: numero progressivo che identifica i sottocasi. Può a sua volta includere altri livelli.}
-                \end{itemize}
-                                
-                \subsubsection*{UML}
-                I diagrammi UML\ped{\textit{G}} devono essere realizzati utilizzando la versione del linguaggio \textit{v2.0}.
-                
-            \subsubsubsection{Progettazione}
+                	\item{\textbf{descrizione}}: breve descrizione del requisito, strutturata in maniera da evitare ambiguità; 
+                	
+                	\item{\textbf{classificazione}}: indica il grado di importanza del requisito considerato. Sebbene tale informazione sia già presente nell'identificativo, la sua ripetizione rende la lettura più semplice e scorrevole;	
+                	
+                	\item{\textbf{fonti}}:   
+                	\begin{itemize}
+                		\item \textit{capitolato}: requisito indicato nel capitolato; 
+                		\item \textit{interno}: requisito individuato dagli analisti; 
+                		\item \textit{caso d'uso}: il requisito è stato estrapolato da uno o più casi d'uso. In questo caso vengono riportati gli identificativi dei casi d'uso considerati; 
+                		\item \textit{verbale}: si tratta di un requisito individuato a seguito di un incontro tra i membri del gruppo o di una richiesta di chiarimento con il proponente. 
+                		In questo caso è riportato il codice identificativo presente nella tabella delle decisioni dei verbali considerati. 
+                	\end{itemize} 
+                \end{itemize} 
+                         
+            \subsubsection*{Diagrammi UML}
+            I diagrammi UML\ped{\textit{G}} devono essere realizzati utilizzando la versione del linguaggio \textit{v2.0}.
+            Per garantire leggibilità è richiesto che gli Analisti si occupino di creare i diagrammi UML 
+            rispettando le seguenti indicazioni: 
+            \begin{itemize}
+            	\item distribuire in modo omogeneo gli elementi all'interno dello spazio disponibile, mantenendo un margine minimo; 
+            	\item dove possibile, allineare i vari elementi sia in senso verticale sia in orizzontale; 
+            	\item impostare i collegamenti in uscita da ogni elemento ad angolo retto.  
+            \end{itemize}
+            
+          %  \subsubsection{Produzione di diagrammi UML}
+           % Per la produzione dei diagrammi dei casi d'uso è stato scelto lo strumento \textbf{draw.io}. \\ 
+           % I file relativi ai diagrammi si trovano nella cartella \texttt{Analisi dei requisiti}, presente in Google Drive. Nello specifico gli Analisti potranno accedervi utilizzando le credenziali dell'account google del gruppo o richiedendo un apposito link di invito. 
+            
+            
+            
+              
+              
+              
+        \subsubsubsection{Progettazione}
             L'attività di progettazione definisce una soluzione del problema presentato, soddisfacente per tutti gli stakeholders, in relazione ai requisiti specificati nel documento \AdR{}. Questo garantisce che il prodotto\ped{\textit{G}} sviluppato soddisfi le proprietà e i bisogni specificati dal Proponente\ped{\textit{G}}. 
             La progettazione ha quindi come obiettivo l'elaborazione di una struttura adeguata per il sistema, poi descritta nei seguenti documenti:
             \begin{itemize}
             	\item{\textbf{\TB{}}\ped{\textit{G}}: contiene le specifiche della progettazione ad alto livello, i diagrammi UML\ped{\textit{G}} utilizzati per la realizzazione dell'architettura ed i test di verifica;}
-		\item{\textbf{\PB{}}\ped{\textit{G}}: approfondisce l'attività di progettazione precedentemente trattata nella Technology Baseline\ped{\textit{G}}, specifica le definizioni delle classi e definisce i test necessari alla verifica.}
-	     \end{itemize}
+				\item{\textbf{\PB{}}\ped{\textit{G}}: approfondisce l'attività di progettazione precedentemente trattata nella Technology Baseline\ped{\textit{G}}, specifica le definizioni delle classi e definisce i test necessari alla verifica.}
+    		\end{itemize}
 	     
 	     \subsubsubsection*{Technology Baseline}
 	     Tale documento viene redatto dal Progettista e contiene:
 	     \begin{itemize}
-	     	\item{\textbf{Diagrammi UML\ped{\textit{G}}}: usati per rendere più chiare le scelte progettuali adottate e ridurre le ambiguità. Possono essere:
-                    \begin{itemize}
+    	 	\item{\textbf{Diagrammi UML\ped{\textit{G}}}: usati per rendere più chiare le scelte progettuali adottate e ridurre le ambiguità. Possono essere:
+                \begin{itemize}
                     	\item{diagrammi delle attività;}
     			\item{diagrammi delle classi;}
     			\item{diagrammi dei package;}    			
-			\item{diagrammi di sequenza.}                    
-		\end{itemize}
-}
-		\item{\textbf{Design pattern}\ped{\textit{G}}: vengono esplicitati chiaramente i design pattern\ped{\textit{G}} utilizzati per l'architettura, accompagnandoli con una descrizione ed un diagramma, così da esporne il significato e la struttura;}
-		\item{\textbf{Tracciamento delle componenti}: viene rappresentata la relazione tra ogni requisito ed il componente che lo soddisfa. Dimostrando quindi concretamente la loro completa esaustione;}
-		\item{\textbf{Test di integrazione}: vengono definite delle classi di verifica, per accertarsi che ogni componente del sistema funzioni come previsto.}
+				\item{diagrammi di sequenza.}                    
+			\end{itemize}
+			}
+	
+			\item{\textbf{Design pattern}\ped{\textit{G}}: vengono esplicitati chiaramente i design pattern\ped{\textit{G}} utilizzati per l'architettura, accompagnandoli con una descrizione ed un diagramma, così da esporne il significato e la struttura;}
+			\item{\textbf{Tracciamento delle componenti}: viene rappresentata la relazione tra ogni requisito ed il componente che lo soddisfa. Dimostrando quindi concretamente la loro completa esaustione;}
+			
+			\item{\textbf{Test di integrazione}: vengono definite delle classi di verifica, per accertarsi che ogni componente del sistema funzioni come previsto.}
 	     \end{itemize}
 	     
 	     \subsubsubsection*{Product Baseline}
