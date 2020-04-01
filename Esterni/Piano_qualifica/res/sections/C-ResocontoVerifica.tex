@@ -1,7 +1,42 @@
 \section{Resoconto delle attività di verifica}
 
-\subsection{Riassunto delle attività di verifica per le revisioni}
-
-\subsection{Dettaglio delle verifiche tramite analisi}
-
-	\subsubsection{Periodo di analisi}
+	\subsection{Verifiche statiche}
+		Ogni documento prodotto è stato analizzato da parte dei \textit{Verificatori}, adottando un metodo Walkthrough\ped{\textit{G}} ed Inspection\ped{\textit{G}}.\\
+		Terminata questa analisi, in accordo con il redattore, si procede alla risoluzione di lacune eventualmente presenti.
+	
+	\subsection{Verifiche requisiti}
+		Questo tipo di verifica è necessario per accertarsi che, la relazione tra casi d'uso, requisiti e fonti non abbia discrepanze. Per facilitare questa verifica si è scelto di utilizzare il software PragmaDB.
+	
+	\subsection{Verifiche automatizzate}
+		Nella seguente tabella vengono riportati i valori di Gulpease\ped{\textit{G}} calcolati per ogni documento.
+		I calcoli sono stati effettuati escludendo le intestazioni e le note a piè di pagina, in modo da avere un risultato valido ed attendibile. L'esito della verifica è da intendersi \textit{Positivo} qualora l'indice di Gulpease abbia valore maggiore di 40.
+		
+		\rowcolors{2}{lightRowColor}{darkRowColor}
+		\begin{longtable}{ 
+				>{\centering}p{0.5\textwidth}
+				>{\centering}p{0.1\textwidth} 
+				>{\centering\arraybackslash}p{0.2\textwidth} }
+			
+			\caption {Verifica Gulpease documenti}		\\
+			
+			\coloredTableHead
+			\textbf{\color{white}Documento} &
+			\textbf{\color{white}Gulpease} &
+			\textbf{\color{white}Esito}
+			\tabularnewline
+			\endhead
+			
+			% Contenuto della tabella
+			% Documento & Gulpease & Esito \\
+			\textbf{Analisi dei Requisiti v1.0.0} & 0 & Non Positivo \\
+			\textbf{Glossario v1.0.0} & 0 & Non Positivo \\
+			\textbf{Norme di Progetto v1.0.0} & 0 & Non Positivo \\
+			\textbf{Piano di Progetto v1.0.0} & 0 & Non Positivo \\
+			\textbf{Studio di Fattibilità v1.0.0} & 0 & Non Positivo \\
+			\textbf{Verbale xyz v1.0.0} & 0 & Non Positivo \\
+			\textbf{Verbale xyz v1.0.0} & 0 & Non Positivo \\
+			\textbf{Verbale xyz v1.0.0} & 0 & Non Positivo \\
+			\textbf{Verbale xyz v1.0.0} & 0 & Non Positivo \\
+			\textbf{Verbale xyz v1.0.0} & 0 & Non Positivo \\
+			
+		\end{longtable}
