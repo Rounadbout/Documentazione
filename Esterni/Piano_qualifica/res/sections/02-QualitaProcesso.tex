@@ -4,6 +4,116 @@
 
 \subsection{Processi Primari}
 
+	\subsubsection{Processi di sviluppo}
+	
+		\subsubsubsection{Analisi dei Requisiti}
+			\subsubsubsection*{PROS}
+			
+		\subsubsubsection{Progettazione}
+			\subsubsubsection*{SFIN}
+			\subsubsubsection*{SFOUT}
+			
+		\subsubsubsection{Codifica}
+			\subsubsubsection*{CBO}
+			\subsubsubsection*{Complessità ciclomatica}
+			\subsubsubsection*{Rapporto linee di codice/linee di commento}
+			\subsubsubsection*{Livello di annidamento}
+			\subsubsubsection*{Numero di parametri per metodo}
+			\subsubsubsection*{Instabilità}
+
 \subsection{Processi di Supporto}
 
-\subsection{Processi Oganizzativi}
+	\subsubsubsection{Pianificazione}
+	Le metriche usate per l'attività di pianificazione sono le seguenti:
+	
+		\subsubsubsection*{Budget at Completion (BAC)}
+		Equivale al budget totale allocato per il progetto.
+		\begin{itemize}
+			\item{Misurazione: numero intero;}
+			\item{Valore minimo accettabile: valore del preventivo con un errore massimo del 5\%, ovvero \textit{preventivo}-5\% $\leq$ \textit{BAC} $\leq$ \textit{preventivo}+5\%;}
+			\item{Valore preferibile: pari al preventivo.}
+		\end{itemize}
+	
+		\subsubsubsection*{Cost Variance (CV)}
+		Detta anche \textit{Budget Variance}, in quanto misura il budget a disposizione nel corso di un progetto software. In particolare, la \textit{Cost Variance} è la differenza tra \textit{Earned Value} e \textit{Actual Cost}, ovvero tra ciò che si aveva pianificato di spendere e ciò che si è effettivamente speso nel corso del progetto.
+		Se la \textit{Cost Variance} ha valore negativo significa che si è \textit{over budget}, se è nulla si è \textit{on budget}, mentre se è positiva si è \textit{under budget}.
+		\begin{itemize}
+			\item{Misurazione: CV = EV - AC;}
+			\item{Valore minimo accettabile: 0;}
+			\item{Valore preferibile: > 0;}
+		\end{itemize}
+		
+		\subsubsubsection*{Schedule Variance (SV)}
+		La \textit{Schedule Variance} è una misura che si usa per indicare lo stato di avanzamento di un progetto software e viene calcolata mediante la differenza tra \textit{Earned Value} e \textit{Planned Value}. 		Se la \textit{Schedule Variance} ha valore negativo significa che lo stato di avanzamento del progetto è in ritardo rispetto alla pianificazione, se è nulla lo stato di avanzamento del progetto è nei tempi previsti, mentre se è positiva significa che si è in anticipo rispetto alla pianificazione.
+		\begin{itemize}
+			\item{Misurazione: SV = EV - PV;}
+			\item{Valore minimo accettabile: 0;}
+			\item{Valore preferibile: > 0.}
+		\end{itemize}
+		
+		\subsubsubsection*{Earned Value (EV)}
+		Anche chiamata \textit{Budgeted Cost of Work Performed} (\textit{BCWP}) indica la quantità di lavoro compiuta al momento del calcolo. Viene calcolata dal budget di progetto come segue:
+		\begin{itemize}
+			\item{Misurazione: EV =  \% di lavoro completato $\cdot$ BAC;}
+			\item{Valore minimo accettabile: $\geq$ 0;}
+			\item{Valore preferibile: $\geq$ 0;}
+		\end{itemize}
+				
+		\subsubsubsection*{Actual Cost (AC)}
+		Anche conosciuto come \textit{Actual Cost of Work Performed} (\textit{ACWP}) indica la quantità di budget spesa al momento del calcolo.
+		\begin{itemize}
+			\item{Misurazione: numero intero;}
+			\item{Valore minimo accettabile: 0 $\leq$ \textit{AC} < \textit{BAC};}
+			\item{Valore preferibile: 0 $\leq$ \textit{AC} < \textit{PV}.}
+		\end{itemize}
+		
+		\subsubsubsection*{Planned Value (PV)}
+		Corrisponde al valore del lavoro pianificato al momento del calcolo, ovvero al denaro che si dovrebbe aver guadagnato fino a quel momento.
+		\begin{itemize}
+			\item{Misurazione: \% di lavoro pianificato $\cdot$ BAC;}
+			\item{Valore minimo accettabile: $\geq$ 0;}
+			\item{Valore preferibile: $\geq$ 0.}
+		\end{itemize}
+		
+		\subsubsubsection*{Correlazione tra CV e SV}
+		Lo stato di un progetto è esprimibile dalla correlazione tra \textit{Cost Variance} e \textit{Schedule Variance}, in particolare:
+		\begin{enumerate}
+			\item{\textbf{SV e CV positive}: il progetto è in anticipo rispetto alla pianificazione e rientra nel budget previsto;}
+			\item{\textbf{SV positiva, CV negativa}: il progetto è in anticipo rispetto alla pianificazione ma ha superato il budget allocato;}
+			\item{\textbf{SV negativa, CV positiva}: il progetto è in ritardo rispetto alla pianificazione ma rientra nel budget previsto;}
+			\item{\textbf{SV e CV negative}: il progetto è in ritardo rispetto alla pianificazione e ha superato il budget previsto.}
+		\end{enumerate}
+				
+	\subsubsubsection{Verifica}
+	Le metriche usate per l'attività di verifica sono le seguenti:
+	
+		\subsubsubsection*{Code Coverage}
+		 E' la percentuale di linee di codice che sono state eseguite dai test dopo un’esecuzione.
+		 \begin{itemize}
+			\item{Misurazione: CC = $\displaystyle\frac{\mbox{linee di codice eseguite dal test}}{\mbox{linee di codice totali}}$;}
+			\item{Valore minimo accettabile: 80\%;}
+			\item{Valore preferibile: 100\%.}
+		\end{itemize}
+	
+	\subsubsubsection{Documentazione}
+	Le metriche usate per l'attività di documentazione sono le seguenti:
+	
+		\subsubsubsection*{Indice di Gulpease}
+		E' un indice che valuta la leggibilità del testo. E' tarato sulla lingua italiana e considera la lunghezza delle parole, il numero delle frasi ed il numero delle parole totali. Il valore risultante è compreso tra 0 e 100, dove un valore di indice più alto corrisponde ad un indice di leggibilità più semplice.
+		 \begin{itemize}
+			\item{Misurazione: Gulpease = 89 + $\displaystyle\frac{300 \cdot{} (\mbox{numero delle frasi}) - 10 \cdot{} (\mbox{numero delle lettere})}{\mbox{numero delle parole}}$;}
+			\item{Valore minimo accettabile: $\geq$ 40;}
+			\item{Valore preferibile: $\geq$ 60.}
+		\end{itemize}
+
+		\subsubsubsection*{Correttezza Ortografica}
+		Tutti i documenti devono essere privi di errori grammaticali od ortografici.
+		\begin{itemize}
+			\item{Misurazione: numero intero che indica il numero di errori presenti nel testo;}
+			\item{Valore minimo accettabile: 0;}
+			\item{Valore preferibile: 0.}
+		\end{itemize}
+
+\subsection{Processi Organizzativi}
+	\subsubsubsection{Gestione della Qualità}
+		\subsubsubsection*{PMS}
