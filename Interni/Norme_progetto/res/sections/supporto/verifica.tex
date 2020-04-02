@@ -1,0 +1,49 @@
+\subsection{Verifica}
+    \subsubsection{Descrizione}
+	Il processo di Verifica determina se il prodotto\ped{\textit{G}} di un'attività sia conforme o meno alle specifiche e alle aspettative già confermate, individuando quindi possibili difetti nel software e nella documentazione, e garantendo prodotti\ped{\textit{G}} corretti e completi. \\
+	Il gruppo si impegna inoltre a garantire una verifica costante dei requisiti mantenendosi in stretto contatto con il proponente. 
+		
+    \subsubsection{Attività}
+      \subsubsubsection{Analisi}
+        \subsubsubsection*{Analisi statica}
+          L'Analisi statica riguarda sia la documentazione che il codice, e valuta la conformità alle norme stabilite e la sua correttezza formale, senza l'esecuzione del prodotto\ped{\textit{G}} software. Questo tipo di analisi, si serve di metodi formali (implementati tramite macchine) e metodi manuali (implementati solo per prodotti\ped{\textit{G}} semplici).\\ I metodi manuali sono:
+          \begin{itemize}
+            \item \textbf{walkthrough:} analisi dei documenti (o diversi file) nella loro interezza, per ricercare eventuali difetti identificati da un Verificatore, che andranno eventualmente corretti dallo sviluppatore (o redattore\ped{\textit{G}} del documento);
+            \item \textbf{inspection:} analisi mirata dell'oggetto di verifica da parte di un Verificatore, che utilizza delle liste di controllo per cercare difetti specifici in sezioni specifiche. Alcuni errori comuni sono elencati di seguito:
+              \begin{itemize}
+                \item formato di date (YYYY-MM-DD);
+                \item formato di elenchi puntati (punteggiatura alla fine di ogni elemento ";" o ".");
+                \item stile del testo per termini particolari (es. Termini in corsivo);
+                \item tempo verbale (il presente è sempre preferibile).
+              \end{itemize}
+          \end{itemize}
+
+        \subsubsubsection*{Analisi dinamica}
+          L'Analisi dinamica richiede l'esecuzione del prodotto\ped{\textit{G}} software e viene effettuata tramite una suite di test, che garantisce nel complesso la verifica del prodotto\ped{\textit{G}} stesso.
+
+      \subsubsubsection{Test}
+        Sono parte costituente dell'Analisi dinamica e hanno lo scopo di verificare il corretto funzionamento del codice. I test, per poter essere considerati ben scritti, devono essere:
+        \begin{itemize}
+          \item \textbf{Ripetibili:} quindi devono specificare:
+            \begin{itemize}
+              \item l'ambiente di esecuzione\ped{\textit{G}};
+              \item l'input e l'output atteso;
+              \item metodi di interpretazione dei risultati.
+            \end{itemize}
+          \item \textbf{Automatizzati:} quindi devono basarsi su strumenti che ne permettano l'esecuzione automatica, ne registrino i risultati e provvedano a notificare i soggetti ad essi interessati.
+        \end{itemize}
+        Esistono diversi tipi di test:
+        \begin{itemize}
+          \item \textbf{Test di unità:} riguardano il funzionamento di singole unità di software;
+          \item \textbf{Test di integrazione:} test eseguiti per verificare la corretta integrazione di multiple unità in un unica componente. I componenti vengono verificati in maniera incrementale, con l'aggiunta di altre unità o gruppi di unità corretti, fino ad arrivare al sistema completo;
+          \item \textbf{Test di sistema:} test del sistema nella sua interezza e confronto dei risultati con quanto richiesto dall'\AdR{}, così da accertare la copertura dei requisiti funzionali. Introduce il processo di Validazione;
+          \item \textbf{Test di regressione:} utili a controllare che eventuali modifiche al sistema non compromettano funzionalità già testate in precedenza. Consiste nella reiterazione di test già esistenti, per l'unità modificata ed altre unità connesse a quest'ultima.
+        \end{itemize}
+
+	\subsubsection{Metriche}
+	Per il processo di verifica non sono ancora state individuate delle metriche di qualità. 
+
+    \subsubsection{Strumenti}
+    \subsubsubsection{Verifica ortografica}
+    Per verifica ortografica durane la redazione dei documenti è stato utilizzato lo strumento integrato in TexStudio. Esso si occupa di sottolineare in verde le ripetizioni a breve distanza e in rosso le parole errate.
+    
