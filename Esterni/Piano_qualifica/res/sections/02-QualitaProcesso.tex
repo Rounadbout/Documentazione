@@ -1,7 +1,7 @@
 \section{Qualità di Processo}
 
 \subsection{Scopo}
-Lo scopo della seguente sezione è quello di illustrare le metriche adottate per garantire qualità nello svolgimento dei processi, precedentemente scelti tra quelli proposti dallo standard ISO/IEC 12207:1995 ed illustrati nel documento \NdP.
+Lo scopo della seguente sezione è quello di illustrare le metriche adottate per garantire qualità nello svolgimento dei processi, precedentemente scelti tra quelli proposti dallo standard ISO/IEC 12207:1995 ed illustrati nel documento \textit{\NdP}.
 
 \subsection{Processi Primari}
 
@@ -10,7 +10,7 @@ Lo scopo della seguente sezione è quello di illustrare le metriche adottate per
 		\subsubsubsection{Analisi dei Requisiti}
 		Le metriche usate per l'attività di analisi sono le seguenti:
 			\subsubsubsection*{Percentuale dei Requisiti Obbligatori Soddisfatti (PROS)}
-			E' un valore percentuale che indica la quantità di requisiti obbligatori adempiti nel corso del progetto.
+			È un valore percentuale che indica la quantità di requisiti obbligatori adempiti nel corso del progetto.
 			 \begin{itemize}
 			\item{Misurazione: PROS = $\displaystyle\frac{\mbox{requisiti obbligatori soddisfatti}}{\mbox{requisiti obbligatori totali}}$;}
 			\item{Valore minimo accettabile: 100\%;}
@@ -21,7 +21,7 @@ Lo scopo della seguente sezione è quello di illustrare le metriche adottate per
 		Le metriche usate per l'attività di progettazione sono le seguenti:
 		
 			\subsubsubsection*{Structural Fan-In (SFIN)}
-			E' un valore intero che indica quante componenti utilizzano un dato modulo. Uno \textit{SFIN} alto sta a significare un consistente riuso della componente.
+			È un valore intero che indica quante componenti utilizzano un dato modulo. Uno \textit{SFIN} alto sta a significare un consistente riuso della componente.
 		\begin{itemize}
 			\item{Misurazione: valore intero che indica il conteggio delle componenti;}
 			\item{Valore minimo accettabile: $\geq$ 0;}
@@ -29,7 +29,7 @@ Lo scopo della seguente sezione è quello di illustrare le metriche adottate per
 		\end{itemize}
 	
 			\subsubsubsection*{Structural Fan-Out (SFOUT)}
-			E' un valore intero che indica quante componenti vengono utilizzate dalla componente in questione. Uno \textit{SFOUT} alto sta a significare un significativo accoppiamento della componente.
+			È un valore intero che indica quante componenti vengono utilizzate dalla componente in questione. Uno \textit{SFOUT} alto sta a significare un significativo accoppiamento della componente.
 		\begin{itemize}
 			\item{Misurazione: valore intero che indica il conteggio delle componenti;}
 			\item{Valore minimo accettabile: = 0;}
@@ -40,7 +40,7 @@ Lo scopo della seguente sezione è quello di illustrare le metriche adottate per
 		Le metriche usate per l'attività di codifica sono le seguenti:
 		
 			\subsubsubsection*{Coupling Between Objects (CBO)}
-			E' un valore intero che indica il grado di accoppiamento tra le classi di oggetti. Una classe A si dice \textit{accoppiata} ad una classe B se A usa metodi o variabili definite in B.
+			È un valore intero che indica il grado di accoppiamento tra le classi di oggetti. Una classe A si dice \textit{accoppiata} ad una classe B se A usa metodi o variabili definite in B.
 		\begin{itemize}
 			\item{Misurazione: valore intero;}
 			\item{Valore minimo accettabile: 0 $\leq$ CBO $\leq$ 6;}
@@ -48,7 +48,7 @@ Lo scopo della seguente sezione è quello di illustrare le metriche adottate per
 		\end{itemize}
 			
 			\subsubsubsection*{Complessità ciclomatica}
-			E' una metrica utilizzata per stimare la complessità di funzioni, moduli, metodi o classi si un programma. Ciò viene fatto mediante la determinazione del numero dei cammini linearmente indipendenti attraverso il grafo di controllo di flusso. Un valore troppo elevato indica un'eccessiva complessità del codice che rende conseguentemente l'attività di manutenzione più difficile. Allo stesso tempo, un valore eccessivamente basso potrebbe essere indicatore di una scarsa efficienza dei metodi.
+			È una metrica utilizzata per stimare la complessità di funzioni, moduli\ped{\textit{G}}, metodi o classi di un programma. Ciò viene fatto mediante la determinazione del numero dei cammini linearmente indipendenti attraverso il grafo di controllo di flusso. Un valore troppo elevato indica un'eccessiva complessità del codice che rende conseguentemente l'attività di manutenzione più difficile. Allo stesso tempo, un valore eccessivamente basso potrebbe essere indicatore di una scarsa efficienza dei metodi.
 		\begin{itemize}
 			\item{Misurazione: valore intero;}
 			\item{Valore minimo accettabile: 1 $\leq$ complessità ciclomatica $\leq$ 15;}
@@ -56,15 +56,15 @@ Lo scopo della seguente sezione è quello di illustrare le metriche adottate per
 		\end{itemize}
 			
 			\subsubsubsection*{Rapporto linee di codice per linee di commento}
-			Indica il rapporto tra le righe di codice e le righe di commento ad esso corrispondenti (escludendo le righe vuote), al fine di stimare il livello di difficoltà di manutenibilità del codice. Un rapporto troppo basso, infatti, potrebbe essere indicatore di scarse informazioni necessarie alla comprensione del codice scritto.
+			Indica il rapporto tra le righe di codice e le righe di commento ad esso corrispondenti, escludendo le righe vuote, al fine di stimare il livello di difficoltà di manutenibilità del codice. Un rapporto troppo basso, infatti, potrebbe essere indicatore di scarse informazioni necessarie alla comprensione del codice scritto.
 		\begin{itemize}
 			\item{Misurazione: valore decimale;}
 			\item{Valore minimo accettabile: $\displaystyle\frac{\mbox{linee di codice}}{\mbox{linee di commento}} \geq$ 0.25;}
-			\item{Valore preferibile: rapporto $\displaystyle\frac{\mbox{linee di codice}}{\mbox{linee di commento}} \geq$ 0.30.}
+			\item{Valore preferibile: $\displaystyle\frac{\mbox{linee di codice}}{\mbox{linee di commento}} \geq$ 0.30.}
 		\end{itemize}
 
 			\subsubsubsection*{Livello di annidamento}
-			E' un valore intero che indica il livello di annidamento nei vari metodi tenendo conto della presenza di strutture di controllo annidate: un alto livello di annidamento risulta in codice complesso e di difficile manutenzione.
+			È un valore intero che indica il livello di annidamento nei vari metodi tenendo conto della presenza di strutture di controllo annidate: un alto livello di annidamento risulta in codice complesso e di difficile manutenzione.
 		\begin{itemize}
 			\item{Misurazione: valore intero;}
 			\item{Valore minimo accettabile: 1 $\leq$ livello annidamento $\leq$ 7;}
@@ -72,7 +72,7 @@ Lo scopo della seguente sezione è quello di illustrare le metriche adottate per
 		\end{itemize}
 			
 			\subsubsubsection*{Numero di parametri per metodo}
-			E' un numero intero che indica il numero di parametri di un metodo. Un valore troppo elevato denota un groado di complessità eccessivamente elevato del metodo
+			È un numero intero che indica il numero di parametri di un metodo. Un valore troppo elevato denota un grado di complessità eccessivamente elevato del metodo
 		\begin{itemize}
 			\item{Misurazione: valore intero;}
 			\item{Valore minimo accettabile: 0 $\leq$ numero totale attributi $\leq$ 8;}
@@ -80,7 +80,7 @@ Lo scopo della seguente sezione è quello di illustrare le metriche adottate per
 		\end{itemize}
 			
 			\subsubsubsection*{Numero di attributi per classe}
-			E' un numero intero che indica il numero totale di attributi presenti all'interno di una classe. Un valore troppo elevato denota un carico di responsabilità eccessiva per la classe, suggerendo di scomporre la stessa seguendo principi quali il \textit{Single Responsibility Principle}.
+			È un numero intero che indica il numero totale di attributi presenti all'interno di una classe. Un valore troppo elevato denota un carico di responsabilità eccessiva per la classe, suggerendo di scomporre la stessa seguendo principi quali il \textit{Single Responsibility Principle}.
 		\begin{itemize}
 			\item{Misurazione: valore intero;}
 			\item{Valore minimo accettabile: 1 $\leq$ numero totale attributi $\leq$ 15;}
@@ -154,7 +154,7 @@ Lo scopo della seguente sezione è quello di illustrare le metriche adottate per
 	Le metriche usate per l'attività di verifica sono le seguenti:
 	
 		\subsubsubsection*{Code Coverage}
-		 E' la percentuale di linee di codice che sono state eseguite dai test dopo un’esecuzione.
+		 È la percentuale di linee di codice che sono state eseguite dai test dopo un’esecuzione.
 		 \begin{itemize}
 			\item{Misurazione: CC = $\displaystyle\frac{\mbox{linee di codice eseguite dal test}}{\mbox{linee di codice totali}}$;}
 			\item{Valore minimo accettabile: 80\%;}
@@ -165,7 +165,7 @@ Lo scopo della seguente sezione è quello di illustrare le metriche adottate per
 	Le metriche usate per l'attività di documentazione sono le seguenti:
 	
 		\subsubsubsection*{Indice di Gulpease}
-		E' un indice che valuta la leggibilità del testo. E' tarato sulla lingua italiana e considera la lunghezza delle parole, il numero delle frasi ed il numero delle parole totali. Il valore risultante è compreso tra 0 e 100, dove un valore di indice più alto corrisponde ad un indice di leggibilità più semplice.
+		È un indice che valuta la leggibilità del testo. È tarato sulla lingua italiana e considera la lunghezza delle parole, il numero delle frasi ed il numero delle parole totali. Il valore risultante è compreso tra 0 e 100, dove un valore di indice più alto corrisponde ad un indice di leggibilità più semplice.
 		 \begin{itemize}
 			\item{Misurazione: Gulpease = 89 + $\displaystyle\frac{300 \cdot{} (\mbox{numero delle frasi}) - 10 \cdot{} (\mbox{numero delle lettere})}{\mbox{numero delle parole}}$;}
 			\item{Valore minimo accettabile: $\geq$ 40;}
