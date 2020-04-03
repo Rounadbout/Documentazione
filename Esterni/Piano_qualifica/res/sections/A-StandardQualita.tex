@@ -1,7 +1,100 @@
 \section{Standard di qualità}
 
+\subsection{ISO/IEC 15504}
+ISO/IEC 15504, conosciuto anche come SPICE (\textit{Software Process Improvement and Capability Determination}), è lo standard internazionale usato per valutare la qualità dei processi software e perseguirne il miglioramento continuo. La qualità di ogni processo viene valutata oggettivamente mediante la misurazione della capacità dello stesso tramite specifici attributi. \\
+Lo standard ISO/IEC 15504 definisce un modello di riferimento che si suddivide in:
+\begin{itemize}
+	\item{Dimensione del processo}
+	\item{Dimensione della capacità}
+\end{itemize}
+
+\subsubsection{Dimensione del processo}
+La \textit{process dimension} divide i processi in cinque categorie:
+	\begin{itemize}
+		\item{Customer/Supplier}
+		\item{Engineering}
+		\item{Supporting}
+		\item{Management}
+		\item{Organization}
+	\end{itemize}
+
+\subsubsection{Dimensione della capacità}
+Per ogni processo, ISO/IEC 15504 definisce un livello di maturità basato sulla scala rappresentata di seguito:
+
+	\rowcolors{2}{lightRowColor}{darkRowColor}
+	\begin{longtable}{ 
+		>{\centering}p{0.4\textwidth} 
+		>{\centering\arraybackslash}p{0.5\textwidth}}
+		\caption {Scala di maturità dello standard ISO/IEC 15504}		\\
+		\coloredTableHead
+		\textbf{\color{white}Livello} &
+		\textbf{\color{white}Nome}
+		\tabularnewline  
+		\endhead
+		% Contenuto della tabella
+		5 & Optimizing process \\
+		4 & Predictable process \\
+		3 & Established process \\
+		2 & Managed process \\
+		1 & Performed process \\
+		0 & Incomplete process
+	\end{longtable}	
+	
+La capacità (o maturità) di ciascun processo viene misurata tramite gli attributi descritti di seguito:
+	
+	\rowcolors{2}{lightRowColor}{darkRowColor}
+	\begin{longtable}{ 
+		>{\centering}p{0.4\textwidth} 
+		>{\centering\arraybackslash}p{0.5\textwidth}}
+		\caption {Attributi per la misurazione della capacità dello standard ISO/IEC 15504}		\\
+		\coloredTableHead
+		\textbf{\color{white}Appartenenza al livello ed identificativo} &
+		\textbf{\color{white}Nome}
+		\tabularnewline  
+		\endhead
+		% Contenuto della tabella
+		1.1 & Process Performance \\
+		2.1 & Performance Management \\
+		2.2 & Work Product Management \\
+		3.1 & Process Definition \\
+		3.2 & Process Deployment \\
+		4.1 & Process Measurement \\
+		4.2 & Process Control \\
+		5.1 & Process Innovation \\
+		5.2 & Process Optimization 
+	\end{longtable}	
+	
+Ciascun attributo consiste di una o più pratiche generiche che aiutano nella fase di valutazione. Inoltre, ciascun attributo è valutato secondo una scala a quattro valori (N-P-L-F):
+
+	\rowcolors{2}{lightRowColor}{darkRowColor}
+	\begin{longtable}{ 
+		>{\centering}p{0.4\textwidth} 
+		>{\centering\arraybackslash}p{0.5\textwidth}}
+		\caption {Scala di valutazione degli attributi dello standard ISO/IEC 15504}		\\
+		\coloredTableHead
+		\textbf{\color{white}Stato} &
+		\textbf{\color{white}Range di valori corrispondenti}
+		\tabularnewline  
+		\endhead
+		% Contenuto della tabella
+		Not achieved & 0 - 15\% \\
+		Partially achieved & >15 - 50\%  \\
+		Largely achieved & >50 - 85\% \\
+		Fully achieved & >85 - 100\% \\
+	\end{longtable}	
+
+La valutazione viene fatta sulla base di evidenze oggettive acquisite durante la fase di assessment. La figura di seguito mostra la relazione tra livello di maturità, attributi di misurazione e relativa scala di valutazione nell'attività di valutazione della qualità di processo.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{./res/img/ISO_IEC_15504.png}
+		\caption[Modello ISO/IEC 15504]{SPICE Capability (fonte: Janos Ivanyos, \texttt{researchgate.net})}
+\end{figure}
+
+\subsection{Ciclo di Deming}
+
 \subsection{ISO/IEC 9126}
-ISO/IEC 9126 è lo standard generale usato per valutare la qualità del software. Esso è articolato in quattro parti:
+ISO/IEC 9126 è lo standard internazionale usato per valutare la qualità del software. Esso è articolato in quattro parti:
 \begin{enumerate}
 	\item{Modello per la qualità del software, che a sua volta è suddiviso in:}
 	\begin{itemize}
@@ -95,7 +188,3 @@ ISO/IEC 9126 è lo standard generale usato per valutare la qualità del software
 	
 	\subsubsection{Metrica per la qualità in uso}
 	Si tratta di metriche applicabili solo al prodotto finito ed in uso in condizioni reali. La qualità in uso viene raggiunta solo se è stato raggiunto sia il livello di qualità interna che di qualità esterna.
-
-\subsection{ISO/IEC 15504}
-
-\subsection{Ciclo di Deming}
