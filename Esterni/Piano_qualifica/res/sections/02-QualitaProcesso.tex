@@ -5,7 +5,7 @@ Lo scopo della seguente sezione è quello di illustrare le metriche adottate per
 
 \subsection{Processi Primari}
 
-	\subsubsection{Processi di sviluppo}
+	\subsubsection{Processo di Sviluppo}
 	
 		\subsubsubsection{Analisi dei Requisiti}
 		Le metriche usate per l'attività di analisi sono le seguenti:
@@ -89,8 +89,40 @@ Lo scopo della seguente sezione è quello di illustrare le metriche adottate per
 
 \subsection{Processi di Supporto}
 
-	\subsubsubsection{Pianificazione}
-	Le metriche usate per l'attività di pianificazione sono le seguenti:
+	\subsubsubsection{Documentazione}
+	Le metriche usate per l'attività di documentazione sono le seguenti:
+	
+		\subsubsubsection*{Indice di Gulpease}
+		È un indice che valuta la leggibilità del testo. È tarato sulla lingua italiana e considera la lunghezza delle parole, il numero delle frasi ed il numero delle parole totali. Il valore risultante è compreso tra 0 e 100, dove un valore di indice più alto corrisponde ad un indice di leggibilità più semplice.
+		 \begin{itemize}
+			\item{Misurazione: Gulpease = 89 + $\displaystyle\frac{300 \cdot{} (\mbox{numero delle frasi}) - 10 \cdot{} (\mbox{numero delle lettere})}{\mbox{numero delle parole}}$;}
+			\item{Valore minimo accettabile: $\geq$ 40;}
+			\item{Valore preferibile: $\geq$ 60.}
+		\end{itemize}
+
+		\subsubsubsection*{Correttezza ortografica}
+		Tutti i documenti devono essere privi di errori grammaticali od ortografici.
+		\begin{itemize}
+			\item{Misurazione: numero intero che indica il numero di errori presenti nel testo;}
+			\item{Valore minimo accettabile: 0;}
+			\item{Valore preferibile: 0.}
+		\end{itemize}
+					
+	\subsubsubsection{Verifica}
+	Le metriche usate per l'attività di verifica sono le seguenti:
+	
+		\subsubsubsection*{Code Coverage}
+		 È la percentuale di linee di codice che sono state eseguite dai test dopo un’esecuzione.
+		 \begin{itemize}
+			\item{Misurazione: CC = $\displaystyle\frac{\mbox{linee di codice eseguite dal test}}{\mbox{linee di codice totali}}$;}
+			\item{Valore minimo accettabile: 80\%;}
+			\item{Valore preferibile: 100\%.}
+		\end{itemize}
+
+\subsection{Processi Organizzativi}
+
+	\subsubsubsection{Gestione Organizzativa}
+	Le metriche usate per la gestione organizzativa sono le seguenti:
 	
 		\subsubsubsection*{Budget at Completion (BAC)}
 		Equivale al budget totale allocato per il progetto.
@@ -149,38 +181,6 @@ Lo scopo della seguente sezione è quello di illustrare le metriche adottate per
 			\item{\textbf{SV negativa, CV positiva}: il progetto è in ritardo rispetto alla pianificazione ma rientra nel budget previsto;}
 			\item{\textbf{SV e CV negative}: il progetto è in ritardo rispetto alla pianificazione e ha superato il budget previsto.}
 		\end{enumerate}
-				
-	\subsubsubsection{Verifica}
-	Le metriche usate per l'attività di verifica sono le seguenti:
-	
-		\subsubsubsection*{Code Coverage}
-		 È la percentuale di linee di codice che sono state eseguite dai test dopo un’esecuzione.
-		 \begin{itemize}
-			\item{Misurazione: CC = $\displaystyle\frac{\mbox{linee di codice eseguite dal test}}{\mbox{linee di codice totali}}$;}
-			\item{Valore minimo accettabile: 80\%;}
-			\item{Valore preferibile: 100\%.}
-		\end{itemize}
-	
-	\subsubsubsection{Documentazione}
-	Le metriche usate per l'attività di documentazione sono le seguenti:
-	
-		\subsubsubsection*{Indice di Gulpease}
-		È un indice che valuta la leggibilità del testo. È tarato sulla lingua italiana e considera la lunghezza delle parole, il numero delle frasi ed il numero delle parole totali. Il valore risultante è compreso tra 0 e 100, dove un valore di indice più alto corrisponde ad un indice di leggibilità più semplice.
-		 \begin{itemize}
-			\item{Misurazione: Gulpease = 89 + $\displaystyle\frac{300 \cdot{} (\mbox{numero delle frasi}) - 10 \cdot{} (\mbox{numero delle lettere})}{\mbox{numero delle parole}}$;}
-			\item{Valore minimo accettabile: $\geq$ 40;}
-			\item{Valore preferibile: $\geq$ 60.}
-		\end{itemize}
-
-		\subsubsubsection*{Correttezza ortografica}
-		Tutti i documenti devono essere privi di errori grammaticali od ortografici.
-		\begin{itemize}
-			\item{Misurazione: numero intero che indica il numero di errori presenti nel testo;}
-			\item{Valore minimo accettabile: 0;}
-			\item{Valore preferibile: 0.}
-		\end{itemize}
-
-\subsection{Processi Organizzativi}
 
 	\subsubsubsection{Gestione della Qualità}
 	Le metriche usate per la gestione dell qualità sono le seguenti:
