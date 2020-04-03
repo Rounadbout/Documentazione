@@ -41,7 +41,23 @@
         \end{itemize}
 
 	\subsubsection{Metriche}
-	Per il processo di verifica non sono ancora state individuate delle metriche di qualità. 
+		\subsubsection*{Code coverage (CC)}
+			\begin{itemize}
+				\item{\textbf{Descrizione}}: la metrica CC indica la percentuale di righe di codice percorse durante il test rispetto alle linee di codice totali. A granularità più fine, la code coverage misura quattro aspetti: 
+					\begin{itemize}
+						\item{\textbf{statement coverage}}: percentuale di statement percorsi dai test; 
+						\item{\textbf{branch coverage}}: percentuale di diramazioni percorse dai test; 
+						\item{\textbf{function converage}}: percentuale di funzioni percorse dai test; 
+						\item{\textbf{line coverage}}: percentuale di righe di codice percorse dai test.  
+					\end{itemize} 
+				\item{\textbf{unità di misura}}: la metrica viene espressa tramite una percentuale;
+				\item{\textbf{formula: }} $ CC = \frac{\#linee\_di\_codice\_eseguite\_dal\_test}{\#linee\_di\_codice\_totali} $
+				\item{\textbf{risultato}}: il risultato è compreso tra 0.0\% e 100.0\%, in particolare: 
+					\begin{itemize}
+						\item se il risultato è pari a 0.0\%, allora non sono presenti test all'interno dell'applicativo; 
+						\item se il risultato è pari a 100.0\%, allora i test coprono in maniera completa il codice che costituisce l'applicativo. 
+					\end{itemize} 
+			\end{itemize}
 
     \subsubsection{Strumenti}
     \subsubsubsection{Verifica ortografica}
