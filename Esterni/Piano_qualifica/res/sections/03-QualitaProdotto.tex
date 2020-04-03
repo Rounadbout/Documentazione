@@ -1,8 +1,74 @@
 \section{Qualità di Prodotto}
 
 \subsection{Scopo}
+Lo scopo della seguente sezione è quello di fornire le metriche necessarie, utilizzate per valutare la qualità del prodotto con riferimento allo standard ISO/IEC 9126 che definisce e descrive le caratteristiche atte a produrre un prodotto di qualità.
 
 \subsection{Funzionalità}
+Capacità del prodotto di fornire funzioni che riescano a soddisfare i requisiti presentati nell'Analisi dei Requisiti.
+Le metriche usate sono:
+	\subsubsection{Completezza dell'implementazione}
+	La completezza del prodotto e il rispetto dei requisiti viene indicato da una percentuale.
+	\begin{itemize}
+	\item{misurazione: si calcola con la seguente formula: CI = (1-$\displaystyle\frac{\mbox{N}\ped{FNI}}{\mbox{N}\ped{FI}}*100$)
+		\begin{itemize}
+		\item{{N}\ped{FNI} : il numero di funzionalità non implementate}
+		\item{{N}\ped{FI} : il numero di funzionalità individuate dall'analisi;}
+		\end{itemize}}
+	\item {valore preferibile: 100\%;}
+	\item {valore accettabile: 100\%;}
+	\end{itemize}
+	
 \subsection{Affidabilità}
+Capacità del prodotto di mantenere prestazioni elevate anche in caso di anomalie o situazioni critiche.
+Le metriche usate sono:
+	\subsubsection{Densità errori}
+	La resistenza del prodotto a malfunzionamenti viene indicata con una percentuale.
+	\begin{itemize}
+	\item{misurazione: si calcola con la seguente formula: DE = $\displaystyle\frac{\mbox{N}\ped{ER}}{\mbox{N}\ped{TE}}*100$ 
+		\begin{itemize}
+		\item {{N}\ped{ER}: il numero di errori rilevati durante i testing} 
+		\item {{N}\ped{TE}: il numero di test eseguiti;}
+		\end{itemize}}
+	\item {valore preferibile: 0\%;}
+	\item {valore accettabile: < 10\%.}
+	\end{itemize}
+
 \subsection{Usabilità}
+Capacità del prodotto di essere di facile comprensione e utilizzo da parte degli utenti.
+Le metriche usate sono:
+	\subsubsection{Facilità di utilizzo}
+	La facilità con cui l'utente interagisce con il prodotto
+	\begin{itemize}
+	\item {misurazione: numero di passi per eseguire un'operazione desiderata}
+	\item {valore preferibile: 2;}
+	\item {valore accettabile: 5.}
+	\end{itemize}
+	\subsubsection{Facilità di apprendimento}
+	La facilità con cui l'utente riesce ad imparare ad usare le funzionalità del prodotto viene rappresentata tramite il tempo medio che serve per comprenderle.
+	\begin{itemize}
+	\item {misurazione: minuti per apprendere una procedura}
+	\item {valore preferibile: 2;}
+	\item {valore accettabile: 5.}
+	\end{itemize}
 \subsection{Manutenibilità}
+Capacità del prodotto di essere modificato, includendo correzioni, miglioramenti o adattamenti.
+Le metriche usate sono:
+	\subsubsection{Facilità di comprensione}
+	La facilità con cui è possibile cosa fa il codice può essere rappresentata dal numero di linee di commento nel codice.
+	\begin{itemize}
+	\item{misurazione: si calcola con la seguente formula: R = $\displaystyle\frac{\mbox{N}\ped{LCOM}}{\mbox{N}\ped{LCOD}}*100$ 
+		\begin{itemize}
+		\item{{N}\ped{LCOM} : le linee di commento;}
+		\item{{N}\ped{LCOD} : indica le linee di codice;}
+		\end{itemize}		
+	}
+	\item {valore preferibile: > 0.20;}
+	\item {valore accettabile: > 0.10.}
+	\end{itemize}
+	\subsubsection{Semplicità delle classi}
+	La semplicità di una classe può essere rappresentata dal numero di metodi per calsse: una classe con pochi metodi ha uno scopo ben preciso e facilmente compressibile.
+	\begin{itemize}
+	\item {misurazione: numero di metodi per classe}
+	\item {valore preferibile: < 8;}
+	\item {valore accettabile: < 15.}
+	\end{itemize}
