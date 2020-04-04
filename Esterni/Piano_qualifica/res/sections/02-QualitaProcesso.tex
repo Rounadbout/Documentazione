@@ -20,6 +20,15 @@ Lo scopo della seguente sezione è quello di illustrare le metriche adottate per
 		\subsubsubsection{Progettazione}
 		Le metriche usate per l'attività di progettazione sono le seguenti:
 		
+			\subsubsubsection*{Coupling Between Objects (CBO)}
+			È un valore intero che indica il grado di accoppiamento tra le classi di oggetti. Una classe A si dice \textit{accoppiata} ad una classe B se A usa metodi o variabili definite in B.
+		\begin{itemize}
+			\item{Misurazione: valore intero;}
+			\item{Valore minimo accettabile: 0 $\leq$ CBO $\leq$ 6;}
+			\item{Valore preferibile: 0 $\leq$ CBO $\leq$ 1.}
+		\end{itemize}
+
+		
 			\subsubsubsection*{Structural Fan-In (SFIN)}
 			È un valore intero che indica quante componenti utilizzano un dato modulo. Uno \textit{SFIN} alto sta a significare un consistente riuso della componente.
 		\begin{itemize}
@@ -38,50 +47,41 @@ Lo scopo della seguente sezione è quello di illustrare le metriche adottate per
 		
 		\subsubsubsection{Codifica}
 		Le metriche usate per l'attività di codifica sono le seguenti:
-		
-			\subsubsubsection*{Coupling Between Objects (CBO)}
-			È un valore intero che indica il grado di accoppiamento tra le classi di oggetti. Una classe A si dice \textit{accoppiata} ad una classe B se A usa metodi o variabili definite in B.
-		\begin{itemize}
-			\item{Misurazione: valore intero;}
-			\item{Valore minimo accettabile: 0 $\leq$ CBO $\leq$ 6;}
-			\item{Valore preferibile: 0 $\leq$ CBO $\leq$ 1.}
-		\end{itemize}
-			
-			\subsubsubsection*{Complessità ciclomatica}
-			È una metrica utilizzata per stimare la complessità di funzioni, moduli\ped{\textit{G}}, metodi o classi di un programma. Ciò viene fatto mediante la determinazione del numero dei cammini linearmente indipendenti attraverso il grafo di controllo di flusso. Un valore troppo elevato indica un'eccessiva complessità del codice che rende conseguentemente l'attività di manutenzione più difficile. Allo stesso tempo, un valore eccessivamente basso potrebbe essere indicatore di una scarsa efficienza dei metodi.
+					
+		\subsubsubsection*{Complessità ciclomatica}
+		È una metrica utilizzata per stimare la complessità di funzioni, moduli\ped{\textit{G}}, metodi o classi di un programma. Ciò viene fatto mediante la determinazione del numero dei cammini linearmente indipendenti attraverso il grafo di controllo di flusso.
 		\begin{itemize}
 			\item{Misurazione: valore intero;}
 			\item{Valore minimo accettabile: 1 $\leq$ complessità ciclomatica $\leq$ 15;}
 			\item{Valore preferibile: 1 $\leq$ complessità ciclomatica $\leq$ 10.}
 		\end{itemize}
 			
-			\subsubsubsection*{Rapporto linee di codice per linee di commento}
-			Indica il rapporto tra le righe di codice e le righe di commento ad esso corrispondenti, escludendo le righe vuote, al fine di stimare il livello di difficoltà di manutenibilità del codice. Un rapporto troppo basso, infatti, potrebbe essere indicatore di scarse informazioni necessarie alla comprensione del codice scritto.
+		\subsubsubsection*{Rapporto linee di codice per linee di commento}
+		Indica il rapporto tra le righe di codice e le righe di commento ad esso corrispondenti, escludendo le righe vuote, al fine di stimare il livello di difficoltà di manutenibilità del codice. 	
 		\begin{itemize}
 			\item{Misurazione: valore decimale;}
 			\item{Valore minimo accettabile: $\displaystyle\frac{\mbox{linee di codice}}{\mbox{linee di commento}} \geq$ 0.25;}
 			\item{Valore preferibile: $\displaystyle\frac{\mbox{linee di codice}}{\mbox{linee di commento}} \geq$ 0.30.}
 		\end{itemize}
 
-			\subsubsubsection*{Livello di annidamento}
-			È un valore intero che indica il livello di annidamento nei vari metodi tenendo conto della presenza di strutture di controllo annidate: un alto livello di annidamento risulta in codice complesso e di difficile manutenzione.
+		\subsubsubsection*{Livello di annidamento}
+		È un valore intero che indica il livello di annidamento nei vari metodi tenendo conto della presenza di strutture di controllo adibite a tale mansione.		
 		\begin{itemize}
 			\item{Misurazione: valore intero;}
 			\item{Valore minimo accettabile: 1 $\leq$ livello annidamento $\leq$ 7;}
 			\item{Valore preferibile: 1 $\leq$ livello annidamento $\leq$ 3.}
 		\end{itemize}
 			
-			\subsubsubsection*{Numero di parametri per metodo}
-			È un numero intero che indica il numero di parametri di un metodo. Un valore troppo elevato denota un grado di complessità eccessivamente elevato del metodo
+		\subsubsubsection*{Numero di parametri per metodo}
+		È un numero intero che indica il numero di parametri di un metodo. 
 		\begin{itemize}
 			\item{Misurazione: valore intero;}
 			\item{Valore minimo accettabile: 0 $\leq$ numero totale attributi $\leq$ 8;}
 			\item{Valore preferibile: 0 $\leq$ numero totale attributi $\leq$ 4.}
 		\end{itemize}
 			
-			\subsubsubsection*{Numero di attributi per classe}
-			È un numero intero che indica il numero totale di attributi presenti all'interno di una classe. Un valore troppo elevato denota un carico di responsabilità eccessiva per la classe, suggerendo di scomporre la stessa seguendo principi quali il \textit{Single Responsibility Principle}.
-		\begin{itemize}
+		\subsubsubsection*{Numero di attributi per classe}
+		È un numero intero che indica il numero totale di attributi presenti all'interno di una classe.				\begin{itemize}
 			\item{Misurazione: valore intero;}
 			\item{Valore minimo accettabile: 1 $\leq$ numero totale attributi $\leq$ 15;}
 			\item{Valore preferibile: 1 $\leq$ numero totale attributi $\leq$ 8.}
@@ -93,7 +93,7 @@ Lo scopo della seguente sezione è quello di illustrare le metriche adottate per
 	Le metriche usate per l'attività di documentazione sono le seguenti:
 	
 		\subsubsubsection*{Indice di Gulpease}
-		È un indice che valuta la leggibilità del testo. È tarato sulla lingua italiana e considera la lunghezza delle parole, il numero delle frasi ed il numero delle parole totali. Il valore risultante è compreso tra 0 e 100, dove un valore di indice più alto corrisponde ad un indice di leggibilità più semplice.
+		È un indice che valuta la leggibilità del testo tarato sulla lingua italiana. Il valore risultante è compreso tra 0 e 100, un valore di indice più alto corrisponde ad un indice di leggibilità più semplice.
 		 \begin{itemize}
 			\item{Misurazione: G = 89 + $\displaystyle\frac{300 \cdot{} (\mbox{numero delle frasi}) - 10 \cdot{} (\mbox{numero delle lettere})}{\mbox{numero delle parole}}$;}
 			\item{Valore minimo accettabile: $\geq$ 40;}
@@ -116,6 +116,16 @@ Lo scopo della seguente sezione è quello di illustrare le metriche adottate per
 			\item{Valore preferibile: $\geq$ 60.}
 		\end{itemize}
 
+	\subsubsubsection{Gestione della Qualità}
+	Le metriche usate per la gestione dell qualità sono le seguenti:
+	
+		\subsubsubsection*{Percentuale di metriche soddisfatte (PMS)}
+		E' un valore percentuale che indica quante metriche raggiungono soglie accettabili sul totale delle metriche considerate.
+		\begin{itemize}
+			\item{PMS = $\displaystyle\frac{\mbox{numero di metriche soddisfatte}}{\mbox{numero totale di metriche}}$}
+			\item{Valore minimo accettabile: 60\%;}
+			\item{Valore preferibile: 90\%.}
+		\end{itemize}
 					
 	\subsubsubsection{Verifica}
 	Le metriche usate per l'attività di verifica sono le seguenti:
@@ -207,14 +217,3 @@ Lo scopo della seguente sezione è quello di illustrare le metriche adottate per
 			\item{\textbf{SV negativa, CV positiva}: il progetto è in ritardo rispetto alla pianificazione ma rientra nel budget previsto;}
 			\item{\textbf{SV e CV negative}: il progetto è in ritardo rispetto alla pianificazione e ha superato il budget previsto.}
 		\end{enumerate}
-
-	\subsubsubsection{Gestione della Qualità}
-	Le metriche usate per la gestione dell qualità sono le seguenti:
-	
-		\subsubsubsection*{Percentuale di metriche soddisfatte (PMS)}
-		E' un valore percentuale che indica quante metriche raggiungono soglie accettabili sul totale delle metriche considerate. Un valore percentuale basso potrebbe essere indicatore di scarsa qualità, incorrettezza di calcolo o scelta metriche poco adeguate.
-		\begin{itemize}
-			\item{PMS = $\displaystyle\frac{\mbox{numero di metriche soddisfatte}}{\mbox{numero totale di metriche}}$}
-			\item{Valore minimo accettabile: 60\%;}
-			\item{Valore preferibile: 90\%.}
-		\end{itemize}
