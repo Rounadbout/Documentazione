@@ -140,7 +140,8 @@
 			
 		\item \textbf{Design pattern}\ped{\textit{G}}: vengono esplicitati chiaramente i design pattern\ped{\textit{G}} utilizzati per l'architettura, accompagnandoli con una descrizione ed un diagramma, così da esporne il significato e la struttura; 
 		\item \textbf{Tracciamento delle componenti}: viene rappresentata la relazione tra ogni requisito ed il componente che lo soddisfa. Dimostrando quindi concretamente la loro completa esaustione;
-		\item \textbf{Test di integrazione}: vengono definite delle classi di verifica, per accertarsi che ogni componente del sistema funzioni come previsto.
+		\item \textbf{Test di integrazione}: vengono definite delle classi di verifica, per accertarsi che ogni componente del sistema funzioni come previsto; 
+		\item \textbf{Tecnologie utilizzate}: devono essere descritte le tecnologie utilizzate, specificandone l'utilizzo nel progetto e le motivazioni per cui sono state scelte. 
   \end{itemize}
   
   \subsubsubsection*{Product Baseline}
@@ -275,7 +276,7 @@
     		\item{\textbf{basso accoppiamento}}: composta da parti distinte che devono essere indipendenti tra di loro, in modo che l'architettura possa subire modifiche a costi contenuti;   
     	\end{itemize}
   
-    	\subsubsubsection{Codifica}
+   	\subsubsubsection{Codifica}
     Questa fase ha come scopo normare l'effettiva realizzazione del prodotto software richiesto. In questa fase si concretizza la soluzione architetturale elaborata durante la fase di progettazione, mediante la programmazione vera e propria.    
     Gli sviluppatori, durante la fase di implementazione, dovranno attenersi alle norme di programmazione stabilite in maniera tale da: 
     \begin{itemize}
@@ -304,8 +305,86 @@
 	
 \subsubsection{Metriche} 
 	\subsubsubsection{Metriche di analisi dei requisiti}
+	\subsubsection*{Percentuale dei Requisiti Obbligatori Soddisfatti}
+		\begin{itemize}
+			\item{\textbf{Descrizione}}: la metrica indica la percentuale di requisiti obbligatori soddisfatti sui requisiti totali; 
+			\item{\textbf{unità di misura}}: la metrica viene espressa in percentuale; 
+			\item{\textbf{formula}}: $ PROS = \frac{\#requisiti\_obbligatori\_soddisfatti}{\#requisti\_obbligatori\_totali}$; 
+			\item{\textbf{risultato}}: il risultato è compreso tra 0\% e 100\%, in particolare: 
+				\begin{itemize}
+					\item una valore inferiore al 100\%, indica la presenza di alcuni requisiti obbligatori non soddisfatti; 
+					\item una valore pari al 100\%, indica che tutti i requisiti obbligatori presentati sono stati soddisfatti.  
+				\end{itemize} 
+		\end{itemize}
 	\subsubsubsection{Metriche di progettazione}
-	\subsubsubsection{Metriche di codifica}                
+		\subsubsection*{Structural Fan-In (SFIN)}
+		\begin{itemize}
+			\item{\textbf{Descrizione}}: la metrica SFIN indica il numero di componenti che utilizzano un dato modulo; 
+			\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero; 
+			\item{\textbf{risultato}}: un valore elevato di SFIN è indice di un riutilizzo consistente dellla componente considerata; 
+		\end{itemize}
+	
+		\subsubsection*{Structural Fan-Out (SFOUT)}
+		\begin{itemize}
+			\item{\textbf{Descrizione}}: la metrica SFOUT indica il numero di componenti utilizzate dal modulo considerato; 
+			\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero;  
+			\item{\textbf{risultato}}: un valore elevato di SFOUT è indice di un eccessivo livello di accoppiamento della componente; 
+		\end{itemize}
+	
+		\subsubsection*{Coupling Between Objects (CBO)}
+		\begin{itemize}
+			\item{\textbf{Descrizione}}: la metrica CBO indica il numero di classi accoppiate ad una data classe; 
+			\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero;  
+			\item{\textbf{risultato}}: in linea generale si può dire che: 
+				\begin{itemize}
+					\item un valore pari a 0 indica che la classe non ha alcuna relazione con nessun'altra classe presente all'interno del sistema; 
+					\item un valore compreso tra 1 e 4 indica che la classe presenta un basso livello di accoppiamento; 
+					\item un numero maggiore di 4 indica che la classe presenta un livello medio/alto di accoppiamento, che potrebbe complicarne il test e la manutenzione. 
+				\end{itemize}
+		\end{itemize}
+	
+	\subsubsubsection{Metriche di codifica}    
+	\subsubsection*{Complessità ciclomatica}
+	\begin{itemize}
+		\item{\textbf{Descrizione}}: la metrica è indice della complessità di una porzione di codice;  indica il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso; 
+		\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero; 
+		\item{\textbf{formula}}: $ v(G) = e - n + 2p $, dove: 
+			\begin{itemize}
+				\item{v(G)}: complessità ciclomatica del grafo G; 
+				\item{e}: numero di archi del grafo; 
+				\item{n}: numero di nodi del grafo; 
+				\item{p}: numero di componenti connesse. 
+			\end{itemize} 
+		\item{\textbf{risultato}}: ; 
+	\end{itemize}
+
+	\subsubsection*{Rapporto linee di codice per linee di commento (RCC)}
+	\begin{itemize}
+		\item{\textbf{Descrizione}}: la metrica indica il rapporto tra il numero di linee di codice totali, escluse quelle vuote, e il numero di linee di commento presenti; 
+		\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero decimale;  
+		\item{\textbf{formula}}: $ RCC = \frac{\#linee\_totali}{\#linee\_di\_commento} $. 
+	\end{itemize}
+
+	\subsubsection*{Livello di annidamento}
+	\begin{itemize}
+		\item{\textbf{Descrizione}}: ; 
+		\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero; 
+		\item{\textbf{risultato}}: ; 
+	\end{itemize}
+
+	\subsubsection*{Numero di parametri per metodo}
+	\begin{itemize}
+		\item{\textbf{Descrizione}}: indica il numero di parametri del metodo considerato; 
+		\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero;  
+		\item{\textbf{risultato}}: un numero eccessivo di parametri è indice di un'elevata complessità del metodo; 
+	\end{itemize}
+
+	\subsubsection*{Numero di attributi per classe}
+	\begin{itemize}
+		\item{\textbf{Descrizione}}: indica il numero totale di attributi presenti all'interno della classe; 
+		\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero; 
+		\item{\textbf{risultato}}: un numero elevato di attributi denota un carico di responsabilità eccessivo per la classe; 
+	\end{itemize}            
 
 \subsubsection{Strumenti}
 Di seguito vengono elencati gli strumenti usati dal gruppo durante il processo di sviluppo:
@@ -332,4 +411,21 @@ Di seguito vengono elencati gli strumenti usati dal gruppo durante il processo d
 	\begin{center}
 		\url{https://code.visualstudio.com/}
 	\end{center}
-	
+
+	\subsubsubsection{Solidity}
+	Linguaggio utilizzato per lo sviluppo di smart contract.
+	\begin{center}
+		\url{https://solidity.readthedocs.io/en/v0.6.4/}
+	\end{center}
+
+	\subsubsubsection{Truffle}
+	Framework per lo sviluppo, test e gestione di smart contract. Permette la scrittura di test automatici sia in JavaScript che in Solidity. 
+	\begin{center}
+		\url{https://www.trufflesuite.com/truffle}
+	\end{center}
+
+	\subsubsubsection{Ropsten}
+	Testnet pubblica usata per test e sperimentazioni su rete Ethereum. Permette di essere utilizzata senza preoccuparsi dei costi e senza possedere monete di reale valore. 
+	\begin{center}
+		\url{https://ropsten.etherscan.io/}
+	\end{center}
