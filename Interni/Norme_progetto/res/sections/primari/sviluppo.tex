@@ -309,19 +309,32 @@
 		\begin{itemize}
 			\item{\textbf{Descrizione}}: la metrica indica la percentuale di requisiti obbligatori soddisfatti sui requisiti totali; 
 			\item{\textbf{unità di misura}}: la metrica viene espressa in percentuale; 
-			\item{\textbf{formula}}: $ PROS = \frac{\#requisiti\_obbligatori\_soddisfatti}{\#requisti\_obbligatori\_totali}$; 
+			\item{\textbf{formula}}: $ PROS = \displaystyle\frac{\#requisiti\_obbligatori\_soddisfatti}{\#requisti\_obbligatori\_totali}$; 
 			\item{\textbf{risultato}}: il risultato è compreso tra 0\% e 100\%, in particolare: 
 				\begin{itemize}
-					\item una valore inferiore al 100\%, indica la presenza di alcuni requisiti obbligatori non soddisfatti; 
+					\item una valore inferiore al 100\%, indica la presenza di alcuni requisiti obbligatori non ancora soddisfatti; 
 					\item una valore pari al 100\%, indica che tutti i requisiti obbligatori presentati sono stati soddisfatti.  
 				\end{itemize} 
 		\end{itemize}
+
 	\subsubsubsection{Metriche di progettazione}
+		\subsubsection*{Coupling Between Objects (CBO)}
+		\begin{itemize}
+			\item{\textbf{Descrizione}}: la metrica CBO indica il numero di classi accoppiate ad una data classe; 
+			\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero;  
+			\item{\textbf{risultato}}: in linea generale si può dire che: 
+			\begin{itemize}
+				\item un valore pari a 0 indica che la classe non ha alcuna relazione con nessun'altra classe presente all'interno del sistema; 
+				\item un valore compreso tra 1 e 4 indica che la classe presenta un basso livello di accoppiamento; 
+				\item un numero maggiore di 4 indica che la classe presenta un livello medio/alto di accoppiamento, che potrebbe complicarne il test e la manutenzione. 
+			\end{itemize}
+		\end{itemize}
+	
 		\subsubsection*{Structural Fan-In (SFIN)}
 		\begin{itemize}
 			\item{\textbf{Descrizione}}: la metrica SFIN indica il numero di componenti che utilizzano un dato modulo; 
 			\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero; 
-			\item{\textbf{risultato}}: un valore elevato di SFIN è indice di un riutilizzo consistente dellla componente considerata; 
+			\item{\textbf{risultato}}: un valore elevato di SFIN è indice di un riutilizzo consistente della componente considerata; 
 		\end{itemize}
 	
 		\subsubsection*{Structural Fan-Out (SFOUT)}
@@ -330,23 +343,11 @@
 			\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero;  
 			\item{\textbf{risultato}}: un valore elevato di SFOUT è indice di un eccessivo livello di accoppiamento della componente; 
 		\end{itemize}
-	
-		\subsubsection*{Coupling Between Objects (CBO)}
-		\begin{itemize}
-			\item{\textbf{Descrizione}}: la metrica CBO indica il numero di classi accoppiate ad una data classe; 
-			\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero;  
-			\item{\textbf{risultato}}: in linea generale si può dire che: 
-				\begin{itemize}
-					\item un valore pari a 0 indica che la classe non ha alcuna relazione con nessun'altra classe presente all'interno del sistema; 
-					\item un valore compreso tra 1 e 4 indica che la classe presenta un basso livello di accoppiamento; 
-					\item un numero maggiore di 4 indica che la classe presenta un livello medio/alto di accoppiamento, che potrebbe complicarne il test e la manutenzione. 
-				\end{itemize}
-		\end{itemize}
-	
+		
 	\subsubsubsection{Metriche di codifica}    
 	\subsubsection*{Complessità ciclomatica}
 	\begin{itemize}
-		\item{\textbf{Descrizione}}: la metrica è indice della complessità di una porzione di codice;  indica il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso; 
+		\item{\textbf{Descrizione}}: la metrica è indice della complessità di una porzione di codice;  in particolare rappresenta il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso; 
 		\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero; 
 		\item{\textbf{formula}}: $ v(G) = e - n + 2p $, dove: 
 			\begin{itemize}
@@ -355,35 +356,40 @@
 				\item{n}: numero di nodi del grafo; 
 				\item{p}: numero di componenti connesse. 
 			\end{itemize} 
-		\item{\textbf{risultato}}: ; 
+		\item{\textbf{risultato}}:
+			\begin{itemize}
+				\item un valore troppo elevato del risultato indica un'eccessiva complessità del codice, possibile causa di difficile manutenzione; 
+				\item un valore eccessivamente basso può indicare una scarsa efficienza dei metodi considerati. 
+			\end{itemize} 
 	\end{itemize}
 
 	\subsubsection*{Rapporto linee di codice per linee di commento (RCC)}
 	\begin{itemize}
 		\item{\textbf{Descrizione}}: la metrica indica il rapporto tra il numero di linee di codice totali, escluse quelle vuote, e il numero di linee di commento presenti; 
 		\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero decimale;  
-		\item{\textbf{formula}}: $ RCC = \frac{\#linee\_totali}{\#linee\_di\_commento} $. 
+		\item{\textbf{formula}}: $ RCC = \displaystyle\frac{\#linee\_totali}{\#linee\_di\_commento} $. 
+		\item{\textbf{risultato}}: un valore troppo basso del risultato è indice di scarse infromazioni necessarie alla comprensione del codice scritto. 
 	\end{itemize}
 
 	\subsubsection*{Livello di annidamento}
 	\begin{itemize}
-		\item{\textbf{Descrizione}}: ; 
+		\item{\textbf{Descrizione}}: la metrica indica il livello di annidamento dei metodi; 
 		\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero; 
-		\item{\textbf{risultato}}: ; 
+		\item{\textbf{risultato}}: un alto valore del risultato indica un eccessivo livello di annidamento dei metodi, che risulteranno essere complessi e di difficile manutenzione; 
 	\end{itemize}
 
 	\subsubsection*{Numero di parametri per metodo}
 	\begin{itemize}
 		\item{\textbf{Descrizione}}: indica il numero di parametri del metodo considerato; 
 		\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero;  
-		\item{\textbf{risultato}}: un numero eccessivo di parametri è indice di un'elevata complessità del metodo; 
+		\item{\textbf{risultato}}: un numero eccessivo di parametri è indice di un'elevata complessità del metodo.
 	\end{itemize}
 
 	\subsubsection*{Numero di attributi per classe}
 	\begin{itemize}
 		\item{\textbf{Descrizione}}: indica il numero totale di attributi presenti all'interno della classe; 
 		\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero; 
-		\item{\textbf{risultato}}: un numero elevato di attributi denota un carico di responsabilità eccessivo per la classe; 
+		\item{\textbf{risultato}}: un numero elevato di attributi denota un carico di responsabilità eccessivo per la classe. In questo caso si consiglia di scomporre la classe seguendo principi quali il \textit{Single Responsability Principle}. 
 	\end{itemize}            
 
 \subsubsection{Strumenti}
@@ -399,6 +405,11 @@ Di seguito vengono elencati gli strumenti usati dal gruppo durante il processo d
 	\begin{center}
 		\url{https://app.diagrams.net/}
 	\end{center}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.62]{./res/img/draw.png}
+		\caption{Schermata principale draw.io}
+	\end{figure}
 	
 	\subsubsubsection{Visual Studio Code}
 	Visual Studio Code è l'IDE scelto per la parte di codifica, in particolare tale scelta è dovuta a: 
