@@ -10,10 +10,32 @@
       	\item risorse, responsibilità e gestione delle scadenze legate alla pianificazione;
       	\item procedure standardizzate per l'inoltro della documentazione risultante a Proponente\ped{\textit{G}} e Committente\ped{\textit{G}}.
       \end{itemize}
-      \subsubsubsection{Test di sistema}
-        Già precedentemente descritti nella sezione \textsection3.4.2.2.
-      \subsubsubsection{Test di accettazione}
-        Nel processo di Validazione viene eseguito il Test di accettazione (detto anche collaudo), ovvero un test molto simile a quello di sistema, ma eseguito in collaborazione con il Committente\ped{\textit{G}}. Questo test, nello specifico, è mirato a accertare e confermare il soddisfacimento dei requisiti specificati nel capitolato\ped{\textit{G}} e analizzati nel documento "\AdR{}".
+      \subsubsubsection{Test di sistema [TS]}
+      Già precedentemente descritti nella sezione \textsection3.4.2.2.
+      \subsubsubsection{Test di accettazione [TA]}
+      Nel processo di Validazione viene eseguito il Test di accettazione (detto anche collaudo), ovvero un test molto simile a quello di sistema, ma eseguito in collaborazione con il Committente\ped{\textit{G}}. Questo test, nello specifico, è mirato a accertare e confermare il soddisfacimento dei requisiti specificati nel capitolato\ped{\textit{G}} e analizzati nel documento "\AdR{}". Tali test vengono rappresentati con la seguente struttura: \\
+      \begin{center}
+      	\textbf{TA[Importanza][Tipologia][Codice].}
+      \end{center}     
+      Dove:
+      \begin{itemize}
+      	\item{\textbf{Importanza}: indica il grado di importanza del requisito sotto test ai fini del progetto. Può assumere i valori:}
+      	\begin{itemize}
+      		\item{\textbf{1}: per un requisito obbligatorio;}
+      		\item{\textbf{2}: per un requisito desiderabile;}
+      		\item{\textbf{3}: per un requisito opzionale.}
+      	\end{itemize}
+      	
+      	\item{\textbf{Tipologia}: rappresenta la classe a cui appartiene il requisito sotto test. Può assumere i valori:}
+      	\begin{itemize}
+      		\item{\textbf{F}: funzionale;}
+      		\item{\textbf{P}: prestazionale;}
+      		\item{\textbf{Q}: qualitativo;}
+      		\item{\textbf{V}: vincolo.}
+      	\end{itemize}
+      	
+      	\item{\textbf{Codice}: identificatore univoco del requisito sotto test}.
+      \end{itemize}
     \subsubsection{Metriche}
     Un'accurata descrizione delle metriche di qualità implementate dal gruppo è presente all'interno del documento \PdQ{} 1.0.0.
     \subsubsection{Strumenti}
