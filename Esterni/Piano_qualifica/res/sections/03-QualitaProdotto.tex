@@ -1,74 +1,67 @@
 \section{Qualità di Prodotto}
-
 \subsection{Scopo}
-Lo scopo della seguente sezione è quello di fornire le metriche necessarie, utilizzate per valutare la qualità del prodotto con riferimento allo standard ISO/IEC 9126 che definisce e descrive le caratteristiche atte a produrre un prodotto di qualità.
+Lo scopo della seguente sezione è quello di fornire le metriche utilizzate dal team \Gruppo{} per valutare la qualità del prodotto risultante dal progetto didattico. Lo standard di riferimento per tale valutazione è ISO/IEC 9126, che definisce e descrive le caratteristiche atte a produrre un prodotto di qualità.
 
 \subsection{Funzionalità}
-Capacità del prodotto di fornire funzioni che riescano a soddisfare i requisiti presentati nell'Analisi dei Requisiti.
-Le metriche usate sono:
-	\subsubsection{Completezza dell'implementazione}
-	La completezza del prodotto e il rispetto dei requisiti viene indicato da una percentuale.
+E' la capacità del prodotto di fornire funzioni che riescano a soddisfare i requisiti presentati nell'\AdR.
+Le metriche usate per valutare tale capacità sono:
+
+	\subsubsection*{Completezza dell'implementazione}
+	E' un valore percentuale che indica la completezza del prodotto in funzione del rispetto dei requisiti.
 	\begin{itemize}
-	\item{misurazione: si calcola con la seguente formula: CI = (1-$\displaystyle\frac{\mbox{N}\ped{FNI}}{\mbox{N}\ped{FI}}*100$)
-		\begin{itemize}
-		\item{{N}\ped{FNI} : il numero di funzionalità non implementate}
-		\item{{N}\ped{FI} : il numero di funzionalità individuate dall'analisi;}
-		\end{itemize}}
-	\item {valore preferibile: 100\%;}
-	\item {valore accettabile: 100\%;}
+	\item{misurazione: CI = (1-$\displaystyle\frac{\mbox{numero di funzionalità non implementate}}{\mbox{numero di funzionalità individuate dall'\AdR}}*100$)}
+	\item {valore minimo accettabile: 100\%;}
+	\item {valore preferibile: 100\%.}
 	\end{itemize}
 	
 \subsection{Affidabilità}
-Capacità del prodotto di mantenere prestazioni elevate anche in caso di anomalie o situazioni critiche.
-Le metriche usate sono:
-	\subsubsection{Densità errori}
-	La resistenza del prodotto a malfunzionamenti viene indicata con una percentuale.
+E' la capacità del prodotto di mantenere prestazioni elevate anche in caso di anomalie o situazioni critiche.
+Le metriche usate per valutare tale capacità sono:
+
+	\subsubsection*{Densità errori}
+	E' un valore percentuale che indica la resistenza del prodotto a fronte di malfunzionamenti.
 	\begin{itemize}
-	\item{misurazione: si calcola con la seguente formula: DE = $\displaystyle\frac{\mbox{N}\ped{ER}}{\mbox{N}\ped{TE}}*100$ 
-		\begin{itemize}
-		\item {{N}\ped{ER}: il numero di errori rilevati durante i testing} 
-		\item {{N}\ped{TE}: il numero di test eseguiti;}
-		\end{itemize}}
-	\item {valore preferibile: 0\%;}
-	\item {valore accettabile: < 10\%.}
+		\item{misurazione: DE = $\displaystyle\frac{\mbox{numero di errori rilevati durante i test}}{\mbox{numero di test eseguiti}}*100$}
+		\item {valore minimo accettabile: < 10\%;}
+		\item {valore preferibile: 0\%.}
 	\end{itemize}
 
 \subsection{Usabilità}
-Capacità del prodotto di essere di facile comprensione e utilizzo da parte degli utenti.
-Le metriche usate sono:
-	\subsubsection{Facilità di utilizzo}
-	La facilità con cui l'utente interagisce con il prodotto
+E' la capacità del prodotto di essere capito, appreso ed usato dall'utente in tempi ragionevoli.
+Le metriche usate per valutare tale capacità sono:
+
+	\subsubsection*{Facilità di utilizzo}
+	E' un valore intero che indica la facilità con cui l'utente interagisce con il prodotto. Viene misurato mediante il numero di passi che l'utente deve eseguire per portare a termine un'operazione.
 	\begin{itemize}
-	\item {misurazione: numero di passi per eseguire un'operazione desiderata}
-	\item {valore preferibile: 2;}
-	\item {valore accettabile: 5.}
-	\end{itemize}
-	\subsubsection{Facilità di apprendimento}
-	La facilità con cui l'utente riesce ad imparare ad usare le funzionalità del prodotto viene rappresentata tramite il tempo medio che serve per comprenderle.
+		\item {misurazione: numero intero;}
+		\item {valore minimo accettabile: 5;}
+		\item {valore preferibile: 2.}
+		\end{itemize}
+		
+	\subsubsection*{Facilità di apprendimento}
+	E' un numero intero che indica la facilità con cui l'utente riesce ad apprendere ed utilizzare le funzionalità del prodotto. Viene rappresentata tramite il tempo in minuti che serve per comprenderle. La facilità di apprendimento del prodotto è data dalla media della facilità di apprendimento delle varie funzionalità.
 	\begin{itemize}
-	\item {misurazione: minuti per apprendere una procedura}
-	\item {valore preferibile: 2;}
-	\item {valore accettabile: 5.}
+		\item {misurazione: numero intero;}
+		\item {valore minimo accettabile: 5;}
+		\item {valore preferibile: 2.}
 	\end{itemize}
+	
 \subsection{Manutenibilità}
-Capacità del prodotto di essere modificato, includendo correzioni, miglioramenti o adattamenti.
-Le metriche usate sono:
-	\subsubsection{Facilità di comprensione}
-	La facilità con cui è possibile cosa fa il codice può essere rappresentata dal numero di linee di commento nel codice.
+E' la capacità del prodotto di essere modificato includendo correzioni, miglioramenti od adattamenti. 
+Le metriche usate per valutare tale capacità sono:
+
+	\subsubsection*{Facilità di comprensione}
+	E' un valore percentuale che determina la facilità di comprensione del codice. Corrisponde al rapporto tra il numero di linee di commento e il numero di linee di codice.
 	\begin{itemize}
-	\item{misurazione: si calcola con la seguente formula: R = $\displaystyle\frac{\mbox{N}\ped{LCOM}}{\mbox{N}\ped{LCOD}}*100$ 
-		\begin{itemize}
-		\item{{N}\ped{LCOM} : le linee di commento;}
-		\item{{N}\ped{LCOD} : indica le linee di codice;}
-		\end{itemize}		
-	}
-	\item {valore preferibile: > 0.20;}
-	\item {valore accettabile: > 0.10.}
+		\item{misurazione: R = $\displaystyle\frac{\mbox{linee di commento}}{\mbox{linee di codice}}*100$}
+		\item {valore minimo accettabile: 10\%.}
+		\item {valore preferibile: 20\%;}
 	\end{itemize}
-	\subsubsection{Semplicità delle classi}
-	La semplicità di una classe può essere rappresentata dal numero di metodi per calsse: una classe con pochi metodi ha uno scopo ben preciso e facilmente compressibile.
-	\begin{itemize}
-	\item {misurazione: numero di metodi per classe}
-	\item {valore preferibile: < 8;}
-	\item {valore accettabile: < 15.}
+	
+	\subsubsection*{Semplicità delle classi}
+	E' un valore intero che indica il numero di metodi presenti in una classe. Viene usato al fine di avere classi che hanno uno scopo ben preciso e che seguono il principio del \textit{Single Responsibility Principle}.
+		\begin{itemize}
+			\item {misurazione: numero intero;}
+			\item {valore minimo accettabile: < 10.}
+			\item {valore preferibile: < 6;}
 	\end{itemize}
