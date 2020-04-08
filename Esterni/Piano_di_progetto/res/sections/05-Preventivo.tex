@@ -9,7 +9,7 @@ La suddivisione oraria viene fatta rispettando le seguenti regole:
 	\item Non ci dovranno situazioni nelle quali un Verificatore debba verificare il proprio lavoro.
 \end{itemize}
 
-Per semplificare la lettura delle tabelle seguenti verranno utilizzate le seguenti sigle per identificare i ruoli: 
+Per semplificare la lettura delle tabelle seguenti verranno utilizzate le seguenti sigle per identificare i ruoli:
 \begin{itemize}
 	\item \textbf{Rp}: Responsabile di Progetto;
 	\item \textbf{As}: Amministratore;
@@ -25,30 +25,30 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 \subsection{Analisi}
 	\subsubsection{Prospetto orario}
 		Distribuzione delle ore per ciascun ruolo nel periodo di Analisi:
-		
+
 		\rowcolors{2}{lightRowColor}{darkRowColor}
-		\begin{longtable}{ 
-			>{\centering}p{0.25\textwidth} 
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
 			>{\centering}p{0.05\textwidth}
-			>{\centering}p{0.05\textwidth} 
-			>{\centering}p{0.05\textwidth} 
 			>{\centering}p{0.05\textwidth}
-			>{\centering}p{0.05\textwidth} 
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
 			>{\centering}p{0.05\textwidth}
 			>{\centering\arraybackslash}p{0.15\textwidth} }
-			
+
 			\coloredTableHead
-			\textbf{\color{white}Nome} & 
-			\textbf{\color{white}Rp} & 
-			\textbf{\color{white}As} & 
+			\textbf{\color{white}Nome} &
+			\textbf{\color{white}Rp} &
+			\textbf{\color{white}As} &
 			\textbf{\color{white}An} &
 			\textbf{\color{white}Pt} &
 			\textbf{\color{white}Pr} &
 			\textbf{\color{white}Vf} &
 			\textbf{\color{white}Totale}
-			\tabularnewline  
+			\tabularnewline
 			\endhead
-			
+
 			% Contenuto della tabella
 			% Nome & Rp & As & An & Pt & Pr & Vf & Totale \\
 			\VB & 10 & 20 & -  & -  & - & -  & 30 \\
@@ -60,11 +60,11 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			\AS & -  & 5  & -  & -  & - & 25 & 30 \\
 			\AZ & -  & -  & 30 & -  & - & 5  & 35 \\
 			\textbf{Ore totali per ruolo} & 30 & 70 & 60 & 20 & - & 70 & 250 \\
-			
-			\caption {Suddivisione oraria del periodo di Analisi}	\\
-			
+
+			\rowcolor{white}\caption{Suddivisione oraria del periodo di Analisi}	\\
+
 		\end{longtable}
-		
+
 		% Grafico
 		Rappresentazione grafica della suddivisione oraria:
 		\begin{figure}[h]
@@ -72,24 +72,24 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			\includegraphics[width=0.7\textwidth]{./res/img/analisi_po.png}
 			\caption{Suddivisione oraria del periodo di Analisi}
 		\end{figure}
-	
-	\newpage		
+
+	\newpage
 	\subsubsection{Prospetto economico}
 		Totale delle ore e costo per ciascun ruolo nel periodo di Analisi:
-		
+
 		\rowcolors{2}{lightRowColor}{darkRowColor}
-		\begin{longtable}{ 
-			>{\centering}p{0.25\textwidth} 
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
 			>{\centering}p{0.05\textwidth}
 			>{\centering\arraybackslash}p{0.15\textwidth} }
-			
+
 			\coloredTableHead
-			\textbf{\color{white}Ruolo} & 
-			\textbf{\color{white}Ore} & 
+			\textbf{\color{white}Ruolo} &
+			\textbf{\color{white}Ore} &
 			\textbf{\color{white}Costo in \euro{}}
-			\tabularnewline  
+			\tabularnewline
 			\endhead
-			
+
 			% Contenuto della tabella
 			% Ruolo & Ore & Costo\\
 			Respondabile    & 30  & 900,00 \\
@@ -99,11 +99,11 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			Programmatore   & -   & - \\
 			Verificatore    & 70  & 1.050,00 \\
 			\textbf{Totale} & 250 & 5.290,00 \\
-			
-			\caption {Prospetto dei costi per il periodo di Analisi}	\\
-			
+
+			\rowcolor{white}\caption{Prospetto dei costi per il periodo di Analisi}	\\
+
 		\end{longtable}
-		
+
 		% Grafico
 		Rappresentazione grafica della distribuzione dei ruoli:
 		\begin{figure}[h]
@@ -112,34 +112,34 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			\caption{Suddivisione dei ruoli nel periodo di Analisi}
 		\end{figure}
 
-\newpage			
+\newpage
 \subsection{Consolidamento dei requisiti}
 	\subsubsection{Prospetto orario}
 		Distribuzione delle ore per ciascun ruolo nel periodo di Consolidamento dei requisiti:
-		
+
 		\rowcolors{2}{lightRowColor}{darkRowColor}
-		\begin{longtable}{ 
-			>{\centering}p{0.25\textwidth} 
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
 			>{\centering}p{0.05\textwidth}
-			>{\centering}p{0.05\textwidth} 
-			>{\centering}p{0.05\textwidth} 
 			>{\centering}p{0.05\textwidth}
-			>{\centering}p{0.05\textwidth} 
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
 			>{\centering}p{0.05\textwidth}
 			>{\centering\arraybackslash}p{0.15\textwidth} }
-			
+
 			\coloredTableHead
-			\textbf{\color{white}Nome} & 
-			\textbf{\color{white}Rp} & 
-			\textbf{\color{white}As} & 
+			\textbf{\color{white}Nome} &
+			\textbf{\color{white}Rp} &
+			\textbf{\color{white}As} &
 			\textbf{\color{white}An} &
 			\textbf{\color{white}Pt} &
 			\textbf{\color{white}Pr} &
 			\textbf{\color{white}Vf} &
 			\textbf{\color{white}Totale}
-			\tabularnewline  
+			\tabularnewline
 			\endhead
-			
+
 			% Contenuto della tabella
 			% Nome & Rp & As & An & Pt & Pr & Vf & Totale \\
 			\VB & - & - & 3 & - & - & 2 & 5 \\
@@ -151,11 +151,11 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			\AS & - & - & 2 & - & - & 5 & 5 \\
 			\AZ & - & 3 & - & - & - & - & 3 \\
 			\textbf{Ore totali per ruolo} & 5 & 6 & 10 & - & - & 15 & 36 \\
-			
-			\caption {Suddivisione oraria del periodo di Consolidamento dei requisiti} \\			
-			
+
+			\rowcolor{white}\caption {Suddivisione oraria del periodo di Consolidamento dei requisiti} \\
+
 		\end{longtable}
-		
+
 		% Grafico
 		Rappresentazione grafica della suddivisione oraria:
 		\begin{figure}[h]
@@ -163,24 +163,24 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			\includegraphics[width=0.7\textwidth]{./res/img/consolidamentoRequisiti_po.png}
 			\caption{Suddivisione oraria del periodo di Consolidamento dei requisiti}
 		\end{figure}
-		
-	\newpage	
+
+	\newpage
 	\subsubsection{Prospetto economico}
 		Totale delle ore e costo per ciascun ruolo nel periodo di Consolidamento dei requisiti:
-		
+
 		\rowcolors{2}{lightRowColor}{darkRowColor}
-		\begin{longtable}{ 
-			>{\centering}p{0.25\textwidth} 
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
 			>{\centering}p{0.05\textwidth}
 			>{\centering\arraybackslash}p{0.15\textwidth} }
-			
+
 			\coloredTableHead
-			\textbf{\color{white}Ruolo} & 
-			\textbf{\color{white}Ore} & 
+			\textbf{\color{white}Ruolo} &
+			\textbf{\color{white}Ore} &
 			\textbf{\color{white}Costo in \euro{}}
-			\tabularnewline  
+			\tabularnewline
 			\endhead
-			
+
 			% Contenuto della tabella
 			% Ruolo & Ore & Costo \\
 			Respondabile    & 5  & 150,00 \\
@@ -190,11 +190,11 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			Programmatore   & -  & - \\
 			Verificatore    & 15 & 225,00 \\
 			\textbf{Totale} & 36 & 745,00 \\
-			
-			\caption {Prospetto dei costi per il periodo di Consolidamento dei requisiti}	\\
-			
+
+			\rowcolor{white}\caption {Prospetto dei costi per il periodo di Consolidamento dei requisiti}	\\
+
 		\end{longtable}
-		
+
 		% Grafico
 		Rappresentazione grafica della distribuzione dei ruoli:
 		\begin{figure}[h]
@@ -203,34 +203,34 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			\caption{Suddivisione dei ruoli nel periodo di Consolidamento dei requisiti}
 		\end{figure}
 
-\newpage	
+\newpage
 \subsection{Progettazione architetturale}
 	\subsubsection{Prospetto orario}
 		Distribuzione delle ore per ciascun ruolo nel periodo di Progettazione architetturale:
-		
+
 		\rowcolors{2}{lightRowColor}{darkRowColor}
-		\begin{longtable}{ 
-			>{\centering}p{0.25\textwidth} 
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
 			>{\centering}p{0.05\textwidth}
-			>{\centering}p{0.05\textwidth} 
-			>{\centering}p{0.05\textwidth} 
 			>{\centering}p{0.05\textwidth}
-			>{\centering}p{0.05\textwidth} 
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
 			>{\centering}p{0.05\textwidth}
 			>{\centering\arraybackslash}p{0.15\textwidth} }
-			
+
 			\coloredTableHead
-			\textbf{\color{white}Nome} & 
-			\textbf{\color{white}Rp} & 
-			\textbf{\color{white}As} & 
+			\textbf{\color{white}Nome} &
+			\textbf{\color{white}Rp} &
+			\textbf{\color{white}As} &
 			\textbf{\color{white}An} &
 			\textbf{\color{white}Pt} &
 			\textbf{\color{white}Pr} &
 			\textbf{\color{white}Vf} &
 			\textbf{\color{white}Totale}
-			\tabularnewline  
+			\tabularnewline
 			\endhead
-			
+
 			% Contenuto della tabella
 			% Nome & Rp & As & An & Pt & Pr & Vf & Totale \\
 			\VB & - & -  & -  & 8  & 7 & 16 & 31 \\
@@ -242,11 +242,11 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			\AS & - & 10 & -  & 7  & 6 & 8  & 31 \\
 			\AZ & 7 & -  & 10 & -  & 8 & 6  & 31 \\
 			\textbf{Ore totali per ruolo} & 12 & 24 & 33 & 72 & 39 & 68 & 248 \\
-			
-			\caption {Suddivisione oraria del periodo di Progettazione architetturale} \\
-			
+
+			\rowcolor{white}\caption {Suddivisione oraria del periodo di Progettazione architetturale} \\
+
 		\end{longtable}
-		
+
 		% Grafico
 		Rappresentazione grafica della suddivisione oraria:
 		\begin{figure}[h]
@@ -254,24 +254,24 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			\includegraphics[width=0.7\textwidth]{./res/img/progettazioneArchitetturale_po.png}
 			\caption{Suddivisione oraria del periodo di Progettazione architetturale}
 		\end{figure}
-	
-	\newpage	
+
+	\newpage
 	\subsubsection{Prospetto economico}
 		Totale delle ore e costo per ciascun ruolo nel periodo di Progettazione architetturale:
-		
+
 		\rowcolors{2}{lightRowColor}{darkRowColor}
-		\begin{longtable}{ 
-			>{\centering}p{0.25\textwidth} 
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
 			>{\centering}p{0.05\textwidth}
 			>{\centering\arraybackslash}p{0.15\textwidth} }
-			
+
 			\coloredTableHead
-			\textbf{\color{white}Ruolo} & 
-			\textbf{\color{white}Ore} & 
+			\textbf{\color{white}Ruolo} &
+			\textbf{\color{white}Ore} &
 			\textbf{\color{white}Costo in \euro{}}
-			\tabularnewline  
+			\tabularnewline
 			\endhead
-			
+
 			% Contenuto della tabella
 			% Ruolo & Ore & Costo \\
 			Respondabile    & 12  & 360,00 \\
@@ -281,11 +281,11 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			Programmatore   & 39  & 585,00 \\
 			Verificatore    & 68  & 1.020,00 \\
 			\textbf{Totale} & 248 & 4.854,00 \\
-	
-			\caption {Prospetto dei costi per il periodo di Progettazione architetturale}	\\
-			
+
+			\rowcolor{white}\caption {Prospetto dei costi per il periodo di Progettazione architetturale}	\\
+
 		\end{longtable}
-		
+
 		% Grafico
 		Rappresentazione grafica della distribuzione dei ruoli:
 		\begin{figure}[h]
@@ -294,34 +294,34 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			\caption{Suddivisione dei ruoli nel periodo di Progettazione architetturale}
 		\end{figure}
 
-\newpage	
+\newpage
 \subsection{Progettazione di dettaglio e codifica}
 	\subsubsection{Prospetto orario}
 	Distribuzione delle ore per ciascun ruolo nel periodo di Progettazione di dettaglio e codifica:
-		
+
 		\rowcolors{2}{lightRowColor}{darkRowColor}
-		\begin{longtable}{ 
-			>{\centering}p{0.25\textwidth} 
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
 			>{\centering}p{0.05\textwidth}
-			>{\centering}p{0.05\textwidth} 
-			>{\centering}p{0.05\textwidth} 
 			>{\centering}p{0.05\textwidth}
-			>{\centering}p{0.05\textwidth} 
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
 			>{\centering}p{0.05\textwidth}
 			>{\centering\arraybackslash}p{0.15\textwidth} }
-			
+
 			\coloredTableHead
-			\textbf{\color{white}Nome} & 
-			\textbf{\color{white}Rp} & 
-			\textbf{\color{white}As} & 
+			\textbf{\color{white}Nome} &
+			\textbf{\color{white}Rp} &
+			\textbf{\color{white}As} &
 			\textbf{\color{white}An} &
 			\textbf{\color{white}Pt} &
 			\textbf{\color{white}Pr} &
 			\textbf{\color{white}Vf} &
 			\textbf{\color{white}Totale}
-			\tabularnewline  
+			\tabularnewline
 			\endhead
-			
+
 			% Contenuto della tabella
 			% Nome & Rp & As & An & Pt & Pr & Vf & Totale \\
 			\VB & 7 & 4 & - & 6  & 20 & 12 & 49 \\
@@ -333,11 +333,11 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			\AS & - & - & - & 14 & 20 & 15 & 49 \\
 			\AZ & - & 9 & - & 8  & 20 & 12 & 49 \\
 			\textbf{Ore totali per ruolo} & 23 & 32 & - & 88 & 153 & 96 & 392 \\
-	
-			\caption {Suddivisione oraria del periodo di Progettazione di dettaglio e codifica} \\
-			
+
+			\rowcolor{white}\caption {Suddivisione oraria del periodo di Progettazione di dettaglio e codifica} \\
+
 		\end{longtable}
-		
+
 		% Grafico
 		Rappresentazione grafica della suddivisione oraria:
 		\begin{figure}[h]
@@ -345,24 +345,24 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			\includegraphics[width=0.7\textwidth]{./res/img/progettazioneDettaglioCodifica_po.png}
 			\caption{Suddivisione oraria del periodo di Progettazione di dettaglio e codifica}
 		\end{figure}
-	
-	\newpage	
+
+	\newpage
 	\subsubsection{Prospetto economico}
 		Totale delle ore e costo per ciascun ruolo nel periodo di Progettazione di dettaglio e codifica:
-		
+
 		\rowcolors{2}{lightRowColor}{darkRowColor}
-		\begin{longtable}{ 
-			>{\centering}p{0.25\textwidth} 
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
 			>{\centering}p{0.05\textwidth}
 			>{\centering\arraybackslash}p{0.15\textwidth} }
-			
+
 			\coloredTableHead
-			\textbf{\color{white}Ruolo} & 
-			\textbf{\color{white}Ore} & 
+			\textbf{\color{white}Ruolo} &
+			\textbf{\color{white}Ore} &
 			\textbf{\color{white}Costo in \euro{}}
-			\tabularnewline  
+			\tabularnewline
 			\endhead
-			
+
 			% Contenuto della tabella
 			% Ruolo & Ore & Costo \\
 			Respondabile    & 23 & 690,00 \\
@@ -372,11 +372,11 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			Programmatore   & 153 & 2.295,00 \\
 			Verificatore    & 96  & 1.440,00 \\
 			\textbf{Totale} & 392 & 7.001,00 \\
-			
-			\caption {Prospetto dei costi per il periodo di Progettazione di dettaglio e codifica} \\
-			
+
+			\rowcolor{white}\caption {Prospetto dei costi per il periodo di Progettazione di dettaglio e codifica} \\
+
 		\end{longtable}
-		
+
 		% Grafico
 		Rappresentazione grafica della distribuzione dei ruoli:
 		\begin{figure}[h]
@@ -385,34 +385,34 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			\caption{Suddivisione dei ruoli nel periodo di Progettazione di dettaglio e codifica}
 		\end{figure}
 
-\newpage	
+\newpage
 \subsection{Validazione e collaudo}
 	\subsubsection{Prospetto orario}
 	Distribuzione delle ore per ciascun ruolo nel periodo di Validazione e collaudo:
-		
+
 		\rowcolors{2}{lightRowColor}{darkRowColor}
-		\begin{longtable}{ 
-			>{\centering}p{0.25\textwidth} 
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
 			>{\centering}p{0.05\textwidth}
-			>{\centering}p{0.05\textwidth} 
-			>{\centering}p{0.05\textwidth} 
 			>{\centering}p{0.05\textwidth}
-			>{\centering}p{0.05\textwidth} 
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
 			>{\centering}p{0.05\textwidth}
 			>{\centering\arraybackslash}p{0.15\textwidth} }
-			
+
 			\coloredTableHead
-			\textbf{\color{white}Nome} & 
-			\textbf{\color{white}Rp} & 
-			\textbf{\color{white}As} & 
+			\textbf{\color{white}Nome} &
+			\textbf{\color{white}Rp} &
+			\textbf{\color{white}As} &
 			\textbf{\color{white}An} &
 			\textbf{\color{white}Pt} &
 			\textbf{\color{white}Pr} &
 			\textbf{\color{white}Vf} &
 			\textbf{\color{white}Totale}
-			\tabularnewline  
+			\tabularnewline
 			\endhead
-			
+
 			% Contenuto della tabella
 			% Nome & Rp & As & An & Pt & Pr & Vf & Totale \\
 			\VB & - & - & - & 5 & 7  & 10 & 22 \\
@@ -424,11 +424,11 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			\AS & 6 & - & - & - & 5  & 11 & 22 \\
 			\AZ & - & - & - & 6 & 6  & 10 & 22 \\
 			\textbf{Ore totali per ruolo} & 22 & 17 & - & 18 & 47 & 72 & 176 \\
-	
-			\caption {Suddivisione oraria del periodo di Validazione e collaudo} \\
-			
+
+			\rowcolor{white}\caption {Suddivisione oraria del periodo di Validazione e collaudo} \\
+
 		\end{longtable}
-		
+
 		% Grafico
 		Rappresentazione grafica della suddivisione oraria:
 		\begin{figure}[h]
@@ -436,24 +436,24 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			\includegraphics[width=0.7\textwidth]{./res/img/validazioneCollaudo_po.png}
 			\caption{Suddivisione oraria del periodo di Validazione e collaudo}
 		\end{figure}
-	
-	\newpage	
+
+	\newpage
 	\subsubsection{Prospetto economico}
 		Totale delle ore e costo per ciascun ruolo nel periodo di Validazione e collaudo:
-		
+
 		\rowcolors{2}{lightRowColor}{darkRowColor}
-		\begin{longtable}{ 
-			>{\centering}p{0.25\textwidth} 
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
 			>{\centering}p{0.05\textwidth}
 			>{\centering\arraybackslash}p{0.15\textwidth} }
-			
+
 			\coloredTableHead
-			\textbf{\color{white}Ruolo} & 
-			\textbf{\color{white}Ore} & 
+			\textbf{\color{white}Ruolo} &
+			\textbf{\color{white}Ore} &
 			\textbf{\color{white}Costo in \euro{}}
-			\tabularnewline  
+			\tabularnewline
 			\endhead
-			
+
 			% Contenuto della tabella
 			% Ruolo & Ore & Costo in \\
 			Respondabile    & 22  & 660,00 \\
@@ -464,10 +464,10 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			Verificatore    & 72  & 1.080,00 \\
 			\textbf{Totale} & 176 & 3.181,00 \\
 
-			\caption {Prospetto dei costi per il periodo di Validazione e collaudo} \\
-			
+			\rowcolor{white}\caption {Prospetto dei costi per il periodo di Validazione e collaudo} \\
+
 		\end{longtable}
-		
+
 		% Grafico
 		Rappresentazione grafica della distribuzione dei ruoli:
 		\begin{figure}[h]
@@ -476,35 +476,35 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			\caption{Suddivisione dei ruoli nel periodo di Validazione e collaudo}
 		\end{figure}
 
-\newpage		
+\newpage
 \subsection{Riepilogo}
 	\subsubsection{Ore totali}
 		\subsubsubsection{Suddivisione del lavoro}
 			Distribuzione totale delle ore per ciascun ruolo comprensive delle ore di investimento e delle ore rendicontate al carico del Committente.
 
 			\rowcolors{2}{lightRowColor}{darkRowColor}
-			\begin{longtable}{ 
-				>{\centering}p{0.25\textwidth} 
+			\begin{longtable}{
+				>{\centering}p{0.25\textwidth}
 				>{\centering}p{0.05\textwidth}
-				>{\centering}p{0.05\textwidth} 
-				>{\centering}p{0.05\textwidth} 
 				>{\centering}p{0.05\textwidth}
-				>{\centering}p{0.05\textwidth} 
+				>{\centering}p{0.05\textwidth}
+				>{\centering}p{0.05\textwidth}
+				>{\centering}p{0.05\textwidth}
 				>{\centering}p{0.05\textwidth}
 				>{\centering\arraybackslash}p{0.15\textwidth} }
-			
+
 				\coloredTableHead
-				\textbf{\color{white}Nome} & 
-				\textbf{\color{white}Rp} & 
-				\textbf{\color{white}As} & 
+				\textbf{\color{white}Nome} &
+				\textbf{\color{white}Rp} &
+				\textbf{\color{white}As} &
 				\textbf{\color{white}An} &
 				\textbf{\color{white}Pt} &
 				\textbf{\color{white}Pr} &
 				\textbf{\color{white}Vf} &
 				\textbf{\color{white}Totale}
-				\tabularnewline  
+				\tabularnewline
 				\endhead
-			
+
 				% Contenuto della tabella
 				% Nome & Rp & As & An & Pt & Pr & Vf & Totale \\
 				\VB & 17 & 24 & 3  & 19 & 34 & 40 & 137 \\
@@ -516,11 +516,11 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 				\AS & 6  & 15 & 2  & 21 & 31 & 62 & 137 \\
 				\AZ & 7  & 12 & 40 & 14 & 34 & 33 & 140 \\
 				\textbf{Ore totali per ruolo} & 92 & 149 & 103 & 198 & 239 & 321 & 1102 \\
-	
-				\caption {Suddivisione oraria con il totale delle ore di investimento e rendicontate}	\\
-				
+
+				\rowcolor{white}\caption {Suddivisione oraria con il totale delle ore di investimento e rendicontate}	\\
+
 			\end{longtable}
-			
+
 			% Grafico
 			Rappresentazione grafica della suddivisione oraria:
 			\begin{figure}[h]
@@ -528,24 +528,24 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 				\includegraphics[width=0.7\textwidth]{./res/img/totale_po.png}
 				\caption{Suddivisione oraria con il totale delle ore di investimento e rendicontate}
 			\end{figure}
-		
-		\newpage	
+
+		\newpage
 		\subsubsubsection{Prospetto econimico}
 			Totale delle ore e costo per ciascun ruolo comprensivo delle ore di investimento e delle ore rendicontate a carico del Committente:
-		
+
 			\rowcolors{2}{lightRowColor}{darkRowColor}
-			\begin{longtable}{ 
-				>{\centering}p{0.25\textwidth} 
+			\begin{longtable}{
+				>{\centering}p{0.25\textwidth}
 				>{\centering}p{0.05\textwidth}
 				>{\centering\arraybackslash}p{0.15\textwidth} }
-			
+
 				\coloredTableHead
-				\textbf{\color{white}Ruolo} & 
-				\textbf{\color{white}Ore} & 
+				\textbf{\color{white}Ruolo} &
+				\textbf{\color{white}Ore} &
 				\textbf{\color{white}Costo in \euro{}}
-				\tabularnewline  
+				\tabularnewline
 				\endhead
-			
+
 				% Contenuto della tabella
 				% Ruolo & Ore & Costo in \\
 				Respondabile    & 92   & 2.760,00 \\
@@ -555,11 +555,11 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 				Programmatore   & 239  & 3.585,00 \\
 				Verificatore    & 321  & 4.815,00 \\
 				\textbf{Totale} & 1102 & 21.071,00 \\
-				
-				\caption {Prospetto dei costi totale delle ore di investimento e rendicontate per ciascun ruolo} \\
-				
+
+				\rowcolor{white}\caption {Prospetto dei costi totale delle ore di investimento e rendicontate per ciascun ruolo} \\
+
 			\end{longtable}
-		
+
 			% Grafico
 			Rappresentazione grafica della distribuzione dei ruoli:
 			\begin{figure}[h]
@@ -567,34 +567,34 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 				\includegraphics[width=0.7\textwidth]{./res/img/totale_pe.png}
 				\caption{Suddivisione dei ruoli per il totale delle ore di investimento e rendicontate }
 			\end{figure}
-	\newpage	
+	\newpage
 	\subsubsection{Ore rendicontate}
 		\subsubsubsection{Suddivisione del lavoro}
 			Distribuzione totale delle ore rendicontate per ciascun ruolo.
 
 			\rowcolors{2}{lightRowColor}{darkRowColor}
-			\begin{longtable}{ 
-				>{\centering}p{0.25\textwidth} 
+			\begin{longtable}{
+				>{\centering}p{0.25\textwidth}
 				>{\centering}p{0.05\textwidth}
-				>{\centering}p{0.05\textwidth} 
-				>{\centering}p{0.05\textwidth} 
 				>{\centering}p{0.05\textwidth}
-				>{\centering}p{0.05\textwidth} 
+				>{\centering}p{0.05\textwidth}
+				>{\centering}p{0.05\textwidth}
+				>{\centering}p{0.05\textwidth}
 				>{\centering}p{0.05\textwidth}
 				>{\centering\arraybackslash}p{0.15\textwidth} }
-			
+
 				\coloredTableHead
-				\textbf{\color{white}Nome} & 
-				\textbf{\color{white}Rp} & 
-				\textbf{\color{white}As} & 
+				\textbf{\color{white}Nome} &
+				\textbf{\color{white}Rp} &
+				\textbf{\color{white}As} &
 				\textbf{\color{white}An} &
 				\textbf{\color{white}Pt} &
 				\textbf{\color{white}Pr} &
 				\textbf{\color{white}Vf} &
 				\textbf{\color{white}Totale}
-				\tabularnewline  
+				\tabularnewline
 				\endhead
-			
+
 				% Contenuto della tabella
 				% Nome & Rp & As & An & Pt & Pr & Vf & Totale \\
 				\VB & 7  & 4  & -  & 19 & 34 & 38 & 102 \\
@@ -606,11 +606,11 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 				\AS & 6  & 10 & -  & 21 & 31 & 34 & 102 \\
 				\AZ & 7  & 9  & 10 & 14 & 34 & 28 & 102 \\
 				\textbf{Ore totali per ruolo} & 57 & 73 & 33 & 178 & 239 & 236 & 816 \\
-				
-				\caption {Suddivisione oraria con il totale delle ore rendicontate} \\
-				
+
+				\rowcolor{white}\caption {Suddivisione oraria con il totale delle ore rendicontate} \\
+
 			\end{longtable}
-			
+
 			% Grafico
 			Rappresentazione grafica della suddivisione oraria:
 			\begin{figure}[h]
@@ -618,24 +618,24 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 				\includegraphics[width=0.7\textwidth]{./res/img/totaleRendicontate_po.png}
 				\caption{Suddivisione oraria con il totale delle ore rendicontate}
 			\end{figure}
-		
-		\newpage	
+
+		\newpage
 		\subsubsubsection{Prospetto econimico}
 			Totale delle ore e costo per ciascun ruolo delle ore rendicontate:
-		
+
 			\rowcolors{2}{lightRowColor}{darkRowColor}
-			\begin{longtable}{ 
-				>{\centering}p{0.25\textwidth} 
+			\begin{longtable}{
+				>{\centering}p{0.25\textwidth}
 				>{\centering}p{0.05\textwidth}
 				>{\centering\arraybackslash}p{0.15\textwidth} }
-			
+
 				\coloredTableHead
-				\textbf{\color{white}Ruolo} & 
-				\textbf{\color{white}Ore} & 
+				\textbf{\color{white}Ruolo} &
+				\textbf{\color{white}Ore} &
 				\textbf{\color{white}Costo in \euro{}}
-				\tabularnewline  
+				\tabularnewline
 				\endhead
-			
+
 				% Contenuto della tabella
 				% Ruolo & Ore & Costo in \\
 				Respondabile    & 57  & 1.710,00 \\
@@ -645,11 +645,11 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 				Programmatore   & 239 & 3.585,00 \\
 				Verificatore    & 236 & 3.540,00 \\
 				\textbf{Totale} & 816 & 15.036,00 \\
-				
-				\caption {Prospetto dei costi totale delle ore rendicontate per ciascun ruolo} \\
-				
+
+				\rowcolor{white}\caption {Prospetto dei costi totale delle ore rendicontate per ciascun ruolo} \\
+
 			\end{longtable}
-		
+
 			% Grafico
 			Rappresentazione grafica della distribuzione dei ruoli:
 			\begin{figure}[h]
@@ -657,23 +657,6 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 				\includegraphics[width=0.7\textwidth]{./res/img/totaleRendicontate_pe.png}
 				\caption{Suddivisione dei ruoli per il totale delle ore rendicontate}
 			\end{figure}
-			
+
 \subsection{Conclusioni}
 		Il costo preventivato totale per il progetto è di \textbf{\euro15.036,00}.
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	

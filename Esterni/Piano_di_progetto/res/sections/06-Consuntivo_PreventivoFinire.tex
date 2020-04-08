@@ -9,6 +9,45 @@ Il bilanciò presentato potrà essere:
 Verrà inoltre presentato un preventivo a finire che terrà conto dei soli periodi rendicontati.
 \subsection{Fase di Analisi}
 	\subsubsection{Consuntivo}
+	\rowcolors{2}{lightRowColor}{darkRowColor}
+	\begin{longtable}{
+		>{\centering}p{0.25\textwidth}
+		>{\centering}p{0.08\textwidth}
+		>{\centering}p{0.08\textwidth}
+		>{\centering}p{0.15\textwidth}
+		>{\centering\arraybackslash}p{0.15\textwidth} }
+
+		\coloredTableHead
+		\textbf{\color{white}Ruolo} &
+		\textbf{\color{white}Ore} &
+		\textbf{\color{white}Delta ore} &
+		\textbf{\color{white}Costo in \euro{}} &
+		\textbf{\color{white}Delta costo}
+		\tabularnewline
+		\endhead
+
+		% Contenuto della tabella
+		% Ruolo & Ore & Costo\\
+		Responsabile    & 28 & -2 & 840,00 & -60 \\
+		Amministratore  & 70 & +0 & 1.400,00 & +0,00 \\
+		Analista        & 63 & +3 & 1.575,00 & +75,00 \\
+		Progettista     & 20 & +0 & 440,00 & +0,00 \\
+		Programmatore   & - & - & - & - \\
+		Verificatore    & 74 & +4 & 1.110,00 & +60,00 \\
+		\textbf{Totale Effettivo} & \textbf{255} & \textbf{5365,00} \\
+		\textbf{Delta} & \textbf{+4} & \textbf{+75,00} \\
+
+		\rowcolor{white}\caption{Consuntivo per il periodo di Analisi}	\\
+
+	\end{longtable}
 	\subsubsection{Conclusione}
+		Come riportato nella tabella del Consuntivo per il periodo di Analisi, il preventivo orario per i ruoli di Amministratore e Progettista si é rivelato sufficiente per svolgere il lavoro previsto; invece si é rivelato necessario dedicare piú ore lavorative rispetto a quanto preventivato per i ruoli di Analista e Verificatore, mentre é stato impiegato un monte ore ridotto per il ruolo di Responsabile di progetto. Di seguito sono riportate le motivazioni:
+		\begin{itemize}
+			\item \textbf{Responsabile di progetto:} sono state impiegate meno ore rispetto a quelle previste data la minore difficoltá di stesura del piano di progetto e di pianificazione del lavoro, rispetto a quanto previsto;
+			\item \textbf{Analista:} alcuni requisiti hanno presentato delle difficoltà di comprensione, con un conseguente aumento del monte ore necessario per la loro comprensione e stesura all'interno dell' \AdR{};
+			\item \textbf{Verificatore:} l'aggiornamento delle \NdP{} e l'applicazione scorretta di alcune norme causata dell'inesperienza dei membri del gruppo, ha portato ad un aumento delle ore spese per questo ruolo.
+		\end{itemize}
 
 \subsection{Preventivo a finire}
+Il bilancio finale é negativo.
+Non si rendono necessarie misure di mitigazione, nonostante l'aumento del monte ore rispetto al preventivo, in quanto la fase di Analisi non é rendicontata.

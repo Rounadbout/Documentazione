@@ -14,7 +14,7 @@ Questo periodo ha inizio con la formazione dei gruppi e termina con la scadenza 
 Le principali attività svolte in questo periodo sono:
 \begin{itemize}
 	\item \textbf{Strumenti di lavoro}: questa attività consiste nella scelta degli strumenti di lavoro da utilizzare per lo svolgimento del progetto;
-	\item \textbf{\textit{\NdP{}}}: attività nella quale gli Amministratori redigono le \NdP{}, documento in cui si specificano tutte le regole, le convenzioni e le tecnologie che i componenti del gruppo adotteranno durante tutto il corso del progetto;
+	\item \textbf{\textit{\NdP{}}}: attività nella quale gli Amministratori redigono le \NdP{}, documento in cui si specificano tutte le regole, le convenzioni e le tecnologie che i componenti del gruppo adotteranno durante tutto il corso del progetto. Questa attività include una stesura iniziale del documento, comprensiva delle norme e degli standard accordati dal gruppo;
 	\item \textbf{\textit{\SdF{}}}: attività nella quale gli Analisti redigono lo \SdF, documento in cui vengono analizzati i capitolati d'appalto elencando per ciascuno i punti positivi e negativi che li caratterizzano. Inoltre vengono indicate le motivazioni per le quali è stato scelto il capitolato C2 denominato \textit{Etherless} ed è stato escluso i capitolati restanti. \\
 	Questa attività è bloccante per l'inizio dell'\AdR{};
 	\item \textbf{\textit{\AdR{}}}: attività nella quale gli Analisti redigono l'\AdR, documento essenziale in cui viene analizzato in maniera approfondita il capitolato scelto a seguito dello \SdF{}, individuando le funzionalità e i casi d'uso previsti dal progetto;
@@ -23,37 +23,67 @@ Le principali attività svolte in questo periodo sono:
 	\item \textbf{\textit{\Glossario{}}}: attività nella quale viene redatto il \Glossario, documento nel quale verranno elencati, chiariti ed approfonditi tutti i termini tecnici utilizzati nei documenti con lo scopo di evitare possibili ambiguità;
 	\item \textbf{\textit{Lettera di Presentazione}}: attività nella quale viene redatta la Lettera di Presentazione necessaria per la presentazione come fornitore del gruppo.
 \end{itemize}
+	\subsubsection{Diagramma di Gantt: Analisi}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=1.1\textwidth]{./res/img/DiagrammiGantt/analisi_gantt.png}
+			\caption{Diagramma di Gantt del periodo di Analisi}
+		\end{figure}
 
 \subsection{Consolidamento dei requisiti}
 \textbf{Periodo}: dal 2020-04-13 al 2020-04-20 \\
-Questo periodo ha inizio dopo il termine del periodo di \textbf{Analisi} e termina il giorno della presentazione della \textit{Revisione dei Requisiti}. \\
-In questo periodo l'attivita principale prevede un consolidamento e un miglioramento dei requisiti ottenuti conclusa la fase di analisi e una preparazione del materiale necessario alla presentazione del 2020-04-20. \\
-Inoltre, qualora se ne presentasse la necessità verranno apportate modifiche migliorative ai documenti redatti durante la fase precedente.
-
+Questo periodo ha inizio dopo il termine del periodo di \textit{Analisi} e termina il giorno della presentazione della \textit{Revisione dei Requisiti}. \\
+%In questo periodo l'attivita principale prevede un consolidamento e un miglioramento dei requisiti ottenuti conclusa la fase di analisi e una preparazione del materiale necessario alla presentazione del 2020-04-20. \\
+%Inoltre, qualora se ne presentasse la necessità verranno apportate modifiche migliorative ai documenti redatti durante la fase precedente.
+\begin{itemize}
+	\item \textbf{Incremento e Verifica dei documenti:} in caso di necessità, vengono migliorati e verificati i documenti preparati nella fase precedente;
+	\item \textbf{Consolidamento Analisi dei requisiti}: l'attivita principale, prevede un consolidamento e un miglioramento dei requisiti ottenuti conclusa la fase di analisi e conseguente aggiornamento dell' \AdR{};
+	\item \textbf{Realizzazione della presentazione:} preparazione del materiale necessario alla presentazione del 2020-04-20.
+\end{itemize}
+	\subsubsection{Diagramma di Gantt: Consolidamento dei requisiti}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=1.1\textwidth]{./res/img/DiagrammiGantt/cons_req_gantt.png}
+			\caption{Diagramma di Gantt del periodo di Consolidamento dei requisiti}
+		\end{figure}
+\newpage
 \subsection{Progettazione architetturale}
-\textbf{Periodo}: dal 2020-04-13 al 2020-05-11 \\
-Questo periodo ha inizio dopo il termine del periodo di \textit{Consolidamento dei requisiti} e termina con la scadenza per la consegna dei documenti relativi alla \textit{Revisione di Progettazione}. \\
+\textbf{Periodo}: dal 2020-04-20 al 2020-05-11 \\
+Questo periodo ha inizio al termine del periodo di \textit{Consolidamento dei requisiti} e termina con la scadenza per la consegna dei documenti relativi alla \textit{Revisione di Progettazione}. \\
 Le principali attività svolte in questo periodo sono:
 \begin{itemize}
-	\item \textbf{Incremento e verifica}: come prima cosa, analizzando l'esito della Revisione dei Requisiti vengono svolte attività di incremento e verifica sui vari documenti redatti. \\
+	\item \textbf{Incremento e verifica}: come prima cosa, analizzando l'esito della Revisione dei Requisiti vengono svolte attività di incremento e verifica sui vari documenti redatti, dove necessario. \\
 	L'incremento dell'\AdR{} è il più importante perchè va completato prima di poter proseguire con il resto delle attività;
-	\item \textbf{\textit{Specifica Tecnica}}: attività nella quale i Progettisti redigono il documento della Specifica Tecnica dove vengono specificate le scelte progettuali ad alto livello.
-	Questa attività è considerata bloccante perchè prima del termine di essa non è possibile proseguire con lo svolgimento del progetto;
+	\item \textbf{Technology Baseline}: attività nella quale i Progettisti redigono il documento di \textit{Specifica Tecnica}, che contiene il tracciamento dei requisiti e la descrizione delle scelte progettuali ad alto livello, come i design pattern che verranno adottati. Come parte di questa attività viene codificato il \textbf{PoC (Proof of Concept)};
 	\item \textbf{\textit{Glossario}}: attività che prevede un miglioramento del \Glossario aggiungendo nuovi termini oppure raffinando le definizioni di termini già presenti.
 \end{itemize}
-
+	\subsubsection{Diagramma di Gantt: Progettazione architetturale}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=1.1\textwidth]{./res/img/DiagrammiGantt/prog_arch_gantt.png}
+			\caption{Diagramma di Gantt del periodo di Progettazione architetturale}
+		\end{figure}
+\newpage
 \subsection{Progettazione di dettaglio e codifica}
 \textbf{Periodo}: dal 2020-05-11 al 2020-06-11 \\
-Questo periodo ha inizio dopo il termine del periodo di \textit{Progettazione architetturale} e termina con la scadenza per la consegna dei documenti relativi alla \textit{Revisione di Qualifica}. \\
+Questo periodo ha inizio dopo il termine del periodo di \textit{Progettazione architetturale}, quindi alla scadenza della consegna della \textit{Revisione di Progettazione} e termina con la scadenza per la consegna dei documenti relativi alla \textit{Revisione di Qualifica}. \\
 Le principali attività svolte in questo periodo sono:
 \begin{itemize}
 	\item \textbf{Incremento e verifica}: come prima cosa, analizzando l'esito della Revisione dei Progettazione vengono svolte attività di incremento e verifica sui vari documenti redatti;
-	\item \textbf{\textit{Definizione di Prodotto}}: attività nella quale viene redatto il documento della \textit{Definizione di Prodotto} che contiene una dettagliata progettazione architetturale seguendo il contenuto della \textit{Specifica Tecnica};
-	\item \textbf{Codifica}: attività nella quale viene prodotto e verificato il codice seguendo quanto scritto nella \textit{Definizione di Prodotto};
-	\item \textbf{\textit{Manuale Utente}}: attività nella quale viene redatto il \textit{Manuale Utente} contenente le informazioni su come funziona e su come si utilizza il prodotto;
+	\item \textbf{Product Baseline}: attività che consiste nella progettazione dettagliata a basso livello del prodotto, con lo scopo di individuare gli elementi necessari alla codifica dello stesso. Di supporto viene redatto il documento della \textit{Definizione di Prodotto}, basato sul documento di \textit{Specifica Tecnica};
+	\begin{itemize}
+		\item \textbf{Codifica}: attività nella quale viene prodotto e verificato il codice, seguendo quanto scritto nella \textit{Definizione di Prodotto} e secondo le modalità descritte nel \PdQ{};
+	\end{itemize}
+	\item \textbf{\textit{User Manual}}(manuale utente): attività nella quale viene redatto lo \textit{User Manual} contenente le informazioni su come funziona e su come si utilizza il prodotto;
 	\item \textbf{\textit{Glossario}}: attività che prevede un miglioramento del \Glossario aggiungendo nuovi termini oppure raffinando le definizioni di termini già presenti.
 \end{itemize}
-
+	\subsubsection{Diagramma di Gantt: Progettazione di dettaglio e codifica}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=1.1\textwidth]{./res/img/DiagrammiGantt/prog_dett_gantt.png}
+			\caption{Diagramma di Gantt del periodo di Progettazione di dettaglio e codifica}
+		\end{figure}
+\newpage
 \subsection{Validazione e collaudo}
 \textbf{Periodo}: dal 2020-06-11 al 2020-07-13 \\
 Questo periodo ha inizio dopo il termine del periodo di \textit{Progettazione di dettaglio e codifica} e termina con la scadenza per la consegna dei documenti relativi alla \textit{Revisione di Accettazione}. \\
@@ -61,6 +91,13 @@ Le principali attività svolte in questo periodo sono:
 \begin{itemize}
 	\item \textbf{Incremento e verifica}: come prima cosa, analizzando l'esito della Revisione dei Qualifica vengono svolte attività di incremento e verifica sui vari documenti redatti;
 	\item \textbf{Validazione e Collaudo}: attività nella quale vengono eseguiti test e, se necessario, vengono apportati dei miglioramenti al prodotto per poter assicurare il soddisfacimento dei requisiti e dei vincoli qualitativi;
-	\item \textbf{\textit{Manuale Utente}}: attività nella quale viene migliorato il documento del \textit{Manuale Utente};
+	\item \textbf{\textit{User Manual}}: attività nella quale viene migliorato lo \textit{User Manual};
+	\item \textbf{\textit{Manuale Sviluppatore}}: attività nella quale viene redatto il \textit{Manuale Sviluppatore}, il quale contiene le informazioni utili al mantenimento del prodotto;
 	\item \textbf{\textit{Glossario}}: attività che prevede un miglioramento del \Glossario aggiungendo nuovi termini oppure raffinando le definizioni di termini già presenti.
 \end{itemize}
+	\subsubsection{Diagramma di Gantt: validazione e collaudo}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=1.1\textwidth]{./res/img/DiagrammiGantt/validaz_gantt.png}
+			\caption{Diagramma di Gantt del periodo di Validazione e collaudo}
+		\end{figure}
