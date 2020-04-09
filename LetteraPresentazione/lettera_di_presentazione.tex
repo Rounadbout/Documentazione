@@ -1,0 +1,135 @@
+\documentclass[a4paper]{letter}
+
+\input{../Latex/common_commands.tex}
+
+\usepackage[top=1in,bottom=0.5in,left=1in,right=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\usepackage{tabularx} % tabelle
+\usepackage[table]{xcolor} % definizione colore di sfondo per tabelle
+\usepackage{longtable} % permette di estendere le tabelle su più pagine
+
+
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[official]{eurosym}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=magenta,
+	urlcolor=blue,
+}
+
+% tabelle
+\def\arraystretch{1.5} % padding
+% comandi e colori tabelle
+\definecolor{lightRowColor}{HTML}{fafafa}
+\definecolor{darkRowColor}{HTML}{ffcccb}
+
+\newcommand{\coloredTableHead}{\rowcolor[HTML]{b61827}}
+\newcommand{\lightTableRow}{\rowcolor{lightRowColor}}
+\newcommand{\darkTableRow}{\rowcolor{darkRowColor}}
+
+\pagestyle{fancy}
+\title{Lettera di Presentazione}
+\author{Veronica Barbieri}
+\fancypagestyle{plain}{
+\fancyhead[l]{\includegraphics[width=0.5\textwidth]{./res/img/cropped_logo.png}\hfill\includegraphics[width=0.15\textwidth]{./res/img/logo_uni.svg.png}}
+\fancyfoot[c]{}
+}
+\pagestyle{plain}
+
+\makeatletter
+\let\ps@empty\ps@plain
+\let\ps@firstpage\ps@plain
+\address{Via Trieste 93, 35131, Padova (PD)}
+
+\longindentation=0pt
+
+\begin{document}
+% \thispagestyle{fancy}
+\begin{letter} {Alla cordiale attenzione di \\ \TV \\ \RC \\ via Trieste 93, 35131, Padova\\ Dipartimento di Matematica \\ Università degli studi di Padova }
+  \vspace*{-0.4\baselineskip}
+
+\opening{Egregi professori,}
+  Con la presente, il gruppo \Gruppo{} intende comunicarVi ufficialmente l'impegno alla realizzazione del prodotto da Voi commissionato, denominato:
+  \begin{center}
+    \textbf{Etherless: piattaforma Ethereum per il deploy di funzioni Javascript e gestione del pagamento per la loro esecuzione}
+  \end{center}
+  proposto dall'azienda \Proponente.\\
+  In allegato potrete trovare i seguenti documenti, che illustrano l'offerta:
+  \begin{itemize}
+    \item \AdR{}v1.0.0 (Esterni/analisi\_dei\_requisiti.pdf);
+    \item \PdP{}v1.0.0 (Esterni/piano\_di\_progetto.pdf);
+    \item \PdQ{}v1.0.0 (Esterni/piano\_di\_qualifica.pdf);
+    \item \Glossario{}v1.0.0 (Esterni/glossario.pdf);
+    \item \NdP{}v1.0.0 (Interni/norme\_di\_progetto.pdf).
+    \item \SdF{}v1.0.0 (Interni/studio\_di\_fattibilità.pdf).
+    \item Verbali delle riunioni interne:
+      \begin{itemize}
+        \item VI\_2020\_03\_10 (Interni/Verbali/VI\_2020\_03\_10.pdf);
+        \item VI\_2020\_03\_13 (Interni/Verbali/VI\_2020\_03\_13.pdf);
+        \item VI\_2020\_03\_17 (Interni/Verbali/VI\_2020\_03\_17.pdf);
+        \item VI\_2020\_03\_20 (Interni/Verbali/VI\_2020\_03\_20.pdf);
+        \item VI\_2020\_03\_24 (Interni/Verbali/VI\_2020\_03\_24.pdf);
+        \item VI\_2020\_03\_27 (Interni/Verbali/VI\_2020\_03\_27.pdf);
+        \item VI\_2020\_03\_30 (Interni/Verbali/VI\_2020\_03\_30.pdf);
+        \item VI\_2020\_04\_04 (Interni/Verbali/VI\_2020\_04\_04.pdf);
+        \item VI\_2020\_04\_06 (Interni/Verbali/VI\_2020\_04\_06.pdf).
+      \end{itemize}
+    \item Verbali delle riunioni esterne:
+      \begin{itemize}
+        \item VI\_2020\_03\_18 (Esterni/Verbali/VI\_2020\_03\_18.pdf);
+        \item VI\_2020\_03\_27 (Esterni/Verbali/VI\_2020\_03\_27.pdf);
+        \item VI\_2020\_04\_10 (Esterni/Verbali/VI\_2020\_03\_10.pdf).
+      \end{itemize}
+  \end{itemize}
+\newpage
+Il gruppo \Gruppo{} ha stimato di consegnare il prodotto entro il giorno 2020-07-13, preventivando un costo totale di \textbf{15.036,00\euro{}}.\\
+Di seguito viene riportato l'organigramma del gruppo \Gruppo{}:
+\rowcolors{2}{lightRowColor}{darkRowColor}
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
+			>{\centering}p{0.15\textwidth}
+			>{\centering\arraybackslash}p{0.4\textwidth} }
+
+			\coloredTableHead
+			\textbf{\color{white}Nome} &
+			\textbf{\color{white}Matricola} &
+			\textbf{\color{white}Indirizzo email}
+			\tabularnewline
+			\endhead
+
+			% Contenuto della tabella
+			% Nome & Matricola & Indirizzo email\\
+			\VB & 1143463 & veronica.barbieri.1@studenti.unipd.it \\
+			\LB & 1122109 & luca.benetazzo@studenti.unipd.it \\
+			\NF & 1143541 & nicoletta.fabro@studenti.unipd.it \\
+			\EG & 1187021 & egon.galvani@studenti.unipd.it \\
+			\FJ & 1163064 & feim.jakupi@studenti.unipd.it \\
+			\MP & 1167693 & marco.positello@studenti.unipd.it \\
+			\AS & 1144363 & alessandro.sgreva@studenti.unipd.it \\
+			\AZ & 1171766 & antonio.zlatkovski@studenti.unipd.it \\
+
+			\rowcolor{white}\caption {Componenti} \\
+
+		\end{longtable}
+	Rimaniamo a disposizione per qualsiasi comunicazione o chiarimento.\\
+
+\closing{
+  Cordiali saluti,
+  \fromsig{\includegraphics[scale=0.25]{./res/img/firma_VB.png}\\
+  }
+  \fromname{Barbieri Veronica\\
+  Responsabile di progetto del gruppo \Gruppo{}\\
+  Email: \href{mailto:\Mail}{\Mail{}}
+  }
+}
+
+\end{letter}
+\end{document}
