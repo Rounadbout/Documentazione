@@ -1,15 +1,15 @@
 \section{Descrizione generale}
 
 \subsection{Obiettivi del prodotto}
-Il progetto \NomeProgetto{} ha come obiettivo finale creare una piattaforma per permettere agli sviluppatori di fare il deploy di funzioni JavaScript, preoccupandosi solamente della relativa codifica e non dell'architettura sottostante. Allo stesso tempo, tali funzioni vengono messe a disposizione agli altri utenti, che possono eseguirle e pagare secondo un modello Caas (Computation As a Service), cioè solamente per il tempo e le risorse richieste dalla loro esecuzione.
+Il progetto\ped{\textit{G}} \NomeProgetto{} ha come obiettivo finale creare una piattaforma per permettere agli sviluppatori di fare il deploy\ped{\textit{G}} di funzioni JavaScript\ped{\textit{G}}, preoccupandosi solamente della relativa codifica e non dell'architettura sottostante. Allo stesso tempo, tali funzioni vengono messe a disposizione agli altri utenti, che possono eseguirle e pagare secondo un modello Caas\ped{\textit{G}} (Computation As a Service), cioè solamente per il tempo e le risorse richieste dalla loro esecuzione.
 
 \subsection{Funzionalità del prodotto}
-L'applicativo deve fornire la possibilità agli sviluppatori di caricare nel cloud le proprie funzioni e renderle disponibili secondo un'ideologia Faas (Function As A Service). Gli utenti finali possono usufruire di tali servizi pagando; in questo modo gli sviluppatori non si devono preoccupare della gestione dell'infrastruttura alla base dei servizi e possono guadagnare ad ogni esecuzione di una funzione da loro caricata. \\
+L'applicativo deve fornire la possibilità agli sviluppatori di caricare nel cloud\ped{\textit{G}} le proprie funzioni e renderle disponibili secondo un'ideologia Faas\ped{\textit{G}} (Function As A Service). Gli utenti finali possono usufruire di tali servizi pagando; in questo modo gli sviluppatori non si devono preoccupare della gestione dell'infrastruttura alla base dei servizi e possono guadagnare ad ogni esecuzione di una funzione da loro caricata. \\
 Nello specifico: 
 	\begin{itemize}
 		\item gli utenti finali e gli sviluppatori possono: 
 		\begin{enumerate}[a.]
-			\item autenticarsi all'interno della rete Ethereum; 
+			\item autenticarsi all'interno della rete Ethereum\ped{\textit{G}}; 
 			\item eseguire una funzione presente della piattaforma e visualizzarne i risultati; 
 			\item elencare tutte le funzioni disponibili nella piattaforma; 
 			\item visualizzare i dettagli di una determinata funzione; 
@@ -20,18 +20,18 @@ Nello specifico:
 		
 		\item gli sviluppatori possono: 
 		\begin{enumerate}[a.]
-			\item caricare all'interno della piattaforma delle proprie funzioni JavaScript; 
+			\item caricare all'interno della piattaforma delle proprie funzioni Javascript\ped{\textit{G}}; 
 			\item eliminare una funzione da loro precedentemente caricata; 
 			\item modificare le informazioni e il codice relativo ad una loro funzione.
 		\end{enumerate}
 	\end{itemize}
 
 \subsection{Analisi della struttura}
-Il prodotto si divide nelle seguenti parti: 
+Il prodotto\ped{\textit{G}} si divide nelle seguenti parti: 
 \begin{itemize}
 	\item \textbf{Etherless-cli:} interfaccia a linea di comando tramite cui i vari utenti della piattaforma interagiscono con \textit{Etherless}; 
 	\item \textbf{Etherless-smart:} insieme di smart-contract che si occupano della gestione della comunicazione tra \textit{Etherless-cli} ed \textit{Etherless-server} e del pagamento richiesto per l'esecuzione delle funzioni; 
-	\item \textbf{Etherless-server:} si occupa di ascoltare gli eventi trasmessi da \textit{Etherless-smart} e di avviare l'esecuzione delle funzioni così richieste. I risultati ottenuti vengono inviati tramite un ulteriore evento nella blockchain e mostrati all'utente attraverso \textit{Etherless-cli};  
+	\item \textbf{Etherless-server:} si occupa di ascoltare gli eventi trasmessi da \textit{Etherless-smart} e di avviare l'esecuzione delle funzioni così richieste. I risultati ottenuti vengono inviati tramite un ulteriore evento nella blockchain\ped{\textit{G}} e mostrati all'utente attraverso \textit{Etherless-cli};  
 \end{itemize}
 
 \subsubsection{Comandi disponibili}
@@ -39,12 +39,12 @@ Il prodotto si divide nelle seguenti parti:
 \begin{itemize}
 	\item \init{}: avvio dell'applicativo e visualizzazione guida introduttiva; 
 	\item \help{}: visualizzazione della descrizione completa di un comando messo a disposizione da \textit{Etherless-cli}; 
-	\item \login{}: esecuzione della procedura di autenticazione all'interno della rete Ethereum; 
-	\item \signup{}: creazione di un nuovo wallet all'interno della rete Ethereum; 
+	\item \login{}: esecuzione della procedura di autenticazione all'interno della rete Ethereum\ped{\textit{G}}; 
+	\item \signup{}: creazione di un nuovo wallet\ped{\textit{G}} all'interno della rete Ethereum\ped{\textit{G}}; 
 	\item \logout{}: esecuzione del logout dalla propria utenza; 
 	\item \whoami{}: visualizzazione dell'indirizzo associato all'utenza corrente; 
 	\item \lista{}: elenco di tutte le funzioni disponibili all'interno della piattaforma \NomeProgetto{}; 
-	\item \deploy{}: esecuzione del deploy di una determinata funzione;  
+	\item \deploy{}: esecuzione del deploy\ped{\textit{G}} di una determinata funzione;  
 	\item \run{}: esecuzione di una funzione e visualizzazione del relativo risultato; 
 	\item \edit{}: permette di modificare le informazioni associate ad una funzione; 
 	\item \info{} visualizzazione di una descrizione dettagliata di una determinata funzione; 
@@ -57,12 +57,12 @@ I comandi messi a disposizione da \textit{Etherless-cli} devono mostrare a scher
 \subsubsection{Ambienti di esecuzione}
 Viene inoltre richiesto che il progetto possa funzionare nei seguenti ambienti di esecuzione: 
 	\begin{itemize}
-		\item \textbf{Locale:} viene simulata una rete Ethereum all'interno della macchina locale, per tale scopo può essere utilizzata la rete Ethereum  testrpc messa a disposizione da Truffle; 
+		\item \textbf{Locale:} viene simulata una rete Ethereum\ped{\textit{G}} all'interno della macchina locale, per tale scopo può essere utilizzata la rete Ethereum\ped{\textit{G}} TestRPC\ped{\textit{G}} messa a disposizione da Truffle\ped{\textit{G}}; 
 		\item \textbf{Test:} ambiente di test, in cui vengono eseguiti i test di verifica; la rete può coincidere con quella usata in ambiente locale; 
-		\item \textbf{Staging:} ambiente pubblicamente accessibile, per tale scopo può essere usata la testnet Ropsten di Ethereum;
-		\item \textbf{Produzione:} non richiesto, ma il progetto deve essere pronto per la produzione. In questo caso si fa riferimento alla Ethereum mainnet. 
+		\item \textbf{Staging:} ambiente pubblicamente accessibile, per tale scopo può essere usata la testnet Ropsten\ped{\textit{G}} di Ethereum\ped{\textit{G}};
+		\item \textbf{Produzione:} non richiesto, ma il progetto deve essere pronto per la produzione. In questo caso si fa riferimento alla Ethereum\ped{\textit{G}} mainnet. 
 	\end{itemize}
 
 \subsubsection{Vincoli generali}
-L'utente, per usufruire del servizio, deve possedere una connessione internet e aver installato Node.js e il modulo relativo a \textit{Etherless-cli}. \\ 
-Per la gestione del servizio, e quindi l'esecuzione di \textit{Etherless-server}, oltre ai requisiti già indicati è necessario avere un'utenza AWS e aver completato correttamente la relativa configurazione. 
+L'utente, per usufruire del servizio, deve possedere una connessione internet e aver installato Node.js\ped{\textit{G}} e il modulo\ped{\textit{G}} relativo a \textit{Etherless-cli}. \\ 
+Per la gestione del servizio, e quindi l'esecuzione di \textit{Etherless-server}, oltre ai requisiti già indicati è necessario avere un'utenza AWS\ped{\textit{G}} e aver completato correttamente la relativa configurazione. 
