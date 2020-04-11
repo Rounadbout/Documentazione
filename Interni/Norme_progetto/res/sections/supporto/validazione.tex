@@ -1,0 +1,42 @@
+\subsection{Validazione}
+    \subsubsection{Descrizione}
+      Il processo di validazione stabilisce se il prodotto\ped{\textit{G}} soddisfa i requisiti richiesti, eseguendo un test completo sul sistema. Di conseguenza va eseguito in seguito al processo di verifica, il quale predispone il software per l'esecuzione di tale test. La definizione dei test da eseguire è di competenza dei Progettisti, mentre la loro esecuzione è compito dei Verificatori, che sono tenuti ad interpretarne e documentarne i risultati.
+    \subsubsection{Attività}
+      \subsubsubsection{Pianificazione}
+      Prerequisito per l'adeguata gestione del processo di validazione è un'adeguata pianificazione. Tale pianificazione dovrebbe focalizzarsi principalmente su:
+      \begin{itemize}
+      	\item oggetti sottoposti a validazione;
+      	\item operazioni di validazione da eseguire;
+      	\item risorse, responsibilità e gestione delle scadenze legate alla pianificazione;
+      	\item procedure standardizzate per l'inoltro della documentazione risultante a Proponente\ped{\textit{G}} e Committente\ped{\textit{G}}.
+      \end{itemize}
+      \subsubsubsection{Test di sistema [TS]}
+      Già precedentemente descritti nella sezione \textsection3.4.2.2.
+      \subsubsubsection{Test di accettazione [TA]}
+      Nel processo di validazione viene eseguito il test di accettazione (detto anche collaudo), ovvero un test molto simile a quello di sistema, ma eseguito in collaborazione con il Committente\ped{\textit{G}}. Questo test, nello specifico, è mirato a accertare e confermare il soddisfacimento dei requisiti specificati nel capitolato\ped{\textit{G}} e analizzati nel documento "\AdR{}". Tali test vengono rappresentati con la seguente struttura: \\
+      \begin{center}
+      	\textbf{TA[Importanza][Tipologia][Codice].}
+      \end{center}     
+      Dove:
+      \begin{itemize}
+      	\item{\textbf{Importanza}: indica il grado di importanza del requisito sotto test ai fini del progetto. Può assumere i valori:}
+      	\begin{itemize}
+      		\item{\textbf{1}: per un requisito obbligatorio;}
+      		\item{\textbf{2}: per un requisito desiderabile;}
+      		\item{\textbf{3}: per un requisito opzionale.}
+      	\end{itemize}
+      	
+      	\item{\textbf{Tipologia}: rappresenta la classe a cui appartiene il requisito sotto test. Può assumere i valori:}
+      	\begin{itemize}
+      		\item{\textbf{F}: funzionale;}
+      		\item{\textbf{P}: prestazionale;}
+      		\item{\textbf{Q}: qualitativo;}
+      		\item{\textbf{V}: vincolo.}
+      	\end{itemize}
+      	
+      	\item{\textbf{Codice}: identificatore univoco del requisito sotto test}.
+      \end{itemize}
+    \subsubsection{Metriche}
+    Un'accurata descrizione delle metriche di qualità implementate dal gruppo è presente all'interno del documento \PdQ{} 1.0.0.
+    \subsubsection{Strumenti}
+    Non sono attualmente stati individuati strumenti per l'attuazione dei test di sistema ed accettazione.
