@@ -6,23 +6,23 @@
     \subsubsection{Attività}
       \subsubsubsection{Analisi}
         \subsubsubsection*{Analisi statica}
-          L'Analisi statica riguarda sia la documentazione che il codice, e valuta la conformità alle norme stabilite e la sua correttezza formale, senza l'esecuzione del prodotto\ped{\textit{G}} software. Questo tipo di analisi, si serve di metodi formali (implementati tramite macchine) e metodi manuali (implementati solo per prodotti\ped{\textit{G}} semplici).\\ I metodi manuali sono:
+          L'analisi statica riguarda sia la documentazione che il codice e valuta la conformità alle norme stabilite e la sua correttezza formale, senza l'esecuzione del prodotto\ped{\textit{G}} software. Questo tipo di analisi si serve di metodi formali (implementati tramite macchine) e metodi manuali (implementati solo per prodotti\ped{\textit{G}} semplici).\\ I metodi manuali sono:
           \begin{itemize}
-            \item \textbf{walkthrough:} analisi dei documenti (o diversi file) nella loro interezza, per ricercare eventuali difetti identificati da un Verificatore, che andranno eventualmente corretti dallo sviluppatore (o redattore\ped{\textit{G}} del documento). Nel caso di semplici modifiche o correzioni potrà intervenire direttamente il Verificatore;
+            \item \textbf{walkthrough:} analisi dei documenti (o diversi file) nella loro interezza, per ricercare eventuali difetti identificati da un Verificatore, che andranno eventualmente corretti dallo Sviluppatore (o redattore\ped{\textit{G}} del documento). Nel caso di semplici modifiche o correzioni potrà intervenire direttamente il Verificatore;
             \item \textbf{inspection:} analisi mirata dell'oggetto di verifica da parte di un Verificatore, che utilizza delle liste di controllo per cercare difetti specifici in sezioni specifiche. Alcuni errori comuni sono elencati di seguito:
               \begin{itemize}
                 \item formato di date (YYYY-MM-DD);
                 \item formato di elenchi puntati (punteggiatura alla fine di ogni elemento ";" o ".");
-                \item stile del testo per termini particolari (es. Termini in corsivo);
+                \item stile del testo per termini particolari (es. termini in corsivo);
                 \item tempo verbale (il presente è sempre preferibile).
               \end{itemize}
           \end{itemize}
 
         \subsubsubsection*{Analisi dinamica}
-          L'Analisi dinamica richiede l'esecuzione del prodotto\ped{\textit{G}} software e viene effettuata tramite una suite di test, che garantisce nel complesso la verifica del prodotto\ped{\textit{G}} stesso.
+          L'analisi dinamica richiede l'esecuzione del prodotto\ped{\textit{G}} software e viene effettuata tramite una suite di test, che garantisce nel complesso la verifica del prodotto\ped{\textit{G}} stesso.
 
       \subsubsubsection{Test}
-        Sono parte costituente dell'Analisi dinamica e hanno lo scopo di verificare il corretto funzionamento del codice. I test, per poter essere considerati ben scritti, devono essere:
+        Sono parte costituente dell'analisi dinamica e hanno lo scopo di verificare il corretto funzionamento del codice. I test, per poter essere considerati ben scritti, devono essere:
         \begin{itemize}
           \item \textbf{Ripetibili}, quindi devono specificare:
             \begin{itemize}
@@ -69,8 +69,8 @@
 				\item{\textbf{formula: }} $ CC = \displaystyle\frac{\#linee\_di\_codice\_eseguite\_dal\_test}{\#linee\_di\_codice\_totali}\times100$;
 				\item{\textbf{risultato}}: il risultato è compreso tra 0.0\% e 100.0\%, in particolare: 
 					\begin{itemize}
-						\item se il risultato è pari a 0.0\%, allora non sono presenti test all'interno dell'applicativo; 
-						\item se il risultato è pari a 100.0\%, allora i test coprono in maniera completa il codice che costituisce l'applicativo. 
+						\item se il risultato è pari a 0\%, allora non sono presenti test all'interno dell'applicativo; 
+						\item se il risultato è pari a 100\%, allora i test coprono in maniera completa il codice che costituisce l'applicativo. 
 					\end{itemize} 
 			\end{itemize}
 
