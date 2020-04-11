@@ -1,0 +1,59 @@
+ 
+% SOSTITUIRE "PATH" CON IL PERCORSO CHE PERMETTE DI ARRIVARE ALLA CARTELLA "Latex"
+
+\documentclass[a4paper]{article}
+
+\input{../../Latex/common_commands.tex}
+\input{config/commands.tex}
+\input{../../Latex/configs.tex}
+
+\usepackage{array}
+\newcolumntype{C}{>{\centering\arraybackslash}p{11.28cm}}
+
+\begin{document}
+
+	% copertina 
+	\input{../../Latex/copertina.tex}
+	
+	% diario delle modifiche 
+	\input{./res/sections/changelog.tex}
+	\pagebreak
+	
+	% indice 
+	\tableofcontents 
+	\pagebreak
+	
+	% lista delle figure
+	\listoffigures
+	\pagebreak
+	
+	% lista delle tabelle 
+	\listoftables
+	\pagebreak
+		
+	% sezioni 
+	\input{./res/sections/01-Introduzione.tex}
+	\pagebreak
+	
+	\input{./res/sections/02-AnalisiRischi.tex}
+	\pagebreak
+	
+	\input{./res/sections/03-ModelloSviluppo.tex}
+	\pagebreak
+	
+	\input{./res/sections/04-Pianificazione.tex}
+	\pagebreak
+	
+	\input{./res/sections/05-Preventivo.tex}
+	\pagebreak
+	
+	\input{./res/sections/06-Consuntivo_PreventivoFinire.tex}
+	\pagebreak
+	
+	\input{./res/sections/AppendiceA-RiscontroRischi.tex}
+	\pagebreak
+	
+	\input{./res/sections/AppendiceB-Organigramma.tex}
+	\pagebreak
+	
+\end{document}
