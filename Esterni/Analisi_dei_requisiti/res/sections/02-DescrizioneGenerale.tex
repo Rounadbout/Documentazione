@@ -29,16 +29,16 @@ Nello specifico:
 \subsection{Analisi della struttura}
 Il prodotto\ped{\textit{G}} si divide nelle seguenti parti: 
 \begin{itemize}
-	\item \textbf{Etherless-cli:} interfaccia a linea di comando tramite cui i vari utenti della piattaforma interagiscono con \textit{Etherless}; 
-	\item \textbf{Etherless-smart:} insieme di smart-contract che si occupano della gestione della comunicazione tra \textit{Etherless-cli} ed \textit{Etherless-server} e del pagamento richiesto per l'esecuzione delle funzioni; 
-	\item \textbf{Etherless-server:} si occupa di ascoltare gli eventi trasmessi da \textit{Etherless-smart} e di avviare l'esecuzione delle funzioni così richieste. I risultati ottenuti vengono inviati tramite un ulteriore evento nella blockchain\ped{\textit{G}} e mostrati all'utente attraverso \textit{Etherless-cli};  
+	\item \textbf{Etherless-cli}\ped{\textit{G}}: interfaccia a linea di comando tramite cui i vari utenti della piattaforma interagiscono con \textit{Etherless}; 
+	\item \textbf{Etherless-smart:} insieme di smart-contract che si occupano della gestione della comunicazione tra \textit{Etherless-cli}\ped{\textit{G}} ed \textit{Etherless-server} e del pagamento richiesto per l'esecuzione delle funzioni; 
+	\item \textbf{Etherless-server:} si occupa di ascoltare gli eventi trasmessi da \textit{Etherless-smart} e di avviare l'esecuzione delle funzioni così richieste. I risultati ottenuti vengono inviati tramite un ulteriore evento nella blockchain\ped{\textit{G}} e mostrati all'utente attraverso \textit{Etherless-cli}\ped{\textit{G}}; .
 \end{itemize}
 
 \subsubsection{Comandi disponibili}
-\textit{Etherless-cli} mette a disposizione dell'utente i seguenti comandi: 
+\textit{Etherless-cli}\ped{\textit{G}} mette a disposizione dell'utente i seguenti comandi: 
 \begin{itemize}
 	\item \init{}: avvio dell'applicativo e visualizzazione guida introduttiva; 
-	\item \help{}: visualizzazione della descrizione completa di un comando messo a disposizione da \textit{Etherless-cli}; 
+	\item \help{}: visualizzazione della descrizione completa di un comando messo a disposizione da \textit{Etherless-cli}\ped{\textit{G}}; 
 	\item \login{}: esecuzione della procedura di autenticazione all'interno della rete Ethereum\ped{\textit{G}}; 
 	\item \signup{}: creazione di un nuovo wallet\ped{\textit{G}} all'interno della rete Ethereum\ped{\textit{G}}; 
 	\item \logout{}: esecuzione del logout dalla propria utenza; 
@@ -50,9 +50,9 @@ Il prodotto\ped{\textit{G}} si divide nelle seguenti parti:
 	\item \info{} visualizzazione di una descrizione dettagliata di una determinata funzione; 
 	\item \search{}: elenco delle funzioni con nome contenente un termine inserito; 
 	\item \delete{}: eliminazione di una determinata funzione;
-	\item \history{}: visualizzazione della cronologia di esecuzione dell'utente corrente;  
+	\item \history{}: visualizzazione della cronologia di esecuzione dell'utente corrente. 
 \end{itemize}
-I comandi messi a disposizione da \textit{Etherless-cli} devono mostrare a schermo i relativi risultati o eventuali errori; non è prevista la visualizzazione di messaggi che notificano all'utente la corretta esecuzione del comando. 
+I comandi messi a disposizione da \textit{Etherless-cli}\ped{\textit{G}} devono mostrare a schermo i relativi risultati o eventuali errori; non è prevista la visualizzazione di messaggi che notificano all'utente la corretta esecuzione del comando. 
 
 \subsubsection{Ambienti di esecuzione}
 Viene inoltre richiesto che il progetto possa funzionare nei seguenti ambienti di esecuzione: 
@@ -64,5 +64,5 @@ Viene inoltre richiesto che il progetto possa funzionare nei seguenti ambienti d
 	\end{itemize}
 
 \subsubsection{Vincoli generali}
-L'utente, per usufruire del servizio, deve possedere una connessione internet e aver installato Node.js\ped{\textit{G}} e il modulo\ped{\textit{G}} relativo a \textit{Etherless-cli}. \\ 
+L'utente, per usufruire del servizio, deve possedere una connessione internet e aver installato Node.js\ped{\textit{G}} e il modulo\ped{\textit{G}} relativo a \textit{Etherless-cli}\ped{\textit{G}}. \\ 
 Per la gestione del servizio, e quindi l'esecuzione di \textit{Etherless-server}, oltre ai requisiti già indicati è necessario avere un'utenza AWS\ped{\textit{G}} e aver completato correttamente la relativa configurazione. 
