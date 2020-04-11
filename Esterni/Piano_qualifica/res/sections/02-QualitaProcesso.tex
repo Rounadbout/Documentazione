@@ -22,7 +22,7 @@ Le metriche illustrate nel seguente documento presentano la struttura:
 			\subsubsubsection*{Percentuale dei Requisiti Obbligatori Soddisfatti (PROS)}
 			È un valore percentuale che indica la quantità di requisiti obbligatori adempiti nel corso del progetto.
 		\begin{itemize}
-			\item{misurazione: $PROS = \displaystyle\frac{\#requisiti\_obbligatori\_soddisfatti}{\#requisti\_obbligatori\_totali} \time 100$;}
+			\item{misurazione: $PROS = \displaystyle\frac{\#requisiti\_obbligatori\_soddisfatti}{\#requisti\_obbligatori\_totali} \times 100$;}
 			\item{valore minimo accettabile: 100\%;}
 			\item{valore preferibile: 100\%.}
 		\end{itemize}
@@ -174,7 +174,7 @@ Le metriche illustrate nel seguente documento presentano la struttura:
 		\subsubsubsection*{Estimated at Completion (EAC)}
 		Equivale al BAC rivisto allo stato corrente del progetto, ovvero è la somma del costo sostenuto fino a quel momento e la stima del costo ancora da sostenere.
 		\begin{itemize}
-			\item{misurazione: EAC = AC + ETC;}
+			\item{misurazione: $EAC = AC + ETC$;}
 			\item{valore minimo accettabile: valore del preventivo con un errore massimo del 5\%, ovvero \textit{preventivo}-5\% $\leq$ \textit{BAC} $\leq$ \textit{preventivo}+5\%;}
 			\item{valore preferibile: pari al preventivo.}
 		\end{itemize}
@@ -190,7 +190,7 @@ Le metriche illustrate nel seguente documento presentano la struttura:
 		\subsubsubsection*{Planned Value (PV)}
 		Corrisponde al costo pianificato per realizzare le attività di progetto fino a quel momento.
 		\begin{itemize}
-			\item{misurazione: PV = \% di lavoro pianificato $\times$ BAC;}
+			\item{misurazione: $PV = \%lavoro\_pianificato \times BAC$;}
 			\item{valore minimo accettabile: $\geq$ 0;}
 			\item{valore preferibile: $\geq$ 0.}
 		\end{itemize}
@@ -206,7 +206,7 @@ Le metriche illustrate nel seguente documento presentano la struttura:
 		\subsubsubsection*{Earned Value (EV)}
 		Indica la quantità di lavoro compiuta al momento del calcolo, ovvero il valore prodotto dal progetto alla data corrente.
 		\begin{itemize}
-			\item{misurazione: EV =  \% di lavoro completato $\times$ BAC;}
+			\item{misurazione: $EV = \%lavoro\_completato \times BAC$;}
 			\item{valore minimo accettabile: $\geq$ 0;}
 			\item{valore preferibile: $\geq$ 0.}
 		\end{itemize}
@@ -215,7 +215,7 @@ Le metriche illustrate nel seguente documento presentano la struttura:
 		Misura l'andamento del budget nel corso di un progetto software. In particolare, la \textit{Cost Variance} è la differenza tra \textit{Earned Value} e \textit{Actual Cost}, ovvero tra ciò che si aveva pianificato di spendere e ciò che si è effettivamente speso nel corso del progetto.
 		Se la \textit{Cost Variance} ha valore negativo significa che si è \textit{over budget}, se è nulla si è \textit{on budget}, mentre se è positiva si è \textit{under budget}.
 		\begin{itemize}
-			\item{misurazione: CV = EV - AC;}
+			\item{misurazione: $CV = EV - AC$;}
 			\item{valore minimo accettabile: 0;}
 			\item{valore preferibile: > 0.}
 		\end{itemize}
@@ -224,7 +224,7 @@ Le metriche illustrate nel seguente documento presentano la struttura:
 		Indica lo stato di avanzamento di un progetto software rispetto alla schedulazione delle attività e viene calcolata mediante la differenza tra \textit{Earned Value} e \textit{Planned Value}.
 		Se la \textit{Schedule Variance} ha valore negativo significa che lo stato di avanzamento del progetto è in ritardo rispetto alla pianificazione, se è nulla lo stato di avanzamento del progetto è nei tempi previsti, mentre se è positiva significa che si è in anticipo rispetto alla pianificazione.
 		\begin{itemize}
-			\item{misurazione: SV = EV - PV;}
+			\item{misurazione: $SV = EV - PV$;}
 			\item{valore minimo accettabile: 0;}
 			\item{valore preferibile: > 0.}
 		\end{itemize}
