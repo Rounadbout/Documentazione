@@ -1,0 +1,55 @@
+\documentclass[a4paper]{article}
+
+\input{../../Latex/common_commands.tex}
+\input{config/commands.tex}
+\input{../../Latex/configs.tex}
+
+\begin{document}
+
+	% copertina
+	\input{../../Latex/copertina.tex}
+
+	% diario delle modifiche
+	\input{./res/sections/changelog.tex}
+	\pagebreak
+
+	% indice
+	\tableofcontents
+	\pagebreak
+	
+	%indice delle tabelle
+	\listoftables
+	\pagebreak
+	
+	%indice delle figure
+	\listoffigures
+	\pagebreak
+
+	% sezioni
+	\input{./res/sections/01-Intro.tex}
+	\pagebreak
+
+	\input{./res/sections/02-QualitaProcesso.tex}
+	\pagebreak
+	
+	\input{./res/sections/03-QualitaProdotto.tex}
+	\pagebreak
+	
+	\input{./res/sections/04-TestVerifica.tex}
+	\pagebreak
+	
+	\input{./res/sections/05-TestValidazione.tex}
+	\pagebreak
+	
+	%appendici
+	\appendix
+	\input{./res/sections/A-StandardQualita.tex}
+	\pagebreak
+	
+	\input{./res/sections/B-ValutazioniMiglioramento.tex}
+	\pagebreak
+	
+	\input{./res/sections/C-ResocontoVerifica.tex}
+	\pagebreak
+
+\end{document}
