@@ -208,7 +208,7 @@
     	\end{itemize}
     	      	
     	\subsubsection*{Diagrammi dei package}
-    	Ogni package deve essere rappresentato tramite un rettangolo con un'etichetta per il nome, che dovrà essere in inglese e scritto in minuscolo. Ogni package può contenere al suo interno altri package o classi. \\
+    	Ogni package deve essere rappresentato tramite un rettangolo con un'etichetta per il nome, in inglese e scritta in minuscolo. Ogni package può contenere al suo interno altri package o classi. \\
     	Le dipendenze tra package devono essere indicate con frecce tratteggiate che dovrebbero seguire tutte le medesima direzione, in modo da evitare la creazione di dipendenze cicliche. 
     	
     	\subsubsection*{Diagrammi di attività}
@@ -242,7 +242,7 @@
     		\item{\textbf{messaggio di distruzione}}: freccia piena sormontata da \texttt{<<destroy>>}, indica la distruzione di un oggetto.
     	\end{itemize}
  
-    	Per modellare in maniera più dettagliata le interazioni tra gli oggetti si consiglia l'utilizzo dei frame d'interazione. Ognuno di tali frame è caratterizzato dalle seguenti proprietà: 
+    	\noindent Per modellare in maniera più dettagliata le interazioni tra gli oggetti si consiglia l'utilizzo dei frame d'interazione. Ognuno di tali frame è caratterizzato dalle seguenti proprietà: 
     	\begin{itemize}
     		\item{\textbf{guardia}}: indica la condizione di attivazione del frame; 
     		\item{\textbf{etichetta}}: viene usata per indicare la tipologia del frame d'interazione considerato. Le tipologie possibili sono: 
@@ -289,7 +289,7 @@
    	\noindent La scrittura del codice dovrà inoltre perseguire gli obiettivi di qualità stabiliti nel documento \textit{\PdQ{} v1.0.0}, in modo da garantire una buona qualità del codice. 
     	\subsubsection*{Stile di codifica}     
    \begin{itemize}
-         	\item{\textbf{indentazione}: i blocchi innestati devono essere correttamente indentati, usando per ciascun livello di indentazione quattro (4) spazi, fatta eccezione per i commenti. Ogni programmatore dovrà configurare adeguatamente il proprio IDE\ped{\textit{G}} al fine di rispettare tale norma;}
+         \item{\textbf{indentazione}: i blocchi innestati devono essere correttamente indentati, usando per ciascun livello di indentazione quattro (4) spazi, fatta eccezione per i commenti. Ogni programmatore dovrà configurare adeguatamente il proprio IDE\ped{\textit{G}} al fine di rispettare tale norma;}
 		\item{\textbf{parentesizzazione}: le parentesi di delimitazione dei costrutti vanno inserite in linea e non al di sotto di essi;}
 		\item{\textbf{lunghezza dei metodi}: ove possibile, preferire metodi brevi (poche righe di codice) e che assolvano il minor numero di compiti possibile;}
 		\item{\textbf{univocità dei nomi}: classi, variabili e metodi devono avere un nome univoco ed esplicativo (nome parlante), al fine di evitare ambiguità e consentire ad eventuali lettori di comprendere lo scopo di quel preciso elemento, anche senza conoscenze informatiche pregresse;}
@@ -300,7 +300,7 @@
         \item{\textbf{ricorsione}: l'uso della ricorsione va evitato quanto più possibile.}
 	\end{itemize}
 	
-	\noindent I componenti \textit{Etherless-cli} ed \textit{Etherless-server} dovranno essere codificati in TypeScript\ped{\textit{G}}, seguendo la Airbnb\ped{\textit{G}} JavaScript\ped{\textit{G}} Style Guide.. 
+	\noindent I componenti \textit{Etherless-cli} ed \textit{Etherless-server} dovranno essere codificati in TypeScript\ped{\textit{G}}, seguendo la Airbnb\ped{\textit{G}} JavaScript\ped{\textit{G}} Style Guide. 
 	Per quanto riguarda \textit{Etherless-smart}, questo dovrà essere sviluppato in Solidity\ped{\textit{G}}, seguendo la relativa style guide presente nel sito ufficiale. 
 	
 \subsubsection{Metriche} 
@@ -309,7 +309,7 @@
 		\begin{itemize}
 			\item{\textbf{Descrizione}}: la metrica indica la percentuale di requisiti obbligatori soddisfatti sui requisiti totali; 
 			\item{\textbf{unità di misura}}: la metrica viene espressa in percentuale; 
-			\item{\textbf{formula}}: $ PROS = \displaystyle\frac{\#requisiti\_obbligatori\_soddisfatti}{\#requisti\_obbligatori\_totali}$; 
+			\item{\textbf{formula}}: $ PROS = \displaystyle\frac{\#requisiti\_obbligatori\_soddisfatti}{\#requisti\_obbligatori\_totali}\times100x$; 
 			\item{\textbf{risultato}}: il risultato è compreso tra 0\% e 100\%, in particolare: 
 				\begin{itemize}
 					\item una valore inferiore al 100\%, indica la presenza di alcuni requisiti obbligatori non ancora soddisfatti; 
@@ -395,13 +395,13 @@
 \subsubsection{Strumenti}
 Di seguito vengono elencati gli strumenti usati dal gruppo durante il processo di sviluppo:
 	\subsubsubsection{ESLint}
-	ESLint\ped{\textit{G}} è uno strumento di analisi statica per identificare pattern problematici all'interno di codice JavaScript\ped{\textit{G}}. Le regole in ESLint\ped{\textit{G}} sono configurabili; è inoltre possibile descrivere e utilizzare regole personalizzate. ESLint\ped{\textit{G}} controlla sia la code quality che eventuali problemi riguardanti lo stile di codifica.
+	ESLint\ped{\textit{G}} è uno strumento di analisi statica per identificare pattern problematici all'interno di codice JavaScript\ped{\textit{G}}. Tale strumento permette inoltre di descrivere e utilizzare regole personalizzate. ESLint\ped{\textit{G}} controlla sia la code quality che eventuali problemi riguardanti lo stile di codifica.
 	\begin{center}
 		\url{https://eslint.org/}
 	\end{center}
 	
 	\subsubsubsection{Draw.io}	
-	Per la creazione dei diagrammi dei casi d'uso\ped{\textit{G}} è stato scelto Draw.io, a causa della sua facile integrazione con Google Drive e velocità e semplicità di creazione dei diagrammi di interesse.  
+	Per la creazione dei diagrammi dei casi d'uso\ped{\textit{G}} è stato scelto Draw.io; esso permette  una facile integrazione con Google Drive ed è già conosciuto dalla maggior parte dei membri del gruppo. 
 	\begin{center}
 		\url{https://app.diagrams.net/}
 	\end{center}
@@ -417,7 +417,7 @@ Di seguito vengono elencati gli strumenti usati dal gruppo durante il processo d
 		\item completa compatibilità con Windows, Linux e macOs: in questo modo tutti i membri del gruppo possono riferirsi ad un unico strumento senza essere vincolati dal sistema operativo da loro utilizzato; 
 		\item supporto per sistemi di debugging; 
 		\item integrazione del sistema di versionamento Git\ped{\textit{G}}; 
-		\item numerose estensioni facilmente installabili in grado di coprire la maggior parte delle necessita espresse dal gruppo. 
+		\item numerose estensioni facilmente installabili in grado di coprire la maggior parte delle necessita del gruppo. 
 	\end{itemize} 
 	\begin{center}
 		\url{https://code.visualstudio.com/}

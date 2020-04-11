@@ -167,7 +167,7 @@
 		\begin{itemize}
 			\item \textbf{Descrizione}: rappresenta il budget stimato per la realizzazione del progetto, aggiornato allo stato attuale, con quindi conoscenza dei costi già sostenuti.
 			\item \textbf{unità di misura}: la metrica è espressa tramite un numero intero;
-			\item \textbf{formula}: EAC = AC + ETC;
+			\item \textbf{formula}: $EAC = AC + ETC$;
 			\item \textbf{risultato}: l'obiettivo è ottenere un valore pari a quello del preventivo, viene accettato un errore massimo di $\pm{}5\%$ del valore preventivato. Un errore maggiore di tale valore indica un'inadeguatezza del preventivo stilato o della gestione delle risorse, si rende quindi necessaria una revisione di quest'ultimi.
 		\end{itemize}
 		\subsubsubsection*{Estimated to Complete (ETC)}
@@ -180,7 +180,7 @@
 		\begin{itemize}
 			\item \textbf{Descrizione}: costo pianificato per la realizzazione delle attività di progetto fino a quel momento;
 			\item \textbf{unità di misura}: la metrica è espressa tramite un numero di giorni o di \euro;
-			\item \textbf{formula}: PV = \% di lavoro pianificato $\cdot{}$ BAC;
+			\item \textbf{formula}: $PV = \%lavoro\_pianificato \times BAC$;
 			\item \textbf{risultato}: si attende un valore che sia maggiore o uguale a 0. In caso contrario si presume sia presente un errore nel calcolo ed è necessaria una sua reiterazione.
 		\end{itemize}
 		\subsubsubsection*{Actual Cost (AC)}
@@ -193,21 +193,21 @@
 		\begin{itemize}
 			\item \textbf{Descrizione}: valore totale delle attività portate a termine al momento del calcolo;
 			\item \textbf{unità di misura}: la metrica è espressa tramite un numero di giorni o di \euro;
-			\item \textbf{formula}: EV = \% di lavoro completato $\cdot{}$ BAC;
+			\item \textbf{formula}: $EV = \%lavoro\_completato \times BAC$;
 			\item \textbf{risultato}: ci si aspetta di ottenere un valore maggiore o uguale di 0. In caso contrario si presume sia presente un errore nel calcolo ed è necessaria una sua reiterazione.
 		\end{itemize}
 		\subsubsubsection*{Cost Variance (CV)}
 		\begin{itemize}
 			\item \textbf{Descrizione}: è un indicatore di produttività o efficienza nella gestione del progetto. Stabilisce se il budget effettivamente speso è maggiore, uguale o minore, rispetto a quanto si era previsto di spendere;
 			\item \textbf{unità di misura}: la metrica è espressa tramite un numero di giorni o di \euro;
-			\item \textbf{formula}: CV = EV - AC;
+			\item \textbf{formula}: $CV = EV - AC$;
 			\item \textbf{risultato}: si attende un valore uguale o maggiore di zero, ad indicare che il progetto produce con efficienza pari o maggiore rispetto a quanto pianificato. In caso questo valore sia negativo, significa che ci si trova in una situazione \textit{over budget}, ed è necessario rivedere la gestione delle risorse nel progetto.
 		\end{itemize}
 		\subsubsubsection*{Schedule Variance (SV)}
 		\begin{itemize}
 			\item \textbf{Descrizione}: è un indicatore di efficacia nei confronti del Proponente\ped{\textit{G}} e della capacità del gruppo di mantenersi in linea con la pianificazione temporale delle attività del progetto.
 			\item \textbf{unità di misura}: la metrica è espressa tramite un numero di giorni o di \euro;
-			\item \textbf{formula}: SV = EV - PV;
+			\item \textbf{formula}: $SV = EV - PV$;
 			\item \textbf{risultato}: l'obiettivo è ottenere un valore uguale o maggiore di zero, ad indicare una produzione in pari o in anticipo rispetto alla pianificazione temporale. Un valore negativo rappresenta un ritardo nella tabella di marcia e la necessità di ottimizzare eventuali attività successive, per poter tornare a lavorare coerentemente al piano stabilito.
 		\end{itemize}
 		\subsubsection{Strumenti}
