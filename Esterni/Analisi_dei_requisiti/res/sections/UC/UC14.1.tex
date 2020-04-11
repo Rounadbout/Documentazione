@@ -1,0 +1,13 @@
+\subsubsection{UC14.1 - Inserimento percorso file}
+\begin{itemize}
+	\item \textbf{Attori primari:} \us{};
+	\item \textbf{Descrizione:} al fine di portare a termine il processo di deploy\ped{\textit{G}} l’utente inserisce il percorso del file contenente la funzione che si vuole pubblicare;  
+	\item \textbf{Scenario principale:} l'utente inserisce il percorso del file contenente la funzione che si vuole pubblicare; 
+	\item \textbf{Estensioni:} 
+	\begin{itemize}
+		\item \textbf{UC14.4:} l’utente inserisce un percorso di file non esistente. Viene di conseguenza visualizzato un messaggio di errore;
+		\item \textbf{UC14.5:} l’utente inserisce un percorso di file il cui formato non è supportato dal sistema. Viene di conseguenza visualizzato un messaggio di errore. 
+	\end{itemize}
+	\item \textbf{Precondizione:} l’utente ha digitato il comando \deploy{}; 
+	\item \textbf{Postcondizione:} il campo \texttt{file\_path} contiene il percorso del file contenente la funzione che si vuole pubblicare. 
+\end{itemize}

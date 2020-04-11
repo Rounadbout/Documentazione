@@ -1,0 +1,12 @@
+\subsubsection{UC14.3 - Inserimento descrizione}
+\begin{itemize}
+	\item \textbf{Attori primari:} \us{};
+	\item \textbf{Descrizione:} al fine di portare a termine il processo di deploy\ped{\textit{G}} l’utente inserisce la descrizione della funzione che si vuole pubblicare;  
+	\item \textbf{Scenario principale:} l’utente inserisce una descrizione della funzione che si vuole pubblicare;  
+	\item \textbf{Estensioni:} 
+	\begin{itemize}
+		\item \textbf{UC14.8:} l’utente inserisce una descrizione troppo lunga. Viene di conseguenza visualizzato un messaggio di errore. 
+	\end{itemize}
+	\item \textbf{Precondizione:}  l’utente ha digitato il comando \deploy{} seguito dai campi \texttt{file\_path} e \texttt{function\_name};
+	\item \textbf{Postcondizione:} il campo \texttt{desc} contiene una descrizione della funzione che si vuole pubblicare.
+\end{itemize}
