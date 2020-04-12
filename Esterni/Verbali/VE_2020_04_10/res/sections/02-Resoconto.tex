@@ -1,0 +1,30 @@
+\section{Verbale}
+\subsection{Domande sulle tecnologie proposte nel capitolato C2 - \NomeProgetto}
+I membri del gruppo hanno esposto una serie di domande volte a chiarire dei dubbi sulle tecnologie proposte nel capitolato\ped{\textit{G}}.
+Di seguito si trova un riassunto delle informazioni estrapolate dalla discussione:
+\begin{description}
+	\item[Funzioni di visualizzazione delle informazioni:] è possibile esplorare diverse soluzioni a patto che non infrangano determinati vincoli: il modello non deve cambiare, la lettura delle informazioni ha costo gratuito a differenza della scrittura che invece ha un costo;
+	\item[Definizione di CLI:] la CLI poteva essere intesa come un applicativo a se oppure integrata nella shell, il proponente ha richiesto che fosse integrato nella shell similmente ad altre teconologie come git oppure serverless, non è stata richiesta interfaccia grafica;
+	\item[ESLint e configurazione]: è stato approvato l'uso della tecnologia ESLint, l'impostazione del supporto ad Airbnb e l'integrazione del modulo per Typescript ;
+	\item[Attività di etherless server:] etherless server è sempre in ascolto di eventi ed è stato chiesto se fosse necessario inserirlo in una istanza EC2 di Amazon. EC2 è stata considerata eccessiva come soluzione se pur possibile, è stata consigliata la ricerca di soluzioni alternative. 
+	\item[Funzionamento ambiente locale: ] l'ambiente locale funziona con Ganeshee oppure Infura, in caso di test lanciare il programma javascript su più shell;
+	\item[Indicazione ambiente di esecuzione:] la definizione dell ambiente e la segnalazione dello stesso all applicativo CLI può intraprendere diverse modalità, ad esempio: indicare l'ambiente da CLI, fare in modo che la cli mantenga uno stato con il problema di avere un enviroment alla volta oppure più semplicemente per ogni comando passare l'ambiente come parametro. Risulta necessario valutare la scelta più opportuna;	
+	\item[Funzionalità fornite da Serverless:] è stato consigliato l'utilizzo delle funzionalità fornite da serverless data l'integrazione con la tecnologia AWS Lambda evitando di ripartire da capo;
+	\item[Servizi di serverless:] serverless è una tecnologie che offre anche ulteriori servizi, ai fini del progetto però è necessario usare solo il framework serverless.;
+	\item[Deploy del codice:] esporre una lambda per il deploy può essere una strada da intraprendere ma deve essere in qualche modo protetta da possibili rischi legati alla sicurezza, cosa non banale e da risolvere in caso si intraprenda questa strada, la scelta dalla soluzione è libera con l'unico vincolo che il modello debba funzionare;
+\end{description}
+
+\subsection{Modalità di prosecuzione del progetto}
+In merito ai metodi con i quali affrontare il progetto è stato consigliato di procedere risolvendo prima i problemi più impegnativi:
+	\begin{enumerate}
+		\item come cli comunica con etherless;
+		\item come severless comunica con ehterless; 
+		\item come ehterless comunica con serverless. 
+	\end{enumerate}	
+	E' stato quindi proposto di fare un prototipo usa e getta per comprendere questi punti critici.
+	Inoltre è stato consigliato di porre particolare attenzione a determinati argomenti quali:
+	\begin{enumerate}
+		\item programmazione asincrona;
+		\item ascolto ed emissione di eventi;
+		\item funzionamento di ethereum.
+	\end{enumerate}
