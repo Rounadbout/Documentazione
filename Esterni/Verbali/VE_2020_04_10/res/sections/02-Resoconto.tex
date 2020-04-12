@@ -5,23 +5,23 @@ Di seguito si trova un riassunto delle informazioni estrapolate dalla discussion
 \begin{description}
 	\item[Funzioni di visualizzazione delle informazioni:] è possibile esplorare diverse soluzioni a patto che non infrangano determinati vincoli: il modello non deve cambiare, la lettura delle informazioni ha costo gratuito a differenza della scrittura che invece ha un costo;
 	\item[Definizione di CLI\ped{\textit{G}}:] la CLI\ped{\textit{G}} poteva essere intesa come un applicativo a se oppure integrata nella shell, il proponente ha richiesto che fosse integrato nella shell similmente ad altre tecnologie come Git\ped{\textit{G}} oppure Serverless\ped{\textit{G}}, non è stata richiesta interfaccia grafica;
-	\item[ESLint\ped{\textit{G}} e configurazione]: è stato approvato l'uso della tecnologia ESLint\ped{\textit{G}}, l'impostazione del supporto ad Airbnb\ped{\textit{G}} e l'integrazione del modulo per Typescript\ped{\textit{G}};
+	\item[ESLint\ped{\textit{G}} e configurazione:] è stato approvato l'uso della tecnologia ESLint\ped{\textit{G}}, l'impostazione del supporto ad Airbnb\ped{\textit{G}} e l'integrazione del modulo per Typescript\ped{\textit{G}};
 	\item[Attività di Etherless server:] Etherless server è sempre in ascolto di eventi\ped{\textit{G}} ed è stato chiesto se fosse necessario inserirlo in una istanza EC2 di Amazon. EC2 è stata considerata eccessiva come soluzione se pur possibile, è stata consigliata la ricerca di soluzioni alternative.
-	\item[Funzionamento ambiente locale: ] l'ambiente locale funziona con Ganeche oppure Infura, in caso di test lanciare il programma Javascript\ped{\textit{G}} su più shell;
-	\item[Indicazione ambiente di esecuzione:] la definizione dell ambiente e la segnalazione dello stesso all applicativo CLI\ped{\textit{G}} può intraprendere diverse modalità, ad esempio: indicare l'ambiente da CLI\ped{\textit{G}}, fare in modo che la cli mantenga uno stato con il problema di avere un enviroment alla volta oppure più semplicemente per ogni comando passare l'ambiente come parametro. Risulta necessario valutare la scelta più opportuna;
+	\item[Funzionamento ambiente locale: ] l'ambiente locale funziona con Ganache oppure Infura, in caso di test lanciare il programma Javascript\ped{\textit{G}} su più shell;
+	\item[Indicazione ambiente di esecuzione\ped{\textit{G}}:] la definizione dell ambiente e la segnalazione dello stesso all applicativo CLI\ped{\textit{G}} può intraprendere diverse modalità, ad esempio: indicare l'ambiente da CLI\ped{\textit{G}}, fare in modo che la CLI\ped{\textit{G}} mantenga uno stato con il problema di avere un enviroment alla volta oppure più semplicemente per ogni comando passare l'ambiente come parametro. Risulta necessario valutare la scelta più opportuna;
 	\item[Funzionalità fornite da Serverless\ped{\textit{G}}:] è stato consigliato l'utilizzo delle funzionalità fornite da Serverless\ped{\textit{G}} data l'integrazione con la tecnologia AWS\ped{\textit{G}} Lambda evitando di ripartire da capo;
 	\item[Servizi di Serverless\ped{\textit{G}}:] Serverless\ped{\textit{G}} è una tecnologie che offre anche ulteriori servizi, ai fini del progetto però è necessario usare solo il framework Serverless\ped{\textit{G}};
-	\item[Deploy del codice:] esporre una lambda per il deploy può essere una strada da intraprendere ma deve essere in qualche modo protetta da possibili rischi legati alla sicurezza, cosa non banale e da risolvere in caso si intraprenda questa strada, la scelta dalla soluzione è libera con l'unico vincolo che il modello debba funzionare.
+	\item[Deploy del codice:] esporre una lambda per il deploy\ped{\textit{G}} può essere una strada da intraprendere ma deve essere in qualche modo protetta da possibili rischi legati alla sicurezza, cosa non banale e da risolvere in caso si intraprenda questa strada, la scelta dalla soluzione è libera con l'unico vincolo che il modello debba funzionare.
 \end{description}
 
 \subsection{Modalità di prosecuzione del progetto}
 In merito ai metodi con i quali affrontare il progetto è stato consigliato di procedere risolvendo prima i problemi più impegnativi:
 	\begin{enumerate}
-		\item come cli comunica con Etherless;
+		\item come CLI\ped{\textit{G}} comunica con Etherless;
 		\item come Serverless\ped{\textit{G}} comunica con Etherless;
 		\item come Etherless comunica con Serverless\ped{\textit{G}}.
 	\end{enumerate}
-	É stato quindi proposto di fare un prototipo usa e getta per comprendere questi punti critici.
+	Il  Proponente ha consigliato di fare un prototipo usa e getta per comprendere questi punti critici.
 	Inoltre è stato consigliato di porre particolare attenzione a determinati argomenti quali:
 	\begin{enumerate}
 		\item programmazione asincrona;
