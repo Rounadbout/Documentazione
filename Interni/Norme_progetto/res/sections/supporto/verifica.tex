@@ -1,0 +1,80 @@
+\subsection{Verifica}
+    \subsubsection{Descrizione}
+	Il processo di Verifica determina se il prodotto\ped{\textit{G}} di un'attività sia conforme o meno alle specifiche e alle aspettative già confermate, individuando quindi possibili difetti nel software e nella documentazione, e garantendo prodotti\ped{\textit{G}} corretti e completi. \\
+	Il gruppo si impegna inoltre a garantire una verifica costante dei requisiti mantenendosi in stretto contatto con il Proponente\ped{\textit{G}}. 
+		
+    \subsubsection{Attività}
+      \subsubsubsection{Analisi}
+        \subsubsubsection*{Analisi statica}
+          L'analisi statica riguarda sia la documentazione che il codice e valuta la conformità alle norme stabilite e la sua correttezza formale, senza l'esecuzione del prodotto\ped{\textit{G}} software. Questo tipo di analisi si serve di metodi formali (implementati tramite macchine) e metodi manuali (implementati solo per prodotti\ped{\textit{G}} semplici).\\ I metodi manuali sono:
+          \begin{itemize}
+            \item \textbf{walkthrough:} analisi dei documenti (o diversi file) nella loro interezza, per ricercare eventuali difetti identificati da un Verificatore, che andranno eventualmente corretti dallo Sviluppatore (o redattore\ped{\textit{G}} del documento). Nel caso di semplici modifiche o correzioni potrà intervenire direttamente il Verificatore;
+            \item \textbf{inspection:} analisi mirata dell'oggetto di verifica da parte di un Verificatore, che utilizza delle liste di controllo per cercare difetti specifici in sezioni specifiche. Alcuni errori comuni sono elencati di seguito:
+              \begin{itemize}
+                \item formato di date (YYYY-MM-DD);
+                \item formato di elenchi puntati (punteggiatura alla fine di ogni elemento ";" o ".");
+                \item stile del testo per termini particolari (es. termini in corsivo);
+                \item tempo verbale (il presente è sempre preferibile).
+              \end{itemize}
+          \end{itemize}
+
+        \subsubsubsection*{Analisi dinamica}
+          L'analisi dinamica richiede l'esecuzione del prodotto\ped{\textit{G}} software e viene effettuata tramite una suite di test, che garantisce nel complesso la verifica del prodotto\ped{\textit{G}} stesso.
+
+      \subsubsubsection{Test}
+        Sono parte costituente dell'analisi dinamica e hanno lo scopo di verificare il corretto funzionamento del codice. I test, per poter essere considerati ben scritti, devono essere:
+        \begin{itemize}
+          \item \textbf{Ripetibili}, quindi devono specificare:
+            \begin{itemize}
+              \item l'ambiente di esecuzione\ped{\textit{G}};
+              \item l'input e l'output atteso;
+              \item metodi di interpretazione dei risultati.
+            \end{itemize}
+          \item \textbf{Automatizzati:} devono basarsi su strumenti che ne permettano l'esecuzione automatica, ne registrino i risultati e provvedano a notificare i soggetti ad essi interessati.
+        \end{itemize}
+        Esistono diversi tipi di test:
+        \begin{itemize}
+          \item \textbf{Test di unità}: verificano l'unità, cioè il più piccolo sottosistema possibile che può essere testato separatamente. L'approccio più comune al test di unità prevede la scrittura di driver\ped{\textit{G}} e stub\ped{\textit{G}}, dove il primo simula un'unità chiamante mentre il secondo un'unità chiamata. Tali test devono essere indicati nel seguente modo: 
+          \begin{center}
+          	\textbf{TU[id]}
+          \end{center}
+      	  dove \textit{id} rappresenta il codice identificativo crescente dell'unità da verificare. È responsabilità del singolo Programmatore scrivere i test delle unità più semplici da lui sviluppate. Nel caso in cui l'unità sia più complessa la scrittura del test di unità deve essere compiuta da un Verificatore. 
+        
+          \item \textbf{Test di integrazione}: test eseguiti per verificare che siano rispettati i contratti di interfaccia tra più moduli o sub-system. La forma più semplice di questo tipo di test prevede che le componenti vengano verificate in maniera incrementale, con l'aggiunta di altre unità o gruppi di unità corretti, fino ad arrivare al sistema completo. Tali test devono essere indicati nel seguente modo: 
+          \begin{center}
+          	\textbf{TI[id]}
+          \end{center}
+      		dove \textit{id} indica il codice identificativo crescente del componente da verificare. 
+         
+			\item \textbf{Test di sistema:} il sistema viene testato nella sua interezza e i  risultati confrontati con quanto richiesto dall'\AdR{}. In questo modo è possibile accertarsi delle caratteristiche del sistema e della copertura dei requisiti funzionali. Tali test devono essere indicati nel seguente modo: 
+			\begin{center}
+				\textbf{TS[id]}
+			\end{center}
+			dove \textit{id} rappresenta il codice identificativo crescente del componente da verificare. 
+         
+          \item \textbf{Test di regressione}: si effettua in seguito ad una modifica del sistema, in modo da controllare che essa non abbia compromesso le funzionalità già testate in precedenza. Un test di regressione consiste nella reiterazione dei test già esistenti sia per l'unità modifica sia per quelle che si relazionano con essa.
+        \end{itemize}
+
+	\subsubsection{Metriche}
+		\subsubsection*{Code coverage (CC)}
+			\begin{itemize}
+				\item{\textbf{Descrizione}}: la metrica CC indica la percentuale di righe di codice percorse durante il test rispetto alle linee di codice totali. A granularità più fine, la code coverage misura quattro aspetti: 
+					\begin{itemize}
+						\item{\textbf{statement coverage}}: percentuale di statement percorsi dai test; 
+						\item{\textbf{branch coverage}}: percentuale di diramazioni percorse dai test; 
+						\item{\textbf{function converage}}: percentuale di funzioni percorse dai test; 
+						\item{\textbf{line coverage}}: percentuale di righe di codice percorse dai test; 
+					\end{itemize} 
+				\item{\textbf{unità di misura}}: la metrica viene espressa tramite una percentuale;
+				\item{\textbf{formula: }} $ CC = \displaystyle\frac{\#linee\_di\_codice\_eseguite\_dal\_test}{\#linee\_di\_codice\_totali}\times100$;
+				\item{\textbf{risultato}}: il risultato è compreso tra 0.0\% e 100.0\%, in particolare: 
+					\begin{itemize}
+						\item se il risultato è pari a 0\%, allora non sono presenti test all'interno dell'applicativo; 
+						\item se il risultato è pari a 100\%, allora i test coprono in maniera completa il codice che costituisce l'applicativo. 
+					\end{itemize} 
+			\end{itemize}
+
+    \subsubsection{Strumenti}
+    \subsubsubsection{Verifica ortografica}
+    Per la verifica ortografica durante la redazione dei documenti viene utilizzato lo strumento integrato negli editor di testo scelti dai singoli componenti del gruppo. In questo modo, durante la fase di scrittura, è possibile individuare e prontamente correggere gli errori ortografici. 
+    

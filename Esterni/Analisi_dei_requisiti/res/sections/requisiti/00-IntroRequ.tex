@@ -1,0 +1,41 @@
+\noindent Ogni requisito è composto dai seguenti elementi: 
+\begin{itemize}
+	\item{\textbf{Codice identificativo}}: ogni codice identificativo è univoco e segue la seguente codifica: 
+		\begin{center}
+			\textbf{R[Importanza][Tipologia][Codice]}
+		\end{center}
+		Dove:
+		\begin{itemize}
+			\item{\textbf{Importanza}: indica il grado di importanza del requisito ai fini del progetto. Può assumere i valori:}
+			\begin{itemize}
+				\item{\textbf{1}: requisito obbligatorio ai fini del progetto, irrinunciabile per gli stakeholder;}
+				\item{\textbf{2}: requisito desiderabile: non strettamente necessario ai fini del progetto ma che porta valore aggiunto;}
+				\item{\textbf{3}: requisito opzionale, contrattabile più avanti nel progetto.}
+			\end{itemize}
+		
+			\item{\textbf{Tipologia}: classe a cui appartiene il requisito in questione. Può assumere i valori:}
+			\begin{itemize}
+				\item{\textbf{F}: funzionale;}
+				\item{\textbf{P}: prestazionale;}
+				\item{\textbf{Q}: qualitativo;}
+				\item{\textbf{V}: vincolo.}
+			\end{itemize}
+			
+			\item{\textbf{Codice}: identificatore univoco del requisito}.
+		\end{itemize}
+		
+		\noindent Il codice stabilito secondo la convenzione precedente, una volta associato ad un requisito, non può più essere modificato.
+
+	\item{\textbf{descrizione}}: breve descrizione del requisito, strutturata in maniera da evitare ambiguità; 
+		
+	\item{\textbf{classificazione}}: indica il grado di importanza del requisito considerato. Sebbene tale informazione sia già presente nell'identificativo, la sua ripetizione rende la lettura più semplice e scorrevole;	
+	
+	\item{\textbf{fonti}}:   
+		\begin{itemize}
+			\item \textit{capitolato}\ped{\textit{G}}: requisito indicato nel capitolato\ped{\textit{G}}; 
+			\item \textit{interno}: requisito individuato dagli analisti; 
+			\item \textit{caso d'uso\ped{\textit{G}}}: il requisito è stato estrapolato da uno o più casi d'uso\ped{\textit{G}}. In questo caso vengono riportati gli identificativi dei casi d'uso\ped{\textit{G}} considerati; 
+			\item \textit{verbale}: si tratta di un requisito individuato a seguito di un incontro tra i membri del gruppo o di una richiesta di chiarimento con il Proponente\ped{\textit{G}}. 
+			In questo caso è riportato il codice identificativo presente nella tabella delle decisioni dei verbali\ped{\textit{G}} considerati. 
+		\end{itemize} 
+\end{itemize}

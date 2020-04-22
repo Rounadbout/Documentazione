@@ -1,0 +1,56 @@
+  \subsection{Gestione della configurazione}
+    \subsubsection{Descrizione}
+      Questo processo, definisce le norme utili alla predisposizione di un workspace ordinato e accessibile, andando a controllare e automatizzare lo stato dei documenti e delle componenti software. Si compone di una serie di attività, di seguito descritte.
+      %da aggiungere
+    \subsubsection{Versionamento}
+      \subsubsubsection{Codice di versione}
+        Tutti i documenti prodotti vengono conservati in una repository\ped{\textit{G}} e devono essere versionati tramite un sistema identificativo. I numeri di versione rispettano la struttura seguente:
+        \begin{center}
+          \textbf{X.Y.Z}
+        \end{center}
+        Dove:
+        \begin{itemize}
+          \item \textbf{X:} rappresenta una versione completa del documento pronta al rilascio esterno:
+            \begin{itemize}
+              \item parte da 0 (puó soltanto aumentare);
+              \item viene incrementato soltanto dopo l'approvazione del documento da parte del Responsabile di progetto.
+            \end{itemize}
+          \item \textbf{Y:} rappresenta una versione del documento che è stata oggetto di verifica, da parte di un Verificatore:
+            \begin{itemize}
+              \item parte da 0;
+              \item viene incrementato ad ogni verifica;
+              \item si resetta ad ogni incremento di X.
+            \end{itemize}
+          \item \textbf{Z:} rappresenta una versione del documento in fase di stesura:
+            \begin{itemize}
+              \item parte da 0;
+              \item incrementato dal redattore\ped{\textit{G}} ad ogni modifica;
+              \item si resetta ad ogni incremento di Y.
+            \end{itemize}
+        \end{itemize}
+
+      \subsubsubsection{Strumenti}
+        Vengono utilizzati Git\ped{\textit{G}} come VCS\ped{\textit{G}} distribuito e GitHub\ped{\textit{G}} per ospitare la repository\ped{\textit{G}} di progetto.
+
+      \subsubsubsection{Repository}
+        La versione ufficiale della documentazione viene mantenuta in una repository\ped{\textit{G}} remota nel sito GitHub\ped{\textit{G}}, appartenete alla \textit{GitHub\ped{\textit{G}} organization} del gruppo \Gruppo{}, al link:
+        \begin{center}
+          \url{https://github.com/Rounadbout/Documentazione}
+        \end{center}
+        Ogni membro del gruppo lavora su una copia locale della repository\ped{\textit{G}} sul proprio computer, interagendo con il VCS\ped{\textit{G}} e la repository\ped{\textit{G}} remota sia attraverso linea di comando, sia tramite software come GitHub\ped{\textit{G}} Desktop e GitKraken.
+
+      \subsubsubsection{Utilizzo di Git}
+        Per sfruttare in modo efficace le funzionalità offerte da Git\ped{\textit{G}} e promuovere il lavoro collaborativo, la repository\ped{\textit{G}} è strutturata in vari branch\ped{\textit{G}}, ognuno relativo ad una particolare feature o componente del progetto (es. Un branch\ped{\textit{G}} per la stesura delle \NdP{} chiamato feature/norme\_di\_progetto). Dunque ogni membro del gruppo che necessita di operare su una certa componente del progetto deve:
+        \begin{itemize}
+          \item scegliere il branch\ped{\textit{G}} adatto su cui lavorare;
+          \item spostarsi su tale branch\ped{\textit{G}};
+          \item effettuare un pull\ped{\textit{G}} dal repository\ped{\textit{G}} remoto per trasferire una copia aggiornata nella propria repository\ped{\textit{G}} locale;
+          \item svolgere il lavoro;
+          \item eseguire un commit\ped{\textit{G}} del lavoro svolto, allegando una descrizione;
+          \item eseguire il push\ped{\textit{G}} delle modifiche sulla repository\ped{\textit{G}} remota.
+        \end{itemize}
+
+      \subsubsubsection{Gestione delle modifiche}
+        Tutte le modifiche effettuate nei documenti vengono memorizzate all'interno del "Registro delle modifiche" situato in ogni documento nella pagina successiva alla copertina, come descritto nella sezione \textsection3.1.5.3.\\
+        Ad ogni modifica corrisponde un commit\ped{\textit{G}} Git\ped{\textit{G}}, al quale è opportuno allegare un commento in modo da facilitare il tracciamento delle modifiche e del lavoro svolto, tramite Issue\ped{\textit{G}}.
+        Ogni modifica apportata ai documenti deve essere discussa con i collaboratori che si stanno occupando del medesimo documento; nel caso in cui la modifica sia di rilevante importanza, è opportuno discuterne con tutto il gruppo durante gli appositi incontri settimanali. 

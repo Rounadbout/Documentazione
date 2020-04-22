@@ -1,0 +1,13 @@
+\subsubsection{UC14.2 - Inserimento nome funzione}
+\begin{itemize}
+	\item \textbf{Attori primari:} \us{};
+	\item \textbf{Descrizione:} al fine di portare a termine il processo di deploy\ped{\textit{G}} l’utente inserisce il nome della funzione che si vuole pubblicare;  
+	\item \textbf{Scenario principale:} l'utente inserisce il nome della funzione che vuole pubblicare;
+	\item \textbf{Estensioni:} 
+	\begin{itemize}
+		\item \textbf{UC14.6:} l’utente inserisce un nome già in uso dal sistema. Viene di conseguenza visualizzato un messaggio di errore; 
+		\item \textbf{UC14.7:} l’utente inserisce un nome troppo lungo. Viene di conseguenza visualizzato un messaggio di errore. 
+	\end{itemize}
+	\item \textbf{Precondizione:} L’utente ha digitato il comando deploy seguito dal campo \texttt{file\_path};
+	\item \textbf{Postcondizione:} il campo \texttt{function\_name} contiene il nome della funzione che si vuole pubblicare.
+\end{itemize}
