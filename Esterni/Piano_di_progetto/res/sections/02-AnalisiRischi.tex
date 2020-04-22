@@ -1,0 +1,174 @@
+\section{Analisi dei rischi}
+Durante lo sviluppo di un progetto complesso è possibile incorrere in problematiche che potrebbero rallentare o impedire il normale proseguimento del progetto. Risulta quindi necessario effettuare un'approfondita attività di analisi dei fattori di rischio per cercare di evitare o rendere il più ininfluenti possibili le eventuali problematiche che potrebbero presentarsi.
+Il risultato di questa analisi è presentata in forma tabellare dove ciascuna voce rappresenta un fattore di rischio ed è costruita tramite le seguenti quattro attività:
+\begin{itemize}
+		\item \textbf{Individuazione}: vengono identificati i potenziali fattori di rischio che potrebbero causare situazioni problematiche durante lo sviluppo del progetto;
+		\item \textbf{Analisi}: viene studiato ciascun fattore di rischio. Questo studio consiste nell'assegnare a ciascun fattore la probabilità che esso si verifichi, un indice di gravità e l'impatto che avrebbe sul progetto nel caso in cui si verifichi;
+		\item \textbf{Pianificazione di controllo e mitigazione}: si pianifica una metodologia per evitare che i rischi individuati si verifichino e si stabilisce preventivamente come procedere nel caso in cui il rischio si verifichi. \\
+		Questa attività consiste nell'elaborazione di un piano di contingenza per delineare preventivamente le azioni da intraprendere per evitare o mitigare l'insorgere dei problemi individuati;
+		\item \textbf{Monitoraggio}: attività continua nella quale la situazione è tenuta sotto controllo per prevenire il verificarsi dei rischi o, nel peggiore dei casi, per intervenire tempestivamente e mitigarli. \\
+
+\end{itemize}
+
+
+Si è deciso di raggruppare le varie tipologie di fattori di rischio in questo modo:
+\begin{itemize}
+	\item \textbf{RT}: Rischi Tecnologici;
+	\item \textbf{RO}: Rischi Organizzativi;
+	\item \textbf{RI}: Rischi Interpersonali;
+	\item \textbf{RR}: Rischi legati ai Requisiti.
+\end{itemize}
+
+Inoltre per semplificarne la gestione ed evitare possibili ambiguità ciascun rischio verrà identificato da:
+\begin{itemize}
+	\item ID: [tipologia]-[N] \\
+		dove:
+		\begin{itemize}
+			\item tipologia: una delle tipologie sopra indicate;
+			\item N: numero identificativo che, per ciascuna tipologia, parte da 1 e viene incrementato ad ogni nuovo rischio individuato.
+		\end{itemize}
+	\item nome;
+	\item descrizione;
+	\item rilevazione;
+	\item grado di rischio;
+	\item piano di contingenza.
+\end{itemize}
+
+\begin{longtable}{
+		>{\centering}p{0.15\textwidth}
+		>{\centering}p{0.25\textwidth}
+		>{\centering}p{0.25\textwidth}
+		>{\centering\arraybackslash}p{0.26\textwidth} }
+
+	\rowcolor{white}\caption{Analisi dei  del progetto} \\
+	\coloredTableHead
+	\textbf{\color{white}ID, Nome e Grado di rischio} &
+	\textbf{\color{white}Descrizione} &
+	\textbf{\color{white}Rilevazione} &
+	\textbf{\color{white}Piano di contingenza}
+	\endfirsthead
+
+	\rowcolor{white}\caption[]{(continua)}\\
+	\coloredTableHead
+	\textbf{\color{white}ID, Nome e Grado di rischio} &
+	\textbf{\color{white}Descrizione} &
+	\textbf{\color{white}Rilevazione} &
+	\textbf{\color{white}Piano di contingenza}
+	\endhead
+
+	\hline \multicolumn{4}{c}{\textit{Continua nella prossima pagina}} \\
+	\endfoot
+	\hline
+	\endlastfoot
+
+	% Contenuto tabella
+	% Codice & Nome & Descrizione & Rilevamento & Grado di rischio \\
+
+	\rowcolor{lightRowColor}
+	RT-1 \\ Tecnologie da utilizzare \\
+		\vspace{5mm} %5mm vertical space
+	 	Probabilità: \textbf{ALTA} Pericolosità: \textbf{MEDIA}
+		&
+		Alcune delle teconologie necessarie allo sviluppo del progetto risultano sconosciute ad alcuni membri del gruppo e inoltre, essendo tecnologie recenti, la documentazione potrebbe essere scarsa o non del tutto completa.
+		&
+		Ciascun componente del gruppo ha già espresso il livello di conoscenza rispetto a queste teconologie ed è necessario che, non appena qualcuno riscontri un problema riguardo all'uso di qualcuna di esse, lo notifichi immediatamente al resto dei componenti.
+		&
+		Il Proponente\ped{\textit{G}} e i componenti del gruppo più esperti hanno condiviso del materiale utile per lo studio di queste tecnologie. Nel caso in cui questo materiale si riveli non sufficiente, il Proponente\ped{\textit{G}} si è reso disponibile a chiarire eventuali dubbi che potrebbero insorgere durante lo sviluppo. \\
+
+	\rowcolor{darkRowColor}
+	RT-2 \\ Guasti hardware \\
+		\vspace{5mm} %5mm vertical space
+		Probabilità: \textbf{MEDIA} Pericolosità: \textbf{BASSA}
+		&
+		Durante lo sviluppo potrebbero esserci malfunzionamenti di uno o più strumenti di lavoro.
+		&
+		Appena un componente nota un malfunzionamento è necessario che lo riferisca agli altri in modo da evitare possibili rallentamenti o impedimenti per il normale proseguimento.
+		&
+		Se il malfunzionamento non può essere risolto in breve tempo è necessario che il componente possa continuare a lavorare su un altro dispositivo. Il cambio di dispositivo è reso molto semplice grazie all'utilizzo di un repository GitHub\ped{\textit{G}} e di strumenti collaborativi online. \\
+
+	\rowcolor{lightRowColor}
+	RO-1 \\ Inesperienza \\
+		\vspace{5mm} %5mm vertical space
+		Probabilità: \textbf{ALTA} Pericolosità: \textbf{MEDIA} &
+		Tenendo conto della poca esperienza dei componenti del gruppo in un progetto complesso è possibile che non sia semplice per alcuni riuscire ad ambientarsi in questa nuova realtà simile a ciò che succede nel mondo del lavoro.
+		&
+		È necessario che ciascun componente del gruppo esponga le proprie problematiche così che gli altri componenti possano essere utili per dare un aiuto in modo da essere il più produttivi possibile.
+		&
+		È importante che ciscun componente si adoperi per limitare il più possibile eventuali difficoltà o lacune dovute all'inesperienza. \\
+
+	\rowcolor{darkRowColor}
+	RO-2 \\ Calcolo dei tempi e dei costi \\
+		\vspace{5mm} %5mm vertical space
+		Probabilità: \textbf{ALTA} Pericolosità: \textbf{ALTA} &
+		Rischio causato anche dall'inesperienza sopra esposta. È possibile che i tempi e i costi preventivati si rivelino imprecisi con l'avanzamento del progetto.
+		&
+		Nel caso in cui un componente riscontri un discostamento dalle ore di lavoro preventivate per ciascuna attività dovrà farlo presente al Responsabile.
+		&
+		Nel caso in cui una stima oraria risulti non sufficiente per portare a termine una specifica attività, il Responsabile provvederà ad assegnare più risorse in modo da evitare o limitare eventuali rallentamenti al lavoro. Se ciò bastasse e ci dovessero essere variazioni importanti al preventivo iniziale il responsabile provvederà a comunicarlo al Committente\ped{\textit{G}}. \\
+
+	\rowcolor{lightRowColor}
+	RO-3 \\ Impegni personali \\
+		\vspace{5mm} %5mm vertical space
+		Probabilità: \textbf{MEDIA} Pericolosità: \textbf{MEDIA} &
+		Considerando la possibilità che in alcuni momenti uno o più componenti del gruppo abbiano degli impegni accademici o impegni personali che potrebbero portare ad un rallentamento del lavoro.
+		&
+		È essenziale che tutti gli impegni vengano notificati al Responsabile appena il componente interessato ne viene a conoscenza.
+		&
+		Il Responsabile provvederà ad apportare delle modifiche organizzative per evitare o limitare rallentamenti ai lavori. \\
+
+	\rowcolor{darkRowColor}
+	RI-1 \\ Comunicazioni interne \\
+		\vspace{5mm} %5mm vertical space
+		Probabilità: \textbf{BASSA} Pericolosità: \textbf{MEDIA} &
+		Potrebbero esserci momenti nei quali uno o più componenti potrebbero non essere reperibili. Ciò potrebbe portare a dei rallentamenti del lavoro qualora non si riuscisse a comunicare con la persona desiderata per una decisione importante o per l'insorgere di qualche problematica interna che potrebbe essere legata ad essa.
+		&
+		È necessario che ciascun componente riferisca al Responsabile eventuali momenti nei quali potrebbe non essere reperibile.
+		&
+		È stato concordato con tutti i componenti di svolgere almeno due incontri a settimana per comunicare l'avanzamento del lavoro e per chiarire eventuali dubbi. Nel caso in cui un componente non riuscisse a partecipare all'incontro è tenuto a comunicare al Responsabile l'avanzamento del proprio lavoro in modo che possa riferirlo agli altri componenti. \\
+
+	\rowcolor{lightRowColor}
+	RI-2 \\ Comunicazione esterna \\
+		\vspace{5mm} %5mm vertical space
+		Probabilità: \textbf{BASSA} Pericolosità: \textbf{MEDIA} &
+		Poichè l'azienda Proponente\ped{\textit{G}} ha sede all'estero potrebbero esserci problemi qualora avessimo la necessità di contattarla.
+		&
+		A seguito di un colloquio con il Proponente\ped{\textit{G}} abbiamo creato un canale sulla piattaforma Slack\ped{\textit{G}} per poter comunicare con loro in maniera facile e rapida. Inoltre si sono resi disponibili ad incontri per via telematica qualora ne avessimo bisogno, a patto di richiederli con due o tre giorni di preavviso in modo che possano verificare la loro disponibilità.
+		&
+		Qualora si presentasse la necessità di organizzare un incontro con il Proponente\ped{\textit{G}} è necessario che il gruppo proponga la data e l'ora in cui desiderano avvenga l'incontro con almeno due o tre giorni di preavviso e, nel caso in cui il Proponente\ped{\textit{G}} non sia disponibile, concordare per svolgere l'incontro in un altro momento. \\
+
+	\rowcolor{darkRowColor}
+	RI-3 \\ Contrasti interni \\
+		\vspace{5mm} %5mm vertical space
+		Probabilità: \textbf{BASSA} Pericolosità: \textbf{ALTA} &
+		Lavorando in gruppo è possibile che si creino delle tensioni o dei contrasti tra due o più componenti, per esempio qualora alcuni di essi non riescano a trovare dei punti d'intesa riguardo ad un qualsiasi argomento.
+		&
+		Nel momento in cui un componente riscontri una situazione del genere è essenziale che la comunichi immediatamente al Responsabile.
+		&
+		Il Responsabile provvederà a comunicare con i componenti interessati per risolvere l'eventuale tensione o conflitto. \\
+
+	\rowcolor{lightRowColor}
+	RR-1 \\ Analisi dei requisiti incompleta \\
+		\vspace{5mm} %5mm vertical space
+		Probabilità: \textbf{MEDIA} Pericolosità: \textbf{ALTA} &
+		È possibile che alcuni requisiti vengano interpretati male dal gruppo. Se ciò accade all'inizio del progetto questa problematica può essere risolta senza gravi conseguenze sul normale proseguimento del progetto altrimenti si può aggravare con il passare del tempo.
+		&
+		È il Proponente\ped{\textit{G}} che potrebbe notificare al gruppo che alcuni requisiti sono stati mal interpretati.
+		&
+		È necessario redigere al meglio l'\textit{\AdR} e mantenere una buona comunicazione con il Proponente\ped{\textit{G}} in modo da chiarire tutti i dubbi che potrebbero insorgere e avere dei riscontri sulla correttezza dei requisiti individuati. \\
+
+	\rowcolor{darkRowColor}
+		RR-2 \\ Modifica dei requisiti \\
+		\vspace{5mm} %5mm vertical space
+		Probabilità: \textbf{BASSA} Pericolosità: \textbf{ALTA} &
+		Questa problematica si verifica quando il Proponente\ped{\textit{G}} modifica qualche richiesta iniziale.
+		&
+		È il Proponente\ped{\textit{G}} che deve comunicare al gruppo eventuali modifiche ai requisiti.
+		&
+		Effettuare di nuovo l'\textit{\AdR} \\
+
+			%\rowcolor{lightRowColor}
+			%R- \\  & & & \\
+			%\rowcolor{lightRowColor}
+			%\textbf{Piano di contingenza} & \multicolumn{3}{l}{Testo} \\
+
+\end{longtable}
