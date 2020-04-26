@@ -4,13 +4,13 @@
 	Ogni membro del gruppo ha aggiornato gli altri componenti sul proprio apprendimento delle tecnologie e su eventuali sviluppi da lui compiuti in uno dei tre moduli che compone \textit{Etherless}. 
 	
 	\subsection{Decisione della libreria da usare per l'interazione con la blockchain Ethereum}
-	A seguito di diverse discussioni e confronti è stato deciso di usare la libreria \textit{Ethers.js} per l'interazione con la blockchain Ethereum; tale decisione è dovuta a: 
+	A seguito di diverse discussioni e confronti è stato deciso di usare la libreria \textit{ethers.js} per l'interazione con la blockchain Ethereum; tale decisione è dovuta a: 
 		\begin{itemize}
 			\item buona documentazione; 
 			\item supporto nativo a TypeScript; 
 			\item frequente manutenzione. 
 		\end{itemize}
-	\noindent In associazione ad \textit{Ethers.js} si è deciso di usare il framework \textit{Waffle} per la creazione di smart-contract.
+	\noindent In associazione ad \textit{ethers.js} si è deciso di usare il framework \textit{Waffle} per la creazione di smart-contract.
 	
 	\subsection{Identificazione dei requisiti da soddisfare nel PoC}
 	Sono stati identificati i requisiti che il gruppo si impegna a soddisfare per il Proof Of Concept, 
@@ -23,7 +23,7 @@
 	Nel caso in cui il soddisfacimento di tali requisiti richieda meno tempo del previsto, si è deciso di valutarne altri, in maniera da permettere al gruppo di approfondire ed applicare maggiormente le tecnologie considerate. 
 	
 	\subsection{Discussione su come strutturare gli smart-contract utilizzati da \textit{Etherless}}
-	A seguito di un confronto si è deciso di memorizzare all'interno del modulo \textit{Etherless-smart} alcune informazioni relative ad ogni funzione, come: nome, proprietario e costo. In questo modo \textit{Etherless-smart} è in grado di effettuare appositi controlli durante procedure quali: esecuzione e rimozione di funzioni. 
+	A seguito di un confronto si è deciso di memorizzare all'interno del modulo \textit{Etherless-smart} alcune informazioni relative ad ogni funzione, quali: nome della funzione, proprietario e costo. In questo modo \textit{Etherless-smart} è in grado di effettuare appositi controlli durante procedure di esecuzione e rimozione di funzioni. 
 	Per essere sicuri che tale soluzione non sia troppo onerosa, saranno eseguiti alcuni test nella testnet Ethereum Ropsten. 
 	
 	\subsection{Analisi della funzionalità di deploy}
