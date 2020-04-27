@@ -4,10 +4,10 @@
 	Ogni membro del gruppo ha aggiornato gli altri componenti sul proprio apprendimento delle tecnologie e su eventuali sviluppi da lui compiuti in uno dei tre moduli che compone \textit{Etherless}. 
 	
 	\subsection{Decisione della libreria da usare per l'interazione con la blockchain Ethereum}
-	A seguito di diverse discussioni e confronti è stato deciso di usare la libreria \textit{ethers.js} per l'interazione con la blockchain Ethereum; tale decisione è dovuta a: 
+	A seguito di diverse discussioni e confronti è stato deciso di usare la libreria \textit{ethers.js} per l'interazione con la blockchain Ethereum\ped{\textit{G}}; tale decisione è dovuta a: 
 		\begin{itemize}
 			\item buona documentazione; 
-			\item supporto nativo a TypeScript; 
+			\item supporto nativo a TypeScript\ped{\textit{G}}; 
 			\item frequente manutenzione. 
 		\end{itemize}
 
@@ -21,18 +21,18 @@
 		\end{itemize}
 	Nel caso in cui il soddisfacimento di tali requisiti richieda meno tempo del previsto, si è deciso di valutarne altri, in maniera da permettere al gruppo di approfondire ed applicare maggiormente le tecnologie considerate. 
 	
-	\subsection{Discussione su come strutturare gli smart-contract utilizzati da \textit{Etherless}}
+	\subsection{Discussione su come strutturare gli smart contract utilizzati da \textit{Etherless}}
 	A seguito di un confronto si è deciso di memorizzare all'interno del modulo \textit{Etherless-smart} alcune informazioni relative ad ogni funzione, quali: nome della funzione, proprietario e costo. In questo modo \textit{Etherless-smart} è in grado di effettuare appositi controlli durante procedure di esecuzione e rimozione di funzioni. 
-	Per essere sicuri che tale soluzione non sia troppo onerosa, saranno eseguiti alcuni test nella testnet Ethereum Ropsten. 
+	Per essere sicuri che tale soluzione non sia troppo onerosa, saranno eseguiti alcuni test nella testnet Ethereum Ropsten\ped{\textit{G}}. 
 	
 	\subsection{Analisi della funzionalità di deploy}
-	Sono state prese in considerazione diverse proposte su come gestire la funzionalità di deploy messa a disposizione dal prodotto. Pur non avendo finalizzato nel dettaglio l'approccio da usare, una prima idea prevede che  \textit{Etherless-cli} comunichi ad \textit{Etherless-smart} un hash crittografico dei file in cui è codificata la funzione. In questo modo \textit{Etherless-server} è in grado di identificare in maniera univoca i file da accettare. \\
+	Sono state prese in considerazione diverse proposte su come gestire la funzionalità di deploy\ped{\textit{G}} messa a disposizione dal prodotto. Pur non avendo finalizzato nel dettaglio l'approccio da usare, una prima idea prevede che  \textit{Etherless-cli} comunichi ad \textit{Etherless-smart} un hash crittografico dei file in cui è codificata la funzione. In questo modo \textit{Etherless-server} è in grado di identificare in maniera univoca i file da accettare. \\
 	Tale argomento sarà trattato più nel dettaglio nei prossimi incontri. 
 	
 	\subsection{Prossima riunione}
 		La prossima riunione è stata fissata come segue:
 		\begin{itemize}
-			\item \textbf{Luogo: } chiamata tramite Microsoft Teams; 
+			\item \textbf{Luogo: } chiamata tramite Microsoft Teams\ped{\textit{G}}; 
 			\item \textbf{Data: } 2020-04-26;
 			\item \textbf{Ora di inizio: } 15.30;
 			\item \textbf{Tipologia: } riunione interna.
