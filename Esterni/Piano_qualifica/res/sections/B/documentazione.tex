@@ -1,0 +1,60 @@
+\paragraph{Indice di Gulpease}
+	Nel seguente grafico vengono riportati i valori di Gulpease, calcolati per ogni documento in differenti momenti di maturazione del progetto.
+	\begin{center}
+		\begin{tikzpicture} [scale = 0.9]
+			\begin{axis}[
+					xlabel={\textbf{Tempo}},
+					ylabel={\textbf{Indice di Gulpease}},
+					date coordinates in=x,
+					ymin=38,
+					ymax=100,
+					xtick=data,
+					xticklabel style={
+						rotate=90,
+						anchor=near xticklabel,
+					},
+					xticklabel=\year-\month-\day,
+				]
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gulpease/AdR.csv};
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gulpease/Glossario.csv};
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gulpease/NdP.csv};
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gulpease/PdP.csv};
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gulpease/PdQ.csv};
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gulpease/SdF.csv};		
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gulpease/Verbali.csv};
+				\draw [line width=0.1, red](2020-4-1, 40)--(2020-5-20, 40);
+				\legend{$Analisi dei Requisiti$ ,$Glossario$ ,$Norme di Progetto$, $Piano di Progetto$, $Piano di Qualifica$, $Studio di Fattibilità$, $Media dei Verbali$};
+			\end{axis}
+		\end{tikzpicture} \\
+	\end{center}
+	
+	
+\paragraph{Formula di Flash}
+	Nel seguente grafico vengono riportati i valori ottenuti applicando la formula di Flesch. I risultati vengono messi in relazione a istanti temporali diversi.
+	\begin{center}
+		\begin{tikzpicture} [scale = 0.9]
+			\begin{axis}[
+					xlabel={\textbf{Tempo}},
+					ylabel={\textbf{Valore di Flesch}},
+					date coordinates in=x,
+					ymin=48,
+					ymax=100,
+					xtick=data,
+					xticklabel style={
+						rotate=90,
+						anchor=near xticklabel,
+					},
+					xticklabel=\year-\month-\day,
+				]
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/flesch/AdR.csv};
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/flesch/Glossario.csv};
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/flesch/NdP.csv};
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/flesch/PdP.csv};
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/flesch/PdQ.csv};
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/flesch/SdF.csv};		
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/flesch/Verbali.csv};
+				\draw [line width=0.1, red](2020-4-1, 50)--(2020-5-20, 50);
+				\legend{$Analisi dei Requisiti$ ,$Glossario$ ,$Norme di Progetto$, $Piano di Progetto$, $Piano di Qualifica$, $Studio di Fattibilità$, $Media dei Verbali$};
+			\end{axis}
+		\end{tikzpicture} \\
+	\end{center}
