@@ -1,7 +1,7 @@
 \subsection{Gestione Organizzativa}
 	
 		\subsubsection{Descrizione}
-			La gestione organizzativa è il processo che descrive le scelte sottostanti la suddivisione e il coordinamento del lavoro all'interno del progetto. Lo scopo principale di questo processo è quello di fornire ai membri del gruppo un \PdP{} per l'organizzazione del lavoro, con focus sull'efficacia e l'efficienza. Nello specifico, le attività che costituiscono questo processo sono:
+			La gestione organizzativa è il processo che descrive le scelte sottostanti la suddivisione e il coordinamento del lavoro all'interno del progetto. Lo scopo principale di questo processo è fornire ai membri del gruppo un \PdP{} per l'organizzazione del lavoro, con focus sull'efficacia e l'efficienza. Nello specifico, le attività che costituiscono questo processo sono:
 			\begin{itemize}
 				\item {inizializzazione e definizione degli obiettivi;}
 				\item {pianificazione e gestione di scadenze, rischi e risorse;}
@@ -157,85 +157,86 @@
 				\item \textbf{RR}: Rischi legati ai Requisiti.
 			\end{itemize}
 		\subsubsection{Metriche}
-		\subsubsubsection*{Budget at Completion (BAC)}
-		\begin{itemize}
-			\item \textbf{Descrizione}: valore che indica il budget inizialmente allocato per la realizzazione del progetto;
-			\item \textbf{unità di misura}: la metrica è espressa tramite un numero intero;
-			\item \textbf{risultato}: l'obiettivo è ottenere un valore pari a quello del preventivo, viene accettato un errore massimo di $\pm{}5\%$ del valore preventivato. Un errore maggiore di tale valore indica un'inadeguatezza del preventivo stilato o della gestione delle risorse, si rende quindi necessaria una revisione di quest'ultimi.
-		\end{itemize}
-		\subsubsubsection*{Estimated at Completion (EAC)}
-		\begin{itemize}
-			\item \textbf{Descrizione}: rappresenta il budget stimato per la realizzazione del progetto, aggiornato allo stato attuale, con quindi conoscenza dei costi già sostenuti.
-			\item \textbf{unità di misura}: la metrica è espressa tramite un numero intero;
-			\item \textbf{formula}: $EAC = AC + ETC$;
-			\item \textbf{risultato}: l'obiettivo è ottenere un valore pari a quello del preventivo, viene accettato un errore massimo di $\pm{}5\%$ del valore preventivato. Un errore maggiore di tale valore indica un'inadeguatezza del preventivo stilato o della gestione delle risorse, si rende quindi necessaria una revisione di quest'ultimi.
-		\end{itemize}
-		\subsubsubsection*{Estimated to Complete (ETC)}
-		\begin{itemize}
-			\item \textbf{Descrizione}: rappresenta il budget stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto;
-			\item \textbf{unità di misura}: la metrica è espressa tramite un numero intero;
-			\item \textbf{risultato}: l'obiettivo è ottenere un valore pari o inferiore a quello del preventivo. Nel caso sia stato speso un budget maggiore di quello preventivato, è necessario fornire una o più valide motivazioni a giustificare il fatto.
-		\end{itemize}
-		\subsubsubsection*{Planned Value (PV)}
-		\begin{itemize}
-			\item \textbf{Descrizione}: costo pianificato per la realizzazione delle attività di progetto fino a quel momento;
-			\item \textbf{unità di misura}: la metrica è espressa tramite un numero di giorni o di \euro;
-			\item \textbf{formula}: $PV = \%lavoro\_pianificato \times BAC$;
-			\item \textbf{risultato}: si attende un valore che sia maggiore o uguale a 0. In caso contrario si presume sia presente un errore nel calcolo ed è necessaria una sua reiterazione.
-		\end{itemize}
-		\subsubsubsection*{Actual Cost (AC)}
-		\begin{itemize}
-			\item \textbf{Descrizione}: costo effettivamente sostenuto fino al momento del calcolo;
-			\item \textbf{unità di misura}: la metrica è espressa tramite un numero di giorni o di \euro;
-			\item \textbf{risultato}: si attende un valore maggiore o uguale di zero e minore di BAC. In caso contrario, qualora il valore sia negativo si presume sia presente un errore di calcolo, nel caso sia maggiore di BAC è necessario fornire valide motivazioni per il superamento del budget previsto.
-		\end{itemize}
-		\subsubsubsection*{Earned Value (EV)}
-		\begin{itemize}
-			\item \textbf{Descrizione}: valore totale delle attività portate a termine al momento del calcolo;
-			\item \textbf{unità di misura}: la metrica è espressa tramite un numero di giorni o di \euro;
-			\item \textbf{formula}: $EV = \%lavoro\_completato \times BAC$;
-			\item \textbf{risultato}: ci si aspetta di ottenere un valore maggiore o uguale di 0. In caso contrario si presume sia presente un errore nel calcolo ed è necessaria una sua reiterazione.
-		\end{itemize}
-		\subsubsubsection*{Cost Variance (CV)}
-		\begin{itemize}
-			\item \textbf{Descrizione}: è un indicatore di produttività o efficienza nella gestione del progetto. Stabilisce se il budget effettivamente speso è maggiore, uguale o minore, rispetto a quanto si era previsto di spendere;
-			\item \textbf{unità di misura}: la metrica è espressa tramite un numero di giorni o di \euro;
-			\item \textbf{formula}: $CV = EV - AC$;
-			\item \textbf{risultato}: si attende un valore uguale o maggiore di zero, ad indicare che il progetto produce con efficienza pari o maggiore rispetto a quanto pianificato. In caso questo valore sia negativo, significa che ci si trova in una situazione \textit{over budget}, ed è necessario rivedere la gestione delle risorse nel progetto.
-		\end{itemize}
-		\subsubsubsection*{Schedule Variance (SV)}
-		\begin{itemize}
-			\item \textbf{Descrizione}: è un indicatore di efficacia nei confronti del Proponente\ped{\textit{G}} e della capacità del gruppo di mantenersi in linea con la pianificazione temporale delle attività del progetto.
-			\item \textbf{unità di misura}: la metrica è espressa tramite un numero di giorni o di \euro;
-			\item \textbf{formula}: $SV = EV - PV$;
-			\item \textbf{risultato}: l'obiettivo è ottenere un valore uguale o maggiore di zero, ad indicare una produzione in pari o in anticipo rispetto alla pianificazione temporale. Un valore negativo rappresenta un ritardo nella tabella di marcia e la necessità di ottimizzare eventuali attività successive, per poter tornare a lavorare coerentemente al piano stabilito.
-		\end{itemize}
-		\subsubsubsection*{Correlazione tra CV e SV}
-		Lo stato di un progetto è esprimibile dalla correlazione tra \textit{Cost Variance} e \textit{Schedule Variance}, in particolare:
-		\begin{enumerate}
-			\item{\textbf{SV e CV positive}: il progetto è in anticipo rispetto alla pianificazione e rientra nel budget previsto;}
-			\item{\textbf{SV positiva, CV negativa}: il progetto è in anticipo rispetto alla pianificazione ma ha superato il budget allocato;}
-			\item{\textbf{SV negativa, CV positiva}: il progetto è in ritardo rispetto alla pianificazione ma rientra nel budget previsto;}
-			\item{\textbf{SV e CV negative}: il progetto è in ritardo rispetto alla pianificazione e ha superato il budget previsto.}
-		\end{enumerate}
-		\subsubsection{Strumenti}
-			I membri del gruppo \Gruppo{} possono lavorare indifferentemente su Windows, Mac OS X o Linux in quanto i principali strumenti necessari ai fini del progetto sono disponibili per tutti i sistemi operativi citati. Gli applicativi organizzativi utilizzati sono di seguito descritti.
-			
-			\subsubsubsection{Microsoft Teams}
-				Si è individuato Microsoft Teams\ped{\textit{G}} come strumento di condivisione e comunicazione interno. La decisione è motivata dalla notevole multifunzionalità dell'applicativo, in quanto consente video-chiamate, condivisione di file e chat divise per argomento.
+			\subsubsubsection{Metriche per la gestione dei rischi}
+				\paragraph{Budget at Completion (BAC)}
+					\begin{itemize}
+						\item \textbf{Descrizione}: valore che indica il budget inizialmente allocato per la realizzazione del progetto;
+						\item \textbf{unità di misura}: la metrica è espressa tramite un numero intero;
+						\item \textbf{risultato}: l'obiettivo è ottenere un valore pari al preventivato, accettando un errore massimo del $\pm{}5\%$. Un errore maggiore di tale valore indica un'inadeguatezza del preventivo stilato o della gestione delle risorse, si rende quindi necessaria una revisione di quest'ultimi.
+					\end{itemize}
+				\paragraph{Estimated at Completion (EAC)}
+					\begin{itemize}
+						\item \textbf{Descrizione}: rappresenta il budget stimato per la realizzazione del progetto, aggiornato allo stato attuale, con quindi conoscenza dei costi già sostenuti.
+						\item \textbf{unità di misura}: la metrica è espressa tramite un numero intero;
+						\item \textbf{formula}: $EAC = AC + ETC$;
+						\item \textbf{risultato}: l'obiettivo è ottenere un valore pari al preventivato, accettando un errore massimo di $\pm{}5\%$. Un errore maggiore di tale valore indica un'inadeguatezza del preventivo stilato o della gestione delle risorse, si rende quindi necessaria una revisione di quest'ultimi.
+					\end{itemize}
+				\paragraph{Estimated to Complete (ETC)}
+					\begin{itemize}
+						\item \textbf{Descrizione}: rappresenta il budget stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto;
+						\item \textbf{unità di misura}: la metrica è espressa tramite un numero intero;
+						\item \textbf{risultato}: l'obiettivo è ottenere un valore pari o inferiore al preventivato. Nel caso sia stato speso un budget maggiore, è necessario fornire una o più valide motivazioni a giustificare il fatto.
+					\end{itemize}
+				\paragraph{Planned Value (PV)}
+					\begin{itemize}
+						\item \textbf{Descrizione}: costo pianificato per la realizzazione delle attività di progetto fino a quel momento;
+						\item \textbf{unità di misura}: la metrica è espressa tramite un numero di giorni o di \euro;
+						\item \textbf{formula}: $PV = \%lavoro\_pianificato \times BAC$;
+						\item \textbf{risultato}: si attende un valore che sia maggiore o uguale a 0. In caso contrario si presume sia presente un errore nel calcolo ed è necessaria una sua reiterazione.
+					\end{itemize}
+				\paragraph{Actual Cost (AC)}
+					\begin{itemize}
+						\item \textbf{Descrizione}: costo effettivamente sostenuto fino al momento del calcolo;
+						\item \textbf{unità di misura}: la metrica è espressa tramite un numero di giorni o di \euro;
+						\item \textbf{risultato}: si attende un valore maggiore o uguale di zero e minore di BAC. In caso contrario, qualora il valore sia negativo si presume sia presente un errore di calcolo, nel caso sia maggiore di BAC è necessario fornire valide motivazioni per il superamento del budget previsto.
+					\end{itemize}
+				\paragraph{Earned Value (EV)}
+					\begin{itemize}
+						\item \textbf{Descrizione}: valore totale delle attività portate a termine al momento del calcolo;
+						\item \textbf{unità di misura}: la metrica è espressa tramite un numero di giorni o di \euro;
+						\item \textbf{formula}: $EV = \%lavoro\_completato \times BAC$;
+						\item \textbf{risultato}: ci si aspetta di ottenere un valore maggiore o uguale di 0. In caso contrario si presume sia presente un errore nel calcolo ed è necessaria una sua reiterazione.
+					\end{itemize}
+				\paragraph{Cost Variance (CV)}
+					\begin{itemize}
+						\item \textbf{Descrizione}: è un indicatore di produttività o efficienza nella gestione del progetto. Stabilisce se il budget effettivamente speso è maggiore, uguale o minore, rispetto a quanto si era previsto di spendere;
+						\item \textbf{unità di misura}: la metrica è espressa tramite un numero di giorni o di \euro;
+						\item \textbf{formula}: $CV = EV - AC$;
+						\item \textbf{risultato}: si attende un valore uguale o maggiore di zero, ad indicare che il progetto produce con efficienza pari o maggiore rispetto a quanto pianificato. In caso questo valore sia negativo, significa che ci si trova in una situazione \textit{over budget}, ed è necessario rivedere la gestione delle risorse nel progetto.
+					\end{itemize}
+				\paragraph{Schedule Variance (SV)}
+					\begin{itemize}
+						\item \textbf{Descrizione}: è un indicatore di efficacia nei confronti del Proponente\ped{\textit{G}} e della capacità del gruppo di mantenersi in linea con la pianificazione temporale delle attività del progetto.
+						\item \textbf{unità di misura}: la metrica è espressa tramite un numero di giorni o di \euro;
+						\item \textbf{formula}: $SV = EV - PV$;
+						\item \textbf{risultato}: l'obiettivo è ottenere un valore uguale o maggiore di zero, ad indicare una produzione in pari o in anticipo rispetto alla pianificazione temporale. Un valore negativo rappresenta un ritardo nella tabella di marcia e la necessità di ottimizzare eventuali attività successive, per poter tornare a lavorare coerentemente al piano stabilito.
+					\end{itemize}
+          \subsubsubsection*{Correlazione tra CV e SV}
+		        Lo stato di un progetto è esprimibile dalla correlazione tra \textit{Cost Variance} e \textit{Schedule Variance}, in particolare:
+		        \begin{enumerate}
+			          \item{\textbf{SV e CV positive}: il progetto è in anticipo rispetto alla pianificazione e rientra nel budget previsto;}
+			          \item{\textbf{SV positiva, CV negativa}: il progetto è in anticipo rispetto alla pianificazione ma ha superato il budget allocato;}
+			          \item{\textbf{SV negativa, CV positiva}: il progetto è in ritardo rispetto alla pianificazione ma rientra nel budget previsto;}
+			          \item{\textbf{SV e CV negative}: il progetto è in ritardo rispetto alla pianificazione e ha superato il budget previsto.}
+		        \end{enumerate}
+			\subsubsection{Strumenti}
+				I membri del gruppo \Gruppo{} possono lavorare indifferentemente su Windows, Mac OS X o Linux in quanto i principali strumenti necessari ai fini del progetto sono disponibili per tutti i sistemi operativi citati. Gli applicativi organizzativi utilizzati sono di seguito descritti.
 				
-			\subsubsubsection{Git e GitHub}
-				Come software di controllo versione\ped{\textit{G}} si è deciso di impiegare Git\ped{\textit{G}}, che rappresenta uno dei migliori strumenti attualmente esistenti per quanto riguarda performance e facilità di utilizzo. Per lo sviluppo collaborativo abbiamo deciso di appoggiarci al servizio GitHub\ped{\textit{G}} il quale fornisce non solo un repository\ped{\textit{G}} Git\ped{\textit{G}}, ma anche funzionalità utili per la cooperazione fra più persone.
-							
-			\subsubsubsection{Gmail}
-				Per la gestione della corrispondenza si è scelto di creare una casella mail su dominio Gmail\ped{\textit{G}}.
+				\subsubsubsection{Microsoft Teams}
+					Si è individuato Microsoft Teams\ped{\textit{G}} come strumento di condivisione e comunicazione interno. La decisione è motivata dalla notevole multifunzionalità dell'applicativo, in quanto consente video-chiamate, condivisione di file e chat divise per argomento.
+					
+				\subsubsubsection{Git e GitHub}
+					Come software di controllo versione\ped{\textit{G}} si è deciso di impiegare Git\ped{\textit{G}}, che rappresenta uno dei migliori strumenti attualmente esistenti per quanto riguarda performance e facilità di utilizzo. Per lo sviluppo collaborativo abbiamo deciso di appoggiarci al servizio GitHub\ped{\textit{G}} il quale fornisce non solo un repository\ped{\textit{G}} Git\ped{\textit{G}}, ma anche funzionalità utili per la cooperazione fra più persone.
+								
+				\subsubsubsection{Gmail}
+					Per la gestione della corrispondenza si è scelto di creare una casella mail su dominio Gmail\ped{\textit{G}}.
+					
+				\subsubsubsection{Slack}
+					In accordo con il Proponente\ped{\textit{G}}, si è concordato l'utilizzo della piattaforma Slack\ped{\textit{G}} per avere un canale di comunicazione più diretto e veloce rispetto alle mail.
 				
-			\subsubsubsection{Slack}
-				In accordo con il Proponente\ped{\textit{G}}, si è concordato l'utilizzo della piattaforma Slack\ped{\textit{G}} per avere un canale di comunicazione più diretto e veloce rispetto alle mail.
-			
-			\subsubsubsection{Zoom}
-				Per la gestione delle video-chiamate con il Proponente\ped{\textit{G}} ed il Committente\ped{\textit{G}}, si è scelto di utilizzare l'applicazione Zoom\ped{\textit{G}}.
-				
-			\subsubsubsection{Telegram}
-				Utilizzato come mezzo di comunicazione interno per scambiare informazioni velocemente ed in maniera informale.
-	
+				\subsubsubsection{Zoom}
+					Per la gestione delle video-chiamate con il Proponente\ped{\textit{G}} ed il Committente\ped{\textit{G}}, si è scelto di utilizzare l'applicazione Zoom\ped{\textit{G}}.
+					
+				\subsubsubsection{Telegram}
+					Utilizzato come mezzo di comunicazione interno per scambiare informazioni velocemente ed in maniera informale.
+		
