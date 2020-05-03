@@ -1,22 +1,13 @@
-\subsubsection{UC5 - Login manuale}
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=\ucs]{./res/img/UC5G.png}
-	\caption {UC5 - Login manuale: schema generale}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=\ucs]{./res/img/UC5.png}
-	\caption {UC5 - Login manuale}
-\end{figure}
+\subsubsection{UC5 - Login}
 \begin{itemize}
 	\item \textbf{Attori primari:} \una{};
 	\item \textbf{Attori secondari:} \re{};
 	\item \textbf{Descrizione:} l’utente può utilizzare il comando \login{} per autenticarsi all’interno della rete Ethereum\ped{\textit{G}}; 
 	\item \textbf{Scenario principale:} l'utente esegue il comando \login{} indicando manualmente le credenziali necessarie; 
-	\item \textbf{Estensioni:} 
+	\item \textbf{Specializzazioni:} 
 	\begin{itemize}
-		\item \textbf{UC6:} tramite l’apposito flag \texttt{-r} l’utente può richiedere che le credenziali inserite, se corrette, vengano memorizzate e usate per l'autenticazione automatica in caso di accessi futuri;
+		\item \textbf{UC6:} l’utente decide di eseguire il login tramite private key\ped{\textit{G}};
+		\item \textbf{UC7:} ’utente decide di eseguire il login tramite mnemonic phrase\ped{\textit{G}}.
 	\end{itemize}
 	\item \textbf{Precondizione:} l’utente tenta di autenticarsi alla piattaforma;
 	\item \textbf{Postcondizione:} l’utente si è autenticato correttamente.
