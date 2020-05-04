@@ -1,0 +1,28 @@
+\paragraph{Percentuale di metriche soddisfatte (PMS)}
+	Nel seguente grafico vengono riportati i valori PMS, calcolati in differenti momenti di maturazione del progetto.
+	\begin{center}
+		\begin{tikzpicture} [scale = 0.9]
+		\begin{axis}[
+		xlabel={\textbf{Tempo}},
+		ylabel={\textbf{Percentuale di metriche soddisfatte}},
+		date coordinates in=x,
+		ymin=58,
+		ymax=100,
+		xtick=data,
+		xticklabel style={
+			rotate=90,
+			anchor=near xticklabel,
+		},
+		xticklabel=\year-\month-\day,
+		]
+		\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gestione_qualita/PMS.csv};
+		\draw [line width=0.1, red](2020-4-1, 60)--(2020-4-20, 60);
+		\legend{$PMS$};
+		\end{axis}
+		\end{tikzpicture} \\
+	\end{center}
+
+	\begin{center}
+		\textbf{Dati ancora da calcolare}
+	\end{center}
+		
