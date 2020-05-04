@@ -1,0 +1,14 @@
+\section{Verbale}
+\subsection{Presentazione del Proof of Concept}
+I membri del gruppo hanno presentato il Proof of Concept eseguendo alcune funzionalità del prodotto. I Proponenti hanno fornito un feedback positivo e hanno approvato il lavoro svolto.
+
+
+\subsection{Presentazione e discussione di alcune scelte architetturali}
+I membri del gruppo hanno esposto una serie di scelte architetturali e dubbi in merito alle tecnologie.
+Di seguito si trova un riassunto delle informazioni estrapolate dalla discussione:
+\begin{description}
+	\item [Git hook:] il Proponente ha consigliato l'uso di Husky per validare il push su gitHub permettendo o vietando l'operazione in base all'essito della verifica riportata da ESLint;
+		\item [Contenuto Smart-Contract:] il Proponente ha consigliato l'integrazione di IPFS all'interno del degli Smart-Contract;
+		\item [Uso di serverless:] l'utilizzo del framework serverless risulta necessario all'interno dell appicativo in quanto ha lo scopo di eseguire il deploy della lambda responsabile della generazione delle altre lambda;
+		\item [Salvataggio di informazioni:] abbiamo proposto la possibilità di salvare informazioni direttamente in AWS senza passare per Ethereum in contrapposizione al passaggio delle informazioni attraverso Ethereum. Il Proponente ha sostenuto che il passaggio per Ethereum ha diversi vantaggi quali la lettura gratuita a discapito della scrittura costosa mentre il passaggio diretto ad AWS richiede costo inferiore con però problemi di sicurezza che necessitano eventuali misure per risolverli. La scelta richiede un attenta valutazione;
+\end{description}
