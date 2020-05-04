@@ -1,14 +1,14 @@
-\subsubsection{UC5 - Login}
+\subsubsection{UC5 - Login con private key}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=\ucs]{./res/img/UC5.png}
+	\caption {U5 - Login con private key}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Attori primari:} \una{};
 	\item \textbf{Attori secondari:} \re{};
-	\item \textbf{Descrizione:} l’utente può utilizzare il comando \login{} per autenticarsi all’interno della rete Ethereum\ped{\textit{G}}; 
+	\item \textbf{Descrizione:} l’utente può utilizzare il comando \ploginPrivate{} per autenticarsi all’interno della rete Ethereum\ped{\textit{G}}; 
 	\item \textbf{Scenario principale:} l'utente esegue il comando \login{} indicando manualmente le credenziali necessarie; 
-	\item \textbf{Specializzazioni:} 
-	\begin{itemize}
-		\item \textbf{UC6:} l’utente decide di eseguire il login tramite private key\ped{\textit{G}};
-		\item \textbf{UC7:} ’utente decide di eseguire il login tramite mnemonic phrase\ped{\textit{G}}.
-	\end{itemize}
 	\item \textbf{Precondizione:} l’utente tenta di autenticarsi alla piattaforma;
 	\item \textbf{Postcondizione:} l’utente si è autenticato correttamente.
 \end{itemize}

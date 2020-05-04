@@ -1,9 +1,8 @@
-\subsubsection{UC6.2 - Inserimento password}
+\subsubsection{UC6.2 - Visualizzazione errore: formato mnemonic phrase errato}
 \begin{itemize}
 	\item \textbf{Attori primari:} \una{};
-	\item \textbf{Descrizione:} al fine di terminare la procedura di autenticazione l’utente deve inserire una password per cifrare il proprio wallet\ped{\textit{G}};
-	\item \textbf{Scenario principale:} l’utente procede con l’inserimento di 
-	una password necessaria alla memorizzazione sicura del proprio wallet;  
-	\item \textbf{Precondizione:} l’utente ha deciso di autenticarsi tramite uso della propria private key\ped{\textit{G}} e ha già inserito nella CLI\ped{\textit{G}} il comando \texttt{login} seguito dalla private key\ped{\textit{G}}; 
-	\item \textbf{Postcondizione:} l’utente ha inserito correttamente una password. 
+	\item \textbf{Descrizione:} l’utente tenta di eseguire la procedura di login con una mnemonic phrase\ped{\textit{G}} che non rispetta il formato richiesto;  
+	\item \textbf{Scenario principale:} il sistema mostra un messaggio di errore relativo al formato della menmonic phrase inserita;
+	\item \textbf{Precondizione:} l'utente ha inserito una mnemonic phrase\ped{\textit{G}} in formato errato durante la procedura di autenticazione; 
+	\item \textbf{Postcondizione:} viene visualizzato nella CLI\ped{\textit{G}} un messaggio relativo all’errore considerato.  
 \end{itemize}
