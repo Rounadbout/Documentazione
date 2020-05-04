@@ -1,4 +1,4 @@
-\paragraph{Indice di Gulpease}
+\subsubsection*{Indice di Gulpease}
 	Nel seguente grafico vengono riportati i valori di Gulpease, calcolati per ogni documento, in differenti momenti di maturazione del progetto.
 	\begin{center}
 		\begin{tikzpicture} [scale = 0.9]
@@ -23,13 +23,13 @@
 				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gulpease/SdF.csv};		
 				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gulpease/Verbali.csv};
 				\draw [line width=0.1, red](2020-4-1, 40)--(2020-5-20, 40);
-				\legend{$Analisi dei Requisiti$ ,$Glossario$ ,$Norme di Progetto$, $Piano di Progetto$, $Piano di Qualifica$, $Studio di Fattibilita'$, $Media dei Verbali$};
+				\legend{$Analisi\;dei\;Requisiti$ ,$Glossario$ ,$Norme\;di\;Progetto$, $Piano\;di\;Progetto$, $Piano\;di\;Qualifica$, $Studio\;di\;Fattibilita'$, $Media\;dei\;Verbali$};
 			\end{axis}
 		\end{tikzpicture} \\
 	\end{center}
 
-\paragraph{Correttezza ortografica}
-	Questa metrica è relativa alla correttezza ortografica all'interno di un documento. Prima di ogni consegna vengono calcolati i risultati esposti nella seguente tabella.
+\subsubsection*{Correttezza ortografica}
+	Questa metrica è relativa alla correttezza ortografica all'interno di un documento. Prima di ogni consegna vengono calcolati i risultati, che sono riportati nella seguente tabella:
 	\rowcolors{2}{lightRowColor}{darkRowColor}
 	\begin{longtable}{
 			>{\centering}p{0.4\textwidth}
