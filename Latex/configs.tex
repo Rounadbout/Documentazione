@@ -28,6 +28,14 @@
 \usepackage[official]{eurosym} %per poter utilizzare il simbolo dell'euro
 \usepackage{float} %posizionamento delle immagini UC
 
+%Per la creazione dei grafici
+\usepackage{pgfplots}
+\usetikzlibrary{
+	pgfplots.dateplot,
+}
+\pgfplotsset{width=15cm,compat=1.11}
+\usepackage{tikz}
+
 % configurazione
 % link
 \hypersetup{
@@ -42,7 +50,7 @@
 % intestazione
 \setlength{\headheight}{25pt}
 \lhead{ \includegraphics[scale=0.05]{./res/img/cropped_logo.png} }
-\rhead{ \docTitle }
+\rhead{ \docTitle{} \docVersion}
 % piè di pagina \\
 \renewcommand{\footrulewidth}{0.4pt} % per avere una linea nel footer
 \cfoot{}

@@ -1,51 +1,69 @@
 \section{Resoconto delle attività di verifica}
+	Questa sezione riporta un resoconto di tutte le metriche per le quali è stato possibile svolgere una misurazione allo stato attuale del progetto.
 
-	\subsection{Verifiche statiche}
-		Ogni documento prodotto è stato analizzato da parte dei \textit{Verificatori}, adottando un metodo Walkthrough\ped{\textit{G}} ed Inspection\ped{\textit{G}}.\\
-		Terminata questa analisi, in accordo con il redattore, si procede alla risoluzione di lacune eventualmente presenti.
-	
-	\subsection{Verifiche requisiti}
-		Questo tipo di verifica è necessario per accertarsi che, la relazione tra casi d'uso\ped{\textit{G}}, requisiti e fonti non abbia discrepanze.
-	
-	\subsection{Verifiche automatizzate}
-		Nella seguente tabella vengono riportati i valori di Gulpease calcolati per ogni documento.
-		I calcoli sono stati effettuati escludendo le intestazioni e le note a piè di pagina, in modo da avere un risultato valido ed attendibile. L'esito della verifica è da intendersi \textit{Positivo} qualora l'indice di Gulpease abbia valore maggiore di 40.
+	\subsection{Qualità di Processo}
+		%\subsubsection{Processi Primari}
+			%\subsubsubsection{Analisi dei Requisiti}
+			%I valori registrati per ogni periodo relativi alle metriche per l'analisi dei requisiti sono i seguenti:
+			%\subsubsubsection*{PROS}
+				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
+			%\subsubsubsection{Progettazione}
+				%I valori registrati per ogni periodo relativi alle metriche per la progettazione sono i seguenti:
+			%\subsubsubsection*{CBO}		%Grafico
+				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
+			%\subsubsubsection*{SFIN}
+				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
+			%\subsubsubsection*{SFOUT}
+				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
+			%\subsubsubsection{Codifica}
+				%\input{./res/sections/B/codifica.tex} 
 		
-		\rowcolors{2}{lightRowColor}{darkRowColor}
-		\begin{longtable}{ 
-				>{\centering}p{0.5\textwidth}
-				>{\centering}p{0.1\textwidth} 
-				>{\centering\arraybackslash}p{0.2\textwidth} }
+		\subsubsection{Processi di Supporto}
+			\subsubsubsection{Documentazione}
+				\input{./res/sections/B/documentazione.tex}
+			\subsubsubsection{Gestione della Qualità}
+				\input{./res/sections/B/gestione_qualita.tex}
+			%\subsubsubsection{Verifica}
+				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
+				
+		\subsubsection{Processi Organizzativi}
+			\subsubsubsection{Gestione Organizzativa}
+				\input{./res/sections/B/gestione_organizzativa.tex} %Tabella con 4 voci revisioni
 			
-			\caption {Verifica Gulpease documenti}		\\
-			
-			\coloredTableHead
-			\textbf{\color{white}Documento} &
-			\textbf{\color{white}Gulpease} &
-			\textbf{\color{white}Esito}
-			\tabularnewline
-			\endhead
-			
-			% Contenuto della tabella
-			% Documento & Gulpease & Esito \\
-			\textbf{Analisi dei Requisiti v1.0.0} & 84 & Positivo \\
-			\textbf{Glossario v1.0.0} & 72 & Positivo \\
-			\textbf{Norme di Progetto v1.0.0} & 75 & Positivo \\
-			\textbf{Piano di Progetto v1.0.0} & 70 & Positivo \\
-			\textbf{Piano di Qualifica v1.0.0} & 86 & Positivo \\
-			\textbf{Studio di Fattibilità v1.0.0} & 69 & Positivo \\
-			\textbf{Verbale VE\_2020\_03\_18 v1.0.0} & 73 & Positivo \\
-			\textbf{Verbale VE\_2020\_03\_27 v1.0.0} & 71 & Positivo \\
-			\textbf{Verbale VE\_2020\_04\_10 v1.0.0} & 69 & Positivo \\
-			\textbf{Verbale VI\_2020\_03\_10 v1.0.0} & 83 & Positivo \\
-			\textbf{Verbale VI\_2020\_03\_13 v1.0.0} & 72 & Positivo \\
-			\textbf{Verbale VI\_2020\_03\_17 v1.0.0} & 69 & Positivo \\
-			\textbf{Verbale VI\_2020\_03\_24 v1.0.0} & 65 & Positivo \\
-			\textbf{Verbale VI\_2020\_03\_27 v1.0.0} & 64 & Positivo \\
-			\textbf{Verbale VI\_2020\_03\_30 v1.0.0} & 87 & Positivo \\
-			\textbf{Verbale VI\_2020\_04\_04 v1.0.0} & 78 & Positivo \\
-			\textbf{Verbale VI\_2020\_04\_06 v1.0.0} & 66 & Positivo \\
-			\textbf{Verbale VI\_2020\_04\_08 v1.0.0} & 64 & Positivo \\
-			\textbf{Verbale VI\_2020\_04\_11 v1.0.0} & 61 & Positivo \\
-			
-		\end{longtable}
+	%\subsection{Qualità di Prodotto}
+		%\subsubsection{Funzionalità}
+			%\subsubsubsection{Completezza dell'implementazione}
+				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
+		%\subsubsection{Affidabilità}
+			%\subsubsubsection{Densità errori}				% Grafico
+				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
+		%\subsubsection{Usabilità}
+			%\subsubsubsection{Facilità di utilizzo}			% Vedere con gli altri
+				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
+			%\subsubsubsection{Facilità di apprendimento}
+				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
+		%\subsubsection{Manutenibilità}
+			%\subsubsubsection{Facilità di comprensione} 	% Grafico
+				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
+			%\subsubsubsection{Semplicità delle classi}
+				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
+	
+	
+	%\subsection{Test di Verifica}
+		%\subsubsection{Test di Unità}
+			%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
+		%\subsubsection{Test di Integrazione}
+			%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
+		%\subsubsection{Test di Sistema}
+			%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
+		%\subsubsection{Test di Regressione}
+			%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
+		
+	
+	
+	%\subsection{Test di Validazione}
+		%\subsubsection{Test di Accettazione}	
+			%\subsubsubsection{Test Funzionali}
+				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
+			%\subsubsubsection{Test di Qualità}
+				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
