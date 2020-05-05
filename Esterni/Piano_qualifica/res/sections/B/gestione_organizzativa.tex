@@ -27,4 +27,34 @@ I valori registrati per ogni periodo, relativi alle metriche per la gestione org
 	EV & 0,00 & 4.854,00 & 7.001,00 & 3.181,00 \\
 	CV & 0 & - & - & - \\
 	SV & 0 & - & - & - \\
+	
 \end{longtable}
+
+	\begin{center}
+		\begin{tikzpicture} [scale = 0.9]
+			\begin{axis}[
+				xlabel={\textbf{Revisione}},
+				ylabel={\textbf{Euro \euro}},
+				date coordinates in=x,
+				ymin=0,
+				ymax=16000,
+				xtick=data,
+				xticklabel style={
+					rotate=90,
+					anchor=near xticklabel,
+				},
+			]
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gestione_organizzativa/BAC.csv};
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gestione_organizzativa/EAC.csv};
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gestione_organizzativa/ETC.csv};
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gestione_organizzativa/PV.csv};
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gestione_organizzativa/AC.csv};
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gestione_organizzativa/EV.csv};
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gestione_organizzativa/CV.csv};
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gestione_organizzativa/SV.csv};
+			\legend{$BAC$, $EAC$, $ETC$, $PV$, $AC$, $EV$, $CV$, $SV$};
+			\end{axis}
+		\end{tikzpicture} \\
+	\end{center}
+	
+	
