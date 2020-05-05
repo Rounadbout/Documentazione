@@ -1,12 +1,12 @@
-\subsubsection{UC8 - Disconnessione dal servizio}
+\subsubsection{UC8 - Visualizzazione address utente}
 \begin{itemize}
 	\item \textbf{Attori primari:} \ua{};
-	\item \textbf{Descrizione:} l’utente richiede la disconnessione dal servizio eseguendo il comando \logout{}. Il sistema effettua la disconnessione; 
+	\item \textbf{Descrizione:} l’utente richiede la visualizzazione del campo address associato al proprio account eseguendo il comando \whoami{}. Il sistema stampa a video tale informazione; 
 	\item \textbf{Scenario principale:} 
-	\begin{itemize}
-		\item l'utente inserisce correttamente ed esegue il comando \logout{}; 
-		\item l'utente viene disconnesso dal servizio. 
-	\end{itemize}
-	\item \textbf{Precondizione:} l’utente è stato autenticato correttamente e richiede di essere disconnesso; 
-	\item \textbf{Postcondizione:} l’utente viene disconnesso con successo..
+		\begin{itemize}
+			\item l'utente inserisce correttamente ed esegue il comando \whoami{}; 
+			\item il sistema visualizza il campo address associato all’utente.
+		\end{itemize}
+	\item \textbf{Precondizione:} l’utente è stato autenticato correttamente e richiede di visualizzare l’indirizzo associato alla propria utenza;
+	\item \textbf{Postcondizione:} la CLI\ped{\textit{G}} riporta il campo address associato all’account dell’utente.
 \end{itemize}
