@@ -69,65 +69,63 @@
 			associato alla sessione corrente. 										& \de & Interno \\ UC8 \tabularnewline
 	
 	% info
-	R1F7 & L'utente può richiedere di visualizzare la descrizione dettagliata di una funzione
-		tramite il comando \info{}.													& \ob & Interno \\ UC10 \tabularnewline
+	R1F7 & L'utente può richiedere di visualizzare le informazioni dettagliate di una funzione
+		tramite il comando \info{}.													& \ob & Interno \\ UC9.2 \tabularnewline
 	R1F7.1 & Per visualizzare la descrizione di una funzione l'utente deve inserire 
-		il nome della funzione di interesse.											& \ob & Interno \\ UC10.1 \tabularnewline
+		il nome della funzione di interesse.											& \ob & Interno \\ UC9.1 \tabularnewline
 	R1F7.2 & Nel caso in cui l'utente richieda di visualizzare la descrizione di una 
 		funzione non presente nel sistema, deve essere mostrato un messaggio di
-		errore.															 			& \ob & Interno \\ UC10.2 \tabularnewline
+		errore.															 			& \ob & Interno \\ UC9.3 \tabularnewline
 	
 	% search 
 	R2F8 & Il sistema deve permettere all'utente di cercare una funzione 
-		attraverso una keyword. 														& \de & Interno \\ UC11 \tabularnewline
+		attraverso una keyword. 														& \de & Interno \\ UC10 \tabularnewline
 	R2F8.1 & Per effettuare la ricerca è necessario che l'utente inserisca 
-		una keyword. 																& \de & Interno \\ UC11.1 \tabularnewline
+		una keyword. 																& \de & Interno \\ UC10.1 \tabularnewline
 	R2F8.2 & A seguito di una ricerca il sistema deve mostrare la lista di
 	 tutte le funzioni che presentano la keyword indicata 
-	 all'interno del proprio nome.													& \de & Interno \\ UC11.2 \tabularnewline
-	  & La visualizzazione di un risultato di ricerca include
-		 la firma della funzione.													& \de & Interno \\ UC11.2.1 \tabularnewline
+	 all'interno del proprio nome.													& \de & Interno \\ UC11 \tabularnewline
+	R2F8.2.1 & La visualizzazione di un risultato di ricerca include
+		 la firma della funzione.													& \de & Interno \\ UC11.1 \tabularnewline
   	R2F8.2.2 & La visualizzazione di un risultato di ricerca include
-		  il costo di esecuzione della funzione.										& \de & Interno \\ UC11.2.1 \tabularnewline
+		  il costo di esecuzione della funzione.										& \de & Interno \\ UC11.1 \tabularnewline
   	R2F8.2.3 & La visualizzazione di un risultato di ricerca include
-		  l'address del creatore della funzione.										& \de & Interno \\ UC11.2.1 \tabularnewline
+		  l'address del creatore della funzione.										& \de & Interno \\ UC11.1 \tabularnewline
 	R2F8.3 & Se una ricerca non porta a nessun risultato deve essere mostrato un 
-		messaggio di errore. 														& \de & Interno \\ UC11.3 	\tabularnewline	
+		messaggio di errore. 														& \de & Interno \\ UC12 	\tabularnewline	
 	
 	% run 
 	R1F9 & L'utente deve essere in grado di eseguire le funzioni messe a 
-		disposizione da \textit{Etherless} attraverso il comando \run{}.				& \ob & Capitolato \\ UC12 \tabularnewline
-	R1F9.1 & Per eseguire una funzione è necessario inserire il relativo nome. 		& \ob & Capitolato \\ UC12.1 \tabularnewline
+		disposizione da \textit{Etherless} attraverso il comando \run{}.				& \ob & Capitolato \\ UC13 \tabularnewline
+	R1F9.1 & Per eseguire una funzione è necessario inserire il relativo nome. 		& \ob & Capitolato \\ UC13.1 \tabularnewline
 	R1F9.1.1 & Nel caso in cui il nome inserito a seguito del comando \run{} non 
 		corrisponda ad alcuna funzione presente nel sistema, deve essere 
-		visualizzato un messaggio di errore.										& \ob & Interno \\ UC12.4 \tabularnewline 
+		visualizzato un messaggio di errore.										& \ob & Interno \\ UC13.4 \tabularnewline 
 	R1F9.2 & L'esecuzione di una funzione necessita dell'inserimento dei parametri 
-		necessari per la sua esecuzione.												& \ob & Capitolato \\ UC12.2 \tabularnewline
+		necessari per la sua esecuzione.												& \ob & Capitolato \\ UC13.2 \tabularnewline
 	R1F9.2.1 & Se l'utente tenta di eseguire una funzione inserendo un numero 
 		di parametri che non coincide con quanto richiesto, deve essere 
-		visualizzato un messaggio di errore. 										& \ob & Interno \\ UC12.5 \tabularnewline
+		visualizzato un messaggio di errore. 										& \ob & Interno \\ UC13.5 \tabularnewline
 	R1F9.2.2 & Se l'utente tenta di eseguire una funzione inserendo almeno un parametro 
 		con tipo differente da quanto indicato nella firma della funzione, deve essere 
-		visualizzato un messaggio di errore. 										& \ob & Interno \\ UC12.6 \tabularnewline
+		visualizzato un messaggio di errore. 										& \ob & Interno \\ UC13.6 \tabularnewline
 	R1F9.3 & A seguito dell'esecuzione di una funzione il sistema deve mostrare 
-		all'utente i relativi risultati. 											& \ob & Capitolato \\ UC12.3 \tabularnewline
+		all'utente i relativi risultati. 											& \ob & Capitolato \\ UC13.3 \tabularnewline
 	R1F9.4 & Nel caso in cui l'utente richieda di eseguire una funzione senza 
 		avere credito sufficiente, deve essere mostrato un messaggio di errore.		& \ob & Interno \\ UC19 \tabularnewline
 	
-	% list  
+	% list  --
 	R1F10 & L'utente deve essere in grado di visualizzare tutte le funzioni 
-		disponibili in \textit{Etherless} tramite il comando \lista{}. 				& \ob & Capitolato \\ UC13.1 \tabularnewline
+		disponibili in \textit{Etherless} tramite il comando \lista{}. 				& \ob & Capitolato \\ UC20 \tabularnewline
 	R2F10.1 & L'utente può richiede di visualizzare solo le funzioni da 
-		lui caricate tramite l'utilizzo di un apposito flag.						& \de & Interno \\ UC13.2 \tabularnewline
+		lui caricate tramite l'utilizzo di un apposito flag.						& \de & Interno \\ UC21 \tabularnewline
 	R1F10.2 & La visualizzazione di un elemento della lista ottenuta a seguito 
-		del comando \lista{} include la firma della funzione. 						& \ob & Interno \\ UC13.1.1 \tabularnewline
+		del comando \lista{} include la firma della funzione. 						& \ob & Interno \\ UC20.1 \\ UC21.1 \tabularnewline
 	R1F10.3 & La visualizzazione di un elemento della lista ottenuta a seguito 
-		del comando \lista{} include il costo di esecuzione della funzione. 			& \ob & Interno \\ UC13.1.1 \tabularnewline
+		del comando \lista{} include il costo di esecuzione della funzione. 			& \ob & Interno \\ UC20.1 \\ UC21.1 \tabularnewline
 	R1F10.4 & La visualizzazione di un elemento della lista ottenuta a seguito 
-		del comando \lista{} include il creatore della funzione. 					& \ob & Interno \\ UC13.1.1 \tabularnewline
-	R1F10.5 & Nel caso in cui il risultato del comando \lista{} sia vuoto, deve 
-		essere visualizzato un apposito messaggio. 									& \ob & Interno \\ UC13.3 \tabularnewline
-	
+		del comando \lista{} include il creatore della funzione. 					& \ob & Interno \\ UC20.1 \\ UC21.1 \tabularnewline
+
 	%deploy
 	R1F11 & L'utente deve essere in grado di eseguire il deploy\ped{\textit{G}} di una propria
 		funzione all'interno della piattaforma \textit{Etherless}. 					& \ob & Capitolato \\ UC14 \tabularnewline
