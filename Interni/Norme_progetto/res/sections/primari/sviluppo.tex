@@ -302,7 +302,7 @@
         \item{\textbf{ricorsione}: l'uso della ricorsione va evitato quanto più possibile.}
 	\end{itemize}
 
-	\noindent I componenti \textit{Etherless-cli} ed \textit{Etherless-server} dovranno essere codificati in TypeScript\ped{\textit{G}}, seguendo la Airbnb\ped{\textit{G}} JavaScript\ped{\textit{G}} Style Guide.
+	\noindent I componenti \textit{Etherless-cli} ed \textit{Etherless-server} dovranno essere codificati in TypeScript\ped{\textit{G}}, seguendo la Airbnb\ped{\textit{G}} JavaScript\ped{\textit{G}} Style Guide e lo strumento di analisi statica del codice ESLint\ped{\textit{G}}. \\
 	Per quanto riguarda \textit{Etherless-smart}, questo dovrà essere sviluppato in Solidity\ped{\textit{G}}, seguendo la relativa style guide presente nel sito ufficiale.
 
 \subsubsection{Metriche}
@@ -395,13 +395,7 @@
 	\end{itemize}
 
 \subsubsection{Strumenti}
-Di seguito vengono elencati gli strumenti usati dal gruppo durante il processo di sviluppo:
-	\subsubsubsection{ESLint}
-	ESLint\ped{\textit{G}} è uno strumento di analisi statica per identificare pattern problematici all'interno di codice JavaScript\ped{\textit{G}}. Tale strumento permette inoltre di descrivere e utilizzare regole personalizzate. ESLint\ped{\textit{G}} controlla sia la code quality che eventuali problemi riguardanti lo stile di codifica.
-	\begin{center}
-		\url{https://eslint.org/}
-	\end{center}
-
+	Di seguito vengono elencati gli strumenti usati dal gruppo durante il processo di sviluppo:
 	\subsubsubsection{Draw.io}
 	Per la creazione dei diagrammi dei casi d'uso\ped{\textit{G}} è stato scelto Draw.io; esso permette  una facile integrazione con Google Drive ed è già conosciuto dalla maggior parte dei membri del gruppo.
 	\begin{center}
@@ -413,16 +407,58 @@ Di seguito vengono elencati gli strumenti usati dal gruppo durante il processo d
 		\caption{Schermata principale draw.io}
 	\end{figure}
 
-	\subsubsubsection{Visual Studio Code}
-	Visual Studio Code è l'IDE\ped{\textit{G}} scelto per la parte di codifica, in particolare tale scelta è dovuta a:
-	\begin{itemize}
-		\item completa compatibilità con Windows, Linux e macOs: in questo modo tutti i membri del gruppo possono riferirsi ad un unico strumento senza essere vincolati dal sistema operativo da loro utilizzato;
-		\item supporto per sistemi di debugging;
-		\item integrazione del sistema di versionamento Git\ped{\textit{G}};
-		\item numerose estensioni facilmente installabili in grado di coprire la maggior parte delle necessita del gruppo.
-	\end{itemize}
+	\subsubsubsection{ESLint}
+	ESLint\ped{\textit{G}} è uno strumento di analisi statica per identificare pattern problematici all'interno di codice JavaScript\ped{\textit{G}}. Tale strumento permette inoltre di descrivere e utilizzare regole personalizzate. ESLint\ped{\textit{G}} controlla sia la code quality che eventuali problemi riguardanti lo stile di codifica.
 	\begin{center}
-		\url{https://code.visualstudio.com/}
+		\url{https://eslint.org/}
+	\end{center}
+
+	\subsubsubsection{Ethers.js}
+	Ethers.js è una libreria che consente l'interazione con una blockchain Ethereumed il suo ecosistema.
+	\begin{center}
+		\url{https://docs.ethers.io/ethers.js}
+	\end{center}
+
+	\subsubsubsection{Ganache}
+	Si tratta di un Ethereum client, con la particolarità di consentire la creazione di una blockchain\ped{\textit{G}} privata finalizzata all'esecuzione di test in locale.
+	\begin{center}
+		\url{https://www.trufflesuite.com/ganache}
+	\end{center}
+
+	\subsubsubsection{Husky}
+	Strumento utilizzato per la prevenzione di commit dannosi nella Repository\ped{\textit{G}} Git\ped{\textit{G}}.
+	\begin{center}
+		\url{https://github.com/typicode/husky}
+	\end{center}
+
+	\subsubsubsection{Node.js}
+	Runtime di JavaScript open source, particolarmente utilizzata all'interno del progetto per l'ascolto di eventi.
+	\begin{center}
+		\url{https://nodejs.org/it/}
+	\end{center}
+
+	\subsubsubsection{NPM}
+	Package manager\ped{\textit{G}} utilizzato per l'installazione di strumenti utilizzati durante il progetto.
+	\begin{center}
+		\url{https://docs.npmjs.com/}
+	\end{center}
+
+	\subsubsubsection{Open Zeppelin}
+	Open Zeppelin è una libreria composta da smart contract\ped{\textit{G}} ben documentati, utilizzata all'interno del progetto per la scrittura di contratti upgradable.
+	\begin{center}
+		\url{https://openzeppelin.com/}
+	\end{center}
+
+	\subsubsubsection{Ropsten}
+	Testnet pubblica usata per test e sperimentazioni su rete Ethereum\ped{\textit{G}}. Permette di essere utilizzata senza preoccuparsi dei costi e senza possedere monete di reale valore.
+	\begin{center}
+		\url{https://ropsten.etherscan.io/}
+	\end{center}
+
+	\subsubsubsection{Serverless}
+	Framework\ped{\textit{G}} utilizzato per lo sviluppo, il deploy\ped{\textit{G}} ed il monitoraggio della comunicazione con AWS Lambda\ped{\textit{G}}.
+	\begin{center}
+		\url{https://www.serverless.com/}
 	\end{center}
 
 	\subsubsubsection{Solidity}
@@ -437,8 +473,14 @@ Di seguito vengono elencati gli strumenti usati dal gruppo durante il processo d
 		\url{https://www.trufflesuite.com/truffle}
 	\end{center}
 
-	\subsubsubsection{Ropsten}
-	Testnet pubblica usata per test e sperimentazioni su rete Ethereum\ped{\textit{G}}. Permette di essere utilizzata senza preoccuparsi dei costi e senza possedere monete di reale valore.
+	\subsubsubsection{Visual Studio Code}
+	Visual Studio Code è l'IDE\ped{\textit{G}} scelto per la parte di codifica, in particolare tale scelta è dovuta a:
+	\begin{itemize}
+		\item completa compatibilità con Windows, Linux e macOs: in questo modo tutti i membri del gruppo possono riferirsi ad un unico strumento senza essere vincolati dal sistema operativo da loro utilizzato;
+		\item supporto per sistemi di debugging;
+		\item integrazione del sistema di versionamento Git\ped{\textit{G}};
+		\item numerose estensioni facilmente installabili in grado di coprire la maggior parte delle necessita del gruppo.
+	\end{itemize}
 	\begin{center}
-		\url{https://ropsten.etherscan.io/}
+		\url{https://code.visualstudio.com/}
 	\end{center}
