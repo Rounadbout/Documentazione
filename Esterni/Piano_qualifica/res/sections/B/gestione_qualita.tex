@@ -1,7 +1,8 @@
 \paragraph{Percentuale di metriche soddisfatte (PMS)}
 	Nel seguente grafico vengono riportati i valori PMS, calcolati in differenti momenti di maturazione del progetto.\\
 	Nella prima fase del progetto si può osservare che il numero di metriche soddisfatte può essere inferiore al valore minimo accettabile, in quanto nel calcolo sono incluse le metriche da calcolare in futuro.
-	\begin{center}
+	\begin{figure}[H]
+	\centering
 		\begin{tikzpicture} [scale = 0.9]
 		\begin{axis}[
 		xlabel={\textbf{Tempo}},
@@ -20,5 +21,6 @@
 		\draw [line width=0.1, red](2020-3-05, 60)--(2020-5-20, 60);
 		\legend{$PMS$};
 		\end{axis}
-		\end{tikzpicture} \\
-	\end{center}
+		\end{tikzpicture}
+		\caption{Percentuale di metriche soddisfatte}
+	\end{figure}

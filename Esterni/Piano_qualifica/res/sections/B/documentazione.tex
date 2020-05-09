@@ -1,6 +1,7 @@
 \subsubsection*{Indice di Gulpease}
 	Nel seguente grafico vengono riportati i valori di Gulpease, calcolati per ogni documento, in differenti momenti di maturazione del progetto.
-	\begin{center}
+	\begin{figure}[H]
+	\centering
 		\begin{tikzpicture} [scale = 0.9]
 			\begin{axis}[
 					xlabel={\textbf{Tempo}},
@@ -25,8 +26,9 @@
 				\draw [line width=0.1, red](2020-4-1, 40)--(2020-5-30, 40);
 				\legend{$Analisi\;dei\;Requisiti$ ,$Glossario$ ,$Norme\;di\;Progetto$, $Piano\;di\;Progetto$, $Piano\;di\;Qualifica$, $Studio\;di\;Fattibilita'$, $Media\;dei\;Verbali$};
 			\end{axis}
-		\end{tikzpicture} \\
-	\end{center}
+		\end{tikzpicture} 
+		\caption{Indice di Gulpease}
+	\end{figure}
 
 \subsubsection*{Correttezza ortografica}
 	Questa metrica è relativa alla correttezza ortografica all'interno di un documento. Prima di ogni consegna vengono calcolati i risultati, che sono riportati nella seguente tabella:

@@ -32,7 +32,8 @@ I valori registrati per ogni periodo, relativi alle metriche per la gestione org
 	
 \end{longtable}
 
-	\begin{center}
+	\begin{figure}[H]
+	\centering
 		\begin{tikzpicture} [scale = 0.9]
 			\begin{axis}[
 				xlabel={\textbf{Revisione}},
@@ -56,7 +57,8 @@ I valori registrati per ogni periodo, relativi alle metriche per la gestione org
 			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gestione_organizzativa/SV.csv};
 			\legend{$BAC$, $EAC$, $ETC$, $PV$, $AC$, $EV$, $CV$, $SV$};
 			\end{axis}
-		\end{tikzpicture} \\
-	\end{center}
+		\end{tikzpicture} 
+		\caption{Metriche per la gestione organizzativa}
+	\end{figure}
 	
 	
