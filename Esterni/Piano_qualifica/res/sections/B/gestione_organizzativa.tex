@@ -2,12 +2,12 @@ I valori registrati per ogni periodo, relativi alle metriche per la gestione org
 
 \rowcolors{2}{lightRowColor}{darkRowColor}
 \begin{longtable}{
-		>{\centering}p{0.2\textwidth}
+		>{\centering}p{0.10\textwidth}
 		>{\centering}p{0.2\textwidth}
 		>{\centering}p{0.2\textwidth}
 		>{\centering}p{0.2\textwidth}
 		>{}p{0.2\textwidth} }
-		
+
 		\caption{Gestione organizzativa} \\
 
 	\coloredTableHead
@@ -29,7 +29,7 @@ I valori registrati per ogni periodo, relativi alle metriche per la gestione org
 	EV & 0,00 & 4.854,00 & 7.001,00 & 3.181,00 \\
 	CV & 0 & 120 & - & - \\
 	SV & 0 & 0 & - & - \\
-	
+
 \end{longtable}
 
 	\begin{figure}[H]
@@ -51,10 +51,10 @@ I valori registrati per ogni periodo, relativi alle metriche per la gestione org
 			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gestione_organizzativa/EAC.csv};
 			\legend{$BAC$, $EAC$};
 			\end{axis}
-		\end{tikzpicture} 
+		\end{tikzpicture}
 		\caption{Confronto tra BAC e EAC}
 	\end{figure}
-	
+
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture} [scale = 0.9]
@@ -74,6 +74,6 @@ I valori registrati per ogni periodo, relativi alle metriche per la gestione org
 		\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gestione_organizzativa/AC.csv};
 		\legend{$PV$, $AC$};
 		\end{axis}
-		\end{tikzpicture} 
+		\end{tikzpicture}
 		\caption{Confronto tra PV e AC}
 	\end{figure}
