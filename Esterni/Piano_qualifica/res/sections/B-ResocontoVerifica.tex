@@ -2,92 +2,60 @@
 	Questa sezione riporta un resoconto di tutte le metriche per le quali è stato possibile svolgere una misurazione allo stato attuale del progetto.
 
 	\subsection{Qualità di Processo}
-		\subsubsection{Processi Primari}
+		\subsubsection{Processi Primari}		% 7 metriche - 4 impl
 			\subsubsubsection{Analisi dei Requisiti}
 				I valori registrati per ogni periodo relativi alle metriche per l'analisi dei requisiti sono i seguenti:
-			\subsubsubsection*{Percentuale di requisiti obbligatori soddisfatti (PROS)}
-			\rowcolors{2}{lightRowColor}{darkRowColor}
-\begin{longtable}{
-		>{\centering}p{0.2\textwidth}
-		>{\centering}p{0.2\textwidth}
-		>{\centering}p{0.2\textwidth}
-		>{\centering}p{0.2\textwidth}
-		>{}p{0.2\textwidth} }
-		
-		\caption{Percentuale requisiti obbligatori soddisfatti (PROS)} \\
-
-	\coloredTableHead
-	\textbf{\color{white} Metrica} &
-	\textbf{\color{white} RR} &
-	\textbf{\color{white} RP} &
-	\textbf{\color{white} RQ} &
-	\textbf{\color{white}RA}
-	\tabularnewline
-	\endhead
-
-	% contenuto tabella
-	% esempio: Modulo & Min & Max \\
-	PROS & 0 & 42\% & - & - \\
-	
-\end{longtable}
-
-				
+				\input{./res/sections/B/AdR.tex}
 			%\subsubsubsection{Progettazione}
 				%I valori registrati per ogni periodo relativi alle metriche per la progettazione sono i seguenti:
-			%\subsubsubsection*{CBO}		%Grafico
-				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
-			%\subsubsubsection*{SFIN}
-				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
-			%\subsubsubsection*{SFOUT}
-				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
+				%\subsubsubsection*{CBO}		%Grafico
+				%\subsubsubsection*{SFIN}
+				%\subsubsubsection*{SFOUT}
 			\subsubsubsection{Codifica}
 				\input{./res/sections/B/codifica.tex} 
 		
-		\subsubsection{Processi di Supporto}
+		\subsubsection{Processi di Supporto}	% 5 metriche - 3 impl
 			\subsubsubsection{Documentazione}
 				\input{./res/sections/B/documentazione.tex}
 			\subsubsubsection{Gestione della Qualità}
 				\input{./res/sections/B/gestione_qualita.tex}
 			%\subsubsubsection{Verifica}
-				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
+				%\subsubsubsection*{Code Coverage}				
 				
-		\subsubsection{Processi Organizzativi}
+		\subsubsection{Processi Organizzativi}	% 1 metrica - 1 impl
 			\subsubsubsection{Gestione Organizzativa}
 				\input{./res/sections/B/gestione_organizzativa.tex}
 			
-	%\subsection{Qualità di Prodotto}
+	%\subsection{Qualità di Prodotto}			% 6 metriche - 0 impl
 		%\subsubsection{Funzionalità}
 			%\subsubsubsection{Completezza dell'implementazione}
-				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
-
 		%\subsubsection{Affidabilità}
+			%\subsubsubsection{Densità errori}
+		%\subsubsection{Usabilità}
+			%\subsubsubsection{Facilità di utilizzo}
+			%\subsubsubsection{Facilità di apprendimento}
+		%\subsubsection{Manutenibilità}
+			%\subsubsubsection{Facilità di comprensione}
+			%\subsubsubsection{Semplicità delle classi}
+
+		%\subsubsection{Affidabilità}			% 5 metriche - 0 impl
 			%\subsubsubsection{Densità errori}				% Grafico
-				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
 		%\subsubsection{Usabilità}
 			%\subsubsubsection{Facilità di utilizzo}			% Vedere con gli altri
-				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
 			%\subsubsubsection{Facilità di apprendimento}
-				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
 		%\subsubsection{Manutenibilità}
 			%\subsubsubsection{Facilità di comprensione} 	% Grafico
-				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
 			%\subsubsubsection{Semplicità delle classi}
-				%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
 	
-	
-	%\subsection{Test di Verifica}
+	%\subsection{Test di Verifica}				% 4 metriche - 0 impl
 		%\subsubsection{Test di Unità}
-			%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
 		%\subsubsection{Test di Integrazione}
-			%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
 		%\subsubsection{Test di Sistema}
-			%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
 		%\subsubsection{Test di Regressione}
-			%Questa metrica viene valutata nelle fasi successive del ciclo di vita del software.
 		
 	
 	
-	\subsection{Test di Validazione}
+	\subsection{Test di Validazione}			% 3 metriche - 3 impl
 		\subsubsection{Test di Accettazione}	
 			\subsubsubsection{Test Funzionali}
 				\input{./res/sections/test_accettazione/01-funzionali.tex}
