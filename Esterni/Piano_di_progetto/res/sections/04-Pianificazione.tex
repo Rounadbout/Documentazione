@@ -61,13 +61,29 @@ Questo periodo porta all'individuazione di una soluzione architetturale che perm
 				\item \textbf{1° Incremento:} integrazione dei documenti a seguito delle conoscenze acquisite nei periodi precedenti;
 				\item \textbf{2° Incremento:} implementazione della componente Etherless-smart;
 				\item \textbf{3° Incremento:} implementazione della componenete Etherless-cli; \\
-				Comandi da implementare per il PoC:
-					\begin{itemize}
-						\item \textbf{signup:} legato allo UC3;
-						\item \textbf{login:} legato allo UC5;
-						\item \textbf{logout:} legato allo UC8;
-						\item \textbf{run:} legato allo UC12.
-					\end{itemize}
+				Comandi da implementare per il PoC, legati ai requisiti che soddisfano:
+					\rowcolors{2}{lightRowColor}{darkRowColor}
+					\begin{longtable}{
+						>{\centering}p{0.25\textwidth}
+						>{\centering}p{0.20\textwidth} }
+
+						\coloredTableHead
+						\textbf{\color{white}Comando} &
+						\textbf{\color{white}Requisiti}
+						\tabularnewline
+						\endhead
+
+						\hline \multicolumn{2}{c}{\textit{Continua nella prossima pagina}} \\
+						\endfoot
+						\hline
+						\endlastfoot
+						signup & R1F3\\ R1F3.1 \\ R1F3.1.1 \\ R1F3.1.2 \\ R1F3.1.3\tabularnewline
+						login & R1F4 \\ R1F4.1 \\ R1F4.1.1 \\ R1F4.1.2\tabularnewline
+						logout & R1F5\tabularnewline
+						run & R1F9 \\ R1F9.1 \\ R1F9.2 \\ R1F9.3\tabularnewline
+						\rowcolor{white}\caption{Tracciamento comandi-requisiti soddisfatti}	\\
+
+					\end{longtable}
 				\item \textbf{4° Incremento:} implementazione della componente Etherless-server;
 				\item \textbf{5° Incremento:} integrazione delle componenti sviluppate;
 				\item \textbf{6° Incremento:} correzione della documentazione a seguito della correzione della RR e preparazione in vista della \TB{};
@@ -119,18 +135,40 @@ Le principali attività svolte in questo periodo sono:
 				\item \textbf{2° Incremento:} progettazione dei 3 moduli che compongono il sistema e stesura dell'\textit{Allegato Tecnico 1.0.0};
 				\item \textbf{3° Incremento:} sviluppo di Etherless-smart;
 				\item \textbf{4° Incremento:} realizzazione delle componenti Etherless-CLI e Etherless-server (comprensivi di test di unitá e di integrazione);\\
-				Comandi da implementare, legati ai requisiti obbligatori:
-					\begin{itemize}
-						\item \textbf{signup:} legato allo UC3;
-						\item \textbf{login:} legato allo UC5;
-						\item \textbf{logout:} legato allo UC8;
-						\item \textbf{info:} legato allo UC10;
-						\item \textbf{run:} legato allo UC12;
-						\item \textbf{list:} legato agli UC13.1, UC13.1.1, UC13.3;
-						\item \textbf{deploy:} legato allo UC14;
-						\item \textbf{edit:} legato allo UC15;
-						\item \textbf{delete:} legato allo UC18.
-					\end{itemize}
+				Comandi da implementare, legati ai requisiti che la loro implementazione va a soddisfare:
+
+						\rowcolors{2}{lightRowColor}{darkRowColor}
+						\begin{longtable}{
+							>{\centering}p{0.25\textwidth}
+							>{\centering}p{0.20\textwidth} }
+
+							\coloredTableHead
+							\textbf{\color{white}Comando} &
+							\textbf{\color{white}Requisiti}
+							\tabularnewline
+							\endhead
+
+							\hline \multicolumn{2}{c}{\textit{Continua nella prossima pagina}} \\
+							\endfoot
+							\hline
+							\endlastfoot
+
+							% Contenuto della tabella
+							% Ruolo & Ore & Costo\\
+							signup & R1F3\\ R1F3.1 \\ R1F3.1.1 \\ R1F3.1.2 \\ R1F3.1.3\tabularnewline
+							login & R1F4 \\ R1F4.1 \\ R1F4.1.1 \\ R1F4.1.2 \\ R1F4.1.3\tabularnewline
+							logout & R1F5\tabularnewline
+							info & R1F7 \\ R1F7.1 \\ R1F7.2 \tabularnewline
+							run & R1F9 \\ R1F9.1 \\ R1F9.1.1 \\ R1F9.2 \\ R1F9.2.1 \\ R1F9.2.2 \\ R1F9.3 \\ R1F9.4 \tabularnewline
+							list & R1F10 \\ R1F10.1 \\ R1F10.2 \\ R1F10.3 \\ R1F10.4 \tabularnewline
+							deploy & R1F11 \\ R1F11.1 \\ R1F11.1.2 \\ R1F11.2 \\ R1F11.2.1 \\ R1F11.2.2 \\ R1F11.4\tabularnewline
+							edit & R1F12 \\ R1F12.1 \\ R1F12.1.1 \\ R1F12.1.2 \\ R1F12.2 \\ R1F12.2.1 \\ R1F12.3 \\ R1F12.3.1 \\ R1F12.3.2\tabularnewline
+							delete & R1F14 \\ R1F14.1 \\ R1F14.1.1 \\ R1F14.1.2\tabularnewline
+
+							\rowcolor{white}\caption{Tracciamento comandi-requisiti soddisfatti}	\\
+
+						\end{longtable}
+
 				\item \textbf{5° Incremento:} stesura documenti:
 				\begin{itemize}
 					\item stesura dello \textit{User Manual 1.0.0}.
