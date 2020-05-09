@@ -1,9 +1,8 @@
-\subsubsection{UC13.4 - Visualizzazione avviso: nessuna funzione di proprietà dell’utente}
+\subsubsection{UC13.4 - Visualizzazione errore: funzione non trovata}
 \begin{itemize}
-	\item \textbf{Attori primari:} \us{};
-	\item \textbf{Attori secondari:} \re{};
-	\item \textbf{Descrizione:} l’utente richiede la visualizzazione della lista di tutte le funzioni di sua proprietà non avendo prima pubblicato alcuna funzione. Il sistema visualizza un messaggio di avviso relativo alla mancata presenza di funzioni di sua proprietà;
-	\item \textbf{Scenario principale:} viene visualizzato un messaggio di avviso relativo alla mancata presenza di funzioni di proprietà dell’utente;
-	\item \textbf{Precondizione:} l’utente corrente non ha funzioni di sua proprietà;
-	\item \textbf{Postcondizione:} il sistema mostra un messaggio di avviso.
+	\item \textbf{Attori primari:} \ua{};
+	\item \textbf{Descrizione:}  l’utente richiede l’esecuzione di una funzione specificando un nome non presente nel sistema. Il sistema riporta un messaggio di errore relativo alla mancata presenza della funzione;
+	\item \textbf{Scenario principale:} viene visualizzato un messaggio di errore relativo alla mancata presenza di una funzione con il nome specificato; 
+	\item \textbf{Precondizione:} il nome inserito dall’utente non si riferisce ad alcuna funzione presente all’interno del sistema;  
+	\item \textbf{Postcondizione:} viene visualizzato un messaggio che descrive l’errore considerato. 
 \end{itemize}
