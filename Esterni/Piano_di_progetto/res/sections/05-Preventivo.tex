@@ -183,7 +183,7 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 
 			% Contenuto della tabella
 			% Ruolo & Ore & Costo \\
-			Respondabile    & 5  & 150,00 \\
+			Responsabile    & 5  & 150,00 \\
 			Amministratore  & 6  & 120,00 \\
 			Analista        & 10 & 250,00 \\
 			Progettista     & -  & - \\
@@ -248,14 +248,55 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 		\end{longtable}
 
 		% Grafico
-		Rappresentazione grafica della suddivisione oraria:
 		\begin{figure}[h]
 			\centering
 			\includegraphics[width=0.7\textwidth]{./res/img/progettazioneArchitetturale_po.png}
 			\caption{Suddivisione oraria del periodo di Progettazione architetturale}
 		\end{figure}
 
-	\newpage
+		\newpage
+		\subsubsection{Pianificazione oraria interna agli incrementi}
+		\rowcolors{2}{lightRowColor}{darkRowColor}
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering\arraybackslash}p{0.10\textwidth}
+			>{\centering\arraybackslash}p{0.10\textwidth} }
+
+			\coloredTableHead
+			\textbf{\color{white}Incremento} &
+			\textbf{\color{white}Rp} &
+			\textbf{\color{white}As} &
+			\textbf{\color{white}An} &
+			\textbf{\color{white}Pt} &
+			\textbf{\color{white}Pr} &
+			\textbf{\color{white}Vf} &
+			\textbf{\color{white}Totale ore} &
+			\textbf{\color{white}Totale \euro{}}
+			\tabularnewline
+			\endhead
+
+			% Contenuto della tabella
+			% n'Incr & Rp & As & An & Pt & Pr & Vf & Totale Ore \\
+			1' Incremento & 2 & 5  & 11 & 7  & -  & 11 & 36 & 754,00\\
+			2' Incremento & 1 & 5  & 8  & 12 & 9  & 8  & 43 & 849,00\\
+			3' Incremento & 1 & 3  & 3  & 14 & 10 & 8  & 39 & 743,00\\
+			4' Incremento & 1 & 3  & 3  & 14 & 10 & 8  & 39 & 743,00\\
+			5' Incremento & 2 & 3  & 3  & 12 & 10 & 7  & 37 & 714,00\\
+			6' Incremento & 2 & 3  & 4  & 7  & -  & 13 & 29 & 569,00\\
+			7' Incremento & 2 & 1  & 1  & 6  & -  & 11 & 21 & 402,00\\
+			8' Incremento & 1 & 1  & -  & -  & -  & 2  & 4  & 80,00\\
+			\textbf{Ore e costo totali} & 12 & 24 & 33 & 72 & 39 & 68 & 248 & 4.854,00 \\
+
+			\rowcolor{white}\caption {Suddivisione oraria per incremento del periodo di Progettazione architetturale} \\
+
+		\end{longtable}
+
 	\subsubsection{Prospetto economico}
 		Totale delle ore e costo per ciascun ruolo nel periodo di Progettazione architetturale:
 
@@ -274,7 +315,7 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 
 			% Contenuto della tabella
 			% Ruolo & Ore & Costo \\
-			Respondabile    & 12  & 360,00 \\
+			Responsabile    & 12  & 360,00 \\
 			Amministratore  & 24  & 480,00 \\
 			Analista        & 33  & 825,00 \\
 			Progettista     & 72  & 1.584,00 \\
@@ -338,6 +379,7 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 
 		\end{longtable}
 
+		\newpage
 		% Grafico
 		Rappresentazione grafica della suddivisione oraria:
 		\begin{figure}[h]
@@ -345,6 +387,46 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			\includegraphics[width=0.7\textwidth]{./res/img/progettazioneDettaglioCodifica_po.png}
 			\caption{Suddivisione oraria del periodo di Progettazione di dettaglio e codifica}
 		\end{figure}
+
+		\subsubsection{Pianificazione oraria interna agli incrementi}
+		\rowcolors{2}{lightRowColor}{darkRowColor}
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering\arraybackslash}p{0.10\textwidth}
+			>{\centering\arraybackslash}p{0.10\textwidth} }
+
+			\coloredTableHead
+			\textbf{\color{white}Incremento} &
+			\textbf{\color{white}Rp} &
+			\textbf{\color{white}As} &
+			\textbf{\color{white}An} &
+			\textbf{\color{white}Pt} &
+			\textbf{\color{white}Pr} &
+			\textbf{\color{white}Vf} &
+			\textbf{\color{white}Totale ore} &
+			\textbf{\color{white}Totale \euro{}}
+			\tabularnewline
+			\endhead
+
+			% Contenuto della tabella
+			% n'Incr & Rp & As & An & Pt & Pr & Vf & Totale Ore \\
+			1' Incremento & 2 & 8 & - & 10 & -  & 17 & 37 & 695,00\\
+			2' Incremento & 6 & 4 & - & 35 & 27 & 25 & 97 & 1.810,00\\
+			3' Incremento & 5 & 7 & - & 15 & 50 & 15 & 92 & 1.595,00\\
+			4' Incremento & 5 & 7 & - & 23 & 75 & 30 & 140 & 2.371,00\\
+			5' Incremento & 3 & 4 & - & 2  & -  & 7  & 16 & 319,00\\
+			6' Incremento & 2 & 2 & - & 3  & 1  & 2  & 10 & 211,00\\
+			\textbf{Ore e costo totali} & 23 & 32 & - & 88 & 153 & 96 & 392 & 7.001,00 \\
+
+			\rowcolor{white}\caption {Suddivisione oraria per incremento del periodo di Progettazione di Dettaglio e Codifica} \\
+
+		\end{longtable}
 
 	\newpage
 	\subsubsection{Prospetto economico}
@@ -365,7 +447,7 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 
 			% Contenuto della tabella
 			% Ruolo & Ore & Costo \\
-			Respondabile    & 23 & 690,00 \\
+			Responsabile    & 23 & 690,00 \\
 			Amministratore  & 32 & 640,00 \\
 			Analista        & -  & - \\
 			Progettista     & 88 & 1.936,00 \\
@@ -437,7 +519,46 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			\caption{Suddivisione oraria del periodo di Validazione e collaudo}
 		\end{figure}
 
-	\newpage
+		\newpage
+		\subsubsection{Pianificazione oraria interna agli incrementi}
+		\rowcolors{2}{lightRowColor}{darkRowColor}
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering\arraybackslash}p{0.10\textwidth}
+			>{\centering\arraybackslash}p{0.10\textwidth} }
+
+			\coloredTableHead
+			\textbf{\color{white}Incremento} &
+			\textbf{\color{white}Rp} &
+			\textbf{\color{white}As} &
+			\textbf{\color{white}An} &
+			\textbf{\color{white}Pt} &
+			\textbf{\color{white}Pr} &
+			\textbf{\color{white}Vf} &
+			\textbf{\color{white}Totale ore} &
+			\textbf{\color{white}Totale \euro{}}
+			\tabularnewline
+			\endhead
+
+			% Contenuto della tabella
+			% n'Incr & Rp & As & An & Pt & Pr & Vf & Totale Ore \\
+			1' Incremento & 7 & 6 & - & 3 & 5 & 9 & 30 & 606,00\\
+			2' Incremento & 3 & 3 & - & 7 & 23 & 25 & 61 & 1.024,00\\
+			3' Incremento & 3 & 3 & - & 4 & 16 & 22 & 48 & 808,00\\
+			4' Incremento & 7 & 4 & - & 3 & 2 & 14 & 30 & 596,00\\
+			5' Incremento & 2 & 1 & - & 1 & 1 & 2 & 7 & 147,00\\
+			\textbf{Ore e costo totali} & 22 & 17 & - & 18 & 47 & 72 & 176 & 3.181,00 \\
+
+			\rowcolor{white}\caption {Suddivisione oraria per incremento del periodo di Validazione e collaudo} \\
+
+		\end{longtable}
+
 	\subsubsection{Prospetto economico}
 		Totale delle ore e costo per ciascun ruolo nel periodo di Validazione e collaudo:
 
@@ -456,7 +577,7 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 
 			% Contenuto della tabella
 			% Ruolo & Ore & Costo in \\
-			Respondabile    & 22  & 660,00 \\
+			Responsabile    & 22  & 660,00 \\
 			Amministratore  & 17  & 340,00 \\
 			Analista        & -   & - \\
 			Progettista     & 18  & 396,00 \\
@@ -468,6 +589,7 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 
 		\end{longtable}
 
+		\newpage
 		% Grafico
 		Rappresentazione grafica della distribuzione dei ruoli:
 		\begin{figure}[h]
@@ -476,7 +598,6 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 			\caption{Suddivisione dei ruoli nel periodo di Validazione e collaudo}
 		\end{figure}
 
-\newpage
 \subsection{Riepilogo}
 	\subsubsection{Ore totali}
 		\subsubsubsection{Suddivisione del lavoro}
@@ -521,6 +642,7 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 
 			\end{longtable}
 
+			\newpage
 			% Grafico
 			Rappresentazione grafica della suddivisione oraria:
 			\begin{figure}[h]
@@ -529,7 +651,6 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 				\caption{Suddivisione oraria con il totale delle ore di investimento e rendicontate}
 			\end{figure}
 
-		\newpage
 		\subsubsubsection{Prospetto econimico}
 			Totale delle ore e costo per ciascun ruolo comprensivo delle ore di investimento e delle ore rendicontate a carico del Committente\ped{\textit{G}}:
 
@@ -548,7 +669,7 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 
 				% Contenuto della tabella
 				% Ruolo & Ore & Costo in \\
-				Respondabile    & 92   & 2.760,00 \\
+				Responsabile    & 92   & 2.760,00 \\
 				Amministratore  & 149  & 2.980,00 \\
 				Analista        & 103  & 2.575,00 \\
 				Progettista     & 198  & 4.356,00 \\
@@ -560,6 +681,7 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 
 			\end{longtable}
 
+			\newpage
 			% Grafico
 			Rappresentazione grafica della distribuzione dei ruoli:
 			\begin{figure}[h]
@@ -567,7 +689,7 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 				\includegraphics[width=0.7\textwidth]{./res/img/totale_pe.png}
 				\caption{Suddivisione dei ruoli per il totale delle ore di investimento e rendicontate }
 			\end{figure}
-	\newpage
+
 	\subsubsection{Ore rendicontate}
 		\subsubsubsection{Suddivisione del lavoro}
 			Distribuzione totale delle ore rendicontate per ciascun ruolo.
@@ -638,7 +760,7 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 
 				% Contenuto della tabella
 				% Ruolo & Ore & Costo in \\
-				Respondabile    & 57  & 1.710,00 \\
+				Responsabile    & 57  & 1.710,00 \\
 				Amministratore  & 73  & 1.460,00 \\
 				Analista        & 33  & 825,00 \\
 				Progettista     & 178 & 3.916,00 \\
@@ -650,6 +772,7 @@ Inoltre le celle che contengono un valore pari a 0 presenteranno il simbolo '-'.
 
 			\end{longtable}
 
+			\newpage
 			% Grafico
 			Rappresentazione grafica della distribuzione dei ruoli:
 			\begin{figure}[h]
