@@ -130,15 +130,15 @@
 			Il processo viene completato con una conferma, che provoca un'immediata notifica a tutti i componenti del gruppo.
 
 			\subsubsubsection*{Repository}
-			Per la gestione del versionamento e l'archiviazione dei file di progetto, viene sfruttata la componente VCS\ped{\textit{G}} della piattaforma GitHub\ped{\textit{G}}. Gli Amministratori si sono occupati della creazione della repository\ped{\textit{G}} \textbf{etherless}, e dei Git submodule (repository\ped{\textit{G}} annidate): \textbf{Documentazione}, \textbf{etherless-cli}, \textbf{etherless-smart}, \textbf{etherless-server},  ed è loro compito garantire l'ordine e la pulizia di quest'ultimi. Il contenuto dei repository relativi alle componenti software è quindi soggetto a repentini cambiamenti, con però una più stabile struttura di base.\\
+			Per la gestione del versionamento e l'archiviazione dei file di progetto, viene sfruttata la componente VCS\ped{\textit{G}} della piattaforma GitHub\ped{\textit{G}}. Gli Amministratori si sono occupati della creazione della repository\ped{\textit{G}} \textbf{etherless}, e dei Git\ped{\textit{G}} submodule (repository\ped{\textit{G}} annidate): \textbf{Documentazione}, \textbf{etherless-cli}, \textbf{etherless-smart}, \textbf{etherless-server},  ed è loro compito garantire l'ordine e la pulizia di quest'ultimi. Il contenuto dei repository\ped{\textit{G}} relativi alle componenti software è quindi soggetto a repentini cambiamenti, con però una più stabile struttura di base.\\
 			La struttura del repository\ped{\textit{G}} \textbf{etherless}, è la seguente:
 			\begin{itemize}
-				\item \textbf{Submodule Documentazione}: riferimento all'ultimo commit stabile della repository\ped{\textit{G}} \textit{Documentazione};
-				\item \textbf{Submodule etherless-cli}: riferimento all'ultimo commit stabile della repository\ped{\textit{G}} \textit{etherless-cli};
-				\item \textbf{Submodule etherless-smart}: riferimento all'ultimo commit stabile della repository\ped{\textit{G}} \textit{etherless-smart};
-				\item \textbf{Submodule etherless-server}: riferimento all'ultimo commit stabile della repository\ped{\textit{G}} \textit{etherless-server};
-				\item \textbf{File .gitmodules}: file utilizzato per la configurazione dei Git modules;
-				\item \textbf{File README.md}: file descrittivo della repository di progetto, contenente istruzioni per la sua esecuzione. Scritto in lingua inglese;
+				\item \textbf{Submodule Documentazione}: riferimento all'ultimo commit\ped{\textit{G}} stabile della repository\ped{\textit{G}} \textit{Documentazione};
+				\item \textbf{Submodule etherless-cli}: riferimento all'ultimo commit\ped{\textit{G}} stabile della repository\ped{\textit{G}} \textit{etherless-cli};
+				\item \textbf{Submodule etherless-smart}: riferimento all'ultimo commit\ped{\textit{G}} stabile della repository\ped{\textit{G}} \textit{etherless-smart};
+				\item \textbf{Submodule etherless-server}: riferimento all'ultimo commit\ped{\textit{G}} stabile della repository\ped{\textit{G}} \textit{etherless-server};
+				\item \textbf{File .gitmodules}: file utilizzato per la configurazione dei Git\ped{\textit{G}} modules;
+				\item \textbf{File README.md}: file descrittivo della repository\ped{\textit{G}} di progetto, contenente istruzioni per la sua esecuzione. Scritto in lingua inglese;
 				\item \textbf{File package.json}: file utilizzato per effettuare l'installazione dei moduli\ped{\textit{G}} necessari all'esecuzione del prodotto\ped{\textit{G}};
 				\item \textbf{File tsconfig.json}: file utilizzato per la configurazione di Typescript\ped{\textit{G}}.
 			\end{itemize}
@@ -151,22 +151,22 @@
 			\end{itemize}
 			La struttura della repository\ped{\textit{G}} \textbf{etherless-cli}, è la seguente:
 			\begin{itemize}
-				\item \textbf{Cartella contracts}: contiene i file relativi agli smart contracts\ped{\textit{G}};
+				\item \textbf{Cartella contracts}: contiene i file relativi agli smart contract\ped{\textit{G}};
 				\item \textbf{Cartella src}: contiene i file e sotto-cartelle relativi al codice eseguibile del modulo\ped{\textit{G}} Etherless-cli;
-				\item \textbf{File .editorconfig}: file di supporto agli sviluppatori, per mantenere uno stile di codifica consistente tra editor e IDE diversi;
+				\item \textbf{File .editorconfig}: file di supporto agli sviluppatori, per mantenere uno stile di codifica consistente tra editor e IDE\ped{\textit{G}} diversi;
 				\item \textbf{File .eslintrc.js}: file utilizzato per la configurazione di ESLint\ped{\textit{G}};
 				\item \textbf{File .gitignore}: specifica i tipi di file che devono essere ignorati e non presenti all'interno della repository\ped{\textit{G}};
-				\item \textbf{File README.md}: file descrittivo della repository del modulo, contenente istruzioni per la sua esecuzione. Scritto in lingua inglese;
+				\item \textbf{File README.md}: file descrittivo della repository\ped{\textit{G}} del modulo, contenente istruzioni per la sua esecuzione. Scritto in lingua inglese;
 				\item \textbf{File package.json}: file utilizzato per effettuare l'installazione dei moduli\ped{\textit{G}} necessari all'esecuzione del prodotto\ped{\textit{G}};
 				\item \textbf{File package-lock.json}: file utilizzato per l'installazione dei moduli\ped{\textit{G}} necessari all'esecuzione del prodotto\ped{\textit{G}};
 				\item \textbf{File tsconfig.json}: file utilizzato per la configurazione di Typescript\ped{\textit{G}}.
 			\end{itemize}
 			La struttura della repository\ped{\textit{G}} \textbf{etherless-smart}, è la seguente:
 			\begin{itemize}
-				\item \textbf{Cartella contracts}: contiene i file relativi agli smart contracts\ped{\textit{G}};
+				\item \textbf{Cartella contracts}: contiene i file relativi agli smart contract\ped{\textit{G}};
 				\item \textbf{Cartella migrazioni}: contiene i file relativi alle migrazioni;
 				\item \textbf{File .gitignore}: specifica i tipi di file che devono essere ignorati e non presenti all'interno della repository\ped{\textit{G}};
-				\item \textbf{File README.md}: file descrittivo della repository del modulo, contenente istruzioni per la sua esecuzione. Scritto in lingua inglese;
+				\item \textbf{File README.md}: file descrittivo della repository\ped{\textit{G}} del modulo, contenente istruzioni per la sua esecuzione. Scritto in lingua inglese;
 				\item \textbf{File package.json}: file utilizzato per effettuare l'installazione dei moduli\ped{\textit{G}} necessari all'esecuzione del prodotto\ped{\textit{G}};
 				\item \textbf{File package-lock.json}: file utilizzato per l'installazione dei moduli\ped{\textit{G}} necessari all'esecuzione del prodotto\ped{\textit{G}};
 				\item \textbf{File truffle-config.json}: file utilizzato per la configurazione di Truffle\ped{\textit{G}}.
@@ -174,13 +174,13 @@
 			La struttura della repository\ped{\textit{G}} \textbf{etherless-server}, è la seguente:
 			\begin{itemize}
 				\item \textbf{Cartella configs}: contiene i file relativi alle configurazioni generali;
-				\item \textbf{Cartella contracts}: contiene i file relativi agli smart contracts\ped{\textit{G}};
+				\item \textbf{Cartella contracts}: contiene i file relativi agli smart contract\ped{\textit{G}};
 				\item \textbf{Cartella serverless}: contiene i file e sotto-cartelle relativi al framework\ped{\textit{G}} Serverless\ped{\textit{G}};
 				\item \textbf{Cartella src}: contiene i file e sotto-cartelle relativi al codice eseguibile del modulo\ped{\textit{G}} Etherless-server;
 				\item \textbf{Cartella test}: contiene i file e sotto-cartelle relativi ai test;
 				\item \textbf{File .eslintrc.js}: file utilizzato per la configurazione di ESLint\ped{\textit{G}}.
 				\item \textbf{File .gitignore}: specifica i tipi di file che devono essere ignorati e non presenti all'interno della repository\ped{\textit{G}};
-				\item \textbf{File README.md}: file descrittivo della repository del modulo, contenente istruzioni per la sua esecuzione. Scritto in lingua inglese;
+				\item \textbf{File README.md}: file descrittivo della repository\ped{\textit{G}} del modulo, contenente istruzioni per la sua esecuzione. Scritto in lingua inglese;
 				\item \textbf{File package.json}: file utilizzato per effettuare l'installazione dei moduli\ped{\textit{G}} necessari all'esecuzione del prodotto\ped{\textit{G}};
 				\item \textbf{File package-lock.json}: file utilizzato per l'installazione dei moduli\ped{\textit{G}} necessari all'esecuzione del prodotto\ped{\textit{G}};
 				\item \textbf{File tsconfig.json}: file utilizzato per la configurazione di Typescript\ped{\textit{G}}.
@@ -275,7 +275,7 @@
 					Come software di controllo versione\ped{\textit{G}} si è deciso di impiegare Git\ped{\textit{G}}, che rappresenta uno dei migliori strumenti attualmente esistenti per quanto riguarda performance e facilità di utilizzo. Per lo sviluppo collaborativo abbiamo deciso di appoggiarci al servizio GitHub\ped{\textit{G}} il quale fornisce non solo un repository\ped{\textit{G}} Git\ped{\textit{G}}, ma anche funzionalità utili per la cooperazione fra più persone.
 
 				\subsubsubsection{Gmail}
-					Per la gestione della corrispondenza si è scelto di creare una casella mail su dominio Gmail\ped{\textit{G}}.
+					Per la gestione della corrispondenza si è scelto di creare una casella mail su dominio\ped{\textit{G}} Gmail\ped{\textit{G}}.
 
 				\subsubsubsection{Slack}
 					In accordo con il Proponente\ped{\textit{G}}, si è concordato l'utilizzo della piattaforma Slack\ped{\textit{G}} per avere un canale di comunicazione più diretto e veloce rispetto alle mail.
