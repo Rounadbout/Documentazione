@@ -18,13 +18,13 @@
           \item \textbf{Y:} rappresenta una versione del documento che è stata oggetto di verifica, da parte di un Verificatore:
             \begin{itemize}
               \item parte da 0;
-              \item viene incrementato ad ogni verifica;
+              \item viene incrementato ad ogni verifica dell'intero documento;
               \item si resetta ad ogni incremento di X.
             \end{itemize}
           \item \textbf{Z:} rappresenta una versione del documento in fase di stesura:
             \begin{itemize}
               \item parte da 0;
-              \item incrementato dal redattore\ped{\textit{G}} ad ogni modifica;
+              \item incrementato dal redattore\ped{\textit{G}} ad ogni modifica validata da un Verificatore;
               \item si resetta ad ogni incremento di Y.
             \end{itemize}
         \end{itemize}
@@ -33,10 +33,17 @@
         Vengono utilizzati Git\ped{\textit{G}} come VCS\ped{\textit{G}} distribuito e GitHub\ped{\textit{G}} per ospitare la repository\ped{\textit{G}} di progetto.
 
       \subsubsubsection{Repository}
-        La versione ufficiale della documentazione viene mantenuta in una repository\ped{\textit{G}} remota nel sito GitHub\ped{\textit{G}}, appartenete alla \textit{GitHub\ped{\textit{G}} organization} del gruppo \Gruppo{}, al link:
+        La versione ufficiale del progetto viene mantenuta in una repository\ped{\textit{G}} remota nel sito GitHub\ped{\textit{G}}, appartenete alla \textit{GitHub\ped{\textit{G}} organization} del gruppo \Gruppo{}, al link:
         \begin{center}
-          \url{https://github.com/Rounadbout/Documentazione}
+          \url{https://github.com/Rounadbout/etherless}
         \end{center}
+    	Tale repository\ped{\textit{G}} contiene a sua volta quattro Git\ped{\textit{G}} submodule, che fanno riferimento alle ultime versioni stabili dei tre moduli di Etherless e della documentazione ufficiale:
+    	\begin{center}
+    		\url{https://github.com/Rounadbout/etherless-cli}
+    		\url{https://github.com/Rounadbout/etherless-smart}
+    		\url{https://github.com/Rounadbout/etherless-server}
+    		\url{https://github.com/Rounadbout/Documentazione}
+    	\end{center}
         Ogni membro del gruppo lavora su una copia locale della repository\ped{\textit{G}} sul proprio computer, interagendo con il VCS\ped{\textit{G}} e la repository\ped{\textit{G}} remota sia attraverso linea di comando, sia tramite software come GitHub\ped{\textit{G}} Desktop e GitKraken.
 
       \subsubsubsection{Utilizzo di Git}
@@ -49,8 +56,15 @@
           \item eseguire un commit\ped{\textit{G}} del lavoro svolto, allegando una descrizione;
           \item eseguire il push\ped{\textit{G}} delle modifiche sulla repository\ped{\textit{G}} remota.
         \end{itemize}
+    	Per gestire eventuali operazioni di verifica da eseguire sulle modifiche apportate è stato introdotto il meccanismo delle pull request. Quindi ogni membro del gruppo, una volta terminata la modifica di una certa componente del progetto, deve:
+    	\begin{itemize}
+    		\item aprire una pull request sul branch\ped{\textit{G}} dove sono state apportate le modifiche;
+    		\item assegnare tale pull request ai Verificatori per una revisione e, nel caso di prodotti completi, al Responsabile per l'approvazione;
+    		\item i Verificatori effettueranno la revisione ed eventuali correzioni minori;
+    		\item nel caso non siano rilevati difetti bloccanti, la pull request viene accettata dai revisori e viene effettuato il merge di tale branch\ped{\textit{G}} con il branch\ped{\textit{G}} di \textit{develop}.
+    	\end{itemize}
 
       \subsubsubsection{Gestione delle modifiche}
         Tutte le modifiche effettuate nei documenti vengono memorizzate all'interno del "Registro delle modifiche" situato in ogni documento nella pagina successiva alla copertina, come descritto nella sezione \textsection3.1.5.3.\\
         Ad ogni modifica corrisponde un commit\ped{\textit{G}} Git\ped{\textit{G}}, al quale è opportuno allegare un commento in modo da facilitare il tracciamento delle modifiche e del lavoro svolto, tramite Issue\ped{\textit{G}}.
-        Ogni modifica apportata ai documenti deve essere discussa con i collaboratori che si stanno occupando del medesimo documento; nel caso in cui la modifica sia di rilevante importanza, è opportuno discuterne con tutto il gruppo durante gli appositi incontri settimanali. 
+        Ogni modifica apportata ai documenti deve essere discussa con i collaboratori che si stanno occupando del medesimo documento; nel caso in cui la modifica sia di rilevante importanza, è opportuno discuterne con tutto il gruppo durante gli appositi incontri settimanali.

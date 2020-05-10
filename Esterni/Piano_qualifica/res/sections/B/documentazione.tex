@@ -1,0 +1,67 @@
+\subsubsection*{Indice di Gulpease}
+	Nel seguente grafico vengono riportati i valori di Gulpease, calcolati per ogni documento, in differenti momenti di maturazione del progetto.
+	\begin{figure}[H]
+	\centering
+		\begin{tikzpicture} [scale = 0.7]
+			\begin{axis}[
+					xlabel={\textbf{Tempo}},
+					ylabel={\textbf{Indice di Gulpease}},
+					date coordinates in=x,
+					ymin=38,
+					ymax=100,
+					xtick=data,
+					xticklabel style={
+						rotate=90,
+						anchor=near xticklabel,
+					},
+					xticklabel=\year-\month-\day,
+				]
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gulpease/AdR.csv};
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gulpease/Glossario.csv};
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gulpease/NdP.csv};
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gulpease/PdP.csv};
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gulpease/PdQ.csv};
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gulpease/SdF.csv};		
+				\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/gulpease/Verbali.csv};
+				\draw [line width=0.1, red](2020-4-1, 40)--(2020-5-30, 40);
+				\legend{$Analisi\;dei\;Requisiti$ ,$Glossario$ ,$Norme\;di\;Progetto$, $Piano\;di\;Progetto$, $Piano\;di\;Qualifica$, $Studio\;di\;Fattibilita'$, $Media\;dei\;Verbali$};
+			\end{axis}
+		\end{tikzpicture} 
+		\caption{Indice di Gulpease}
+	\end{figure}
+
+\subsubsection*{Correttezza ortografica}
+	Questa metrica è relativa alla correttezza ortografica all'interno di un documento. Prima di ogni consegna vengono calcolati i risultati, che sono riportati nella seguente tabella:
+	\rowcolors{2}{lightRowColor}{darkRowColor}
+	\begin{longtable}{
+			>{\centering}p{0.4\textwidth}
+			>{\centering}p{0.1\textwidth}
+			>{\centering}p{0.1\textwidth}
+			>{\centering}p{0.1\textwidth}
+			>{}p{0.1\textwidth} }
+			
+		\caption{Correttezza Ortografica} \\
+		
+		\coloredTableHead
+		\textbf{\color{white}Documento} &
+		\textbf{\color{white}RR} &
+		\textbf{\color{white}RP} &
+		\textbf{\color{white}RQ} &
+		\textbf{\color{white}RA}
+		\tabularnewline
+		\endhead
+		
+		% contenuto tabella
+		% esempio: Documento & ValoreRR & ValoreRP & ValoreRQ & ValoreRA. \\
+		Analisi dei Requisiti & 0 & 0 & - & - \\
+		Glossario & 0 & 0 & - & - \\
+		Norme di Progetto & 0 & 0 & - & - \\
+		Piano di Progetto & 0 & 0 & - & - \\
+		Piano di Qualifica & 0 & 0 & - & - \\
+		Studio di Fattibilità & 0 & 0 & - & - \\
+		Verbali & 0 & 0 & - & - \\
+		
+	\end{longtable}
+
+%\paragraph{Formula di Flesch}
+	%Questa metrica verrà sviluppata a seguito della stesura di documentazione in lingua inglese.

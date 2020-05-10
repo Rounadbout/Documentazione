@@ -46,7 +46,7 @@
           \end{center}
       		dove \textit{id} indica il codice identificativo crescente del componente da verificare. 
          
-			\item \textbf{Test di sistema:} il sistema viene testato nella sua interezza e i  risultati confrontati con quanto richiesto dall'\AdR{}. In questo modo è possibile accertarsi delle caratteristiche del sistema e della copertura dei requisiti funzionali. Tali test devono essere indicati nel seguente modo: 
+			\item \textbf{Test di sistema:} il sistema viene testato nella sua interezza e i  risultati confrontati con quanto richiesto dall'\AdR{} \textit{2.0.0}. In questo modo è possibile accertarsi delle caratteristiche del sistema e della copertura dei requisiti funzionali. Tali test devono essere indicati nel seguente modo: 
 			\begin{center}
 				\textbf{TS[id]}
 			\end{center}
@@ -56,25 +56,27 @@
         \end{itemize}
 
 	\subsubsection{Metriche}
-		\subsubsection*{Code coverage (CC)}
-			\begin{itemize}
-				\item{\textbf{Descrizione}}: la metrica CC indica la percentuale di righe di codice percorse durante il test rispetto alle linee di codice totali. A granularità più fine, la code coverage misura quattro aspetti: 
-					\begin{itemize}
-						\item{\textbf{statement coverage}}: percentuale di statement percorsi dai test; 
-						\item{\textbf{branch coverage}}: percentuale di diramazioni percorse dai test; 
-						\item{\textbf{function converage}}: percentuale di funzioni percorse dai test; 
-						\item{\textbf{line coverage}}: percentuale di righe di codice percorse dai test; 
-					\end{itemize} 
-				\item{\textbf{unità di misura}}: la metrica viene espressa tramite una percentuale;
-				\item{\textbf{formula: }} $ CC = \displaystyle\frac{\#linee\_di\_codice\_eseguite\_dal\_test}{\#linee\_di\_codice\_totali}\times100$;
-				\item{\textbf{risultato}}: il risultato è compreso tra 0.0\% e 100.0\%, in particolare: 
-					\begin{itemize}
-						\item se il risultato è pari a 0\%, allora non sono presenti test all'interno dell'applicativo; 
-						\item se il risultato è pari a 100\%, allora i test coprono in maniera completa il codice che costituisce l'applicativo. 
-					\end{itemize} 
-			\end{itemize}
+		\subsubsubsection{Metriche sui Test}
+			\paragraph{Code coverage (CC)}
+				\begin{itemize}
+					\item{\textbf{Descrizione}}: la metrica CC indica la percentuale di righe di codice percorse durante il test rispetto alle linee di codice totali. A granularità più fine, la code coverage misura quattro aspetti: 
+						\begin{itemize}
+							\item{\textbf{statement coverage}}: percentuale di statement percorsi dai test; 
+							\item{\textbf{branch coverage}}: percentuale di diramazioni percorse dai test; 
+							\item{\textbf{function converage}}: percentuale di funzioni percorse dai test; 
+							\item{\textbf{line coverage}}: percentuale di righe di codice percorse dai test; 
+						\end{itemize} 
+					\item{\textbf{unità di misura}}: la metrica viene espressa tramite una percentuale;
+					\item{\textbf{formula: }} $ CC = \displaystyle\frac{\#linee\_di\_codice\_eseguite\_dal\_test}{\#linee\_di\_codice\_totali}\times100$;
+					\item{\textbf{risultato}}: il risultato è compreso tra 0.0\% e 100.0\%, in particolare: 
+						\begin{itemize}
+							\item se il risultato è pari a 0\%, allora non sono presenti test all'interno dell'applicativo; 
+							\item se il risultato è pari a 100\%, allora i test coprono in maniera completa il codice che costituisce l'applicativo. 
+						\end{itemize} 
+				\end{itemize}
 
     \subsubsection{Strumenti}
-    \subsubsubsection{Verifica ortografica}
-    Per la verifica ortografica durante la redazione dei documenti viene utilizzato lo strumento integrato negli editor di testo scelti dai singoli componenti del gruppo. In questo modo, durante la fase di scrittura, è possibile individuare e prontamente correggere gli errori ortografici. 
-    
+	    \subsubsubsection{Verifica ortografica}
+	    Per la verifica ortografica durante la redazione dei documenti viene utilizzato lo strumento integrato negli editor di testo scelti dai singoli componenti del gruppo. In questo modo, durante la fase di scrittura, è possibile individuare e prontamente correggere gli errori ortografici. 
+    	\subsubsubsection{ESLint e Typescript}
+    	Per la verifica del codice software durante la sua scrittura, vengono utilizzati due strumenti: ESLint\ped{\textit{G}} e Typescript\ped{\textit{G}}, integrati come estensioni nell'ambiente di Visual Studio Code. Questi strumenti possono essere appositamente configurati, tramite regole, per guidare lo sviluppatore ad una quanto più corretta e coerente scrittura del codice. Diventa quindi obbligatorio correggere gli errori sollevati da tali strumenti prima di procedere con la compilazione.

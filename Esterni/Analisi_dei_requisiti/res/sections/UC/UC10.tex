@@ -1,24 +1,17 @@
-\subsubsection{UC10 - Informazioni dettagliate funzione}
-\begin{figure}[h]
+\subsubsection{UC10 - Ricerca funzione per nome}
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=\ucs]{./res/img/UC10.png}
-	\caption {UC10 - Informazioni dettagliate funzione}
+	\caption {UC10 - Ricerca funzione per nome}
 \end{figure}
 \begin{itemize}
 	\item \textbf{Attori primari:} \ua{};
 	\item \textbf{Attori secondari:} \re{};
-	\item \textbf{Descrizione:} l’utente richiede la visualizzazione della descrizione completa di una funzione di cui conosce il nome eseguendo il comando \pinfo{}. Il sistema riporta le seguenti informazioni:  
-	\begin{itemize}
-		\item firma della funzione;
-		\item costo di esecuzione della funzione; 
-		\item creatore della funzione; 
-		\item descrizione completa della funzione.
-	\end{itemize} 
+	\item \textbf{Descrizione:} l’utente richiede di eseguire la ricerca di tutte le funzioni il cui nome contiene un certo termine di ricerca eseguendo il comando \psearch{};
 	\item \textbf{Scenario principale:} 
 	\begin{itemize}
-		\item l'utente inserisce correttamente ed esegue il comando \pinfo{}; 
-		\item vengono visualizzate le informazioni relative alla funzione in questione.
+		\item l’utente inserisce correttamente ed esegue il comando \psearch{}.
 	\end{itemize}
-	\item \textbf{Precondizione:} l'utente inserisce correttamente ed esegue il comando \pinfo{};
-	\item \textbf{Postcondizione:} la CLI\ped{\textit{G}} riporta la descrizione completa della funzione in questione.
+	\item \textbf{Precondizione:} l’utente desidera individuare tutte le funzioni correlate ad un certo termine;
+	\item \textbf{Postcondizione:} viene eseguita la ricerca di tutte le funzioni il cui nome contiene il termine di ricerca specificato nel comando \search{}.
 \end{itemize}

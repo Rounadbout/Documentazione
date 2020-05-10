@@ -1,18 +1,17 @@
-\subsubsection{UC11 - Ricerca funzione per nome}
+\subsubsection{UC11 - Visualizzazione risultati di ricerca}
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=\ucs]{./res/img/UC11.png}
-	\caption {UC11 - Ricerca funzione per nome}
+	\caption {UC11 - Visualizzazione risultati di ricerca}
 \end{figure}
 \begin{itemize}
 	\item \textbf{Attori primari:} \ua{};
-	\item \textbf{Attori secondari:} \re{};
-	\item \textbf{Descrizione:} l’utente richiede la visualizzazione della lista di tutte le funzioni il cui nome contiene un certo termine di ricerca eseguendo il comando \psearch{}. Il sistema riporta la lista di tali funzioni;
-	\item \textbf{Scenario principale:} 
+	\item \textbf{Descrizione:} viene visualizzata la lista ritornata dal comando \texttt{search};
+	\item \textbf{Scenario principale:} viene visualizzata una lista di tutte le funzioni che nel nome contengono il termine di ricerca specificato;
+	\item \textbf{Estensioni:} 
 	\begin{itemize}
-		\item l’utente inserisce correttamente ed esegue il comando \psearch{};
-		\item il sistema stampa la lista di tutte le funzioni il cui nome contiene il termine di ricerca.
+		\item \textbf{UC12:} non viene trovata alcuna funzione il cui nome contiene il termine di ricerca. Viene di conseguenza visualizzato un messaggio di avviso.
 	\end{itemize}
-	\item \textbf{Precondizione:} l’utente desidera individuare tutte le funzioni correlate ad un certo termine;
-	\item \textbf{Postcondizione:} la CLI\ped{\textit{G}} riporta la lista di tutte le funzioni il cui nome contiene il termine di ricerca specificato nel comando \search{}.
+	\item \textbf{Precondizione:} l’utente ha inserito ed eseguito correttamente il comando \search{}, di conseguenza è stata eseguita la ricerca richiesta [UC10];
+	\item \textbf{Postcondizione:} la CLI\ped{\textit{G}} riporta la lista di funzioni ritornata dal comando \search{}.
 \end{itemize}

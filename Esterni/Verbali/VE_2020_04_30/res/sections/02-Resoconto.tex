@@ -1,0 +1,14 @@
+\section{Verbale}
+\subsection{Presentazione del Proof of Concept}
+I membri del gruppo hanno presentato il \textit{Proof of Concept} eseguendo alcune funzionalità del prodotto. Il Proponente\ped{\textit{G}} ha fornito un feedback positivo ed approvato il lavoro svolto.
+
+
+\subsection{Presentazione e discussione di alcune scelte architetturali}
+I membri del gruppo hanno esposto una serie di scelte architetturali e dubbi in merito alle tecnologie.
+Di seguito si trova un riassunto delle informazioni estrapolate dalla discussione:
+\begin{description}
+	\item{\textbf{Git\ped{\textit{G}} hook:}} il Proponente\ped{\textit{G}} ha consigliato l'uso di Husky per validare il push\ped{\textit{G}} su GitHub\ped{\textit{G}} permettendo o vietando l'operazione in base all'esito della verifica riportata da ESLint\ped{\textit{G}};
+		\item{\textbf{Contenuto smart contract\ped{\textit{G}}:}} il Proponente\ped{\textit{G}} ha consigliato l'integrazione di IPFS all'interno degli smart contract\ped{\textit{G}};
+		\item{\textbf{Uso di serverless\ped{\textit{G}}:}} l'utilizzo del framework serverless\ped{\textit{G}} risulta necessario all'interno dell'applicativo in quanto ha lo scopo di eseguire il deploy della lambda responsabile della generazione delle altre funzioni tramite aws-sdk;
+		\item{\textbf{Salvataggio di informazioni:}} abbiamo proposto la possibilità di salvare informazioni direttamente in AWS\ped{\textit{G}} senza passare per Ethereum\ped{\textit{G}} in contrapposizione al passaggio delle informazioni attraverso Ethereum\ped{\textit{G}}. Il Proponente\ped{\textit{G}} ha sostenuto che il passaggio per Ethereum\ped{\textit{G}} ha diversi vantaggi, quali la lettura gratuita a discapito della scrittura costosa, mentre il passaggio diretto ad AWS\ped{\textit{G}} richiede costo inferiore con però problemi di sicurezza che necessitano di eventuali misure per risolverli. La scelta richiede un'attenta valutazione.
+\end{description}

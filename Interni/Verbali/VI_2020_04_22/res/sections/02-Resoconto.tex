@@ -1,0 +1,44 @@
+\section{Verbale}
+
+	\subsection{Discussione relativa alla struttura della repository su Github}
+	Abbiamo deciso di suddividere la repository\ped{\textit{G}} principale in 4 submodules:
+	\begin{itemize}
+		\item documentazione;
+		\item etherless-cli
+		\item etherless-smart
+		\item etherless-server
+	\end{itemize}
+	
+
+	\subsection{Discussione relativa all'architettura del prodotto}
+	In seguito allo studio delle tecnologie sono emersi numerosi dubbi e incertezze riguardo l'architettura del prodotto.
+	In particolare:
+	\begin{itemize}
+		\item non è chiaro se etherless-cli e etherless-server possono comunicare direttamente;
+		\item non è chiaro se ogni operazione effettuata deve essere gestita da etherless-smart;
+		\item non è chiaro dove vengono salvati i nomi delle funzioni;
+		\item non è chiaro quanti smart contract\ped{\textit{G}} sono previsti e quali sono i loro ruoli;
+		\item non è chiaro come gestire alcuni punti critici relativi alla sicurezza.
+	\end{itemize}
+
+	\subsection{Discussione relativa alla libreria utilizzata per la comunicazione con la blockchain}
+	Abbiamo identificato due librerie che permettono di interfacciarsi con la blockchain\ped{\textit{G}}:
+	\begin{itemize}
+		\item Web3.js;
+		\item Ethers.js.
+	\end{itemize}
+	Abbiamo messo a confronto le due librerie esponendone i relativi vantaggi e svantaggi al fine di decidere quale utilizzare.
+	Non è stata portata una decisione finale per permettere ai membri di studiare meglio le due opzioni.
+	
+	\subsection{Discussione relativa alla quantità di memoria assegnata per l'esecuzione delle funzioni}
+	Il framework\ped{\textit{G}} Serverless\ped{\textit{G}} e la piattaforma AWS\ped{\textit{G}} Lambda\ped{\textit{G}} offrono la possibilità di assegnare una quantità di memoria specifica per ogni funzione.
+	Abbiamo deciso di non permettere agli sviluppatori di impostare tale proprietà in quanto potrebbero richiedere una memoria molto più grande di quella effettivamente necessaria, con un conseguente aumento del costo di esecuzione.
+
+	\subsection{Prossima riunione}
+		La prossima riunione è stata fissata come segue:
+		\begin{itemize}
+			\item \textbf{Luogo: } chiamata tramite Zoom\ped{\textit{G}};
+			\item \textbf{Data: } 2020-04-23;
+			\item \textbf{Ora di inizio: } 17.30;
+			\item \textbf{Tipologia: } riunione esterna con il Proponente\ped{\textit{G}}.
+		\end{itemize}

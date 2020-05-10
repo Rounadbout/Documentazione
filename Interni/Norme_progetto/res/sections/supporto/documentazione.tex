@@ -6,8 +6,8 @@
       Ogni documento attraversa diversi stadi:
       \begin{itemize}
         \item \textbf{Creazione e strutturazione del documento:} il documento viene creato nella sua directory di appartenenza (secondo le indicazioni presenti nella sezione "Documenti interni ed esterni"), e viene stesa la sua struttura generale. Viene utilizzato un template\ped{\textit{G}} \LaTeX{}\ped{\textit{G}} (descritto nella sezione \textsection3.1.5.1);
-        \item \textbf{Stesura:} scrittura effettiva dei contenuti del documento da parte di un redattore\ped{\textit{G}};
-        \item \textbf{Verifica:} attività eseguita dai Verificatori, i quali si occupano di controllare che il documento sia conforme alle \textit{\NdP{}}, sia sintatticamente che semanticamente. Alla fine di ogni controllo, il resoconto della verifica viene consegnato al Responsabile di Progetto che provvede a notificare il redattore\ped{\textit{G}} in caso di errori, riportando il documento al passo di "Stesura". Quando la fase di verifica finale non rileva ulteriori errori, il Responsabile passa il documento al processo di "Approvazione";
+        \item \textbf{Stesura:} scrittura effettiva dei contenuti del documento da parte di un redattore\ped{\textit{G}}. Ogni contenuto scritto dal redattore\ped{\textit{G}} deve essere prontamente revisionato da un Verificatore per garantirne la validità;
+        \item \textbf{Verifica:} attività eseguita dai Verificatori, i quali si occupano di controllare che il documento sia conforme alle \textit{\NdP{} v2.0.0}, sia sintatticamente che semanticamente. Alla fine di ogni controllo, il resoconto della verifica viene consegnato al Responsabile di Progetto che provvede a notificare il redattore\ped{\textit{G}} in caso di errori, riportando il documento al passo di "Stesura". Quando la fase di verifica finale non rileva ulteriori errori, il Responsabile passa il documento al processo di "Approvazione";
         \item \textbf{Approvazione:} in questa fase i Verificatori hanno terminato i controlli finali con esito positivo, comunicandoli al Responsabile, il quale si occupa di approvare il documento e preparare il rilascio.
       \end{itemize}
 
@@ -99,7 +99,7 @@
         Questa sezione è presente anche nei Verbali\ped{\textit{G}} di riunione, nei quali si limita alla stesura, la verifica e l'approvazione del documento in questo ordine, per evitare modifiche retroattive ai Verbali.\\
         Ogni riga rappresenta una modifica ed è suddivisa in cinque colonne:
         \begin{itemize}
-          \item \textbf{Versione:} aggiornamento progressivo della versione; 
+          \item \textbf{Versione:} aggiornamento progressivo della versione;
           \item \textbf{Data:} data della modifica;
           \item \textbf{Nominativo:} nome e cognome del membro del gruppo che ha effettuato la modifica;
           \item \textbf{Ruolo:} ruolo ricoperto in quel momento dal membro del team che ha effettuato la modifica;
@@ -114,7 +114,7 @@
       \subsubsubsection{Contenuto}
         Tutte le pagine successive sono occupate dal contenuto e sono strutturate come segue:
         \begin{itemize}
-          \item in alto a destra il nome del documento;
+          \item in alto a destra il nome del documento, corredato dalla sua versione;
           \item in alto a sinistra il logo del gruppo \Gruppo{};
           \item il contenuto della pagina diviso da intestazione e piè di pagina con una riga orizzontale;
           \item in basso a destra il numero di pagina nel formato:
@@ -167,10 +167,10 @@
           \item per un documento qualunque: nome\_di\_file.tex;
           \item per un \Verbale{}\ped{\textit{G}}: VI\_2020\_03\_16.tex.
         \end{itemize}
-    	\noindent Inoltre, si è deciso di adottare delle convenzioni anche per la parola "verbale", in particolare: 
+    	\noindent Inoltre, si è deciso di adottare delle convenzioni anche per la parola "verbale", in particolare:
     	\begin{itemize}
-    		\item nel caso in cui essa compaia al singolare, deve essere riportata in corsivo e con la prima lettera maiuscola; 
-    		\item nel casi in cui essa compaia al plurale, deve essere riportata solamente con la prima lettera maiuscola. 
+    		\item nel caso in cui essa compaia al singolare, deve essere riportata in corsivo e con la prima lettera maiuscola;
+    		\item nel casi in cui essa compaia al plurale, deve essere riportata solamente con la prima lettera maiuscola.
     	\end{itemize}
 
       \subsubsubsection{Stile del testo}
@@ -190,7 +190,7 @@
           (es. Riferendosi ad una sezione specifica "[\dots{}] come indicato nella \textsection5.1 dell'\AdR{} v1.1.0[\dots{}]").
         \end{itemize}
       \subsubsubsection{Termini del Glossario}
-      	Le norme relative ai termini da inserire nel Glossario sono:
+      	Le norme relative ai termini da inserire nel \Glossario{} sono:
         \begin{itemize}
           \item ogni termine del \Glossario{} deve essere contrassegnato, in ogni sua istanza, da una G maiuscola a pedice;
           \item le istanze dei termini del \Glossario{} presenti nei titoli non necessitano della G maiuscola a pedice.
@@ -216,7 +216,7 @@
         \end{center}
         ovvero l'ora in due cifre (HH) e i minuti in due cifre (MM).
 
-      \subsubsubsection{Tabelle e Immagini}
+      \subsubsubsection{Tabelle e immagini}
         Le tabelle sono sempre corredate da un titolo ed un'indicizzazione separata dal normale contenuto.\\
         Le immagini sono accompagnate da una didascalia ed un'indicizzazione, anch'essa separata dal normale contenuto.
 
@@ -258,43 +258,43 @@
 				\item{\textbf{formula}}: $ IG=89+\frac{300 \times \#frasi -10\times \#lettere}{\#parole} $;
 				\item{\textbf{risultato}}: il risultato è compreso tra 0 e 100, dove il valore 100 indica il grado più alto di leggibilità e 0 il più basso. In particolare:
 					\begin{itemize}
-						\item se il risultato è inferiore a 80, il testo è considerato di difficile lettura per chi ha la licenza elementare; 
-						\item se il risultato è inferiore a 60, il documento è considerato di difficile lettura per chi ha la licenza media; 
-						\item se il risultato è minore di 40, il documento è considerato di difficile lettura per chi ha un diploma superiore. 
+						\item se il risultato è inferiore a 80, il testo è considerato di difficile lettura per chi ha la licenza elementare;
+						\item se il risultato è inferiore a 60, il documento è considerato di difficile lettura per chi ha la licenza media;
+						\item se il risultato è minore di 40, il documento è considerato di difficile lettura per chi ha un diploma superiore.
 					\end{itemize}
 			\end{itemize}
-	
+
 		\subsubsubsection{Formula di Flesch}
 		\begin{itemize}
 			\item{\textbf{Descrizione}}: formula utilizzata per misurare la leggibilità di un testo inglese;
 			\item{\textbf{unità di misura}}: la metrica è espressa tramite un numero decimale;
-			\item{\textbf{formula}}: $ F = 206,835 - (84,6 \times S) - (1,015 \times P) $, dove: 
+			\item{\textbf{formula}}: $ F = 206,835 - (84,6 \times S) - (1,015 \times P) $, dove:
 				\begin{itemize}
-					\item S indica il numero medio di sillabe per parola; 
-					\item P indica il numero medio di parole per frase. 
+					\item S indica il numero medio di sillabe per parola;
+					\item P indica il numero medio di parole per frase.
 				\end{itemize}
-			\item{\textbf{risultato}}: il risultato è compreso tra 0.0 e 100.0, in particolare: 
+			\item{\textbf{risultato}}: il risultato è compreso tra 0.0 e 100.0, in particolare:
 				\begin{itemize}
-					\item se il risultato è compreso tra 0.0 e 30.0 il documento è considerato molto difficile da leggere, adatto a lettori laureati; 
-					\item se il risultato è compreso tra 30.0 e 50.0 il documento è leggibile per studenti universitari; 
-					\item se il risultato è compreso tra 50.0 e 70.0 il documento è leggibile per chi possiede un diploma superiore; 
-					\item se il risultato è compreso tra 70.0 e 90.0 il documento è leggibile per chi possiede una licenza media; 
+					\item se il risultato è compreso tra 0.0 e 30.0 il documento è considerato molto difficile da leggere, adatto a lettori laureati;
+					\item se il risultato è compreso tra 30.0 e 50.0 il documento è leggibile per studenti universitari;
+					\item se il risultato è compreso tra 50.0 e 70.0 il documento è leggibile per chi possiede un diploma superiore;
+					\item se il risultato è compreso tra 70.0 e 90.0 il documento è leggibile per chi possiede una licenza media;
 					\item se il risultato è compreso tra 90.0 e 100.0 il documento viene considerato di facile lettura per un qualsiasi lettore.
 				\end{itemize}
 		\end{itemize}
-	
+
 		\subsubsubsection{Correttezza ortografica}
 		\begin{itemize}
 			\item{\textbf{Descrizione}}: permette di misurare la correttezza a livello lessicografico del documento;
 			\item{\textbf{unità di misura}}: la metrica è espressa tramite un numero intero;
 			\item{\textbf{formula}}: il valore coincide con il numero di errori ortografici presenti, cioè: $ CO = \#numero\_errori\_ortografici $;
-			\item{\textbf{risultato}}: 
+			\item{\textbf{risultato}}:
 				\begin{itemize}
-					\item se il risultato è pari a 0, il documento è considerato corretto e non presenta errori ortografici; 
-					\item se il risultato è maggiore di 0, allora il documento presenta almeno un errore ortografico. 
+					\item se il risultato è pari a 0, il documento è considerato corretto e non presenta errori ortografici;
+					\item se il risultato è maggiore di 0, allora il documento presenta almeno un errore ortografico.
 				\end{itemize}
 		\end{itemize}
-	
+
     \subsubsection{Strumenti}
       \subsubsubsection{\LaTeX}
         Per la stesura della documentazione si è scelto il linguaggio di markup \LaTeX{}\ped{\textit{G}}. Nonostante non sia di immediata comprensione, quest'ultimo permette di scrivere documenti in modo collaborativo, modulare e scalabile.
@@ -304,13 +304,13 @@
 
       \subsubsubsection{Editor di testo}
         Si è demandata la scelta dell'editor di testo ai singoli membri del gruppo per permettere un lavoro più efficiente, data la familiarità di ognuno con diversi editor e ambienti di lavoro.
-	  
+
 	  \subsubsubsection{Microsoft Excel}
 		Software per la creazione e la gestione di fogli elettronici, distribuito da Microsoft come parte della suite Microsoft Office. Utilizzato per funzioni di calcolo, produzione di tabelle, grafica e diagrammi. \\
 		\begin{figure}[h!]
 			\centering
 			\includegraphics[scale=0.62]{./res/img/excel.png}
-			\caption{Microsoft Excel}
+			\caption{Microsoft Excel\ped{\textit{G}}}
 		\end{figure}
 		\pagebreak
 	  \subsubsubsection{GanttProject}
@@ -318,7 +318,6 @@
 	    \begin{figure}[h!]
 	    	\centering
 	    	\includegraphics[scale=0.5]{./res/img/diagr_gantt.png}
-	    	\caption{GanttProject}
+	    	\caption{GanttProject\ped{\textit{G}}}
 	    \end{figure}
 	    \pagebreak
-		

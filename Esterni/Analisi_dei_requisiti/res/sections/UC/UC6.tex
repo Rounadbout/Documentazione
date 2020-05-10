@@ -1,17 +1,14 @@
-\subsubsection{UC6 - Attivazione login automatico}
+\subsubsection{UC6 - Login con mnemonic phrase}
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=\ucs]{./res/img/UC6G.png}
-	\caption {UC6 - Attivazione login automatico: schema generale}
+	\includegraphics[scale=\ucs]{./res/img/UC6.png}
+	\caption {UC6 - Login con mnemonic phrase\ped{\textit{G}}}
 \end{figure}
 \begin{itemize}
 	\item \textbf{Attori primari:} \una{};
-	\item \textbf{Descrizione:} dopo aver inserito le credenziali di accesso l’utente specifica, tramite l’apposito flag \texttt{-r}, la richiesta di essere ricordato anche per eventuali accessi futuri;
-	\item \textbf{Scenario principale:} 
-	\begin{itemize}
-		\item l’utente inserisce il comando di login seguito dalle credenziali necessarie e dal flag \texttt{-r};
-		\item a seguito di una corretta autenticazione le credenziali dell’utente vengono salvate per gli accessi futuri.
-	\end{itemize}
-	\item \textbf{Precondizione:} l’utente richiede di attivare il login automatico tramite il flag \texttt{-r};
-	\item \textbf{Postcondizione:} le informazioni necessarie all’autenticazione dell’utente vengono salvate correttamente in vista di accessi futuri.
+	\item \textbf{Attori secondari:} \re{};
+	\item \textbf{Descrizione:} l’utente può utilizzare il comando \ploginMnemonic{} per autenticarsi all’interno della rete Ethereum\ped{\textit{G}}; 
+	\item \textbf{Scenario principale:} l'utente esegue il comando \login{} indicando manualmente le credenziali necessarie; 
+	\item \textbf{Precondizione:} l’utente tenta di autenticarsi alla piattaforma;
+	\item \textbf{Postcondizione:} l’utente si è autenticato correttamente.
 \end{itemize}

@@ -4,236 +4,198 @@
 Lo scopo della seguente sezione è quello di elencare le metriche adottate dal team \Gruppo{} per valutare la maturità dei processi descritti nel documento \textit{\NdP} e garantire qualità nel loro svolgimento. Lo standard scelto per perseguire tale scopo è ISO/IEC 15504. Inoltre, viene posta particolare attenzione sull'applicazione del metodo di gestione PDCA per ricercare un miglioramento continuo nel corso di tutto il progetto didattico.
 
 \subsubsection{Struttura}
-Le metriche illustrate nel seguente documento presentano la struttura:
+I valori di riferimento delle metriche illustrate nel seguente documento presentano la struttura:
 \subsubsubsection*{Nome metrica}
 \begin{itemize}
-	\item{\textbf{Descrizione}: breve descrizione circa lo scopo della metrica;}
+	\item{\textbf{descrizione}: breve descrizione circa lo scopo della metrica;}
 	\item{\textbf{misurazione}: valore mediante il quale viene espressa la metrica o -se presente- formula per calcolarla;}
 	\item{\textbf{valore minimo accettabile}: limite inferiore sul valore minimo che la metrica deve assumere per ritenersi soddisfatta;}
 	\item{\textbf{valore preferibile}: valore della metrica consigliato (ma non vincolante) per il perseguimento della qualità.}
 \end{itemize}
+La descrizione di tali metriche è invece consultabile nel documento \NdP.
 
 \subsection{Processi Primari}
 
 	\subsubsection{Processo di Sviluppo}
 	
 		\subsubsubsection{Analisi dei Requisiti}
-		Le metriche usate per l'attività di analisi sono le seguenti:
+		I valori di riferimento delle metriche usate per l'attività di analisi sono i seguenti:
 			\subsubsubsection*{Percentuale dei Requisiti Obbligatori Soddisfatti (PROS)}
-			È un valore percentuale che indica la quantità di requisiti obbligatori adempiti nel corso del progetto.
-		\begin{itemize}
-			\item{misurazione: $PROS = \displaystyle\frac{\#requisiti\_obbligatori\_soddisfatti}{\#requisti\_obbligatori\_totali} \times 100$;}
-			\item{valore minimo accettabile: 100\%;}
-			\item{valore preferibile: 100\%.}
-		\end{itemize}
+				\begin{itemize}
+					\item{misurazione: $PROS = \displaystyle\frac{\#requisiti\_obbligatori\_soddisfatti}{\#requisti\_obbligatori\_totali} \times 100$;}
+					\item{valore minimo accettabile: 100\%;}
+					\item{valore preferibile: 100\%.}
+				\end{itemize}
 
 		\subsubsubsection{Progettazione}
-		Le metriche usate per l'attività di progettazione sono le seguenti:
+		I valori di riferimento delle metriche usate per l'attività di progettazione sono i seguenti:
 		
 			\subsubsubsection*{Coupling Between Objects (CBO)}
-			È un valore intero che indica il grado di accoppiamento tra le classi di oggetti. Una classe A si dice \textit{accoppiata} ad una classe B, se A usa metodi o variabili definite in B.
-		\begin{itemize}
-			\item{misurazione: valore intero;}
-			\item{valore minimo accettabile: 0 $\leq$ CBO $\leq$ 6;}
-			\item{valore preferibile: 0 $\leq$ CBO $\leq$ 1.}
-		\end{itemize}
+				\begin{itemize}
+					\item{misurazione: valore intero;}
+					\item{valore minimo accettabile: 0 $\leq$ CBO $\leq$ 6;}
+					\item{valore preferibile: 0 $\leq$ CBO $\leq$ 1.}
+				\end{itemize}
 
 		
 			\subsubsubsection*{Structural Fan-In (SFIN)}
-			È un valore intero che indica quante componenti utilizzano un dato modulo. Uno \textit{SFIN} alto sta a significare un consistente riuso della componente.
-		\begin{itemize}
-			\item{misurazione: valore intero;}
-			\item{valore minimo accettabile: $\geq$ 0;}
-			\item{valore preferibile: $\geq$ 1.}
-		\end{itemize}
+				\begin{itemize}
+					\item{misurazione: valore intero;}
+					\item{valore minimo accettabile: $\geq$ 0;}
+					\item{valore preferibile: $\geq$ 1.}
+				\end{itemize}
 	
 			\subsubsubsection*{Structural Fan-Out (SFOUT)}
-			È un valore intero che indica quante componenti vengono utilizzate dalla componente in questione. Uno \textit{SFOUT} alto sta a significare un significativo accoppiamento della componente.
-		\begin{itemize}
-			\item{misurazione: valore intero;}
-			\item{valore minimo accettabile: = 0;}
-			\item{valore preferibile: $\leq$ 6.}
-		\end{itemize}
+				\begin{itemize}
+					\item{misurazione: valore intero;}
+					\item{valore minimo accettabile: = 0;}
+					\item{valore preferibile: $\leq$ 6.}
+				\end{itemize}
 		
 		\subsubsubsection{Codifica}
-		Le metriche usate per l'attività di codifica sono le seguenti:
+		I valori di riferimento delle metriche usate per l'attività di codifica sono i seguenti:
 					
 		\subsubsubsection*{Complessità ciclomatica}
-		È una metrica utilizzata per stimare la complessità di funzioni, moduli\ped{\textit{G}}, metodi o classi di un programma. Ciò viene fatto mediante la determinazione del numero dei cammini linearmente indipendenti attraverso il grafo di controllo di flusso.
-		\begin{itemize}
-			\item{misurazione: $v(G) = e - n + 2p$, dove: 
 			\begin{itemize}
-				\item{v(G)}: complessità ciclomatica del grafo G; 
-				\item{e}: numero di archi del grafo; 
-				\item{n}: numero di nodi del grafo; 
-				\item{p}: numero di componenti connesse. 
-			\end{itemize} }
-			\item{valore minimo accettabile: 1 $\leq$ complessità ciclomatica $\leq$ 15;}
-			\item{valore preferibile: 1 $\leq$ complessità ciclomatica $\leq$ 10.}
-		\end{itemize}
+				\item{misurazione: $v(G) = e - n + 2p$, dove: 
+				\begin{itemize}
+					\item{v(G)}: complessità ciclomatica del grafo G; 
+					\item{e}: numero di archi del grafo; 
+					\item{n}: numero di nodi del grafo; 
+					\item{p}: numero di componenti connesse. 
+				\end{itemize} }
+				\item{valore minimo accettabile: 1 $\leq$ complessità ciclomatica $\leq$ 15;}
+				\item{valore preferibile: 1 $\leq$ complessità ciclomatica $\leq$ 10.}
+			\end{itemize}
 			
 		\subsubsubsection*{Rapporto linee di codice per linee di commento (RCC)}
-		E' un valore decimale che indica il rapporto tra le righe di codice e le righe di commento ad esso corrispondenti, escludendo le righe vuote. 	
-		\begin{itemize}
-			\item{misurazione: $RCC = \displaystyle\frac{\#linee\_totali}{\#linee\_di\_commento} $;}
-			\item{valore minimo accettabile: RCC $\geq$ 0.25;}
-			\item{valore preferibile: RCC $\geq$ 0.30.}
-		\end{itemize}
+			\begin{itemize}
+				\item{misurazione: $RCC = \displaystyle\frac{\#linee\_totali}{\#linee\_di\_commento} $;}
+				\item{valore minimo accettabile: RCC $\geq$ 0.25;}
+				\item{valore preferibile: RCC $\geq$ 0.30.}
+			\end{itemize}
 
-		\subsubsubsection*{Livello di annidamento}
-		È un valore intero che indica il livello di annidamento nei vari metodi tenendo conto della presenza di strutture di controllo adibite a tale mansione.		
-		\begin{itemize}
-			\item{misurazione: valore intero;}
-			\item{valore minimo accettabile: 1 $\leq$ livello annidamento $\leq$ 7;}
-			\item{valore preferibile: 1 $\leq$ livello annidamento $\leq$ 3.}
-		\end{itemize}
-			
 		\subsubsubsection*{Numero di parametri per metodo}
-		È un numero intero che indica il numero di parametri di un metodo. 
-		\begin{itemize}
-			\item{misurazione: valore intero;}
-			\item{valore minimo accettabile: 0 $\leq$ numero totale attributi $\leq$ 8;}
-			\item{valore preferibile: 0 $\leq$ numero totale attributi $\leq$ 4.}
-		\end{itemize}
+			\begin{itemize}
+				\item{misurazione: valore intero;}
+				\item{valore minimo accettabile: 0 $\leq$ numero totale parametri $\leq$ 8;}
+				\item{valore preferibile: 0 $\leq$ numero totale parametri $\leq$ 4.}
+			\end{itemize}
 			
 		\subsubsubsection*{Numero di attributi per classe}
-		È un numero intero che indica il numero totale di attributi presenti all'interno di una classe.				\begin{itemize}
-			\item{misurazione: valore intero;}
-			\item{valore minimo accettabile: 1 $\leq$ numero totale attributi $\leq$ 15;}
-			\item{valore preferibile: 1 $\leq$ numero totale attributi $\leq$ 8.}
-		\end{itemize}
+			\begin{itemize}
+				\item{misurazione: valore intero;}
+				\item{valore minimo accettabile: 1 $\leq$ numero totale attributi $\leq$ 15;}
+				\item{valore preferibile: 1 $\leq$ numero totale attributi $\leq$ 8.}
+			\end{itemize}
 
 \subsection{Processi di Supporto}
 
 	\subsubsubsection{Documentazione}
-	Le metriche usate per l'attività di documentazione sono le seguenti:
+	I valori di riferimento delle metriche usate per l'attività di documentazione sono le seguenti:
 	
 		\subsubsubsection*{Indice di Gulpease}
-		È un indice che valuta la leggibilità del testo tarato sulla lingua italiana. Il valore risultante è compreso tra 0 e 100, un valore di indice più alto corrisponde ad un indice di leggibilità più semplice.
-		 \begin{itemize}
-			\item{misurazione: $ IG=89+\frac{300 \times \#frasi -10\times \#lettere}{\#parole} $;}
-			\item{valore minimo accettabile: $\geq$ 40;}
-			\item{valore preferibile: $\geq$ 60.}
-		\end{itemize}
+			 \begin{itemize}
+				\item{misurazione: $ IG=89+\frac{300 \times \#frasi -10\times \#lettere}{\#parole} $;}
+				\item{valore minimo accettabile: $\geq$ 40;}
+				\item{valore preferibile: $\geq$ 60.}
+			\end{itemize}
 
 		\subsubsubsection*{Correttezza ortografica}
-		Tutti i documenti devono essere privi di errori grammaticali od ortografici.
-		\begin{itemize}
-			\item{misurazione: numero intero che indica il numero di errori presenti nel testo;}
-			\item{valore minimo accettabile: 0;}
-			\item{valore preferibile: 0.}
-		\end{itemize}
+			\begin{itemize}
+				\item{misurazione: numero intero che indica il numero di errori presenti nel testo;}
+				\item{valore minimo accettabile: 0;}
+				\item{valore preferibile: 0.}
+			\end{itemize}
 		
 		\subsubsubsection*{Formula di Flesch}
-		E' un indice che valuta la leggibilità di un testo in lingua inglese. Più questo indice è alto e più il testo risulta semplice da leggere.
-		 \begin{itemize}
-			\item{misurazione: $ F = 206,835 - (84,6 \times S) - (1,015 \times P) $, dove: 
+			 \begin{itemize}
+				\item{misurazione: $ F = 206,835 - (84,6 \times S) - (1,015 \times P) $, dove: 
 				\begin{itemize}
 					\item S indica il numero medio di sillabe per parola; 
 					\item P indica il numero medio di parole per frase. 
 				\end{itemize}}
-			\item{valore minimo accettabile: $\geq$ 50;}
-			\item{valore preferibile: $\geq$ 60.}
-		\end{itemize}
+				\item{valore minimo accettabile: $\geq$ 50;}
+				\item{valore preferibile: $\geq$ 60.}
+			\end{itemize}
 
 	\subsubsubsection{Gestione della Qualità}
-	Le metriche usate per la gestione dell qualità sono le seguenti:
+	I valori di riferimento delle metriche usate per la gestione della qualità sono i seguenti:
 	
 		\subsubsubsection*{Percentuale di metriche soddisfatte (PMS)}
-		E' un valore percentuale che indica quante metriche raggiungono soglie accettabili sul totale delle metriche considerate.
-		\begin{itemize}
-			\item{$PMS=\displaystyle\frac{\#metriche\_soddisfatte}{\#totale\_di\_metriche} \times 100$;}
-			\item{valore minimo accettabile: 60\%;}
-			\item{valore preferibile: 90\%.}
-		\end{itemize}
+			\begin{itemize}
+				\item{$PMS=\displaystyle\frac{\#metriche\_soddisfatte}{\#totale\_di\_metriche} \times 100$;}
+				\item{valore minimo accettabile: 60\%;}
+				\item{valore preferibile: 90\%.}
+			\end{itemize}
 					
 	\subsubsubsection{Verifica}
-	Le metriche usate per l'attività di verifica sono le seguenti:
+	I valori di riferimento delle metriche usate per l'attività di verifica sono i seguenti:
 	
 		\subsubsubsection*{Code Coverage}
-		 È la percentuale di linee di codice che sono state eseguite dai test dopo un’esecuzione.
-		 \begin{itemize}
-			\item{misurazione: $ CC = \displaystyle\frac{\#linee\_di\_codice\_eseguite\_dal\_test}{\#linee\_di\_codice\_totali} \times 100$;}
-			\item{valore minimo accettabile: 80\%;}
-			\item{valore preferibile: 100\%.}
-		\end{itemize}
+		 	\begin{itemize}
+				\item{misurazione: $ CC = \displaystyle\frac{\#linee\_di\_codice\_eseguite\_dal\_test}{\#linee\_di\_codice\_totali} \times 100$;}
+				\item{valore minimo accettabile: 80\%;}
+				\item{valore preferibile: 100\%.}
+			\end{itemize}
 
 \subsection{Processi Organizzativi}
 
 	\subsubsubsection{Gestione Organizzativa}
-	Le metriche usate per la gestione organizzativa sono le seguenti:
+	I valori di riferimento delle metriche usate per la gestione organizzativa sono i seguenti:
 	
 		\subsubsubsection*{Budget at Completion (BAC)}
-		Equivale al budget allocato inizialmente per il progetto.
-		\begin{itemize}
-			\item{misurazione: numero intero;}
-			\item{valore minimo accettabile: valore del preventivo con un errore massimo del 5\%, ovvero \textit{preventivo}-5\% $\leq$ \textit{BAC} $\leq$ \textit{preventivo}+5\%;}
-			\item{valore preferibile: pari al preventivo.}
-		\end{itemize}
+			\begin{itemize}
+				\item{misurazione: numero intero;}
+				\item{valore minimo accettabile: valore del preventivo con un errore massimo del 5\%, ovvero \textit{preventivo}-5\% $\leq$ \textit{BAC} $\leq$ \textit{preventivo}+5\%;}
+				\item{valore preferibile: pari al preventivo.}
+			\end{itemize}
 		
 		\subsubsubsection*{Estimated at Completion (EAC)}
-		Equivale al BAC rivisto allo stato corrente del progetto, ovvero è la somma del costo sostenuto fino a quel momento e la stima del costo ancora da sostenere.
-		\begin{itemize}
-			\item{misurazione: $EAC = AC + ETC$;}
-			\item{valore minimo accettabile: valore del preventivo con un errore massimo del 5\%, ovvero \textit{preventivo}-5\% $\leq$ \textit{BAC} $\leq$ \textit{preventivo}+5\%;}
-			\item{valore preferibile: pari al preventivo.}
-		\end{itemize}
+			\begin{itemize}
+				\item{misurazione: $EAC = AC + ETC$;}
+				\item{valore minimo accettabile: valore del preventivo con un errore massimo del 5\%, ovvero \textit{preventivo}-5\% $\leq$ \textit{BAC} $\leq$ \textit{preventivo}+5\%;}
+				\item{valore preferibile: pari al preventivo.}
+			\end{itemize}
 		
 		\subsubsubsection*{Estimate to Complete (ETC)}
-		Valore stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto.
-		\begin{itemize}
-			\item{misurazione: numero intero;}
-			\item{valore minimo accettabile: $\leq$ preventivo;}
-			\item{valore preferibile: < preventivo.}
-		\end{itemize}
+			\begin{itemize}
+				\item{misurazione: numero intero;}
+				\item{valore minimo accettabile: $\leq$ preventivo;}
+				\item{valore preferibile: < preventivo.}
+			\end{itemize}
 		
 		\subsubsubsection*{Planned Value (PV)}
-		Corrisponde al costo pianificato per realizzare le attività di progetto fino a quel momento.
-		\begin{itemize}
-			\item{misurazione: $PV = \%lavoro\_pianificato \times BAC$;}
-			\item{valore minimo accettabile: $\geq$ 0;}
-			\item{valore preferibile: $\geq$ 0.}
-		\end{itemize}
+			\begin{itemize}
+				\item{misurazione: $PV = \%lavoro\_pianificato \times BAC$;}
+				\item{valore minimo accettabile: $\geq$ 0;}
+				\item{valore preferibile: $\geq$ 0.}
+			\end{itemize}
 		
 		\subsubsubsection*{Actual Cost (AC)}
-		Indica il costo effettivamente sostenuto al momento del calcolo.
-		\begin{itemize}
-			\item{misurazione: numero intero;}
-			\item{valore minimo accettabile: 0 $\leq$ \textit{AC} < \textit{BAC};}
-			\item{valore preferibile: 0 $\leq$ \textit{AC} < \textit{PV}.}
-		\end{itemize}
+			\begin{itemize}
+				\item{misurazione: numero intero;}
+				\item{valore minimo accettabile: 0 $\leq$ \textit{AC} < \textit{BAC};}
+				\item{valore preferibile: 0 $\leq$ \textit{AC} < \textit{PV}.}
+			\end{itemize}
 		
 		\subsubsubsection*{Earned Value (EV)}
-		Indica la quantità di lavoro compiuta al momento del calcolo, ovvero il valore prodotto dal progetto alla data corrente.
-		\begin{itemize}
-			\item{misurazione: $EV = \%lavoro\_completato \times BAC$;}
-			\item{valore minimo accettabile: $\geq$ 0;}
-			\item{valore preferibile: $\geq$ 0.}
-		\end{itemize}
+			\begin{itemize}
+				\item{misurazione: $EV = \%lavoro\_completato \times BAC$;}
+				\item{valore minimo accettabile: $\geq$ 0;}
+				\item{valore preferibile: $\geq$ 0.}
+			\end{itemize}
 
 		\subsubsubsection*{Cost Variance (CV)}
-		Misura l'andamento del budget nel corso di un progetto software. In particolare, la \textit{Cost Variance} è la differenza tra \textit{Earned Value} e \textit{Actual Cost}, ovvero tra ciò che si aveva pianificato di spendere e ciò che si è effettivamente speso nel corso del progetto.
-		Se la \textit{Cost Variance} ha valore negativo significa che si è \textit{over budget}, se è nulla si è \textit{on budget}, mentre se è positiva si è \textit{under budget}.
-		\begin{itemize}
-			\item{misurazione: $CV = EV - AC$;}
-			\item{valore minimo accettabile: 0;}
-			\item{valore preferibile: > 0.}
-		\end{itemize}
+			\begin{itemize}
+				\item{misurazione: $CV = EV - AC$;}
+				\item{valore minimo accettabile: 0;}
+				\item{valore preferibile: > 0.}
+			\end{itemize}
 		
 		\subsubsubsection*{Schedule Variance (SV)}
-		Indica lo stato di avanzamento di un progetto software rispetto alla schedulazione delle attività e viene calcolata mediante la differenza tra \textit{Earned Value} e \textit{Planned Value}.
-		Se la \textit{Schedule Variance} ha valore negativo significa che lo stato di avanzamento del progetto è in ritardo rispetto alla pianificazione, se è nulla lo stato di avanzamento del progetto è nei tempi previsti, mentre se è positiva significa che si è in anticipo rispetto alla pianificazione.
-		\begin{itemize}
-			\item{misurazione: $SV = EV - PV$;}
-			\item{valore minimo accettabile: 0;}
-			\item{valore preferibile: > 0.}
-		\end{itemize}
-						
-		\subsubsubsection*{Correlazione tra CV e SV}
-		Lo stato di un progetto è esprimibile dalla correlazione tra \textit{Cost Variance} e \textit{Schedule Variance}, in particolare:
-		\begin{enumerate}
-			\item{\textbf{SV e CV positive}: il progetto è in anticipo rispetto alla pianificazione e rientra nel budget previsto;}
-			\item{\textbf{SV positiva, CV negativa}: il progetto è in anticipo rispetto alla pianificazione ma ha superato il budget allocato;}
-			\item{\textbf{SV negativa, CV positiva}: il progetto è in ritardo rispetto alla pianificazione ma rientra nel budget previsto;}
-			\item{\textbf{SV e CV negative}: il progetto è in ritardo rispetto alla pianificazione e ha superato il budget previsto.}
-		\end{enumerate}
+			\begin{itemize}
+				\item{misurazione: $SV = EV - PV$;}
+				\item{valore minimo accettabile: 0;}
+				\item{valore preferibile: > 0.}
+			\end{itemize}
