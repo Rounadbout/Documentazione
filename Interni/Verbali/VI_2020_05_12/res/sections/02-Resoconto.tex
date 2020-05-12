@@ -10,7 +10,7 @@
 	La procedura di deploy\ped{\textit{G}} avviene come segue:
 		\begin{itemize}
 			\item lato CLI\ped{\textit{G}}, l'utente carica il file contenente la funzione oppure uno zip contenente diversi file (da decidere);
-			\item il modulo cli calcola l'hash di tale file/zip e lo trasmette ad Etherless-smart assieme alla quantità di Ether\ped{\textit{G}} necessaria al deploy\ped{\textit{G}};
+			\item il modulo Etherless-CLI\ped{\textit{G}} calcola l'hash di tale file/zip e lo trasmette ad Etherless-smart assieme alla quantità di ETH\ped{\textit{G}} necessaria al deploy\ped{\textit{G}};
 			\item il modulo\ped{\textit{G}} Etherless-smart trasmette al modulo\ped{\textit{G}} Etherless-server tale hash;
 			\item nello stesso momento, anche il modulo Etherless-CLI trasmette al modulo Etherless-server il file contenente la funzione/lo zip contenente i vari file;
 			\item il modulo\ped{\textit{G}} Etherless-server calcola l'hash sui file ricevuti da Etherless-CLI e li confronta con l'hash ricevuto da Etherless-smart. Se questo corrisponde, viene fatto il deploy\ped{\textit{G}} della funzione su AWS\ped{\textit{G}} Lambda\ped{\textit{G}}.	
