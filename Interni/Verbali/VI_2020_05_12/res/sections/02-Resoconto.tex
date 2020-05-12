@@ -1,21 +1,21 @@
 \section{Verbale}
 
 	\subsection{Informazioni da inserire negli smart contract}
-	Per ogni funzione di cui è stato fatto il deploy è stato deciso di mantenere nello smart contract informazioni quali il nome della funzione, il suo prezzo e l'indirizzo del suo sviluppatore. Per il momento si è rimandata la discussione sull'inclusione lato smart contract oppure lato server della descrizione della funzione e della segnatura della stessa.
+	Per ogni funzione di cui è stato fatto il deploy\ped{\textit{G}} il gruppo ha deciso di mantenere nello smart contract\ped{\textit{G}} informazioni quali il nome della funzione, il suo prezzo e l'indirizzo del suo sviluppatore. Per il momento è stata rimandata la discussione sull'inclusione, lato smart contract\ped{\textit{G}} oppure lato server, della descrizione della funzione e della segnatura della stessa.
 	
 	\subsection{Metodo di pagamento per l'esecuzione delle funzioni}
-	E' stato deciso di implementare un metodo di pagamento escrow alla richiesta di esecuzione di una funzione, di modo da poter restituire all'utente la somma pagata in caso l'esecuzione della stessa non vada a buon fine.
+	E' stato deciso di implementare il metodo di pagamento escrow\ped{\textit{G}} alla richiesta di esecuzione di una funzione, in modo da poter restituire all'utente la somma pagata in caso tale esecuzione non vada a buon fine.
 	
 	\subsection{Procedura di deploy}
-	La procedura di deploy avviene come segue:
+	La procedura di deploy\ped{\textit{G}} avviene come segue:
 		\begin{itemize}
-			\item lato cli, l'utente carica il file contenente la funzione oppure uno zip contenente diversi file (da decidere);
-			\item il modulo cli calcola l'hash di tale file/zip e lo trasmette a smart assieme alla quantità di ether necessaria al deploy;
-			\item il modulo smart trasmette al modulo server tale hash;
-			\item allo stesso momento, anche il modulo cli trasmette al modulo server il file contenente la funzione/lo zip contenente i vari file;
-			\item il modulo server calcola l'hash sui file ricevuti da cli e li confronta con l'hash ricevuto da smart. Se questo corrisponde, viene fatto il deploy della funzione su AWS Lambda.	
+			\item lato CLI\ped{\textit{G}}, l'utente carica il file contenente la funzione oppure uno zip contenente diversi file (da decidere);
+			\item il modulo cli calcola l'hash di tale file/zip e lo trasmette ad Etherless-smart assieme alla quantità di Ether\ped{\textit{G}} necessaria al deploy\ped{\textit{G}};
+			\item il modulo\ped{\textit{G}} Etherless-smart trasmette al modulo\ped{\textit{G}} Etherless-server tale hash;
+			\item nello stesso momento, anche il modulo Etherless-CLI trasmette al modulo Etherless-server il file contenente la funzione/lo zip contenente i vari file;
+			\item il modulo\ped{\textit{G}} Etherless-server calcola l'hash sui file ricevuti da Etherless-CLI e li confronta con l'hash ricevuto da Etherless-smart. Se questo corrisponde, viene fatto il deploy\ped{\textit{G}} della funzione su AWS\ped{\textit{G}} Lambda\ped{\textit{G}}.	
 		\end{itemize}
-	Resta tuttavia ancora da decidere quale canale scegliere per effettuare il deploy (DynamoDB o servizio AWS).
+	Resta tuttavia ancora da decidere quale canale scegliere per effettuare il deploy (DynamoDB\ped{\textit{G}} o il servizio AWS\ped{\textit{G}} Serverless\ped{\textit{G}} Application Repository\ped{\textit{G}}).
 	
 	\subsection{Presentazione per la RP}
 	I vari componenti del gruppo hanno esposto le slide che hanno pensato di includere per la presentazione della RP che avverrà in data 2020-05-18.
