@@ -4,16 +4,16 @@
 	Per ogni funzione di cui è stato fatto il deploy\ped{\textit{G}} il gruppo ha deciso di mantenere nello smart contract\ped{\textit{G}} informazioni quali il nome della funzione, il suo prezzo e l'indirizzo del suo sviluppatore. Per il momento è stata rimandata la discussione sull'inclusione, lato smart contract\ped{\textit{G}} oppure lato server, della descrizione della funzione e della segnatura della stessa.
 	
 	\subsection{Metodo di pagamento per l'esecuzione delle funzioni}
-	E' stato deciso di implementare il metodo di pagamento escrow\ped{\textit{G}} alla richiesta di esecuzione di una funzione, in modo da poter restituire all'utente la somma pagata in caso tale esecuzione non vada a buon fine.
+	È stato deciso di implementare il metodo di pagamento escrow\ped{\textit{G}} alla richiesta di esecuzione di una funzione, in modo da poter restituire all'utente la somma pagata in caso tale esecuzione non vada a buon fine.
 	
 	\subsection{Procedura di deploy}
 	La procedura di deploy\ped{\textit{G}} avviene come segue:
 		\begin{itemize}
 			\item lato CLI\ped{\textit{G}}, l'utente carica il file contenente la funzione oppure uno zip contenente diversi file (da decidere);
-			\item il modulo Etherless-CLI\ped{\textit{G}} calcola l'hash di tale file/zip e lo trasmette ad Etherless-smart assieme alla quantità di ETH\ped{\textit{G}} necessaria al deploy\ped{\textit{G}};
-			\item il modulo\ped{\textit{G}} Etherless-smart trasmette al modulo\ped{\textit{G}} Etherless-server tale hash;
-			\item nello stesso momento, anche il modulo Etherless-CLI trasmette al modulo Etherless-server il file contenente la funzione/lo zip contenente i vari file;
-			\item il modulo\ped{\textit{G}} Etherless-server calcola l'hash sui file ricevuti da Etherless-CLI e li confronta con l'hash ricevuto da Etherless-smart. Se questo corrisponde, viene fatto il deploy\ped{\textit{G}} della funzione su AWS\ped{\textit{G}} Lambda\ped{\textit{G}}.	
+			\item il modulo etherless-cli calcola l'hash di tale file/zip e lo trasmette ad etherless-smart assieme alla quantità di ETH\ped{\textit{G}} necessaria al deploy\ped{\textit{G}};
+			\item il modulo\ped{\textit{G}} etherless-smart trasmette al modulo\ped{\textit{G}} etherless-server tale hash;
+			\item nello stesso momento, anche il modulo etherless-cli trasmette al modulo etherless-server il file contenente la funzione/lo zip contenente i vari file;
+			\item il modulo\ped{\textit{G}} etherless-server calcola l'hash sui file ricevuti da etherless-cli e li confronta con l'hash ricevuto da etherless-smart. Se questo corrisponde, viene fatto il deploy\ped{\textit{G}} della funzione su AWS\ped{\textit{G}} Lambda\ped{\textit{G}}.	
 		\end{itemize}
 	Resta tuttavia ancora da decidere quale canale scegliere per effettuare il deploy (DynamoDB\ped{\textit{G}} o il servizio AWS\ped{\textit{G}} Serverless\ped{\textit{G}} Application Repository\ped{\textit{G}}).
 	
@@ -24,8 +24,8 @@
 	\subsection{Prossima riunione}
 		La prossima riunione è stata fissata come segue:
 		\begin{itemize}
-			\item \textbf{Luogo: } chiamata tramite Microsoft Teams\ped{\textit{G}}; 
-			\item \textbf{Data: } 2020-05-13;
-			\item \textbf{Ora di inizio: } 15.00;
-			\item \textbf{Tipologia: } riunione interna.
+			\item \textbf{Luogo:} chiamata tramite Microsoft Teams\ped{\textit{G}}; 
+			\item \textbf{Data:} 2020-05-13;
+			\item \textbf{Ora di inizio:} 15.00;
+			\item \textbf{Tipologia:} riunione interna.
 		\end{itemize}
