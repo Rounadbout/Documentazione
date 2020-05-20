@@ -1,0 +1,12 @@
+\section{Verbale}
+	\subsection{Aggiornamento sullo stato attuale del prodotto}
+	Ogni gruppo ha esposto lo stato attuale del proprio modulo\textit{\ped{G}}.
+	In seguito, abbiamo valutato quali sono le priorità di ogni gruppo. In particolare, ci siamo concentrati sulle problematiche riscontrate e su come risolverle. Per organizzare il lavoro in modo efficiente, abbiamo creato un documento condiviso Word sul canale Teams\textit{\ped{G}} in cui abbiamo elencato le attività più importanti da svolgere. \'E risultato di particolare importanza lo studio della progettazione. 
+	\subsection{Discussione relativa alla Product Baseline\textit{\ped{G}}}
+	Abbiamo elencato i documenti, e i relativi contenuti, da preparare per la Product Baseline\textit{\ped{G}}. In particolare, non è chiaro se viene richiesta anche una dimostrazione del prodotto (demo\textit{\ped{G}}) breve.
+	\subsection{Discussione relativa ai pattern architetturali del modulo etherless-smart}
+	Il modulo etherless-smart, sviluppato in Solidity\textit{\ped{G}}, non prevede l'utilizzo di classi. Di conseguenza non è chiaro se sia necessario applicare alcun pattern. Tuttavia, abbiamo identificato dei pattern specifici per Solidity\textit{\ped{G}}, alcuni dei quali possono essere applicati al nostro prodotto. In particolare, il pattern Eternal Storage può essere molto utile per mantenere lo storage di uno smart contract\textit{\ped{G}} dopo un eventuale upgrade.
+	\subsection{Discussione relativa al formato della lista di funzioni ritornata dal modulo etherless-smart}
+	Inizialmente era stato suggerito di ritornare la lista delle funzioni disponibili, contenuta nel modulo\textit{\ped{G}} etherless-server, in formato JSON\textit{\ped{G}}. Tuttavia, sviluppando questa funzionalità, ci siamo accorti che è necessario eseguire più elaborazioni di dati del previsto, in quanto Solidity\textit{\ped{G}} non offre alcune funzionalità di base, causando così un sostanziale aumento del costo di esecuzione. Non abbiamo deciso definitivamente come affrontare questo problema.
+	\subsection{Discussione relativa alla configurazione delle variabili d'ambiente}
+    Abbiamo deciso di utilizzare il file .env per gestire facilmente la configurazione dell'ambiente di esecuzione.
