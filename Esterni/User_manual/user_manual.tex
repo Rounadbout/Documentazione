@@ -1,0 +1,38 @@
+\documentclass[a4paper]{article}
+
+\input{../../Latex/common_commands.tex}
+\input{config/commands.tex}
+\input{./res/configs.tex}
+
+\begin{document}
+
+	% copertina
+	\input{./res/copertina.tex}
+
+	% diario delle modifiche
+	\input{./res/sections/changelog.tex}
+	\pagebreak
+
+	% indice
+	\tableofcontents
+	\pagebreak
+	
+	\input{./res/sections/introduction.tex}
+	\pagebreak
+	
+	\input{./res/sections/installation.tex}
+	\pagebreak
+	
+	\input{./res/sections/user.tex}
+	\pagebreak
+	
+	\input{./res/sections/developer.tex} 
+	\pagebreak
+	
+	\input{./res/sections/issues.tex}
+	\pagebreak
+	
+	\input{./res/sections/glossary.tex}
+	\pagebreak
+	
+\end{document}
