@@ -2,8 +2,9 @@
     \subsubsection{Descrizione}
       Questo processo, definisce le norme utili alla predisposizione di un workspace ordinato e accessibile, andando a controllare e automatizzare lo stato dei documenti e delle componenti software. Si compone di una serie di attività, di seguito descritte.
       %da aggiungere
-    \subsubsection{Versionamento}
-      \subsubsubsection{Codice di versione}
+    \subsubsection{Attività}
+    \subsubsubsection{Versionamento}
+      \subsubsubsection*{Codice di versione}
         Tutti i documenti prodotti vengono conservati in una repository\ped{\textit{G}} e devono essere versionati tramite un sistema identificativo. I numeri di versione rispettano la struttura seguente:
         \begin{center}
           \textbf{X.Y.Z}
@@ -29,24 +30,21 @@
             \end{itemize}
         \end{itemize}
 
-      \subsubsubsection{Strumenti}
-        Vengono utilizzati Git\ped{\textit{G}} come VCS\ped{\textit{G}} distribuito e GitHub\ped{\textit{G}} per ospitare la repository\ped{\textit{G}} di progetto.
-
-      \subsubsubsection{Repository}
+      \subsubsubsection*{Repository}
         La versione ufficiale del progetto viene mantenuta in una repository\ped{\textit{G}} remota nel sito GitHub\ped{\textit{G}}, appartenete alla \textit{GitHub\ped{\textit{G}} organization} del gruppo \Gruppo{}, al link:
         \begin{center}
-          \url{https://github.com/Rounadbout/etherless}
+          \url{https://github.com/RoundaboutTeam/etherless}
         \end{center}
     	Tale repository\ped{\textit{G}} contiene a sua volta quattro Git\ped{\textit{G}} submodule, che fanno riferimento alle ultime versioni stabili dei tre moduli di Etherless e della documentazione ufficiale:
     	\begin{center}
-    		\url{https://github.com/Rounadbout/etherless-cli}
-    		\url{https://github.com/Rounadbout/etherless-smart}
-    		\url{https://github.com/Rounadbout/etherless-server}
-    		\url{https://github.com/Rounadbout/Documentazione}
+    		\url{https://github.com/RoundaboutTeam/etherless-cli}
+    		\url{https://github.com/RoundaboutTeam/etherless-smart}
+    		\url{https://github.com/RoundaboutTeam/etherless-server}
+    		\url{https://github.com/RoundaboutTeam/Documentazione}
     	\end{center}
         Ogni membro del gruppo lavora su una copia locale della repository\ped{\textit{G}} sul proprio computer, interagendo con il VCS\ped{\textit{G}} e la repository\ped{\textit{G}} remota sia attraverso linea di comando, sia tramite software come GitHub\ped{\textit{G}} Desktop e GitKraken.
 
-      \subsubsubsection{Utilizzo di Git}
+      \subsubsubsection*{Utilizzo di Git}
         Per sfruttare in modo efficace le funzionalità offerte da Git\ped{\textit{G}} e promuovere il lavoro collaborativo, la repository\ped{\textit{G}} è strutturata in vari branch\ped{\textit{G}}, ognuno relativo ad una particolare feature o componente del progetto (es. Un branch\ped{\textit{G}} per la stesura delle \NdP{} chiamato feature/norme\_di\_progetto). Dunque ogni membro del gruppo che necessita di operare su una certa componente del progetto deve:
         \begin{itemize}
           \item scegliere il branch\ped{\textit{G}} adatto su cui lavorare;
@@ -68,3 +66,7 @@
         Tutte le modifiche effettuate nei documenti vengono memorizzate all'interno del "Registro delle modifiche" situato in ogni documento nella pagina successiva alla copertina, come descritto nella sezione \textsection3.1.5.3.\\
         Ad ogni modifica corrisponde un commit\ped{\textit{G}} Git\ped{\textit{G}}, al quale è opportuno allegare un commento in modo da facilitare il tracciamento delle modifiche e del lavoro svolto, tramite Issue\ped{\textit{G}}.
         Ogni modifica apportata ai documenti deve essere discussa con i collaboratori che si stanno occupando del medesimo documento; nel caso in cui la modifica sia di rilevante importanza, è opportuno discuterne con tutto il gruppo durante gli appositi incontri settimanali.
+      \subsubsection{Metriche}
+      Non sono state attualmente individuate metriche specifiche al processo di gestione della configurazione.
+      \subsubsection{Strumenti}
+      Vengono utilizzati Git\ped{\textit{G}} come VCS\ped{\textit{G}} distribuito e GitHub\ped{\textit{G}} per ospitare la repository\ped{\textit{G}} di progetto.
