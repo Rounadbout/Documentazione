@@ -16,7 +16,7 @@
     \subsubsubsection*{Ciclo di vita dei documenti}
       Ogni documento attraversa diversi stadi:
       \begin{itemize}
-        \item \textbf{Creazione e strutturazione del documento:} il documento viene creato nella sua directory di appartenenza (secondo le indicazioni presenti nella sezione "Documenti interni ed esterni"), e viene stesa la sua struttura generale. Viene utilizzato un template\ped{\textit{G}} \LaTeX{}\ped{\textit{G}} (descritto nella sezione \textsection3.1.5.1);
+        \item \textbf{Creazione e strutturazione del documento:} il documento viene creato nella sua directory di appartenenza (secondo le indicazioni presenti nella sezione "Documenti interni ed esterni"), e viene stesa la sua struttura generale. Viene utilizzato un template\ped{\textit{G}} \LaTeX{}\ped{\textit{G}} (descritto nella sezione \textsection3.1.2.2);
         \item \textbf{Stesura:} scrittura effettiva dei contenuti del documento da parte di un redattore\ped{\textit{G}}. Ogni contenuto scritto dal redattore\ped{\textit{G}} deve essere prontamente revisionato da un Verificatore per garantirne la validità;
         \item \textbf{Verifica:} attività eseguita dai Verificatori, i quali si occupano di controllare che il documento sia conforme alle \textit{\NdP{} v2.0.0}, sia sintatticamente che semanticamente. Alla fine di ogni controllo, il resoconto della verifica viene consegnato al Responsabile di Progetto che provvede a notificare il redattore\ped{\textit{G}} in caso di errori, riportando il documento al passo di "Stesura". Quando la fase di verifica finale non rileva ulteriori errori, il Responsabile passa il documento al processo di "Approvazione";
         \item \textbf{Approvazione:} in questa fase i Verificatori hanno terminato i controlli finali con esito positivo, comunicandoli al Responsabile, il quale si occupa di approvare il documento e preparare il rilascio.
@@ -65,7 +65,7 @@
               \item \textbf{nomi dei documenti:} nomi dei documenti ufficiali.
             \end{itemize}
           \item \textbf{configs.tex:} contiene i comandi per l'inclusione dei necessari pacchetti \LaTeX{}\ped{\textit{G}} e la definizione dell'aspetto grafico generale dei documenti;
-          \item \textbf{copertina.tex:} contiene il codice \LaTeX{}\ped{\textit{G}} per la copertina, ovvero la prima pagina di ogni documento (la cui struttura è descritta nella sezione \textsection3.1.5.2);
+          \item \textbf{copertina.tex:} contiene il codice \LaTeX{}\ped{\textit{G}} per la copertina, ovvero la prima pagina di ogni documento (la cui struttura è descritta nella sezione \textsection3.1.2.2);
           \item \textbf{Template:} directory che contiene la struttura "classica" di un documento (quest'ultima viene descritta di seguito).
         \end{itemize}
         La directory Template ha la seguente struttura:
@@ -93,9 +93,9 @@
           \item \textbf{Approvazione:} nome e cognome del Responsabile di progetto;
           \item \textbf{Redazione:} nome e cognome dei redattori\ped{\textit{G}} del documento;
           \item \textbf{Verifica:} nome e cognome dei Verificatori;
-          \item \textbf{Stato:} stato del ciclo di vita in cui si trova il documento (vedi sezione \textsection3.1.4.1 paragrafo "Ciclo di vita dei documenti");
+          \item \textbf{Stato:} stato del ciclo di vita in cui si trova il documento (vedi sezione \textsection3.1.2.1 paragrafo "Ciclo di vita dei documenti");
           \item \textbf{Uso:} indica se il documento è ad uso Interno o Esterno;
-          \item \textbf{Destinato a:} elenco dei destinatari del documento (vedi sezione \textsection3.1.4.1 paragrafo del singolo documento);
+          \item \textbf{Destinato a:} elenco dei destinatari del documento (vedi sezione \textsection3.1.2.1 paragrafo del singolo documento);
     	\end{itemize}
     	Tale struttura è infine seguita da alcune informazioni aggiuntive, allineate al centro del documento:
     	\begin{itemize}
