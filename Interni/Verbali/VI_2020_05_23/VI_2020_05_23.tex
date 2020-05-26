@@ -1,0 +1,34 @@
+\documentclass[a4paper]{article}
+
+\input{../../../Latex/common_commands.tex}
+\input{config/commands.tex}
+\input{../../../Latex/configs.tex}
+
+\begin{document}
+	 % numerazione delle tabelle dipendente dalla section ( e non dalla subsection)
+	\counterwithin{table}{section}
+	
+	% copertina 
+	\input{../../../Latex/copertina.tex}
+	
+	% diario delle modifiche 
+	\input{./res/sections/changelog.tex} 
+	\pagebreak
+	
+	% indice 
+	\tableofcontents 
+	\pagebreak
+	
+	% informazioni generali 
+	\input{./res/sections/01-Intro.tex}
+	\pagebreak
+	
+	% verbale della riunione 
+	\input{./res/sections/02-Resoconto.tex}
+	\pagebreak
+	
+	% riepilogo delle decisioni  
+	\input{./res/sections/03-Riepilogo.tex}
+	\pagebreak
+	
+\end{document}
