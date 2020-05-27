@@ -1,12 +1,12 @@
 \subsubsection{UC15.2 - Inserimento nuova descrizione}
 \begin{itemize}
 	\item \textbf{Attori primari:} \us{};
-	\item \textbf{Descrizione:} l'utente inserisce il comando \pedit{} \texttt{–d new\_desc} indicando la volontà di voler modificare la descrizione associata alla funzione tramite il flag \texttt{-d}, e inserendo successivamente la nuova descrizione nel campo new\_desc;
+	\item \textbf{Descrizione:} l'utente inserisce la nuova descrizione associata alla funzione che desidera modificare;
 	\item \textbf{Scenario principale:} l’utente inserisce la nuova descrizione;  
 	\item \textbf{Estensioni:} 
 	\begin{itemize}
-		\item \textbf{UC15.4:} se l’utente inserisce una nuova descrizione che supera la lunghezza massima consentita, viene visualizzato un apposito messaggio di errore. 
+		\item \textbf{UC15.6:} se l’utente inserisce una nuova descrizione che supera la lunghezza massima consentita, viene visualizzato un apposito messaggio di errore. 
 	\end{itemize}
-	\item \textbf{Precondizione:} l’utente ha inserito all’interno della CLI\ped{\textit{G}} il comando \edit{};
+	\item \textbf{Precondizione:} l’utente ha inserito all’interno della CLI\ped{\textit{G}} il comando \edit{} seguito dal flag \texttt{-d};
 	\item \textbf{Postcondizione:} l’utente ha inserito correttamente la nuova descrizione.
 \end{itemize}
