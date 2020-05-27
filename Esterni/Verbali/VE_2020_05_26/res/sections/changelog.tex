@@ -2,23 +2,28 @@
 
 \rowcolors{2}{lightRowColor}{darkRowColor}
 \begin{longtable}{
-		>{\centering}p{0.1\textwidth}
-		>{\centering}p{0.15\textwidth}
-		>{\centering}p{0.2\textwidth}
-		>{\centering}p{0.15\textwidth}
-		>{}p{0.26\textwidth} }
+		>{\centering}p{0.1\textwidth}	%Versione
+		>{\centering}p{0.14\textwidth}	%Data
+		>{\centering}p{0.13\textwidth}	%Nominativo
+		>{\centering}p{0.11\textwidth}	%Ruolo
+		>{\centering}p{0.15\textwidth}	%Descrizione
+		>{\centering}p{0.14\textwidth} 	%Data Verifica
+		>{\centering}p{0.13\textwidth} 	%Verifica
+	}
 
 	\coloredTableHead
 	\textbf{\color{white}Versione} &
 	\textbf{\color{white}Data} &
 	\textbf{\color{white}Nominativo} &
 	\textbf{\color{white}Ruolo} &
-	\textbf{\color{white}Descrizione}
+	\textbf{\color{white}Descrizione} &
+	\textbf{\color{white}Data Ver} &
+	\textbf{\color{white}Verifica}
 	\tabularnewline
 	\endhead
 
 	% contenuto tabella
-	0.0.1 & 2020-05-26 & \MP & \textit{Progettista} & Stesura del documento. \\
-	% esempio: ProvaVersione & ProvaData & ProvaPersona & \textit{ProvaRuolo} & ProvaAzione. \\
+	0.1.0 & 2020-05-27 & \LB & \textit{Verificatore} & Verifica del documento. & & \\
+	0.0.1 & 2020-05-26 & \MP & \textit{Progettista} & Stesura del documento. & 2020-05-27 & \LB \\
 
 \end{longtable}
