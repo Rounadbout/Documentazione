@@ -1,4 +1,5 @@
 \section{Analisi dei rischi}
+\subsection{Gestione dei rischi}
 Durante lo sviluppo di un progetto complesso è possibile incorrere in problematiche che potrebbero rallentare o impedire il normale proseguimento del progetto. Risulta quindi necessario effettuare un'approfondita attività di analisi dei fattori di rischio per cercare di evitare o rendere il più ininfluenti possibili le eventuali problematiche che potrebbero presentarsi.
 Il risultato di questa analisi è presentata in forma tabellare dove ciascuna voce rappresenta un fattore di rischio ed è costruita tramite le seguenti quattro attività:
 \begin{itemize}
@@ -7,7 +8,6 @@ Il risultato di questa analisi è presentata in forma tabellare dove ciascuna vo
 		\item \textbf{Pianificazione di controllo e mitigazione}: si pianifica una metodologia per evitare che i rischi individuati si verifichino e si stabilisce preventivamente come procedere nel caso in cui il rischio si verifichi. \\
 		Questa attività consiste nell'elaborazione di un piano di contingenza per delineare preventivamente le azioni da intraprendere per evitare o mitigare l'insorgere dei problemi individuati;
 		\item \textbf{Monitoraggio}: attività continua nella quale la situazione è tenuta sotto controllo per prevenire il verificarsi dei rischi o, nel peggiore dei casi, per intervenire tempestivamente e mitigarli. \\
-
 \end{itemize}
 
 
@@ -34,6 +34,7 @@ Inoltre per semplificarne la gestione ed evitare possibili ambiguità ciascun ri
 	\item piano di contingenza.
 \end{itemize}
 
+\subsection{Rischi preventivati}
 \begin{longtable}{
 		>{\centering}p{0.15\textwidth}
 		>{\centering}p{0.25\textwidth}
@@ -85,11 +86,32 @@ Inoltre per semplificarne la gestione ed evitare possibili ambiguità ciascun ri
 		Appena un componente del gruppo nota un malfunzionamento è necessario che lo riferisca agli altri in modo da evitare possibili rallentamenti o impedimenti per il normale proseguimento.
 		&
 		Se il malfunzionamento non può essere risolto in breve tempo è necessario che il componente del gruppo possa continuare a lavorare su un altro dispositivo. Il cambio di dispositivo è reso molto semplice grazie all'utilizzo di un repository\ped{\textit{G}} GitHub\ped{\textit{G}} e di strumenti collaborativi online. \\
-
+	
+	\rowcolor{lightRowColor}
+	RT-3 \\ Corretta configurazione dell'ambiente di lavoro \\ 
+		Probabilità: \textbf{MEDIA} Pericolosità: \textbf{BASSA}
+		&
+		Durante lo sviluppo alcuni programmatori potrebbero avere dei problemi nel configurare l'ambiente di sviluppo in modo adeguato. 
+		&
+		A seguito dell'individuazione di tali difficoltà il programmatore dovrà comunicarle al team tramite gli appositi canali di comunicazione. 
+		&
+		L'amministratore o altri programmatori che hanno configurato correttamente l'ambiente di sviluppo dovranno aiutare il programmatore che ha riscontrato tale problema per giungere ad una soluzione in tempi brevi.\\
+		
+	\rowcolor{darkRowColor}
+	RT-4 \\ Conoscenza superficiale dei design pattern e degli stili architetturali \\ 
+		Probabilità: \textbf{MEDIA} Pericolosità: \textbf{MEDIA}
+		&
+		Nel corso della progettazione e  preparazione della Product Baseline è possibile che delle componenti del gruppo non abbiano ancora acquisito le conoscenze necessarie relative a design pattern e stili architetturali. 
+		&
+		Ogni progettista che si trovi in questa situazione è tenuto a informare il gruppo, e in particolar modo il responsabile. 
+		&
+		Il responsabile dovrà dialogare con i progettisti, ed eventualmente indicare del materiale adeguato all'apprendimento delle conoscenze necessarie.  \\
+	
 	\rowcolor{lightRowColor}
 	RO-1 \\ Inesperienza \\
 		\vspace{5mm} %5mm vertical space
-		Probabilità: \textbf{ALTA} Pericolosità: \textbf{MEDIA} &
+		Probabilità: \textbf{ALTA} Pericolosità: \textbf{MEDIA}
+		&
 		Tenendo conto della poca esperienza dei componenti del gruppo in un progetto complesso è possibile che non sia semplice per alcuni riuscire ad ambientarsi in questa nuova realtà simile a ciò che succede nel mondo del lavoro.
 		&
 		È necessario che ciascun componente del gruppo esponga le proprie problematiche così che gli altri componenti possano essere utili per dare un aiuto, in modo da essere il più produttivi possibile.
@@ -99,7 +121,8 @@ Inoltre per semplificarne la gestione ed evitare possibili ambiguità ciascun ri
 	\rowcolor{darkRowColor}
 	RO-2 \\ Calcolo dei tempi e dei costi \\
 		\vspace{5mm} %5mm vertical space
-		Probabilità: \textbf{ALTA} Pericolosità: \textbf{ALTA} &
+		Probabilità: \textbf{ALTA} Pericolosità: \textbf{ALTA}
+		&
 		Rischio causato anche dall'inesperienza sopra esposta. È possibile che i tempi e i costi preventivati si rivelino imprecisi con l'avanzamento del progetto.
 		&
 		Nel caso in cui un componente riscontri un discostamento dalle ore di lavoro preventivate per ciascuna attività dovrà farlo presente al Responsabile.
@@ -115,8 +138,37 @@ Inoltre per semplificarne la gestione ed evitare possibili ambiguità ciascun ri
 		È essenziale che tutti gli impegni vengano notificati al Responsabile appena il componente interessato ne viene a conoscenza.
 		&
 		Il Responsabile provvederà ad apportare delle modifiche organizzative per evitare o limitare rallentamenti ai lavori. \\
-
+		
 	\rowcolor{darkRowColor}
+	RO-4 \\ Distribuzione del lavoro disomogenea \\
+		\vspace{5mm} %5mm vertical space
+		Probabilità: \textbf{BASSA} Pericolosità: \textbf{MEDIA} &
+		È possibile che ad uno o più membri del gruppo sia assegnato un compito troppo oneroso; in questo modo è probabile che si verifichino rallentamenti.
+		&
+		È essenziale che chiunque ritenga di non riuscire a soddisfare entro le scadenze richieste il lavoro assegnato lo comunichi al resto del gruppo.
+		&
+		Il Responsabile provvederà a valutare i compiti assegnati ai singoli membri del gruppo e se necessario apportare delle modifiche. \\
+	
+	\rowcolor{lightRowColor}
+	RO-5 \\ Approvazione errata dei documenti \\
+		\vspace{5mm} %5mm vertical space
+		Probabilità: \textbf{BASSA} Pericolosità: \textbf{ALTA} &
+		È possibile che il responsabile durante l'approvazione non si accorga o commetta alcuni errori, portando quindi all'approvazione e possibile consegna di documenti errati. 
+		&
+		Per ogni documento devono essere eseguiti controlli costanti, in modo che sia possibile identificare in maniera semplice e rapida tali inconsistenze. 
+		&
+		Il Responsabile si dovrà occupare di controllare che i documenti da approvare siano effettivamente validi. In caso di problemi o errori il responsabile potrà collaborare con un verificatore per risolverli in un tempo adeguato. \\ 
+		
+	\rowcolor{darkRowColor}
+	RO-6 \\ Cattiva gestione dell’archivio per la documentazione del progetto \\
+		\vspace{5mm} %5mm vertical space
+		Probabilità: \textbf{BASSA} Pericolosità: \textbf{MEDIA} &
+		A causa dell'inesperienza dei componenti del gruppo è possibile che alcune funzionalità messe a disposizione dal version control system usato siano poco conosciute. È quindi probabile che si possano verificare problemi ed errori nella gestione della repository. 
+		&
+		Ogni componente del gruppo che si accorga di tali errori dovrà comunicarli, tramite gli appositi canali di comunicazione, ad un Amministratore. 
+		& È richiesto che gli Amministratori abbiano una buona conoscenza dello strumento di versionamento usato, e possano quindi risolvere i problemi individuati in maniera tempestiva. \\
+		
+	\rowcolor{lightRowColor}
 	RI-1 \\ Comunicazioni interne \\
 		\vspace{5mm} %5mm vertical space
 		Probabilità: \textbf{BASSA} Pericolosità: \textbf{MEDIA} &
@@ -126,7 +178,7 @@ Inoltre per semplificarne la gestione ed evitare possibili ambiguità ciascun ri
 		&
 		È stato concordato con tutti i componenti di svolgere almeno due incontri a settimana per comunicare l'avanzamento del lavoro e per chiarire eventuali dubbi. Nel caso in cui un componente non riuscisse a partecipare all'incontro è tenuto a comunicare al Responsabile l'avanzamento del proprio lavoro in modo che possa riferirlo agli altri componenti. \\
 
-	\rowcolor{lightRowColor}
+	\rowcolor{darkRowColor}
 	RI-2 \\ Comunicazione esterna \\
 		\vspace{5mm} %5mm vertical space
 		Probabilità: \textbf{BASSA} Pericolosità: \textbf{MEDIA} &
@@ -136,7 +188,7 @@ Inoltre per semplificarne la gestione ed evitare possibili ambiguità ciascun ri
 		&
 		Qualora si presentasse la necessità di organizzare un incontro con il Proponente\ped{\textit{G}} è necessario che il gruppo proponga la data e l'ora in cui desiderano avvenga l'incontro con almeno due o tre giorni di preavviso e, nel caso in cui il Proponente\ped{\textit{G}} non sia disponibile, concordare per svolgere l'incontro in un altro momento. \\
 
-	\rowcolor{darkRowColor}
+	\rowcolor{lightRowColor}
 	RI-3 \\ Contrasti interni \\
 		\vspace{5mm} %5mm vertical space
 		Probabilità: \textbf{BASSA} Pericolosità: \textbf{ALTA} &
@@ -146,7 +198,7 @@ Inoltre per semplificarne la gestione ed evitare possibili ambiguità ciascun ri
 		&
 		Il Responsabile provvederà a comunicare con i componenti interessati per risolvere l'eventuale tensione o conflitto. \\
 
-	\rowcolor{lightRowColor}
+	\rowcolor{darkRowColor}
 	RR-1 \\ Analisi dei requisiti incompleta \\
 		\vspace{5mm} %5mm vertical space
 		Probabilità: \textbf{MEDIA} Pericolosità: \textbf{ALTA} &
@@ -156,7 +208,7 @@ Inoltre per semplificarne la gestione ed evitare possibili ambiguità ciascun ri
 		&
 		È necessario redigere al meglio l'\textit{\AdR} e mantenere una buona comunicazione con il Proponente\ped{\textit{G}} in modo da chiarire tutti i dubbi che potrebbero insorgere e avere dei riscontri sulla correttezza dei requisiti individuati. \\
 
-	\rowcolor{darkRowColor}
+	\rowcolor{lightRowColor}
 		RR-2 \\ Modifica dei requisiti \\
 		\vspace{5mm} %5mm vertical space
 		Probabilità: \textbf{BASSA} Pericolosità: \textbf{ALTA} &
@@ -165,10 +217,37 @@ Inoltre per semplificarne la gestione ed evitare possibili ambiguità ciascun ri
 		È il Proponente\ped{\textit{G}} che deve comunicare al gruppo eventuali modifiche ai requisiti.
 		&
 		Aggiornare l'\textit{\AdR} \\
+\end{longtable}
 
-			%\rowcolor{lightRowColor}
-			%R- \\  & & & \\
-			%\rowcolor{lightRowColor}
-			%\textbf{Piano di contingenza} & \multicolumn{3}{l}{Testo} \\
-
+\subsection{Riepilogo}
+\begin{longtable}{
+		>{\centering}p{0.15\textwidth}
+		>{\centering}p{0.25\textwidth}
+		>{\centering}p{0.25\textwidth}}
+	
+	\rowcolor{white}
+	\caption{Riepilogo dei rischi}
+	\endlastfoot
+		
+	\coloredTableHead
+	\textbf{\color{white}ID} &
+	\textbf{\color{white}Probabilità} &
+	\textbf{\color{white}Gravità} 
+	\endfirsthead
+	
+	RT-1 & Alta & Media \tabularnewline 
+	RT-2 & Media & Bassa \tabularnewline 
+	RT-3 & Media & Bassa \tabularnewline
+	RT-4 & Media & Media \tabularnewline
+	RO-1 & Alta & Media \tabularnewline
+	RO-2 & Alta & Alta \tabularnewline
+	RO-3 & Media & Media \tabularnewline
+	RO-4 & Bassa & Media \tabularnewline
+	RO-5 & Bassa & Alta \tabularnewline
+	RO-6 & Bassa & Media \tabularnewline
+	RI-1 & Bassa & Media \tabularnewline
+	RI-2 & Bassa & Media \tabularnewline
+	RI-3 & Bassa & Alta \tabularnewline
+	RR-1 & Media & Alta \tabularnewline
+	RR-2 & Bassa & Alta \tabularnewline
 \end{longtable}
