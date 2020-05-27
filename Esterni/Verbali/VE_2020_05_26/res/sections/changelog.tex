@@ -2,28 +2,25 @@
 
 \rowcolors{2}{lightRowColor}{darkRowColor}
 \begin{longtable}{
-		>{\centering}p{0.1\textwidth}	%Versione
-		>{\centering}p{0.14\textwidth}	%Data
-		>{\centering}p{0.13\textwidth}	%Nominativo
-		>{\centering}p{0.11\textwidth}	%Ruolo
-		>{\centering}p{0.15\textwidth}	%Descrizione
-		>{\centering}p{0.14\textwidth} 	%Data Verifica
-		>{\centering}p{0.13\textwidth} 	%Verifica
-	}
-
+		>{\centering}p{0.05\textwidth}	%Versione
+		>{\centering}p{0.13\textwidth}	%Data
+		>{\centering}p{0.22\textwidth}	%Nominativo
+		>{}p{0.24\textwidth}			%Descrizione
+		>{\centering}p{0.22\textwidth} }	%Verifica
+	
 	\coloredTableHead
-	\textbf{\color{white}Versione} &
+	\textbf{\color{white}V} &
 	\textbf{\color{white}Data} &
 	\textbf{\color{white}Nominativo} &
-	\textbf{\color{white}Ruolo} &
 	\textbf{\color{white}Descrizione} &
-	\textbf{\color{white}Data Ver} &
 	\textbf{\color{white}Verifica}
 	\tabularnewline
 	\endhead
 
+
 	% contenuto tabella
-	0.1.0 & 2020-05-27 & \LB & \textit{Verificatore} & Verifica del documento. & & \\
-	0.0.1 & 2020-05-26 & \MP & \textit{Progettista} & Stesura del documento. & 2020-05-27 & \LB \\
+ 	% Versione & data & Nome \\ Ruolo & Descrizione & Verificatore \\ Ruolo
+	0.1.0 & 2020-05-27 & \LB \\ \textit{Verificatore} & Verifica del documento. & \tabularnewline
+	0.0.1 & 2020-05-26 & \MP \\ \textit{Progettista} & Stesura del documento. & \LB \ \textit{Verificatore} \tabularnewline
 
 \end{longtable}
