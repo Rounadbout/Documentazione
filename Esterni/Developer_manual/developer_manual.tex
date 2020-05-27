@@ -2,12 +2,12 @@
 
 \input{../../Latex/common_commands.tex}
 \input{config/commands.tex}
-\input{../../Latex/configs.tex}
+\input{../../Latex/en_configs.tex}
 
 \begin{document}
 
 	% copertina
-	\input{../../Latex/copertina.tex}
+	\input{../../Latex/en_copertina.tex}
 
 	% diario delle modifiche
 	\input{./res/sections/changelog.tex}
@@ -28,25 +28,18 @@
 	% sezioni
 	\input{./res/sections/01-Intro.tex}
 	\pagebreak
-
-	\input{./res/sections/02-QualitaProcesso.tex}
+	\input{./res/sections/02-Etherless.tex}
+	\pagebreak
+	\input{./res/sections/03-Cli.tex}
+	\pagebreak
+	\input{./res/sections/04-Smart.tex}
+	\pagebreak
+	\input{./res/sections/05-Server.tex}
 	\pagebreak
 	
-	\input{./res/sections/03-QualitaProdotto.tex}
-	\pagebreak
-	
-	\input{./res/sections/04-Test.tex}
-	\pagebreak
-	
-	%appendici
+	% appendici
 	\appendix
-	\input{./res/sections/A-ValutazioniMiglioramento.tex}
-	\pagebreak
-	
-	\input{./res/sections/B-ResocontoVerifica.tex}
-	\pagebreak
-	
-	\input{./res/sections/C-ModificheRevisioni.tex}
+	\input{./res/appendix/A-glossario.tex}
 	\pagebreak
 
 \end{document}

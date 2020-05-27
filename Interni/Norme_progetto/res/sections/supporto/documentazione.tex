@@ -1,51 +1,60 @@
 \subsection{Documentazione}
     \subsubsection{Descrizione}
       Questa sezione fornisce le norme per la stesura, la verifica e l'approvazione dei documenti. Tali regole vanno seguite in tutti i documenti ufficiali prodotti durante il ciclo di vita del software, garantendo così la coerenza e la validità degli stessi.
-
-    \subsubsection{Ciclo di vita dei documenti}
+      
+	\subsubsection{Attività}
+	  \subsubsubsection{Implementazione del processo}
+	  Per ogni documento che si intende sviluppare è necessario identificare:
+	  \begin{itemize}
+	  	\item \textbf{titolo o nome}: che sia significativo ed ufficiale;
+	  	\item \textbf{scopo}: che espliciti il contenuto generale del documento e la sua funzionalità come documentazione di progetto;
+	  	\item \textbf{destinatari}: che indichi i soggetti a cui il documento è destinato, o coloro i quali sono tenuti a prenderne visione;
+	  	\item \textbf{procedure di gestione}: che guidino i responsabili nello sviluppo corretto e normato del documento, durante tutto il suo ciclo di vita;
+	  	\item \textbf{versionamento}: pianificazione di versioni intermedie e finali del documento.
+	  \end{itemize}
+      
+    \subsubsubsection*{Ciclo di vita dei documenti}
       Ogni documento attraversa diversi stadi:
       \begin{itemize}
-        \item \textbf{Creazione e strutturazione del documento:} il documento viene creato nella sua directory di appartenenza (secondo le indicazioni presenti nella sezione "Documenti interni ed esterni"), e viene stesa la sua struttura generale. Viene utilizzato un template\ped{\textit{G}} \LaTeX{}\ped{\textit{G}} (descritto nella sezione \textsection3.1.5.1);
+        \item \textbf{Creazione e strutturazione del documento:} il documento viene creato nella sua directory di appartenenza (secondo le indicazioni presenti nella sezione "Documenti interni ed esterni"), e viene stesa la sua struttura generale. Viene utilizzato un template\ped{\textit{G}} \LaTeX{}\ped{\textit{G}} (descritto nella sezione \textsection3.1.2.2);
         \item \textbf{Stesura:} scrittura effettiva dei contenuti del documento da parte di un redattore\ped{\textit{G}}. Ogni contenuto scritto dal redattore\ped{\textit{G}} deve essere prontamente revisionato da un Verificatore per garantirne la validità;
         \item \textbf{Verifica:} attività eseguita dai Verificatori, i quali si occupano di controllare che il documento sia conforme alle \textit{\NdP{} v2.0.0}, sia sintatticamente che semanticamente. Alla fine di ogni controllo, il resoconto della verifica viene consegnato al Responsabile di Progetto che provvede a notificare il redattore\ped{\textit{G}} in caso di errori, riportando il documento al passo di "Stesura". Quando la fase di verifica finale non rileva ulteriori errori, il Responsabile passa il documento al processo di "Approvazione";
         \item \textbf{Approvazione:} in questa fase i Verificatori hanno terminato i controlli finali con esito positivo, comunicandoli al Responsabile, il quale si occupa di approvare il documento e preparare il rilascio.
       \end{itemize}
-
-    \subsubsection{Documenti interni ed esterni}
-      Ogni documento deve essere classificato come Interno o Esterno:
-      \begin{itemize}
-        \item \textbf{Interno:} il documento viene utilizzato all'interno del team;
-        \item \textbf{Esterno:} il documento viene condiviso con il Committente\ped{\textit{G}} ed il Proponente\ped{\textit{G}}.
-      \end{itemize}
-
-    \subsubsection{Documenti presenti}
-      Di seguito sono elencati i documenti ufficiali che verranno prodotti e la loro classificazione in uso Interno o Esterno.
-      \subsubsubsection{Norme di Progetto}
-        Documento ad uso Interno.\\
-        Lo scopo delle \textit{\NdP{}} è descritto nella sezione \textsection1.1 "Scopo del Documento", di questo stesso documento.\\
-
-      \subsubsubsection{Studio di Fattibilità}
-        Documento ad uso Interno.\\
-        Lo \textit{\SdF{}} ha l'obiettivo di esporre (brevemente) ogni capitolato\ped{\emph{G}} e di elencare per ognuno gli aspetti positivi e le criticità che il team ha individuato.
-
-      \subsubsubsection{Glossario}
-        Documento ad uso Esterno.\\
-       	Il \Glossario{}  ha lo scopo di disambiguare alcuni termini che compaiono all'interno dei documenti e vengono utilizzati nelle comunicazioni interne.
-
-      \subsubsubsection{Analisi dei Requisiti}
-        Documento ad uso Esterno.\\
-        Lo  scopo  dell'\textit{\AdR{}} è di esporre dettagliatamente i requisiti individuati per lo sviluppo del capitolato\ped{\emph{G}} scelto.
-
-      \subsubsubsection{Piano di Progetto}
-        Documento ad uso Esterno.\\
-        Lo scopo del \textit{\PdP{}} è di organizzare le attività in modo da gestire le risorse disponibili in termini di tempo e "forza lavoro".
-
-      \subsubsubsection{Piano di Qualifica}
-        Documento ad uso Esterno.\\
-        Lo scopo del \textit{\PdQ{}} è di presentare i metodi di verifica e validazione implementati dal gruppo, per garantire la qualità del prodotto\ped{\textit{G}} e dei processi adottati.
-
-    \subsubsection{Struttura dei documenti}
-      \subsubsubsection{Template \LaTeX}
+  	\subsubsubsection*{Destinatari}
+  	Ogni documento deve essere classificato come Interno o Esterno:
+  	\begin{itemize}
+  		\item \textbf{Interno:} il documento viene utilizzato all'interno del team;
+  		\item \textbf{Esterno:} il documento viene condiviso con il Committente\ped{\textit{G}} ed il Proponente\ped{\textit{G}}.
+  	\end{itemize}
+	Di seguito sono elencati i documenti ufficiali prodotti e la loro classificazione in uso Interno o Esterno:
+	\begin{itemize}
+	\item \textbf{Norme di Progetto}:
+	documento ad uso Interno.\\
+	Lo scopo delle \textit{\NdP{}} è descritto nella sezione \textsection1.1 "Scopo del Documento", di questo stesso documento;
+	
+	\item \textbf{Studio di Fattibilità}:
+	documento ad uso Interno.\\
+	Lo \textit{\SdF{}} ha l'obiettivo di esporre (brevemente) ogni capitolato\ped{\emph{G}} e di elencare per ognuno gli aspetti positivi e le criticità che il team ha individuato;
+	
+	\item \textbf{Glossario}:
+	documento ad uso Esterno.\\
+	Il \Glossario{}  ha lo scopo di disambiguare alcuni termini che compaiono all'interno dei documenti e vengono utilizzati nelle comunicazioni interne;
+	
+	\item \textbf{Analisi dei Requisiti}:
+	documento ad uso Esterno.\\
+	Lo  scopo  dell'\textit{\AdR{}} è di esporre dettagliatamente i requisiti individuati per lo sviluppo del capitolato\ped{\emph{G}} scelto;
+	
+	\item \textbf{Piano di Progetto}:
+	documento ad uso Esterno.\\
+	Lo scopo del \textit{\PdP{}} è di organizzare le attività in modo da gestire le risorse disponibili in termini di tempo e "forza lavoro";
+	
+	\item \textbf{Piano di Qualifica}:
+	documento ad uso Esterno.\\
+	Lo scopo del \textit{\PdQ{}} è di presentare i metodi di verifica e validazione implementati dal gruppo, per garantire la qualità del prodotto\ped{\textit{G}} e dei processi adottati.
+	\end{itemize}
+   	\subsubsubsection{Design e sviluppo}
+      \subsubsubsection*{Template \LaTeX}
         Per uniformare la struttura dei documenti il gruppo ha deciso di creare un template\ped{\textit{G}} \LaTeX{}\ped{\textit{G}}, da utilizzare per la stesura di tutti i documenti ufficiali. Il template\ped{\textit{G}} è contenuto nella cartella \LaTeX{}\ped{\textit{G}}, la cui struttura è la seguente:
         \begin{itemize}
           \item \textbf{common\_commands.tex:} file che contiene la definizione di nuovi comandi \LaTeX{}\ped{\textit{G}} per l'inserimento nel flusso di testo di termini ricorrenti:
@@ -56,7 +65,7 @@
               \item \textbf{nomi dei documenti:} nomi dei documenti ufficiali.
             \end{itemize}
           \item \textbf{configs.tex:} contiene i comandi per l'inclusione dei necessari pacchetti \LaTeX{}\ped{\textit{G}} e la definizione dell'aspetto grafico generale dei documenti;
-          \item \textbf{copertina.tex:} contiene il codice \LaTeX{}\ped{\textit{G}} per la copertina, ovvero la prima pagina di ogni documento (la cui struttura è descritta nella sezione \textsection3.1.5.2);
+          \item \textbf{copertina.tex:} contiene il codice \LaTeX{}\ped{\textit{G}} per la copertina, ovvero la prima pagina di ogni documento (la cui struttura è descritta nella sezione \textsection3.1.2.2);
           \item \textbf{Template:} directory che contiene la struttura "classica" di un documento (quest'ultima viene descritta di seguito).
         \end{itemize}
         La directory Template ha la seguente struttura:
@@ -71,7 +80,7 @@
         \end{itemize}
         %da espandere
 
-      \subsubsubsection{Copertina}
+      \subsubsubsection*{Copertina}
         La copertina è la prima pagina di ogni documento e contiene alcune informazioni generali:
         \begin{itemize}
           \item Logo del gruppo \Gruppo{};
@@ -84,9 +93,9 @@
           \item \textbf{Approvazione:} nome e cognome del Responsabile di progetto;
           \item \textbf{Redazione:} nome e cognome dei redattori\ped{\textit{G}} del documento;
           \item \textbf{Verifica:} nome e cognome dei Verificatori;
-          \item \textbf{Stato:} stato del ciclo di vita in cui si trova il documento (vedi sezione \textsection3.1.4.1 paragrafo "Ciclo di vita dei documenti");
+          \item \textbf{Stato:} stato del ciclo di vita in cui si trova il documento (vedi sezione \textsection3.1.2.1 paragrafo "Ciclo di vita dei documenti");
           \item \textbf{Uso:} indica se il documento è ad uso Interno o Esterno;
-          \item \textbf{Destinato a:} elenco dei destinatari del documento (vedi sezione \textsection3.1.4.1 paragrafo del singolo documento);
+          \item \textbf{Destinato a:} elenco dei destinatari del documento (vedi sezione \textsection3.1.2.1 paragrafo del singolo documento);
     	\end{itemize}
     	Tale struttura è infine seguita da alcune informazioni aggiuntive, allineate al centro del documento:
     	\begin{itemize}
@@ -94,7 +103,7 @@
           \item \textbf{Email:} indirizzo email del gruppo \Gruppo{}.
    		\end{itemize}
 
-      \subsubsubsection{Registro delle modifiche}
+      \subsubsubsection*{Registro delle modifiche}
         Inizia nella seconda pagina del documento e contiene un resoconto delle modifiche apportate al documento, strutturate in forma tabellare.\\
         Questa sezione è presente anche nei Verbali\ped{\textit{G}} di riunione, nei quali si limita alla stesura, la verifica e l'approvazione del documento in questo ordine, per evitare modifiche retroattive ai Verbali.\\
         Ogni riga rappresenta una modifica ed è suddivisa in cinque colonne:
@@ -106,12 +115,12 @@
           \item \textbf{Descrizione:} breve descrizione della modifica effettuata.
         \end{itemize}
 
-      \subsubsubsection{Indice}
+      \subsubsubsection*{Indice}
         L'indice si trova nella pagina successiva e ha lo scopo di aiutare nella navigazione del documento e riassumerne la struttura in maniera visuale.\\
         Nell'indice sono elencati i numeri delle sezioni, seguiti dal titolo e dal numero di pagina. Ogni riga dell'indice è un link che porta alla sezione specificata del documento.\\
         L'indice dei contenuti puó essere seguito da un indice delle immagini e un indice delle tabelle.
 
-      \subsubsubsection{Contenuto}
+      \subsubsubsection*{Contenuto}
         Tutte le pagine successive sono occupate dal contenuto e sono strutturate come segue:
         \begin{itemize}
           \item in alto a destra il nome del documento, corredato dalla sua versione;
@@ -123,7 +132,7 @@
           \end{center}
         \end{itemize}
 
-      \subsubsubsection{Verbali}
+      \subsubsubsection*{Verbali}
         Seguono la stessa struttura generale degli altri documenti, ma hanno un'organizzazione specifica del contenuto, in particolare sono suddivisi in:
         \begin{itemize}
           \item \textbf{Informazioni generali:} che contengono le informazioni dell'incontro e l'ordine del giorno.
@@ -145,9 +154,9 @@
           \end{center}
           dove [T] indica il tipo di \Verbale{}\ped{\textit{G}} che puó essere Interno (I) o Esterno (E).
         \end{itemize}
-
-    \subsubsection{Norme tipografiche}
-      \subsubsubsection{Nomi dei file}
+	\subsubsubsection{Produzione}
+		Per la scrittura e produzione di documentazione standardizzata, sono state introdotte le seguenti norme tipografiche.
+      \subsubsubsection*{Nomi dei file}
         I nomi dei file seguono le seguenti regole:
         \begin{itemize}
           \item sono composti di diverse parole, con la prima lettera minuscola, fatta eccezione per i Verbali che, come descritto in seguito, iniziano per VI oppure VE;
@@ -173,7 +182,7 @@
     		\item nel casi in cui essa compaia al plurale, deve essere riportata solamente con la prima lettera maiuscola.
     	\end{itemize}
 
-      \subsubsubsection{Stile del testo}
+      \subsubsubsection*{Stile del testo}
         Le seguenti norme vanno seguite per l'utilizzo di particolari stili di testo:
         \begin{itemize}
           \item \textbf{Grassetto:} usato se necessario all'inizio delle voci di un elenco puntato, a titoli o a termini significativi;
@@ -189,14 +198,14 @@
           \end{center}
           (es. Riferendosi ad una sezione specifica "[\dots{}] come indicato nella \textsection5.1 dell'\AdR{} v1.1.0[\dots{}]").
         \end{itemize}
-      \subsubsubsection{Termini del Glossario}
+      \subsubsubsection*{Termini del Glossario}
       	Le norme relative ai termini da inserire nel \Glossario{} sono:
         \begin{itemize}
           \item ogni termine del \Glossario{} deve essere contrassegnato, in ogni sua istanza, da una G maiuscola a pedice;
           \item le istanze dei termini del \Glossario{} presenti nei titoli non necessitano della G maiuscola a pedice.
         \end{itemize}
 
-      \subsubsubsection{Elenchi puntati}
+      \subsubsubsection*{Elenchi puntati}
           Ogni voce di un elenco puntato deve aderire alle norme seguenti:
           \begin{itemize}
             \item deve iniziare con la lettera minuscola;
@@ -204,7 +213,7 @@
             \item puó iniziare con dei termini in grassetto e/o con prima lettera maiuscola nel caso in cui il resto della voce sia una descrizione di quei termini.
           \end{itemize}
 
-      \subsubsubsection{Date e orari}
+      \subsubsubsection*{Date e orari}
         In conformità allo standard ISO 8601, le date devono essere scritte usando il formato:
         \begin{center}
           \textbf{YYYY-MM-DD}
@@ -216,11 +225,11 @@
         \end{center}
         ovvero l'ora in due cifre (HH) e i minuti in due cifre (MM).
 
-      \subsubsubsection{Tabelle e immagini}
+      \subsubsubsection*{Tabelle e immagini}
         Le tabelle sono sempre corredate da un titolo ed un'indicizzazione separata dal normale contenuto.\\
         Le immagini sono accompagnate da una didascalia ed un'indicizzazione, anch'essa separata dal normale contenuto.
 
-      \subsubsubsection{Sigle e abbreviazioni}
+      \subsubsubsection*{Sigle e abbreviazioni}
         Nella stesura dei documenti possono venire menzionate diverse sigle:
         \begin{itemize}
           \item sigle per i ruoli di progetto:
@@ -249,7 +258,8 @@
               \item \textbf{RA:} Revisione di Accettazione.
             \end{itemize}
         \end{itemize}
-
+	\subsubsubsection{Manutenzione}
+		Qualora sia necessario apportare modifiche o aggiornamenti ad un documento, si fa riferimento alle norme specificate nelle sezioni \textsection{3.2} e \textsection{3.3} di questo stesso documento.
 	\subsubsection{Metriche}
 		\subsubsubsection{Indice di Gulpease}
 			\begin{itemize}
