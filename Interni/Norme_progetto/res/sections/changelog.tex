@@ -2,58 +2,48 @@
 
 \rowcolors{2}{lightRowColor}{darkRowColor}
 \begin{longtable}{
-		>{\centering}p{0.1\textwidth}
-		>{\centering}p{0.15\textwidth}
-		>{\centering}p{0.2\textwidth}
-		>{\centering}p{0.15\textwidth}
-		>{}p{0.26\textwidth} }
-
+		>{\centering}p{0.05\textwidth}	%Versione
+		>{\centering}p{0.13\textwidth}	%Data
+		>{\centering}p{0.22\textwidth}	%Nominativo
+		>{}p{0.24\textwidth}			%Descrizione
+		>{\centering}p{0.22\textwidth} }	%Verifica
+	
 	\coloredTableHead
-	\textbf{\color{white}Versione} &
+	\textbf{\color{white}V} &
 	\textbf{\color{white}Data} &
 	\textbf{\color{white}Nominativo} &
-	\textbf{\color{white}Ruolo} &
-	\textbf{\color{white}Descrizione}
+	\textbf{\color{white}Descrizione} &
+	\textbf{\color{white}Verifica}
 	\tabularnewline
 	\endhead
-
+	
 	% contenuto tabella
-	% esempio: ProvaVersione & ProvaData & ProvaPersona & \textit{ProvaRuolo} & ProvaAzione. \\
-	2.0.1 & 2020-05-24 & \AS{} & \textit{Progettista} & Ristrutturazione sezioni \textsection{3.1}, \textsection{3.2}, \textsection{4.1} e \textsection{4.2}. \\
-	2.0.0 & 2020-05-10 & \AZ{} & \textit{Responsabile} & Approvazione del documento. \\
-	1.1.0 & 2020-05-08 & \VB{} & \textit{Verificatore} & Verifica del documento. \\
-	1.0.5 & 2020-05-06 & \MP{} & \textit{Amministratore} & Stesura incrementi sezione \textsection{4}. \\
-	1.0.4 & 2020-05-06 & \MP{} & \textit{Amministratore} & Stesura incrementi sezione \textsection{3}.\\
-	1.0.3 & 2020-05-06 & \LB{} & \textit{Progettista} & Incremento sezione \textsection{1} e {2}. \\
-	1.0.2 & 2020-05-01 & \AS{} & \textit{Amministratore} & Approfondimento sezione \textsection2.1, introduzione appendice A e revisione generale. \\
-	1.0.1 & 2020-04-30 & \LB{} & \textit{Responsabile} & Stesura \textsection{3.3} e aggiornamento indice. \\
+	% Versione & data & Nome \\ Ruolo & Descrizione & Verificatore \\ Ruolo
+	2.0.1 & 2020-05-24 & \AS{} \\ \textit{Progettista} & Ristrutturazione sezioni \textsection{3.1}, \textsection{3.2}, \textsection{4.1} e \textsection{4.2}. & \LB \\ \textit{Verificatore} \tabularnewline
+	2.0.0 & 2020-05-10 & \AZ{} \\ \textit{Responsabile} & Approvazione del documento. & \tabularnewline
+	
+	1.1.0 & 2020-05-08 & \VB{} \\ \textit{Verificatore} & Verifica del documento. &  \tabularnewline
+	1.0.5 & 2020-05-06 & \MP{} \\ \textit{Amministratore} & Stesura incrementi sezione \textsection{4}. & \NF \\ \textit{Verificatore} \tabularnewline
+	1.0.4 & 2020-05-06 & \MP{} \\ \textit{Amministratore} & Stesura incrementi sezione \textsection{3}. & \NF \\ \textit{Verificatore} \tabularnewline
+	1.0.3 & 2020-05-06 & \LB{} \\ \textit{Progettista} & Incremento sezione \textsection{1} e {2}. & \VB \\ \textit{Verificatore} \tabularnewline
+	1.0.2 & 2020-05-01 & \AS{} \\ \textit{Amministratore} & Approfondimento sezione \textsection2.1, introduzione appendice A e revisione generale. & \NF \\ \textit{Verificatore} \tabularnewline
+	1.0.1 & 2020-04-30 & \LB{} \\ \textit{Responsabile} & Stesura \textsection{3.3} e aggiornamento indice. & \NF \\ \textit{Verificatore} \tabularnewline
+	1.0.0 & 2020-04-11 & \VB{} \\ \textit{Responsabile} & Approvazione del documento. & \tabularnewline
 
-	1.0.0 & 2020-04-11 & \VB{} & \textit{Responsabile} & Approvazione del documento. \\
-
-	0.3.0 & 2020-03-26 & \LB{} & \textit{Verificatore} & Verifica del documento. \\
-
-	0.2.5 & 2020-03-25 & \AS{} & \textit{Amministratore} & Approfondimento sezioni \textsection2.1, \textsection3.4, \textsection3.6 e Processi Organizzativi. \\
-	0.2.4 & 2020-03-25 & \EG{} & \textit{Amministratore} & Approfondimento sezioni \textsection2.2, \textsection3.1 e \textsection 3.5\\
-	0.2.3 & 2020-03-23 & \VB{} & \textit{Amministratore} & Stesura \textsection3.4. \\
-
-	%0.4.0 & 2020-03-23 & \AS{} & \textit{Verificatore} & Verifica del documento. \\
-
-	0.2.2 & 2020-03-22 & \VB{} & \textit{Amministratore} & Correzioni a seguito della verifica e Stesura \textsection3.2, \textsection3.4 e \textsection3.5. \\
-	0.2.1 & 2020-03-22 & \NF{} & \textit{Amministratore} & Correzione imprecisioni Processi Primari. \\
-
-	0.2.0 & 2020-03-22 & \AS{} & \textit{Verificatore} & Verifica del documento. \\
-
-	0.1.3 & 2020-03-21 & \NF{} & \textit{Amministratore} & Stesura \textsection2.2 Sviluppo. \\
-	0.1.2 & 2020-03-20 & \NF{} & \textit{Amministratore} & Stesura \textsection2.1 Fornitura. \\
-	0.1.1 & 2020-03-19 & \LB{} & \textit{Amministratore} & Correzione imprecisioni Processi Organizzativi. \\
-
-	0.1.0 & 2020-03-19 & \AS{} & \textit{Verificatore} & Verifica del documento. \\
-
-	0.0.4 & 2020-03-18 & \VB{} & \textit{Amministratore} & Stesura \textsection3.1 Documentazione. \\
-
-	%0.1.0 & 2020-03-17 & \AS{} & \textit{Verificatore} & Revisione e modifica del documento. \\
-
-	0.0.3 & 2020-03-16 & \LB{} & \textit{Amministratore} & Stesura Processi Organizzativi. \\
-  0.0.2 & 2020-03-16 & \NF{} & \textit{Amministratore} & Stesura Introduzione. \\
-  0.0.1 & 2020-03-12 & \NF{} & \textit{Amministratore} & Creazione documento \LaTeX{}\ped{\textit{G}} e struttura generale.
+	0.3.0 & 2020-03-26 & \LB{} \\ \textit{Verificatore} & Verifica del documento. & \tabularnewline
+	0.2.5 & 2020-03-25 & \AS{} \\ \textit{Amministratore} & Approfondimento sezioni \textsection2.1, \textsection3.4, \textsection3.6 e Processi Organizzativi. & \LB \\ \textit{Verificatore} \tabularnewline
+	0.2.4 & 2020-03-25 & \EG{} \\ \textit{Amministratore} & Approfondimento sezioni \textsection2.2, \textsection3.1 e \textsection 3.5. & \LB \\ \textit{Verificatore} \tabularnewline
+	0.2.3 & 2020-03-23 & \VB{} \\ \textit{Amministratore} & Stesura \textsection3.4. & \LB \\ \textit{Verificatore} \tabularnewline
+	0.2.2 & 2020-03-22 & \VB{} \\ \textit{Amministratore} & Correzioni a seguito della verifica e Stesura \textsection3.2, \textsection3.4 e \textsection3.5. & \AS \\ \textit{Verificatore} \tabularnewline
+	0.2.1 & 2020-03-22 & \NF{} \\ \textit{Amministratore} & Correzione imprecisioni Processi Primari. & \AS \\ \textit{Verificatore} \tabularnewline
+	0.2.0 & 2020-03-22 & \AS{} \\ \textit{Verificatore} & Verifica del documento. & \tabularnewline
+	0.1.3 & 2020-03-21 & \NF{} \\ \textit{Amministratore} & Stesura \textsection2.2 Sviluppo. & \AS \\ \textit{Verificatore} \tabularnewline
+	0.1.2 & 2020-03-20 & \NF{} \\ \textit{Amministratore} & Stesura \textsection2.1 Fornitura. & \AS \\ \textit{Verificatore} \tabularnewline
+	0.1.1 & 2020-03-19 & \LB{} \\ \textit{Amministratore} & Correzione imprecisioni Processi Organizzativi. & \AS \\ \textit{Verificatore} \tabularnewline
+	0.1.0 & 2020-03-19 & \AS{} \\ \textit{Verificatore} & Verifica del documento. & \tabularnewline
+	0.0.4 & 2020-03-18 & \VB{} \\ \textit{Amministratore} & Stesura \textsection3.1 Documentazione. & \AS \\ \textit{Verificatore} \tabularnewline
+	0.0.3 & 2020-03-16 & \LB{} \\ \textit{Amministratore} & Stesura Processi Organizzativi. & \AS \\ \textit{Verificatore} \tabularnewline
+  	0.0.2 & 2020-03-16 & \NF{} \\ \textit{Amministratore} & Stesura Introduzione. & \AS \\ \textit{Verificatore} \tabularnewline
+  	0.0.1 & 2020-03-12 & \NF{} \\ \textit{Amministratore} & Creazione documento \LaTeX{}\ped{\textit{G}} e struttura generale. & \AS \\ \textit{Verificatore} \tabularnewline
+  	
 \end{longtable}

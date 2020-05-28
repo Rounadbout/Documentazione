@@ -2,53 +2,51 @@
 
 \rowcolors{2}{lightRowColor}{darkRowColor}
 \begin{longtable}{
-		>{\centering}p{0.1\textwidth}
-		>{\centering}p{0.15\textwidth}
-		>{\centering}p{0.2\textwidth}
-		>{\centering}p{0.15\textwidth}
-		>{}p{0.26\textwidth} }
-
+		>{\centering}p{0.05\textwidth}	%Versione
+		>{\centering}p{0.13\textwidth}	%Data
+		>{\centering}p{0.22\textwidth}	%Nominativo
+		>{}p{0.24\textwidth}			%Descrizione
+		>{\centering}p{0.22\textwidth} }	%Verifica
+	
 	\coloredTableHead
-	\textbf{\color{white}Versione} &
+	\textbf{\color{white}V} &
 	\textbf{\color{white}Data} &
 	\textbf{\color{white}Nominativo} &
-	\textbf{\color{white}Ruolo} &
-	\textbf{\color{white}Descrizione}
+	\textbf{\color{white}Descrizione} &
+	\textbf{\color{white}Verifica}
 	\tabularnewline
 	\endhead
-
-	% contenuto tabella
-	2.0.2 & 2020-05-25 & \AZ{} & \textit{Programmatore} & Correzione UC15 \\	
-	2.0.1 & 2020-05-25 & \EG{} & \textit{Analista} & Correzione UC9 e requisiti di vincolo \\ 
 	
-	2.0.0 & 2020-05-07 & \AZ{} & \textit{Responsabile} & Approvazione del documento \\
+	% contenuto tabella
+	% Versione & data & Nome \\ Ruolo & Descrizione & Verificatore \\ Ruolo
+	2.0.2 & 2020-05-25 & \AZ{} \\ \textit{Programmatore} & Correzione UC15 & \VB \\ \textit{Verificatore} \tabularnewline
+	2.0.1 & 2020-05-25 & \EG{} \\ \textit{Analista} & Correzione UC9 e requisiti di vincolo & \VB \\ \textit{Verificatore} \tabularnewline
+	2.0.0 & 2020-05-07 & \AZ{} \\ \textit{Responsabile} & Approvazione del documento & \tabularnewline
   
-	1.1.0 & 2020-05-07 & \AS{} & \textit{Verificatore} & Verifica del documento \\
-	1.0.5 & 2020-05-06 & \EG{} & \textit{Analista} & Aggiornamento fonti requisiti funzionali e tracciamento \\
-	1.0.4 & 2020-05-05 & \AZ{} & \textit{Responsabile} & Correzione UC10, UC11, UC13 \\ 
-	1.0.3 & 2020-05-04 & \EG{} & \textit{Analista} & Correzione UC5, UC6, UC7 \\ 
-    1.0.2 & 2020-05-02 & \EG{} & \textit{Analista} & Creazione appendice A e correzione requisiti \\
-	1.0.1 & 2020-05-02 & \AZ{} & \textit{Analista} & Correzione UC3, UC4 \\ 	
+	1.1.0 & 2020-05-07 & \AS{} \\ \textit{Verificatore} & Verifica del documento & \tabularnewline
+	1.0.5 & 2020-05-06 & \EG{} \\ \textit{Analista} & Aggiornamento fonti requisiti funzionali e tracciamento & \AS \\ \textit{Verificatore} \tabularnewline
+	1.0.4 & 2020-05-05 & \AZ{} \\ \textit{Responsabile} & Correzione UC10, UC11, UC13 & \VB \\ \textit{Verificatore} \tabularnewline 
+	1.0.3 & 2020-05-04 & \EG{} \\ \textit{Analista} & Correzione UC5, UC6, UC7 & \VB \\ \textit{Verificatore} \tabularnewline
+    1.0.2 & 2020-05-02 & \EG{} \\ \textit{Analista} & Creazione appendice A e correzione requisiti & \AS \\ \textit{Verificatore} \tabularnewline
+	1.0.1 & 2020-05-02 & \AZ{} \\ \textit{Analista} & Correzione UC3, UC4 & \AS \\ \textit{Verificatore} \tabularnewline
+	1.0.0 & 2020-04-11 & \VB{} \\ \textit{Responsabile} & Approvazione del documento & \tabularnewline
 
-	1.0.0 & 2020-04-11 & \VB{} & \textit{Responsabile} & Approvazione del documento \\ 	
-
-	0.3.0 & 2020-04-04 & \MP{} & \textit{Verificatore} & Verifica del documento \\
-	0.2.1 & 2020-04-05 & \EG{} & \textit{Analista} & Correzione sezione \S{3} \\
-	0.2.0 & 2020-04-01 & \AZ{} & \textit{Verificatore} & Verifica del documento \\
-	0.1.10 & 2020-03-30 & \EG{} & \textit{Analista} & Stesura \S{4.5} e \S{4.6} \\
-	0.1.9 & 2020-03-29 & \EG{} & \textit{Analista} & Completata stesura \S{4.1} \\
-	0.1.8 & 2020-03-28 & \AZ{} & \textit{Analista} & Stesura \S{4.2} e parte di \S{4.1} \\
-	0.1.7 & 2020-03-28 & \EG{} & \textit{Analista} & Stesura \S{4.3}, \S{4.4} \\
-	0.1.6 & 2020-03-28 & \AZ{} & \textit{Analista} & Stesura UC14, UC17, UC19\\
-	0.1.5 & 2020-03-27 & \EG{} & \textit{Analista} & Stesura UC15, UC16, UC18 \\
-	0.1.4 & 2020-03-27 & \AZ{} & \textit{Analista} & Stesura UC11, UC12, UC13\\
-	0.1.3 & 2020-03-26 & \EG{} & \textit{Analista} & Stesura UC5, UC6, UC7\\
-	0.1.2 & 2020-03-25 & \AZ{} & \textit{Analista} & Stesura UC8, UC9, UC10\\
-	0.1.1 & 2020-03-25 & \EG{} & \textit{Analista} & Stesura UC1, UC2, UC3, UC4 \\
-
-	0.1.0 & 2020-03-25 & \FJ{} & \textit{Verificatore} & Verifica del documento \\
-	0.0.3 & 2020-03-18 & \EG{} & \textit{Analista} & Stesura \S{2}, \S{3.1} \\
-	0.0.2 & 2020-03-18 & \AZ{} & \textit{Analista} & Stesura \S{1} \\
-    0.0.1 & 2020-03-14 & \EG{} & \textit{Analista} & Creata struttura del documento in \LaTeX{}\ped{\textit{G}} \\
+	0.3.0 & 2020-04-04 & \MP{} \\ \textit{Verificatore} & Verifica del documento & \tabularnewline
+	0.2.1 & 2020-04-05 & \EG{} \\ \textit{Analista} & Correzione sezione \S{3} & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.2.0 & 2020-04-01 & \AZ{} \\ \textit{Verificatore} & Verifica del documento & \tabularnewline
+	0.1.10 & 2020-03-30 & \EG{} \\ \textit{Analista} & Stesura \S{4.5} e \S{4.6} & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.1.9 & 2020-03-29 & \EG{} \\ \textit{Analista} & Completata stesura \S{4.1} & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.1.8 & 2020-03-28 & \AZ{} \\ \textit{Analista} & Stesura \S{4.2} e parte di \S{4.1} & \MP \\ \textit{Verificatore} \tabularnewline
+	0.1.7 & 2020-03-28 & \EG{} \\ \textit{Analista} & Stesura \S{4.3}, \S{4.4} & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.1.6 & 2020-03-28 & \AZ{} \\ \textit{Analista} & Stesura UC14, UC17, UC19 & \MP \\ \textit{Verificatore} \tabularnewline
+	0.1.5 & 2020-03-27 & \EG{} \\ \textit{Analista} & Stesura UC15, UC16, UC18 & \MP \\ \textit{Verificatore} \tabularnewline
+	0.1.4 & 2020-03-27 & \AZ{} \\ \textit{Analista} & Stesura UC11, UC12, UC13 & \MP \\ \textit{Verificatore} \tabularnewline
+	0.1.3 & 2020-03-26 & \EG{} \\ \textit{Analista} & Stesura UC5, UC6, UC7 & \MP \\ \textit{Verificatore} \tabularnewline
+	0.1.2 & 2020-03-25 & \AZ{} \\ \textit{Analista} & Stesura UC8, UC9, UC10 & \MP \\ \textit{Verificatore} \tabularnewline
+	0.1.1 & 2020-03-25 & \EG{} \\ \textit{Analista} & Stesura UC1, UC2, UC3, UC4 & \MP \\ \textit{Verificatore} \tabularnewline
+	0.1.0 & 2020-03-25 & \FJ{} \\ \textit{Verificatore} & Verifica del documento. & \tabularnewline
+	0.0.3 & 2020-03-18 & \EG{} \\ \textit{Analista} & Stesura \S{2}, \S{3.1} & \FJ \\ \textit{Verificatore} \tabularnewline
+	0.0.2 & 2020-03-18 & \AZ{} \\ \textit{Analista} & Stesura \S{1} & \FJ \\ \textit{Verificatore} \tabularnewline
+    0.0.1 & 2020-03-14 & \EG{} \\ \textit{Analista} & Creata struttura del documento in \LaTeX{}\ped{\textit{G}} & \FJ \\ \textit{Verificatore} \tabularnewline
 
 \end{longtable}

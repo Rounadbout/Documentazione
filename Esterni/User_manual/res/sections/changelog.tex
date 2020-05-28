@@ -2,22 +2,23 @@
 
 \rowcolors{2}{lightRowColor}{darkRowColor}
 \begin{longtable}{
-		>{\centering}p{0.1\textwidth}
-		>{\centering}p{0.15\textwidth}
-		>{\centering}p{0.2\textwidth}
-		>{\centering}p{0.15\textwidth}
-		>{}p{0.26\textwidth} }
-
+		>{\centering}p{0.05\textwidth}	%Versione
+		>{\centering}p{0.13\textwidth}	%Data
+		>{\centering}p{0.22\textwidth}	%Nominativo
+		>{}p{0.24\textwidth}			%Descrizione
+		>{\centering}p{0.22\textwidth} }	%Verifica
+	
 	\coloredTableHead
-	\textbf{\color{white}Version} &
+	\textbf{\color{white}V} &
 	\textbf{\color{white}Date} &
 	\textbf{\color{white}Name} &
-	\textbf{\color{white}Role} &
-	\textbf{\color{white}Description}
+	\textbf{\color{white}Description} &
+	\textbf{\color{white}Check}
 	\tabularnewline
 	\endhead
-
-	% esempio: ProvaVersione & ProvaData & ProvaPersona & \textit{ProvaRuolo} & ProvaAzione. 
-	0.0.1 & 2020-05-21 & \NF & Developer & Created the structure of the document \\ 
+	
+	% contenuto tabella
+	% Versione & data & Nome \\ Ruolo & Descrizione & Verificatore \\ Ruolo
+	0.0.1 & 2020-05-21 & \NF \\ Developer & Created the structure of the document. & \EG \\ \textit{Verifier} \tabularnewline 
 	
 \end{longtable}
