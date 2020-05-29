@@ -1,30 +1,62 @@
 \section{Etherless-Server}
 	
 	\subsection{Getting started}
+		The implementation details of the Etherless-server module are presented in this section of the document.
 	
 		\subsubsection{Technologies} %Elencare le tecnologie utilizzate in questo modulo. La descrizione spetta al Glossario appendice!
 			\subsubsubsection{Languages}
+				\begin{itemize}
+					\item Typescript; 
+					\item Javascript.
+				\end{itemize}
 			\subsubsubsection{Utilities}
+				\begin{itemize}
+					\item Visual Studio Code;
+					\item npm; 
+					\item node.js;
+					\item ts-node;
+					\item AWS Lambda;
+					\item AWS Elastic Beanstalk;
+					\item IPFS;
+					\item ESLint;
+					\item Serverless Framework;
+					\item mocha.
+				\end{itemize}
 			\subsubsubsection{Libraries}
+				\begin{itemize}
+					\item ethers.js;
+				\end{itemize}
 		
 		\subsubsection{Requirements} %Requisiti necessari, suddivisi tra hardware e software.
 			\subsubsubsection{Hardware}
+				No specific hardware requirements are required for this module.
 			\subsubsubsection{Software}
+				To use the services provided by Amazon Web Services, an AWS account is required.
 		
 		\subsubsection{Setup} %Step da seguire per configurare correttamente il modulo
 		
 		\subsubsection{Enviroments} % (?Necessario?)
 		
 		\subsubsection{Functionality} %Funzionalità e comandi messi a disposizione dal modulo. Dividerle in sottosezioni!
-		%	\subsubsubsection{Funct1}
-		%		\subsubsubsection*{Utility}
-		%		\subsubsubsection*{Command}
-		%	\subsubsubsection{Funct2}
-		%		\subsubsubsection*{Utility}
-		%		\subsubsubsection*{Command}
-		%	\subsubsubsection{Funct3}
-		%		\subsubsubsection*{Utility}
-		%		\subsubsubsection*{Command}
+			\subsubsubsection{Run}
+				\subsubsubsection*{Utility}
+					This feature allows the user to interact and execute functions previously loaded by a developer.
+				\subsubsubsection*{Command}
+					
+			\subsubsubsection{Deploy}
+				\subsubsubsection*{Utility}
+					This feature allows developers to upload functions on AWS Lambda, ready to be invoked by a user.
+				\subsubsubsection*{Command}
+				
+			\subsubsubsection{Edit}
+				\subsubsubsection*{Utility}
+					This feature allows the developer to edit functions previously loaded into the server.
+				\subsubsubsection*{Command}
+				
+			\subsubsubsection{Delete}
+				\subsubsubsection*{Utility}
+					This feature allows the developer to delete functions previously loaded into the server.
+				\subsubsubsection*{Command}
 	
 	
 	\subsection{Developer's guide}
@@ -32,5 +64,10 @@
 		\subsubsection{Architecture} % Descrizione dell'architettura utilizzata, compresi i design pattern
 		
 		\subsubsection{Method} %Descrizione accurata dei metodi presenti nel modulo
+			\subsubsubsection{SmartManager}
+			\subsubsubsection{Controller}
+			\subsubsubsection{AWSManager}
+			\subsubsubsection{IPFSManager}
+			
 		
 		\subsubsection{Extensions}  %Possibili sviluppi futuri
