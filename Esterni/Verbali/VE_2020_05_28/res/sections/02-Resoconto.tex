@@ -1,0 +1,31 @@
+\section{Verbale}
+\subsection{Chiarimento delle segnalazioni riguardanti l'\AdR{} \textit{v2.0.0}}
+	\begin{itemize}
+		\item è stata discussa la possibilità di inserire un caso d’uso “autenticazione” con all’interno la gerarchia di login attuale (UC4, UC5, UC6). Si è deciso di evitare questa soluzione e mantenere la struttura attuale, per non aumentare eccessivamente la complessità;
+
+		\item il prodotto mette a disposizione un comando \texttt{info}e un comando \texttt{search}. E' emersa la necessità di rendere più chiari i casi d’uso di info e search, sia nel loro titolo sia andando a ricontrollare le informazioni da essi mostrate
+	\end{itemize}
+
+\subsection{Discussione della progettazione del prodotto\ped{\textit{G}} software}
+	\paragraph{Modulo Etherless-server}
+		I membri del gruppo responsabili della progettazione del modulo Etherless-server hanno discusso con il docente di alcuni problemi, nati durante la progettazione. In particolare, sono state esposte due situazioni:
+		\begin{itemize}
+			\item \textbf{gestione delle richieste su server:} ragionando in un’ottica di scalabilità del sistema a prescindere dall’intensità del traffico, il gruppo ha pensato di gestire le richieste inviate al server tramite una coda. L’imlementazione di questa soluzione presenta una problematica complessa, ovvero: la necessità di inserire una struttura di tipo switch-case con cast espliciti. Questo metodo è considerato bad practice, quindi il gruppo ha valutato soluzioni diverse, che però hanno finito per generare dipendenze circolari.\\La discussione di questa soluzione si è conclusa con il suggerimento da parte del docente di valutare attentamente la necessità di implementare una coda, o di utilizzare strutture fornite da terze parti per la sua gestione.
+			\item \textbf{gestione delle richieste su Lambda:} ragionando sul concetto di architettura serverless, il gruppo ha valutato anche l’opzione di demandare la gestione delle richieste ad AWS Lambda. Tale piattaforma é in grado di gestire in maniera automatica il flusso, tramite una o più code configurabili. Questa opzione è stata consigliata anche dal docente, in quanto porta vari vantaggi come:
+			\begin{itemize}
+				\item una forte semplificazione dell’architettura, senza la perdita di requisiti obbligatori;
+				\item adesione concreta al principio serverless, spostando la gestione di risorse e scalabilità su Lambda;
+				\item possibilità di dare spessore alla funzione che implementa il Framework Serverless, inserendovi la gestione delle code Lambda.
+			\end{itemize}
+		\end{itemize}
+		A seguito di questa discussione, il gruppo ha deciso un’implementazione con gestione delle richieste su Lambda.
+	\paragraph{Modulo Etherless-smart}
+		I membri del gruppo responsabili della progettazione del modulo Etherless-smart hanno esposto dei dubbi su come rappresentare nei diagrammi delle classi le feature caratteristiche del linguaggio Solidity:
+		\begin{itemize}
+			\item modificatori di funzioni: come \texttt{payable}, \texttt{internal}, ecc. ;
+			\item eventi;
+			\item modifier.
+		\end{itemize}
+		Il docente ha suggerito di inserire queste caratteristiche nei diagrammi all'interno di parentesi graffe \{...\}.\\
+		\newline
+		Per quanto riguarda la scelta dei design pattern per questo modulo, sono state esposte le difficoltá incontrate nell'applicazione del pattern Facade inizialmente scelto, causate dalla necessità di mantenere l'emissione di eventi e la chiamata di specifiche funzioni all' interno dello stesso Smart Contract. Il docente ha fatto notare la pertinenza di tale pattern alla programmazione ad oggetti e ha dato un riscontro positivo all'implementazione di design pattern specifici per il linguaggio.
