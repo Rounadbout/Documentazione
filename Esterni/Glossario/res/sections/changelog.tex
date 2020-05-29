@@ -2,31 +2,33 @@
 
 \rowcolors{2}{lightRowColor}{darkRowColor}
 \begin{longtable}{
-		>{\centering}p{0.1\textwidth}
-		>{\centering}p{0.15\textwidth}
-		>{\centering}p{0.2\textwidth}
-		>{\centering}p{0.15\textwidth}
-		>{}p{0.26\textwidth} }
-
+		>{\centering}p{0.05\textwidth}	%Versione
+		>{\centering}p{0.13\textwidth}	%Data
+		>{\centering}p{0.22\textwidth}	%Nominativo
+		>{}p{0.24\textwidth}			%Descrizione
+		>{\centering}p{0.22\textwidth} }	%Verifica
+	
 	\coloredTableHead
-	\textbf{\color{white}Versione} &
+	\textbf{\color{white}V} &
 	\textbf{\color{white}Data} &
 	\textbf{\color{white}Nominativo} &
-	\textbf{\color{white}Ruolo} &
-	\textbf{\color{white}Descrizione}
+	\textbf{\color{white}Descrizione} &
+	\textbf{\color{white}Verifica}
 	\tabularnewline
 	\endhead
-
+	
 	% contenuto tabella
-	2.0.0 & 2020-05-09 & \AZ & \textit{Responsabile} & Approvazione del documento. \\
-	1.1.0 & 2020-05-09 & \EG & \textit{Verificatore} & Verifica del documento. \\
-	1.0.1 & 2020-05-09 & \AS & \textit{Progettista} & Inserimento nuovi termini. \\
-	1.0.0 & 2020-04-11 & \VB & \textit{Responsabile} & Approvazione del documento. \\
-	0.3.0 & 2020-04-09 & \MP & \textit{Verificatore} & Verifica del documento. \\
-	0.2.1 & 2020-04-09 & \AS & \textit{Amministratore} & Inserimento nuovi termini. \\
-	0.2.0 & 2020-04-01 & \AZ & \textit{Verificatore} & Verifica e correzioni minori. \\
-	0.1.1 & 2020-03-31 & \AS & \textit{Amministratore} & Modifica e correzione. \\
-	0.1.0 & 2020-03-30 & \LB & \textit{Verificatore} & Verifica del documento. \\
-	0.0.1 & 2020-03-29 & \AS & \textit{Amministratore} & Creazione struttura del documento ed inserimento termini. \\
+	% Versione & data & Nome \\ Ruolo & Descrizione & Verificatore \\ Ruolo
+	2.0.0 & 2020-05-09 & \AZ \\ \textit{Responsabile} & Approvazione del documento. & \tabularnewline
+	1.1.0 & 2020-05-09 & \EG \\ \textit{Verificatore} & Verifica del documento. & \tabularnewline
+	1.0.1 & 2020-05-09 & \AS \\ \textit{Progettista} & Inserimento nuovi termini. & \AS \\ \textit{Verificatore} \tabularnewline
+	1.0.0 & 2020-04-11 & \VB \\ \textit{Responsabile} & Approvazione del documento. & \tabularnewline
+	
+	0.3.0 & 2020-04-09 & \MP \\ \textit{Verificatore} & Verifica del documento. & \tabularnewline
+	0.2.1 & 2020-04-09 & \AS \\ \textit{Amministratore} & Inserimento nuovi termini. & \MP \\ \textit{Verificatore} \tabularnewline
+	0.2.0 & 2020-04-01 & \AZ \\ \textit{Verificatore} & Verifica del documento. & \tabularnewline
+	0.1.1 & 2020-03-31 & \AS \\ \textit{Amministratore} & Modifica e correzione. & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.1.0 & 2020-03-30 & \LB \\ \textit{Verificatore} & Verifica del documento. & \tabularnewline
+	0.0.1 & 2020-03-29 & \AS \\ \textit{Amministratore} & Creazione struttura del documento ed inserimento termini. & \LB \\ \textit{Verificatore} \tabularnewline
 
 \end{longtable}

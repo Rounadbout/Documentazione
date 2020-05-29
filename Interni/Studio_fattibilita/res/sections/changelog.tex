@@ -1,32 +1,33 @@
-\section*{Registro delle modifiche} % con section* evito che la sezione sia considerata nell'indice 
+\section*{Registro delle modifiche} % con section* evito che la sezione sia considerata nell'indice
 
 \rowcolors{2}{lightRowColor}{darkRowColor}
-\begin{longtable}{ 
-		>{\centering}p{0.1\textwidth} 
-		>{\centering}p{0.15\textwidth}
-		>{\centering}p{0.2\textwidth} 
-		>{\centering}p{0.15\textwidth} 
-		>{}p{0.26\textwidth} }
-		
+\begin{longtable}{
+		>{\centering}p{0.05\textwidth}	%Versione
+		>{\centering}p{0.13\textwidth}	%Data
+		>{\centering}p{0.22\textwidth}	%Nominativo
+		>{}p{0.24\textwidth}			%Descrizione
+		>{\centering}p{0.22\textwidth} }	%Verifica
+	
 	\coloredTableHead
-	\textbf{\color{white}Versione} & 
-	\textbf{\color{white}Data} & 
-	\textbf{\color{white}Nominativo} & 
-	\textbf{\color{white}Ruolo} &
-	\textbf{\color{white}Descrizione} 
-	\tabularnewline  
+	\textbf{\color{white}V} &
+	\textbf{\color{white}Data} &
+	\textbf{\color{white}Nominativo} &
+	\textbf{\color{white}Descrizione} &
+	\textbf{\color{white}Verifica}
+	\tabularnewline
 	\endhead
 	
-	% contenuto tabella 
-	% esempio: ProvaVersione & ProvaData & ProvaPersona & \textit{ProvaRuolo} & ProvaAzione.
-	1.0.0 & 2020-04-10 & \MP{} & \textit{Responsabile} & Approvazione del documento. \\ 
-	0.2.0 & 2020-03-17 & \FJ{} & \textit{Verificatore} & Revisione e modifica del documento. \\ 
-	0.1.3 & 2020-03-16 & \AZ{} & \textit{Analista} & Stesura dello studio di fattibilità del capitolato\ped{\textit{G}} C6. \\ 
-	0.1.2 & 2020-03-16 & \AZ{} & \textit{Analista} & Stesura dello studio di fattibilità del capitolato\ped{\textit{G}} C5. \\ 
-	0.1.1 & 2020-03-15 & \AZ{} & \textit{Analista} & Stesura dello studio di fattibilità del capitolato\ped{\textit{G}} C4. \\ 
-	0.1.0 & 2020-03-15 & \AS{} & \textit{Verificatore} & Revisione e modifica del documento. \\ 
-	0.0.4 & 2020-03-15 & \EG{} & \textit{Analista} & Stesura dello studio di fattibilità del capitolato\ped{\textit{G}} C3. \\ 
-	0.0.3 & 2020-03-14 & \EG{} & \textit{Analista} & Stesura dello studio di fattibilità del capitolato\ped{\textit{G}} C1. \\ 
-	0.0.2 & 2020-03-14 & \EG{} & \textit{Analista} & Stesura dello studio di fattibilità del capitolato\ped{\textit{G}} C2. \\ 
-	0.0.1 & 2020-03-12 & \EG{} & \textit{Analista} & Creazione documento \LaTeX{}\ped{\textit{G}} e struttura generale. 
+	% contenuto tabella
+	% Versione & data & Nome \\ Ruolo & Descrizione & Verificatore \\ Ruolo
+	1.0.0 & 2020-04-10 & \MP{} \\ \textit{Responsabile} & Approvazione del documento. & \tabularnewline 
+	0.2.0 & 2020-03-17 & \FJ{} \\ \textit{Verificatore} & Revisione del documento. & \tabularnewline
+	0.1.3 & 2020-03-16 & \AZ{} \\ \textit{Analista} & Stesura dello studio di fattibilità del capitolato\ped{\textit{G}} C6. & \FJ \\ \textit{Verificatore} \tabularnewline 
+	0.1.2 & 2020-03-16 & \AZ{} \\ \textit{Analista} & Stesura dello studio di fattibilità del capitolato\ped{\textit{G}} C5. & \FJ \\ \textit{Verificatore} \tabularnewline
+	0.1.1 & 2020-03-15 & \AZ{} \\ \textit{Analista} & Stesura dello studio di fattibilità del capitolato\ped{\textit{G}} C4. & \FJ \\ \textit{Verificatore} \tabularnewline
+	0.1.0 & 2020-03-15 & \AS{} \\ \textit{Verificatore} & Revisione del documento. & \tabularnewline 
+	0.0.4 & 2020-03-15 & \EG{} \\ \textit{Analista} & Stesura dello studio di fattibilità del capitolato\ped{\textit{G}} C3. & \AS \\ \textit{Verificatore} \tabularnewline
+	0.0.3 & 2020-03-14 & \EG{} \\ \textit{Analista} & Stesura dello studio di fattibilità del capitolato\ped{\textit{G}} C1. & \AS \\ \textit{Verificatore} \tabularnewline
+	0.0.2 & 2020-03-14 & \EG{} \\ \textit{Analista} & Stesura dello studio di fattibilità del capitolato\ped{\textit{G}} C2. & \AS \\ \textit{Verificatore} \tabularnewline
+	0.0.1 & 2020-03-12 & \EG{} \\ \textit{Analista} & Creazione documento \LaTeX{}\ped{\textit{G}} e struttura generale. & \AS \\ \textit{Verificatore} \tabularnewline
+	
 \end{longtable}
