@@ -2,43 +2,41 @@
 
 \rowcolors{2}{lightRowColor}{darkRowColor}
 \begin{longtable}{
-		>{\centering}p{0.1\textwidth}
-		>{\centering}p{0.15\textwidth}
-		>{\centering}p{0.2\textwidth}
-		>{\centering}p{0.15\textwidth}
-		>{}p{0.26\textwidth} }
-
+		>{\centering}p{0.05\textwidth}	%Versione
+		>{\centering}p{0.13\textwidth}	%Data
+		>{\centering}p{0.22\textwidth}	%Nominativo
+		>{}p{0.24\textwidth}			%Descrizione
+		>{\centering}p{0.22\textwidth} }	%Verifica
+	
 	\coloredTableHead
-	\textbf{\color{white}Versione} &
+	\textbf{\color{white}V} &
 	\textbf{\color{white}Data} &
 	\textbf{\color{white}Nominativo} &
-	\textbf{\color{white}Ruolo} &
-	\textbf{\color{white}Descrizione}
+	\textbf{\color{white}Descrizione} &
+	\textbf{\color{white}Verifica}
 	\tabularnewline
 	\endhead
-
+	
 	% contenuto tabella
-	% ProvaVersione & ProvaData & ProvaPersona & \textit{ProvaRuolo} & ProvaAzione. \\
-	
-	2.0.1 & 2020-05-27 & \EG{} & \textit{Responsabile} & Ampliamento \S{2} \\ 
-	
-	2.0.0 & 2020-05-10 & \AZ{} & \textit{Responsabile} & Approvazione del documento \\
-	1.1.0 & 2020-05-10 & \AS{} & \textit{Verificatore} & Verifica intero documento \\
-	1.0.4 & 2020-05-09 & \MP{} & \textit{Amministratore} & Stesura consuntivo di periodo, preventivo a finire e analisi dei rischi per il periodo di Progettazione Architetturale \\
-	1.0.3 & 2020-05-01 & \LB{} & \textit{Responsabile} & Aggiornamento preventivo \\
-	1.0.2 & 2020-04-30 & \LB{} & \textit{Responsabile} & Aggiunta pianificazione degli incrementi \\
-	1.0.1 & 2020-04-19 & \AZ{} & \textit{Amministratore} & Stesura consuntivo di periodo e preventivo a finire per il periodo di Consolidamento dei Requisiti \\
-	1.0.0 & 2020-04-11 & \VB{} & \textit{Responsabile} & Approvazione del documento \\
-	0.2.0 & 2020-04-10 & \AZ{} & \textit{Verificatore} & Verifica intero documento \\
-	0.1.1 & 2020-04-08 & \VB{} & \textit{Responsabile} & Stesura \S{3}, \S{6}, appendice A, B, diagrammi di Gantt \\
-	0.1.0 & 2020-04-06 & \AZ{} & \textit{Verificatore} & Verifica intero documento \\
-	0.0.8 & 2020-03-29 & \MP{} & \textit{Responsabile} & Stesura della sezione §5 \\
-	0.0.7 & 2020-03-28 & \MP{} & \textit{Responsabile} & Stesura della sezione §4 \\
-	0.0.6 & 2020-03-27 & \MP{} & \textit{Responsabile} & Conclusione stesura della struttura delle sezioni restanti e delle appendici \\
-	0.0.5 & 2020-03-26 & \MP{} & \textit{Responsabile} & Inizio stesura della struttura delle sezioni restanti e delle appendici \\
-	0.0.4 & 2020-03-25 & \MP{} & \textit{Responsabile} & Conclusione della tabella riassuntiva della sezione §2 \\
-	0.0.3 & 2020-03-23 & \MP{} & \textit{Responsabile} & Stesura della prima parte e creazione della struttura della tabella riassuntiva della sezione §2 \\
-	0.0.2 & 2020-03-20 & \MP{} & \textit{Responsabile} & Stesura della sezione §1 \\
-    0.0.1 & 2020-03-18 & \MP{} & \textit{Responsabile} & Creazione della struttura del documento in \LaTeX{} \\
+	% Versione & data & Nome \\ Ruolo & Descrizione & Verificatore \\ Ruolo
+  2.0.1 & 2020-05-29 & \EG{} \\ \textit{Responsabile} & Ampliamento \S{2} & \LB \\ \textit{Verificatore} \tabularnewline
+	2.0.0 & 2020-05-10 & \AZ{} \\ \textit{Responsabile} & Approvazione del documento & \tabularnewline
+	1.1.0 & 2020-05-10 & \AS{} \\ \textit{Verificatore} & Verifica intero documento & \tabularnewline
+	1.0.4 & 2020-05-09 & \MP{} \\ \textit{Amministratore} & Stesura consuntivo di periodo, preventivo a finire e analisi dei rischi per il periodo di Progettazione Architetturale & \AS \\ \textit{Verificatore} \tabularnewline
+	1.0.3 & 2020-05-01 & \LB{} \\ \textit{Responsabile} & Aggiornamento preventivo & \AS \\ \textit{Verificatore} \tabularnewline
+	1.0.2 & 2020-04-30 & \LB{} \\ \textit{Responsabile} & Aggiunta pianificazione degli incrementi & \AS \\ \textit{Verificatore} \tabularnewline
+	1.0.1 & 2020-04-19 & \AZ{} \\ \textit{Amministratore} & Stesura consuntivo di periodo e preventivo a finire per il periodo di Consolidamento dei Requisiti & \AS \\ \textit{Verificatore} \tabularnewline
+	1.0.0 & 2020-04-11 & \VB{} \\ \textit{Responsabile} & Approvazione del documento & \tabularnewline
+	0.2.0 & 2020-04-10 & \AZ{} \\ \textit{Verificatore} & Verifica intero documento. & \tabularnewline
+	0.1.1 & 2020-04-08 & \VB{} \\ \textit{Responsabile} & Stesura \S{3}, \S{6}, appendice A, B, diagrammi di Gantt & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.1.0 & 2020-04-06 & \AZ{} \\ \textit{Verificatore} & Verifica intero documento & \tabularnewline
+	0.0.8 & 2020-03-29 & \MP{} \\ \textit{Responsabile} & Stesura della sezione §5 & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.0.7 & 2020-03-28 & \MP{} \\ \textit{Responsabile} & Stesura della sezione §4 & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.0.6 & 2020-03-27 & \MP{} \\ \textit{Responsabile} & Conclusione stesura della struttura delle sezioni restanti e delle appendici & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.0.5 & 2020-03-26 & \MP{} \\ \textit{Responsabile} & Inizio stesura della struttura delle sezioni restanti e delle appendici & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.0.4 & 2020-03-25 & \MP{} \\ \textit{Responsabile} & Conclusione della tabella riassuntiva della sezione §2 & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.0.3 & 2020-03-23 & \MP{} \\ \textit{Responsabile} & Stesura della prima parte e creazione della struttura della tabella riassuntiva della sezione §2 & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.0.2 & 2020-03-20 & \MP{} \\ \textit{Responsabile} & Stesura della sezione §1 & \AZ \\ \textit{Verificatore} \tabularnewline
+    0.0.1 & 2020-03-18 & \MP{} \\ \textit{Responsabile} & Creazione della struttura del documento in \LaTeX{} & \AZ \\ \textit{Verificatore} \tabularnewline
 
 \end{longtable}
