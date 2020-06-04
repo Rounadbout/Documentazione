@@ -12,19 +12,19 @@
     \item \textbf{EtherlessStorage:} gestisce la memorizzazione e la lettura dei dati delle funzioni eseguibili dall'utente (di cui è stato quindi fatto il deploy su AWS-Lambda) sulla rete Ethereum;
     \item \textbf{EtherlessEscrow:} permette la gestione dei pagamenti in modalità escrow con l'eventuale rimborso all'utente in caso se ne presenti la necessità.
   \end{itemize}
-  
+
 \subsubsection{Design}
   Il modulo Etherless-smart é stato progettato con lo scopo di ridurre il costo delle transazioni, eliminandolo dove possibile per le operazioni che richiedono la sola lettura dei dati. A questo scopo tutte le funzioni che non modificano la memoria interna del contratto sono contrassegnate dal modificatore \texttt{view}, indicando al compilatore che il metodo è in sola lettura e non in scrittura. \\
   Per quanto concerne i design pattern invece, essendo \textit{Solidity} diverso dai paradigmi di programmazione ad oggetti, abbiamo individuato dei design pattern e delle \textit{best practices} proprie del linguaggio, che abbiamo poi usato durante la fase di progettazione. In particolare, i design pattern a cui abbiamo fatto riferimento sono:
   \begin{itemize}
     %%\item \textbf{Memory Array Building:} per mantenere e scorrere i dati relativi alle funzioni memorizzati in EtherlessStorage nel modo piú efficiente possibile abbiamo implementato un mapping \texttt{availableFunctions}, che mette in relazione i nomi della funzione alla struct \texttt{jsFunction}, permettendo un accesso diretto alle informazioni di una funzione conoscendone il nome; inoltre abbiamo utilizzato un array \texttt{functionNames} che permette un'iterazione semplice sulla "lista" di funzioni memorizzate.
-    
+
     \item \textbf{Access Restriction:} alcuni metodi messi a disposizione nel modulo Etherless-smart sono contrassegnati come pubblici in quanto vengono chiamati dall'esterno del contratto stesso (da un altro contratto o dai moduli CLI e Server). Tuttavia, ciò implica la possibilità per questi metodi di essere invocati da chiunque interagisca con la rete Ethereum. Per motivi di sicurezza, l'accesso ad alcune funzioni viene limitato ad indirizzi specifici nei seguenti modi:
       \begin{itemize}
         \item \textbf{implementazione del contratto \texttt{Ownable}:} le funzioni di pagamento del contratto EtherlessEscrow devono essere disponibili solo per il contratto EtherlessSmart; è possibile ottenere questa restrizione derivando EtherlessEscrow dal contratto \texttt{Ownable} presente nelle librerie fornite da \textit{OpenZeppelin}: in questo modo tutti i metodi di EtherlessEscrow contrassegnati dal modificatore \texttt{onlyOwner} saranno invocabili solo dall'indirizzo che ha provveduto all'istanziazione del dato contratto, che nel nostro caso è EtherlessSmart;
         \item \textbf{modificatori d'accesso:} le funzioni di risposta (come \texttt{runResult}, \texttt{deployResult}, etc.) devono poter essere chiamate solo da Etherless-server; riusciamo ad ottenere ciò implementando in EtherlessSmart un modificatore apposito \texttt{onlyServer}, che permetterà l'invocazione dei metodi contrassegnati come tali solo dall'indirizzo corrispondente.
       \end{itemize}
-      
+
     \item \textbf{Secure Ether Transfer:} il trasferimento di ETH da un indirizzo ad un'altro é gestito in modo sicuro dal contratto EtherlessEscrow, che nelle funzioni di trasferimento dei fondi utilizza il metodo \texttt{sendValue}, fornito dal contratto \texttt{Address} offerto da \textit{OpenZeppelin}. Inoltre, la divisione dal contratto EtherlessSmart dei metodi che gestiscono il pagamento protegge da eventuali attacchi che potrebbero impossessarsi di denaro.
 
     \item \textbf{String Equality Comparison:} allo stato attuale Solidity non offre funzionalità di comparazione tra stringhe, quindi abbiamo costruito un metodo apposito \texttt{compareString} che si occupa di verificare l'uguaglianza tra due stringhe. Per rendere questa operazione meno costosa in termini di gas, abbiamo seguito il pattern String Equality Comparison, che comporta, oltre al confronto per carattere, un previo confronto tra la lunghezza delle stringhe evitando controlli inutili e dispendiosi;
