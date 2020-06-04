@@ -63,7 +63,6 @@
 	TA2F8.2 		& \textbf{R2F8.2}: A seguito di una ricerca il sistema deve mostrare la lista di	tutte le funzioni che presentano la keyword indicata all'interno del proprio nome.						& No & No \tabularnewline
 	TA2F8.2.1 	& \textbf{R2F8.2.1}: La visualizzazione di un risultato di ricerca include	la firma della funzione.																						& No & No \tabularnewline
 	TA2F8.2.2 	& \textbf{R2F8.2.2}: La visualizzazione di un risultato di ricerca include	il costo di esecuzione della funzione.																			& No & No \tabularnewline
-	TA2F8.2.3 	& \textbf{R2F8.2.3}: La visualizzazione di un risultato di ricerca include l'address del creatore della funzione.																			& No & No \tabularnewline
 	TAF8.3 		& \textbf{R2F8.3}: Se una ricerca non porta a nessun risultato deve essere mostrato un messaggio di errore. 																				& No & No \tabularnewline
 
 	% run
@@ -81,7 +80,7 @@
 	TA2F10.1 	& \textbf{R2F10.1}: L'utente può richiede di visualizzare solo le funzioni da lui caricate tramite l'utilizzo di un apposito flag.															& No & No \tabularnewline
 	TA1F10.2 	& \textbf{R1F10.2}: La visualizzazione di un elemento della lista ottenuta a seguito del comando \lista{} include la firma della funzione. 												& No & No \tabularnewline
 	TA1F10.3 	& \textbf{R1F10.3}: La visualizzazione di un elemento della lista ottenuta a seguito del comando \lista{} include il costo di esecuzione della funzione. 									& No & No \tabularnewline
-	TA1F10.4		& \textbf{R1F10.4}: La visualizzazione di un elemento della lista ottenuta a seguito del comando \lista{} include il creatore della funzione. 												& No & No \tabularnewline
+	TA1F10.5	& \textbf{R1F10.5}: Se il comando list non porta ad alcun tipo di risultato, viene mostrato un apposito errore. 																			& No & No \tabularnewline
 
 	%deploy
 	TA1F11 		& \textbf{R1F11}: L'utente deve essere in grado di eseguire il deploy\ped{\textit{G}} di una propria funzione all'interno della piattaforma \textit{Etherless}. 							& No & No \tabularnewline
@@ -96,15 +95,15 @@
 	TA1F11.4 	& \textbf{R1F11.4}: Nel caso in cui l'utente tenti di eseguire il deploy\ped{\textit{G}} di una funzione senza avere il credito necessario, deve essere visualizzato un messaggio di errore. & No & No \tabularnewline
 
 	% modify
-	TA1F12 		& \textbf{R1F12}: L'utente deve essere in grado di modificare le informazioni relative ad una funzione da lui caricata. 																	& No & No \tabularnewline
-	TA1F12.1 	& \textbf{R1F12.1}: Per eseguire la procedura di modifica è necessario che l'utente indichi il nome della funzione che vuole modificare. 													& No & No \tabularnewline
-	TA1F12.1.1 	& \textbf{R1F12.1.1}: Nel caso in cui, durante la procedura di modifica, l'utente inserisca il nome di una funzione non presente all'interno della piattaforma \textit{Etherless}, deve essere mostrato un messaggio di errore.	& No & No \tabularnewline
-	TA1F12.1.2 	& \textbf{R1F12.1.2}: Nel caso in cui, durante la procedura di modifica, l'utente inserisca il nome di una funzione che non è di sua proprietà, deve essere 	mostrato un messaggio di errore. & No & No \tabularnewline
-	TA1F12.2 	& \textbf{R1F12.2}: Il sistema deve permettere all'utente di modificare la descrizione associata ad una propria funzione. 																	& No & No \tabularnewline
-	TAF12.2.1 	& \textbf{R1F12.2.1}: L'utente deve visualizzare un errore nel caso in cui, durante la procedura di modifica, venga inserita una descrizione di lunghezza superiore a quella massima consentita. 	& No & No \tabularnewline
-	TA1F12.3 	& \textbf{R1F12.3}: Il sistema deve permettere all'utente di aggiornare il codice di una propria funzione. 																				& No & No \tabularnewline
-	TA1F12.3.1 	& \textbf{R1F12.3.1}: Se il file indicato durante la procedura di aggiornamento del codice di una funzione non esiste, deve essere mostrato un messaggio di errore.							& No & No \tabularnewline
-	TAF12.3.2 	& \textbf{R1F12.3.2}: Se il file indicato durante la procedura di aggiornamento del codice di una funzione presenta un formato non supportato, deve essere mostrato un messaggio di errore.	& No & No \tabularnewline
+	TA2F12 		& \textbf{R2F12}: L'utente deve essere in grado di modificare le informazioni relative ad una funzione da lui caricata. 																	& No & No \tabularnewline
+	TA2F12.1 	& \textbf{R2F12.1}: Per eseguire la procedura di modifica è necessario che l'utente indichi il nome della funzione che vuole modificare. 													& No & No \tabularnewline
+	TA2F12.1.1 	& \textbf{R2F12.1.1}: Nel caso in cui, durante la procedura di modifica, l'utente inserisca il nome di una funzione non presente all'interno della piattaforma \textit{Etherless}, deve essere mostrato un messaggio di errore.	& No & No \tabularnewline
+	TA2F12.1.2 	& \textbf{R2F12.1.2}: Nel caso in cui, durante la procedura di modifica, l'utente inserisca il nome di una funzione che non è di sua proprietà, deve essere 	mostrato un messaggio di errore. & No & No \tabularnewline
+	TA2F12.2 	& \textbf{R2F12.2}: Il sistema deve permettere all'utente di modificare la descrizione associata ad una propria funzione. 																	& No & No \tabularnewline
+	TA2F12.2.1 	& \textbf{R2F12.2.1}: L'utente deve visualizzare un errore nel caso in cui, durante la procedura di modifica, venga inserita una descrizione di lunghezza superiore a quella massima consentita. 	& No & No \tabularnewline
+	TA2F12.3 	& \textbf{R2F12.3}: Il sistema deve permettere all'utente di aggiornare il codice di una propria funzione. 																				& No & No \tabularnewline
+	TA2F12.3.1 	& \textbf{R2F12.3.1}: Se il file indicato durante la procedura di aggiornamento del codice di una funzione non esiste, deve essere mostrato un messaggio di errore.							& No & No \tabularnewline
+	TA2F12.3.2 	& \textbf{R2F12.3.2}: Se il file indicato durante la procedura di aggiornamento del codice di una funzione presenta un formato non supportato, deve essere mostrato un messaggio di errore.	& No & No \tabularnewline
 
 	% history
 	TA2F13 		& \textbf{R2F13}: L'utente deve essere in grado di visualizzare la propria cronologia di richieste di esecuzione. 																		& No & No \tabularnewline
@@ -120,5 +119,6 @@
 	TA1F14.1 	& \textbf{R1F14.1}: Per eseguire l'operazione di eliminazione l'utente deve inserire il nome della funzione da eliminare. 																	& No & No \tabularnewline
 	TA1F14.1.1 	& \textbf{R1F14.1.1}: Nel caso in cui il nome inserito durante la procedura di eliminazione non si riferisca ad alcuna funzione presente all'interno del sistema, deve essere mostrato un messaggio di errore.	& No & No \tabularnewline
 	TAF14.1.2 	& \textbf{R1F14.1.2}: Nel caso in cui la funzione considerata nella procedura di eliminazione non sia di proprietà dell'utente, deve essere visualizzato un messaggio di errore.				& No & No \tabularnewline
+	TAF1F15		& \textbf{R1F15}: Gli smart contract\ped{\textit{G}} devono poter essere aggiornati.																															& No & No \tabularnewline
 
 \end{longtable}
