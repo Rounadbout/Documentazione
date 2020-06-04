@@ -12,6 +12,7 @@ Il compito del modulo etherless-cli è quello di permettere agli utenti finali d
 	\item \textbf{IPFSFileManager}: classe che implementa l'interfaccia FileManager, permette di salvare e ottenere file tramite il protocollo IPFS; 
 	\item \textbf{FileParser}: interfaccia che permette di definire metodi utili per il parsing di file sorgenti; 
 	\item \textbf{JSFileParser}: classe che implementa l'interfaccia FileParser, si occupa di gestire il parsing di file scritti in JavaScript; 
+	\item \textbf{EtherlessManager}: classe che si occupa di gestire la maggior parte delle funzionalità messe a disposizione dall'applicativo. In questo modo i comandi avranno la necessità di interagire unicamente con essa; 
 \end{itemize}
 
 \subsubsection{Design}
@@ -35,7 +36,7 @@ Durante la progettazione abbiamo fatto riferimento principalmente ai seguenti de
 \subsubsection{Diagramma dei package}
 
 \begin{landscape}
-	\includegraphics[scale=0.3]{diagrammi/etherless-cli/package.png}
+	\centerline{\includegraphics[scale=0.33]{diagrammi/etherless-cli/package.png}}
 \end{landscape}
 
 \centerline{\includegraphics[height=19cm, width=16cm]{diagrammi/etherless-cli/classi.png}}
