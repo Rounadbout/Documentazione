@@ -26,19 +26,21 @@
     \item \textbf{Secure Ether Transfer:} il trasferimento di ETH da un indirizzo ad un'altro è gestito in modo sicuro dal contratto EtherlessEscrow, che nelle funzioni di trasferimento dei fondi utilizza il metodo \texttt{sendValue}, fornito dal contratto \texttt{Address} offerto da \textit{OpenZeppelin}. Inoltre, la divisione dal contratto EtherlessSmart dei metodi che gestiscono il pagamento protegge da eventuali attacchi che potrebbero impossessarsi di denaro.
 
     \item \textbf{String Equality Comparison:} allo stato attuale Solidity non offre funzionalità di comparazione tra stringhe, quindi abbiamo costruito un metodo apposito \texttt{compareString} che si occupa di verificare l'uguaglianza tra due stringhe. Per rendere questa operazione meno costosa in termini di gas, abbiamo seguito il pattern String Equality Comparison, che comporta, oltre al confronto per carattere, un previo confronto tra la lunghezza delle stringhe evitando controlli inutili e dispendiosi;
-  \end{itemize}
 
-  \paragraph{Proxy Delegate Pattern e contratti upgradeable}
-    La rete Ethereum è immutabile, e, di conseguenza, una volta rilasciato un contratto questo non può più essere modificato. Tuttavia, una \textit{best practice} comunemente usata nell'ambito per ovviare a questo problema consiste nell'utilizzare un proxy che punta all'indirizzo dell'ultima versione del contratto rilasciata sulla rete, rendendo così i contratti aggiornabili. Si noti come i contratti precedenti non verranno sovrascritti, ma continueranno ad esistere nella rete: sembrerà tuttavia che sia avvenuto un aggiornamento del codice precedente perché il proxy provvederà a puntare all'ultimo contratto rilasciato. \\
+  \item \textbf{Proxy Delegate:} la blockchain Ethereum è immutabile, e, di conseguenza, una volta rilasciato un contratto questo non può più essere modificato. Tuttavia, una \textit{best practice} comunemente usata nell'ambito per ovviare a questo problema consiste nell'utilizzare un proxy che punta all'indirizzo dell'ultima versione del contratto rilasciata sulla rete, rendendo così i contratti aggiornabili. Si noti come i contratti precedenti non verranno sovrascritti, ma continueranno ad esistere nella rete: sembrerà tuttavia che sia avvenuto un aggiornamento del codice precedente perché il proxy provvederà a puntare all'ultimo contratto rilasciato. \\
     Il framework \textit{OpenZeppelin} fornisce una funzionalità di upgrade per gli smart contract che implementa il meccanismo di proxy forwarding dietro le quinte, semplificando la gestione dell'aggiornamento del codice dei contratti. \\
     I contratti EtherlessSmart ed EtherlessStorage sono stati implementati in modo da poter sfruttare questo meccanismo: ad una richiesta di upgrade di un contratto caricato sulla rete ad un certo indirizzo, \textit{OpenZeppelin} si occupa di "reindirizzarlo" in modo da mantenere lo stesso indirizzo sulla rete Ethereum riferendosi però all'implementazione aggiornata del contratto.
+ \end{itemize}
 
 \subsubsection{Diagramma delle classi}
 Gli smart contract scritti in Solidity sono assimilabili alle classi dei linguaggi di programmazione ad oggetti, in quanto contengono attributi propri e metodi per effettuare operazioni su questi attributi. Per questo motivo abbiamo ritenuto adeguato usare i diagrammi delle classi con la sintassi UML per rappresentarne il contenuto. \\
 Tuttavia, per l'ambito in cui viene utilizzato, Solidity presenta delle feature aggiuntive che non hanno nulla a che vedere con un paradigma di programmazione ad oggetti, come ad esempio il tipo di dato \texttt{address}, la possibilità di definire \texttt{payable} un metodo od un indirizzo, la definizione di specifici modificatori d'accesso e gli eventi. Per contrassegnare questi elementi mantenendo la sintassi UML abbiamo deciso di inserire l'informazione che li contraddistingue tra parentesi graffe alla fine della definizione dell'elemento. A ciò fanno eccezione gli indirizzi contrassegnati come \texttt{payable} che, essendo un tipo diverso dal semplice indirizzo, vengono indicati semplicemente come \texttt{address payable}.
 \newgeometry{a4paper,left=1in,right=1in,top=1in,bottom=1in,nohead}
 \begin{landscape}
-\includegraphics[width=21.5cm, height=14cm]{././diagrammi/etherless-smart/classi/Etherless-smart.jpg}
+  \begin{figure}[H]
+    \includegraphics[width=21.5cm, height=14cm]{././diagrammi/etherless-smart/classi/Etherless-smart.jpg}
+  	\caption{Diagramma delle classi Etherless-smart.}
+  \end{figure}
 \end{landscape}
 \restoregeometry
 \subsubsection{Diagrammi di sequenza}
