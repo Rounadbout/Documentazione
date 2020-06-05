@@ -37,7 +37,7 @@ Nello specifico:
 	\end{landscape}
 \newpage
 \subsection{Diagrammi di attività}
-	La comunicazione tra i tre moduli che costituiscono il prodotto, segue due diversi pattern in base al tipo di operazione da eseguire.
+	La comunicazione tra i tre moduli che costituiscono il prodotto segue due diversi pattern in base al tipo di operazione da eseguire.
 	\paragraph{Primo pattern di comunicazione}
 		Questo pattern di comunicazione riguarda tutte le funzionalità che necessitano di comunicare con la componente server per completare la propria esecuzione. Dato che il modulo smart non é in grado di eseguire chiamate esterne, tutte le comunicazioni uscenti da questo modulo sono sotto forma di eventi emessi nella rete Ethereum, di cui gli altri moduli si mettono in ascolto. \\ Degli esempi di funzionalità che seguono di questo pattern di comunicazione sono:
 		\begin{itemize}
@@ -50,7 +50,7 @@ Nello specifico:
 			\caption{Diagramma di attività per il primo pattern di comunicazione}
 		\end{figure}
 	\paragraph{Secondo pattern di comunicazione}
-		Nel caso in cui sia necessario recuperare dati dallo smart contract, il modulo cli ottiene questi dati attraverso una chiamata alle funzioni del modulo smart, senza necessitare della partecipazione del modulo server.\\  Degli esempi di funzionalità che seguono di questo pattern di comunicazione sono:
+		Nel caso in cui sia necessario recuperare informazioni riguardanti una o più funzioni, il modulo cli ottiene questi dati attraverso una chiamata alle funzioni del modulo smart, senza necessitare della partecipazione del modulo server.\\  Degli esempi di funzionalità che seguono di questo pattern di comunicazione sono:
 		\begin{itemize}
 			\item visualizzazione della lista delle funzioni;
 			\item visualizzazione delle informazioni dettagliate di una funzione.
