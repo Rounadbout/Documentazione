@@ -1,13 +1,13 @@
 \subsection{Etherless-cli}
 \subsubsection{Struttura}
-Il compito del modulo etherless-cli è quello di mettere a disposizione agli utenti finali dei comandi per interagire con la piattaforma \textit{Etherless}. Per permettere ciò abbiamo sviluppato le seguenti classi:
+Il compito del modulo Etherless-cli è quello di mettere a disposizione agli utenti finali dei comandi per interagire con la piattaforma \textit{Etherless}. Per permettere ciò abbiamo sviluppato le seguenti classi:
 \begin{itemize}
 	\item \textbf{Command}: classe astratta che si occupa di definire l'interfaccia necessaria per rappresentare correttamente un comando messo a disposizione dalla CLI;
 	\item \textbf{CommandManager}: classe che si occupa di gestire i comandi. Permette la corretta interazione tra le classi derivate da Command e la libreria Yargs;
 	\item \textbf{UserSession}: interfaccia che fornisce i metodi necessari per la gestione di una sessione utente;
 	\item \textbf{EthereumUserSession}: implementazione dell'interfaccia UserSession, in particolare si occupa di gestire sessioni utente in ambiente Ethereum;
-	\item \textbf{EtherlessContract}: interfaccia usata per definire le funzionalità che devono essere fornite dal modulo \textit{etherless-smart};
-	\item \textbf{EthereumContract}: classe che implementa l'interfaccia EtherlessContract. Si occupa di interagire direttamente con il modulo \textit{etherless-smart} e con la blockchain Ethereum;
+	\item \textbf{EtherlessContract}: interfaccia usata per definire le funzionalità che devono essere fornite dal modulo Etherless-smart;
+	\item \textbf{EthereumContract}: classe che implementa l'interfaccia EtherlessContract. Si occupa di interagire direttamente con il modulo Etherless-smart e con la blockchain Ethereum;
 	\item \textbf{FileManager}: interfaccia che permette di definire alcuni metodi fondamentali per la gestione di file;
 	\item \textbf{IPFSFileManager}: classe che implementa l'interfaccia FileManager, permette di salvare e recuperare file tramite il protocollo IPFS;
 	\item \textbf{FileParser}: interfaccia che permette di definire i metodi necessari per eseguire il processo di parsing di file sorgente;
@@ -16,7 +16,7 @@ Il compito del modulo etherless-cli è quello di mettere a disposizione agli ute
 \end{itemize}
 
 \subsubsection{Design}
-Il modulo etherless-cli è stato progettato avendo come obiettivo principale l'estensibilitá, in particolare abbiamo voluto garantire la possibilità di integrare nuove funzionalità senza apportare modifiche sostanziali alla struttura esistente. A tale scopo sono state prese le seguenti scelte progettuali:
+Il modulo Etherless-cli è stato progettato avendo come obiettivo principale l'estensibilità. In particolare abbiamo voluto garantire la possibilità di integrare nuove funzionalità senza apportare modifiche sostanziali alla struttura esistente. A tale scopo sono state prese le seguenti scelte progettuali:
 \begin{itemize}
 	\item è stata definita la classe astratta Command: in questo modo è possibile andare ad introdurre nuovi comandi semplicemente estendendo tale classe;
 	\item è stata definita l'interfaccia FileManager, che permette di definire diverse implementazioni che usano protocolli per la gestione di file diversi;
@@ -31,7 +31,7 @@ Durante la progettazione abbiamo fatto riferimento principalmente ai seguenti de
 
 	\item \textbf{Facade}: come design pattern strutturale per lo sviluppo della classe EtherlessManager, che si occupa di eseguire vari controlli ed interagire con le opportune classi per gestire le richieste eseguite dai comandi;
 
-	\item \textbf{Constructor injection}: come design pattern architetturale per lo sviluppo della classe EtherlessManager. Tutte le dipendenze vengono dichiarate come parametri del costruttore: in questo modo la classe non si deve occupare della creazione degli oggetti considerati ma solo del loro utilizzo.
+	\item \textbf{Constructor Injection}: come design pattern architetturale per lo sviluppo della classe EtherlessManager. Tutte le dipendenze vengono dichiarate come parametri del costruttore: in questo modo la classe non si deve occupare della creazione degli oggetti considerati ma solo del loro utilizzo.
 \end{itemize}
 
 
