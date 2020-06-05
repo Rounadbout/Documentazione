@@ -1,8 +1,8 @@
 \subsection{Etherless-server}
 \subsubsection{Struttura}
-Il compito del modulo etherless-server è ascoltare eventi Ethereum emessi dal modulo etherless-smart e processare questi ultimi, andando ad eseguire operazioni prestabilite. Per realizzare queste funzionalità, abbiamo sviluppato le seguenti classi:
+Il compito del modulo Etherless-server è ascoltare eventi Ethereum emessi dal modulo Etherless-smart e processare questi ultimi, andando ad eseguire operazioni prestabilite. Per realizzare queste funzionalità, abbiamo sviluppato le seguenti classi:
 \begin{itemize}
-	\item \textbf{SmartManager}: classe astratta le cui derivate consentono l'ascolto di eventi esterni e la generazione di corrispondenti eventi interni. Questa classe consente inoltre la comunicazione di risposte ad etherless-smart tramite il metodo \texttt{sendResponse(...)};
+	\item \textbf{SmartManager}: classe astratta le cui derivate consentono l'ascolto di eventi esterni e la generazione di corrispondenti eventi interni. Questa classe consente inoltre la comunicazione di risposte ad Etherless-smart tramite il metodo \texttt{sendResponse(...)};
 	\item \textbf{ETHSmartManager}: classe derivata da SmartManager, dedicata all'ascolto di eventi Ethereum. Tale ascolto inizia al momento della creazione di un oggetto di questa classe;
 	\item \textbf{EventDispatcher}: classe che consente l'emissione di eventi interni, che vengono poi processati dalle opportune classi. All'interno di ogni oggetto di tipo SmartManager, sono presenti tanti oggetti di tipo EventDispatcher quante sono le tipologie di eventi che quest'ultimo è in grado di ascoltare;
 	\item \textbf{IEventProcessor}: interfaccia che fornisce metodi utili a processare diversi tipologie di evento;
@@ -16,7 +16,7 @@ Il compito del modulo etherless-server è ascoltare eventi Ethereum emessi dal m
 	\item \textbf{AWSConfig}: classe contenente le informazioni di configurazione necessarie ad un oggetto AWSManager per creare un'istanza di servizio Lambda.
 \end{itemize}
 \subsubsection{Design}
-L'architettura del modulo etherless-server è stata progettata in conformità ai principi SOLID, e mantenendo come obiettivi fondamentali la scalabità e l'estensibilità:
+L'architettura del modulo Etherless-server è stata progettata in conformità ai principi SOLID, e mantenendo come obiettivi fondamentali la scalabità e l'estensibilità:
 \begin{itemize}
 	\item \textbf{scalabilità}: facendo riferimento alla caratteristica serverless richiesta dal Proponente per l'architettura del sistema, la porzione preponderante dell'elaborazione viene eseguita dal servizio AWS Lambda. Quest'ultimo è in grado di gestire le richieste e ricalibrare le risorse per ottenere la miglior ottimizzazione possibile, entro un limite di 1000 esecuzioni concorrenti;
 	\item \textbf{estensibilità}: per garantire la possibilità di integrare nuove funzionalità all'interno del sistema, senza apportare modifiche sostanziali alla sua struttura, sono state implementate varie scelte progettuali quali:
@@ -32,10 +32,10 @@ L'architettura del modulo etherless-server è stata progettata in conformità ai
 Durante la progettazione abbiamo fatto riferimento principalmente a due design pattern:
 \begin{itemize}
 	\item \textbf{Facade}: come design pattern strutturale per lo sviluppo della classe EventProcessor, che si occupa di orchestrare le chiamate alle opportune classi, per il processing delle richieste ricevute da SmartManager;
-	\item \textbf{Dependency injection}: come design pattern architetturale per lo sviluppo delle classi SmartManager, EventDispatcher ed EventProcessor:
+	\item \textbf{Dependency Injection}: come design pattern architetturale per lo sviluppo delle classi SmartManager, EventDispatcher ed EventProcessor:
 	\begin{itemize}
 		\item al momento dell'istanziazione di un oggetto di tipo SmartManager la lista di callback presente all'interno dei suoi EventDispatcher è vuota, quindi non sono presenti dipendenze verso la classe EventProcessor;
-		\item la costruzione di un oggetto di tipo EventProcessor, a cui viene fornito un oggetto di tipo SmartManager come parametro (\textbf{Constructor injection}), provoca l'inserimento di un riferimento alle proprie funzioni di elaborazione nelle rispettive liste di callback in SmartManager (\textbf{Setter injection}).
+		\item la costruzione di un oggetto di tipo EventProcessor, a cui viene fornito un oggetto di tipo SmartManager come parametro (\textbf{Constructor Injection}), provoca l'inserimento di un riferimento alle proprie funzioni di elaborazione nelle rispettive liste di callback in SmartManager (\textbf{Setter Injection}).
 	\end{itemize}
 	Quest'operazione ci consente quindi di introdurre una dipendenza da EventDispatcher verso EventProcessor, senza incorrere negli effetti collaterali tipici di una dipendenza circolare.
 \end{itemize}
