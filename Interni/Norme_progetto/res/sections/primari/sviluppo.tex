@@ -127,7 +127,7 @@
         La progettazione ha quindi come obiettivo l'elaborazione di una struttura adeguata per il sistema, e si divide in:
         \begin{itemize}
         	\item{\textbf{Progettazione Architetturale}}: vengono svolte operazioni di incremento, verifica dei requisiti e progettazione ad alto livello di un'architettura adeguata alla realizzazione del progetto. La Technology Baseline\ped{\textit{G}} del progetto si ottiene alla fine di questo periodo;
-        	\item{\textbf{Progettazione di Dettaglio}}: vengono svolte operazioni di incremento, verifica dei documenti redatti; vengono definite le specifiche di dettaglio dell'architettura del prodotto\ped{\textit{G}}, partendo dalla Tecnology Baseline\ped{\textit{G}}. Particolare attenzione viene data alla codifica di tale prodotto\ped{\textit{G}} ed alla creazione di un manuale utente. La Product Baseline\ped{\textit{G}} del progetto si ottiene alla fine di questo periodo;
+        	\item{\textbf{Progettazione di Dettaglio}}: vengono svolte operazioni di incremento, verifica dei documenti redatti; vengono definite le specifiche di dettaglio dell'architettura del prodotto\ped{\textit{G}}, partendo dalla Tecnology Baseline\ped{\textit{G}}. Particolare attenzione viene data alla codifica di tale prodotto\ped{\textit{G}} ed alla creazione di un manuale utente e di un manuale sviluppatore. La Product Baseline\ped{\textit{G}} del progetto si ottiene alla fine di questo periodo;
         \end{itemize}
     	I rispettivi output sono:
         \begin{itemize}
@@ -267,7 +267,7 @@
     		\item{\textbf{comprensibilità}}: deve essere capibile da tutti gli stakeholder;
     		\item{\textbf{modularità}}: deve essere suddivisa in parti chiare e ben distinte;
     		\item{\textbf{robustezza}}: deve essere in grado di sopportare ingressi diversi, sia da parte dell'utente che dell'ambiente;
-    		\item{\textbf{flessibilità}}: deve permettere di essere modificata senza sostanziali modifiche e a costi contenuti al variare dei requisiti;
+    		\item{\textbf{estensibilità}}: deve permettere di essere estesa nelle sue funzionalità senza sostanziali modifiche e a costi contenuti al variare dei requisiti;
     		\item{\textbf{efficienza}}: deve gestire le risorse in maniera da ridurre eventuali sprechi;
     		\item{\textbf{affidabilità}}: l'architettura deve garantire una buona usabilità del prodotto\ped{\textit{G}} una volta implementata;
     		\item{\textbf{disponibilità}}: la manutenzione delle sue parti deve richiedere un tempo limitato e non andare ad affliggere il corretto funzionamento di tutto il sistema;
@@ -275,6 +275,7 @@
     		\item{\textbf{semplicità}}: ogni sua parte deve contenere solo il necessario e nulla di superfluo;
     		\item{\textbf{incapsulazione}}: costituita da componenti le cui informazioni interne non sono visibii da fuori;
     		\item{\textbf{coesione}}: composta in maniera che le parti con obiettivo comune siano raggruppate insieme;
+    		\item{\textbf{scalabilità}}: deve avere la capacità di aumentare o diminuire di scala in funzione delle necessità e disponibilità;
     		\item{\textbf{basso accoppiamento}}: composta da parti distinte che devono essere indipendenti tra di loro, in modo che l'architettura possa subire modifiche a costi contenuti;
     	\end{itemize}
 
@@ -299,7 +300,8 @@
 		\item{\textbf{costanti}: le costanti devono essere scritte usando solo lettere maiuscole (e.g. COSTANTE). Nel caso siano composte da più parole, queste devono essere separate dal carattere speciale underscore (e.g. NOME\_COSTANTE);}
 		\item{\textbf{metodi}: i nomi dei metodi devono iniziare con una lettera minuscola e, nel caso 	siano composti da più parole, quelle successive devono iniziare con una lettera maiuscola (e.g. nomeMetodo);}
 		\item{\textbf{lingua}: le parti testuali di codice ed i commenti ad esso riferiti devono essere scritti in lingua inglese;}
-        \item{\textbf{ricorsione}: l'uso della ricorsione va evitato quanto più possibile.}
+        \item{\textbf{ricorsione}: l'uso della ricorsione va evitato quanto più possibile;}
+        \item{\textbf{commenti}: il codice deve essere adeguatamente commentato, seguendo le relative metriche.}
 	\end{itemize}
 
 	\noindent I componenti \textit{Etherless-cli} ed \textit{Etherless-server} dovranno essere codificati in TypeScript\ped{\textit{G}}, seguendo la Airbnb\ped{\textit{G}} JavaScript\ped{\textit{G}} Style Guide e lo strumento di analisi statica del codice ESLint\ped{\textit{G}}. \\
