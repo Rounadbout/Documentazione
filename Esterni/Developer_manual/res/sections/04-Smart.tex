@@ -1,6 +1,7 @@
 \section{Etherless-Smart}
 	
 	\subsection{Getting started}
+	Etherless-smart is the module which handles the blockchain side of things. It consists of a set of Ethereum smart contracts that handle the communication between Etherless-cli and Etherless-server as well as the payment of this work using ETH currency.
 	
 		\subsubsection{Technologies} %Elencare le tecnologie utilizzate in questo modulo. La descrizione spetta al Glossario appendice!
 			\subsubsubsection{Languages}
@@ -30,7 +31,47 @@
 	\subsection{Developer's guide}
 	
 		\subsubsection{Architecture} % Descrizione dell'architettura utilizzata, compresi i design pattern
+		Our goals when developing Etherless-smart were upgradeability and extensibility. For these reasons said module consists of three smart contracts:
+		\begin{itemize}
+			\item \textbf{EtherlessSmart:} is the main contract which serves as the middleman between Etherless-cli and Etherless-server. Each one of its methods is either invoked by Etherless-cli to send the requests or by Etherless-server to transmit the responses;
+			\item \textbf{EtherlessStorage:} is the storage contract. It stores all relevant information regarding the Javascript functions which can be called when using \textit{Etherless}. Moreover, it contains some utility methods to perform useful operations on this data;
+			\item \textbf{EtherlessEscrow:} is the contract which manages everything in regards to monetary transactions. It contains details of every pending transaction and its methods have been implemented to manage an escrow payment.
+		\end{itemize}
+The architecture just described can be seen as follows: INSERIRE CROSSOVER DIAGRAMMI DEI PACKAGE-DIAGRAMMI DELLE CLASSI
 		
-		\subsubsection{Method} %Descrizione accurata dei metodi presenti nel modulo
+		\subsubsection{Methods} %Descrizione accurata dei metodi presenti nel modulo
+		\subsubsubsection{EtherlessSmart}
+		\subsubsubsection*{deployFunction}
+		\subsubsubsection*{runFunction}
+		\subsubsubsection*{editFunction}
+		\subsubsubsection*{deleteFunction}
+		\subsubsubsection*{deployResult}
+		\subsubsubsection*{runResult}
+		\subsubsubsection*{editResult}
+		\subsubsubsection*{deleteResult}
+		\subsubsubsection*{getCost}
+		\subsubsubsection*{getInfo}
+		\subsubsubsection*{getFuncList}
+		\subsubsubsection*{getNewId}
+		
+		\subsubsubsection{EtherlessStorage}
+		\subsubsubsection*{existsFunction}
+		\subsubsubsection*{insertNewFunction}
+		\subsubsubsection*{removeFunction}
+		\subsubsubsection*{getFuncPrice}
+		\subsubsubsection*{getFuncDev}
+		\subsubsubsection*{getList}
+		\subsubsubsection*{getFuncInfo}
+		\subsubsubsection*{singleFuncJson}
+		\subsubsubsection*{addressToString}
+		\subsubsubsection*{uintToString}
+		\subsubsubsection*{compareString}
+		
+		\subsubsubsection{EtherlessEscrow}
+		\subsubsubsection*{getBeneficiary}
+		\subsubsubsection*{getSender}
+		\subsubsubsection*{depositsOf}
+		\subsubsubsection*{deposit}
+		\subsubsubsection*{withdraw}
 		
 		\subsubsection{Extensions}  %Possibili sviluppi futuri
