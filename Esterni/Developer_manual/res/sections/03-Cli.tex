@@ -1,36 +1,79 @@
-\section{Etherless-Cli}
-
-	\subsection{Getting started}
-	
-		\subsubsection{Technologies} %Elencare le tecnologie utilizzate in questo modulo. La descrizione spetta al Glossario appendice!
-			\subsubsubsection{Languages}
-			\subsubsubsection{Utilities}
-			\subsubsubsection{Libraries}
-			
-		\subsubsection{Requirements} %Requisiti necessari, suddivisi tra hardware e software.
-			\subsubsubsection{Hardware}
-			\subsubsubsection{Software}
-			
-		\subsubsection{Setup} %Step da seguire per configurare correttamente il modulo
-		
-		\subsubsection{Enviroments} % (?Necessario?)
-		
-		\subsubsection{Functionality} %Funzionalità e comandi messi a disposizione dal modulo. Dividerle in sottosezioni!
-		%	\subsubsubsection{Funct1}
-		%		\subsubsubsection*{Utility}
-		%		\subsubsubsection*{Command}
-		%	\subsubsubsection{Funct2}
-		%		\subsubsubsection*{Utility}
-		%		\subsubsubsection*{Command}
-		%	\subsubsubsection{Funct3}
-		%		\subsubsubsection*{Utility}
-		%		\subsubsubsection*{Command}
-	
-	
+\section{Etherless-Cli}	
 	\subsection{Developer's guide}
 	
-		\subsubsection{Architecture} % Descrizione dell'architettura utilizzata, compresi i design pattern
-		
+		\subsubsection{Architecture}
+			\subsubsubsection{Command}
+			
+			\subsubsubsection{CommandManager} 
+			This class is a collection of static methods needed to interact with the external library Yargs. It exposes functionalities for adding a new command and starting process user input. 
+						
+			\subsubsubsection{FileParser} 
+			Interface used to define all methods needed for source file parsing. In particular the class focuses on methods needed to find function signature in source file. 
+			
+			Because of we managed the deploy only of Javascript source file, we created the class JSFileParser, that implement the interface FileParser. This class is mainly used for check if a function exists inside a source file, and to obtain its signature. 
+			
+			\subsubsubsection{FileManager} 
+			Interface that defines methods needed for saving and reading files. Because of we use the IPFS protocol to send and retrive file, we created the class IPFSFileManager, that implements the FileManager interface. 
+			
+			\subsubsubsection{UserSession} 
+			This interface defines the methods needed for manage all functions linked with user session, like signup, login and logout. Because the program use the Ethereum network, we decided to create the class EthereumUserSession, that implements all methods of UserSession interface inside this environment.  
+			
+			\subsubsubsection{EtherlessContract} 
+			Interface that exposes methods for smart contract interaction and blockchain data elaboration. We created the class EthereumContract that implements EtherlessContract interface and provides all the functionality required communicating with \textit{Etherless-smart} module and fetching blockchain data.
+			
 		\subsubsection{Method} %Descrizione accurata dei metodi presenti nel modulo
-		
+			\subsubsubsection{Command} 
+				\begin{itemize}
+					\item \textbf{exec}: ;
+					\item \textbf{builder}: ;
+					\item \textbf{getCommand}: ;
+					\item \textbf{getDescription}: ;
+				\end{itemize}
+			
+			\subsubsubsection{CommandManager}
+				\begin{itemize}
+					\item \textbf{addCommand}: add a command to available commands on CLI;
+					\item \textbf{init}: start processing the user input;
+				\end{itemize}
+				
+			\subsubsubsection{FileParser}
+				\begin{itemize}
+					\item \textbf{parse}: parse a file;   
+					\item \textbf{existsFunction}: check if the function with the given name exists inside the considered source file;
+					\item \textbf{getFunctionSignature}: return the signature of the function with the given name;
+				\end{itemize}
+				
+			\subsubsubsection{FileManager}
+				\begin{itemize}
+					\item \textbf{save}: save a file using a specific protocol;
+					\item \textbf{get}: retrive information of a file; 
+				\end{itemize}
+	
+			\subsubsubsection{UserSession}
+				\begin{itemize}
+					\item \textbf{isLogged}: check if the current user is logged;
+					\item \textbf{loginWithPrivateKey}: provides the login procedure using private key;
+					\item \textbf{loginWithMnemonicPhrase}: provides the login procedure using mnemonic phrase;
+					\item \textbf{signup}: provides the procedure for the creation of a new user inside the system ;
+					\item \textbf{logout}: logs out the current user;
+					\item \textbf{restoreWallet}: ;
+					\item \textbf{getAddress}: retrieves the address of the current user;
+				\end{itemize}
+				
+			\subsubsubsection{EtherlessContract}
+				\begin{itemize}
+					\item \textbf{connect}: ;
+					\item \textbf{getAllFunctions}: ;
+					\item \textbf{getMyFunctions}: ;
+					\item \textbf{getFunctionInfo}: ;
+					\item \textbf{existsFunction}: ;
+					\item \textbf{getExecHistory}: ;
+					\item \textbf{updateDesc}: ;
+					\item \textbf{sendRunRequest}: ;
+					\item \textbf{sendDeleteRequest}: ;
+					\item \textbf{sendCodeUpdateRequest}: ;
+					\item \textbf{sendDeployRequest}: ;
+					\item \textbf{listenResponse}: ;
+				\end{itemize}
+
 		\subsubsection{Extensions}  %Possibili sviluppi futuri
