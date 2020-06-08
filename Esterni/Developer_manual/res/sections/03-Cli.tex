@@ -1,79 +1,216 @@
 \section{Etherless-Cli}	
-	\subsection{Developer's guide}
+
+	\subsection{Overview}
+	The purpose of this module is to allow the end user to interact with the \textit{Ethelress} platform. The module provides a set of commands that allow both the management of the ethereum portfolio and the interaction with smart contracts.
 	
-		\subsubsection{Architecture}
+	\subsection{Architecture}
+		\subsubsection{Commands}
+		Package used to manage commands provided by the CLI.
+		\begin{figure} [H]
+			\centering
+			\includegraphics[width=0.6\linewidth]{diagrammi/etherless-cli/Commands}
+			\caption{Class diagram of the Commands package.}
+		\end{figure}
+	
 			\subsubsubsection{Command}
+			Abstract class that describes the functionalities and attributes that every CLI command must have. To add any command to the CLI the developer needs to extend the Command class and implements the exec and builder methods. \\ 
+			The command constructor exposes the dependecy from UserSession, making possible to  easily create mocks objects of this class. 
 			
+				\subsubsubsection*{Attributes}
+					\begin{itemize}
+						\item \textbf{command}: syntax of the CLI command;
+						\item \textbf{description}: a brief description of the command;
+						\item \textbf{session}: UserSession object, used by the command to obtain information about the current user; 
+					\end{itemize}
+				
+				\subsubsubsection*{Methods} 
+					\begin{itemize}
+						\item \textbf{exec}: execute the considered command, it returns a string that will be shown to the user;
+						\item \textbf{builder}: function that describes the command parameters details, such as position and expected type;
+						\item \textbf{getCommand}: returns the command syntax for the CLI;
+						\item \textbf{getDescription}: returns the command description;
+					\end{itemize}
+	
 			\subsubsubsection{CommandManager} 
-			This class is a collection of static methods needed to interact with the external library Yargs. It exposes functionalities for adding a new command and starting process user input. 
-						
+			This class is a collection of static methods needed to interact with the external library Yargs, used for command management. It exposes functionalities for add a new command and start processing user input. 
+				\subsubsubsection*{Methods}
+					\begin{itemize}
+						\item \textbf{addCommand}: add a new command to the list of available CLI commands;
+						\item \textbf{init}: start processing the user input;
+					\end{itemize}
+			
+			\subsubsubsection{Implemented commands}
+			\begin{itemize}
+				\item \textbf{LoginCommand}: this class implements the login command, it allows the user to login inside the Ethereum network with both private key and mnemonic phrase; 
+				\item \textbf{SignupCommand}: this class implements the signup command, it allows the user to create a new wallet inside Ethereum network; 
+				\item \textbf{LogoutCommand}: this class implements the logout command, deleting all user credentials from the system;  
+				\item \textbf{WhoamiCommand}: this class implements the whoami command, it allows the user to see its wallet address; 
+				\item \textbf{InitCommand}: this class implements the init command, it allows the user to see a brief introduction of the application and informations about the authenitcation procedure; 
+				\item \textbf{RunCommand}: this class implements the run command, it allows the user to execute a function inside \textit{Etherless} platform; 
+				\item \textbf{EditCommand}: this class implements the edit command, it allows the user to modify the description or the source code of an owned function; 
+				\item \textbf{SearchCommand}:this class implements the search command, it allows the user to get a list of all functions that contains a keyword inside their name; 
+				\item \textbf{InfoCommand}: this class implements the info command, it allows the user to get details about a function; 
+				\item \textbf{DeleteCommand}: this class implements the delete command, it allows the user to delete an owned function; 
+				\item \textbf{HistoryCommand}: this class implements the history command, it allows the user to see his past run requests;
+				\item \textbf{DeployCommand}: this class implements the deploy command, it allows the user to deploy a function to the \textit{Etherless} platform;
+			\end{itemize}
+		
+		\subsubsection{FParser}
+ 		This package is used to define all the classes and interfaces to manage source file parsing.
+		
+		\begin{figure} [h!]
+			\centering
+			\includegraphics[width=0.5\linewidth]{diagrammi/etherless-cli/FParser}
+			\caption{Class diagram of the FParser package.}
+		\end{figure}
+		
 			\subsubsubsection{FileParser} 
 			Interface used to define all methods needed for source file parsing. In particular the class focuses on methods needed to find function signature in source file. 
+		
+				\subsubsubsection*{Methods}
+					\begin{itemize}
+						\item \textbf{parse}: parse a file;   
+						\item \textbf{existsFunction}: check if the function with the given name exists inside the considered source file;
+						\item \textbf{getFunctionSignature}: return the signature of the function with the given name;
+					\end{itemize}
+		
+			\subsubsubsection{JSFileParser}
+			Because we manage the deploy only of Javascript source file, we created the class JSFileParser, that implement the interface FileParser. This class is mainly used to check if a function exists inside a source file, and to obtain its signature. To manage the javascript source file parsing process we use the \texttt{acorn} library. 
 			
-			Because of we managed the deploy only of Javascript source file, we created the class JSFileParser, that implement the interface FileParser. This class is mainly used for check if a function exists inside a source file, and to obtain its signature. 
-			
-			\subsubsubsection{FileManager} 
-			Interface that defines methods needed for saving and reading files. Because of we use the IPFS protocol to send and retrive file, we created the class IPFSFileManager, that implements the FileManager interface. 
-			
-			\subsubsubsection{UserSession} 
-			This interface defines the methods needed for manage all functions linked with user session, like signup, login and logout. Because the program use the Ethereum network, we decided to create the class EthereumUserSession, that implements all methods of UserSession interface inside this environment.  
-			
-			\subsubsubsection{EtherlessContract} 
-			Interface that exposes methods for smart contract interaction and blockchain data elaboration. We created the class EthereumContract that implements EtherlessContract interface and provides all the functionality required communicating with \textit{Etherless-smart} module and fetching blockchain data.
-			
-		\subsubsection{Method} %Descrizione accurata dei metodi presenti nel modulo
-			\subsubsubsection{Command} 
-				\begin{itemize}
-					\item \textbf{exec}: ;
-					\item \textbf{builder}: ;
-					\item \textbf{getCommand}: ;
-					\item \textbf{getDescription}: ;
-				\end{itemize}
-			
-			\subsubsubsection{CommandManager}
-				\begin{itemize}
-					\item \textbf{addCommand}: add a command to available commands on CLI;
-					\item \textbf{init}: start processing the user input;
-				\end{itemize}
+				\subsubsection*{Attributes}
+					\begin{itemize}
+						\item \textbf{parsedFile}: tree structure created after the parsing process by the library \texttt{acorn}; 
+					\end{itemize}
 				
-			\subsubsubsection{FileParser}
+				\subsubsection*{Methods}
+				The class implements all methods defined in the FileParser interface, its defines also the following private methods: 
 				\begin{itemize}
-					\item \textbf{parse}: parse a file;   
-					\item \textbf{existsFunction}: check if the function with the given name exists inside the considered source file;
-					\item \textbf{getFunctionSignature}: return the signature of the function with the given name;
+					\item \textbf{findFuncNode}: method used to find the node inside parsedFile attribute that refers to a function with a given name; 
+					\item \textbf{funcSignatureFromNode}: method that extracts from a node of the parsedFile attribute the information about the function signature; 
 				\end{itemize}
+			
+		\subsubsection{FManager} 			
+		This package is used to define all the classes and interfaces to manage file saving and retriving processes.
+		\begin{figure} [h!]
+			\centering
+			\includegraphics[width=0.5\linewidth]{diagrammi/etherless-cli/FManager}
+			\caption{Class diagram of the FManager package.}
+		\end{figure}	
 				
 			\subsubsubsection{FileManager}
-				\begin{itemize}
-					\item \textbf{save}: save a file using a specific protocol;
-					\item \textbf{get}: retrive information of a file; 
+			Interface that defines methods needed for saving and retriving files. 
+		
+				\subsubsubsection*{Methods}
+					\begin{itemize}
+						\item \textbf{save}: save a file using a specific protocol;
+						\item \textbf{get}: retrive information of a file; 
 				\end{itemize}
+			
+			\subsubsubsection{IPFSFileManager}
+				Because we use the IPFS protocol to send and retrive file, we created the class IPFSFileManager, that implements the FileManager interface. To eatabilish a connection to the IPFS network we use a small package that is responsible for hiring the IPFS connection implementation (\texttt{ipfs-mini} API). 
+				
+				\subsubsubsection*{Attributes}
+				\begin{itemize}
+					\item \textbf{ipfs}: object through which the class can interact with the \texttt{ipfs-mini} API;
+				\end{itemize}
+				
+				\subsubsubsection*{Methods}
+				This class implements the methods defined in FileManager interface. 
 	
-			\subsubsubsection{UserSession}
+		\subsubsection{Session} 
+		This package is used to define all the classes and interfaces to manage the user session.
+		\begin{figure} [h!]
+			\centering
+			\includegraphics[width=0.5\linewidth]{diagrammi/etherless-cli/Session}
+			\caption{Class diagram of the Session package.}
+		\end{figure}
+			
+			\subsubsubsection{UserSession} 
+			This interface defines the methods needed for manage all functions linked with user session, like signup, login and logout. 
+				\subsubsubsection*{Methods}
 				\begin{itemize}
 					\item \textbf{isLogged}: check if the current user is logged;
 					\item \textbf{loginWithPrivateKey}: provides the login procedure using private key;
 					\item \textbf{loginWithMnemonicPhrase}: provides the login procedure using mnemonic phrase;
-					\item \textbf{signup}: provides the procedure for the creation of a new user inside the system ;
+					\item \textbf{signup}: provides the procedure for the creation of a new user inside the system;
 					\item \textbf{logout}: logs out the current user;
-					\item \textbf{restoreWallet}: ;
-					\item \textbf{getAddress}: retrieves the address of the current user;
+					\item \textbf{restoreWallet}: provide the procedure to obtain the local encrypted copy of user wallet;
+					\item \textbf{getAddress}: retrieves the address of the current user.
 				\end{itemize}
+			
+			\subsubsubsection{EthereumUserSession}
+			Because the program use the Ethereum network, we decided to create the class EthereumUserSession, that implements all methods of UserSession interface for this network.
+				\subsubsubsection*{Attributes}
+					\begin{itemize}
+						\item \textbf{provider}: provider that identifies the Ethereum network of interest; 
+						\item \textbf{conf}: object used to save local configurations;
+					\end{itemize}
 				
+				\subsubsubsection*{Methods}
+				The class implements all the methods defined in UserSession interface. It also defines the following private methods: 
+					\begin{itemize}
+						\item\textbf{saveWallet}: create a local crypted copy of the current wallet. 
+					\end{itemize}
+				
+		\subsubsection{Contract} 
+		This package is used to define all the classes and interfaces to interact with Ethereum blockchain and smart contracts. 
+		\begin{figure} [h!]
+			\centering
+			\includegraphics[width=0.75\linewidth]{diagrammi/etherless-cli/Contract}
+			\caption{Class diagram of the Contract package.}
+		\end{figure}
+	
 			\subsubsubsection{EtherlessContract}
-				\begin{itemize}
-					\item \textbf{connect}: ;
-					\item \textbf{getAllFunctions}: ;
-					\item \textbf{getMyFunctions}: ;
-					\item \textbf{getFunctionInfo}: ;
-					\item \textbf{existsFunction}: ;
-					\item \textbf{getExecHistory}: ;
-					\item \textbf{updateDesc}: ;
-					\item \textbf{sendRunRequest}: ;
-					\item \textbf{sendDeleteRequest}: ;
-					\item \textbf{sendCodeUpdateRequest}: ;
-					\item \textbf{sendDeployRequest}: ;
-					\item \textbf{listenResponse}: ;
-				\end{itemize}
+			Interface that exposes methods for smart contract interaction and blockchain data elaboration. 	
+			
+				\subsubsubsection*{Methods}
+					\begin{itemize}
+						\item \textbf{connect}: connect a wallet to the contract instance;
+						\item \textbf{getAllFunctions}: get all functions that are successfully deployed inside the platform;
+						\item \textbf{getMyFunctions}: return the list of deployed function owned by the current user;
+						\item \textbf{getFunctionInfo}: returns the details of a specific function;
+						\item \textbf{existsFunction}: check if a function exists inside \textit{Etherless} platform;
+						\item \textbf{getExecHistory}: return the list of past executions of the current user;
+						\item \textbf{updateDesc}: udate the description of a function owned by the current user ;
+						\item \textbf{sendRunRequest}: send a function execution request;
+						\item \textbf{sendDeleteRequest}: request to delete a function owned by current user; 
+						\item \textbf{sendCodeUpdateRequest}: request to update the code of a function owned by the user; 
+						\item \textbf{sendDeployRequest}: request to deploy a new function; 
+						\item \textbf{listenResponse}: listen the response of a previous request, independently from its type.
+					\end{itemize}
+		
+			\subsubsubsection{EthereumContract} 
+			We created the class EthereumContract that implements EtherlessContract interface. In particular all the functionalities are provided communicating with \textit{Etherless-smart} module and fetching blockchain data. \\ To interact with the smart-contract it uses an instance of Contract class, which is provided by the library \texttt{ethers.js}.
+				\subsubsubsection*{Attributes}
+					\begin{itemize}
+						\item \textbf{contract}: instance of class Contract provided by \texttt{ethers.js}. It is used to interact with a smart contract, and in particular with the \textit{Etheless-smart} module; 
+					\end{itemize}
+				
+				\subsubsubsection*{Methods}
+					The class implements all the methods defined in EtherlessContract interface.
+	
+	\subsection{UML}
+	\begin{figure} [H]
+		\centering
+		\includegraphics[width=0.85\linewidth]{diagrammi/etherless-cli/Classi}
+		\caption{Class diagram of the Commands package.}
+	\end{figure}
+			
+\subsection{Extensions}  
+In order to allow the integration of new functionalities in the system, without heavy alterations of the existing architecture, various design choices were implemented.
 
-		\subsubsection{Extensions}  %Possibili sviluppi futuri
+\subsubsection{Parsing source file written in different languages}
+Defining FileParser as an interface implies the possibility to expand the functionality of the product. In particular will be possibile to manage the parsing and then the deployment of source file written in different programming languages by simply defining new derived classes. 
+
+\subsubsection{File management}
+Defining FileManager as an interface implies the possibility to introduce different methods and protocols of managing file, by creating a specific class that implements this interface. 
+
+\subsubsection{New command introduction}
+The development of Command as an abstract class, implies the possibility to provide the user new functionalities and CLI commands creating new derivated classes. To correctly add the new command to the CLI, will be necessary use the class CommandManager.
+
+\subsubsection{Other extensions}
+Other component can be extended through re-definition. It will be necessary to implement the relative interfaces, which are:
+\begin{itemize}
+	\item \textbf{EtherlessContract Interface}: a high-level representation and handling of the main smart contract;
+	\item \textbf{UserSession Interface:} provides functionality for handling sessions.
+\end{itemize}
