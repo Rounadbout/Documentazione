@@ -1,0 +1,85 @@
+\subsubsection{18$^{\circ}$ Incremento}
+		\subsubsubsection{Prospetto orario}
+		Durante il diciottesimo incremento la distribuzione oraria preventivata dei ruoli di ogni componente del gruppo sarà la seguente:
+		\rowcolors{2}{lightRowColor}{darkRowColor}
+		\begin{longtable}{
+				>{\centering}p{0.25\textwidth}
+				>{\centering}p{0.05\textwidth}
+				>{\centering}p{0.05\textwidth}
+				>{\centering}p{0.05\textwidth}
+				>{\centering}p{0.05\textwidth}
+				>{\centering}p{0.05\textwidth}
+				>{\centering}p{0.05\textwidth}
+				>{\centering\arraybackslash}p{0.15\textwidth} }
+			
+			\coloredTableHead
+			\textbf{\color{white}Nome} &
+			\textbf{\color{white}Rp} &
+			\textbf{\color{white}As} &
+			\textbf{\color{white}An} &
+			\textbf{\color{white}Pt} &
+			\textbf{\color{white}Pr} &
+			\textbf{\color{white}Vf} &
+			\textbf{\color{white}Totale}
+			\tabularnewline
+			\endhead
+			
+			% Contenuto della tabella
+			%    Rp & As & An & Pt & Pr & Vf & Totale \\
+			\VB & - & -  & - & - & 3 & 1 & 4 \\
+			\LB & - & 1  & - & - & - & 3 & 4 \\
+			\NF & - & -  & - & - & 4 & - & 4 \\
+			\EG & - & -  & - & 3 & - & 1 & 4 \\
+			\FJ & 1 & -  & - & - & - & 3 & 4 \\
+			\MP & - & -  & - & - & - & 3 & 3 \\
+			\AS & - & -  & - & - & - & 3 & 3 \\
+			\AZ & - & -  & - & - & 3 & 1 & 4 \\
+			\textbf{Ore totali per ruolo} & 1 & 1 & 0 & 3 & 10 & 15 & 30 \\
+			
+			\rowcolor{white}\caption {Suddivisione oraria del diciottesimo incremento} \\
+			
+		\end{longtable}
+		
+		% Grafico
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{./res/img/progettazioneArchitetturale_po.png}
+			\caption{Suddivisione oraria del diciottesimo incremento}
+		\end{figure}
+	
+		\subsubsubsection{Prospetto economico}
+		In base al prospetto orario, quello economico sarà il seguente: 
+		\rowcolors{2}{lightRowColor}{darkRowColor}
+		\begin{longtable}{
+				>{\centering}p{0.25\textwidth}
+				>{\centering}p{0.05\textwidth}
+				>{\centering\arraybackslash}p{0.15\textwidth} }
+			
+			\coloredTableHead
+			\textbf{\color{white}Ruolo} &
+			\textbf{\color{white}Ore} &
+			\textbf{\color{white}Costo in \euro{}}
+			\tabularnewline
+			\endhead
+			
+			% Contenuto della tabella
+			% Ruolo & Ore & Costo \\
+			Responsabile    & 1  & 30,00 \\
+			Amministratore  & 1  & 20,00 \\
+			Analista        & 0  & 0,00 \\
+			Progettista     & 3  & 66,00 \\
+			Programmatore   & 10  & 150,00 \\
+			Verificatore    & 15  & 225,00 \\
+			\textbf{Totale} & 30 & 491,00 \\
+			
+			\rowcolor{white}\caption {Prospetto dei costi per il diciottesimo incremento}	\\
+			
+		\end{longtable}
+		
+		% Grafico
+		Rappresentazione grafica della distribuzione dei ruoli:
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{./res/img/progettazioneArchitetturale_pe.png}
+			\caption{Prospetto economico del diciottesimo incremento}
+		\end{figure}
