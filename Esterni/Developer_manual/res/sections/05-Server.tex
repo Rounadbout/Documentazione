@@ -32,7 +32,10 @@
 	\end{itemize}
 	\subsubsubsection*{Methods}
 	\begin{itemize}
-		\item \textbf{sendResponse}: sends the result of a processed request, back to the external events source. The response contains a message and useful request related information.
+		\item \textbf{sendRunResponse}: sends the result of a previously received 'Run' request, back to the event source. The response contains a message and useful request related information.
+		\item \textbf{sendDeployResponse}: sends the result of a previously received 'Deploy' request, back to the event source. The response contains a message and useful request related information.
+		\item \textbf{sendEditResponse}: sends the result of a previously received 'Edit' request, back to the event source. The response contains a message and useful request related information.
+		\item \textbf{sendDeleteResponse}: sends the result of a previously received 'Delete' request, back to the event source. The response contains a message and useful request related information.
 	\end{itemize}
 	\subsubsubsection{ETHSmartManager}
 	SmartManager derived class, which acts as an Ethereum events listener.
@@ -46,7 +49,10 @@
 	\end{itemize}
 	\subsubsubsection*{Methods}
 	\begin{itemize}
-		\item \textbf{sendResponse}: sends the result of a previously received request, back to Etherless-smart. The response contains a message and useful request related information.
+		\item \textbf{sendRunResponse}: sends the result of a previously received 'Run' request, back to Etherless-smart. The response contains a message and useful request related information.
+		\item \textbf{sendDeployResponse}: sends the result of a previously received 'Deploy' request, back to Etherless-smart. The response contains a message and useful request related information.
+		\item \textbf{sendEditResponse}: sends the result of a previously received 'Edit' request, back to Etherless-smart. The response contains a message and useful request related information.
+		\item \textbf{sendDeleteResponse}: sends the result of a previously received 'Delete' request, back to Etherless-smart. The response contains a message and useful request related information.
 	\end{itemize}
 	
 	\subsubsubsection{IEventProcessor}
