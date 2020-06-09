@@ -22,13 +22,13 @@
 		\item \textbf{dispatch}: processes the given EventData, by calling all the functions in the callbacks array.
 	\end{itemize}
 	\subsubsubsection{SmartManager}
-	Abstract class, which derivatives allows to: listen to external events, create process requests and send responses to the external events source.
+	Abstract class, which derivatives allows to: listen to external events, create processing requests and send responses to the external events source.
 	\subsubsubsection*{Attributes}
 	\begin{itemize}
-		\item \textbf{runDispatcher}: EventDispatcher object, used to dispatch 'Run' process requests represented by RunEventData objects;
-		\item \textbf{deployDispatcher}: EventDispatcher object, used to dispatch 'Deploy' process requests represented by DeployEventData objects;
-		\item \textbf{editDispatcher}: EventDispatcher object, used to dispatch 'Edit' process requests represented by EditEventData objects;
-		\item \textbf{deleteDispatcher}: EventDispatcher object, used to dispatch 'Delete' process requests represented by DeleteEventData objects;
+		\item \textbf{runDispatcher}: EventDispatcher object, used to dispatch 'Run' processing requests represented by RunEventData objects;
+		\item \textbf{deployDispatcher}: EventDispatcher object, used to dispatch 'Deploy' processing requests represented by DeployEventData objects;
+		\item \textbf{editDispatcher}: EventDispatcher object, used to dispatch 'Edit' processing requests represented by EditEventData objects;
+		\item \textbf{deleteDispatcher}: EventDispatcher object, used to dispatch 'Delete' processing requests represented by DeleteEventData objects;
 	\end{itemize}
 	\subsubsubsection*{Methods}
 	\begin{itemize}
@@ -42,10 +42,10 @@
 	\subsubsubsection*{Attributes}
 	\begin{itemize}
 		\item \textbf{contract}: instance of an Ethereum smart contract, used to listen to Ethereum events and communicate with the smart contract itself;
-		\item \textbf{runDispatcher}: EventDispatcher object, used to dispatch 'Run' process requests represented by RunEventData objects;
-		\item \textbf{deployDispatcher}: EventDispatcher object, used to dispatch 'Deploy' process requests represented by DeployEventData objects;
-		\item \textbf{editDispatcher}: EventDispatcher object, used to dispatch 'Edit' process requests represented by EditEventData objects;
-		\item \textbf{deleteDispatcher}: EventDispatcher object, used to dispatch 'Delete' process requests represented by DeleteEventData objects;
+		\item \textbf{runDispatcher}: EventDispatcher object, used to dispatch 'Run' processing requests represented by RunEventData objects;
+		\item \textbf{deployDispatcher}: EventDispatcher object, used to dispatch 'Deploy' processing requests represented by DeployEventData objects;
+		\item \textbf{editDispatcher}: EventDispatcher object, used to dispatch 'Edit' processing requests represented by EditEventData objects;
+		\item \textbf{deleteDispatcher}: EventDispatcher object, used to dispatch 'Delete' processing requests represented by DeleteEventData objects;
 	\end{itemize}
 	\subsubsubsection*{Methods}
 	\begin{itemize}
@@ -75,8 +75,8 @@
 	\subsubsubsection*{Attributes}
 	\begin{itemize}
 		\item \textbf{smart}: SmartManager class from which EventProcessor receives the requests, also used to send responses back to Etherless-smart;
-		\item \textbf{aws}: AWSManager class used to process requests;
-		\item \textbf{ipfs}: IPFSManager class used to process requests. 
+		\item \textbf{aws}: AWSManager class used to processing requests;
+		\item \textbf{ipfs}: IPFSManager class used to processing requests. 
 	\end{itemize}
 	\subsubsubsection*{Methods}
 	\begin{itemize}
@@ -86,7 +86,7 @@
 		\item \textbf{processDeleteEvent}: processes the given DeleteEventData object, by calling the AWSManager class.
 	\end{itemize}
 	\subsubsubsection{EventData}
-	Abstract class, whose derived classes are used to incapsulate the content of external events into process requests.
+	Abstract class, whose derived classes are used to incapsulate the content of external events into processing requests.
 	\subsubsubsection*{Attributes}
 	\begin{itemize}
 		\item \textbf{id}: integer number used to uniquely identify a processing request.
