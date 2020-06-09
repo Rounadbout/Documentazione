@@ -1,16 +1,16 @@
 \section{Etherless-server}
-	\subsection{Overview} % Descrizione dell'architettura utilizzata, compresi i design pattern	
-	Etherless-server is the module that listens to the events emitted by the Etherless-smart module, and processes them through chosen operations. In order to realize these functionalities, an architecture was designed and developed.
+	\subsection{Overview} % Descrizione dell'architettura utilizzata, compresi i design pattern
+	Etherless-server is the module that listens to the events emitted by the Etherless-smart module, and processes them through chosen operations. In order to implement these functionalities, the following architecture was designed and developed.
 	\subsection{Architecture}
 	\subsubsection{EventsManagement}
-	This package manages the listening of event and controls their processing.
+	This package manages the listening of events and controls their processing.
 	\begin{figure} [h!]
 		\centering
 		\includegraphics[width=1.1\linewidth]{diagrammi/etherless-server/Eventsmanager}
 		\caption{Class diagram of the EventsManagement package.}
 	\end{figure}
 	\subsubsubsection{EventDispatcher}
-	Class which allows the allows the dispatchment of EventData objects.
+	Class which allows the dispatchment of EventData objects.
 	\subsubsubsection*{Attributes}
 	\begin{itemize}
 		\item \textbf{callbacks}: array containing all the functions to be run when the \texttt{dispatch(...)} method is called.
@@ -18,11 +18,11 @@
 	\subsubsubsection*{Methods}
 	\begin{itemize}
 		\item \textbf{attach}: attaches a new function to the callbacks array;
-		\item \textbf{detach}: detaches a function from the callback array;
+		\item \textbf{detach}: detaches a function from the callbacks array;
 		\item \textbf{dispatch}: processes the given EventData, by calling all the functions in the callbacks array.
 	\end{itemize}
 	\subsubsubsection{SmartManager}
-	Abstract class, which derivatives allows to: listen to external events, create processing requests and send responses to the external events source.
+	Abstract class, whose derivatives allow to listen to external events, create processing requests and send responses to the external events source.
 	\subsubsubsection*{Attributes}
 	\begin{itemize}
 		\item \textbf{runDispatcher}: EventDispatcher object, used to dispatch 'Run' processing requests represented by RunEventData objects;
@@ -38,7 +38,7 @@
 		\item \textbf{sendDeleteResponse}: sends the result of a previously received 'Delete' request, back to the event source. The response contains a message and useful request related information.
 	\end{itemize}
 	\subsubsubsection{ETHSmartManager}
-	SmartManager derived class, which acts as an Ethereum events listener.
+	Class derived from SmartManager, which acts as an Ethereum events listener.
 	\subsubsubsection*{Attributes}
 	\begin{itemize}
 		\item \textbf{contract}: instance of an Ethereum smart contract, used to listen to Ethereum events and communicate with the smart contract itself;
@@ -54,7 +54,7 @@
 		\item \textbf{sendEditResponse}: sends the result of a previously received 'Edit' request, back to Etherless-smart. The response contains a message and useful request related information.
 		\item \textbf{sendDeleteResponse}: sends the result of a previously received 'Delete' request, back to Etherless-smart. The response contains a message and useful request related information.
 	\end{itemize}
-	
+
 	\subsubsubsection{IEventProcessor}
 	Interface that provides processing methods for each type of event.
 	\subsubsubsection*{Attributes}
@@ -67,16 +67,16 @@
 		\item \textbf{processDeleteEvent}: processes the given DeleteEventData object.
 	\end{itemize}
 	\subsubsubsection{EventProcessor}
-	Class implementing the IEventProcessor interface and developed following the \textbf{Facade} structural design pattern. It contains explicit references to the class from which it receives the requests and to the classes used to process them. This class, inside its constructor, also makes use of the architectural design patterns: 
+	Class implementing the IEventProcessor interface and implemented following the \textbf{Facade} structural design pattern. It contains explicit references to the class from which it receives the requests and to the classes used to process them. This class, inside its constructor, also makes use of the architectural design patterns:
 	\begin{itemize}
 		\item \textbf{Constructor injection}: by declaring all the request processing classes inside its constructor;
 		\item \textbf{Setter injection}: by attaching a reference to its processing methods inside of the SmartManager's EventDispatcher attributes.
-	\end{itemize} 
+	\end{itemize}
 	\subsubsubsection*{Attributes}
 	\begin{itemize}
 		\item \textbf{smart}: SmartManager class from which EventProcessor receives the requests, also used to send responses back to Etherless-smart;
 		\item \textbf{aws}: AWSManager class used to processing requests;
-		\item \textbf{ipfs}: IPFSManager class used to processing requests. 
+		\item \textbf{ipfs}: IPFSManager class used to processing requests.
 	\end{itemize}
 	\subsubsubsection*{Methods}
 	\begin{itemize}
@@ -101,31 +101,31 @@
 	\begin{itemize}
 		\item \textbf{id}: integer number used to uniquely identify a processing 'Deploy' request;
 		\item \textbf{functionName}: string identifing the name of the function to be deployed;
-		\item \textbf{hash}: string representing the file to be used for the deloyment, as an hash.
+		\item \textbf{hash}: string representing the file to be used for the deloyment, as a hash.
 	\end{itemize}
 	\subsubsubsection*{Attributes - EditEventData}
 	\begin{itemize}
 		\item \textbf{id}: integer number used to uniquely identify a processing 'Edit' request;
 		\item \textbf{functionName}: string identifing the name of the function to be edited;
-		\item \textbf{hash}: string representing the file to be used for the edit, as an hash.
+		\item \textbf{hash}: string representing the file to be used for the edit, as a hash.
 	\end{itemize}
 	\subsubsubsection*{Attributes - DeleteEventData}
 	\begin{itemize}
 		\item \textbf{id}: integer number used to uniquely identify a processing 'Delete' request;
 		\item \textbf{functionName}: string identifing the name of the function to be deleted.
 	\end{itemize}
-	
+
 	\subsubsubsection*{Methods}
-	As an struct, this class, along with its derivates, contains no method.	
+	As a struct, this class, along with its derivates, contains no method.
 	\subsubsection{AWS}
-	This package is used to communicate with AWS Services, in particular with AWS Lambda. 
+	This package is used to communicate with AWS Services, in particular with AWS Lambda.
 	\begin{figure} [h!]
 		\centering
 		\includegraphics[width=0.8\linewidth]{diagrammi/etherless-server/AWS}
 		\caption{Class diagram of the AWS package.}
 	\end{figure}
 	\subsubsubsection{AWSManager}
-	Class used to communicate with AWS Services, AWS Lambda in particular. 
+	Class used to communicate with AWS Services, AWS Lambda in particular.
 	\subsubsubsection*{Attributes}
 	\begin{itemize}
 		\item \textbf{lambda}: service interface object, used to interact with the AWS Lambda service.
@@ -147,20 +147,20 @@
 	\subsubsubsection{IPFSManager}
 	Class used to communicate with the IPFS service, specifically to retrive functions' data in string format from it.
 	\subsubsubsection*{Attributes}
-	This class contains no attribute.
+	This class does not contain attributes.
 	\subsubsubsection*{Methods}
 	\begin{itemize}
-		\item \textbf{getContent}: used to retrive functions' data in string format from the IPFS service.
+		\item \textbf{getContent}: used to retrive functions' data in string format from IPFS.
 	\end{itemize}
 	\subsubsection{Config}
-	This package is used to create and manage configuration objects, used by the services that operates inside the system.
+	This package is used to create and manage configuration objects, used by the services that operate inside the system.
 	\begin{figure} [h!]
 		\centering
 		\includegraphics[width=1\linewidth]{diagrammi/etherless-server/Config}
 		\caption{Class diagram of the Config package.}
 	\end{figure}
 	\subsubsubsection{ConfigUtilities}
-	Class used to fetch configuration files and to create configuration objects, used by services that operates inside of the system.
+	Class used to fetch configuration files and to create configuration objects, used by services that operate inside of the system.
 	\subsubsubsection*{Attributes}
 	\begin{itemize}
 		\item \textbf{smartConfigPath}: string containing the path to the Ethereum configuration file;
@@ -177,7 +177,7 @@
 	\subsubsubsection*{Attributes}
 	\begin{itemize}
 		\item \textbf{networkName}: string containing the name of the Ethereum network to be used for the communication;
-		\item \textbf{privateKey}: string containing the privateKey used to access the Ethereum smart contract;
+		\item \textbf{privateKey}: string containing the private key used to access the Ethereum smart contract;
 		\item \textbf{contractAddress}: string containing the address of the Ethereum smart contract.
 	\end{itemize}
 	\subsubsubsection*{Methods}
@@ -204,14 +204,14 @@
 		\caption{Class diagram of the Lambda package.}
 	\end{figure}
 	\subsubsubsection{AWSDeployer}
-	AWS Lambda function used to create an handler for the function to be deployed, as well as building a Lambda deployment package and requesting the deployment itself.
+	AWS Lambda function used to create a handler for the function to be deployed, as well as building a Lambda deployment package and requesting the deployment itself.
 	\subsubsubsection*{Attributes}
 	\begin{itemize}
 		\item \textbf{lambda}: service interface object, used to interact with the AWS Lambda service.
 	\end{itemize}
 	\subsubsubsection*{Methods}
 	\begin{itemize}
-		\item \textbf{injectHandler}: used to create and inject an handler for the function to be deployed, which will be used by Lambda to handle invocations to the function;
+		\item \textbf{injectHandler}: used to create and inject a handler for the function to be deployed, which will be used by Lambda to handle invocations to the function;
 		\item \textbf{buildZip}: used to build a Lambda deployment package, which consists of a Zip file containing the function to be deployed and all the dependencies required by Lambda;
 		\item \textbf{deploy}: used to request the deployment of the given Lambda deployment package, to the AWS Lambda service.
 	\end{itemize}
@@ -226,14 +226,14 @@
 	\restoregeometry
 
 	\subsection{Extensions}  %Possibili sviluppi futuri
-	The architecture of the Etherless-server module was designed according to the SOLID principles, which means that one of the most important its characteristics is the extensibility. In order to allow the integration of new functionalities in the system, without heavy alterations of the existing architecture, various design choices were implemented.
-	\subsubsection{Processing operations}
-	Using an array to list the functions that will be executed, upon listening to a specific type of event, allows the integration of new operations and classes interested in events. Each new class needs to contain a reference to the SmartManager used for the listening and attach one of its methods to one of the EventDispatcher objects contained in the listener. This process makes use of the Setter injection design pattern, as well as creating many weak dependencies towards SmartManager, which makes it a very stable class.
-	\subsubsection{Event sources}
-	The development of SmartManager as an abstract class, implies the possibility to handle new types of external event sources, by creating a new specific derivated class.
-	\subsubsection{Event processing}
-	The development of IEventProcessor as an interface, implies the possibility to introduce new type of processors for the requests, which may handle the requests differently from the existing one.
-	\subsubsection{Facade}
-	The use of the Facade structural design pattern for the development of the EventProcessor class, allows the introduction of new classes or services to be managed by said class. The configuration of the newly introduced services may be handled with an update of the ConfigUtilities class.
-	\subsubsection{Processing requests}
-	The development of EventData as an abstract class, implies the possibility to handle new types of processing requests, by creating a new specific derivated class.
+	The architecture of the Etherless-server module was designed according to the SOLID principles, which means that one of its most important characteristics is extensibility. In order to allow the integration of new functionalities in the system, without heavy alterations of the existing architecture, various design choices were implemented.
+		\subsubsection{Processing operations}
+		Using an array to list the functions that will be executed, upon listening to a specific type of event, allows the integration of new operations and classes interested in events. Each new class needs to contain a reference to the SmartManager used for the listening and attach one of its methods to one of the EventDispatcher objects contained in the listener. This process makes use of the Setter injection design pattern, as well as creating many weak dependencies towards SmartManager, which makes it a very stable class.
+		\subsubsection{Event sources}
+		The development of SmartManager as an abstract class, implies the possibility of handling new types of external event sources, by creating a new specific derived class.
+		\subsubsection{Event processing}
+		The development of IEventProcessor as an interface, implies the possibility of introducing new types of processors for the requests, which may handle the requests differently from the existing one.
+		\subsubsection{Facade}
+		The use of the Facade structural design pattern for the development of the EventProcessor class, allows the introduction of new classes or services to be managed by said class. The configuration of the newly introduced services may be handled with an upgrade of the ConfigUtilities class.
+		\subsubsection{Processing requests}
+		The development of EventData as an abstract class, implies the possibility of handling new types of processing requests, by creating a new specific derived class.
