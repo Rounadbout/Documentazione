@@ -113,7 +113,7 @@ To download the software product on your machine, from the GitHub Etherless repo
 \subsubsection{Installing the dependencies}
 To install all the packages and libreries needed to work with Etherless you should open a shell and position on the main directory of the software. Then you should run the \texttt{npm install} command, which will take care of installing all the dependencies specified in the \texttt{package.json} file. 
 \subsubsection{AWS and Ethereum configurations}
-In the cloned repository two configuration files are not present, for security reasons, since they contain the Ethereum and AWS credentials used to interact with these two services. They are present on the Etherless-server version already uploaded and active on AWS Elastic Beanstalk.
+In the cloned repository two configuration files are not present for security reasons, since they contain the Ethereum and AWS credentials used to interact with these two services. They are present on the Etherless-server version already uploaded and active on AWS Elastic Beanstalk.
 Any developer who might want to work with a local version of Etherless-server should create an \texttt{AWSconfig.json} file structured as: 
 \begin{quote}
 \texttt{ \\
@@ -124,7 +124,7 @@ Any developer who might want to work with a local version of Etherless-server sh
 	\}\\
 }
 \end{quote}
-While, to interact with the contract on the blockchain, a \texttt{smartConfig.json} file should be created with this structure:
+While, to interact with the contract on the blockchain, a \texttt{smartConfig.json} file should be created by the developer, with this structure:
 \begin{quote}
 \texttt{ \\
 	\{\\
@@ -138,4 +138,63 @@ While, to interact with the contract on the blockchain, a \texttt{smartConfig.js
 The quoted parameters should be replaced with the actual credentials, and both files moved to \texttt{Config} directory inside Etherless-server.
 \subsubsection{Enable \texttt{etherless} commands}
 \subsection{Functionalities}
+In this section will be listed the available functionalities and the related CLI commands that triggers them.
+\subsubsection{Signup}
+Creates a new account with an empty Ethereum wallet.
+\subsubsection*{Command}
+\texttt{etherless signup}
+\subsubsection{Login}
+Creates a login session with the given private key or mnemonic phrase, allowing to make requests on the Etherless platform.
+\subsubsection*{Command}
+\texttt{etherless login <<private key>>} \\
+\texttt{etherless login m <<mnemonic phrase>>}
+\subsubsection{Logout}
+Closes a previously created login session.
+\subsubsection*{Command}
+\texttt{etherless logout}
+\subsubsection{Who am I}
+Shows the address of the logged user.
+\subsubsection*{Command}
+\texttt{etherless whoami}
+\subsubsection{Init}
+Shows a brief description of the login and signup functionalities.
+\subsubsection*{Command}
+\texttt{etherless init}
+\subsubsection{Info}
+Returns information related to a given function, specifically: developer, name, signature, cost and description. 
+\subsubsection*{Command}
+\texttt{etherless info <<function name>>}
+\subsubsection{History}
+List all the past executions of the user, can be limited to a certain amount of executions.
+\subsubsection*{Command}
+\texttt{etherless history [limit]}
+\subsubsection{Search}
+Returns a list of functions that contain the given keyword inside the name.
+\subsubsection*{Command}
+\texttt{etherless search <<keyword>>}
+\subsubsection{List}
+Displays a list of all the available functions, inside the Etherless platform.
+\subsubsection*{Command}
+\texttt{etherless list [m]}
+\subsubsection{Run}
+Requests the execution of a given function, with the given spaced parameters.
+\subsubsection*{Command}
+\texttt{etherless run <<function name>> [parameters list]}
+\subsubsection{Deploy}
+Requests the deployment of a new function, using the given .js file and the given function name. 
+\subsubsection*{Command}
+\texttt{etherless deploy <<file .js>> <<function name>>}
+\subsubsection{Edit}
+Requests the editing of an existing function, using the given .js file and the given function name. 
+\subsubsection*{Command}
+\texttt{etherless edit <<file .js>> <<function name>>}
+\subsubsection{Delete}
+Requests the delete of an existing function, using the given function name.
+\subsubsection*{Command}
+\texttt{etherless delete <<function name>>}
 \subsection{Testing}
+\subsubsection{Etherless}
+Launching the \texttt{npm test} command inside the Etherless directory will automatically trigger all the developed tests for the whole software product. 
+\subsubsection{Etherless-cli and Etherless-server}
+It is possible to test the Etherless-cli and Etherless-server modules indipendently, by launching the \texttt{npm test} command inside their directories. 
+\subsubsection{Etherless-smart}
