@@ -1,36 +1,9 @@
 \section{Etherless-Smart}
 	
-	\subsection{Getting started}
+\subsection{Overview}
 	Etherless-smart is the module which handles the blockchain side of things. It consists of a set of Ethereum smart contracts that handle the communication between Etherless-cli and Etherless-server as well as the payment of this work using ETH currency.
 	
-		\subsubsection{Technologies} %Elencare le tecnologie utilizzate in questo modulo. La descrizione spetta al Glossario appendice!
-			\subsubsubsection{Languages}
-			\subsubsubsection{Utilities}
-			\subsubsubsection{Libraries}
-		
-		\subsubsection{Requirements} %Requisiti necessari, suddivisi tra hardware e software.
-			\subsubsubsection{Hardware}
-			\subsubsubsection{Software}
-		
-		\subsubsection{Setup} %Step da seguire per configurare correttamente il modulo
-		
-		\subsubsection{Enviroments} % (?Necessario?)
-		
-		\subsubsection{Functionality} %Funzionalità e comandi messi a disposizione dal modulo. Dividerle in sottosezioni!
-		%	\subsubsubsection{Funct1}
-		%		\subsubsubsection*{Utility}
-		%		\subsubsubsection*{Command}
-		%	\subsubsubsection{Funct2}
-		%		\subsubsubsection*{Utility}
-		%		\subsubsubsection*{Command}
-		%	\subsubsubsection{Funct3}
-		%		\subsubsubsection*{Utility}
-		%		\subsubsubsection*{Command}
-	
-	
-	\subsection{Developer's guide}
-	
-		\subsubsection{Architecture} % Descrizione dell'architettura utilizzata, compresi i design pattern
+\subsection{Architecture} % Descrizione dell'architettura utilizzata, compresi i design pattern
 		Our goals when developing Etherless-smart were upgradeability and extensibility. For these reasons said module consists of three smart contracts:
 		\begin{itemize}
 			\item \textbf{EtherlessSmart:} is the main contract which serves as the middleman between Etherless-cli and Etherless-server. Each one of its methods is either invoked by Etherless-cli to send the requests or by Etherless-server to transmit the responses;
@@ -39,8 +12,10 @@
 		\end{itemize}
 The architecture just described can be seen as follows: INSERIRE CROSSOVER DIAGRAMMI DEI PACKAGE-DIAGRAMMI DELLE CLASSI
 		
-		\subsubsection{Methods} %Descrizione accurata dei metodi presenti nel modulo
-		\subsubsubsection{EtherlessSmart}
+%Descrizione accurata dei metodi presenti nel modulo
+\subsubsection{EtherlessSmart}
+\subsubsubsection{Attributes}
+\subsubsubsection{Methods}
 		\subsubsubsection*{deployFunction}
 		\subsubsubsection*{runFunction}
 		\subsubsubsection*{editFunction}
@@ -54,7 +29,9 @@ The architecture just described can be seen as follows: INSERIRE CROSSOVER DIAGR
 		\subsubsubsection*{getFuncList}
 		\subsubsubsection*{getNewId}
 		
-		\subsubsubsection{EtherlessStorage}
+\subsubsection{EtherlessStorage}
+\subsubsubsection{Attributes}
+\subsubsubsection{Methods}
 		\subsubsubsection*{existsFunction}
 		\subsubsubsection*{insertNewFunction}
 		\subsubsubsection*{removeFunction}
@@ -67,11 +44,14 @@ The architecture just described can be seen as follows: INSERIRE CROSSOVER DIAGR
 		\subsubsubsection*{uintToString}
 		\subsubsubsection*{compareString}
 		
-		\subsubsubsection{EtherlessEscrow}
+\subsubsection{EtherlessEscrow}
+\subsubsubsection{Attributes}
+\subsubsubsection{Methods}
 		\subsubsubsection*{getBeneficiary}
 		\subsubsubsection*{getSender}
 		\subsubsubsection*{depositsOf}
 		\subsubsubsection*{deposit}
 		\subsubsubsection*{withdraw}
-		
-		\subsubsection{Extensions}  %Possibili sviluppi futuri
+
+\subsection{UML}		
+\subsection{Extensions}  %Possibili sviluppi futuri
