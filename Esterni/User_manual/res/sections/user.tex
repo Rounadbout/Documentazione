@@ -1,25 +1,88 @@
 \section{User}
+Etherless-cli is a command line application that allow the user to interface wit the etherless platform. The user can perform specific tasks using simple and easy commands.
 
 \subsection{Command description}
+Every comand has a simple pattern to follow: etherless <comand-name>. Comand-name is the name of the command and each of them may need some additional information to execute.
+\newline The following comand are currently available:
+\begin{itemize}
+	\item  signup; 
+	\item  login [m] <private-key>/<mnemonic-phrase>; 
+	\item  list [m];  
+	\item  search <keyworld>;
+	\item  info <function-name>;
+	\item  run <function-name> [params..];
+	\item  logout;
+\end{itemize}
 
 \subsection{Signup}
+The signup command allow the user to create a new ethereum account. The account have no ethers and can not perform all the functionality the product provides.
+To fully use the account the user need to add some currency through online services such Etherscan.
+Use the command with the following sintax:
+\newline {\code{> etherless signup [save]}}
+\newline The result given is the credential of the account created.
+With the optional flag save you can choose to save the credential into a file in the current directory.
 
 \subsection{Login}
+The login command allow the user to login into the ehtereum network with an existing account.
+Login can be performed in two ways: with private key and with mnemonic phrase.
 
 \subsubsection{Login with private key}
+The user can perform the command using the private-key of his account. Use the following sintax to perform the command:
+\newline {\code{> etherless login <private-key>}}
+\newline A password will be asked during de execution and is required to store a safe copy of the wallet locally, to further use for specific tasks.
 
 \subsubsection{Login with mnemonic phrase}
+The user can perform the command using the mnemonic phrase of his account. Use the following sintax to perform the command:
+\newline {\code{> etherless login [m] <mnemonic-phrase>}}
+\newline A password will be asked during de execution and is required to store a safe copy of the wallet locally, to further use for specific tasks.
+\newline The mnemonic phrase need to be between quotes and the optional flag [m] must be present.
 
 \subsection{Whoami}
+The user can perfrom this command to get the address of his current session. A login session is required.
+Use the following sintax to perform the command:
+\newline {\code{> etherless whoami}}
+\newline The address of the current session will be displyed.
 
 \subsection{List all functions}
+The user can list all function inside ethrless network using the comand list. To do so a session is needed.
+Use the following sintax to perform the command:
+\newline {\code{> etherless list}}
+\newline A list of function will be displayed, for each function the following data will be provided:
+\begin{itemize}
+	\item \textbf{Name: } the name of the function; 
+	\item \textbf{Price: } the cost to run the function; 
+\end{itemize}
 
 \subsection{Search for a function}
+Search all function having the keyworld in the name. Use the following sintax to perform the command:
+\newline {\code{> etherless search <keyworld>}}
+\newline A list of function will be displayed, for each function the following data will be provided:
+\begin{itemize}
+	\item \textbf{Name: } the name of the function; 
+	\item \textbf{Price: } the cost to run the function; 
+\end{itemize} 
 
 \subsection{Function details}
+Retrives the details of a specific function
+\newline {\code{> etherless info <function-name>}}
+\begin{itemize}
+	\item \textbf{Owner: } the address of the function owner; 
+	\item \textbf{Signature: } the number and type of parametars the function need;  
+	\item \textbf{Price: } the cost to run the function; 
+	\item \textbf{Description: } a textual description of the function;  
+\end{itemize}
 
 \subsection{Run a function}
+The command is used to run a specific function present in the etherless network. Use the following sintax:
+\newline {\code{> etherless run <function-name> [params..]}}
+\newline Run takes some times to retrive the resut, once the task is completed the result is displayed. If the request was not succesfull an error will be displayed insted and the cost will be refound.
+
+
 
 \subsection{History}
 
+
 \subsection{Logout}
+The user can perfrom this command to logout form the ethereum network. A login session is then needed.
+Use the following sintax to perform the command:
+\newline {\code{> etherless logout}}
