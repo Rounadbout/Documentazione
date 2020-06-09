@@ -23,15 +23,66 @@ The tecnologies used during the development of Etherless, which are further desc
 	\item Ropsten testnet;
 	\item Ganache;
 	\item Truffle;
-	\item DA INSERIRE QUELLI CHE MANCANO
+	\item Mocha;
+	\item Chai.
 \end{itemize}
+\pagebreak
 \subsubsection{Libraries and dependencies}
-\begin{itemize}
-	\item ethers.js;
-	\item aws-sdk;
-	\item jszip;
-	\item DA INSERIRE QUELLI CHE MANCANO
-\end{itemize}
+\rowcolors{2}{lightRowColor}{darkRowColor}
+\begin{longtable}[h!]{
+		>{\centering\arraybackslash}p{0.3\textwidth}
+		>{\centering\arraybackslash}p{0.3\textwidth} }
+	\caption{Dependencies required for software usage} \\
+
+	\coloredTableHead
+	\textbf{\color{white}Dependency} &
+	\textbf{\color{white}Version}
+	\tabularnewline
+	\endhead
+	
+	configstore & $\geq$5.0.1 \tabularnewline
+	inquirer & $\geq$7.1.0 \tabularnewline
+	node & $\geq$13.13.4 \tabularnewline
+	acorn & $\geq$7.2.0 \tabularnewline
+	ethers & $\geq$4.0.47 \tabularnewline
+	ipfs-mini & $\geq$1.1.5 \tabularnewline
+	ts-node & $\geq$8.9.1 \tabularnewline
+	typescript & $\geq$3.8.3 \tabularnewline
+	yargs & $\geq$15.3.1 \tabularnewline
+	nyc & $\geq$15.0.1 \tabularnewline
+	aws-sdk & $\geq$2.663.0 \tabularnewline
+	solc & $\geq$0.5.17 \tabularnewline
+	
+\end{longtable}
+\rowcolors{2}{lightRowColor}{darkRowColor}
+\begin{longtable}{
+		>{\centering\arraybackslash}p{0.3\textwidth}
+		>{\centering\arraybackslash}p{0.3\textwidth} }
+	\caption{Dependencies required for software testing and development} \\
+	
+	\coloredTableHead
+	\textbf{\color{white}Dependency} &
+	\textbf{\color{white}Version}
+	\tabularnewline
+	\endhead
+	
+	chai & $\geq$4.2.0 \tabularnewline
+	mocha & $\geq$7.0.2 \tabularnewline
+	jest & $\geq$26.0.1 \tabularnewline
+	eslint & $\geq$6.8.0 \tabularnewline
+	eslint-config-airbnb-base & $\geq$14.1.0 \tabularnewline
+	eslint-config-google & $\geq$0.14.0 \tabularnewline
+	eslint-plugin-import & $\geq$2.20.2 \tabularnewline
+	truffle & $\geq$5.1.27 \tabularnewline
+	truffle-hdwallet-provider & $\geq$1.0.17 \tabularnewline
+	dotenv & $\geq$8.2.0 \tabularnewline
+	openzeppelin & $\geq$2.8.0 \tabularnewline
+	websocket-extensions & $\geq$0.1.4 \tabularnewline
+	minimist & $\geq$1.2.5 \tabularnewline
+	ganache & $\geq$6.4.4 \tabularnewline
+	ganache-cli & $\geq$6.9.1 \tabularnewline
+	
+\end{longtable}
 \subsection{Requirements}
 In this section all of the basic requirements needed to run and test the product are described.
 \subsubsection{Hardware}
@@ -56,9 +107,35 @@ This section describes all the steps needed to install the Etherless product.
 \subsubsection{Ganache}
 \subsubsection{Truffle}
 \subsection{Configuration}
+This section shows how to configure the work environment, to be able to execute, test and develop on Etherless. This configuration steps should be followed in the given order.
 \subsubsection{Cloning the repository}
+To download the software product on your machine, from the GitHub Etherless repository, you should open a shell and position on the folder you want the software to be located. Then you should use the command \texttt{git clone https://github.com/RoundaboutTeam/etherless.git} and position on the \texttt{master} branch.
 \subsubsection{Installing the dependencies}
-\subsubsection{AWS configurations}
+To install all the packages and libreries needed to work with Etherless you should open a shell and position on the main directory of the software. Then you should run the \texttt{npm install} command, which will take care of installing all the dependencies specified in the \texttt{package.json} file. 
+\subsubsection{AWS and Ethereum configurations}
+In the cloned repository two configuration files are not present, for security reasons, since they contain the Ethereum and AWS credentials used to interact with these two services. They are present on the Etherless-server version already uploaded and active on AWS Elastic Beanstalk.
+Any developer who might want to work with a local version of Etherless-server should create an \texttt{AWSconfig.json} file structured as: 
+\begin{quote}
+\texttt{ \\
+	\{\\
+		"awsKey": <<insert AWS key>>, \\
+		"awsSecretKey": <<insert AWS secret key>>, \\
+		"awsRegion": <<insert AWS region>> \\
+	\}\\
+}
+\end{quote}
+While, to interact with the contract on the blockchain, a \texttt{smartConfig.json} file should be created with this structure:
+\begin{quote}
+\texttt{ \\
+	\{\\
+	"walletAddress": <<insert wallet address>>, \\
+	"privateKey": <<insert private key>>, \\
+	"contractAddress": <<insert contract address>>, \\
+	"networkName": <<insert network name>> \\
+	\}\\
+}
+\end{quote}
+The quoted parameters should be replaced with the actual credentials, and both files moved to \texttt{Config} directory inside Etherless-server.
 \subsubsection{Enable \texttt{etherless} commands}
 \subsection{Functionalities}
 \subsection{Testing}
