@@ -108,12 +108,15 @@
 		\item \textbf{withdraw:} withdraws and sends the amount stored in the \texttt{deposits} mapping having the key \texttt{index} to the \texttt{payee} address;
 	\end{itemize}
 
-\subsection{UML}
-\begin{figure}[H]
-		\centering
-		\includegraphics[width=1\linewidth]{diagrammi/etherless-smart/Etherless-smart.jpg}
-		\caption{Class diagram of Etherless-smart module}
-	\end{figure}
+\newgeometry{a4paper,left=1in,right=1in,top=1in,bottom=1in,nohead}
+	\begin{landscape}
+	\subsection{UML}
+		\begin{figure}[H]
+			\includegraphics[width=21cm]{./diagrammi/etherless-smart/Etherless-smart.jpg}
+			\caption{Etherless-smart module architecture.}
+		\end{figure}
+	\end{landscape}
+	\restoregeometry
 		
 \subsection{Extensions}  %Possibili sviluppi futuri
 As described above, smart contracts have been developed with the aim of being upgradable, meaning all the contracts can be updated without losing stored data. \\
