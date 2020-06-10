@@ -153,8 +153,8 @@ To enable using commands with the keyword \texttt{etherless} you should open a s
 	\subsubsection{Login}
 	Creates a login session with the given private key or mnemonic phrase, allowing to make requests on the \textit{Etherless} platform.
 	\subsubsection*{Command}
-	\texttt{etherless login <<private key>>} \\
-	\texttt{etherless login m <<mnemonic phrase>>}
+	\texttt{etherless login <private\_key>} \\
+	\texttt{etherless login -m <mnemonic\_phrase>}
 	\subsubsection{Logout}
 	Closes a previously created login session.
 	\subsubsection*{Command}
@@ -170,7 +170,7 @@ To enable using commands with the keyword \texttt{etherless} you should open a s
 	\subsubsection{Info}
 	Returns informations related to a given function, specifically the developer address, the function name, the function signature, the function price and a brief description.
 	\subsubsection*{Command}
-	\texttt{etherless info <<function name>>}
+	\texttt{etherless info <function\_name>}
 	\subsubsection{History}
 	Lists all the past executions of the user, can be limited to a certain amount of executions.
 	\subsubsection*{Command}
@@ -178,7 +178,7 @@ To enable using commands with the keyword \texttt{etherless} you should open a s
 	\subsubsection{Search}
 	Returns a list of functions that contain the given keyword inside the name.
 	\subsubsection*{Command}
-	\texttt{etherless search <<keyword>>}
+	\texttt{etherless search <keyword>}
 	\subsubsection{List}
 	Displays a list of all available functions inside the \textit{Etherless} platform.
 	\subsubsection*{Command}
@@ -186,19 +186,19 @@ To enable using commands with the keyword \texttt{etherless} you should open a s
 	\subsubsection{Run}
 	Requests the execution of a given function with the given spaced parameters.
 	\subsubsection*{Command}
-	\texttt{etherless run <<function name>> [parameters list]}
+	\texttt{etherless run <function\_name> [parameter\_list]}
 	\subsubsection{Deploy}
-	Requests the deployment of a new function, using the given \texttt{.js} file and function name.
+	Requests the deployment of a new function, using the given source file path, function name and description.
 	\subsubsection*{Command}
-	\texttt{etherless deploy <<file .js>> <<function name>>}
+	\texttt{etherless deploy <path> <function\_name> <function\_desc>}
 	\subsubsection{Edit}
-	Requests the editing of an existing function, using the given \texttt{.js} file and function name.
+	Requests the editing of an existing function, using the given function name and the field to modify (a new description or the path of the new source file).
 	\subsubsection*{Command}
-	\texttt{etherless edit <<file .js>> <<function name>>}
+	\texttt{etherless edit <function\_name> [path] [newDesc]}
 	\subsubsection{Delete}
 	Requests the delete of an existing function, using the given function name.
 	\subsubsection*{Command}
-	\texttt{etherless delete <<function name>>}
+	\texttt{etherless delete <function\_name>}
 \subsection{Testing}
 \subsubsection{Etherless}
 Launching the \texttt{npm test} command inside the \textit{Etherless} directory will automatically trigger all the developed tests for the software product.
