@@ -1,0 +1,88 @@
+\subsubsection{Fase complessiva}
+
+	\subsubsubsection{Prospetto orario}
+		Distribuzione delle ore per ciascun ruolo nel periodo di Progettazione architetturale:
+
+		\rowcolors{2}{lightRowColor}{darkRowColor}
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering\arraybackslash}p{0.15\textwidth} }
+
+			\coloredTableHead
+			\textbf{\color{white}Nome} &
+			\textbf{\color{white}Rp} &
+			\textbf{\color{white}As} &
+			\textbf{\color{white}An} &
+			\textbf{\color{white}Pt} &
+			\textbf{\color{white}Pr} &
+			\textbf{\color{white}Vf} &
+			\textbf{\color{white}Totale}
+			\tabularnewline
+			\endhead
+
+			% Contenuto della tabella
+			% Nome & Rp & As & An & Pt & Pr & Vf & Totale \\
+			\VB & - & -  & -  & 8  & 7 & 16 & 31 \\
+			\LB & 5 & -  & 10 & 11 & 5 & -  & 31 \\
+			\NF & - & -  & 6  & 15 & - & 10 & 31 \\
+			\EG & - & -  & 7  & 8  & 6 & 10 & 31 \\
+			\FJ & - & 6  & -  & 8  & 7 & 10 & 31 \\
+			\MP & - & 8  & -  & 15 & - & 8  & 31 \\
+			\AS & - & 10 & -  & 7  & 6 & 8  & 31 \\
+			\AZ & 7 & -  & 10 & -  & 8 & 6  & 31 \\
+			\textbf{Ore totali per ruolo} & 12 & 24 & 33 & 72 & 39 & 68 & 248 \\
+
+			\rowcolor{white}\caption {Suddivisione oraria del periodo di Progettazione architetturale} \\
+
+		\end{longtable}
+
+		% Grafico
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{./res/img/progettazioneArchitetturale_po.png}
+			\caption{Suddivisione oraria del periodo di Progettazione architetturale}
+		\end{figure}
+
+	\subsubsubsection{Prospetto economico}
+		Totale delle ore e costo per ciascun ruolo nel periodo di Progettazione architetturale:
+
+		\rowcolors{2}{lightRowColor}{darkRowColor}
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering\arraybackslash}p{0.15\textwidth} }
+
+			\coloredTableHead
+			\textbf{\color{white}Ruolo} &
+			\textbf{\color{white}Ore} &
+			\textbf{\color{white}Costo in \euro{}}
+			\tabularnewline
+			\endhead
+
+			% Contenuto della tabella
+			% Ruolo & Ore & Costo \\
+			Responsabile    & 12  & 360,00 \\
+			Amministratore  & 24  & 480,00 \\
+			Analista        & 33  & 825,00 \\
+			Progettista     & 72  & 1.584,00 \\
+			Programmatore   & 39  & 585,00 \\
+			Verificatore    & 68  & 1.020,00 \\
+			\textbf{Totale} & 248 & 4.854,00 \\
+
+			\rowcolor{white}\caption {Prospetto dei costi per il periodo di Progettazione architetturale}	\\
+
+		\end{longtable}
+
+		% Grafico
+		Rappresentazione grafica della distribuzione dei ruoli:
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{./res/img/progettazioneArchitetturale_pe.png}
+			\caption{Suddivisione dei ruoli nel periodo di Progettazione architetturale}
+		\end{figure}
