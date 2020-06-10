@@ -1,11 +1,11 @@
 \section{Pianificazione}
-Lo sviluppo del progetto è costruito sulla base delle scadenze riportate nella sottosezione \textsection1.5 ed è suddiviso nelle seguenti fasi:
+Lo sviluppo del progetto è costruito sulla base delle scadenze riportate nella sottosezione \textsection1.5 ed è suddiviso nei seguenti periodi:
 \begin{itemize}
-	\item analisi;
-	\item consolidamento dei requisiti
-	\item progettazione architetturale;
-	\item progettazione di dettaglio e codifica;
-	\item validazione e collaudo.
+	\item Analisi;
+	\item Consolidamento dei Requisiti
+	\item Progettazione Architetturale;
+	\item Progettazione di Dettaglio e Codifica;
+	\item Validazione e Collaudo.
 \end{itemize}
 
 \subsection{Analisi}
@@ -51,7 +51,7 @@ Questo periodo ha inizio dopo il termine del periodo di Analisi e termina il gio
 Questo periodo ha inizio al termine del periodo di Consolidamento dei Requisiti e termina alla \textit{Revisione di Progettazione}. \\
 Questo periodo porta all'individuazione di una soluzione architetturale che permetta il soddisfacimento dei requisiti individuati.
 \begin{itemize}
-	\item \textbf{Incremento e verifica}: come prima cosa, analizzando l'esito della \textit{Revisione dei Requisiti} vengono svolte attività di incremento e verifica sui vari documenti redatti, dove necessario. \\
+	\item \textbf{Incremento e Verifica}: come prima cosa, analizzando l'esito della \textit{Revisione dei Requisiti} vengono svolte attività di Incremento e Verifica sui vari documenti redatti, dove necessario. \\
 	L'incremento dell'\textit{\AdR{} 1.0.0} è il più importante perchè va completato prima di poter proseguire con il resto delle attività;
 	\item \textbf{Technology Baseline}\ped{\textit{G}}: viene redatta la documentazione di supporto, contenente la descrizione delle tecnologie individuate e il tracciamento della relazione tra le componenti e i requisiti che vanno a soddisfare. Viene anche codificato il \textbf{PoC (Proof of Concept)} come dimostrazione del funzionamento dell'architettura individuata;
 	\item \textbf{Glossario}: attività che prevede un miglioramento del \textit{\Glossario{} 1.0.0} aggiungendo nuovi termini oppure raffinando le definizioni di termini già presenti.
@@ -61,7 +61,7 @@ Questo periodo porta all'individuazione di una soluzione architetturale che perm
 			\begin{itemize}
 				\item \textbf{1$^{\circ}$ Incremento:} integrazione dei documenti a seguito delle conoscenze acquisite nei periodi precedenti;
 				\item \textbf{2$^{\circ}$ Incremento:} implementazione della componente Etherless-smart;
-				\item \textbf{3$^{\circ}$ Incremento:} implementazione della componenete Etherless-CLI\ped{\textit{G}}; \\
+				\item \textbf{3$^{\circ}$ Incremento:} implementazione della componenete Etherless-cli\ped{\textit{G}}; \\
 				Comandi da implementare per il PoC, legati ai requisiti che soddisfano:
 					\rowcolors{2}{lightRowColor}{darkRowColor}
 					\begin{longtable}{
@@ -122,11 +122,11 @@ Questo periodo ha inizio dopo il termine del periodo di Progettazione Architettu
 
 Le principali attività svolte in questo periodo sono:
 \begin{itemize}
-	\item \textbf{Incremento e verifica}: come prima cosa, analizzando l'esito della \textit{Revisione dei Progettazione} vengono svolte attività di incremento e verifica sui vari documenti redatti;
+	\item \textbf{Incremento e Verifica}: come prima cosa, analizzando l'esito della \textit{Revisione dei Progettazione} vengono svolte attività di Incremento e Verifica sui vari documenti redatti;
 	\item \textbf{Product Baseline}\ped{\textit{G}}: progettazione dettagliata a basso livello delle componenti del prodotto\ped{\textit{G}}, coerente con quanto individuato nella \TB{}\ped{\textit{G}}:
 	\begin{itemize}
 		\item \textbf{Allegato Tecnico}: stesura del documento di \textit{Allegato Tecnico 1.0.0}, di supporto alla progettazione di dettaglio;
-		\item \textbf{Codifica}: attività nelle quali viene prodotto e verificato il codice.
+		\item \textbf{Codifica}: attività nelle quali viene prodotto\ped{\textit{G}} e verificato il codice.
 	\end{itemize}
 	\item \textbf{User Manual} (manuale utente): attività nella quale viene redatto lo \textit{User Manual 0.1.0} contenente le informazioni su come funziona e su come si utilizza il prodotto\ped{\textit{G}};
 	\item \textbf{Developer Manual} (manuale sviluppatore): attività nella quale viene redatto il \textit{Developer Manual 0.1.0} contenente le informazioni sulla progettazione e mantenimento del prodotto\ped{\textit{G}};
@@ -135,7 +135,7 @@ Le principali attività svolte in questo periodo sono:
 
 Abbiamo provveduto a dividere il periodo di Progettazione di Dettaglio e Codifica in due sotto-periodi al fine di rendere più agevole e definita la produzione. I sotto-periodi in questione sono:
 \begin{itemize}
-	\item \textbf{periodo di individuazione dell'architettura e rielaborazione:} in questo periodo sono state attuate le scelte architetturali volte a definire la \textit{Product Baseline} ed è stato rielaborato il codice già esistente secondo l'architettura scelta;
+	\item \textbf{periodo di individuazione dell'architettura e rielaborazione:} in questo periodo sono state attuate le scelte architetturali volte a definire la \textit{Product Baseline}\ped{\textit{G}} ed è stato rielaborato il codice già esistente secondo l'architettura scelta;
 	\item \textbf{periodo di codifica delle nuove funzionalità:} in questo periodo sono state sviluppate le mancanti funzionalità obbligatorie.
 \end{itemize}
 
@@ -145,7 +145,7 @@ Complessivamente, gli incrementi applicati nel corso di questo periodo (siano es
 \subsubsubsection*{Sotto-periodo di individuazione dell'architettura e rielaborazione}
 \begin{itemize}
 	\item \textbf{9$^{\circ}$ Incremento:} correzione dei documenti a seguito delle conoscenze acquisite nei periodi precedenti;
-	\item \textbf{10$^{\circ}$ Incremento:} scelta dell'architettura da applicare al prodotto software;
+	\item \textbf{10$^{\circ}$ Incremento:} scelta dell'architettura da applicare al prodotto\ped{\textit{G}} software;
 	\item \textbf{11$^{\circ}$ Incremento:} adattamento delle componenti già sviluppate secondo l’architettura scelta;
 \end{itemize}
 
@@ -165,7 +165,7 @@ Complessivamente, gli incrementi applicati nel corso di questo periodo (siano es
 		\item valori delle metriche registrati nel \textit{\PdQ{}};
 		\item contenuto del \textit{Glossario}.
 	\end{itemize}
-	\item \textbf{16$^{\circ}$ Incremento:} preparazione della presentazione per la RQ e conseguente raffinamento della demo.
+	\item \textbf{16$^{\circ}$ Incremento:} preparazione della presentazione per la RQ e conseguente raffinamento della demo\ped{\textit{G}}.
 \end{itemize}
 
 Conseguentemente, le scadenze dei vari incrementi sono state ridefinite secondo il seguente calendario:
@@ -195,8 +195,8 @@ Conseguentemente, le scadenze dei vari incrementi sono state ridefinite secondo 
 Questo periodo ha inizio dopo il termine del periodo di Progettazione di Dettaglio e Codifica, e termina con la \textit{Revisione di Accettazione}. \\
 Le principali attività svolte in questo periodo sono:
 \begin{itemize}
-	\item \textbf{Incremento e verifica}: come prima cosa, analizzando l'esito della \textit{Revisione di Qualifica} vengono svolte attività di incremento e verifica sui vari documenti redatti;
-	\item \textbf{Validazione e collaudo}: attività nella quale vengono eseguiti test e, se necessario, vengono apportati dei miglioramenti al prodotto\ped{\textit{G}} per poter assicurare il soddisfacimento dei requisiti e dei vincoli qualitativi;
+	\item \textbf{Incremento e Verifica}: come prima cosa, analizzando l'esito della \textit{Revisione di Qualifica} vengono svolte attività di Incremento e Verifica sui vari documenti redatti;
+	\item \textbf{Validazione e Collaudo}: attività nella quale vengono eseguiti test e, se necessario, vengono apportati dei miglioramenti al prodotto\ped{\textit{G}} per poter assicurare il soddisfacimento dei requisiti e dei vincoli qualitativi;
 	\item \textbf{User Manual}: attività nella quale viene migliorato lo \textit{User Manual 1.0.0};
 	\item \textbf{Developer Manual}: attività nella quale viene redatto il \textit{Developer Manual 1.0.0}, il quale contiene le informazioni utili al mantenimento del prodotto\ped{\textit{G}};
 	\item \textbf{Glossario}: attività che prevede un miglioramento del \textit{Glossario 3.0.0} aggiungendo nuovi termini oppure raffinando le definizioni di termini già presenti.
@@ -205,7 +205,7 @@ Le principali attività svolte in questo periodo sono:
 		\subsubsubsection{Descrizione}
 			\begin{itemize}
 				\item \textbf{17$^{\circ}$ Incremento:} correzione e integrazione dei documenti a seguito delle conoscenze acquisite nei periodi precedenti e dalla correzione della RQ;
-				\item \textbf{18$^{\circ}$ Incremento:} ampliamento del modulo \textit{etherless-cli} mediante l'implementazione dei seguenti comandi:
+				\item \textbf{18$^{\circ}$ Incremento:} ampliamento del modulo\ped{\textit{G}} \textit{Etherless-cli} mediante l'implementazione dei seguenti comandi:
 					\begin{itemize}
 						\item \texttt{init};
 						\item \texttt{whoami};
