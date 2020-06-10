@@ -55,8 +55,8 @@
 
 		\noindent Dove:
 		\begin{itemize}
-         	\item{\textbf{Codice padre}: numero che identifica univocamente i casi d'uso\ped{\textit{G}} generici;}
-         	\item{\textbf{Codice figlio}: numero progressivo che identifica i sottocasi. Può a sua volta includere altri livelli.}
+         	\item{\textbf{codice padre}: numero che identifica univocamente i casi d'uso\ped{\textit{G}} generici;}
+         	\item{\textbf{codice figlio}: numero progressivo che identifica i sottocasi. Può a sua volta includere altri livelli.}
 		\end{itemize}
 
         \subsubsubsection*{Requisiti}
@@ -138,26 +138,26 @@
   \subsubsubsection*{Technology Baseline}
   Deve contenere:
   \begin{itemize}
-		\item \textbf{Tracciamento delle componenti}: viene rappresentata la relazione tra ogni requisito ed il componente che lo soddisfa, dimostrando concretamente il loro soddisfacimento;
-		\item \textbf{Test di integrazione}: vengono definite delle classi di verifica per accertarsi che ogni componente del sistema funzioni come previsto;
-		\item \textbf{Tecnologie utilizzate}: devono essere descritte le tecnologie utilizzate, specificandone l'utilizzo nel progetto e le motivazioni per cui sono state scelte.
-		\item \textbf{Poc (Proof of Concept)}: eseguibile funzionale alla dimostrazione dell'adeguatezza delle scelte architetturali;
+		\item \textbf{tracciamento delle componenti}: viene rappresentata la relazione tra ogni requisito ed il componente che lo soddisfa, dimostrando concretamente il loro soddisfacimento;
+		\item \textbf{test di integrazione}: vengono definite delle classi di verifica per accertarsi che ogni componente del sistema funzioni come previsto;
+		\item \textbf{tecnologie utilizzate}: devono essere descritte le tecnologie utilizzate, specificandone l'utilizzo nel progetto e le motivazioni per cui sono state scelte.
+		\item \textbf{PoC\ped{\textit{G}} (Proof of Concept)}: eseguibile funzionale alla dimostrazione dell'adeguatezza delle scelte architetturali;
   \end{itemize}
 
   \subsubsubsection*{Product Baseline}
   Deve contenere:
   \begin{itemize}
-		\item{\textbf{Diagrammi UML}\ped{\textit{G}}}: usati per rendere più chiare le scelte progettuali adottate e ridurre le ambiguità. Possono essere:
+		\item{\textbf{diagrammi UML}\ped{\textit{G}}}: usati per rendere più chiare le scelte progettuali adottate e ridurre le ambiguità. Possono essere:
 				\begin{itemize}
 							\item{diagrammi di attività}: descrivono la logica procedurale di un flusso di operazioni, aiutando a descrivere gli aspetti dinamici dei casi d'uso\ped{\textit{G}};
 				\item{diagrammi delle classi:} descrivono le classi presenti all'interno del sistema, soffermandosi sui loro metodi, attributi e relazioni;
 				\item{diagrammi dei package}: descrivono le relazioni di dipendenza presenti tra classi raggruppate in package diversi, ossia in raggruppamenti di un numero arbitrario di elementi in unità di livelllo più alto;
 			\item{diagrammi di sequenza}: descrivono la collaborazione di un gruppo di oggetti che devono implementare collettivamente un comportamento;
 		\end{itemize}
-		\item \textbf{Design pattern}\ped{\textit{G}}: vengono esplicitati chiaramente i design pattern\ped{\textit{G}} utilizzati per l'architettura, accompagnandoli con una descrizione ed un diagramma così da esporne il significato e la struttura;
-		\item \textbf{Definizione delle classi}: ogni classe viene descritta illustrandone lo scopo e le funzionalità;
-		\item \textbf{Tracciamento delle classi}: ogni requisito viene tracciato, in modo da garantire che ogni classe ne soddisfi almeno uno;
-		\item \textbf{Test di unità}: vengono definiti dei test di unità per verificare che le componenti del sistema funzionino come previsto.
+		\item \textbf{design pattern}\ped{\textit{G}}: vengono esplicitati chiaramente i design pattern\ped{\textit{G}} utilizzati per l'architettura, accompagnandoli con una descrizione ed un diagramma così da esporne il significato e la struttura;
+		\item \textbf{definizione delle classi}: ogni classe viene descritta illustrandone lo scopo e le funzionalità;
+		\item \textbf{tracciamento delle classi}: ogni requisito viene tracciato, in modo da garantire che ogni classe ne soddisfi almeno uno;
+		\item \textbf{test di unità}: vengono definiti dei test di unità per verificare che le componenti del sistema funzionino come previsto.
   \end{itemize}
 
     	\subsubsection*{Diagrammi delle classi}
@@ -220,8 +220,8 @@
     		\item{\textbf{nodo iniziale}}: rappresentato da un pallino pieno, porta alla generazione di un token ed è il punto d'inizio dell'esecuzione dell'attività;
     		\item{\textbf{activity}}: rappresenta un'azione all'interno dell'attività, viene indicata  da un rettangolo che ne contiene la descrizione;
     		\item{\textbf{subactivity}}: è rappresentata da un rettangolo che ne contiene il nome, viene usata per riferirsi ad una sottoattività il cui diagramma deve essere fornito separatamente;
-    		\item{\textbf{branch}}: tali nodi modellano delle decisioni, vengono indicati tramite dei rombi vuoti e generalmente distinguono due branch. Il test che deve essere soddisfatto normalmente viene indicato da un'etichetta posta di fianco al nodo di branch;
-    		\item{\textbf{merge}}: punto in cui i rami generati da un branch si uniscono, vengono rappresentati nello stesso modo dei nodi di branch;
+    		\item{\textbf{branch}}\ped{\textit{G}}: tali nodi modellano delle decisioni, vengono indicati tramite dei rombi vuoti e generalmente distinguono due branch\ped{\textit{G}}. Il test che deve essere soddisfatto normalmente viene indicato da un'etichetta posta di fianco al nodo di branch\ped{\textit{G}};
+    		\item{\textbf{merge}}: punto in cui i rami generati da un branch\ped{\textit{G}} si uniscono, vengono rappresentati nello stesso modo dei nodi di branch\ped{\textit{G}};
     		\item{\textbf{fork}}: punto in cui l'attività si parallelizza senza vincoli di esecuzione temporale, viene indicato da una lunga linea orizzontale o verticale. Consuma un token e ne genera uno per ogni percorso in uscita;
     		\item{\textbf{join}}: rappresentato allo stesso modo del fork, è un punto in cui avviene la sincronizzazione di processi paralleli. Consuma un token per ogni percorso in entrata e genera un solo token;
     		\item{\textbf{pin}}: rappresentato da un quadratino da cui entrano o escono frecce, indica la produzione o consumo di un parametro, il cui tipo va indicato di fianco;
@@ -322,30 +322,18 @@
 		\end{itemize}
 
 	\subsubsubsection{Metriche di progettazione}
-		\subsubsection*{Coupling Between Objects (CBO)}
-		\begin{itemize}
-			\item{\textbf{Descrizione}}: la metrica CBO indica il numero di classi accoppiate ad una data classe;
-			\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero;
-			\item{\textbf{risultato}}: in linea generale si può dire che:
-			\begin{itemize}
-				\item un valore pari a 0 indica che la classe non ha alcuna relazione con nessun'altra classe presente all'interno del sistema;
-				\item un valore compreso tra 1 e 4 indica che la classe presenta un basso livello di accoppiamento;
-				\item un numero maggiore di 4 indica che la classe presenta un livello medio/alto di accoppiamento, che potrebbe complicarne il test e la manutenzione.
-			\end{itemize}
-		\end{itemize}
-
 		\subsubsection*{Structural Fan-In (SFIN)}
 		\begin{itemize}
 			\item{\textbf{Descrizione}}: la metrica SFIN indica il numero di componenti che utilizzano un dato modulo\ped{\textit{G}};
 			\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero;
-			\item{\textbf{risultato}}: un valore elevato di SFIN è indice di un riutilizzo consistente della componente considerata;
+			\item{\textbf{risultato}}: un valore elevato di SFIN è indice di un riutilizzo consistente della componente considerata.
 		\end{itemize}
 
 		\subsubsection*{Structural Fan-Out (SFOUT)}
 		\begin{itemize}
 			\item{\textbf{Descrizione}}: la metrica SFOUT indica il numero di componenti utilizzate dal modulo\ped{\textit{G}} considerato;
 			\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero;
-			\item{\textbf{risultato}}: un valore elevato di SFOUT è indice di un eccessivo livello di accoppiamento della componente;
+			\item{\textbf{risultato}}: un valore elevato di SFOUT è indice di un eccessivo livello di accoppiamento della componente.
 		\end{itemize}
 
 	\subsubsubsection{Metriche di codifica}
@@ -371,7 +359,7 @@
 	\begin{itemize}
 		\item{\textbf{Descrizione}}: la metrica indica il rapporto tra il numero di linee di codice totali, escluse quelle vuote, e il numero di linee di commento presenti;
 		\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero decimale;
-		\item{\textbf{formula}}: $ RCC = \displaystyle\frac{\#linee\_totali}{\#linee\_di\_commento} $.
+		\item{\textbf{formula}}: $ RCC = \displaystyle\frac{\#linee\_di\_commento}{\#linee\_totali} $.
 		\item{\textbf{risultato}}: un valore troppo basso del risultato è indice di scarse informazioni necessarie alla comprensione del codice scritto.
 	\end{itemize}
 
@@ -409,13 +397,13 @@
 	\end{center}
 
 	\subsubsubsection{Ganache}
-	Si tratta di un Ethereum client, con la particolarità di consentire la creazione di una blockchain\ped{\textit{G}} privata finalizzata all'esecuzione di test in locale.
+	Si tratta di un Ethereum\ped{\textit{G}} client, con la particolarità di consentire la creazione di una blockchain\ped{\textit{G}} privata finalizzata all'esecuzione di test in locale.
 	\begin{center}
 		\url{https://www.trufflesuite.com/ganache}
 	\end{center}
 
 	\subsubsubsection{Infura}
-	Infura\ped{\textit{G}} fornisce gli strumenti e l'infrastruttura, che consentono agli sviluppatori di portare facilmente la loro applicazione blockchain dai test alla distribuzione su scala, con un accesso semplice e affidabile ad Ethereum ed IPFS. Viene utilizzato principalmente nell'interazione con la rete di test Ropsten.
+	Infura\ped{\textit{G}} fornisce gli strumenti e l'infrastruttura, che consentono agli sviluppatori di portare facilmente la loro applicazione blockchain\ped{\textit{G}} dai test alla distribuzione su scala, con un accesso semplice e affidabile ad Ethereum\ped{\textit{G}} ed IPFS\ped{\textit{G}}. Viene utilizzato principalmente nell'interazione con la rete di test Ropsten\ped{\textit{G}}.
 	\begin{center}
 		\url{https://infura.io/}
 	\end{center}
@@ -485,6 +473,7 @@
 			\item \textbf{CodeMetrics}, per il calcolo della complessità ciclomatica in codice Javascript\ped{\textit{G}} e Typescript\ped{\textit{G}}.
 			\item \textbf{Solidity Metrics}, per il calcolo della complessità ciclomatica in codice Solidity\ped{\textit{G}}.
 			\item \textbf{Comment Counter}, per il rapporto tra linee codice e linee commento.
+			\item \textbf{Code Counter}, strumento alternativo per il rapporto tra linee codice e linee commento.
 		\end{itemize}
 	\end{itemize}
 	\begin{center}
