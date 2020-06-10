@@ -21,39 +21,42 @@
 
 \subsubsubsection*{Attributes}
 	\begin{itemize}
-		\item \textbf{ownerAddress:} 
-		\item \textbf{contractBalance:}
-		\item \textbf{requestId:}
-		\item \textbf{ethStorage:}
-		\item \textbf{escrow:}
+		\item \textbf{ownerAddress:} address of EtherlessSmart;
+		\item \textbf{serverAddress:} server address;
+		\item \textbf{contractBalance:} amount of ETH stored in the smart contract;
+		\item \textbf{requestId:} unique identifier used to mark each transaction;
+		\item \textbf{ethStorage:} instance of EtherlessStorage contract;
+		\item \textbf{escrow:} instance of EtherlessEscrow contract;
 	\end{itemize}
 \subsubsubsection*{Modifiers}
 	\begin{itemize}
-		\item \textbf{onlyServer}
+		\item \textbf{onlyServer:} restricts the access only to the server address;
 	\end{itemize}
 \subsubsubsection*{Events}
 	\begin{itemize}
-		\item \textbf{runRequest}
-		\item \textbf{deployRequest}
-		\item \textbf{editRequest}
-		\item \textbf{deleteRequest}
-		\item \textbf{resultOK}
-		\item \textbf{resultError}
+		\item \textbf{runRequest:} event emitted when a request of execution of a function is received;
+		\item \textbf{deployRequest:} event emitted when a request of deployment of a function is received;
+		\item \textbf{editRequest:} event emitted when a request of modification of a function is received;
+		\item \textbf{deleteRequest:} event emitted when a request of deletion of a function is received;
+		\item \textbf{resultOK:} event emitted when the result of a certain execution has to be communicated;
+		\item \textbf{resultError:} event emitted when the failure of a certain execution has to be communicated;
 	\end{itemize}
 \subsubsubsection*{Methods}
 	\begin{itemize}
-		\item \textbf{deployFunction:}
-		\item \textbf{runFunction:}
-		\item \textbf{editFunction:}
-		\item \textbf{deleteFunction:}
-		\item \textbf{deployResult:}
-		\item \textbf{runResult:}
-		\item \textbf{editResult:}
-		\item \textbf{deleteResult:}
-		\item \textbf{getCost:}
-		\item \textbf{getInfo:}
-		\item \textbf{getFuncList:}
-		\item \textbf{getNewId:}
+		\item \textbf{deployFunction:} requests that a certain function be deployed;
+		\item \textbf{runFunction:} requests the execution of a certain function;
+		\item \textbf{editFunction:} requests that a certain function be modified;
+		\item \textbf{deleteFunction:} requests the deletion of a certain function. Can only be invoked by the developer of said function;
+		\item \textbf{deployResult:} communicates the result of a function deployment; can only be called by the server address;
+		\item \textbf{runResult:} communicates the result of a function execution; can only be called by the server address;
+		\item \textbf{editResult:} communicates the result of a function modification; can only be called by the server address;
+		\item \textbf{deleteResult:} communicates the result of a function deletion; can only be called by the server address;
+		\item \textbf{getCost:} returns the cost of a function;
+		\item \textbf{getInfo:} returns all the information regarding a certain function;
+		\item \textbf{getFuncList:} returns the names of all functions that have been deployed;
+		\item \textbf{getOwnedList:} returns the names of all functions that have been deployed by a certain developer;
+		\item \textbf{getNewId:} returns \texttt{requestId} incremented by one;
+		\item \textbf{getId:} returns \texttt{requestId};
 	\end{itemize}
 		
 \subsubsection{EtherlessStorage}
@@ -113,3 +116,7 @@
 	\end{figure}
 		
 \subsection{Extensions}  %Possibili sviluppi futuri
+As described above, smart contracts have been developed with the aim of being upgradable, meaning all the contracts can be updated without losing stored data. \\
+To do this, we have decided to use the framework \textit{OpenZeppelin} because of its implementation of the proxy delegate pattern to upgrade contracts under the hood. \\
+As far as the developer side of things this makes the upgrade of a smart contract very simple. In order to upgrade a contract all the new features desired can be added without changing the order of the elements that are already there. Then by typing \texttt{npx oz upgrade} in the terminal window the smart contract will be upgraded. \\
+For more information, the official documentation can be consulted here: \url{https://docs.openzeppelin.com/upgrades/2.6/}.
