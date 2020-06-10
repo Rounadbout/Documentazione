@@ -2,16 +2,12 @@
 \rowcolors{2}{lightRowColor}{darkRowColor}
 \begin{longtable}{
 		>{\centering}p{0.12\textwidth}
-		>{}p{0.5\textwidth}
-		>{\centering}p{0.17\textwidth}
-		>{\centering}p{0.12\textwidth} }
+		>{}p{0.88\textwidth}}
 
 	\caption{Tabella di tracciamento dei test - metodi} \\
 	\coloredTableHead
 	\textbf{\color{white}Id Test} &
-	\centering\textbf{\color{white}Descrizione} &
-	\centering\textbf{\color{white}Implementato} &
-	\textbf{\color{white}Superato}
+	\centering\textbf{\color{white}Metodo} 
 	\endfirsthead
 
 	\rowcolor{white}\caption[]{(continua)}\\
@@ -22,5 +18,54 @@
 
 	%Prova
 	Prova id & Prova metodo \tabularnewline
+	TU1.01 & etherless-cli/src/Session/EthereumUserSession.ts:saveWallet(password: string, wallet: Wallet) \\
+
+	TU1.02 & etherless-cli/src/Session/EthereumUserSession.ts:isLogged() \\
+
+	TU1.03 & etherless-cli/src/Session/EthereumUserSession.ts:signup() \\
+
+	TU1.04 & etherless-cli/src/Session/EthereumUserSession.ts:logout() \\
+
+	TU1.05 & etherless-cli/src/Session/EthereumUserSession.ts:restoreWallet(password: string) \\
+
+	TU1.06 & etherless-cli/src/Session/EthereumUserSession.ts:loginWithPrivateKey(privatekey: string, password: string) \\
+
+	TU1.07 & etherless-cli/src/Session/EthereumUserSession.ts:loginWithMnemonicPhrase(mnemonic: string, password: string) \\
+
+	TU1.08 & etherless-cli/src/Session/EthereumUserSession.ts:getAddress() \\
+
+	TU1.09 & etherless-cli/src/EtherlessContract/EthereumContract.ts:connect(wallet: Wallet) \\
+
+	TU1.10 & etherless-cli/src/EtherlessContract/EthereumContract.ts:getAllFunctions() \\
+
+	TU1.11 & etherless-cli/src/EtherlessContract/EthereumContract.ts:getMyFunctions(password: string) \\
+
+	TU1.12 & etherless-cli/src/EtherlessContract/EthereumContract.ts:getFunctionInfo(name: string) \\
+
+	TU1.13 & etherless-cli/src/EtherlessContract/EthereumContract.ts:existsFunction(name: string) \\
+
+	TU1.14 & etherless-cli/src/EtherlessContract/EthereumContract.ts:getExecHistory(address: string) \\
+
+	TU1.15 & etherless-cli/src/EtherlessContract/EthereumContract.ts:sendRunRequest(name: string, params: string) \\
+
+	TU1.16 & etherless-cli/src/EtherlessContract/EthereumContract.ts:sendDeleteRequest(name: string) \\
+
+	TU1.17 & etherless-cli/src/EtherlessContract/EthereumContract.ts:sendCodeUpdateRequest(name: string, filePath: string) \\
+
+	TU1.18 & etherless-cli/src/EtherlessContract/EthereumContract.ts:sendDeployRequest(name: string, signature: string, sourceCID: string, desc. string) \\
+
+	TU1.19 & etherless-cli/src/EtherlessContract/EthereumContract.ts:listenResponse(requestId: BigNumber) \\
+
+	TU1.20 & etherless-cli/src/IPFS/IPFSFileManager.ts:save(buffer: Buffer) \\
+
+	TU1.21 & etherless-cli/src/IPFS/IPFSFileManager.ts:get(cid: string) \\
+
+	TU1.22 & etherless-cli/src/FileParser/JSFileParser.ts:existsFunction(funcName: string) \\
+
+	TU1.23 & etherless-cli/src/FileParser/JSFileParser.ts:getFunctionSignature(funcName: string) \\
+
+	TU1.24 & etherless-cli/src/Command/Command.ts:getCommand() \\
+
+	TU1.25 & etherless-cli/src/Command/Command.ts:getDescription() \\
 
 \end{longtable}
