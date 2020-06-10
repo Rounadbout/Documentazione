@@ -24,7 +24,8 @@ The tecnologies used during the development of Etherless, which are further desc
 	\item Ganache;
 	\item Truffle;
 	\item Mocha;
-	\item Chai.
+	\item Chai;
+	\item Acorn.
 \end{itemize}
 \pagebreak
 \subsubsection{Libraries and dependencies}
@@ -91,7 +92,7 @@ In this section all of the basic requirements needed to run and test the product
 \end{itemize}
 \subsubsection{Software}
 \begin{itemize}
-	\item \textbf{AWS credentials}: in order to interact the Amazon Web Services, an AWS account is required.
+	\item \textbf{AWS credentials}: in order to interact the Amazon Web Services, an AWS account is required;
 	\item \textbf{ETH wallet}: in order to perform transactions on the blockchain Ethereum, a \textit{non empty} ETH wallet is required. Etherless allows the creation of a wallet on the run, but it does not contain any Ethers.
 \end{itemize}
 \subsection{Setup}
@@ -105,9 +106,9 @@ This section describes all the steps needed to install the Etherless product.
 \subsubsection{Node}
 	Download the executable file of the latest version, from \href{https://nodejs.org/it/download/}{Node official site} and follow the given instruction to install. This will also install Node package manager.
 \subsubsection{Ganache}
-	Ganache is available in two variants CLI or GUI, refer the \href{https://www.trufflesuite.com/docs/ganache/quickstart}{Ganache official web page} for the installation and usage;
+	Ganache is available in two variants CLI or GUI, refer the \href{https://www.trufflesuite.com/docs/ganache/quickstart}{Ganache official web page} for the installation and usage.
 \subsubsection{Truffle}
- In order to install Truffle you need to run \texttt{npm install truffle -g}, the minimum version required is the 4.0.0;
+ In order to install Truffle you need to run \texttt{npm install truffle -g}, the minimum version required is the 4.0.0.
 \subsection{Configuration}
 This section shows how to configure the work environment, to be able to execute, test and develop on Etherless. This configuration steps should be followed in the given order.
 \subsubsection{Cloning the repository}
@@ -142,8 +143,8 @@ The quoted parameters should be replaced with the actual credentials, and both f
 To enable using the keyword \texttt{etherless} to execute commands you should open a shell and position on the main directory of the software.
 Then you should run the command \texttt{npm link} as Administrator.
 \subsubsection{Truffle suite configuration}
-	In order to interact with Ropsten testnet, before beginning the installation process you need two keys: an Infura project id (from your own infura account) and the mnemonic phrase of your Ethereum account. Having these credentials you need to edit the \textit{ruffle-config.js} file, replacing the matching fields at the top with your own. Now you are ready to interact with the Ropsten test network directly from Truffle.\\
-	To interact only with a ganache-cli local blockchain no further configuration is needed, as the information is already stored in the \textit{ruffle-config.js} file.
+	In order to interact with Ropsten testnet, before beginning the installation process you need two keys: an Infura project id (from your own Infura account) and the mnemonic phrase of your Ethereum account. Having these credentials you need to edit the \textit{truffle-config.js} file, replacing the matching fields at the top with your own. Now you are ready to interact with the Ropsten test network directly from Truffle.\\
+	To interact only with a Ganache-cli local blockchain no further configuration is needed, as the information is already stored in the \textit{truffle-config.js} file.
 \subsection{Functionalities}
 	In this section will be listed the available functionalities and the related CLI commands that triggers them.
 	\subsubsection{Signup}
