@@ -9,7 +9,7 @@
 \usepackage{titlesec} %per creazione di una section personalizzata
 
 % package per la lingua / caratteri
-\usepackage[english]{babel}
+\usepackage[italian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
@@ -93,3 +93,7 @@
 
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
+
+%definizione codice inline
+\definecolor{light-gray}{gray}{0.95}
+\newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
