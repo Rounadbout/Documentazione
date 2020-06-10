@@ -7,30 +7,45 @@
 			\item \textbf{ruoli}: problemi relativi allo svolgimento dei diversi ruoli;
 			\item \textbf{strumenti di lavoro}: problemi relativi l'uso degli strumenti di lavoro.
 		\end{itemize}
-	Inoltre per ciascun periodo, ad eccezione dei periodi di analisi e consolidamento dei requisiti, verranno presentate in forma tabellare tutte le modifiche migliorative apportate seguendo le segnalazioni presenti nell'esito della revisione formale al termine del periodo precedente.
+	Inoltre per ciascun periodo, ad eccezione dei periodi di Analisi e Consolidamento dei Requisiti, verranno presentate in forma tabellare tutte le modifiche migliorative apportate seguendo le segnalazioni presenti nell'esito della revisione formale al termine del periodo precedente.
 	
 
-	\subsection{Analisi e consolidamento dei requisiti}
+	\subsection{Analisi e Consolidamento dei Requisiti}
 	
 		\subsubsection{Valutazioni sul periodo}
-			\rowcolors{2}{lightRowColor}{darkRowColor}
+			\rowcolors{2}{lightRowColor}{darkRowColor}	
 			\begin{longtable}{ 
 				>{\centering}p{0.3\textwidth}
 				>{\centering}p{0.3\textwidth}
 				>{\centering\arraybackslash}p{0.3\textwidth}}
-		
-				\caption {Valutazioni sui periodi di analisi e consolidamento dei requisiti}		\\
+				
+				\rowcolor{white} \caption {Valutazioni sui periodi di Analisi e Consolidamento dei Requisiti}	\\
 		
 				\coloredTableHead
 				\textbf{\color{white}Problema} &
 				\textbf{\color{white}Contromisura} &
-				\textbf{\color{white}Riscontri}
-				\tabularnewline  
+				\textbf{\color{white}Riscontri} 
+				\endfirsthead
+				
+				\rowcolor{white}\caption[]{(continua)}\\
+				\coloredTableHead
+				\textbf{\color{white}Problema} &
+				\textbf{\color{white}Contromisura} &
+				\textbf{\color{white}Riscontri} 
 				\endhead
+				
+				\hline \multicolumn{3}{c}{\textit{Continua nella prossima pagina}} \\
+				\endfoot
+				\hline
+				\endlastfoot	
+								
+				
 		
 				% Contenuto della tabella
 				% Problema & Soluzione\\
+				\hline
 				\multicolumn{3}{c}{Organizzazione} \\
+				\hline
 				\textbf{Riunioni Interne}: si è rivelato un problema organizzativo l'impossibilità di vedersi fisicamente a causa della situazione di emergenza COVID-19\ped{\textit{G}}.
 					&
 				Abbiamo concordato di utilizzare maggiormente strumenti di collaborazione che consentono, oltre alla possibilità di effettuare videochiamate, una comunicazione semplificata per i diversi problemi che si possono verificare.
@@ -52,7 +67,9 @@
 				Utilizzando la piattaforma Zoom\ped{\textit{G}} non si sono più presentati problemi di instabilità di connessione.
 					\\
 				
+				\hline
 				\multicolumn{3}{c}{Ruoli} \\
+				\hline
 				\textbf{Rivestire un ruolo}: il problema comune a tutti i ruoli è stato quello di doversi adattare ad una mentalità diversa in base al contesto richiesto, considerato il vincolo relativo alla copertura di un ruolo per membro, descritto nelle \textit{Norme di Progetto}.
 					&
 				Valutato che il maggior impatto di questa problematica si verifica nella fase iniziale di ogni cambio di ruolo, si è deciso di limitare le rotazioni indicativamente ogni due settimane cercando di non lasciare lavori in sospeso al membro successivo. In ogni caso vige il buon senso e la collaborazione reciproca.
@@ -62,24 +79,38 @@
 				
 			\end{longtable}
 	
-	\subsection{Progettazione architetturale}
+	\subsection{Progettazione Architetturale}
 	
 		\subsubsection{Segnalazioni RR}
 			La tabella seguente presenta tutti i cambiamenti e miglioramenti apportati a seguito delle segnalazioni da parte del Committente\ped{\textit{G}} e del Proponente\ped{\textit{G}} presenti nell'esito della Revisione dei Requisiti.
+			
+			\rowcolors{2}{lightRowColor}{darkRowColor}	
 			\begin{longtable}{ 
 				>{\centering}p{0.2\textwidth} 
 				>{\centering}p{0.35\textwidth}
 				>{\centering\arraybackslash}p{0.35\textwidth}}
-	
-				\caption {Risoluzione segnalazioni RR} \\
+				
+				\rowcolor{white} \caption {Risoluzione segnalazioni RR} \\
 		
 				\coloredTableHead
 				\textbf{\color{white}Processo} &
 				\textbf{\color{white}Segnalazione} &
 				\textbf{\color{white}Soluzione}
-				\tabularnewline  
+				\endfirsthead
+				
+				\rowcolor{white}\caption[]{(continua)}\\
+				\coloredTableHead
+				\textbf{\color{white}Processo} &
+				\textbf{\color{white}Segnalazione} &
+				\textbf{\color{white}Soluzione}
 				\endhead
-		
+				
+				\hline \multicolumn{3}{c}{\textit{Continua nella prossima pagina}} \\
+				\endfoot
+				\hline
+				\endlastfoot				
+			
+			
 				% Contenuto della tabella
 				% Processo & Segnalazione & Soluzione \\
 		
@@ -110,7 +141,6 @@
 					&
 				Sono stati modificati i titoli delle parti di documento che presentavano inconsistenze nell'utilizzo di iniziali maiuscole.
 					\\
-	% ----------------------------------------	
 						
 				Documentazione - Analisi dei Requisiti
 					&
@@ -188,14 +218,14 @@
 					&
 				§3-§4: vi è totale disallineamento tra la dichiarazione di adesione al modello di sviluppo incrementale e la pianificazione delle attività, che si incentra esclusivamente sulla scansione degli obblighi contrattuali (che per loro natura sono strettamente sequenziali), ignorando lo sviluppo degli incrementi, e quindi evidentemente non assegnandovi risorse congrue. §5: la criticità di cui sopra invalida la credibilità del preventivo che avete presentato.
 					&
-				E' stata aggiunta la pianificazione ad incrementi per i periodi di progettazione architetturale, progettazione di dettaglio e codifica, validazione e collaudo. Sono state inoltre aggiunte le rispettive tabelle di pianificazione oraria interna agli incrementi e aggiornati i diagrammi di Gantt.
+				E' stata aggiunta la pianificazione ad incrementi per i periodi di Progettazione Architetturale, Progettazione di Dettaglio e Codifica, Validazione e Collaudo. Sono state inoltre aggiunte le rispettive tabelle di pianificazione oraria interna agli incrementi e aggiornati i diagrammi di Gantt.
 					\\
 			
 				Documentazione - Piano di Progetto
 					&
 				 §6: il consuntivo di periodo serve per ragionare, in corso d'opera, sulle ragioni degli scostamenti eventualmente rilevati, sulle loro possibili mitigazioni, e sui conseguenti raffinamenti di pianificazione da  effettuare nei periodi successivi, da riflettere poi nel “Preventivo a finire”. Questo tipo di ragionamento è particolarmente importante nel caso di sviluppo incrementale, come dovrebbe essere il vostro.
 					&
-				E' stato aggiunto il consuntivo di periodo per il periodo di progettazione architetturale ed è stata aggiornata la tabella di riscontro dei rischi.
+				E' stato aggiunto il consuntivo di periodo per il periodo di Progettazione Architetturale ed è stata aggiornata la tabella di riscontro dei rischi.
 					\\
 		 
 				 Documentazione - Piano di Qualifica
@@ -220,15 +250,26 @@
 				>{\centering}p{0.3\textwidth}
 				>{\centering}p{0.3\textwidth}
 				>{\centering\arraybackslash}p{0.3\textwidth}}
-		
-				\caption {Valutazioni sul periodo di progettazione architetturale}		\\
+				
+				\rowcolor{white} \caption {Valutazioni sul periodo di Progettazione Architetturale}	\\
 		
 				\coloredTableHead
 				\textbf{\color{white}Problema} &
 				\textbf{\color{white}Contromisura} &
-				\textbf{\color{white}Riscontri}
-				\tabularnewline  
+				\textbf{\color{white}Riscontri} 
+				\endfirsthead
+				
+				\rowcolor{white}\caption[]{(continua)}\\
+				\coloredTableHead
+				\textbf{\color{white}Problema} &
+				\textbf{\color{white}Contromisura} &
+				\textbf{\color{white}Riscontri} 
 				\endhead
+				
+				\hline \multicolumn{3}{c}{\textit{Continua nella prossima pagina}} \\
+				\endfoot
+				\hline
+				\endlastfoot	
 		
 				% Contenuto della tabella
 				% Problema & Soluzione\\
@@ -236,7 +277,7 @@
 				
 				%\multicolumn{3}{c}{Ruoli} \\
 				
-				\multicolumn{3}{c}{Strumenti di lavoro} \\
+				\hline \multicolumn{3}{c}{Strumenti di lavoro} \\ \hline
 				\textbf{Apprendiento delle tecnologie}: si è rivelato un problema l'insufficiente conoscenza delle tecnologie da utilizzare per sviluppare l'applicativo. Nel dettaglio, queste sono: 		\begin{enumerate}
 					\item{\LaTeX{}\ped{\textit{G}};}
 					\item{Ethereum\ped{\textit{G}};}
@@ -271,12 +312,205 @@
 				
 			\end{longtable}
 	
-	%\subsection{Progettazione di dettaglio e codifica}
+	\subsection{Progettazione di Dettaglio e Codifica}
 	
-		%\subsubsection{Segnalazioni RP}
+		\subsubsection{Segnalazioni RP}
+			La tabella seguente presenta tutti i cambiamenti e miglioramenti apportati a seguito delle segnalazioni da parte del Committente\ped{\textit{G}} e del Proponente\ped{\textit{G}} presenti nell'esito della Revisione di Progettazione.
+			
+			\rowcolors{2}{lightRowColor}{darkRowColor}	
+			\begin{longtable}{ 
+				>{\centering}p{0.2\textwidth} 
+				>{\centering}p{0.35\textwidth}
+				>{\centering\arraybackslash}p{0.35\textwidth}}
+				
+				\rowcolor{white} \caption {Risoluzione segnalazioni RP} \\
 		
-		%\subsubsection{Valutazioni sul periodo}
-	
+				\coloredTableHead
+				\textbf{\color{white}Processo} &
+				\textbf{\color{white}Segnalazione} &
+				\textbf{\color{white}Soluzione}
+				\endfirsthead
+				
+				\rowcolor{white}\caption[]{(continua)}\\
+				\coloredTableHead
+				\textbf{\color{white}Processo} &
+				\textbf{\color{white}Segnalazione} &
+				\textbf{\color{white}Soluzione}
+				\endhead
+				
+				\hline \multicolumn{3}{c}{\textit{Continua nella prossima pagina}} \\
+				\endfoot
+				\hline
+				\endlastfoot	
+		
+				% Contenuto della tabella
+				% Processo & Segnalazione & Soluzione \\
+		
+				Documentazione
+					&
+				Registro delle modifiche: permane l’errore metodologico che vi porta a effettuare uno “scatto” di versione a seguito di azioni di modifica prima della loro verifica di validità. In termini di gestione dei contenuti del repository, ciò che state facendo usa il versionamento come mero diario delle azioni svolte, indipendentemente dalla qualità del loro prodotto. 
+					&
+				Per rendere chiaro che lo scatto di versione avviene solamente a seguito della verifica di validità di una modifica apportata è stato aggiunto nel changelog una colonna nella quale viene indicato il nome del componente che ha verificato la validità della modifica.
+					\\
+				
+				Documentazione
+					&
+				Convenzioni redazionali: il nome dei documenti versionati non ne riporta anche il corrispondente numero di versione. Permangono poi occorrenze di espressioni come “il fine di … è quello di” (e similari). 
+					&
+				È stato aggiunto il numero di versione nel nome dei documenti versionati e sono state riformulate le frasi contenenti le  espressioni come “il fine di … è quello di” (e similari).
+					\\
+					
+				Documentazione
+					&
+				Stile tipografico: permangono inconsistenze nell’uso di iniziali maiuscole nei titoli delle parti di documento. 
+					&
+				Sono stati controllati tutti i documenti ed è stato uniformato l'utilizzo delle maiuscole nei titoli delle parti di documento.
+					\\
+					
+				Documentazione - Norme di Progetto
+					&
+				Permangono incongruenze nella struttura descrittiva dei processi, che è irragionevolmente difforme tra taluni processi, con conseguente confusione informativa.
+					&
+				È stata identificata una struttura definitiva per la descrizione dei processi, e tutti sono stati uniformati a quest’ultima.
+					\\
+					
+				Documentazione - Analisi dei Requisiti
+					&
+				UC9 è da suddividere in due casi d’uso distinti: la ricerca per nome funzione e la visualizzazione. 
+					&
+				UC9 è stato scomposto in più casi d’uso, in maniera da separare la ricerca di una funzione della visualizzazione dei risultati  .
+					\\
+					
+				Documentazione - Analisi dei Requisiti
+					&
+				Quali differenza vi sono tra i comandi “info” e “search”? 
+					&
+				La differenza tra le informazioni mostrate dai due comandi è stata accentuata, andando a modificare anche il nome dei relativi casi d’uso.
+					\\
+					
+				Documentazione - Analisi dei Requisiti
+					&
+				UC15.1 ha due casi d’uso derivati. Modellandoli in questo modo, state dicendo che le rispettive funzionalità sono tra loro mutuamente esclusive. 
+					&
+				Il UC15 è stato rimodellato in modo tale da permettere la modifica della descrizione e del codice contemporaneamente, in un unico comando. Per fare ciò, abbiamo previsto dei casi d’uso per l’inserimento della nuova descrizione e l’inserimento del nuovo codice come sotto-casi diretti del UC15.
+					\\
+					
+				Documentazione - Analisi dei Requisiti
+					&
+				Fig. 3.2.11: le estensioni non hanno verso. 
+					&
+				Abbiamo aggiunto il verso corretto alle estensioni. 
+					\\
+					
+				Documentazione - Analisi dei Requisiti
+					&
+				R1V2 è un requisito funzionale.
+					&
+				Il requisito inizialmente identificato erroneamente come un requisito di vincolo è stato convertito in un requisito funzionale. 
+					\\
+				
+				Documentazione - Piano di Progetto
+					&
+				§2 e §A: materiale diligente per presentazione ma ancora poco profondo per contenuto. 
+					&
+				Il materiale relativo ai rischi è stato approfondito.
+					\\
+					
+				Documentazione - Piano di Progetto
+					&
+				§3: la specifica degli obiettivi incrementali è meglio collocata in premessa alla pianificazione. 
+					&
+				È stata introdotta in premessa alla pianificazione una tabella che specifica gli obiettivi incrementali pianificati.
+					\\
+					
+				Documentazione - Piano di Progetto
+					&
+				§4: gli attuali contenuti suggeriscono uno sviluppo segmentato in macro-periodi, incrementali solo al loro interno, e non piuttosto la dichiarata incrementalità. 
+					&
+				Gli incrementi del periodo attuale e successivo sono stati leggermente modificati, in maniera da focalizzarsi sulle funzionalità dell’intero prodotto e non sull’implementazione dei singoli moduli.
+					\\
+					
+				Documentazione - Piano di Progetto
+					&
+				§4-§5: questi contenuti sono resi poco credibili dall’errata interpretazione dello logica di sviluppo incrementale. 
+					&
+				La sezione 5 è stata approfondita in maniera da essere maggiormente focalizzata sugli incrementi individuati.
+					\\
+					
+				Documentazione - Piano di Progetto
+					&
+				§6: l’incrementalità è così poco centrale nel vostro ragionamento, che il consuntivo di periodo non ne riporta traccia. 
+					&
+				Dal periodo attuale abbiamo iniziato a riportare un consuntivo per ogni incremento, in modo da seguire maggiormente il modello di sviluppo incrementale.
+					\\
+					
+				Documentazione - Piano di Qualifica
+					&
+				§4: gravemente errato sul piano concettuale il titolo “test di verifica”; per renderne significativi i contenuti (cui manca la dichiarazione di specifici obiettivi metrici) serve esplicitare la correlazione con §B.2, attualmente omessa, e conseguentemente priva di visione d’insieme. 
+					&
+				
+					\\
+				
+				Documentazione - Piano di Qualifica
+					&
+				§A: come già segnalato in sede di RR, tale materiale è utile se correlato con l’attuazione del ciclo PDCA e dunque strutturato e misurato attraverso specifici obiettivi di miglioramento. 
+					&
+				§A è stato ristrutturato in modo che possa presentare l'attuazione del ciclo PDCA.
+					\\
+					
+				Documentazione - Piano di Qualifica
+					&
+				§C: questi contenuti sono meglio collocati in §A, in ottica di miglioramento. 
+					&
+				I contenuti di §C sono stati collocati in §A.
+					\\
+			\end{longtable}
+			
+		\subsubsection{Valutazioni sul periodo}
+			\rowcolors{2}{lightRowColor}{darkRowColor}
+			\begin{longtable}{ 
+				>{\centering}p{0.3\textwidth}
+				>{\centering}p{0.3\textwidth}
+				>{\centering\arraybackslash}p{0.3\textwidth}}
+				
+				\rowcolor{white} \caption {Valutazioni sul periodo di Progettazione di Dettaglio e Codifica}		\\
+		
+				\coloredTableHead
+				\textbf{\color{white}Problema} &
+				\textbf{\color{white}Contromisura} &
+				\textbf{\color{white}Riscontri} 
+				\endfirsthead
+				
+				\rowcolor{white}\caption[]{(continua)}\\
+				\coloredTableHead
+				\textbf{\color{white}Problema} &
+				\textbf{\color{white}Contromisura} &
+				\textbf{\color{white}Riscontri} 
+				\endhead
+				
+				\hline \multicolumn{3}{c}{\textit{Continua nella prossima pagina}} \\
+				\endfoot
+				\hline
+				\endlastfoot	
+		
+				% Contenuto della tabella
+				% Problema & Soluzione\\
+				\hline \multicolumn{3}{c}{Organizzazione} \\ \hline
+				\textbf{Comunicazioni interne}: a causa di impegni personali alcuni componenti talvolta non sono riusciti ad essere presenti ad alcune riunioni; inoltre questi impegni hanno causato in qualche momento dei rallentamenti nel proseguimento del lavoro.
+					&
+				Ci siamo impegnati tutti sin da subito a notificare con largo anticipo eventuali impegni e/o assenze a riunioni programmate, permettendo quindi di riprogrammare delle riunioni e di riorganizzare le risorse disponibili per evitare rallentamenti.
+					&
+				La notifica degli impegni e la possibilità di riprogrammare le riunioni ci hanno permesso di essere sempre tutti presenti alle riunioni e di riuscire a portare a termine tutti i compiti rispettando le scadenze prefissate.
+					\\
+				
+				\hline \multicolumn{3}{c}{Strumenti di lavoro} \\ \hline
+				\textbf{Apprendimento delle tecnologie}: durante lo sviluppo di test si sono presentate delle lacune nella conoscenza delle tecnologie scelte che hanno portato ad alcune difficoltà nello sviluppo di essi.
+					&
+				Lo studio individuale dei periodi precedenti non si è rivelato sufficiente per consentirci di sviluppare di test completi ed esaustivi. Ci siamo quindi impegnati in uno studio più approfondito delle tecnologie utilizzate, presentando e discutendo poi all'interno del gruppo con quanto appreso.
+					&
+				Questo studio più approfondito delle tecnologie ci ha permesso di comprendere il modo in cui sviluppare test efficaci ed esaustivi.
+					\\
+			\end{longtable}
 	%\subsection{Validazione e collaudo}
 		%\subsubsection{Segnalazioni RQ}
 		%\subsubsection{Valutazioni sul periodo}
