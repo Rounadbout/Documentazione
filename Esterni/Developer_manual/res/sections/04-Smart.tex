@@ -1,16 +1,16 @@
 \section{Etherless-Smart}
-	
+
 \subsection{Overview}
 	Etherless-smart is the module which handles transactions on the Ethereum blockchain. It consists of a set of Ethereum smart contracts that handle the communication between Etherless-cli and Etherless-server as well as the payment of this work using ETH currency.
-	
+
 \subsection{Architecture} % Descrizione dell'architettura utilizzata, compresi i design pattern
 		Our goals when developing Etherless-smart were upgradeability and extensibility. For these reasons said module consists of three separate smart contracts:
 		\begin{itemize}
-			\item \textbf{EtherlessSmart:} is the main contract which serves as the middleman between Etherless-cli and Etherless-server. Each one of its methods is either invoked by Etherless-cli to send the requests or by Etherless-server to transmit the responses;
+			\item \textbf{EtherlessSmart:} is the main contract which serves as the middleman between Etherless-cli and Etherless-server. Each one of its methods is either invoked by Etherless-cli to send the requests or by Etherless-server to transmit the responses. This contract contains an instance of the other two contracts, and it communicates with them via function calls, in order to complete its own function excecutions;
 			\item \textbf{EtherlessStorage:} is the storage contract. It stores all relevant information regarding the Javascript functions which can be called when using \textit{Etherless}. Moreover, it contains some utility methods to perform useful operations on this data;
 			\item \textbf{EtherlessEscrow:} is the contract which manages everything in regards to monetary transactions. It contains details of every pending transaction and its methods have been implemented to manage an escrow payment.
 		\end{itemize}
-		
+
 %Descrizione accurata dei metodi presenti nel modulo
 \subsubsection{EtherlessSmart}
 	\begin{figure}[H]
@@ -24,7 +24,7 @@
 		\item \textbf{ownerAddress:} address of EtherlessSmart;
 		\item \textbf{serverAddress:} server address;
 		\item \textbf{contractBalance:} amount of ETH stored in the smart contract;
-		\item \textbf{requestId:} unique identifier used to mark each transaction;
+		\item \textbf{requestId:} unique identifier used to mark each request that needs payment;
 		\item \textbf{ethStorage:} instance of EtherlessStorage contract;
 		\item \textbf{escrow:} instance of EtherlessEscrow contract;
 	\end{itemize}
@@ -58,7 +58,7 @@
 		\item \textbf{getNewId:} returns \texttt{requestId} incremented by one;
 		\item \textbf{getId:} returns \texttt{requestId};
 	\end{itemize}
-		
+
 \subsubsection{EtherlessStorage}
 	\begin{figure}[H]
 		\centering
@@ -87,7 +87,7 @@
 		\item \textbf{getFuncInfo:} returns all information regarding a function;
 		\item \textbf{compareString:} compares two strings using a reasonable gas amount;
 	\end{itemize}
-		
+
 \subsubsection{EtherlessEscrow}
 	\begin{figure}[H]
 		\centering
@@ -97,7 +97,7 @@
 
 \subsubsubsection*{Attributes}
 	\begin{itemize}
-		\item \textbf{deposits:} mapping that stores details regarding all pending transaction. Each entry is a key-value pair where the key is a unique identifier and the value is a \texttt{depositInfo} struct;	
+		\item \textbf{deposits:} mapping that stores details regarding all pending transaction. Each entry is a key-value pair where the key is a unique identifier and the value is a \texttt{depositInfo} struct;
 		\end{itemize}
 \subsubsubsection*{Methods}
 	\begin{itemize}
@@ -117,7 +117,7 @@
 		\end{figure}
 	\end{landscape}
 	\restoregeometry
-		
+
 \subsection{Extensions}  %Possibili sviluppi futuri
 As described above, smart contracts have been developed with the aim of being upgradable, meaning all the contracts can be updated without losing stored data. \\
 To do this, we have decided to use the framework \textit{OpenZeppelin} because of its implementation of the proxy delegate pattern to upgrade contracts under the hood. \\
