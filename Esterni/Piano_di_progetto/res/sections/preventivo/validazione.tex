@@ -1,0 +1,89 @@
+\subsubsection{Fase complessiva}
+\subsubsubsection{Prospetto orario}
+	Distribuzione delle ore per ciascun ruolo nel periodo di Validazione e collaudo:
+
+		\rowcolors{2}{lightRowColor}{darkRowColor}
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering\arraybackslash}p{0.15\textwidth} }
+
+			\coloredTableHead
+			\textbf{\color{white}Nome} &
+			\textbf{\color{white}Rp} &
+			\textbf{\color{white}As} &
+			\textbf{\color{white}An} &
+			\textbf{\color{white}Pt} &
+			\textbf{\color{white}Pr} &
+			\textbf{\color{white}Vf} &
+			\textbf{\color{white}Totale}
+			\tabularnewline
+			\endhead
+
+			% Contenuto della tabella
+			% Nome & Rp & As & An & Pt & Pr & Vf & Totale \\
+			\VB & - & - & - & 5 & 7  & 10 & 22 \\
+			\LB & - & 6 & - & - & 10 & 6  & 22 \\
+			\NF & 5 & - & - & - & 7  & 10 & 22 \\
+			\EG & - & 5 & - & 7 & -  & 10 & 22 \\
+			\FJ & 6 & 6 & - & - & 5  & 5  & 22 \\
+			\MP & 5 & - & - & - & 7  & 10 & 22 \\
+			\AS & 6 & - & - & - & 5  & 11 & 22 \\
+			\AZ & - & - & - & 6 & 6  & 10 & 22 \\
+			\textbf{Ore totali per ruolo} & 22 & 17 & - & 18 & 47 & 72 & 176 \\
+
+			\rowcolor{white}\caption {Suddivisione oraria del periodo di Validazione e collaudo} \\
+
+		\end{longtable}
+
+		% Grafico
+		Rappresentazione grafica della suddivisione oraria:
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{./res/img/validazioneCollaudo_po.png}
+			\caption{Suddivisione oraria del periodo di Validazione e collaudo}
+		\end{figure}
+
+	\subsubsubsection{Prospetto economico}
+		Totale delle ore e costo per ciascun ruolo nel periodo di Validazione e collaudo:
+
+		\rowcolors{2}{lightRowColor}{darkRowColor}
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering\arraybackslash}p{0.15\textwidth} }
+
+			\coloredTableHead
+			\textbf{\color{white}Ruolo} &
+			\textbf{\color{white}Ore} &
+			\textbf{\color{white}Costo in \euro{}}
+			\tabularnewline
+			\endhead
+
+			% Contenuto della tabella
+			% Ruolo & Ore & Costo in \\
+			Responsabile    & 22  & 660,00 \\
+			Amministratore  & 17  & 340,00 \\
+			Analista        & -   & - \\
+			Progettista     & 18  & 396,00 \\
+			Programmatore   & 47  & 705,00 \\
+			Verificatore    & 72  & 1.080,00 \\
+			\textbf{Totale} & 176 & 3.181,00 \\
+
+			\rowcolor{white}\caption {Prospetto dei costi per il periodo di Validazione e collaudo} \\
+
+		\end{longtable}
+
+		\newpage
+		% Grafico
+		Rappresentazione grafica della distribuzione dei ruoli:
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{./res/img/validazioneCollaudo_pe.png}
+			\caption{Suddivisione dei ruoli nel periodo di Validazione e collaudo}
+		\end{figure}
