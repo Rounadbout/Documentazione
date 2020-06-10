@@ -16,7 +16,7 @@
 	\centering\textbf{\color{white}Metodo}
 	\endhead
 
-	%Prova
+	%CLI
 	TU1.01 & EthereumUserSession::saveWallet(password: string, wallet: Wallet) \\
 
 	TU1.02 & EthereumUserSession::isLogged() \\
@@ -67,6 +67,78 @@
 
 	TU1.25 & Command::getDescription() \\
 	
+	% SMART
+	TU2.1  &  EtherlessSmart::getFuncList()  \tabularnewline
+	
+	TU2.2  &  EtherlessSmart::runFunction(funcName:string, param:string)  \tabularnewline
+	
+	TU2.3  &  EtherlessSmart::deployFunction(funcName:string, signature:string, description:string, funcHash:string)  \tabularnewline
+	
+	TU2.4  &  EtherlessSmart::deleteFunction(funcName:string)  \tabularnewline
+	
+	TU2.5  &  EtherlessSmart::editFunction(funcName:string, funcHash:string)  \tabularnewline
+	
+	TU2.6  &  EtherlessSmart::runResult(message:string, id:uint256, successful:bool)  \tabularnewline
+	
+	TU2.7  &  EtherlessSmart::deployResult(message:string, name:string, id:uint256, successful:bool)  \tabularnewline
+	
+	TU2.8  &  EtherlessSmart::deleteResult(message:string, name:string, id:uint256, successful:bool)  \tabularnewline
+	
+	TU2.9  &  EtherlessSmart::editResult(message:string, name:string, id:uint256, successful:bool)  \tabularnewline
+	
+	TU2.10 &  EtherlessSmart::deployResult(message:string, name:string, id:uint256, successful:bool)  \tabularnewline
+	
+	TU2.11 &  EtherlessSmart::deployResult(message:string, name:string, id:uint256, successful:bool)  \tabularnewline
+	
+	TU2.12 &  EtherlessSmart::deleteResult(message:string, name:string, id:uint256, successful:bool)  \tabularnewline
+	
+	TU2.13 &  EtherlessSmart::editFunctionDesc(funcName:string, desc:string, funcHash:string)  \tabularnewline
+	
+	TU2.14 &  EtherlessSmart::getNewId()  \tabularnewline
+	
+	TU2.15 &  EtherlessSmart::getList()  \tabularnewline
+	
+	TU2.16 &  EtherlessSmart::getOwnedList(owner:address)  \tabularnewline
+	
+	TU2.17 &  EtherlessSmart::getInfo(funcName:string)  \tabularnewline
+	
+	TU2.18 &  EtherlessSmart::getCost(funcName:string)  \tabularnewline
+	
+	TU2.19 &  EtherlessSmart::deployFunction(funcName:string, signature:string, description:string, funcHash:string)  \tabularnewline
+	
+	TU2.20 &  EtherlessStorage::insertNewFunction(name:string, signature:string , price:uint256, dev:address, description:string )  \tabularnewline
+	
+	TU2.21 &  EtherlessSmart::existsFunction(fname:string)  \tabularnewline
+	
+	TU2.22 &  EtherlessStorage::removeFunction(toRemove:string)  \tabularnewline
+	
+	TU2.23 &  EtherlessStorage::getFuncPrice(funcName:string)  \tabularnewline
+	
+	TU2.24 &  EtherlessStorage::getFuncDev(funcName:string)  \tabularnewline
+	
+	TU2.25 &  EtherlessStorage::compareString(s1:string, s2:string)  \tabularnewline
+	
+	TU2.26 &  EtherlessStorage::uintToString(x:uint256)  \tabularnewline
+	
+	TU2.27 &  EtherlessStorage::addressToString(addr:address)  \tabularnewline
+	
+	TU2.28 &  EtherlessStorage::singleFuncJson(funcName:string, info:bool)  \tabularnewline
+	
+	TU2.29 &  EtherlessEscrow::withdraw(payee:string, index:uint256)  \tabularnewline
+	
+	TU2.30 &  EtherlessEscrow::deposit(sender:address, beneficiary:address , amount:uint256, index:uint256)  \tabularnewline
+	
+	TU2.31 &  EtherlessEscrow::getBeneficiary(index:uint256)  \tabularnewline
+	
+	TU2.32 &  EtherlessEscrow::getSender(index:uint256)  \tabularnewline
+	
+	TU2.33 &  EtherlessEscrow::depositOf(index:uint256)  \tabularnewline
+	
+	TU2.34 &  EtherlessSmart::onlyServer(invokedFrom:address)  \tabularnewline
+	
+	TU2.35 &  EtherlessEscrow::onlyOwner  \tabularnewline
+	
+	TU2.36 &  EtherlessEscrow::onlyOwner  \tabularnewline
 	
 	% Server
 	TU3.01 & EventDispatcher::attach(callback: any) \\
@@ -132,5 +204,5 @@
 	TU3.31 & AWSManager::edit(functionName: string, fileContent: Buffer) \\
 	
 	TU3.32 & AWSManager::edit(functionName: string, fileContent: Buffer) \\
-	
+
 \end{longtable}
