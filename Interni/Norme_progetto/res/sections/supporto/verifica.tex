@@ -36,9 +36,19 @@
         \begin{itemize}
           \item \textbf{Test di unità}: verificano l'unità, cioè il più piccolo sottosistema possibile che può essere testato separatamente. L'approccio più comune al test di unità prevede la scrittura di driver\ped{\textit{G}} e stub\ped{\textit{G}}, dove il primo simula un'unità chiamante mentre il secondo un'unità chiamata. Tali test devono essere indicati nel seguente modo: 
           \begin{center}
-          	\textbf{TU[id]}
+          	\textbf{TU[id\_modulo].[id\_test]}
           \end{center}
-      	  dove \textit{id} rappresenta il codice identificativo crescente dell'unità da verificare. È responsabilità del singolo Programmatore scrivere i test delle unità più semplici da lui sviluppate. Nel caso in cui l'unità sia più complessa la scrittura del test di unità deve essere compiuta da un Verificatore. 
+      	  Dove:
+      	  \begin{itemize}
+      	  	\item \textbf{id\_modulo}: rappresenta il codice identificativo crescente del modulo interessato dal test. Può assumere i valori:
+        	\begin{itemize}
+        		\item{\textbf{1}: per Etherless-cli;}
+        		\item{\textbf{2}: per Etherless-smart;}
+        		\item{\textbf{3}: per Etherless-server.}
+        	\end{itemize}
+      	  	\item \textbf{id\_test}: rappresenta il codice identificativo incrementale del test da effettuare.
+      	  \end{itemize}
+      	  È responsabilità del singolo Programmatore scrivere i test delle unità più semplici da lui sviluppate. Nel caso in cui l'unità sia più complessa la scrittura del test di unità deve essere compiuta da un Verificatore. 
         
           \item \textbf{Test di integrazione}: test eseguiti per verificare che siano rispettati i contratti di interfaccia tra più moduli o sub-system. La forma più semplice di questo tipo di test prevede che le componenti vengano verificate in maniera incrementale, con l'aggiunta di altre unità o gruppi di unità corretti, fino ad arrivare al sistema completo. Tali test devono essere indicati nel seguente modo: 
           \begin{center}
