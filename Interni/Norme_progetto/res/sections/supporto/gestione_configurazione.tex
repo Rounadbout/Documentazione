@@ -58,13 +58,14 @@
     	\begin{itemize}
     		\item aprire una pull request sul branch\ped{\textit{G}} dove sono state apportate le modifiche;
     		\item assegnare tale pull request ai Verificatori per una revisione e, nel caso di prodotti completi, al Responsabile per l'approvazione;
-    		\item i Verificatori effettueranno la revisione ed eventuali correzioni minori;
+    		\item in caso di prodotto software, configurare Travis per effettuare opportuni test, a seguito dell'implementazione di nuovo codice;
+    		\item i Verificatori effettueranno la revisione delle modifiche e dei test effettuati, correggendo eventuali errori minori;
     		\item nel caso non siano rilevati difetti bloccanti, la pull request viene accettata dai revisori e viene effettuato il merge di tale branch\ped{\textit{G}} con il branch\ped{\textit{G}} di \textit{develop}.
     	\end{itemize}
 
       \subsubsubsection{Gestione delle modifiche}
-        Tutte le modifiche effettuate nei documenti vengono memorizzate all'interno del "Registro delle modifiche" situato in ogni documento nella pagina successiva alla copertina, come descritto nella sezione \textsection3.1.2.2.\\
-        Ad ogni modifica corrisponde un commit\ped{\textit{G}} Git\ped{\textit{G}}, al quale è opportuno allegare un commento in modo da facilitare il tracciamento delle modifiche e del lavoro svolto, tramite Issue\ped{\textit{G}}.
+        Tutte le modifiche verificate nei documenti vengono memorizzate all'interno del "Registro delle modifiche" situato in ogni documento nella pagina successiva alla copertina, come descritto nella sezione \textsection3.1.2.2.\\
+        Ad ogni modifica corrisponde un commit\ped{\textit{G}} Git\ped{\textit{G}}, al quale è opportuno allegare un commento, in italiano o inglese a seconda del contesto, in modo da facilitare il tracciamento delle modifiche e del lavoro svolto, tramite Issue\ped{\textit{G}}.
         Ogni modifica apportata ai documenti deve essere discussa con i collaboratori che si stanno occupando del medesimo documento; nel caso in cui la modifica sia di rilevante importanza, è opportuno discuterne con tutto il gruppo durante gli appositi incontri settimanali.
       \subsubsection{Metriche}
       Non sono state attualmente individuate metriche specifiche al processo di gestione della configurazione.
