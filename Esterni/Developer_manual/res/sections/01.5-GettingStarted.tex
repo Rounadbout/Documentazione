@@ -1,6 +1,6 @@
 \section{Getting started}
 \subsection{Tecnologies}
-The tecnologies used during the development of Etherless, which are further described in this document appendix \textbf{A}, are presented in this section.
+The aim of this section is to present a list of all the technologies used during the development of \textit{Etherless}, which are further described in the appendix at the end of this document.
 \subsubsection{Languages}
 \begin{itemize}
 	\item Javascript;
@@ -11,7 +11,7 @@ The tecnologies used during the development of Etherless, which are further desc
 \begin{itemize}
 	\item Visual Studio Code;
 	\item Node.js;
-	\item Node package manager;
+	\item Node Package Manager;
 	\item AWS Lambda;
 	\item AWS Elastic Beanstalk;
 	\item IPFS;
@@ -20,7 +20,7 @@ The tecnologies used during the development of Etherless, which are further desc
 	\item Jest;
 	\item Open Zeppelin;
 	\item Infura;
-	\item Ropsten testnet;
+	\item Ropsten;
 	\item Ganache;
 	\item Truffle;
 	\item Mocha;
@@ -43,7 +43,7 @@ The tecnologies used during the development of Etherless, which are further desc
 
 	configstore & $\geq$5.0.1 \tabularnewline
 	inquirer & $\geq$7.1.0 \tabularnewline
-	node & $\geq$13.13.4 \tabularnewline
+	node & $\geq$12.18.0 \tabularnewline
 	acorn & $\geq$7.2.0 \tabularnewline
 	ethers & $\geq$4.0.47 \tabularnewline
 	ipfs-mini & $\geq$1.1.5 \tabularnewline
@@ -85,39 +85,39 @@ The tecnologies used during the development of Etherless, which are further desc
 
 \end{longtable}
 \subsection{Requirements}
-In this section all of the basic requirements needed to run and test the product are described.
+This section describes all of the basic requirements needed to run and test the product.
 \subsubsection{Hardware}
 \begin{itemize}
-	\item \textbf{Internet connection}: in order to interact with the Ethereum blockchain and the AWS services.
+	\item \textbf{Internet connection}: needed in order to interact with the Ethereum blockchain and AWS services.
 \end{itemize}
 \subsubsection{Software}
 \begin{itemize}
-	\item \textbf{AWS credentials}: in order to interact the Amazon Web Services, an AWS account is required;
-	\item \textbf{ETH wallet}: in order to perform transactions on the blockchain Ethereum, a \textit{non empty} ETH wallet is required. Etherless allows the creation of a wallet on the run, but it does not contain any Ethers.
+	\item \textbf{AWS credentials}: in order to interact with Amazon Web Services, an AWS account is required;
+	\item \textbf{ETH wallet}: in order to perform transactions on the Ethereum blockchain, a \textit{non empty} ETH wallet is required. With \textit{Etherless} the user can create a wallet on the run, but it does not contain any ETH.
 \end{itemize}
 \subsection{Setup}
-This section describes all the steps needed to install the Etherless product.
+This section describes all the steps needed to install \textit{Etherless}.
 \subsubsection{Git}
 \begin{itemize}
-	\item \textbf{Windows}: download the .exe file from \href{https://git-scm.com/download/win}{Git official site}, and follow the given instruction;
+	\item \textbf{Windows}: download the .exe file from the \href{https://git-scm.com/download/win}{Git official website} and follow the given instructions;
 	\item \textbf{Linux}: open a shell and type: \texttt{sudo apt install git}.
 \end{itemize}
 	For information on how to install Git on different OS, follow the official guide on: \href{https://git-scm.com/book/en/v2/Getting-Started-Installing-Git}{How to install Git}.
 \subsubsection{Node}
-	Download the executable file of the latest version, from \href{https://nodejs.org/it/download/}{Node official site} and follow the given instruction to install. This will also install Node package manager.
+	Download the the latest version of the executable file from the \href{https://nodejs.org/it/download/}{Node official website} and follow the given instructions. This will also install Node package manager.
 \subsubsection{Ganache}
-	Ganache is available in two variants CLI or GUI, refer the \href{https://www.trufflesuite.com/docs/ganache/quickstart}{Ganache official web page} for the installation and usage.
+	Ganache is available in two variants, CLI and GUI. Refer to the \href{https://www.trufflesuite.com/docs/ganache/quickstart}{Ganache official website} for installation and usage.
 \subsubsection{Truffle}
- In order to install Truffle you need to run \texttt{npm install truffle -g}, the minimum version required is the 4.0.0.
+ In order to install Truffle you need to run \texttt{npm install truffle -g} from your terminal window. The minimum version required is 4.0.0.
 \subsection{Configuration}
-This section shows how to configure the work environment, to be able to execute, test and develop on Etherless. This configuration steps should be followed in the given order.
+This section shows how to configure the work environment to be able to execute, test and develop on \textit{Etherless}. These configuration steps should be followed in the given order.
 \subsubsection{Cloning the repository}
-To download the software product on your machine, from the GitHub Etherless repository, you should open a shell and position on the folder you want the software to be located. Then you should use the command \texttt{git clone https://github.com/RoundaboutTeam/etherless.git} and position on the \texttt{master} branch.
+To download the software product on your machine you should open a shell and change to the location you want the software to be in. Then you should use the command \texttt{git clone https://github.com/RoundaboutTeam/etherless.git} and switch to the \texttt{master} branch.
 \subsubsection{Installing the dependencies}
-To install all the packages and libreries needed to work with Etherless you should open a shell and position on the main directory of the software. Then you should run the \texttt{npm install} command, which will take care of installing all the dependencies specified in the \texttt{package.json} file.
+To install all the packages and libraries needed to work with \textit{Etherless} you should open a shell and change to the main directory. Then you should run the command \texttt{npm install}, which will take care of installing all the dependencies specified in the \texttt{package.json} file.
 \subsubsection{AWS and Ethereum configurations}
-In the cloned repository two configuration files are not present for security reasons, since they contain the Ethereum and AWS credentials used to interact with these two services. They are present on the Etherless-server version already uploaded and active on AWS Elastic Beanstalk.
-Any developer who might want to work with a local version of Etherless-server should create an \texttt{AWSconfig.json} file structured as:
+The files containing Ethereum and AWS credentials used to interact with the corresponding services are not included in the cloned repository for security reasons. These are present on the Etherless-server version already uploaded and are active on AWS Elastic Beanstalk.
+Any developer who might want to work with a local version of Etherless-server should create an \texttt{AWSconfig.json} file structured as follows:
 \begin{quote}
 \texttt{ \\
 	\{\\
@@ -127,7 +127,7 @@ Any developer who might want to work with a local version of Etherless-server sh
 	\}\\
 }
 \end{quote}
-While, to interact with the contract on the blockchain, a \texttt{smartConfig.json} file should be created by the developer, with this structure:
+To interact with the contracts on the Ethereum blockchain, a \texttt{smartConfig.json} file should be created with the following structure:
 \begin{quote}
 \texttt{ \\
 	\{\\
@@ -138,21 +138,20 @@ While, to interact with the contract on the blockchain, a \texttt{smartConfig.js
 	\}\\
 }
 \end{quote}
-The quoted parameters should be replaced with the actual credentials, and both files moved to \texttt{Config} directory inside Etherless-server.
+The parameters within angular brackets should be replaced with the actual credentials and both files be moved to the \texttt{Config} directory inside Etherless-server.
 \subsubsection{Enable \texttt{etherless} commands}
-To enable using the keyword \texttt{etherless} to execute commands you should open a shell and position on the main directory of the software.
-Then you should run the command \texttt{npm link} as Administrator.
-\subsubsection{Truffle suite configuration}
-	In order to interact with Ropsten testnet, before beginning the installation process you need two keys: an Infura project id (from your own Infura account) and the mnemonic phrase of your Ethereum account. Having these credentials you need to edit the \textit{truffle-config.js} file, replacing the matching fields at the top with your own. Now you are ready to interact with the Ropsten test network directly from Truffle.\\
+To enable using commands with the keyword \texttt{etherless} you should open a shell and change to the main directory. Then you should run the command \texttt{npm link} as Administrator.
+\subsubsection{Truffle Suite Configuration}
+	In order to interact with the Ropsten testnet, before beginning the installation process you need two keys: an Infura project id (from your own Infura account) and the mnemonic phrase of your Ethereum account. Having these credentials you need to edit the \textit{truffle-config.js} file, replacing the matching fields at the top with your own. Now you are ready to interact with the Ropsten test network directly from Truffle.\\
 	To interact only with a Ganache-cli local blockchain no further configuration is needed, as the information is already stored in the \textit{truffle-config.js} file.
 \subsection{Functionalities}
-	In this section will be listed the available functionalities and the related CLI commands that triggers them.
+	This section lists all the available functionalities of \textit{Etherless} and the corresponding CLI commands that trigger them.
 	\subsubsection{Signup}
 	Creates a new account with an empty Ethereum wallet.
 	\subsubsection*{Command}
 	\texttt{etherless signup}
 	\subsubsection{Login}
-	Creates a login session with the given private key or mnemonic phrase, allowing to make requests on the Etherless platform.
+	Creates a login session with the given private key or mnemonic phrase, allowing to make requests on the \textit{Etherless} platform.
 	\subsubsection*{Command}
 	\texttt{etherless login <<private key>>} \\
 	\texttt{etherless login m <<mnemonic phrase>>}
@@ -165,15 +164,15 @@ Then you should run the command \texttt{npm link} as Administrator.
 	\subsubsection*{Command}
 	\texttt{etherless whoami}
 	\subsubsection{Init}
-	Shows a brief description of the login and signup functionalities.
+	Shows a brief description of the \texttt{login} and \texttt{signup} functionalities.
 	\subsubsection*{Command}
 	\texttt{etherless init}
 	\subsubsection{Info}
-	Returns information related to a given function, specifically: developer, name, signature, cost and description.
+	Returns informations related to a given function, specifically the developer address, the function name, the function signature, the function price and a brief description.
 	\subsubsection*{Command}
 	\texttt{etherless info <<function name>>}
 	\subsubsection{History}
-	List all the past executions of the user, can be limited to a certain amount of executions.
+	Lists all the past executions of the user, can be limited to a certain amount of executions.
 	\subsubsection*{Command}
 	\texttt{etherless history [limit]}
 	\subsubsection{Search}
@@ -181,19 +180,19 @@ Then you should run the command \texttt{npm link} as Administrator.
 	\subsubsection*{Command}
 	\texttt{etherless search <<keyword>>}
 	\subsubsection{List}
-	Displays a list of all the available functions, inside the Etherless platform.
+	Displays a list of all available functions inside the \textit{Etherless} platform.
 	\subsubsection*{Command}
 	\texttt{etherless list [m]}
 	\subsubsection{Run}
-	Requests the execution of a given function, with the given spaced parameters.
+	Requests the execution of a given function with the given spaced parameters.
 	\subsubsection*{Command}
 	\texttt{etherless run <<function name>> [parameters list]}
 	\subsubsection{Deploy}
-	Requests the deployment of a new function, using the given .js file and the given function name.
+	Requests the deployment of a new function, using the given \texttt{.js} file and function name.
 	\subsubsection*{Command}
 	\texttt{etherless deploy <<file .js>> <<function name>>}
 	\subsubsection{Edit}
-	Requests the editing of an existing function, using the given .js file and the given function name.
+	Requests the editing of an existing function, using the given \texttt{.js} file and function name.
 	\subsubsection*{Command}
 	\texttt{etherless edit <<file .js>> <<function name>>}
 	\subsubsection{Delete}
@@ -202,8 +201,8 @@ Then you should run the command \texttt{npm link} as Administrator.
 	\texttt{etherless delete <<function name>>}
 \subsection{Testing}
 \subsubsection{Etherless}
-Launching the \texttt{npm test} command inside the Etherless directory will automatically trigger all the developed tests for the whole software product.
+Launching the \texttt{npm test} command inside the \textit{Etherless} directory will automatically trigger all the developed tests for the software product.
 \subsubsection{Etherless-cli and Etherless-server}
-It is possible to test the Etherless-cli and Etherless-server modules indipendently, by launching the \texttt{npm test} command inside their directories.
+It is possible to test the Etherless-cli and Etherless-server modules indipendently by launching the \texttt{npm test} command inside their directories.
 \subsubsection{Etherless-smart}
-It is possible to test Etherless-smart module, by launching the \texttt{truffle test} command inside the module's directory.
+It is possible to test the Etherless-smart module by launching the \texttt{truffle test} command inside the module's directory.
