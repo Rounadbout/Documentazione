@@ -2,13 +2,13 @@
 Etherless-cli is a command line application that allow the user to interface with the Etherless platform. The user can perform specific tasks using simple and easy commands.
 
 \subsection{Command usage}
-The commands syntax used is the following: 
+The commands syntax used is the following:
 \begin{center}
 	\code{etherless <command> [params..]}
-\end{center} 
-Where: 
+\end{center}
+Where:
 \begin{itemize}
-	\item command: is the command name 
+	\item command: is the command name
 	\item params: are some parameters the command may need
 \end{itemize}
 
@@ -16,26 +16,25 @@ Where:
 \begin{itemize}
 	\item signup
 	\item init
-	\item login [m] <value> 
-	\item history 
+	\item login [m] <value>
+	\item history
 	\item list [m]
 	\item whoami
 	\item search <keyword>
 	\item info <function\_name>
 	\item run <function\_name> [params..]
 	\item logout
-	\item delete <function\_name> 
-	\item edit <function\_name> [desc] [path]
+	\item delete <function\_name>
 	\item deploy <function\_name> <path> <desc>
 \end{itemize}
 
 \subsection{Account management}
-To identify uniquely a user and manage payments is used the Ethereum network. Loggin inside an Ethereum account you allow the application to detract the fees and price of some request from your wallet. \\ 
-Every Ethereum account is identified by an address and is accessible through a private key or mnemonic phrase; this application allow you to use both of them. \\ 
-To execute some commands you will be asked to enter a password, that will be used to encrypt and decrypt a local copy of your wallet. 
+To identify uniquely a user and manage payments is used the Ethereum network. Loggin inside an Ethereum account you allow the application to detract the fees and price of some request from your wallet. \\
+Every Ethereum account is identified by an address and is accessible through a private key or mnemonic phrase; this application allow you to use both of them. \\
+To execute some commands you will be asked to enter a password, that will be used to encrypt and decrypt a local copy of your wallet.
 
 \subsubsection{Init}
-To get some information about the signup and authentication process you can use the init command, with the following syntax: 
+To get some information about the signup and authentication process you can use the init command, with the following syntax:
 \begin{center}
 	\code{etherless init}
 \end{center}
@@ -43,24 +42,24 @@ To get some information about the signup and authentication process you can use 
 \subsubsection{Signup}
 The signup command allow the user to create a new Ethereum account. The account have no ethers and can not perform all the functionality the product provides.
 To fully use the account the user need to add some currency through online services such Etherscan.
-Use the command with the following syntax: 
+Use the command with the following syntax:
 
 \begin{center}
 	\code{etherless signup [save]}
-\end{center} 
+\end{center}
 
-\noindent The result given is the credential of the account created, in particular are shown: 
+\noindent The result given is the credential of the account created, in particular are shown:
 \begin{itemize}
-	\item an address that identifies the Ethereum account; 
-	\item the private key associated with the Ethereum account; 
+	\item an address that identifies the Ethereum account;
+	\item the private key associated with the Ethereum account;
 	\item the mnemonic phrase associated with the Ethereum account.
 \end{itemize}
 With the optional flag "save" you can choose to save the credentials into a file that will be created in the current directory. \\
-Note that the signup command creates an account, but not log in the user. 
+Note that the signup command creates an account, but not log in the user.
 
 \subsubsection{Login}
 The login command allows the user to log into the Ethereum network with an existing account.
-This authentication process can be performed in two ways: with private key and with mnemonic phrase. 
+This authentication process can be performed in two ways: with private key and with mnemonic phrase.
 A password will be asked during the command execution and is required to store locally a safe copy of the wallet. If the authentication process completes successfully a success message will be shown.
 
 \subsubsubsection{Login with private key}
@@ -70,15 +69,15 @@ The user can log inside his wallet using his private key, the command syntax is 
 \end{center}
 
 \subsubsubsection{Login with mnemonic phrase}
-The user can log inside his Ethereum wallet using the associated mnemonic phrase; the command syntax is the following: 
+The user can log inside his Ethereum wallet using the associated mnemonic phrase; the command syntax is the following:
 
 \begin{center}
 	\code{etherless login -m <mnemonic\_phrase>}
 \end{center}
-The flag -m must be present and the mnemonic phrase must be inserted without quotation marks. 
+The flag -m must be present and the mnemonic phrase must be inserted without quotation marks.
 
 \subsubsubsection{Whoami}
-The user can perfrom this command to get the address of the wallet associated with the current session. If the user tries to execute this command without being logged, an error message will be shown. 
+The user can perfrom this command to get the address of the wallet associated with the current session. If the user tries to execute this command without being logged, an error message will be shown.
 
 The command syntax is the following: \\
 \begin{center}
@@ -87,53 +86,53 @@ The command syntax is the following: \\
 After the execution of the command the address of the wallet associated with the current session will be displyed.
 
 \subsubsubsection{Logout}
-The user can perfrom this command to logout form the ethereum network; the command syntax is: 
+The user can perfrom this command to logout form the ethereum network; the command syntax is:
 \begin{center}
 	\code{etherless logout}
 \end{center}
-After executing this command all information about the user past session will be deleted. 
+After executing this command all information about the user past session will be deleted.
 
 \subsection{List functions}
-The application allow the user to see all functions available inside the platform or only the functions owned by him. \\ 
-\noindent In both cases for every function the following data will be provided: 
+The application allow the user to see all functions available inside the platform or only the functions owned by him. \\
+\noindent In both cases for every function the following data will be provided:
 \begin{itemize}
-	\item \textbf{Name: } the name of the function; 
-	\item \textbf{Price: } the cost to run the function; 
+	\item \textbf{Name: } the name of the function;
+	\item \textbf{Price: } the cost to run the function;
 \end{itemize}
 
 \subsubsubsection{List all functions}
-The user can list all function available inside the \textit{Etherless} platform using the command "list", its syntax is: 
+The user can list all function available inside the \textit{Etherless} platform using the command "list", its syntax is:
 \begin{center}
 	\code{etherless list}
 \end{center}
 \subsubsubsection{List only owned functions}
-If the user has already deployed a function inside the \textit{Etherless} platform, he can visualize these functions using the following syntax: 
+If the user has already deployed a function inside the \textit{Etherless} platform, he can visualize these functions using the following syntax:
 \begin{center}
 	\code{etherless list -m}
 \end{center}
 
 \subsection{Search for a function}
-To search all function having a keyword in their name use the command "search", with the syntax: 
+To search all function having a keyword in their name use the command "search", with the syntax:
 \begin{center}
 	\code{etherless search <keyword>}
 \end{center}
 
 A list of function will be displayed, for each function the following data will be provided:
 \begin{itemize}
-	\item \textbf{Name: } the name of the function; 
-	\item \textbf{Price: } the cost to run the function; 
-\end{itemize} 
+	\item \textbf{Name: } the name of the function;
+	\item \textbf{Price: } the cost to run the function;
+\end{itemize}
 
 \subsection{Function details}
-If you want to get details about a specific function, you can use the info command, with the following syntax: \\ 
+If you want to get details about a specific function, you can use the info command, with the following syntax: \\
 \begin{center}
 	\code{etherless info <function\_name>}
 \end{center}
-It will show you: 
+It will show you:
 \begin{itemize}
-	\item \textbf{Owner: } the address of the function owner; 
-	\item \textbf{Signature: } the parameters that the function needs;   
-	\item \textbf{Price: } the cost to run the function; 
+	\item \textbf{Owner: } the address of the function owner;
+	\item \textbf{Signature: } the parameters that the function needs;
+	\item \textbf{Price: } the cost to run the function;
 	\item \textbf{Description: } a textual description of the function.
 \end{itemize}
 
@@ -142,25 +141,24 @@ The command is used to run a specific function present in the etherless network.
 \begin{center}
 	\code{etherless run <function\_name> [params..]}
 \end{center}
-Run takes some times to retrive the resut, once the task is completed the result is displayed. If the request was not succesfull an error will be displayed insted and the cost will be refound, otherwise if the function is executed correctly the price amount is detracted from current user wallet. 
+Run takes some times to retrive the resut, once the task is completed the result is displayed. If the request was not succesfull an error will be displayed insted and the cost will be refound, otherwise if the function is executed correctly the price amount is detracted from current user wallet.
 
 \subsection{Delete a function}
-If you want to delete a function that you previously deployed, you can use the delete command. Its syntax is: 
+If you want to delete a function that you previously deployed, you can use the delete command. Its syntax is:
 \begin{center}
 	\code{etherless delete <function\_name>}
 \end{center}
-After the execution of the command  the application will show you an error or success message depending on the outcome of the operation. 
+After the execution of the command  the application will show you an error or success message depending on the outcome of the operation.
 
 \subsection{Deploy a function}
-If you want to deploy a function you can use the deploy command with the following syntax: 
+If you want to deploy a function you can use the deploy command with the following syntax:
 \begin{center}
 	\code{etherless delete <function\_name> <path> <desc>}
 \end{center}
-\noindent where: 
+\noindent where:
 \begin{itemize}
-	\item function\_name: is the name of the function that you want to deploy; 
-	\item path: is the relative path from the current position to the source file; 
-	\item desc: is a description of the function. 
-\end{itemize} 
-You can not specify the execution cost of your function, it will be choosen by the system. At the moment the execution price is fixed; we plan to determine it dynamically (based on the resource amount used by the function) in the future. After the execution of this command  the application will show you an error or success message depending on the outcome of the operation. 
-
+	\item function\_name: is the name of the function that you want to deploy;
+	\item path: is the relative path from the current position to the source file;
+	\item desc: is a description of the function.
+\end{itemize}
+You can not specify the execution cost of your function, it will be choosen by the system. At the moment the execution price is fixed; we plan to determine it dynamically (based on the resource amount used by the function) in the future. After the execution of this command  the application will show you an error or success message depending on the outcome of the operation.
