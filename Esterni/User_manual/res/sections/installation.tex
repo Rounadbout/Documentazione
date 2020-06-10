@@ -1,3 +1,34 @@
-\section{Installation}
-
-\subsection{Requirements}
+\section{Product installation and setup}
+  \subsection{Requirements}
+    In this section all of the basic requirements needed to run and test the product are described.
+    \subsubsection{Hardware requirements}
+      \begin{itemize}
+      	\item \textbf{Internet connection}: in order to interact with the Ethereum blockchain and the AWS services.
+      \end{itemize}
+    \subsubsection{Software requirements}
+      \begin{itemize}
+        \item \textbf{Node:} version 12.0.0 or higher. Download and install the latest version from the \href{https://nodejs.org/it/download/}{Node official site};
+        \item \textbf{npm (Node Package Manager):} comes with the Node installation, you'll need version 6.10.0 or higher;
+        \item \textbf{Git:} a working version of git, \href{https://git-scm.com/book/en/v2/Getting-Started-Installing-Git}{How to install Git}.
+      \end{itemize}
+    \subsubsection{General requirements}
+      The application interacts with the Ethereum network, in order to be able to do that an Ethereum account is needed. The account also needs to have a positive balance so that functionality costs can be covered. Etherless allows the creation of a wallet on the run, but it does not contain any Ethers.
+  \subsection{Installation}
+    The following instructions are to be intended for use on a unix-based system (instructions for use on different systems will be added in the future).
+    \subsubsection{Download the application}
+      A copy of Etherless-cli can be downloaded from out github repository. In the following list are the instructions to set up the application:
+      \begin{itemize}
+        \item download a zip of the repository from \href{https://github.com/RoundaboutTeam/etherless-cli/tree/master}{Etherless-cli}, as shown in the below image;
+        \begin{figure}[H]
+    			\centering
+    			\includegraphics[width=1.1\textwidth]{./res/img/down_zip_repo.png}
+    			\caption{Download zip from repo button}
+    		\end{figure}
+        \item unzip the files in a directory of your choosing;
+        \item open a terminal as administrator and move to the chosen directory, where you unzipped the files;
+        \item install the dependencies through \texttt{npm install};
+        \item run the command \texttt{npm link} to make the \texttt{etherless} commands available.
+      \end{itemize}
+      \textbf{Note:} we are working towards a more streamlined installation process.
+    \subsubsection{Usage}
+      The next section describes all the application's functionalities and how to run them. You will make use of the specific commands described to make use of its features.
