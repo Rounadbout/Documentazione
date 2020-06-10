@@ -3,29 +3,29 @@
 The aim of this section is to present a list of all the technologies used during the development of \textit{Etherless}, which are further described in the appendix at the end of this document.
 \subsubsection{Languages}
 \begin{itemize}
-	\item Javascript;
-	\item Typescript;
-	\item Solidity.
+	\item Javascript$_{G}$;
+	\item Typescript$_{G}$;
+	\item Solidity$_{G}$.
 \end{itemize}
 \subsubsection{Utilities}
 \begin{itemize}
-	\item Visual Studio Code;
-	\item Node.js;
-	\item Node Package Manager;
-	\item AWS Lambda;
-	\item AWS Elastic Beanstalk;
-	\item IPFS;
-	\item ESLint;
-	\item Serverless Framework;
-	\item Jest;
-	\item Open Zeppelin;
-	\item Infura;
-	\item Ropsten;
-	\item Ganache;
-	\item Truffle;
-	\item Mocha;
-	\item Chai;
-	\item Acorn.
+	\item Visual Studio Code$_{G}$;
+	\item Node.js$_{G}$;
+	\item Node Package Manager$_{G}$;
+	\item AWS Lambda$_{G}$;
+	\item AWS Elastic Beanstalk$_{G}$;
+	\item IPFS$_{G}$;
+	\item ESLint$_{G}$;
+	\item Serverless Framework$_{G}$;
+	\item Jest$_{G}$;
+	\item Open Zeppelin$_{G}$;
+	\item Infura$_{G}$;
+	\item Ropsten$_{G}$;
+	\item Ganache$_{G}$;
+	\item Truffle$_{G}$;
+	\item Mocha$_{G}$;
+	\item Chai$_{G}$;
+	\item Acorn$_{G}$.
 \end{itemize}
 \pagebreak
 \subsubsection{Libraries and dependencies}
@@ -88,11 +88,11 @@ The aim of this section is to present a list of all the technologies used during
 This section describes all of the basic requirements needed to run and test the product.
 \subsubsection{Hardware}
 \begin{itemize}
-	\item \textbf{Internet connection}: needed in order to interact with the Ethereum blockchain and AWS services.
+	\item \textbf{Internet connection}: needed in order to interact with the Ethereum blockchain and AWS$_{G}$.
 \end{itemize}
 \subsubsection{Software}
 \begin{itemize}
-	\item \textbf{AWS credentials}: in order to interact with Amazon Web Services, an AWS account is required;
+	\item \textbf{AWS$_{G}$ credentials}: in order to interact with Amazon Web Services$_{G}$, an AWS$_{G}$ account is required;
 	\item \textbf{ETH wallet}: in order to perform transactions on the Ethereum blockchain, a \textit{non empty} ETH wallet is required. With \textit{Etherless} the user can create a wallet on the run, but it does not contain any ETH.
 \end{itemize}
 \subsection{Setup}
@@ -106,9 +106,9 @@ This section describes all the steps needed to install \textit{Etherless}.
 \subsubsection{Node}
 	Download the the latest version of the executable file from the \href{https://nodejs.org/it/download/}{Node official website} and follow the given instructions. This will also install Node package manager.
 \subsubsection{Ganache}
-	Ganache is available in two variants, CLI and GUI. Refer to the \href{https://www.trufflesuite.com/docs/ganache/quickstart}{Ganache official website} for installation and usage.
+	Ganache$_{G}$ is available in two variants, CLI and GUI. Refer to the \href{https://www.trufflesuite.com/docs/ganache/quickstart}{Ganache$_{G}$ official website} for installation and usage.
 \subsubsection{Truffle}
- In order to install Truffle you need to run \texttt{npm install truffle -g} from your terminal window. The minimum version required is 4.0.0.
+ In order to install Truffle$_{G}$ you need to run \texttt{npm install truffle -g} from your terminal window. The minimum version required is 4.0.0.
 \subsection{Configuration}
 This section shows how to configure the work environment to be able to execute, test and develop on \textit{Etherless}. These configuration steps should be followed in the given order.
 \subsubsection{Cloning the repository}
@@ -116,7 +116,7 @@ To download the software product on your machine you should open a shell and cha
 \subsubsection{Installing the dependencies}
 To install all the packages and libraries needed to work with \textit{Etherless} you should open a shell and change to the main directory. Then you should run the command \texttt{npm install}, which will take care of installing all the dependencies specified in the \texttt{package.json} file.
 \subsubsection{AWS and Ethereum configurations}
-The files containing Ethereum and AWS credentials used to interact with the corresponding services are not included in the cloned repository for security reasons. These are present on the Etherless-server version already uploaded and are active on AWS Elastic Beanstalk.
+The files containing Ethereum and AWS$_{G}$ credentials used to interact with the corresponding services are not included in the cloned repository for security reasons. These are present on the Etherless-server version already uploaded and are active on AWS Elastic Beanstalk$_{G}$.
 Any developer who might want to work with a local version of Etherless-server should create an \texttt{AWSconfig.json} file structured as follows:
 \begin{quote}
 \texttt{ \\
@@ -142,7 +142,7 @@ The parameters within angular brackets should be replaced with the actual creden
 \subsubsection{Enable \texttt{etherless} commands}
 To enable using commands with the keyword \texttt{etherless} you should open a shell and change to the main directory. Then you should run the command \texttt{npm link} as Administrator.
 \subsubsection{Truffle Suite Configuration}
-	In order to interact with the Ropsten testnet, before beginning the installation process you need two keys: an Infura project id (from your own Infura account) and the mnemonic phrase of your Ethereum account. Having these credentials you need to edit the \textit{truffle-config.js} file, replacing the matching fields at the top with your own. Now you are ready to interact with the Ropsten test network directly from Truffle.\\
+	In order to interact with the Ropsten$_{G}$ testnet, before beginning the installation process you need two keys: an Infura$_{G}$ project id (from your own Infura$_{G}$ account) and the mnemonic phrase of your Ethereum account. Having these credentials you need to edit the \textit{truffle-config.js} file, replacing the matching fields at the top with your own. Now you are ready to interact with the Ropsten$_{G}$ test network directly from Truffle$_{G}$.\\
 	To interact only with a Ganache-cli local blockchain no further configuration is needed, as the information is already stored in the \textit{truffle-config.js} file.
 \subsection{Functionalities}
 	This section lists all the available functionalities of \textit{Etherless} and the corresponding CLI commands that trigger them.

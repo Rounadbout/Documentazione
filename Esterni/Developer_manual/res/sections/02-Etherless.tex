@@ -25,18 +25,18 @@
 	\begin{itemize}
 		\item \textbf{Etherless-cli}: accepts users' requests, routes them to Etherless-smart and displays information to the user;
 		\item \textbf{Etherless-smart}: processes the received requests and forwards them to Etherless-server if needed. Also returns the requests results to Etherless-cli, once they have been completed;
-		\item \textbf{Etherless-server}: interacts with AWS Lambda and other services in order to satisfy the received requests.
+		\item \textbf{Etherless-server}: interacts with AWS Lambda$_{G}$ and other services in order to satisfy the received requests.
 	\end{itemize}
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.9\linewidth]{diagrammi/generali/activity_diag_pattern2}
-		\caption{Activity diagram of a request interacting with AWS Lambda.}
+		\caption{Activity diagram of a request interacting with AWS Lambda$_{G}$.}
 	\end{figure}
-	Not all types of requests trigger the communication between all three modules. Some types of requests that do not need an interaction with AWS Lambda itself will be single-handedly completed by Etherless-smart.
+	Not all types of requests trigger the communication between all three modules. Some types of requests that do not need an interaction with AWS Lambda$_{G}$ itself will be single-handedly completed by Etherless-smart.
 	\begin{figure} [h!]
 		\centering
 		\includegraphics[width=0.8\linewidth]{diagrammi/generali/activity_diag_pattern1}
-		\caption{Activity diagram of a request that doesn't interact with AWS Lambda.}
+		\caption{Activity diagram of a request that doesn't interact with AWS Lambda$_{G}$.}
 	\end{figure}
 	\pagebreak
 	\subsection{Extensions} %Possibili sviluppi futuri

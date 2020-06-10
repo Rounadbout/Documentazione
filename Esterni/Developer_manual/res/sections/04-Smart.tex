@@ -7,7 +7,7 @@
 		Our goals when developing Etherless-smart were upgradeability and extensibility. For these reasons said module consists of three separate smart contracts:
 		\begin{itemize}
 			\item \textbf{EtherlessSmart:} is the main contract which serves as the middleman between Etherless-cli and Etherless-server. Each one of its methods is either invoked by Etherless-cli to send the requests or by Etherless-server to transmit the responses. In order to complete its own function executions this contract contains an instance of the other two contracts and communicates with them via function calls;
-			\item \textbf{EtherlessStorage:} is the storage contract. It stores all relevant information regarding the Javascript functions which can be called when using \textit{Etherless}. Moreover, it contains some utility methods to perform useful operations on this data;
+			\item \textbf{EtherlessStorage:} is the storage contract. It stores all relevant information regarding the Javascript$_{G}$ functions which can be called when using \textit{Etherless}. Moreover, it contains some utility methods to perform useful operations on this data;
 			\item \textbf{EtherlessEscrow:} is the contract which manages everything in regards to monetary transactions. It contains details about every pending transaction and its methods have been implemented to manage an escrow payment.
 		\end{itemize}
 

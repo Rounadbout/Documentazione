@@ -32,7 +32,7 @@
 					\end{itemize}
 	
 			\subsubsubsection{CommandManager} 
-			This class is a collection of static methods needed to interact with the external library Yargs, used for command management. It exposes functionalities to add a new command and start processing user input. 
+			This class is a collection of static methods needed to interact with the external library Yargs$_{G}$, used for command management. It exposes functionalities to add a new command and start processing user input. 
 				\subsubsubsection*{Methods}
 					\begin{itemize}
 						\item \textbf{addCommand}: adds a new command to the list of available CLI commands;
@@ -75,11 +75,11 @@
 					\end{itemize}
 		
 			\subsubsubsection{JSFileParser}
-			Since the deploy managed in Etherless-cli is of Javascript source file only, we created the class JSFileParser that implements the interface FileParser. This class is mainly used to check if a function exists inside a source file, and to obtain its signature. To manage the Javascript source file parsing process we use the \texttt{acorn} library. 
+			Since the deploy managed in Etherless-cli is of Javascript$_{G}$ source file only, we created the class JSFileParser that implements the interface FileParser. This class is mainly used to check if a function exists inside a source file, and to obtain its signature. To manage the Javascript$_{G}$ source file parsing process we use the \texttt{acorn}$_{G}$ library. 
 			
 				\subsubsection*{Attributes}
 					\begin{itemize}
-						\item \textbf{parsedFile}: tree structure created after the parsing process by the library \texttt{acorn}.
+						\item \textbf{parsedFile}: tree structure created after the parsing process by the library \texttt{acorn}$_{G}$.
 					\end{itemize}
 				
 				\subsubsection*{Methods}
@@ -107,11 +107,11 @@
 				\end{itemize}
 			
 			\subsubsubsection{IPFSFileManager}
-				Since we use the IPFS protocol to send and retrieve files, we created the class IPFSFileManager that implements the FileManager interface. To establish a connection to the IPFS network we use a small package that is responsible for the hiring of the IPFS connection implementation (\texttt{ipfs-mini} API). 
+				Since we use the IPFS$_{G}$ protocol to send and retrieve files, we created the class IPFSFileManager that implements the FileManager interface. To establish a connection to the IPFS$_{G}$ network we use a small package that is responsible for the hiring of the IPFS$_{G}$ connection implementation (\texttt{ipfs-mini} API$_{G}$). 
 				
 				\subsubsubsection*{Attributes}
 				\begin{itemize}
-					\item \textbf{ipfs}: object through which the class can interact with the \texttt{ipfs-mini} API.
+					\item \textbf{ipfs}: object through which the class can interact with the \texttt{ipfs-mini} API$_{G}$.
 				\end{itemize}
 				
 				\subsubsubsection*{Methods}
@@ -180,10 +180,10 @@
 					\end{itemize}
 		
 			\subsubsubsection{EthereumContract} 
-			We created the class EthereumContract to implement the EtherlessContract interface. In particular, all its provided functionalities communicate with the \textit{Etherless-smart} module and fetch blockchain data. \\ To interact with the smart-contract an instance of the Contract class provided by the library \texttt{ethers.js} is used.
+			We created the class EthereumContract to implement the EtherlessContract interface. In particular, all its provided functionalities communicate with the \textit{Etherless-smart} module and fetch blockchain data. \\ To interact with the smart-contract an instance of the Contract class provided by the library \texttt{ethers.js}$_{G}$ is used.
 				\subsubsubsection*{Attributes}
 					\begin{itemize}
-						\item \textbf{contract}: instance of the Contract class provided by \texttt{ethers.js}. It is used to interact with a smart contract, and in particular with the \textit{Etheless-smart} module; 
+						\item \textbf{contract}: instance of the Contract class provided by \texttt{ethers.js}$_{G}$. It is used to interact with a smart contract, and in particular with the \textit{Etheless-smart} module; 
 					\end{itemize}
 				
 				\subsubsubsection*{Methods}
