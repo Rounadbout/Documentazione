@@ -123,11 +123,11 @@
 
 
     \subsubsubsection{Progettazione}
-        L'attività di progettazione definisce una soluzione del problema presentato soddisfacente per tutti gli stakeholders, in relazione ai requisiti specificati nel documento \AdR{} \textit{2.0.0}. Questo garantisce che il prodotto\ped{\textit{G}} sviluppato soddisfi le proprietà e i bisogni specificati dal Proponente\ped{\textit{G}}.
+        L'attività di progettazione definisce una soluzione del problema presentato soddisfacente per tutti gli stakeholders, in relazione ai requisiti specificati nel documento \AdR{} \textit{3.0.0}. Questo garantisce che il prodotto\ped{\textit{G}} sviluppato soddisfi le proprietà e i bisogni specificati dal Proponente\ped{\textit{G}}.
         La progettazione ha quindi come obiettivo l'elaborazione di una struttura adeguata per il sistema, e si divide in:
         \begin{itemize}
         	\item{\textbf{Progettazione Architetturale}}: vengono svolte operazioni di incremento, verifica dei requisiti e progettazione ad alto livello di un'architettura adeguata alla realizzazione del progetto. La Technology Baseline\ped{\textit{G}} del progetto si ottiene alla fine di questo periodo;
-        	\item{\textbf{Progettazione di Dettaglio}}: vengono svolte operazioni di incremento, verifica dei documenti redatti; vengono definite le specifiche di dettaglio dell'architettura del prodotto\ped{\textit{G}}, partendo dalla Tecnology Baseline\ped{\textit{G}}. Particolare attenzione viene data alla codifica di tale prodotto\ped{\textit{G}} ed alla creazione di un manuale utente. La Product Baseline\ped{\textit{G}} del progetto si ottiene alla fine di questo periodo;
+        	\item{\textbf{Progettazione di Dettaglio}}: vengono svolte operazioni di incremento, verifica dei documenti redatti; vengono definite le specifiche di dettaglio dell'architettura del prodotto\ped{\textit{G}}, partendo dalla Tecnology Baseline\ped{\textit{G}}. Particolare attenzione viene data alla codifica di tale prodotto\ped{\textit{G}} ed alla creazione di un manuale utente e di un manuale sviluppatore. La Product Baseline\ped{\textit{G}} del progetto si ottiene alla fine di questo periodo;
         \end{itemize}
     	I rispettivi output sono:
         \begin{itemize}
@@ -263,11 +263,11 @@
     	\subsubsubsection*{Qualità dell'architettura}
     	In seguito alla definizione dei requisiti, che consolida le funzionalità richieste, ci si occupa della realizzazione dell'architettura del sistema. Tale architettura dovrà godere delle seguenti proprietà:
     	\begin{itemize}
-    		\item{\textbf{sufficienza}}: deve soddisfare i requisiti definiti nel documento \AdR{} \textit{2.0.0};
+    		\item{\textbf{sufficienza}}: deve soddisfare i requisiti definiti nel documento \AdR{} \textit{3.0.0};
     		\item{\textbf{comprensibilità}}: deve essere capibile da tutti gli stakeholder;
     		\item{\textbf{modularità}}: deve essere suddivisa in parti chiare e ben distinte;
     		\item{\textbf{robustezza}}: deve essere in grado di sopportare ingressi diversi, sia da parte dell'utente che dell'ambiente;
-    		\item{\textbf{flessibilità}}: deve permettere di essere modificata senza sostanziali modifiche e a costi contenuti al variare dei requisiti;
+    		\item{\textbf{estensibilità}}: deve permettere di essere estesa nelle sue funzionalità senza sostanziali modifiche e a costi contenuti al variare dei requisiti;
     		\item{\textbf{efficienza}}: deve gestire le risorse in maniera da ridurre eventuali sprechi;
     		\item{\textbf{affidabilità}}: l'architettura deve garantire una buona usabilità del prodotto\ped{\textit{G}} una volta implementata;
     		\item{\textbf{disponibilità}}: la manutenzione delle sue parti deve richiedere un tempo limitato e non andare ad affliggere il corretto funzionamento di tutto il sistema;
@@ -275,6 +275,7 @@
     		\item{\textbf{semplicità}}: ogni sua parte deve contenere solo il necessario e nulla di superfluo;
     		\item{\textbf{incapsulazione}}: costituita da componenti le cui informazioni interne non sono visibii da fuori;
     		\item{\textbf{coesione}}: composta in maniera che le parti con obiettivo comune siano raggruppate insieme;
+    		\item{\textbf{scalabilità}}: deve avere la capacità di gestire le risorse in funzione delle necessità e disponibilità;
     		\item{\textbf{basso accoppiamento}}: composta da parti distinte che devono essere indipendenti tra di loro, in modo che l'architettura possa subire modifiche a costi contenuti;
     	\end{itemize}
 
@@ -288,7 +289,7 @@
        	\item migliorare la qualità del prodotto\ped{\textit{G}}.
    	\end{itemize}
 
-   	\noindent La scrittura del codice dovrà inoltre perseguire gli obiettivi di qualità stabiliti nel documento \textit{\PdQ{} 2.0.0}, in modo da garantire una buona qualità del codice.
+   	\noindent La scrittura del codice dovrà inoltre perseguire gli obiettivi di qualità stabiliti nel documento \textit{\PdQ{} 3.0.0}, in modo da garantire una buona qualità del codice.
     	\subsubsection*{Stile di codifica}
    \begin{itemize}
          \item{\textbf{indentazione}: i blocchi innestati devono essere correttamente indentati, usando per ciascun livello di indentazione quattro (4) spazi, fatta eccezione per i commenti. Ogni programmatore dovrà configurare adeguatamente il proprio IDE\ped{\textit{G}} al fine di rispettare tale norma;}
@@ -299,7 +300,8 @@
 		\item{\textbf{costanti}: le costanti devono essere scritte usando solo lettere maiuscole (e.g. COSTANTE). Nel caso siano composte da più parole, queste devono essere separate dal carattere speciale underscore (e.g. NOME\_COSTANTE);}
 		\item{\textbf{metodi}: i nomi dei metodi devono iniziare con una lettera minuscola e, nel caso 	siano composti da più parole, quelle successive devono iniziare con una lettera maiuscola (e.g. nomeMetodo);}
 		\item{\textbf{lingua}: le parti testuali di codice ed i commenti ad esso riferiti devono essere scritti in lingua inglese;}
-        \item{\textbf{ricorsione}: l'uso della ricorsione va evitato quanto più possibile.}
+        \item{\textbf{ricorsione}: l'uso della ricorsione va evitato quanto più possibile;}
+        \item{\textbf{commenti}: il codice deve essere adeguatamente commentato, seguendo le relative metriche.}
 	\end{itemize}
 
 	\noindent I componenti \textit{Etherless-cli} ed \textit{Etherless-server} dovranno essere codificati in TypeScript\ped{\textit{G}}, seguendo la Airbnb\ped{\textit{G}} JavaScript\ped{\textit{G}} Style Guide e lo strumento di analisi statica del codice ESLint\ped{\textit{G}}. \\
@@ -320,30 +322,18 @@
 		\end{itemize}
 
 	\subsubsubsection{Metriche di progettazione}
-		\subsubsection*{Coupling Between Objects (CBO)}
-		\begin{itemize}
-			\item{\textbf{Descrizione}}: la metrica CBO indica il numero di classi accoppiate ad una data classe;
-			\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero;
-			\item{\textbf{risultato}}: in linea generale si può dire che:
-			\begin{itemize}
-				\item un valore pari a 0 indica che la classe non ha alcuna relazione con nessun'altra classe presente all'interno del sistema;
-				\item un valore compreso tra 1 e 4 indica che la classe presenta un basso livello di accoppiamento;
-				\item un numero maggiore di 4 indica che la classe presenta un livello medio/alto di accoppiamento, che potrebbe complicarne il test e la manutenzione.
-			\end{itemize}
-		\end{itemize}
-
 		\subsubsection*{Structural Fan-In (SFIN)}
 		\begin{itemize}
 			\item{\textbf{Descrizione}}: la metrica SFIN indica il numero di componenti che utilizzano un dato modulo\ped{\textit{G}};
 			\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero;
-			\item{\textbf{risultato}}: un valore elevato di SFIN è indice di un riutilizzo consistente della componente considerata;
+			\item{\textbf{risultato}}: un valore elevato di SFIN è indice di un riutilizzo consistente della componente considerata.
 		\end{itemize}
 
 		\subsubsection*{Structural Fan-Out (SFOUT)}
 		\begin{itemize}
 			\item{\textbf{Descrizione}}: la metrica SFOUT indica il numero di componenti utilizzate dal modulo\ped{\textit{G}} considerato;
 			\item{\textbf{unità di misura}}: la metrica viene espressa tramite un numero intero;
-			\item{\textbf{risultato}}: un valore elevato di SFOUT è indice di un eccessivo livello di accoppiamento della componente;
+			\item{\textbf{risultato}}: un valore elevato di SFOUT è indice di un eccessivo livello di accoppiamento della componente.
 		\end{itemize}
 
 	\subsubsubsection{Metriche di codifica}
@@ -406,22 +396,22 @@
 		\url{https://eslint.org/}
 	\end{center}
 
-	\subsubsubsection{Ethers.js}
-	Ethers.js\ped{\textit{G}} è una libreria che consente l'interazione con la blockchain\ped{\textit{G}} Ethereum\ped{\textit{G}} ed il suo ecosistema.
-	\begin{center}
-		\url{https://docs.ethers.io/ethers.js}
-	\end{center}
-
 	\subsubsubsection{Ganache}
 	Si tratta di un Ethereum client, con la particolarità di consentire la creazione di una blockchain\ped{\textit{G}} privata finalizzata all'esecuzione di test in locale.
 	\begin{center}
 		\url{https://www.trufflesuite.com/ganache}
 	\end{center}
 
-	\subsubsubsection{Husky}
-	Strumento utilizzato per la prevenzione di commit\ped{\textit{G}} dannosi nella Repository\ped{\textit{G}} Git\ped{\textit{G}}.
+	\subsubsubsection{Infura}
+	Infura\ped{\textit{G}} fornisce gli strumenti e l'infrastruttura, che consentono agli sviluppatori di portare facilmente la loro applicazione blockchain dai test alla distribuzione su scala, con un accesso semplice e affidabile ad Ethereum ed IPFS. Viene utilizzato principalmente nell'interazione con la rete di test Ropsten.
 	\begin{center}
-		\url{https://github.com/typicode/husky}
+		\url{https://infura.io/}
+	\end{center}
+
+	\subsubsubsection{IPFS}
+	IPFS\ped{\textit{G}} è un protocollo e una rete peer-to-peer per l'archiviazione e la condivisione di dati in un file system distribuito. Viene utilizzato per il trasferimento di file ad Etherless-server.
+	\begin{center}
+		\url{https://ipfs.io/}
 	\end{center}
 
 	\subsubsubsection{Node.js}
@@ -458,6 +448,12 @@
 	Linguaggio utilizzato per lo sviluppo di smart contract\ped{\textit{G}}.
 	\begin{center}
 		\url{https://solidity.readthedocs.io/en/v0.6.4/}
+	\end{center}
+
+	\subsubsubsection{StarUML}
+	StarUML\ped{\textit{G}} è uno strumento utile alla creazione di diagrammi UML.
+	\begin{center}
+		\url{http://staruml.io/}
 	\end{center}
 
 	\subsubsubsection{Truffle}

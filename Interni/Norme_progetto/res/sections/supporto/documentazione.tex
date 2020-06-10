@@ -17,8 +17,12 @@
       Ogni documento attraversa diversi stadi:
       \begin{itemize}
         \item \textbf{Creazione e strutturazione del documento:} il documento viene creato nella sua directory di appartenenza (secondo le indicazioni presenti nella sezione "Documenti interni ed esterni"), e viene stesa la sua struttura generale. Viene utilizzato un template\ped{\textit{G}} \LaTeX{}\ped{\textit{G}} (descritto nella sezione \textsection3.1.2.2);
+        
         \item \textbf{Stesura:} scrittura effettiva dei contenuti del documento da parte di un redattore\ped{\textit{G}}. Ogni contenuto scritto dal redattore\ped{\textit{G}} deve essere prontamente revisionato da un Verificatore per garantirne la validità;
-        \item \textbf{Verifica:} attività eseguita dai Verificatori, i quali si occupano di controllare che il documento sia conforme alle \textit{\NdP{} v2.0.0}, sia sintatticamente che semanticamente. Alla fine di ogni controllo, il resoconto della verifica viene consegnato al Responsabile di Progetto che provvede a notificare il redattore\ped{\textit{G}} in caso di errori, riportando il documento al passo di "Stesura". Quando la fase di verifica finale non rileva ulteriori errori, il Responsabile passa il documento al processo di "Approvazione";
+       
+        \item \textbf{Verifica:} attività eseguita dai Verificatori, i quali si occupano di controllare che il documento sia conforme alle 
+        \textit{\NdP{} v3.0.0}, sia sintatticamente che semanticamente. Alla fine di ogni controllo, il resoconto della verifica viene consegnato al Responsabile di Progetto che provvede a notificare il redattore\ped{\textit{G}} in caso di errori, riportando il documento al passo di "Stesura". Quando la fase di verifica finale non rileva ulteriori errori, il Responsabile passa il documento al processo di "Approvazione";
+        
         \item \textbf{Approvazione:} in questa fase i Verificatori hanno terminato i controlli finali con esito positivo, comunicandoli al Responsabile, il quale si occupa di approvare il documento e preparare il rilascio.
       \end{itemize}
   	\subsubsubsection*{Destinatari}
@@ -29,30 +33,40 @@
   	\end{itemize}
 	Di seguito sono elencati i documenti ufficiali prodotti e la loro classificazione in uso Interno o Esterno:
 	\begin{itemize}
-	\item \textbf{Norme di Progetto}:
-	documento ad uso Interno.\\
-	Lo scopo delle \textit{\NdP{}} è descritto nella sezione \textsection1.1 "Scopo del Documento", di questo stesso documento;
-	
-	\item \textbf{Studio di Fattibilità}:
-	documento ad uso Interno.\\
-	Lo \textit{\SdF{}} ha l'obiettivo di esporre (brevemente) ogni capitolato\ped{\emph{G}} e di elencare per ognuno gli aspetti positivi e le criticità che il team ha individuato;
-	
-	\item \textbf{Glossario}:
-	documento ad uso Esterno.\\
-	Il \Glossario{}  ha lo scopo di disambiguare alcuni termini che compaiono all'interno dei documenti e vengono utilizzati nelle comunicazioni interne;
-	
-	\item \textbf{Analisi dei Requisiti}:
-	documento ad uso Esterno.\\
-	Lo  scopo  dell'\textit{\AdR{}} è di esporre dettagliatamente i requisiti individuati per lo sviluppo del capitolato\ped{\emph{G}} scelto;
-	
-	\item \textbf{Piano di Progetto}:
-	documento ad uso Esterno.\\
-	Lo scopo del \textit{\PdP{}} è di organizzare le attività in modo da gestire le risorse disponibili in termini di tempo e "forza lavoro";
-	
-	\item \textbf{Piano di Qualifica}:
-	documento ad uso Esterno.\\
-	Lo scopo del \textit{\PdQ{}} è di presentare i metodi di verifica e validazione implementati dal gruppo, per garantire la qualità del prodotto\ped{\textit{G}} e dei processi adottati.
+		\item \textbf{Norme di Progetto}:
+		documento ad uso Interno.\\
+		Lo scopo delle \textit{\NdP{}} è descritto nella sezione \textsection1.1 "Scopo del Documento", di questo stesso documento;
+		
+		\item \textbf{Studio di Fattibilità}:
+		documento ad uso Interno.\\
+		Lo \textit{\SdF{}} ha l'obiettivo di esporre (brevemente) ogni capitolato\ped{\emph{G}} e di elencare per ognuno gli aspetti positivi e le criticità che il team ha individuato;
+		
+		\item \textbf{Glossario}:
+		documento ad uso Esterno.\\
+		Il \Glossario{}  ha lo scopo di disambiguare alcuni termini che compaiono all'interno dei documenti e vengono utilizzati nelle comunicazioni interne;
+		
+		\item \textbf{Analisi dei Requisiti}:
+		documento ad uso Esterno.\\
+		Lo  scopo  dell'\textit{\AdR{}} è di esporre dettagliatamente i requisiti individuati per lo sviluppo del capitolato\ped{\emph{G}} scelto;
+		
+		\item \textbf{Piano di Progetto}:
+		documento ad uso Esterno.\\
+		Lo scopo del \textit{\PdP{}} è di organizzare le attività in modo da gestire le risorse disponibili in termini di tempo e "forza lavoro";
+		
+		\item \textbf{Piano di Qualifica}:
+		documento ad uso Esterno.\\
+		Lo scopo del \textit{\PdQ{}} è di presentare i metodi di verifica e validazione implementati dal gruppo, per garantire la qualità del prodotto\ped{\textit{G}} e dei processi adottati;
+		
+		\item \textbf{Developer Manual}:
+		documento ad uso Esterno in lingua inglese.\\
+		Lo scopo del \textit{Developer Manual} è di presentare il prodotto nei suoi dettagli implementativi ed architetturali. Si rivolge principalmente a sviluppatori che si occuperanno della manutenzione o di future estensioni del software;
+		
+		\item \textbf{User Manual}:
+		documento ad uso Esterno in lingua inglese.\\
+		Lo scopo dello \textit{User Manual} è di presentare il prodotto ad un utilizzatore, trattando nello specifico funzionalità e benefici forniti dall'utilizzo del software sviluppato.
+		
 	\end{itemize}
+
    	\subsubsubsection{Design e sviluppo}
       \subsubsubsection*{Template \LaTeX}
         Per uniformare la struttura dei documenti il gruppo ha deciso di creare un template\ped{\textit{G}} \LaTeX{}\ped{\textit{G}}, da utilizzare per la stesura di tutti i documenti ufficiali. Il template\ped{\textit{G}} è contenuto nella cartella \LaTeX{}\ped{\textit{G}}, la cui struttura è la seguente:
@@ -65,7 +79,9 @@
               \item \textbf{nomi dei documenti:} nomi dei documenti ufficiali.
             \end{itemize}
           \item \textbf{configs.tex:} contiene i comandi per l'inclusione dei necessari pacchetti \LaTeX{}\ped{\textit{G}} e la definizione dell'aspetto grafico generale dei documenti;
+          \item \textbf{en\_configs.tex:} versione inglese del file 'configs.txt';
           \item \textbf{copertina.tex:} contiene il codice \LaTeX{}\ped{\textit{G}} per la copertina, ovvero la prima pagina di ogni documento (la cui struttura è descritta nella sezione \textsection3.1.2.2);
+          \item \textbf{en\_copertina.tex:}  versione inglese del file 'copertina.txt';
           \item \textbf{Template:} directory che contiene la struttura "classica" di un documento (quest'ultima viene descritta di seguito).
         \end{itemize}
         La directory Template ha la seguente struttura:
@@ -81,7 +97,7 @@
         %da espandere
 
       \subsubsubsection*{Copertina}
-        La copertina è la prima pagina di ogni documento e contiene alcune informazioni generali:
+        La copertina è la prima pagina di ogni documento e contiene alcune informazioni generali, in lingua italiana o inglese a seconda del documento trattato:
         \begin{itemize}
           \item Logo del gruppo \Gruppo{};
           \item Nome del gruppo e nome del capitolato\ped{\emph{G}} scelto: \Gruppo{} - \NomeProgetto{};
@@ -108,11 +124,11 @@
         Questa sezione è presente anche nei Verbali\ped{\textit{G}} di riunione, nei quali si limita alla stesura, la verifica e l'approvazione del documento in questo ordine, per evitare modifiche retroattive ai Verbali.\\
         Ogni riga rappresenta una modifica ed è suddivisa in cinque colonne:
         \begin{itemize}
-          \item \textbf{Versione:} aggiornamento progressivo della versione;
-          \item \textbf{Data:} data della modifica;
-          \item \textbf{Nominativo:} nome e cognome del membro del gruppo che ha effettuato la modifica;
-          \item \textbf{Ruolo:} ruolo ricoperto in quel momento dal membro del team che ha effettuato la modifica;
-          \item \textbf{Descrizione:} breve descrizione della modifica effettuata.
+          \item \textbf{V:} aggiornamento progressivo della versione;
+          \item \textbf{Data:} data dell'incremento della versione;
+          \item \textbf{Nominativo:} nome e cognome del membro del gruppo che ha effettuato la modifica e corrispondente ruolo ricoperto;
+          \item \textbf{Descrizione:} breve descrizione della modifica effettuata;
+          \item \textbf{Verifica:} nome e cognome del verificatore che ha revisionato le modifiche apportate.
         \end{itemize}
 
       \subsubsubsection*{Indice}
