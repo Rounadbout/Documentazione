@@ -1,0 +1,29 @@
+\def\arraystretch{1.75}
+\rowcolors{2}{lightRowColor}{darkRowColor}
+\begin{longtable}{
+		>{\centering}p{0.12\textwidth}
+		>{}p{0.5\textwidth}
+		>{\centering}p{0.17\textwidth}
+		>{\centering}p{0.12\textwidth} }
+
+	\caption{Tabella dei test di unitá} \\
+	\coloredTableHead
+	\textbf{\color{white}Id Test} &
+	\centering\textbf{\color{white}Descrizione} &
+	\centering\textbf{\color{white}Implementato} &
+	\textbf{\color{white}Superato}
+	\endfirsthead
+
+	\rowcolor{white}\caption[]{(continua)}\\
+	\coloredTableHead
+	\textbf{\color{white}Id Test} &
+	\centering\textbf{\color{white}Descrizione} &
+	\centering\textbf{\color{white}Implementato} &
+	\textbf{\color{white}Superato}
+	\endhead
+
+
+		%Prova
+		Prova id & Prova descrizione & No & No \tabularnewline
+		
+\end{longtable}
