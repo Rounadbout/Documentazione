@@ -1,0 +1,208 @@
+\def\arraystretch{1.75}
+\rowcolors{2}{lightRowColor}{darkRowColor}
+\begin{longtable}{
+		>{\centering}p{0.12\textwidth}
+		>{}p{0.88\textwidth}}
+
+	\caption{Tabella di tracciamento dei test - metodi} \\
+	\coloredTableHead
+	\textbf{\color{white}Id Test} &
+	\centering\textbf{\color{white}Metodo} 
+	\endfirsthead
+
+	\rowcolor{white}\caption[]{(continua)}\\
+	\coloredTableHead
+	\textbf{\color{white}Id Test} &
+	\centering\textbf{\color{white}Metodo}
+	\endhead
+
+	%CLI
+	TU1.01 & EthereumUserSession::saveWallet(password: string, wallet: Wallet) \\
+
+	TU1.02 & EthereumUserSession::isLogged() \\
+
+	TU1.03 & EthereumUserSession::signup() \\
+
+	TU1.04 & EthereumUserSession::logout() \\
+
+	TU1.05 & EthereumUserSession::restoreWallet(password: string) \\
+
+	TU1.06 & EthereumUserSession::loginWithPrivateKey(privatekey: string, password: string) \\
+
+	TU1.07 & EthereumUserSession::loginWithMnemonicPhrase(mnemonic: string, password: string) \\
+
+	TU1.08 & EthereumUserSession::getAddress() \\
+
+	TU1.09 & EthereumContract::connect(wallet: Wallet) \\
+
+	TU1.10 & EthereumContract::getAllFunctions() \\
+
+	TU1.11 & EthereumContract::getMyFunctions(password: string) \\
+
+	TU1.12 & EthereumContract::getFunctionInfo(name: string) \\
+
+	TU1.13 & EthereumContract::existsFunction(name: string) \\
+
+	TU1.14 & EthereumContract::getExecHistory(address: string) \\
+
+	TU1.15 & EthereumContract::sendRunRequest(name: string, params: string) \\
+
+	TU1.16 & EthereumContract::sendDeleteRequest(name: string) \\
+
+	TU1.17 & EthereumContract::sendCodeUpdateRequest(name: string, filePath: string) \\
+
+	TU1.18 & EthereumContract::sendDeployRequest(name: string, signature: string, sourceCID: string, desc. string) \\
+
+	TU1.19 & EthereumContract::listenResponse(requestId: BigNumber) \\
+
+	TU1.20 & IPFSFileManager::save(buffer: Buffer) \\
+
+	TU1.21 & IPFSFileManage::get(cid: string) \\
+
+	TU1.22 & JSFileParser::existsFunction(funcName: string) \\
+
+	TU1.23 & JSFileParser::getFunctionSignature(funcName: string) \\
+
+	TU1.24 & Command::getCommand() \\
+
+	TU1.25 & Command::getDescription() \\
+	
+	% SMART
+	TU2.1  &  EtherlessSmart::getFuncList()  \tabularnewline
+	
+	TU2.2  &  EtherlessSmart::runFunction(funcName:string, param:string)  \tabularnewline
+	
+	TU2.3  &  EtherlessSmart::deployFunction(funcName:string, signature:string, description:string, funcHash:string)  \tabularnewline
+	
+	TU2.4  &  EtherlessSmart::deleteFunction(funcName:string)  \tabularnewline
+	
+	TU2.5  &  EtherlessSmart::editFunction(funcName:string, funcHash:string)  \tabularnewline
+	
+	TU2.6  &  EtherlessSmart::runResult(message:string, id:uint256, successful:bool)  \tabularnewline
+	
+	TU2.7  &  EtherlessSmart::deployResult(message:string, name:string, id:uint256, successful:bool)  \tabularnewline
+	
+	TU2.8  &  EtherlessSmart::deleteResult(message:string, name:string, id:uint256, successful:bool)  \tabularnewline
+	
+	TU2.9  &  EtherlessSmart::editResult(message:string, name:string, id:uint256, successful:bool)  \tabularnewline
+	
+	TU2.10 &  EtherlessSmart::deployResult(message:string, name:string, id:uint256, successful:bool)  \tabularnewline
+	
+	TU2.11 &  EtherlessSmart::deployResult(message:string, name:string, id:uint256, successful:bool)  \tabularnewline
+	
+	TU2.12 &  EtherlessSmart::deleteResult(message:string, name:string, id:uint256, successful:bool)  \tabularnewline
+	
+	TU2.13 &  EtherlessSmart::editFunctionDesc(funcName:string, desc:string, funcHash:string)  \tabularnewline
+	
+	TU2.14 &  EtherlessSmart::getNewId()  \tabularnewline
+	
+	TU2.15 &  EtherlessSmart::getList()  \tabularnewline
+	
+	TU2.16 &  EtherlessSmart::getOwnedList(owner:address)  \tabularnewline
+	
+	TU2.17 &  EtherlessSmart::getInfo(funcName:string)  \tabularnewline
+	
+	TU2.18 &  EtherlessSmart::getCost(funcName:string)  \tabularnewline
+	
+	TU2.19 &  EtherlessSmart::deployFunction(funcName:string, signature:string, description:string, funcHash:string)  \tabularnewline
+	
+	TU2.20 &  EtherlessStorage::insertNewFunction(name:string, signature:string , price:uint256, dev:address, description:string )  \tabularnewline
+	
+	TU2.21 &  EtherlessSmart::existsFunction(fname:string)  \tabularnewline
+	
+	TU2.22 &  EtherlessStorage::removeFunction(toRemove:string)  \tabularnewline
+	
+	TU2.23 &  EtherlessStorage::getFuncPrice(funcName:string)  \tabularnewline
+	
+	TU2.24 &  EtherlessStorage::getFuncDev(funcName:string)  \tabularnewline
+	
+	TU2.25 &  EtherlessStorage::compareString(s1:string, s2:string)  \tabularnewline
+	
+	TU2.26 &  EtherlessStorage::uintToString(x:uint256)  \tabularnewline
+	
+	TU2.27 &  EtherlessStorage::addressToString(addr:address)  \tabularnewline
+	
+	TU2.28 &  EtherlessStorage::singleFuncJson(funcName:string, info:bool)  \tabularnewline
+	
+	TU2.29 &  EtherlessEscrow::withdraw(payee:string, index:uint256)  \tabularnewline
+	
+	TU2.30 &  EtherlessEscrow::deposit(sender:address, beneficiary:address , amount:uint256, index:uint256)  \tabularnewline
+	
+	TU2.31 &  EtherlessEscrow::getBeneficiary(index:uint256)  \tabularnewline
+	
+	TU2.32 &  EtherlessEscrow::getSender(index:uint256)  \tabularnewline
+	
+	TU2.33 &  EtherlessEscrow::depositOf(index:uint256)  \tabularnewline
+	
+	TU2.34 &  EtherlessSmart::onlyServer(invokedFrom:address)  \tabularnewline
+	
+	TU2.35 &  EtherlessEscrow::onlyOwner  \tabularnewline
+	
+	TU2.36 &  EtherlessEscrow::onlyOwner  \tabularnewline
+	
+	% Server
+	TU3.01 & EventDispatcher::attach(callback: any) \\
+	
+	TU3.02 & EventDispatcher::detach(callback: any) \\
+	
+	TU3.03 & EventDispatcher::attach(callback: any) \\
+	
+	TU3.04 & EventDispatcher::detach(callback: any) \\
+	
+	TU3.05 & EventDispatcher::dispatch(data: EventData) \\
+	
+	TU3.06 & SmartManager:onRun(callback: any) \\
+	
+	TU3.07 & SmartManager:onDeploy(callback: any) \\
+	
+	TU3.08 & SmartManager:onDelete(callback: any) \\
+	
+	TU3.09 & SmartManager:onEdit(callback: any) \\
+	
+	TU3.10 & EventDispatcher::dispatch(data: RunEventData) \\
+	
+	TU3.11 & EventDispatcher::dispatch(data: DeployEventData) \\
+	
+	TU3.12 & EventDispatcher::dispatch(data: DeleteEventData) \\
+	
+	TU3.13 & EventDispatcher::dispatch(data: EditEventData) \\
+	
+	TU3.14 & SmartManager::sendRunResponse(message: string, id: BigNumber, success: boolean) \\
+	
+	TU3.15 & SmartManager::sendDeployResponse(message: string, functionName: string, id: BigNumber, success: boolean) \\
+	
+	TU3.16 & SmartManager::sendDeleteResponse(message: string, functionName: string, id: BigNumber, success: boolean) \\
+	
+	TU3.17 & SmartManager::sendEditResponse(message: string, functionName: string, id: BigNumber, success: boolean) \\
+	
+	TU3.18 & EventProcessor::processRunEvent(data: RunEventData) \\
+	
+	TU3.19 & EventProcessor::processDeployEvent(data: DeployEventData) \\
+	
+	TU3.20 & EventProcessor::processDeleteEvent(data: DeleteEventData) \\
+	
+	TU3.21 & EventProcessor::processEditEvent(data: EditEventData) \\
+	
+	TU3.22 & AWSManager::invokeLambda(functionName: string, parameters: []) \\
+	
+	TU3.23 & AWSManager::invokeLambda(functionName: string, parameters: []) \\
+	
+	TU3.24 & AWSManager::invokeLambda(functionName: string, parameters: []) \\
+	
+	TU3.25 & IPFSManager::getFileContent(hash: string) \\
+	
+	TU3.26 & IPFSManager::getFileContent(hash: string) \\
+	
+	TU3.27 & AWSManager::deploy(functionName: string, fileContent: Buffer) \\
+	
+	TU3.28 & AWSManager::deploy(functionName: string, fileContent: Buffer) \\
+	
+	TU3.29 & AWSManager::delete(functionName: string) \\
+	
+	TU3.30 & AWSManager::delete(functionName: string) \\
+	
+	TU3.31 & AWSManager::edit(functionName: string, fileContent: Buffer) \\
+	
+	TU3.32 & AWSManager::edit(functionName: string, fileContent: Buffer) \\
+
+\end{longtable}

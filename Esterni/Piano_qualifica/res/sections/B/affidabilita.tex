@@ -1,0 +1,27 @@
+\subsubsubsection{Densità errori}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture} [scale = 0.7]
+		\begin{axis}[
+		xlabel={\textbf{Tempo}},
+		ylabel={\textbf{Densità errori}},
+		date coordinates in=x,
+		ymin=-2,
+		ymax=20,
+		xtick=data,
+		xticklabel style={
+			rotate=90,
+			anchor=near xticklabel,
+		},
+		xticklabel=\year-\month-\day,
+		]
+		\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/affidabilita/Cli.csv};
+		\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/affidabilita/Smart.csv};
+		\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/affidabilita/Server.csv};
+		\draw [line width=0.1, red](2020-5-1, 10)--(2020-6-30, 10);
+		\legend{$Cli$ ,$Smart$ ,$Server$};
+		\end{axis}
+		\end{tikzpicture} 
+		\caption{Densità errori}
+	\end{figure}
