@@ -99,29 +99,29 @@
 	Abstract class, whose derived classes are used to encapsulate the content of external blockchain events into processing requests.
 	\subsubsubsection*{Attributes}
 	\begin{itemize}
-		\item \textbf{id}: an integer number, provider by Etherless-smart, used to uniquely identify a processing request.
+		\item \textbf{id}: an integer number, provided by Etherless-smart, used to uniquely identify a processing request.
 	\end{itemize}
 	\subsubsubsection*{Attributes - RunEventData}
 	\begin{itemize}
-		\item \textbf{id}: integer number, provider by Etherless-smart, used to uniquely identify a processing 'Run' request;
+		\item \textbf{id}: integer number, provided by Etherless-smart, used to uniquely identify a processing 'Run' request;
 		\item \textbf{functionName}: string identifying the name of the function to be run;
 		\item \textbf{parameters}: array identifying the parameters given to the function to be run.
 	\end{itemize}
 	\subsubsubsection*{Attributes - DeployEventData}
 	\begin{itemize}
-		\item \textbf{id}: integer number, provider by Etherless-smart, used to uniquely identify a processing 'Deploy' request;
+		\item \textbf{id}: integer number, provided by Etherless-smart, used to uniquely identify a processing 'Deploy' request;
 		\item \textbf{functionName}: string identifying the name of the function to be deployed;
 		\item \textbf{hash}: string which identifies the IPFS location of the file to be used for the deloyment.
 	\end{itemize}
 	\subsubsubsection*{Attributes - EditEventData}
 	\begin{itemize}
-		\item \textbf{id}: integer number, provider by Etherless-smart, used to uniquely identify a processing 'Edit' request;
+		\item \textbf{id}: integer number, provided by Etherless-smart, used to uniquely identify a processing 'Edit' request;
 		\item \textbf{functionName}: string identifying the name of the function to be edited;
 		\item \textbf{hash}: string which identifies the IPFS location of the file to be used for the edit.
 	\end{itemize}
 	\subsubsubsection*{Attributes - DeleteEventData}
 	\begin{itemize}
-		\item \textbf{id}: integer number, provider by Etherless-smart, used to uniquely identify a processing 'Delete' request;
+		\item \textbf{id}: integer number, provided by Etherless-smart, used to uniquely identify a processing 'Delete' request;
 		\item \textbf{functionName}: string identifying the name of the function to be deleted.
 	\end{itemize}
 
@@ -223,7 +223,8 @@
 	\begin{itemize}
 		\item \textbf{injectHandler}: used to create and inject a handler for the function to be deployed, which will be used by Lambda to handle parameterized invocations to the function;
 		\item \textbf{buildZip}: used to build a Lambda deployment package, which consists of a Zip file containing the function to be deployed and all the dependencies required by Lambda;
-		\item \textbf{deploy}: used to request the deployment of the given Lambda deployment package, to the AWS Lambda service.
+		\item \textbf{deploy}: used to request the deployment of the given Lambda deployment package, to the AWS Lambda service;
+		\item \textbf{edit}: used to request the deployment of the given Lambda deployment package, to the AWS Lambda service, in order to update the code of an existing Lambda function.
 	\end{itemize}
 	\newgeometry{a4paper,left=1in,right=1in,top=1in,bottom=1in,nohead}
 	\begin{landscape}
