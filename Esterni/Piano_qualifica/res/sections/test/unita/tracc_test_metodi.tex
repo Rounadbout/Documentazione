@@ -2,16 +2,12 @@
 \rowcolors{2}{lightRowColor}{darkRowColor}
 \begin{longtable}{
 		>{\centering}p{0.12\textwidth}
-		>{}p{0.5\textwidth}
-		>{\centering}p{0.17\textwidth}
-		>{\centering}p{0.12\textwidth} }
+		>{}p{0.88\textwidth}}
 
 	\caption{Tabella di tracciamento dei test - metodi} \\
 	\coloredTableHead
 	\textbf{\color{white}Id Test} &
-	\centering\textbf{\color{white}Descrizione} &
-	\centering\textbf{\color{white}Implementato} &
-	\textbf{\color{white}Superato}
+	\centering\textbf{\color{white}Metodo} 
 	\endfirsthead
 
 	\rowcolor{white}\caption[]{(continua)}\\
@@ -21,6 +17,120 @@
 	\endhead
 
 	%Prova
-	Prova id & Prova metodo \tabularnewline
+	TU1.01 & EthereumUserSession::saveWallet(password: string, wallet: Wallet) \\
 
+	TU1.02 & EthereumUserSession::isLogged() \\
+
+	TU1.03 & EthereumUserSession::signup() \\
+
+	TU1.04 & EthereumUserSession::logout() \\
+
+	TU1.05 & EthereumUserSession::restoreWallet(password: string) \\
+
+	TU1.06 & EthereumUserSession::loginWithPrivateKey(privatekey: string, password: string) \\
+
+	TU1.07 & EthereumUserSession::loginWithMnemonicPhrase(mnemonic: string, password: string) \\
+
+	TU1.08 & EthereumUserSession::getAddress() \\
+
+	TU1.09 & EthereumContract::connect(wallet: Wallet) \\
+
+	TU1.10 & EthereumContract::getAllFunctions() \\
+
+	TU1.11 & EthereumContract::getMyFunctions(password: string) \\
+
+	TU1.12 & EthereumContract::getFunctionInfo(name: string) \\
+
+	TU1.13 & EthereumContract::existsFunction(name: string) \\
+
+	TU1.14 & EthereumContract::getExecHistory(address: string) \\
+
+	TU1.15 & EthereumContract::sendRunRequest(name: string, params: string) \\
+
+	TU1.16 & EthereumContract::sendDeleteRequest(name: string) \\
+
+	TU1.17 & EthereumContract::sendCodeUpdateRequest(name: string, filePath: string) \\
+
+	TU1.18 & EthereumContract::sendDeployRequest(name: string, signature: string, sourceCID: string, desc. string) \\
+
+	TU1.19 & EthereumContract::listenResponse(requestId: BigNumber) \\
+
+	TU1.20 & IPFSFileManager::save(buffer: Buffer) \\
+
+	TU1.21 & IPFSFileManage::get(cid: string) \\
+
+	TU1.22 & JSFileParser::existsFunction(funcName: string) \\
+
+	TU1.23 & JSFileParser::getFunctionSignature(funcName: string) \\
+
+	TU1.24 & Command::getCommand() \\
+
+	TU1.25 & Command::getDescription() \\
+	
+	
+	% Server
+	TU3.01 & EventDispatcher::attach(callback: any) \\
+	
+	TU3.02 & EventDispatcher::detach(callback: any) \\
+	
+	TU3.03 & EventDispatcher::attach(callback: any) \\
+	
+	TU3.04 & EventDispatcher::detach(callback: any) \\
+	
+	TU3.05 & EventDispatcher::dispatch(data: EventData) \\
+	
+	TU3.06 & SmartManager:onRun(callback: any) \\
+	
+	TU3.07 & SmartManager:onDeploy(callback: any) \\
+	
+	TU3.08 & SmartManager:onDelete(callback: any) \\
+	
+	TU3.09 & SmartManager:onEdit(callback: any) \\
+	
+	TU3.10 & EventDispatcher::dispatch(data: RunEventData) \\
+	
+	TU3.11 & EventDispatcher::dispatch(data: DeployEventData) \\
+	
+	TU3.12 & EventDispatcher::dispatch(data: DeleteEventData) \\
+	
+	TU3.13 & EventDispatcher::dispatch(data: EditEventData) \\
+	
+	TU3.14 & SmartManager::sendRunResponse(message: string, id: BigNumber, success: boolean) \\
+	
+	TU3.15 & SmartManager::sendDeployResponse(message: string, functionName: string, id: BigNumber, success: boolean) \\
+	
+	TU3.16 & SmartManager::sendDeleteResponse(message: string, functionName: string, id: BigNumber, success: boolean) \\
+	
+	TU3.17 & SmartManager::sendEditResponse(message: string, functionName: string, id: BigNumber, success: boolean) \\
+	
+	TU3.18 & EventProcessor::processRunEvent(data: RunEventData) \\
+	
+	TU3.19 & EventProcessor::processDeployEvent(data: DeployEventData) \\
+	
+	TU3.20 & EventProcessor::processDeleteEvent(data: DeleteEventData) \\
+	
+	TU3.21 & EventProcessor::processEditEvent(data: EditEventData) \\
+	
+	TU3.22 & AWSManager::invokeLambda(functionName: string, parameters: []) \\
+	
+	TU3.23 & AWSManager::invokeLambda(functionName: string, parameters: []) \\
+	
+	TU3.24 & AWSManager::invokeLambda(functionName: string, parameters: []) \\
+	
+	TU3.25 & IPFSManager::getFileContent(hash: string) \\
+	
+	TU3.26 & IPFSManager::getFileContent(hash: string) \\
+	
+	TU3.27 & AWSManager::deploy(functionName: string, fileContent: Buffer) \\
+	
+	TU3.28 & AWSManager::deploy(functionName: string, fileContent: Buffer) \\
+	
+	TU3.29 & AWSManager::delete(functionName: string) \\
+	
+	TU3.30 & AWSManager::delete(functionName: string) \\
+	
+	TU3.31 & AWSManager::edit(functionName: string, fileContent: Buffer) \\
+	
+	TU3.32 & AWSManager::edit(functionName: string, fileContent: Buffer) \\
+	
 \end{longtable}
