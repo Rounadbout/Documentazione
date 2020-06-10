@@ -43,7 +43,7 @@ The tecnologies used during the development of Etherless, which are further desc
 
 	configstore & $\geq$5.0.1 \tabularnewline
 	inquirer & $\geq$7.1.0 \tabularnewline
-	node & $\geq$13.13.4 \tabularnewline
+	node & $\geq$12.18.0 \tabularnewline
 	acorn & $\geq$7.2.0 \tabularnewline
 	ethers & $\geq$4.0.47 \tabularnewline
 	ipfs-mini & $\geq$1.1.5 \tabularnewline
@@ -93,10 +93,10 @@ In this section all of the basic requirements needed to run and test the product
 \subsubsection{Software}
 \begin{itemize}
 	\item \textbf{AWS credentials}: in order to interact the Amazon Web Services, an AWS account is required;
-	\item \textbf{ETH wallet}: in order to perform transactions on the blockchain Ethereum, a \textit{non empty} ETH wallet is required. Etherless allows the creation of a wallet on the run, but it does not contain any Ethers.
+	\item \textbf{ETH wallet}: in order to perform transactions on the blockchain Ethereum, a \textit{non empty} ETH wallet is required. \textit{Etherless} allows the creation of a wallet on the run, but it does not contain any Ethers.
 \end{itemize}
 \subsection{Setup}
-This section describes all the steps needed to install the Etherless product.
+This section describes all the steps needed to install the \textit{Etherless} product.
 \subsubsection{Git}
 \begin{itemize}
 	\item \textbf{Windows}: download the .exe file from \href{https://git-scm.com/download/win}{Git official site}, and follow the given instruction;
@@ -112,9 +112,9 @@ This section describes all the steps needed to install the Etherless product.
 \subsection{Configuration}
 This section shows how to configure the work environment, to be able to execute, test and develop on Etherless. This configuration steps should be followed in the given order.
 \subsubsection{Cloning the repository}
-To download the software product on your machine, from the GitHub Etherless repository, you should open a shell and position on the folder you want the software to be located. Then you should use the command \texttt{git clone https://github.com/RoundaboutTeam/etherless.git} and position on the \texttt{master} branch.
+To download the software product on your machine, from the GitHub \textit{Etherless} repository, you should open a shell and position on the folder you want the software to be located. Then you should use the command \texttt{git clone https://github.com/RoundaboutTeam/etherless.git} and position on the \texttt{master} branch.
 \subsubsection{Installing the dependencies}
-To install all the packages and libreries needed to work with Etherless you should open a shell and position on the main directory of the software. Then you should run the \texttt{npm install} command, which will take care of installing all the dependencies specified in the \texttt{package.json} file.
+To install all the packages and libreries needed to work with \textit{Etherless} you should open a shell and position on the main directory of the software. Then you should run the \texttt{npm install} command, which will take care of installing all the dependencies specified in the \texttt{package.json} file.
 \subsubsection{AWS and Ethereum configurations}
 In the cloned repository two configuration files are not present for security reasons, since they contain the Ethereum and AWS credentials used to interact with these two services. They are present on the Etherless-server version already uploaded and active on AWS Elastic Beanstalk.
 Any developer who might want to work with a local version of Etherless-server should create an \texttt{AWSconfig.json} file structured as:
@@ -202,7 +202,7 @@ Then you should run the command \texttt{npm link} as Administrator.
 	\texttt{etherless delete <<function name>>}
 \subsection{Testing}
 \subsubsection{Etherless}
-Launching the \texttt{npm test} command inside the Etherless directory will automatically trigger all the developed tests for the whole software product.
+Launching the \texttt{npm test} command inside the \textit{Etherless} directory will automatically trigger all the developed tests for the whole software product.
 \subsubsection{Etherless-cli and Etherless-server}
 It is possible to test the Etherless-cli and Etherless-server modules indipendently, by launching the \texttt{npm test} command inside their directories.
 \subsubsection{Etherless-smart}

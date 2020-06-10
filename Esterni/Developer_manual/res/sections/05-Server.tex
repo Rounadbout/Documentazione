@@ -155,9 +155,11 @@
 		\caption{Class diagram of the IPFS package.}
 	\end{figure}
 	\subsubsubsection{IPFSManager}
-	Class used to communicate with the IPFS service, specifically to retrieve functions' data in string format from it.
+	Class used to communicate with the IPFS service, specifically to retrieve functions' data in string format from it. To estabilish a connection to the IPFS network we use \texttt{ipfs-mini} API. 
 	\subsubsubsection*{Attributes}
-	This class does not contain attributes.
+	\begin{itemize}
+		\item \textbf{connection}: object through which the class can interact with the \texttt{ipfs-mini} API.
+	\end{itemize}
 	\subsubsubsection*{Methods}
 	\begin{itemize}
 		\item \textbf{getContent}: used to retrieve functions' data in string format from IPFS.
