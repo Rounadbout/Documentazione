@@ -1,0 +1,136 @@
+\documentclass[a4paper]{letter}
+
+\input{../Latex/common_commands.tex}
+
+\usepackage[top=1in,bottom=0.5in,left=1in,right=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\usepackage{tabularx} % tabelle
+\usepackage[table]{xcolor} % definizione colore di sfondo per tabelle
+\usepackage{longtable} % permette di estendere le tabelle su più pagine
+
+
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[official]{eurosym}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=magenta,
+	urlcolor=blue,
+}
+
+% tabelle
+\def\arraystretch{1.5} % padding
+% comandi e colori tabelle
+\definecolor{lightRowColor}{HTML}{fafafa}
+\definecolor{darkRowColor}{HTML}{ffcccb}
+
+\newcommand{\coloredTableHead}{\rowcolor[HTML]{b61827}}
+\newcommand{\lightTableRow}{\rowcolor{lightRowColor}}
+\newcommand{\darkTableRow}{\rowcolor{darkRowColor}}
+
+\pagestyle{fancy}
+\title{Lettera di Presentazione}
+\author{Marco Positello}
+\fancypagestyle{plain}{
+\fancyhead[l]{\includegraphics[width=0.5\textwidth]{./res/img/cropped_logo.png}\hfill\includegraphics[width=0.15\textwidth]{./res/img/logo_uni.svg.png}}
+\fancyfoot[c]{}
+}
+\pagestyle{plain}
+
+\makeatletter
+\let\ps@empty\ps@plain
+\let\ps@firstpage\ps@plain
+\address{Via Trieste 93, 35131, Padova (PD)}
+
+\longindentation=0pt
+
+\begin{document}
+% \thispagestyle{fancy}
+\begin{letter} {Alla cordiale attenzione di \\ \TV \\ \RC \\ via Trieste 63, 35131, Padova\\ Dipartimento di Matematica \\ Università degli studi di Padova }
+  \vspace*{-0.4\baselineskip}
+\date{11 Giugno 2020}
+\opening{Egregi Professori,}
+con la presente, il gruppo \Gruppo{} intende comunicarVi ufficialmente la propria partecipazione alla Revisione di Qualifica in data 18 Giugno 2020, allo scopo di esporVi lo stato del prodotto da Voi commissionato, denominato:
+  \begin{center}
+    \textbf{Etherless: piattaforma cloud per il deploy di funzioni Javascript e gestione del pagamento per la loro esecuzione tramite Ethereum}
+  \end{center}
+  proposto dall'azienda \Proponente.\\
+  In allegato potrete trovare i seguenti documenti, che illustrano l'offerta:
+  \begin{itemize}
+    \item \AdR{} \textit{v3.0.0} (Esterni/analisi\_dei\_requisiti\_v3.0.0.pdf);
+    \item \PdP{} \textit{v3.0.0} (Esterni/piano\_di\_progetto\_v3.0.0.pdf);
+    \item \PdQ{} \textit{v3.0.0} (Esterni/piano\_di\_qualifica\_v3.0.0.pdf);
+    \item \Glossario{} \textit{v3.0.0} (Esterni/glossario\_v3.0.0.pdf);
+		\item \textit{User Manual v0.1.0} (Esterni/user\_manual\_v0.1.0.pdf);
+		\item \textit{Developer Manual v0.1.0} (Esterni/developer\_manual\_v0.1.0.pdf);
+    \item \NdP{} \textit{v3.0.0} (Interni/norme\_di\_progetto\_v3.0.0.pdf).
+    \item Verbali delle riunioni interne:
+      \begin{itemize}
+				\item \textit{VI\_2020\_05\_12} (Interni/Verbali/VI\_2020\_05\_12.pdf);
+				\item \textit{VI\_2020\_05\_13} (Interni/Verbali/VI\_2020\_05\_13.pdf);
+				\item \textit{VI\_2020\_05\_19} (Interni/Verbali/VI\_2020\_05\_19.pdf);
+				\item \textit{VI\_2020\_05\_23} (Interni/Verbali/VI\_2020\_05\_23.pdf);
+				\item \textit{VI\_2020\_05\_26} (Interni/Verbali/VI\_2020\_05\_26.pdf);
+				\item \textit{VI\_2020\_06\_02} (Interni/Verbali/VI\_2020\_05\_02.pdf);
+				\item \textit{VI\_2020\_06\_05} (Interni/Verbali/VI\_2020\_05\_05.pdf).
+      \end{itemize}
+    \item Verbali delle riunioni esterne:
+      \begin{itemize}
+				\item \textit{VE\_2020\_05\_21} (Esterni/Verbali/VE\_2020\_05\_21.pdf);
+				\item \textit{VE\_2020\_05\_26} (Esterni/Verbali/VE\_2020\_05\_26.pdf);
+				\item \textit{VE\_2020\_05\_04} (Esterni/Verbali/VE\_2020\_05\_28.pdf).
+      \end{itemize}
+  \end{itemize}
+\newpage
+
+In termini di tempi e costi di consegna, il gruppo \Gruppo{} conferma quanto proposto alla revisione precedente. \\
+Come descritto nel documento \PdP{} \textit{v3.0.0}, il gruppo si impegna a consegnare il prodotto entro la Revisione di Accettazione fissata in data 13 Luglio 2020, preventivando un importo totale di \textbf{15.036,00\euro{}}.\\
+Di seguito viene riportato l'organigramma del gruppo \Gruppo{}:
+\rowcolors{2}{lightRowColor}{darkRowColor}
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
+			>{\centering}p{0.15\textwidth}
+			>{\centering\arraybackslash}p{0.4\textwidth} }
+
+			\coloredTableHead
+			\textbf{\color{white}Nome} &
+			\textbf{\color{white}Matricola} &
+			\textbf{\color{white}Indirizzo email}
+			\tabularnewline
+			\endhead
+
+			% Contenuto della tabella
+			% Nome & Matricola & Indirizzo email\\
+			\VB & 1143463 & veronica.barbieri.1@studenti.unipd.it \\
+			\LB & 1122109 & luca.benetazzo@studenti.unipd.it \\
+			\NF & 1143541 & nicoletta.fabro@studenti.unipd.it \\
+			\EG & 1187021 & egon.galvani@studenti.unipd.it \\
+			\FJ & 1163064 & feim.jakupi@studenti.unipd.it \\
+			\MP & 1167693 & marco.positello@studenti.unipd.it \\
+			\AS & 1144363 & alessandro.sgreva@studenti.unipd.it \\
+			\AZ & 1171766 & antonio.zlatkovski@studenti.unipd.it \\
+
+			\rowcolor{white}\caption {Componenti} \\
+
+		\end{longtable}
+	Rimaniamo sempre a disposizione per qualsiasi comunicazione o chiarimento.\\
+
+\closing{
+  Cordiali saluti,
+  \fromsig{\includegraphics[scale=0.9]{./res/img/firma_MP.jpg}\\
+  }
+  \fromname{Marco Positello\\
+  Responsabile di progetto del gruppo \Gruppo{}\\
+  Email: \href{mailto:\Mail}{\Mail{}}
+  }
+}
+
+\end{letter}
+\end{document}
