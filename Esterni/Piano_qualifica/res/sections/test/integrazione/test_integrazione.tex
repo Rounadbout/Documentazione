@@ -1,0 +1,52 @@
+\def\arraystretch{1.75}
+\rowcolors{2}{lightRowColor}{darkRowColor}
+\begin{longtable}{
+		>{\centering}p{0.12\textwidth}
+		>{}p{0.5\textwidth}
+		>{\centering}p{0.17\textwidth}
+		>{\centering}p{0.12\textwidth} }
+
+	\caption{Tabella dei test di integrazione} \\
+	\coloredTableHead
+	\textbf{\color{white}Test} &
+	\centering\textbf{\color{white}Requisito e Descrizione} &
+	\centering\textbf{\color{white}Implementato} &
+	\textbf{\color{white}Superato}
+	\endfirsthead
+
+	\rowcolor{white}\caption[]{(continua)}\\
+	\coloredTableHead
+	\textbf{\color{white}Test} &
+	\centering\textbf{\color{white}Descrizione} &
+	\centering\textbf{\color{white}Implementato} &
+	\textbf{\color{white}Superato}
+	\endhead
+
+  	TI1 & Viene verificata la funzionalità di singup: registrazione di un nuovo utente in Ethereum. & No & No \tabularnewline
+
+  	TI2 & Viene verificata la funzionalità di login con credenziali già esistenti. & No & No \tabularnewline
+
+    TI3 & Viene verificata la funzionalità di logout: corretta disconnessione di una sessione utente. & No & No \tabularnewline
+
+    TI4 & Viene verificata la funzionalità di info: la corretta restituzione delle informazioni dettagliate di una funzione disponibile in Etherless. & No & No \tabularnewline
+
+  	TI5 & Viene verificata la funzionalità di list: la corretta restituzione di una lista delle funzioni caricate dagli utenti e disponibili in Etherless. & No & No \tabularnewline
+
+  	TI6 & Viene verificata la funzionalità di run: la corretta esecuzione di una funzione remota disponibile in Etherless. & No & No \tabularnewline
+
+  	TI7 & Viene verificata la funzionalità di deploy: il corretto caricamento di una funzione in Etherless. & No & No \tabularnewline
+
+  	TI8 & Viene verificata la funzionalità di delete: corretta eliminazione di una funzione da Etherless. & No & No \tabularnewline
+
+  	TI9 & Viene verificata la funzionalità di edit: il corretto aggiornamento delle informazionio del codice di una funzione in Etherless. & No & No \tabularnewline
+
+    %Tolte perché riguarderebbero solo cli => non integrazione
+  	%TI10 & Viene verificata la funzionalità di history: corretta restituzione della cronologia delle operazioni effettuate. & No & No\\
+    %TI11 & Viene verificata la funzionalità di search???. & No & No\\
+    %TI12 & Viene verificata la funzionalità whoami: corretta restituzione dell'indirizzo dell'utente corrente??. & No & No\\
+
+
+
+
+
+  \end{longtable}
