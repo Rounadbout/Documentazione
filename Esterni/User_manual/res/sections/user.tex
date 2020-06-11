@@ -30,7 +30,7 @@ Where:
 
 \subsection{Account management}
 To uniquely identify a user and manage payments the Ethereum$_{G}$ network is used. By logging in with an Ethereum$_{G}$ account, you give the application the permission to detract the fees needed for the commands execution from your wallet. \\
-Every Ethereum account is identified by an address and is accessible through a private key$_{G}$ or mnemonic phrase$_{G}$; this application allows you to use both of them. \\
+Every Ethereum$_{G}$ account is identified by an address and is accessible through a private key$_{G}$ or mnemonic phrase$_{G}$; this application allows you to use both of them. \\
 To execute some commands you will be asked to enter a password, which will be used to encrypt and decrypt a local copy of your wallet.
 
 \subsubsection{Init}
@@ -55,7 +55,7 @@ Use the command with the following syntax:
 	\item the mnemonic phrase$_{G}$ associated to the Ethereum$_{G}$ account.
 \end{itemize}
 With the optional flag \texttt{save} you can choose to save the credentials into a file that will be created in the current directory. \\
-Note that the signup command creates an account, but it does not log the user in.
+Note that the \texttt{signup} command creates an account, but it does not log the user in.
 
 \subsubsection{Login}
 The \texttt{login} command allows you to log into the Ethereum$_{G}$ network with an existing account.
@@ -97,19 +97,19 @@ The application allows you to either see a list of all the functions available i
 	\item \textbf{price: } the cost to run the function.
 \end{itemize}
 
-\subsubsubsection{List all functions}
-You can list all the functions available inside the \textit{Etherless} platform using the command \texttt{list}, using the following syntax:
+\subsubsection{List all functions}
+You can list all the functions available inside the \textit{Etherless} platform using the command \texttt{list} using the following syntax:
 \begin{center}
 	\code{etherless list}
 \end{center}
-\subsubsubsection{List only owned functions}
-The user can list all the functions of their property inside the Etherless platform using the command \texttt{list}, with the following syntax:
+\subsubsection{List only owned functions}
+The user can list all the functions of their property inside the \textit{Etherless} platform using the command \texttt{list} using the following syntax:
 \begin{center}
 	\code{etherless list -m}
 \end{center}
 
 \subsection{Search for a function}
-To list all the functions containing a certain keyword in their name use the command \texttt{search} with the following syntax:
+To list all the functions containing a certain keyword in their name use the command \texttt{search} using the following syntax:
 \begin{center}
 	\code{etherless search <keyword>}
 \end{center}
