@@ -1,0 +1,28 @@
+\subsubsubsection*{Code Coverage}	
+
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture} [scale = 0.7]
+		\begin{axis}[
+		xlabel={\textbf{Tempo}},
+		ylabel={\textbf{Code Coverage}},
+		date coordinates in=x,
+		ymin=78,
+		ymax=100,
+		xtick=data,
+		xticklabel style={
+			rotate=90,
+			anchor=near xticklabel,
+		},
+		xticklabel=\year-\month-\day,
+		]
+	%	\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/code_coverage/cli.csv};
+	%	\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/code_coverage/smart.csv};
+		\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/code_coverage/server.csv};
+	
+		\draw [line width=0.1, red](2020-6-1, 80)--(2020-6-30, 80);
+		\legend{$Cli$ ,$Smart$ ,$Server$};
+		\end{axis}
+		\end{tikzpicture} 
+		\caption{Code Coverage}
+	\end{figure}
