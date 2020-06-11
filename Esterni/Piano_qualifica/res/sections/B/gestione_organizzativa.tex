@@ -1,4 +1,4 @@
-I valori registrati per ogni periodo, relativi alle metriche per la gestione organizzativa, sono i seguenti:
+I valori registrati per ogni periodo, relativi alle metriche per la Gestione Organizzativa, sono i seguenti:
 
 \rowcolors{2}{lightRowColor}{darkRowColor}
 \begin{longtable}{
@@ -8,29 +8,31 @@ I valori registrati per ogni periodo, relativi alle metriche per la gestione org
 		>{\centering}p{0.2\textwidth}
 		>{}p{0.2\textwidth} }
 
-		\caption{Gestione organizzativa} \\
+		\caption{Gestione Organizzativa} \\
 
 	\coloredTableHead
 	\textbf{\color{white}Metrica} &
-	\textbf{\color{white}Analisi e consolidamento dei requisiti} &
-	\textbf{\color{white}Progettazione architetturale} &
-	\textbf{\color{white}Progettazione di dettaglio e codifica} &
-	\textbf{\color{white}Validazione e collaudo}
+	\textbf{\color{white}Analisi e Consolidamento dei Requisiti} &
+	\textbf{\color{white}Progettazione Architetturale} &
+	\textbf{\color{white}Progettazione di Dettaglio e Codifica} &
+	\textbf{\color{white}Validazione e Collaudo}
 	\tabularnewline
 	\endhead
 
 	% contenuto tabella
 	% esempio: ProvaMetrica & ProvaRR & ProvaRP & ProvaRQ & ProvaRA. \\
 	BAC & 15.036,00 & 15.036,00 & 15.036,00 & 15.036,00 \\
-	EAC & 15.036,00 & 14.916,00 & - & - \\
+	EAC & 15.036,00 & 14.916,00 & 9.971,00* & - \\
 	ETC & 15.036,00 & 10.182,00 & 3.181,00 & 0,00 \\
 	PV & 0,00 & 4.854,00 & 7.001,00 & 3.181,00 \\
-	AC & 0,00 & 4.734,00 & - & - \\
+	AC & 0,00 & 4.734,00 & 6.790,00* & - \\
 	EV & 0,00 & 4.854,00 & 7.001,00 & 3.181,00 \\
-	CV & 0 & 120 & - & - \\
-	SV & 0 & 0 & - & - \\
+	CV & 0 & 120 & 211* & - \\
+	SV & 0 & 0 & 0 & - \\
 
 \end{longtable}
+
+*Tali valori sono calcolati allo stato corrente del lavoro, attualmente corrispondente al 15$^{\circ}$ incremento.
 
 	\begin{figure}[H]
 	\centering
@@ -39,7 +41,7 @@ I valori registrati per ogni periodo, relativi alle metriche per la gestione org
 				xlabel={\textbf{Revisione}},
 				ylabel={\textbf{Euro \euro}},
 				date coordinates in=x,
-				ymin=14000,
+				ymin=9500,
 				ymax=16000,
 				xtick=data,
 				xticklabel style={

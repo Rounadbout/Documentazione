@@ -1,0 +1,26 @@
+\section*{Registro delle modifiche} % con section* evito che la sezione sia considerata nell'indice
+
+\rowcolors{2}{lightRowColor}{darkRowColor}
+\begin{longtable}{
+		>{\centering}p{0.05\textwidth}	%Versione
+		>{\centering}p{0.13\textwidth}	%Data
+		>{\centering}p{0.22\textwidth}	%Nominativo
+		>{}p{0.24\textwidth}			%Descrizione
+		>{\centering}p{0.22\textwidth} }	%Verifica
+
+	\coloredTableHead
+	\textbf{\color{white}V} &
+	\textbf{\color{white}Data} &
+	\textbf{\color{white}Nominativo} &
+	\textbf{\color{white}Descrizione} &
+	\textbf{\color{white}Verifica}
+	\tabularnewline
+	\endhead
+
+	% contenuto tabella
+	% Versione & data & Nome \\ Ruolo & Descrizione & Verificatore \\ Ruolo
+	1.0.0 & 2020-06-08 & \VB \\ \textit{Responsabile} & Approvazione del documento. & \tabularnewline
+	0.1.0 & 2020-06-07 & \EG \\ \textit{Verificatore} & Verifica del documento. & \tabularnewline
+	0.0.1 & 2020-06-02 & \LB \\ \textit{Progettista} & Stesura del documento. & \EG \\ \textit{Verificatore} \tabularnewline
+
+\end{longtable}

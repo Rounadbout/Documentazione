@@ -1,0 +1,161 @@
+\section{Functionalities}
+Etherless-cli is a command line application that allows the user to interact with the \textit{Etherless} platform. The user can perform specific tasks using simple and easy commands.
+
+\subsection{Command usage}
+The commands syntax used in \textit{Etherless} is as follows:
+\begin{center}
+	\code{etherless <command> [parameters..]}
+\end{center}
+Where:
+\begin{itemize}
+	\item \texttt{command}: is the command name;
+	\item \texttt{parameters}: are some parameters the command may need to execute.
+\end{itemize}
+
+\noindent The commands available on Etherless-cli are:
+\begin{itemize}
+	\item \texttt{signup}
+	\item \texttt{init}
+	\item \texttt{login [m] <value>}
+	\item \texttt{history}
+	\item \texttt{list [m]}
+	\item \texttt{whoami}
+	\item \texttt{search <keyword>}
+	\item \texttt{info <function\_name>}
+	\item \texttt{run <function\_name> [params..]}
+	\item \texttt{logout}
+	\item \texttt{delete <function\_name>}
+	\item \texttt{deploy <function\_name> <path> <desc>}
+\end{itemize}
+
+\subsection{Account management}
+To uniquely identify a user and manage payments the Ethereum$_{G}$ network is used. By logging in with an Ethereum$_{G}$ account, you give the application the permission to detract the fees needed for the commands execution from your wallet. \\
+Every Ethereum$_{G}$ account is identified by an address and is accessible through a private key$_{G}$ or mnemonic phrase$_{G}$; this application allows you to use both of them. \\
+To execute some commands you will be asked to enter a password, which will be used to encrypt and decrypt a local copy of your wallet.
+
+\subsubsection{Init}
+To read the details about the signup and authentication process you can use the \texttt{init} command, with the following syntax:
+\begin{center}
+	\code{etherless init}
+\end{center}
+
+\subsubsection{Signup}
+The \texttt{signup} command allows you to create a new Ethereum$_{G}$ account. The account has no Ethers$_{G}$ and thus it cannot perform all the functionalities the \textit{Etherless} provides.
+To fully use the account the you need to add some currency through other online services. \\
+Use the command with the following syntax:
+
+\begin{center}
+	\code{etherless signup [save]}
+\end{center}
+
+\noindent The execution of this command shows the credentials of the newly created account, particularly:
+\begin{itemize}
+	\item an address that identifies the Ethereum$_{G}$ account;
+	\item the private key$_{G}$ associated to the Ethereum$_{G}$ account;
+	\item the mnemonic phrase$_{G}$ associated to the Ethereum$_{G}$ account.
+\end{itemize}
+With the optional flag \texttt{save} you can choose to save the credentials into a file that will be created in the current directory. \\
+Note that the \texttt{signup} command creates an account, but it does not log the user in.
+
+\subsubsection{Login}
+The \texttt{login} command allows you to log into the Ethereum$_{G}$ network with an existing account.
+This authentication process can be performed in two ways: with private key$_{G}$ or with mnemonic phrase$_{G}$.
+A password will be asked during the command execution, which is used to store a safe copy of the wallet locally. If the authentication process completes successfully, a success message will be shown.
+
+\subsubsubsection{Login with private key}
+You can log inside your wallet using your private key$_{G}$. The command syntax to do this is the following:
+\begin{center}
+	\code{etherless login <private\_key>}
+\end{center}
+
+\subsubsubsection{Login with mnemonic phrase}
+You can log inside your Ethereum$_{G}$ wallet using the associated mnemonic phrase$_{G}$. The command syntax to do this is the following:
+\begin{center}
+	\code{etherless login -m <mnemonic\_phrase>}
+\end{center}
+To correctly execute this command the flag \texttt{-m} must be present and the mnemonic phrase$_{G}$ must be inserted without quotation marks.
+
+\subsubsubsection{Whoami}
+You can perform this command to get the address of the wallet associated with the current session. If you try to execute this command without being logged, an error message will be shown. The command syntax is the following: 
+\begin{center}
+	\code{etherless whoami}
+\end{center}
+After the execution of the command the address of the wallet associated with the current session will be displayed.
+
+\subsubsubsection{Logout}
+You can run this command to log out from the Ethereum$_{G}$ network; the command syntax is:
+\begin{center}
+	\code{etherless logout}
+\end{center}
+After executing this command, all the information about the previous user session will be deleted.
+
+\subsection{List functions}
+The application allows you to either see a list of all the functions available inside the platform or a list of the functions of you property, if you have any. \\
+\noindent In both cases, for every function the following data will be provided:
+\begin{itemize}
+	\item \textbf{name: } the name of the function;
+	\item \textbf{price: } the cost to run the function.
+\end{itemize}
+
+\subsubsection{List all functions}
+You can list all the functions available inside the \textit{Etherless} platform using the command \texttt{list} using the following syntax:
+\begin{center}
+	\code{etherless list}
+\end{center}
+\subsubsection{List only owned functions}
+The user can list all the functions of their property inside the \textit{Etherless} platform using the command \texttt{list} using the following syntax:
+\begin{center}
+	\code{etherless list -m}
+\end{center}
+
+\subsection{Search for a function}
+To list all the functions containing a certain keyword in their name use the command \texttt{search} using the following syntax:
+\begin{center}
+	\code{etherless search <keyword>}
+\end{center}
+
+A list of functions matching the search will be displayed. For each function the following data will be provided:
+\begin{itemize}
+	\item \textbf{name: } the name of the function;
+	\item \textbf{price: } the cost to run the function.
+\end{itemize}
+
+\subsection{Function details}
+You can request to visualize the details of a specific function through the \texttt{info} command, using the following syntax: \\
+\begin{center}
+	\code{etherless info <function\_name>}
+\end{center}
+In particular, the following information will be shown:
+\begin{itemize}
+	\item \textbf{owner: } the address of the function owner;
+	\item \textbf{signature: } the parameters that the function needs to run;
+	\item \textbf{price: } the cost to run the function;
+	\item \textbf{description: } a brief description of the function.
+\end{itemize}
+
+\subsection{Run a function}
+The \texttt{run} command is used to run a specific function, with the following syntax: \\
+\begin{center}
+	\code{etherless run <function\_name> [params..]}
+\end{center}
+Because \textit{Etherless} runs on the blockchain, execution takes some time to retrieve the result. Once the task is completed the result will be displayed. If the request was not successful an error will be displayed instead and the cost will be refunded. On the other hand, if the function is executed correctly the price amount is detracted from the current user wallet.
+
+\subsection{Delete a function}
+You can delete a previously deployed function through the \texttt{delete} command, with the following syntax:
+\begin{center}
+	\code{etherless delete <function\_name>}
+\end{center}
+After the execution of this command, the application will either show an error or a success message, depending on the outcome of the operation.
+
+\subsection{Deploy a function}
+You can deploy a function through the deploy command with the following syntax:
+\begin{center}
+	\code{etherless delete <function\_name> <path> <desc>}
+\end{center}
+\noindent where:
+\begin{itemize}
+	\item \texttt{function\_name}: is the name of the function to be deployed;
+	\item \texttt{path}: is the relative path from the current position to the source file;
+	\item \texttt{desc}: is a description of the function.
+\end{itemize}
+At the moment the execution price is fixed: you cannot specify the execution cost of your function, instead it will be chosen by the system. We plan to determine it dynamically (based on the resource amount used by the function) in the future. After the execution of this command the application will either show an error or a success message depending on the outcome of the operation.

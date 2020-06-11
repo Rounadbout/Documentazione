@@ -1,0 +1,47 @@
+\documentclass[a4paper]{article}
+
+\input{../../Latex/common_commands.tex}
+\input{config/commands.tex}
+\input{../../Latex/en_configs.tex}
+
+\begin{document}
+
+	% copertina
+	\input{../../Latex/en_copertina.tex}
+
+	% diario delle modifiche
+	\input{./res/sections/changelog.tex}
+	\pagebreak
+
+	% indice
+	\tableofcontents
+	\pagebreak
+	
+	%indice delle tabelle
+	\listoftables
+	\pagebreak
+	
+	%indice delle figure
+	\listoffigures
+	\pagebreak
+
+	% sezioni
+	\input{./res/sections/01-Intro.tex}
+	\pagebreak
+	\input{./res/sections/01.5-GettingStarted.tex}
+	\pagebreak
+	\input{./res/sections/02-Etherless.tex}
+	\pagebreak
+	\input{./res/sections/03-Cli.tex}
+	\pagebreak
+	\input{./res/sections/04-Smart.tex}
+	\pagebreak
+	\input{./res/sections/05-Server.tex}
+	\pagebreak
+	
+	% appendici
+	\appendix
+	\input{./res/appendix/A-glossario.tex}
+	\pagebreak
+
+\end{document}

@@ -1,0 +1,45 @@
+\subsection{Test di Integrazione}
+
+	\subsubsection{Specifica}
+		I Test di Integrazione hanno l'obiettivo di verificare la correttezza funzionale nell’interazione tra più moduli\ped{\textit{G}}. In particolare questa tipologia di test verifica:
+		\begin{enumerate}
+			\item{l'assemblamento dei vari moduli\ped{\textit{G}} aggiunti incrementalmente;}
+			\item{l'assemblamento di tutti i moduli\ped{\textit{G}} facenti parte del programma.}
+		\end{enumerate}
+		Per rispettare il livello qualitativo richiesto è necessario adempiere la seguente metrica:
+		\begin{itemize}
+			\item{misurazione: numero di test soddisfatti;}
+			\item{valore minimo accettabile: 100\%;}
+			\item{valore preferibile: 100\%.}
+		\end{itemize}
+
+
+	\subsubsection{Stato}
+	
+		\begin{figure}[H]
+			\centering
+			\begin{tikzpicture} [scale = 0.7]
+			\begin{axis}[
+			xlabel={\textbf{Tempo}},
+			ylabel={\textbf{\% Test di Integrazione}},
+			date coordinates in=x,
+			ymin=-1,
+			ymax=102,
+			xtick=data,
+			xticklabel style={
+				rotate=90,
+				anchor=near xticklabel,
+			},
+			xticklabel=\year-\month-\day,
+			]
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/test/accettazione/impl.csv};	% al 2020-06-11 sono stati individuati 9 Test
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/test/accettazione/sup.csv};
+			\draw [line width=0.1, red](2020-6-1, 100)--(2020-6-30, 100);
+			\legend{$Test\;implementati$, $Test\;superati$};
+			\end{axis}
+			\end{tikzpicture} 
+			\caption{\% Test di Integrazione}
+		\end{figure}
+		
+	
+		\input{./res/sections/test/integrazione/test_integrazione.tex}

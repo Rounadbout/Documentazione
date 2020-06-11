@@ -1,0 +1,31 @@
+\rowcolors{2}{lightRowColor}{darkRowColor}
+\begin{longtable}{
+		>{\centering}p{0.25\textwidth}
+		>{\centering}p{0.08\textwidth}
+		>{\centering}p{0.08\textwidth}
+		>{\centering}p{0.15\textwidth}
+		>{\centering\arraybackslash}p{0.15\textwidth} }
+	
+	\coloredTableHead
+	\textbf{\color{white}Ruolo} &
+	\textbf{\color{white}Ore} &
+	\textbf{\color{white}Delta ore} &
+	\textbf{\color{white}Costo in \euro{}} &
+	\textbf{\color{white}Delta costo}
+	\tabularnewline
+	\endhead
+	
+	% Contenuto della tabella
+	% Ruolo & OreEffettive & DeltaOre & Costo & DeltaCosto \\
+	Responsabile    & 12 & +0 &   360,00 & +  0,00 \\
+	Amministratore  & 24 & +0 &   480,00 & +  0,00 \\
+	Analista        & 35 & +2 &   875,00 & + 50,00 \\
+	Progettista     & 67 & -5 & 1.474,00 & -110,00 \\
+	Programmatore   & 35 & -4 &   525,00 & - 60,00 \\
+	Verificatore    & 68 & +0 & 1.020,00 & +  0,00 \\
+	\textbf{Totale Effettivo} & \multicolumn{2}{c}{\textbf{241}} & \multicolumn{2}{c}{\textbf{4.734,00}} \\
+	\textbf{Delta} & \multicolumn{2}{c}{\textbf{-7}} & \multicolumn{2}{c}{\textbf{-120,00}} \\
+	
+	\rowcolor{white}\caption{Consuntivo per il periodo di Progettazione Architetturale}	\\
+	
+\end{longtable}

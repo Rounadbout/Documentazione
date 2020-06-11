@@ -1,0 +1,124 @@
+\def\arraystretch{1.75}
+\rowcolors{2}{lightRowColor}{darkRowColor}
+\begin{longtable}{
+		>{\centering}p{0.12\textwidth} 
+		>{}p{0.5\textwidth}
+		>{\centering}p{0.17\textwidth}
+		>{\centering}p{0.12\textwidth} }
+
+	\caption{Tabella dei Test Funzionali} \\
+	\coloredTableHead
+	\textbf{\color{white}Test} &
+	\centering\textbf{\color{white}Requisito e Descrizione} &
+	\centering\textbf{\color{white}Implementato} &
+	\textbf{\color{white}Superato}
+	\endfirsthead
+
+	\rowcolor{white}\caption[]{(continua)}\\
+	\coloredTableHead
+	\textbf{\color{white}Test} &
+	\centering\textbf{\color{white}Requisito e Descrizione} &
+	\centering\textbf{\color{white}Implementato} &
+	\textbf{\color{white}Superato}
+	\endhead
+
+
+		% init
+	TA2F1 		& \textbf{R2F1}: l'utente può leggere una breve guida iniziale riguardante l'applicativo e i comandi per effettuare l'accesso. 														& No & No \tabularnewline
+
+	% help
+	TA2F2 		& \textbf{R2F2}: l'utente può richiedere di visualizzare una descrizione più approfondita	per ogni comando messo a disposizione da \textit{Etherless-cli}\ped{\textit{G}}.			& No & No \tabularnewline
+	TA2F2.1 		& \textbf{R2F2.1}: per ottenere informazioni specifiche su un comando, l'utente deve inserire il nome del comando di interesse seguito dal flag \texttt{-{}-help}.						& No & No \tabularnewline
+
+	% signup
+	TA1F3 		& \textbf{R1F3}: un utente non registrato può richiedere la creazione di un nuovo account all'interno della rete Ethereum\ped{\textit{G}}.												& No & No \tabularnewline
+	TA1F3.1 		& \textbf{R1F3.1}: una volta creato il nuovo account, il sistema deve mostrare nella CLI\ped{\textit{G}} le credenziali a esso relative.													& No & No \tabularnewline
+	TA1F3.1.1 	& \textbf{R1F3.1.1}: a seguito del completamento della procedura di registrazione viene	mostrato l'address associato al nuovo account creato. 												& No & No \tabularnewline
+	TA1F3.1.2 	& \textbf{R1F3.1.2}: a seguito del completamento della procedura di registrazione viene	mostrata la private key\ped{\textit{G}} associata al nuovo account creato. 							& No & No \tabularnewline
+	TA2F3.1.3 	& \textbf{R2F3.1.3}: a seguito del completamento della procedura di registrazione viene	mostrata la mnemonic phrase\ped{\textit{G}} associata al nuovo account creato. 						& No & No \tabularnewline
+	TA2F3.2 		& \textbf{R2F3.2}: l'utente può richiedere il salvataggio su file delle credenziali dell'account creato durante la procedura di registrazione.											& No & No \tabularnewline
+
+	%login
+	TA1F4 		& \textbf{R1F4}: un utente può effettuare il login. 									& No & No \tabularnewline
+	TA1F4.1 		& \textbf{R1F4.1}: per effettuare la procedura di login è richiesto che l'utente inserisca una password, con cui verrà cifrato il proprio wallet\ped{\textit{G}}. 						& No & No \tabularnewline
+	TA1F4.2 		& \textbf{R1F4.2}: per completare la proceduta di login manuale l'utente deve inserire la propria private key\ped{\textit{G}}. 															& No & No \tabularnewline
+	TA1F4.2.1 	& \textbf{R1F4.2.1}: nel caso in cui l'utente tenti di autenticarsi con una private key\ped{\textit{G}} in formato errato deve essere mostrato un messaggio di errore. 										& No & No \tabularnewline
+	TA2F4.3 		& \textbf{R2F4.3}: l'utente può decidere di completare la procedura di login manuale utilizzando la propria mnemonic phrase\ped{\textit{G}} al posto della private key\ped{\textit{G}}.					& No & No \tabularnewline
+	TA2F4.3.1 	& \textbf{R2F4.3.1}: nel caso in cui l'utente tenti di autenticarsi con una mnemonic phrase\ped{\textit{G}} in formato errato deve essere mostrato un messaggio di errore. 									& No & No \tabularnewline
+
+	% logout
+	TA1F5 		& \textbf{R1F5}: l'utente può effettuare il logout. 																																	& No & No \tabularnewline
+
+	% whoami
+	TA2F6 		& \textbf{R2F6}: l'utente può richiedere di visualizzare l'address associato alla sessione corrente. 																					& No & No \tabularnewline
+
+	% info
+	TA1F7 		& \textbf{R1F7}: l'utente può richiedere di visualizzare le informazioni dettagliate di una funzione tramite il comando \info{}.		& No & No \tabularnewline
+	TA1F7.1 		& \textbf{R1F7.1}: per visualizzare la descrizione di una funzione l'utente deve inserire il nome della funzione di interesse.															& No & No \tabularnewline
+	TA1F7.2 		& \textbf{R1F7.2}: nel caso in cui l'utente richieda di visualizzare la descrizione di una funzione non presente nel sistema, deve essere mostrato un messaggio di	errore.			 			& No & No \tabularnewline
+
+	% search
+	TA2F8 		& \textbf{R2F8}: il sistema deve permettere all'utente di cercare una funzione attraverso una keyword. 																					& No & No \tabularnewline
+	TA2F8.1 		& \textbf{R2F8.1}: per effettuare la ricerca è necessario che l'utente inserisca una keyword. 																							& No & No \tabularnewline
+	TA2F8.2 		& \textbf{R2F8.2}: a seguito di una ricerca il sistema deve mostrare la lista di	tutte le funzioni che presentano la keyword indicata all'interno del proprio nome.						& No & No \tabularnewline
+	TA2F8.2.1 	& \textbf{R2F8.2.1}: la visualizzazione di un risultato di ricerca include	la firma della funzione.																						& No & No \tabularnewline
+	TA2F8.2.2 	& \textbf{R2F8.2.2}: la visualizzazione di un risultato di ricerca include	il costo di esecuzione della funzione.																			& No & No \tabularnewline
+	TAF8.3 		& \textbf{R2F8.3}: se una ricerca non porta a nessun risultato deve essere mostrato un messaggio di errore. 																				& No & No \tabularnewline
+
+	% run
+	TA1F9 		& \textbf{R1F9}: l'utente deve essere in grado di eseguire le funzioni messe a disposizione da \textit{Etherless} attraverso il comando \run{}.											& No & No \tabularnewline
+	TA1F9.1 		& \textbf{R1F9.1}: per eseguire una funzione è necessario inserire il relativo nome. 																										& No & No \tabularnewline
+	TA1F9.1.1 	& \textbf{R1F9.1.1}: nel caso in cui il nome inserito a seguito del comando \run{} non corrisponda ad alcuna funzione presente nel sistema, deve essere visualizzato un messaggio di errore. & No & No \tabularnewline
+	TA1F9.2 		& \textbf{R1F9.2}: l'esecuzione di una funzione necessita dell'inserimento dei parametri necessari per la sua esecuzione.																	& No & No \tabularnewline
+	TA1F9.2.1	& \textbf{R1F9.2.1}: se l'utente tenta di eseguire una funzione inserendo un numero di parametri che non coincide con quanto richiesto, deve essere visualizzato un messaggio di errore. 	& No & No \tabularnewline
+	TA1F9.2.2 	& \textbf{R1F9.2.2}: se l'utente tenta di eseguire una funzione inserendo almeno un parametro con tipo differente da quanto indicato nella firma della funzione, deve essere visualizzato un messaggio di errore. & No & No \tabularnewline
+	TA1F9.3 		& \textbf{R1F9.3}: a seguito dell'esecuzione di una funzione il sistema deve mostrare all'utente i relativi risultati. 																	& No & No \tabularnewline
+	TA1F9.4 		& \textbf{R1F9.4}: nel caso in cui l'utente richieda di eseguire una funzione senza avere credito sufficiente, deve essere mostrato un messaggio di errore.								& No & No \tabularnewline
+
+	% list  --
+	TA1F10 		& \textbf{R1F10}: l'utente deve essere in grado di visualizzare tutte le funzioni disponibili in \textit{Etherless} tramite il comando \lista{}. 										& No & No \tabularnewline
+	TA2F10.1 	& \textbf{R2F10.1}: l'utente può richiede di visualizzare solo le funzioni da lui caricate tramite l'utilizzo di un apposito flag.															& No & No \tabularnewline
+	TA1F10.2 	& \textbf{R1F10.2}: la visualizzazione di un elemento della lista ottenuta a seguito del comando \lista{} include la firma della funzione. 												& No & No \tabularnewline
+	TA1F10.3 	& \textbf{R1F10.3}: la visualizzazione di un elemento della lista ottenuta a seguito del comando \lista{} include il costo di esecuzione della funzione. 									& No & No \tabularnewline
+	TA1F10.5	& \textbf{R1F10.5}: se il comando list non porta ad alcun tipo di risultato, viene mostrato un apposito errore. 																			& No & No \tabularnewline
+
+	%deploy
+	TA1F11 		& \textbf{R1F11}: l'utente deve essere in grado di eseguire il deploy\ped{\textit{G}} di una propria funzione all'interno della piattaforma \textit{Etherless}. 							& No & No \tabularnewline
+	TA1F11.1 	& \textbf{R1F11.1}: per eseguire il deploy\ped{\textit{G}} l'utente deve inserire il percorso del file contenente il codice della funzione. 												& No & No \tabularnewline
+	TA2F11.1.1 	& \textbf{R2F11.1.1}: se il formato del file indicato durante la procedura di deploy\ped{\textit{G}} non è supportato dall'applicativo deve essere mostrato un messaggio di errore.			& No & No \tabularnewline
+	TAF11.1.2 	& \textbf{R1F11.1.2}: se il file indicato durante la procedura di deploy\ped{\textit{G}} non esiste, deve essere visualizzato un messaggio di errore.										& No & No \tabularnewline
+	TA1F11.2 	& \textbf{R1F11.2}: per eseguire il deploy\ped{\textit{G}} l'utente deve inserire il nome della funzione considerata. 																		& No & No \tabularnewline
+	TA1F11.2.1 	& \textbf{R1F11.2.1}: nel caso in cui il nome della funzione di cui si tenta di fare il deploy\ped{\textit{G}} sia troppo lungo, deve essere visualizzato un messaggio di errore. 			& No & No \tabularnewline
+	T1F11.2.2 	& \textbf{R1F11.2.2}: nel caso in cui il nome della funzione di cui si tenta di fare il deploy\ped{\textit{G}} sia già usato nel sistema, deve essere visualizzato un messaggio di errore.	& No & No \tabularnewline
+	TA2F11.3 	& \textbf{R2F11.3}: per eseguire il deploy\ped{\textit{G}} l'utente deve inserire una descrizione della funzione. 																			& No & No \tabularnewline
+	TA2F11.3.1 	& \textbf{R2F11.3.1}: se la descrizione inserita durante la procedura di deploy\ped{\textit{G}} supera la lunghezza massima, deve essere mostrato un messaggio di errore. 					& No & No \tabularnewline
+	TA1F11.4 	& \textbf{R1F11.4}: nel caso in cui l'utente tenti di eseguire il deploy\ped{\textit{G}} di una funzione senza avere il credito necessario, deve essere visualizzato un messaggio di errore. & No & No \tabularnewline
+
+	% modify
+	TA2F12 		& \textbf{R2F12}: l'utente deve essere in grado di modificare le informazioni relative ad una funzione da lui caricata. 																	& No & No \tabularnewline
+	TA2F12.1 	& \textbf{R2F12.1}: per eseguire la procedura di modifica è necessario che l'utente indichi il nome della funzione che vuole modificare. 													& No & No \tabularnewline
+	TA2F12.1.1 	& \textbf{R2F12.1.1}: nel caso in cui, durante la procedura di modifica, l'utente inserisca il nome di una funzione non presente all'interno della piattaforma \textit{Etherless}, deve essere mostrato un messaggio di errore.	& No & No \tabularnewline
+	TA2F12.1.2 	& \textbf{R2F12.1.2}: nel caso in cui, durante la procedura di modifica, l'utente inserisca il nome di una funzione che non è di sua proprietà, deve essere 	mostrato un messaggio di errore. & No & No \tabularnewline
+	TA2F12.2 	& \textbf{R2F12.2}: il sistema deve permettere all'utente di modificare la descrizione associata ad una propria funzione. 																	& No & No \tabularnewline
+	TA2F12.2.1 	& \textbf{R2F12.2.1}: l'utente deve visualizzare un errore nel caso in cui, durante la procedura di modifica, venga inserita una descrizione di lunghezza superiore a quella massima consentita. 	& No & No \tabularnewline
+	TA2F12.3 	& \textbf{R2F12.3}: il sistema deve permettere all'utente di aggiornare il codice di una propria funzione. 																				& No & No \tabularnewline
+	TA2F12.3.1 	& \textbf{R2F12.3.1}: se il file indicato durante la procedura di aggiornamento del codice di una funzione non esiste, deve essere mostrato un messaggio di errore.							& No & No \tabularnewline
+	TA2F12.3.2 	& \textbf{R2F12.3.2}: se il file indicato durante la procedura di aggiornamento del codice di una funzione presenta un formato non supportato, deve essere mostrato un messaggio di errore.	& No & No \tabularnewline
+
+	% history
+	TA2F13 		& \textbf{R2F13}: l'utente deve essere in grado di visualizzare la propria cronologia di richieste di esecuzione. 																		& No & No \tabularnewline
+	TA2F13.1 	& \textbf{R2F13.1}: l'utente deve poter essere in grado di richiedere di visualizzare solo una porzione della propria cronologia di esecuzione. 											& No & No \tabularnewline
+	TA2F13.2 	& \textbf{R2F13.2}: la visualizzazione di un elemento della cronologia include l'identificativo della richiesta di esecuzione. 															& No & No \tabularnewline
+	TA2F13.3 	& \textbf{R2F13.3}: la visualizzazione di un elemento della cronologia include il nome della funzione richiesta. 																			& No & No \tabularnewline
+	TA2F13.4 	& \textbf{R2F13.4}: la visualizzazione di un elemento della cronologia include il valore dei parametri indicati nella chiamata alla funzione.												& No & No \tabularnewline
+	TA2F13.5 	& \textbf{R2F13.5}: la visualizzazione di un elemento della cronologia include il risultato della richiesta di esecuzione.																	& No & No \tabularnewline
+	TA2F13.6 	& \textbf{R2F13.6}: la visualizzazione di un elemento della cronologia include la data e l'orario della richiesta. 																		& No & No \tabularnewline
+
+	% delete
+	TAF14 		& \textbf{R1F14}: l'utente deve essere in grado di eliminare una funzione da lui caricata. 																								& No & No \tabularnewline
+	TA1F14.1 	& \textbf{R1F14.1}: per eseguire l'operazione di eliminazione l'utente deve inserire il nome della funzione da eliminare. 																	& No & No \tabularnewline
+	TA1F14.1.1 	& \textbf{R1F14.1.1}: nel caso in cui il nome inserito durante la procedura di eliminazione non si riferisca ad alcuna funzione presente all'interno del sistema, deve essere mostrato un messaggio di errore.	& No & No \tabularnewline
+	TAF14.1.2 	& \textbf{R1F14.1.2}: nel caso in cui la funzione considerata nella procedura di eliminazione non sia di proprietà dell'utente, deve essere visualizzato un messaggio di errore.				& No & No \tabularnewline
+	TAF1F15		& \textbf{R1F15}: gli smart contract\ped{\textit{G}} devono poter essere aggiornati.																															& No & No \tabularnewline
+
+\end{longtable}

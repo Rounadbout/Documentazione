@@ -1,0 +1,85 @@
+\subsubsection{5$^{\circ}$ Incremento}
+		\subsubsubsection{Prospetto orario}
+		Durante il 5$^{\circ}$ Incremento la distribuzione oraria preventivata dei ruoli di ogni componente del gruppo sarà la seguente:
+		\rowcolors{2}{lightRowColor}{darkRowColor}
+		\begin{longtable}{
+				>{\centering}p{0.25\textwidth}
+				>{\centering}p{0.05\textwidth}
+				>{\centering}p{0.05\textwidth}
+				>{\centering}p{0.05\textwidth}
+				>{\centering}p{0.05\textwidth}
+				>{\centering}p{0.05\textwidth}
+				>{\centering}p{0.05\textwidth}
+				>{\centering\arraybackslash}p{0.15\textwidth} }
+			
+			\coloredTableHead
+			\textbf{\color{white}Nome} &
+			\textbf{\color{white}Rp} &
+			\textbf{\color{white}As} &
+			\textbf{\color{white}An} &
+			\textbf{\color{white}Pt} &
+			\textbf{\color{white}Pr} &
+			\textbf{\color{white}Vf} &
+			\textbf{\color{white}Totale}
+			\tabularnewline
+			\endhead
+			
+			% Contenuto della tabella
+			%    Rp & As & An & Pt & Pr & Vf & Totale \\
+			\VB & - & - & - & - & - & 4 & 4 \\
+			\LB & - & - & 3 & - & - & - & 3 \\
+			\NF & - & - & - & 3 & - & - & 3 \\
+			\EG & - & - & - & 2 & 4 & - & 6 \\
+			\FJ & - & - & - & 4 & - & - & 4 \\
+			\MP & - & - & - & 2 & - & 3 & 5 \\
+			\AS & - & 3 & - & 1 & - & - & 4 \\
+			\AZ & 2 & - & - & - & 6 & - & 8 \\
+			\textbf{Ore totali per ruolo} & 2 & 3 & 3 & 12 & 10 & 7 & 37 \\
+			
+			\rowcolor{white}\caption {Suddivisione oraria del 5$^{\circ}$ Incremento} \\
+			
+		\end{longtable}
+		
+		% Grafico
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{./res/img/preventivi/inc5_po.png}
+			\caption{Suddivisione oraria del 5$^{\circ}$ Incremento}
+		\end{figure}
+	
+		\subsubsubsection{Prospetto economico}
+		In base al prospetto orario, quello economico sarà il seguente: 
+		\rowcolors{2}{lightRowColor}{darkRowColor}
+		\begin{longtable}{
+				>{\centering}p{0.25\textwidth}
+				>{\centering}p{0.05\textwidth}
+				>{\centering\arraybackslash}p{0.15\textwidth} }
+			
+			\coloredTableHead
+			\textbf{\color{white}Ruolo} &
+			\textbf{\color{white}Ore} &
+			\textbf{\color{white}Costo in \euro{}}
+			\tabularnewline
+			\endhead
+			
+			% Contenuto della tabella
+			% Ruolo & Ore & Costo \\
+			Responsabile    & 2  & 60,00 \\
+			Amministratore  & 3  & 60,00 \\
+			Analista        & 3  & 75,00 \\
+			Progettista     & 12  & 264,00 \\
+			Programmatore   & 10  & 150,00 \\
+			Verificatore    & 7  & 105,00 \\
+			\textbf{Totale} & 37 & 714,00 \\
+			
+			\rowcolor{white}\caption {Prospetto dei costi per il 5$^{\circ}$ Incremento}	\\
+			
+		\end{longtable}
+		
+		% Grafico
+		Rappresentazione grafica della distribuzione dei ruoli:
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{./res/img/preventivi/inc5_pe.png}
+			\caption{Prospetto economico del 5$^{\circ}$ Incremento}
+		\end{figure}

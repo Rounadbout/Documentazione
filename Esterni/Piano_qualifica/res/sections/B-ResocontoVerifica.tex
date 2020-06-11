@@ -2,67 +2,43 @@
 	Questa sezione riporta un resoconto di tutte le metriche per le quali è stato possibile svolgere una misurazione allo stato attuale del progetto.
 
 	\subsection{Qualità di Processo}
-		\subsubsection{Processi Primari}		% 7 metriche - 4 impl
+		\subsubsection{Processi Primari}		% 7 metriche - 7 impl
 			\subsubsubsection{Analisi dei Requisiti}
 				I valori registrati per ogni periodo relativi alle metriche per l'analisi dei requisiti sono i seguenti:
 				\input{./res/sections/B/AdR.tex}
-			%\subsubsubsection{Progettazione}
-				%I valori registrati per ogni periodo relativi alle metriche per la progettazione sono i seguenti:
-				%\subsubsubsection*{CBO}		%Grafico
-				%\subsubsubsection*{SFIN}
-				%\subsubsubsection*{SFOUT}
+			\subsubsubsection{Progettazione}
+				\input{./res/sections/B/progettazione.tex}
 			\subsubsubsection{Codifica}
-				\input{./res/sections/B/codifica.tex} 
+				\input{./res/sections/B/codifica.tex}
 		
 		\subsubsection{Processi di Supporto}	% 5 metriche - 3 impl
 			\subsubsubsection{Documentazione}
 				\input{./res/sections/B/documentazione.tex}
 			\subsubsubsection{Gestione della Qualità}
 				\input{./res/sections/B/gestione_qualita.tex}
-			%\subsubsubsection{Verifica}
-				%\subsubsubsection*{Code Coverage}				
+			\subsubsubsection{Verifica}
+				\input{./res/sections/B/code_coverage.tex}
 		
 		\pagebreak		
 		\subsubsection{Processi Organizzativi}	% 1 metrica - 1 impl
 			\subsubsubsection{Gestione Organizzativa}
 				\input{./res/sections/B/gestione_organizzativa.tex}
 			
-	%\subsection{Qualità di Prodotto}			% 6 metriche - 0 impl
-		%\subsubsection{Funzionalità}
-			%\subsubsubsection{Completezza dell'implementazione}
-		%\subsubsection{Affidabilità}
-			%\subsubsubsection{Densità errori}
-		%\subsubsection{Usabilità}
-			%\subsubsubsection{Facilità di utilizzo}
-			%\subsubsubsection{Facilità di apprendimento}
-		%\subsubsection{Manutenibilità}
-			%\subsubsubsection{Facilità di comprensione}
-			%\subsubsubsection{Semplicità delle classi}
+	\subsection{Qualità di Prodotto}			% 6 metriche - 6 impl
+		\subsubsection{Funzionalità}
+			\input{./res/sections/B/funzionalita.tex}
+		\subsubsection{Affidabilità}
+			\input{./res/sections/B/affidabilita.tex}
+		\subsubsection{Usabilità}
+			\input{./res/sections/B/usabilita.tex}
+		\subsubsection{Manutenibilità}
+			\input{./res/sections/B/manutenibilita.tex}
+			
 
-		%\subsubsection{Affidabilità}			% 5 metriche - 0 impl
-			%\subsubsubsection{Densità errori}				% Grafico
-		%\subsubsection{Usabilità}
-			%\subsubsubsection{Facilità di utilizzo}			% Vedere con gli altri
-			%\subsubsubsection{Facilità di apprendimento}
-		%\subsubsection{Manutenibilità}
-			%\subsubsubsection{Facilità di comprensione} 	% Grafico
-			%\subsubsubsection{Semplicità delle classi}
-	
-	%\subsection{Test di Verifica}				% 4 metriche - 0 impl
-		%\subsubsection{Test di Unità}
-		%\subsubsection{Test di Integrazione}
-		%\subsubsection{Test di Sistema}
-		%\subsubsection{Test di Regressione}
-		
-	
-	\pagebreak
-	\subsection{Test di Validazione}			% 3 metriche - 3 impl
-		\subsubsection{Test di Accettazione}	
-			\subsubsubsection{Test Funzionali}
-				\input{./res/sections/test_accettazione/01-funzionali.tex}
-				\pagebreak
-			\subsubsubsection{Test di Qualità}
-				\input{./res/sections/test_accettazione/02-qualita.tex}
-				\pagebreak
-			\subsubsubsection{Test di Vincolo}
-				\input{./res/sections/test_accettazione/03-vincolo.tex}
+
+%	Per la PMS sui test:	% 4 metriche - 7 impl
+%	unità			1 /1
+%	sistema		0 /1
+%	regressione	0 /1
+%	integrazione	0 /1
+%	accettazione	3 /3

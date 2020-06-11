@@ -1,0 +1,32 @@
+\section{Troubleshooting errors}
+  This section will describe the various error messages that may appear while using the application. These errors may derive from improper use of the commands or from other issues.
+  \subsection{Installation}
+    While installing Etherless-cli, some errors may occur:
+    \begin{itemize}
+      \item \textbf{npm ERR! code EEXIST:} the package manager is unable to run the \texttt{npm link} command. In the same folder run \texttt{npm unlink} and run \texttt{npm link} again.
+    \end{itemize}
+  \subsection{Account management errors}
+    \begin{itemize}
+      \item \textbf{"You are not logged in":} you are trying to run \textit{Etherless} commands not being logged into the platform. To solve this error, log in before executing \textit{Etherless} commands;
+      \item \textbf{"Already logged in":} you are already logged in and can use the \textit{Etherless} platform;
+      \item \textbf{"Already logged out":} you are already logged out from the \textit{Etherless} platform.
+      \item \textbf{"Private key not recognised or not in the correct format":} this error indicates that when logging in the private key$_{G}$ was not recognised, possibly due to incorrect format. Check your key again and retry.
+    \end{itemize}
+  \subsection{Run errors}
+  \begin{itemize}
+    \item \textbf{"The function you are looking for does not exist":} no function with the given name exists in \textit{Etherless}. Check you typed in the correct function name and try again.
+  \end{itemize}
+  \subsection{Deploy errors}
+  \begin{itemize}
+    \item \textbf{"Function file not found":} the file containing the code of the function to be deployed was not found in the given path. Check that the given path is correct and contains the function file;
+    \item \textbf{"A function with the same name already exists":} a function with the same name already exists in \textit{Etherless}. Change the name or deploy a different function;
+  \end{itemize}
+  \subsection{Delete errors}
+  \begin{itemize}
+    \item \textbf{"You are not the owner of the function":} the function you are trying to delete is not yours. You can only delete one of the functions you deployed;
+    \item \textbf{"The function you are looking for does not exist":} the function you are trying to delete is not present on the \textit{Etherless} platform.
+  \end{itemize}
+  \subsection{Info errors}
+  \begin{itemize}
+    \item \textbf{"The function you are looking for does not exist":} no function with the given name exists in \textit{Etherless}.
+  \end{itemize}

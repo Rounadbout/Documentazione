@@ -2,48 +2,59 @@
 
 \rowcolors{2}{lightRowColor}{darkRowColor}
 \begin{longtable}{
-		>{\centering}p{0.1\textwidth}
-		>{\centering}p{0.15\textwidth}
-		>{\centering}p{0.2\textwidth}
-		>{\centering}p{0.15\textwidth}
-		>{}p{0.26\textwidth} }
-
+		>{\centering}p{0.05\textwidth}	%Versione
+		>{\centering}p{0.13\textwidth}	%Data
+		>{\centering}p{0.22\textwidth}	%Nominativo
+		>{}p{0.24\textwidth}			%Descrizione
+		>{\centering}p{0.22\textwidth} }	%Verifica
+	
 	\coloredTableHead
-	\textbf{\color{white}Versione} &
+	\textbf{\color{white}V} &
 	\textbf{\color{white}Data} &
 	\textbf{\color{white}Nominativo} &
-	\textbf{\color{white}Ruolo} &
-	\textbf{\color{white}Descrizione}
+	\textbf{\color{white}Descrizione} &
+	\textbf{\color{white}Verifica}
 	\tabularnewline
 	\endhead
-
+	
 	% contenuto tabella
-	% esempio: ProvaVersione & ProvaData & ProvaPersona & \textit{ProvaRuolo} & ProvaAzione. \\
-	2.0.0 & 2020-05-10 & \AZ{} & \textit{Responsabile} & Approvazione del documento. \\
-	1.2.0 & 2020-05-09 & \VB{} & \textit{Verificatore} & Verifica del documento. \\
-	1.1.6 & 2020-05-07 & \NF{} & \textit{Progettista} & Aggiunte metriche per la codifica \textsection{B}. \\
-	1.1.5 & 2020-05-06 & \LB{} & \textit{Progettista} & Aggiunti incrementi \textsection{B}. \\
-	1.1.4 & 2020-05-05 & \NF{} & \textit{Progettista} & Stesura sezione \textsection{C}. \\
-	1.1.3 & 2020-05-05 & \NF{} & \textit{Progettista} & Modifica sezione \textsection{A.3}. \\
-	1.1.2 & 2020-05-04 & \LB{} & \textit{Responsabile} & Stesura sezione \textsection{B.1.1}. \\
-	1.1.1 & 2020-05-04 & \NF{} & \textit{Verificatore} & Stesura sezione \textsection{B.1.2}. \\
-	1.1.0 & 2020-05-03 & \MP{} & \textit{Verificatore} & Verifica documento. \\
-	1.0.3 & 2020-05-03 & \LB{} & \textit{Responsabile} & Correzione struttura \textsection{B}. \\
-	1.0.2 & 2020-05-02 & \LB{} & \textit{Amministratore} & Modifica \textsection 4 \textsection 5.\\
-	1.0.1 & 2020-05-02 & \NF{} & \textit{Verificatore} & Modifica \textsection 2 \textsection 3 \textsection A.\\
-	1.0.0 & 2020-04-11 & \VB{} & \textit{Responsabile} & Approvazione del documento.\\
-	0.2.0 & 2020-04-10 & \AZ{} & \textit{Verificatore} & Verifica del documento.\\
-	0.1.4 & 2020-04-04 & \NF{} & \textit{Progettista} & Apportate modifiche \textsection 2. \\
-	0.1.3 & 2020-04-03 & \FJ{} & \textit{Progettista} & Stesura \textsection 3. \\
-	0.1.2 & 2020-04-03 & \NF{} & \textit{Progettista} & Stesura \textsection A.2, \textsection A.3 \\
-	0.1.1 & 2020-04-02 & \NF{} & \textit{Progettista} & Stesura \textsection 2.4, \textsection A.1 \\
-	0.1.0 & 2020-04-02 & \AZ{} & \textit{Verificatore} & Verifica documento. \\
-	0.0.7 & 2020-04-02 & \LB{} & \textit{Verificatore} & Stesura \textsection{4} e \textsection{5}. \\
-	0.0.6 & 2020-04-01 & \LB{} & \textit{Verificatore} & Stesura \textsection{C}. \\
-	0.0.5 & 2020-04-01 & \NF{} & \textit{Progettista} & Stesura \textsection 2.1, \textsection2.2, \textsection2.3. \\
-	0.0.4 & 2020-03-30 & \LB{} & \textit{Verificatore} & Stesura \textsection{B}. \\
-	0.0.3 & 2020-03-26 & \LB{} & \textit{Verificatore} & Stesura \textsection1. \\
-	0.0.2 & 2020-03-21 & \NF{} & \textit{Progettista} & Organizzazione struttura documento. \\
-   	0.0.1 & 2020-03-20 & \LB{} & \textit{Amministratore} & Creazione documento \LaTeX{}\ped{\textit{G}}.
+	% Versione & data & Nome \\ Ruolo & Descrizione & Verificatore \\ Ruolo
+	3.0.0 & 2020-06-10 & \MP{} \\ \textit{Responsabile} & Approvazione del documento. & \tabularnewline
+	
+	2.1.0 & 2020-06-10 & \AS{} \\ \textit{Verificatore} & Verifica del documento. & \tabularnewline
+	2.0.5 & 2020-06-10 & \LB{} \\ \textit{Progettista} & Incremento metriche \textsection{B} & \NF{} \\ \textit{Verificatore} \tabularnewline
+	2.0.4 & 2020-06-09 & \VB{} \\ \textit{Verificatore} & Incremento \textsection{A} & \AS{} \\ \textit{Verificatore} \tabularnewline	
+	2.0.3 & 2020-06-08 & \AZ{} \\ \textit{Progettista} & Stesura test unità \textsection{4.1} & \NF{} \\ \textit{Verificatore} \tabularnewline
+	
+	2.0.2 & 2020-06-07 & \LB{} \\ \textit{Progettista} & Stesura metriche \textsection{B.2} & \NF{} \\ \textit{Verificatore} \tabularnewline
+	2.0.1 & 2020-05-24 & \LB{} \\ \textit{Progettista} & Correzione \textsection 4 e \textsection 5. & \VB \\ \textit{Verificatore} \tabularnewline
+	2.0.0 & 2020-05-10 & \AZ{} \\ \textit{Responsabile} & Approvazione del documento. & \tabularnewline
+	
+	1.2.0 & 2020-05-09 & \VB{} \\ \textit{Verificatore} & Verifica del documento. & \tabularnewline
+	1.1.6 & 2020-05-07 & \NF{} \\ \textit{Progettista} & Aggiunte metriche per la codifica \textsection{B}. & \VB \\ \textit{Verificatore} \tabularnewline
+	1.1.5 & 2020-05-06 & \LB{} \\ \textit{Progettista} & Aggiunti incrementi \textsection{B}. & \NF \\ \textit{Verificatore} \tabularnewline
+	1.1.4 & 2020-05-05 & \NF{} \\ \textit{Progettista} & Stesura sezione \textsection{C}. & \VB \\ \textit{Verificatore} \tabularnewline
+	1.1.3 & 2020-05-05 & \NF{} \\ \textit{Progettista} & Modifica sezione \textsection{A.3}. & \VB \\ \textit{Verificatore} \tabularnewline
+	1.1.2 & 2020-05-04 & \LB{} \\ \textit{Responsabile} & Stesura sezione \textsection{B.1.1}. & \VB \\ \textit{Verificatore} \tabularnewline
+	1.1.1 & 2020-05-04 & \NF{} \\ \textit{Verificatore} & Stesura sezione \textsection{B.1.2}. & \VB \\ \textit{Verificatore} \tabularnewline
+	1.1.0 & 2020-05-03 & \MP{} \\ \textit{Verificatore} & Verifica documento. & \tabularnewline
+	1.0.3 & 2020-05-03 & \LB{} \\ \textit{Responsabile} & Correzione struttura \textsection{B}. & \NF \\ \textit{Verificatore} \tabularnewline
+	1.0.2 & 2020-05-02 & \LB{} \\ \textit{Amministratore} & Modifica \textsection 4 \textsection 5. & \NF \\ \textit{Verificatore} \tabularnewline
+	1.0.1 & 2020-05-02 & \NF{} \\ \textit{Verificatore} & Modifica \textsection 2 \textsection 3 \textsection A. & \MP \\ \textit{Verificatore} \tabularnewline
+	1.0.0 & 2020-04-11 & \VB{} \\ \textit{Responsabile} & Approvazione del documento. & \tabularnewline
+	
+	0.2.0 & 2020-04-10 & \AZ{} \\ \textit{Verificatore} & Verifica del documento. & \tabularnewline
+	0.1.4 & 2020-04-04 & \NF{} \\ \textit{Progettista} & Apportate modifiche \textsection 2. & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.1.3 & 2020-04-03 & \FJ{} \\ \textit{Progettista} & Stesura \textsection 3. & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.1.2 & 2020-04-03 & \NF{} \\ \textit{Progettista} & Stesura \textsection A.2, \textsection A.3 & \LB \\ \textit{Verificatore} \tabularnewline
+	0.1.1 & 2020-04-02 & \NF{} \\ \textit{Progettista} & Stesura \textsection 2.4, \textsection A.1 & \LB \\ \textit{Verificatore} \tabularnewline
+	0.1.0 & 2020-04-02 & \AZ{} \\ \textit{Verificatore} & Verifica documento. & \tabularnewline
+	0.0.7 & 2020-04-02 & \LB{} \\ \textit{Verificatore} & Stesura \textsection{4} e \textsection{5}. & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.0.6 & 2020-04-01 & \LB{} \\ \textit{Verificatore} & Stesura \textsection{C}. & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.0.5 & 2020-04-01 & \NF{} \\ \textit{Progettista} & Stesura \textsection 2.1, \textsection2.2, \textsection2.3. & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.0.4 & 2020-03-30 & \LB{} \\ \textit{Verificatore} & Stesura \textsection{B}. & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.0.3 & 2020-03-26 & \LB{} \\ \textit{Verificatore} & Stesura \textsection1. & \AZ \\ \textit{Verificatore} \tabularnewline
+	0.0.2 & 2020-03-21 & \NF{} \\ \textit{Progettista} & Organizzazione struttura documento. & \AZ \\ \textit{Verificatore} \tabularnewline
+   	0.0.1 & 2020-03-20 & \LB{} \\ \textit{Amministratore} & Creazione documento \LaTeX{}\ped{\textit{G}}. & \AZ \\ \textit{Verificatore} \tabularnewline
 
 \end{longtable}

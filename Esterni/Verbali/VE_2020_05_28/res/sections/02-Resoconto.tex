@@ -1,0 +1,31 @@
+\section{Verbale}
+\subsection{Chiarimento delle segnalazioni riguardanti l'\AdR{} \textit{v2.0.0}}
+	\begin{itemize}
+		\item in seguito alla richiesta da parte del docente di inserire il diagramma contenente la gerarchia dei casi d'uso UC4, UC5 e UC6, è stata discussa la possibilità di inserire un caso d’uso di autenticazione, contenente all’interno la gerarchia di login attuale (UC4, UC5, UC6). Si è deciso di evitare questa soluzione e mantenere la struttura attuale, per non aumentare eccessivamente la complessità;
+
+		\item il prodotto\ped{\textit{G}} mette a disposizione un comando \texttt{info} e un comando \texttt{search}. È emersa la necessità di rendere più chiari i casi d’uso dei relativi comandi. In particolare, sono da rivedere i loro titoli e le visualizzazioni delle informazioni da essi ritornate.
+	\end{itemize}
+
+\subsection{Discussione della progettazione del prodotto\ped{\textit{G}} software}
+	\paragraph{Modulo Etherless-server}\mbox{}\\
+		I membri del gruppo responsabili della progettazione del modulo\ped{\textit{G}} Etherless-server hanno discusso con il docente di alcuni problemi, nati durante la progettazione. In particolare, sono state esposte due situazioni:
+		\begin{itemize}
+			\item \textbf{gestione delle richieste su server:} ragionando in un’ottica di scalabilità del sistema a prescindere dall’intensità del traffico, il gruppo ha pensato di gestire le richieste inviate al server tramite una coda. L’implementazione di questa soluzione presenta una problematica complessa, ovvero: la necessità di inserire una struttura di tipo switch-case con cast espliciti. Questo metodo è considerato bad practice, quindi il gruppo ha valutato soluzioni diverse, che però hanno finito per generare dipendenze circolari.\\La discussione di questa soluzione si è conclusa con il suggerimento da parte del docente di valutare attentamente la necessità di implementare una coda, o di utilizzare strutture fornite da terze parti per la sua gestione.
+			\item \textbf{gestione delle richieste su Lambda:} ragionando sul concetto di architettura serverless\ped{\textit{G}}, il gruppo ha valutato anche l’opzione di demandare la gestione delle richieste ad AWS Lambda\ped{\textit{G}}. Tale piattaforma è in grado di gestire in maniera automatica il flusso, tramite una o più code configurabili. Questa opzione è stata consigliata anche dal docente, in quanto porta vari vantaggi come:
+			\begin{itemize}
+				\item una forte semplificazione dell’architettura, senza la perdita di requisiti obbligatori;
+				\item adesione concreta al principio serverless\ped{\textit{G}}, spostando la gestione di risorse e scalabilità su Lambda\ped{ \textit{G}};
+				\item possibilità di dare spessore alla funzione che implementa il framework\ped{\textit{G}} Serverless\ped{\textit{G}}, inserendovi la gestione delle code Lambda\ped{\textit{G}}.
+			\end{itemize}
+		\end{itemize}
+		A seguito di questa discussione, il gruppo ha deciso di implementare un'architettura con gestione delle richieste su Lambda\ped{\textit{G}}.
+	\paragraph{Modulo Etherless-smart}\mbox{}\\
+		I membri del gruppo responsabili della progettazione del modulo\ped{\textit{G}} Etherless-smart hanno esposto dei dubbi su come rappresentare nei diagrammi delle classi le feature caratteristiche del linguaggio Solidity\ped{\textit{G}}:
+		\begin{itemize}
+			\item modificatori di funzioni: come \texttt{payable}, \texttt{internal}, ecc.;
+			\item eventi;
+			\item modifier.
+		\end{itemize}
+		Il docente ha suggerito di inserire queste caratteristiche nei diagrammi all'interno di parentesi graffe \{...\}.\\
+		\newline
+		Per quanto riguarda la scelta dei design pattern\ped{\textit{G}} per questo modulo\ped{\textit{G}}, sono state esposte le difficoltà incontrate nell'applicazione del pattern\ped{\textit{G}} Facade inizialmente scelto, causate dalla necessità di mantenere l'emissione di eventi e la chiamata di specifiche funzioni all'interno dello stesso smart contract\ped{\textit{G}}. Il docente ha fatto notare la pertinenza di tale pattern alla programmazione ad oggetti e ha dato un riscontro positivo all'implementazione di design pattern specifici per il linguaggio.

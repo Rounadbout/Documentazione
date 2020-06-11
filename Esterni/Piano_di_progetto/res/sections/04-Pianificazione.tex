@@ -1,11 +1,11 @@
 \section{Pianificazione}
-Lo sviluppo del progetto è costruito sulla base delle scadenze riportate nella sottosezione \textsection1.5 ed è suddiviso nelle seguenti fasi:
+Lo sviluppo del progetto è costruito sulla base delle scadenze riportate nella sottosezione \textsection1.5 ed è suddiviso nei seguenti periodi:
 \begin{itemize}
-	\item analisi;
-	\item consolidamento dei requisiti
-	\item progettazione architetturale;
-	\item progettazione di dettaglio e codifica;
-	\item validazione e collaudo.
+	\item Analisi;
+	\item Consolidamento dei Requisiti
+	\item Progettazione Architetturale;
+	\item Progettazione di Dettaglio e Codifica;
+	\item Validazione e Collaudo.
 \end{itemize}
 
 \subsection{Analisi}
@@ -45,12 +45,13 @@ Questo periodo ha inizio dopo il termine del periodo di Analisi e termina il gio
 			\caption{Diagramma di Gantt del periodo di Consolidamento dei Requisiti}
 		\end{figure}
 \newpage
+
 \subsection{Progettazione Architetturale}
 \textbf{Periodo}: dal 2020-04-20 al 2020-05-18 \\
 Questo periodo ha inizio al termine del periodo di Consolidamento dei Requisiti e termina alla \textit{Revisione di Progettazione}. \\
 Questo periodo porta all'individuazione di una soluzione architetturale che permetta il soddisfacimento dei requisiti individuati.
 \begin{itemize}
-	\item \textbf{Incremento e verifica}: come prima cosa, analizzando l'esito della \textit{Revisione dei Requisiti} vengono svolte attività di incremento e verifica sui vari documenti redatti, dove necessario. \\
+	\item \textbf{Incremento e Verifica}: come prima cosa, analizzando l'esito della \textit{Revisione dei Requisiti} vengono svolte attività di Incremento e Verifica sui vari documenti redatti, dove necessario. \\
 	L'incremento dell'\textit{\AdR{} 1.0.0} è il più importante perchè va completato prima di poter proseguire con il resto delle attività;
 	\item \textbf{Technology Baseline}\ped{\textit{G}}: viene redatta la documentazione di supporto, contenente la descrizione delle tecnologie individuate e il tracciamento della relazione tra le componenti e i requisiti che vanno a soddisfare. Viene anche codificato il \textbf{PoC (Proof of Concept)} come dimostrazione del funzionamento dell'architettura individuata;
 	\item \textbf{Glossario}: attività che prevede un miglioramento del \textit{\Glossario{} 1.0.0} aggiungendo nuovi termini oppure raffinando le definizioni di termini già presenti.
@@ -60,7 +61,7 @@ Questo periodo porta all'individuazione di una soluzione architetturale che perm
 			\begin{itemize}
 				\item \textbf{1$^{\circ}$ Incremento:} integrazione dei documenti a seguito delle conoscenze acquisite nei periodi precedenti;
 				\item \textbf{2$^{\circ}$ Incremento:} implementazione della componente Etherless-smart;
-				\item \textbf{3$^{\circ}$ Incremento:} implementazione della componenete Etherless-CLI\ped{\textit{G}}; \\
+				\item \textbf{3$^{\circ}$ Incremento:} implementazione della componenete Etherless-cli\ped{\textit{G}}; \\
 				Comandi da implementare per il PoC, legati ai requisiti che soddisfano:
 					\rowcolors{2}{lightRowColor}{darkRowColor}
 					\begin{longtable}{
@@ -114,128 +115,122 @@ Questo periodo porta all'individuazione di una soluzione architetturale che perm
 			\caption{Diagramma di Gantt del periodo di Progettazione Architetturale}
 		\end{figure}
 \newpage
+
 \subsection{Progettazione di Dettaglio e Codifica}
 \textbf{Periodo}: dal 2020-05-11 al 2020-06-18 \\
 Questo periodo ha inizio dopo il termine del periodo di Progettazione Architetturale e termina con la \textit{Revisione di Qualifica}. \\
+
 Le principali attività svolte in questo periodo sono:
 \begin{itemize}
-	\item \textbf{Incremento e verifica}: come prima cosa, analizzando l'esito della \textit{Revisione dei Progettazione} vengono svolte attività di incremento e verifica sui vari documenti redatti;
+	\item \textbf{Incremento e Verifica}: come prima cosa, analizzando l'esito della \textit{Revisione dei Progettazione} vengono svolte attività di Incremento e Verifica sui vari documenti redatti;
 	\item \textbf{Product Baseline}\ped{\textit{G}}: progettazione dettagliata a basso livello delle componenti del prodotto\ped{\textit{G}}, coerente con quanto individuato nella \TB{}\ped{\textit{G}}:
 	\begin{itemize}
 		\item \textbf{Allegato Tecnico}: stesura del documento di \textit{Allegato Tecnico 1.0.0}, di supporto alla progettazione di dettaglio;
-		\item \textbf{Codifica}: attività nelle quali viene prodotto e verificato il codice.
+		\item \textbf{Codifica}: attività nelle quali viene prodotto\ped{\textit{G}} e verificato il codice.
 	\end{itemize}
-	\item \textbf{User Manual} (manuale utente): attività nella quale viene redatto lo \textit{User Manual 1.0.0} contenente le informazioni su come funziona e su come si utilizza il prodotto\ped{\textit{G}};
+	\item \textbf{User Manual} (manuale utente): attività nella quale viene redatto lo \textit{User Manual 0.1.0} contenente le informazioni su come funziona e su come si utilizza il prodotto\ped{\textit{G}};
+	\item \textbf{Developer Manual} (manuale sviluppatore): attività nella quale viene redatto il \textit{Developer Manual 0.1.0} contenente le informazioni sulla progettazione e mantenimento del prodotto\ped{\textit{G}};
 	\item \textbf{Glossario}: attività che prevede un miglioramento del \textit{Glossario 2.0.0} aggiungendo nuovi termini oppure raffinando le definizioni di termini già presenti.
 \end{itemize}
-	\subsubsection{Incrementi}
-		\subsubsection{Descrizione}
-			\begin{itemize}
-				\item \textbf{1$^{\circ}$ Incremento:} correzione e integrazione dei documenti a seguito delle conoscenze acquisite nei periodi precedenti;
-				\item \textbf{2$^{\circ}$ Incremento:} progettazione dei 3 moduli\ped{\textit{G}} che compongono il sistema e stesura dell'\textit{Allegato Tecnico 1.0.0};
-				\item \textbf{3$^{\circ}$ Incremento:} sviluppo di Etherless-smart;
-				\item \textbf{4$^{\circ}$ Incremento:} realizzazione delle componenti Etherless-CLI\ped{\textit{G}} e Etherless-server (comprensivi di test di unitá e di integrazione);\\
-				Comandi da implementare, legati ai requisiti che la loro implementazione va a soddisfare:
 
-						\rowcolors{2}{lightRowColor}{darkRowColor}
-						\begin{longtable}{
-							>{\centering}p{0.25\textwidth}
-							>{\centering}p{0.20\textwidth} }
+Abbiamo provveduto a dividere il periodo di Progettazione di Dettaglio e Codifica in due sotto-periodi al fine di rendere più agevole e definita la produzione. I sotto-periodi in questione sono:
+\begin{itemize}
+	\item \textbf{periodo di individuazione dell'architettura e rielaborazione:} in questo periodo sono state attuate le scelte architetturali volte a definire la \textit{Product Baseline}\ped{\textit{G}} ed è stato rielaborato il codice già esistente secondo l'architettura scelta;
+	\item \textbf{periodo di codifica delle nuove funzionalità:} in questo periodo sono state sviluppate le mancanti funzionalità obbligatorie.
+\end{itemize}
 
-							\coloredTableHead
-							\textbf{\color{white}Comando} &
-							\textbf{\color{white}Requisiti}
-							\tabularnewline
-							\endhead
+\subsubsection{Incrementi}
+Complessivamente, gli incrementi applicati nel corso di questo periodo (siano essi nuovi oppure solamente raffinati) risultano essere i seguenti:
 
-							\hline \multicolumn{2}{c}{\textit{Continua nella prossima pagina}} \\
-							\endfoot
-							\hline
-							\endlastfoot
+\subsubsubsection*{Sotto-periodo di individuazione dell'architettura e rielaborazione}
+\begin{itemize}
+	\item \textbf{9$^{\circ}$ Incremento:} correzione dei documenti a seguito delle conoscenze acquisite nei periodi precedenti;
+	\item \textbf{10$^{\circ}$ Incremento:} scelta dell'architettura da applicare al prodotto\ped{\textit{G}} software;
+	\item \textbf{11$^{\circ}$ Incremento:} adattamento delle componenti già sviluppate secondo l’architettura scelta;
+\end{itemize}
 
-							% Contenuto della tabella
-							% Ruolo & Ore & Costo\\
-							signup & R1F3\\ R1F3.1 \\ R1F3.1.1 \\ R1F3.1.2 \\ R1F3.1.3\tabularnewline
-							login & R1F4 \\ R1F4.1 \\ R1F4.1.1 \\ R1F4.1.2 \\ R1F4.1.3\tabularnewline
-							logout & R1F5\tabularnewline
-							info & R1F7 \\ R1F7.1 \\ R1F7.2 \tabularnewline
-							run & R1F9 \\ R1F9.1 \\ R1F9.1.1 \\ R1F9.2 \\ R1F9.2.1 \\ R1F9.2.2 \\ R1F9.3 \\ R1F9.4 \tabularnewline
-							list & R1F10 \\ R1F10.1 \\ R1F10.2 \\ R1F10.3 \\ R1F10.4 \tabularnewline
-							deploy & R1F11 \\ R1F11.1 \\ R1F11.1.2 \\ R1F11.2 \\ R1F11.2.1 \\ R1F11.2.2 \\ R1F11.4\tabularnewline
-							edit & R1F12 \\ R1F12.1 \\ R1F12.1.1 \\ R1F12.1.2 \\ R1F12.2 \\ R1F12.2.1 \\ R1F12.3 \\ R1F12.3.1 \\ R1F12.3.2\tabularnewline
-							delete & R1F14 \\ R1F14.1 \\ R1F14.1.1 \\ R1F14.1.2\tabularnewline
+\subsubsubsection*{Sotto-periodo di codifica delle nuove funzionalità}
+\begin{itemize}
+	\item \textbf{12$^{\circ}$ Incremento:} implementazione della funzionalità di rilascio di una funzione (corrispondente al comando \texttt{etherless deploy});
+	\item \textbf{13$^{\circ}$ Incremento:} implementazione della funzionalità di eliminazione di una funzione (corrispondente al comando \texttt{etherless delete});
+	\item \textbf{14$^{\circ}$ Incremento:} implementazione delle funzionalità per ottenere informazioni su una o più funzioni (corrispondenti ai comandi \texttt{etherless info} e \texttt{etherless list});
+	\item \textbf{15$^{\circ}$ Incremento:} stesura dei seguenti documenti:
+	\begin{itemize}
+		\item stesura dello \textit{User Manual 0.1.0};
+		\item stesura del \textit{Developer Manual 0.1.0};
+	\end{itemize}
+	aggiornamento della documentazione, con corrispondente passaggio alla versione 3.0.0:
+	\begin{itemize}
+		\item consuntivo di periodo nel \textit{\PdP{}};
+		\item valori delle metriche registrati nel \textit{\PdQ{}};
+		\item contenuto del \textit{Glossario}.
+	\end{itemize}
+	\item \textbf{16$^{\circ}$ Incremento:} preparazione della presentazione per la RQ e conseguente raffinamento della demo\ped{\textit{G}}.
+\end{itemize}
 
-							\rowcolor{white}\caption{Tracciamento comandi-requisiti soddisfatti}	\\
+Conseguentemente, le scadenze dei vari incrementi sono state ridefinite secondo il seguente calendario:
+\begin{itemize}
+	\item \textbf{9$^{\circ}$ Incremento:} entro 2020-05-22;
+	\item \textbf{10$^{\circ}$ Incremento:} entro 2020-05-26;
+	\item \textbf{11$^{\circ}$ Incremento:} entro 2020-05-29;
+	\item \textbf{12$^{\circ}$ Incremento:} entro 2020-06-02;
+	\item \textbf{13$^{\circ}$ Incremento:} entro 2020-06-04;
+	\item \textbf{14$^{\circ}$ Incremento:} entro 2020-06-06;
+	\item \textbf{15$^{\circ}$ Incremento:} entro 2020-06-11;
+	\item \textbf{16$^{\circ}$ Incremento:} entro 2020-06-18.
+\end{itemize}
 
-						\end{longtable}
+\subsubsection{Diagramma di Gantt: Progettazione di Dettaglio e Codifica}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.1\textwidth]{./res/img/DiagrammiGantt/prog_dett_gantt.png}
+		\caption{Diagramma di Gantt del periodo di Progettazione di Dettaglio e Codifica}
+	\end{figure}
 
-				\item \textbf{5$^{\circ}$ Incremento:} stesura documenti:
-				\begin{itemize}
-					\item stesura dello \textit{User Manual 1.0.0}.
-				\end{itemize}
-				Ulteriori aggiornamenti della documentazione, con passaggio alla versione 3.0.0:% (consuntivo di periodo PdP e user manual)
-					\begin{itemize}
-						\item consuntivo di periodo nel \PdP{};
-						\item aggiornamento dell'\textit{Allegato Tecnico};
-						\item eventuali aggiornamenti riguardanti il \Glossario{}.
-					\end{itemize}
-				\item \textbf{6$^{\circ}$ Incremento:} preparazione della presentazione per la RQ.
-			\end{itemize}
-		\subsubsection{Scadenze}
-			\begin{itemize}
-				\item \textbf{1$^{\circ}$ Incremento:} entro 2020-05-20;
-				\item \textbf{2$^{\circ}$ Incremento:} entro 2020-05-24;
-				\item \textbf{3$^{\circ}$ Incremento:} entro 2020-05-26;
-				\item \textbf{4$^{\circ}$ Incremento:} entro 2020-06-05;
-				\item \textbf{5$^{\circ}$ Incremento:} entro 2020-06-11;
-				\item \textbf{6$^{\circ}$ Incremento:} entro 2020-06-18.
-			\end{itemize}
-	\subsubsection{Diagramma di Gantt: Progettazione di Dettaglio e Codifica}
-		\begin{figure}[h]
-			\centering
-			\includegraphics[width=1.1\textwidth]{./res/img/DiagrammiGantt/prog_dett_gantt.png}
-			\caption{Diagramma di Gantt del periodo di Progettazione di Dettaglio e Codifica}
-		\end{figure}
+
 \newpage
+
 \subsection{Validazione e Collaudo}
 \textbf{Periodo}: dal 2020-06-11 al 2020-07-20 \\
 Questo periodo ha inizio dopo il termine del periodo di Progettazione di Dettaglio e Codifica, e termina con la \textit{Revisione di Accettazione}. \\
 Le principali attività svolte in questo periodo sono:
 \begin{itemize}
-	\item \textbf{Incremento e verifica}: come prima cosa, analizzando l'esito della \textit{Revisione di Qualifica} vengono svolte attività di incremento e verifica sui vari documenti redatti;
+	\item \textbf{Incremento e Verifica}: come prima cosa, analizzando l'esito della \textit{Revisione di Qualifica} vengono svolte attività di Incremento e Verifica sui vari documenti redatti;
 	\item \textbf{Validazione e Collaudo}: attività nella quale vengono eseguiti test e, se necessario, vengono apportati dei miglioramenti al prodotto\ped{\textit{G}} per poter assicurare il soddisfacimento dei requisiti e dei vincoli qualitativi;
 	\item \textbf{User Manual}: attività nella quale viene migliorato lo \textit{User Manual 1.0.0};
-	\item \textbf{Manuale Sviluppatore}: attività nella quale viene redatto il \textit{Manuale Sviluppatore 1.0.0}, il quale contiene le informazioni utili al mantenimento del prodotto\ped{\textit{G}};
+	\item \textbf{Developer Manual}: attività nella quale viene redatto il \textit{Developer Manual 1.0.0}, il quale contiene le informazioni utili al mantenimento del prodotto\ped{\textit{G}};
 	\item \textbf{Glossario}: attività che prevede un miglioramento del \textit{Glossario 3.0.0} aggiungendo nuovi termini oppure raffinando le definizioni di termini già presenti.
 \end{itemize}
 	\subsubsection{Incrementi}
 		\subsubsubsection{Descrizione}
 			\begin{itemize}
-				\item \textbf{1$^{\circ}$ Incremento:} correzione e integrazione dei documenti a seguito delle conoscenze acquisite nei periodi precedenti e dalla correzione della RQ;
-				\item \textbf{2$^{\circ}$ Incremento:} implementazione dei requisiti mancanti, ovvero quelli desiderabili e opzionali;\\
-				Comandi da implementare, legati a requisiti desiderabili e opzionali:
+				\item \textbf{17$^{\circ}$ Incremento:} correzione e integrazione dei documenti a seguito delle conoscenze acquisite nei periodi precedenti e dalla correzione della RQ;
+				\item \textbf{18$^{\circ}$ Incremento:} ampliamento del modulo\ped{\textit{G}} \textit{Etherless-cli} mediante l'implementazione dei seguenti comandi:
 					\begin{itemize}
-						\item \textbf{init};
-						\item \textbf{help:} legato a UC1 e UC2;
-						\item \textbf{whoami:} legato allo UC9;
-						\item \textbf{search:} legato allo UC11;
-						\item \textbf{history:} legato allo UC16.
+						\item \texttt{init};
+						\item \texttt{whoami};
+						\item \texttt{search}.
 					\end{itemize}
-				\item \textbf{3$^{\circ}$ Incremento:} implementazione dei test di sistema ed eventuali correzioni necessarie;
-				\item \textbf{4$^{\circ}$ Incremento:} aggiornamento dei documenti e stesura del \textit{Manuale dello Sviluppatore 1.0.0};
-				\item \textbf{5$^{\circ}$ Incremento:} preparazione della presentazione per la RA.
+				\item \textbf{19$^{\circ}$ Incremento:} implementazione del comando \texttt{history};
+				\item \textbf{20$^{\circ}$ Incremento:} implementazione del comando \texttt{edit};
+				\item \textbf{21$^{\circ}$ Incremento:} ampliamento dei test di sistema ed eventuali correzioni necessarie;
+				\item \textbf{22$^{\circ}$ Incremento:} aggiornamento della documentazione;
+				\item \textbf{23$^{\circ}$ Incremento:} preparazione della presentazione per la RA.
 			\end{itemize}
 		\subsubsubsection{Scadenze}
 			\begin{itemize}
-				\item \textbf{1$^{\circ}$ Incremento:} entro 2020-06-26;
-				\item \textbf{2$^{\circ}$ Incremento:} entro 2020-07-02;
-				\item \textbf{3$^{\circ}$ Incremento:} entro 2020-07-08;
-				\item \textbf{4$^{\circ}$ Incremento:} entro 2020-07-13;
-				\item \textbf{5$^{\circ}$ Incremento:} entro 2020-07-20.
+				\item \textbf{17$^{\circ}$ Incremento:} entro 2020-06-24;
+				\item \textbf{18$^{\circ}$ Incremento:} entro 2020-06-26;
+				\item \textbf{19$^{\circ}$ Incremento:} entro 2020-06-28;
+				\item \textbf{20$^{\circ}$ Incremento:} entro 2020-07-03;
+				\item \textbf{21$^{\circ}$ Incremento:} entro 2020-07-08;
+				\item \textbf{22$^{\circ}$ Incremento:} entro 2020-07-13;
+				\item \textbf{23$^{\circ}$ Incremento:} entro 2020-07-20.
 			\end{itemize}
+
 	\subsubsection{Diagramma di Gantt: Validazione e Collaudo}
 		\begin{figure}[h]
 			\centering
-			\includegraphics[width=1.1\textwidth]{./res/img/DiagrammiGantt/validaz_gantt.png}
+			\includegraphics[width=1.1\textwidth]{./res/img/DiagrammiGantt/validaGantt}
 			\caption{Diagramma di Gantt del periodo di Validazione e Collaudo}
 		\end{figure}
