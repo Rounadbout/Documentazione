@@ -8,24 +8,24 @@ The commands syntax used is the following:
 \end{center}
 Where:
 \begin{itemize}
-	\item command is the command name;
-	\item parameters are some parameters the command may need.
+	\item \texttt{command}: is the command name;
+	\item \texttt{parameters}: are some parameters the command may need.
 \end{itemize}
 
-\noindent The commands available on etherless-cli are:
+\noindent The commands available on Etherless-cli are:
 \begin{itemize}
-	\item signup
-	\item init
-	\item login [m] <value>
-	\item history
-	\item list [m]
-	\item whoami
-	\item search <keyword>
-	\item info <function\_name>
-	\item run <function\_name> [params..]
-	\item logout
-	\item delete <function\_name>
-	\item deploy <function\_name> <path> <desc>
+	\item \texttt{signup}
+	\item \texttt{init}
+	\item \texttt{login [m] <value>}
+	\item \texttt{history}
+	\item \texttt{list [m]}
+	\item \texttt{whoami}
+	\item \texttt{search <keyword>}
+	\item \texttt{info <function\_name>}
+	\item \texttt{run <function\_name> [params..]}
+	\item \texttt{logout}
+	\item \texttt{delete <function\_name>}
+	\item \texttt{deploy <function\_name> <path> <desc>}
 \end{itemize}
 
 \subsection{Account management}
@@ -69,7 +69,7 @@ The user can log inside his wallet using his private key$_{G}$, the command synt
 \end{center}
 
 \subsubsubsection{Login with mnemonic phrase}
-The user can log inside his Ethereum wallet using the associated mnemonic phrase$_{G}$; the command syntax is the following:
+The user can log inside his Ethereum$_{G}$ wallet using the associated mnemonic phrase$_{G}$; the command syntax is the following:
 
 \begin{center}
 	\code{etherless login -m <mnemonic\_phrase>}
@@ -112,7 +112,7 @@ The user can list all the functions of their property inside the Etherless platf
 \end{center}
 
 \subsection{Search for a function}
-To list all the functions having a keyword in their name use the command \textit{search}, with the following syntax:
+To list all the functions having a keyword in their name use the command \texttt{search}, with the following syntax:
 \begin{center}
 	\code{etherless search <keyword>}
 \end{center}
@@ -157,8 +157,8 @@ The user can deploy a function through the deploy command with the following syn
 \end{center}
 \noindent where:
 \begin{itemize}
-	\item function\_name: is the name of the function to be deployed;
-	\item path: is the relative path from the current position to the source file;
-	\item desc: is a description of the function.
+	\item \texttt{function\_name}: is the name of the function to be deployed;
+	\item \texttt{path}: is the relative path from the current position to the source file;
+	\item \texttt{desc}: is a description of the function.
 \end{itemize}
 You can not specify the execution cost of your function, instead it will be chosen by the system. At the moment the execution price is fixed; we plan to determine it dynamically (based on the resource amount used by the function) in the future. After the execution of this command  the application will show an error or a success message depending on the outcome of the operation.
