@@ -1,11 +1,48 @@
 \subsubsection{Periodo complessivo}
 
-	\subsubsubsection{Prospetto orario}
-
-	\subsubsubsection{Prospetto economico}
-
+	\subsubsubsection{Consuntivo}
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
+			>{\centering}p{0.08\textwidth}
+			>{\centering}p{0.08\textwidth}
+			>{\centering}p{0.15\textwidth}
+			>{\centering\arraybackslash}p{0.15\textwidth} }
+		
+		\coloredTableHead
+		\textbf{\color{white}Ruolo} &
+		\textbf{\color{white}Ore} &
+		\textbf{\color{white}Delta ore} &
+		\textbf{\color{white}Costo in \euro{}} &
+		\textbf{\color{white}Delta costo}
+		\tabularnewline
+		\endhead
+		
+		% Contenuto della tabella
+		% Ruolo & OreEffettive & DeltaOre & Costo & DeltaCosto \\
+		Responsabile    & 23 & +0 &   690,00 & +  0,00 \\
+		Amministratore  & 26 & -6 &   520,00 & -  120,00 \\
+		Analista        & 3 & +3 &   75,00 & + 75,00 \\
+		Progettista     & 94 & +6 & 2054,00 & + 118,00 \\
+		Programmatore   & 145 & -8 &   2175,00 &  -120,00 \\
+		Verificatore    & 98 & +2 & 1470,00 & + 30,00 \\
+		\textbf{Totale Effettivo} & \multicolumn{2}{c}{\textbf{389}} & \multicolumn{2}{c}{\textbf{6984,00}} \\
+		\textbf{Delta} & \multicolumn{2}{c}{\textbf{-3}} & \multicolumn{2}{c}{\textbf{-17,00}} \\
+		
+		\rowcolor{white}\caption{Consuntivo per il periodo di Progettazione di Dettaglio e Codifica}	\\
+		
+	\end{longtable}
+	
 	\subsubsubsection{Conclusioni}
-
-	\subsubsubsection{Preventivo a finire}
+	Il bilancio finale è \textbf{positivo}, con un risparmio di \textbf{17,00\euro}. \\ Come riportato nella tabella del consuntivo per il periodo di Progettazione di Dettaglio e Codifica, il numero di ore preventivate per il ruolo di Responsabile si è dimostrato adeguato. \\ Segue un'analisi delle motivazioni per cui gli altri ruoli hanno necessitato di un numero di ore differente da quanto previsto: 
+	\begin{itemize}
+		\item \textbf{Amministratore}: il numero limitato di modifiche da apportare alle \NdP hanno portato ad un risparmio di ore;
+		\item \textbf{Analista}: al contrario di quanto previsto, è stato necessario apportare ulteriori modifiche all'\AdR, questo ha portato alla necessità di alcune ore di lavoro non preventivate;
+		\item \textbf{Progettista}: la scarsa conoscenza dei design pattern e l'esito della Product Baseline hanno portato ad un incremento considerevole delle ore di lavoro richieste da tale ruolo;
+		\item \textbf{Programmatore}: il riutilizzo del prototipo creato per la \textit{Technology Baseline} e la ripetizione di pattern di comunicazione tra i vari moduli hanno permesso di risparmiare alcune ore di lavoro;
+		\item \textbf{Verificatore}: sono state necessarie alcune ore di lavoro non preventivate per verificare tutte le modifiche apportate alla documentazione;
+	\end{itemize}
+	
+	\subsubsubsection{Preventivo a finire}	
+	Date le considerazioni precedenti, il preventivo complessivo resta invariato. Inoltre prevediamo di utilizzare l'ammontare risparmiato per assegnare alcune ore supplementari nel periodo di Validazione e Collaudo, in modo da non bilanciare eventuali ritardi nell'implementazione dei requisiti rimanenti. 
 	
 	
