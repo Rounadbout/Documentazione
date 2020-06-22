@@ -1,42 +1,42 @@
 \subsubsection{16$^{\circ}$ Incremento}
 		
 	\subsubsubsection{Consuntivo}
-		In base al prospetto orario, quello economico sarà il seguente: 
-		\rowcolors{2}{lightRowColor}{darkRowColor}
+	
 		\begin{longtable}{
-				>{\centering}p{0.25\textwidth}
-				>{\centering}p{0.05\textwidth}
-				>{\centering\arraybackslash}p{0.15\textwidth} }
-			
-			\coloredTableHead
-			\textbf{\color{white}Ruolo} &
-			\textbf{\color{white}Ore} &
-			\textbf{\color{white}Costo in \euro{}}
-			\tabularnewline
-			\endhead
-			
-			% Contenuto della tabella
-			% Ruolo & Ore & Costo \\
-			Responsabile    & 2  & 60,00 \\
-			Amministratore  & 2  & 40,00 \\
-			Analista        & 0  & 0,00 \\
-			Progettista     & 3  & 66,00 \\
-			Programmatore   & 1  & 15,00 \\
-			Verificatore    & 2  & 30,00 \\
-			\textbf{Totale} & 10 & 211,00 \\
-			
-			\rowcolor{white}\caption {Prospetto dei costi per il sedicesimo incremento}	\\
-			
-		\end{longtable}
+			>{\centering}p{0.25\textwidth}
+			>{\centering}p{0.08\textwidth}
+			>{\centering}p{0.08\textwidth}
+			>{\centering}p{0.15\textwidth}
+			>{\centering\arraybackslash}p{0.15\textwidth} }
+
+		\coloredTableHead
+		\textbf{\color{white}Ruolo} &
+		\textbf{\color{white}Ore} &
+		\textbf{\color{white}Delta ore} &
+		\textbf{\color{white}Costo in \euro{}} &
+		\textbf{\color{white}Delta costo}
+		\tabularnewline
+		\endhead
 		
-		% Grafico
-		Rappresentazione grafica della distribuzione dei ruoli:
-		\begin{figure}[h]
-			\centering
-			\includegraphics[width=0.7\textwidth]{./res/img/progettazioneArchitetturale_pe.png}
-			\caption{Prospetto economico del sedicesimo incremento}
-		\end{figure}
-	
+		% Contenuto della tabella
+		% Ruolo & OreEffettive & DeltaOre & Costo & DeltaCosto \\
+		Responsabile    & 2 & +0 &   60,00 & +  0,00 \\
+		Amministratore  & 2 & +0 &   40,00 & +  0,00 \\
+		Analista        & 0 & +0 &   0,00 & + 0,00 \\
+		Progettista     & 3 & +0 & 66,00 & + 0,00 \\
+		Programmatore   & 3 & +2 &   45,00 &  +30,00 \\
+		Verificatore    & 2 & +0 & 30,00 & + 0,00 \\
+		\textbf{Totale Effettivo} & \multicolumn{2}{c}{\textbf{12}} & \multicolumn{2}{c}{\textbf{241,00}} \\
+		\textbf{Delta} & \multicolumn{2}{c}{\textbf{+2}} & \multicolumn{2}{c}{\textbf{+30,00}} \\
+		
+		\rowcolor{white}\caption{Consuntivo per il 16$^{\circ}$ Incremento}	\\
+	\end{longtable}
+		
 	\subsubsubsection{Conclusioni}
+	Durante questo incremento il gruppo si è occupato di creare la presentazione per la Revisione di Qualifica e di raffinare la corrispondente demo. Sono stati riscontrati alcuni errori per le funzionalità di deployment ed eliminazione di una funzione, la cui risoluzione ha richiesto alcune ore non pianificate per il ruolo di Programmatore. 
 	
-	\subsubsubsection{Preventivo a finire}
+	\subsubsubsection{Preventivo a finire rispetto al periodo}
+	Il bilancio è \textbf{negativo}, con un una spesa in eccesso di \textbf{30,00\euro{}}. Non si ritiene necessaria alcuna ripianificazione, poiché tale somma non è significativa e viene in parte bilanciata dal risparmio ottenuto in alcuni degli incrementi precedenti. 
+	
+	\subsubsubsection{Preventivo a finire complessivo}	
+	Date le considerazioni precedenti, il preventivo complessivo resta invariato.
