@@ -139,8 +139,6 @@ To interact with the contracts on the Ethereum blockchain, a \texttt{smartConfig
 }
 \end{quote}
 The parameters within angular brackets should be replaced with the actual credentials and both files be moved to the \texttt{Config} directory inside Etherless-server.
-\subsubsection{Enable \texttt{etherless} commands}
-To enable using commands with the keyword \texttt{etherless} you should open a shell and change to the main directory. Then you should run the command \texttt{npm link} as Administrator.
 \subsubsection{Truffle Suite Configuration}
 	In order to interact with the Ropsten$_{G}$ testnet, before beginning the installation process you need two keys: an Infura$_{G}$ project id (from your own Infura$_{G}$ account) and the mnemonic phrase of your Ethereum account. Having these credentials you need to edit the \textit{truffle-config.js} file, replacing the matching fields at the top with your own. Now you are ready to interact with the Ropsten$_{G}$ test network directly from Truffle$_{G}$.\\
 	To interact only with a Ganache-cli local blockchain no further configuration is needed, as the information is already stored in the \textit{truffle-config.js} file.
