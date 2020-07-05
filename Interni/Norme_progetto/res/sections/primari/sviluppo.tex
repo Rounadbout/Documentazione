@@ -123,7 +123,7 @@
 
 
     \subsubsubsection{Progettazione}
-        L'attività di progettazione definisce una soluzione del problema presentato soddisfacente per tutti gli stakeholders, in relazione ai requisiti specificati nel documento \AdR{} \textit{3.0.0}. Questo garantisce che il prodotto\ped{\textit{G}} sviluppato soddisfi le proprietà e i bisogni specificati dal Proponente\ped{\textit{G}}.
+        L'attività di progettazione definisce una soluzione del problema presentato soddisfacente per tutti gli stakeholders, in relazione ai requisiti specificati nel documento \AdR{} \textit{4.0.0}. Questo garantisce che il prodotto\ped{\textit{G}} sviluppato soddisfi le proprietà e i bisogni specificati dal Proponente\ped{\textit{G}}.
         La progettazione ha quindi come obiettivo l'elaborazione di una struttura adeguata per il sistema, e si divide in:
         \begin{itemize}
         	\item{\textbf{Progettazione Architetturale}}: vengono svolte operazioni di incremento, verifica dei requisiti e progettazione ad alto livello di un'architettura adeguata alla realizzazione del progetto. La Technology Baseline\ped{\textit{G}} del progetto si ottiene alla fine di questo periodo;
@@ -263,7 +263,7 @@
     	\subsubsubsection*{Qualità dell'architettura}
     	In seguito alla definizione dei requisiti, che consolida le funzionalità richieste, ci si occupa della realizzazione dell'architettura del sistema. Tale architettura dovrà godere delle seguenti proprietà:
     	\begin{itemize}
-    		\item{\textbf{sufficienza}}: deve soddisfare i requisiti definiti nel documento \AdR{} \textit{3.0.0};
+    		\item{\textbf{sufficienza}}: deve soddisfare i requisiti definiti nel documento \AdR{} \textit{4.0.0};
     		\item{\textbf{comprensibilità}}: deve essere capibile da tutti gli stakeholder;
     		\item{\textbf{modularità}}: deve essere suddivisa in parti chiare e ben distinte;
     		\item{\textbf{robustezza}}: deve essere in grado di sopportare ingressi diversi, sia da parte dell'utente che dell'ambiente;
@@ -289,10 +289,10 @@
        	\item migliorare la qualità del prodotto\ped{\textit{G}}.
    	\end{itemize}
 
-   	\noindent La scrittura del codice dovrà inoltre perseguire gli obiettivi di qualità stabiliti nel documento \textit{\PdQ{} 3.0.0}, in modo da garantire una buona qualità del codice.
+   	\noindent La scrittura del codice dovrà inoltre perseguire gli obiettivi di qualità stabiliti nel documento \textit{\PdQ{} 4.0.0}, in modo da garantire una buona qualità del codice.
     	\subsubsection*{Stile di codifica}
    \begin{itemize}
-         \item{\textbf{indentazione}: i blocchi innestati devono essere correttamente indentati, usando per ciascun livello di indentazione quattro (4) spazi, fatta eccezione per i commenti. Ogni programmatore dovrà configurare adeguatamente il proprio IDE\ped{\textit{G}} al fine di rispettare tale norma;}
+         \item{\textbf{indentazione}: i blocchi innestati devono essere correttamente indentati, usando per ciascun livello di indentazione due (2) spazi, fatta eccezione per i commenti. Ogni programmatore dovrà configurare adeguatamente il proprio IDE\ped{\textit{G}} al fine di rispettare tale norma;}
 		\item{\textbf{parentesizzazione}: le parentesi di delimitazione dei costrutti vanno inserite in linea e non al di sotto di essi;}
 		\item{\textbf{lunghezza dei metodi}: ove possibile, preferire metodi brevi (poche righe di codice) e che assolvano il minor numero di compiti possibile;}
 		\item{\textbf{univocità dei nomi}: classi, variabili e metodi devono avere un nome univoco ed esplicativo (nome parlante), al fine di evitare ambiguità e consentire ad eventuali lettori di comprendere lo scopo di quel preciso elemento, anche senza conoscenze informatiche pregresse;}
@@ -309,16 +309,40 @@
 
 \subsubsection{Metriche}
 	\subsubsubsection{Metriche di analisi dei requisiti}
-	\subsubsection*{Percentuale dei Requisiti Obbligatori Soddisfatti}
-		\begin{itemize}
-			\item{\textbf{Descrizione}}: la metrica indica la percentuale di requisiti obbligatori soddisfatti sui requisiti totali;
-			\item{\textbf{unità di misura}}: la metrica viene espressa in percentuale;
-			\item{\textbf{formula}}: $ PROS = \displaystyle\frac{\#requisiti\_obbligatori\_soddisfatti}{\#requisti\_obbligatori\_totali}\times100$;
-			\item{\textbf{risultato}}: il risultato è compreso tra 0\% e 100\%, in particolare:
+		\subsubsection*{Percentuale dei Requisiti Obbligatori Soddisfatti}
+			\begin{itemize}
+				\item{\textbf{Descrizione}}: la metrica indica la percentuale di requisiti obbligatori soddisfatti sui requisiti totali;
+				\item{\textbf{unità di misura}}: la metrica viene espressa in percentuale;
+				\item{\textbf{formula}}: $ PROS = \displaystyle\frac{\#requisiti\_obbligatori\_soddisfatti}{\#requisti\_obbligatori\_totali}\times100$;
+				\item{\textbf{risultato}}: il risultato è compreso tra 0\% e 100\%, in particolare:
+					\begin{itemize}
+						\item una valore inferiore al 100\%, indica la presenza di alcuni requisiti obbligatori non ancora soddisfatti;
+						\item una valore pari al 100\%, indica che tutti i requisiti obbligatori presentati sono stati soddisfatti.
+					\end{itemize}
+			\end{itemize}
+		
+		\subsubsection*{Percentuale dei Requisiti Desiderabili Soddisfatti}
+			\begin{itemize}
+				\item{\textbf{Descrizione}}: la metrica indica la percentuale di requisiti desiderabili soddisfatti sui requisiti totali;
+				\item{\textbf{unità di misura}}: la metrica viene espressa in percentuale;
+				\item{\textbf{formula}}: $ PRDesS = \displaystyle\frac{\#requisiti\_desiderabili\_soddisfatti}{\#requisti\_desiderabili\_totali}\times100$;
+				\item{\textbf{risultato}}: il risultato è compreso tra 0\% e 100\%, in particolare:
 				\begin{itemize}
-					\item una valore inferiore al 100\%, indica la presenza di alcuni requisiti obbligatori non ancora soddisfatti;
-					\item una valore pari al 100\%, indica che tutti i requisiti obbligatori presentati sono stati soddisfatti.
+					\item una valore inferiore al 100\%, indica la presenza di alcuni requisiti desiderabili non ancora soddisfatti;
+					\item una valore pari al 100\%, indica che tutti i requisiti desiderabili presentati sono stati soddisfatti.
 				\end{itemize}
+			\end{itemize}
+		
+		\subsubsection*{Percentuale dei Requisiti Opzionali Soddisfatti}
+		\begin{itemize}
+			\item{\textbf{Descrizione}}: la metrica indica la percentuale di requisiti opzionali soddisfatti sui requisiti totali;
+			\item{\textbf{unità di misura}}: la metrica viene espressa in percentuale;
+			\item{\textbf{formula}}: $ PROpzS = \displaystyle\frac{\#requisiti\_opzionali\_soddisfatti}{\#requisti\_opzionali\_totali}\times100$;
+			\item{\textbf{risultato}}: il risultato è compreso tra 0\% e 100\%, in particolare:
+			\begin{itemize}
+				\item una valore inferiore al 100\%, indica la presenza di alcuni requisiti opzionali non ancora soddisfatti;
+				\item una valore pari al 100\%, indica che tutti i requisiti opzionali presentati sono stati soddisfatti.
+			\end{itemize}
 		\end{itemize}
 
 	\subsubsubsection{Metriche di progettazione}
