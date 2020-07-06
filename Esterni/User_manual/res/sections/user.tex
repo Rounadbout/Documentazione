@@ -52,16 +52,15 @@ To get information about the signup and authentication process you can use the \
 \begin{center}
 	\code{etherless init}
 \end{center}
+\subsubsubsection*{Usage}
 
 \subsubsection{Signup}
 The \texttt{signup} command allows you to create a new Ethereum$_{G}$ account to log into the application. The account created has no Ethers$_{G}$ in the wallet associated with it. This means that, by simply creating an account, you cannot perform all the functionalities that \textit{Etherless} provides, since some of them require a certain amount of cryptocurrency to be executed. \\
 To fully use the account you need to add some currency through other online services. \\
 You can sing up to \textit{Etherless} using the following syntax:
-
 \begin{center}
 	\code{etherless signup [-save]}
 \end{center}
-
 \noindent The execution of this command returns the credentials of the newly created account, which are:
 \begin{itemize}
 	\item an address that identifies the Ethereum$_{G}$ account;
@@ -70,6 +69,16 @@ You can sing up to \textit{Etherless} using the following syntax:
 \end{itemize}
 Appending the optional flag \texttt{save} to the command lets you save the credentials into a file that will be created in the current directory. \\
 Note that the \texttt{signup} command creates an account, but it does not log you in. To do that, you have to use the designated \texttt{login} command.
+\subsubsubsection*{Usage}
+Let's suppose you want to sign up without saving your credentials. You should then just type from your terminal window:
+\begin{center}
+	\code{etherless signup}
+\end{center}
+On the other hand, if you want your credentials to be saved on a file in the current directory, you should type:
+\begin{center}
+	\code{etherless signup -save}
+\end{center}
+Note that saving your credentials on a file does not automate the authentication process, meaning when logging in you still have to insert them manually.
 
 \subsubsection{Login}
 If you already have an Ethereum$_{G}$ account, you can log into \textit{Etherless} using the \texttt{login} command. There are two different ways to execute this command, either by entering the private key$_{G}$ associated with your Ethereum$_{G}$ account or the mnemonic phrase$_{G}$, as shown below: \\
@@ -90,14 +99,25 @@ You can log inside your Ethereum$_{G}$ wallet using the associated mnemonic phra
 \begin{center}
 	\code{etherless login -m <your\_mnemonic\_phrase>}
 \end{center}
-To correctly execute this command the flag \texttt{-m} must be present and the mnemonic phrase$_{G}$ must be inserted without quotation marks.
+
+\subsubsubsection*{Usage}
+Let's suppose you already have an Ethereum account and you want to log in using your mnemonic phrase, which is \texttt{this is one mnemonic phrase example}. To do this, just type from your terminal window:
+\begin{center}
+	\code{etherless login -m this is one mnemonic phrase example}
+\end{center}
+
+On the other hand, you might want to use your private key to log in. For the sake of the example,  let's suppose your private key is 00000...001. To do this, just type from your terminal window:
+\begin{center}
+	\code{etherless login 0000...001}
+\end{center}
+
 
 \subsubsection{Whoami}
 By executing this command you get the address of the wallet associated with the current session. If you try to execute this command without being logged in, an error message will be shown. The command syntax is as follows: 
 \begin{center}
 	\code{etherless whoami}
 \end{center}
-After the execution of the command the address of the wallet associated with the current session will be displayed.
+Following the command execution the address of the wallet associated with the current session will be displayed.
 
 \subsubsection{Logout}
 You can run this command to log out from the Ethereum$_{G}$ network. The command syntax is:
@@ -106,7 +126,7 @@ You can run this command to log out from the Ethereum$_{G}$ network. The command
 \end{center}
 After executing this command, all the information about the previous user session will be deleted.
 
-\subsubsection{List}
+\subsubsection{List}\label{list}
 \textit{Etherless} allows you to list of all the functions available for execution inside the platform. Moreover, you can list all the functions of you property, if you have deployed any. \\
 The syntax needed to do this is as follows:
 \begin{center}
@@ -119,10 +139,11 @@ The syntax needed to do this is as follows:
 \end{itemize}
 
 \subsubsubsection{List all functions}
-You can list all the functions available on \textit{Etherless} by typing:
+You can get back the name and the price of all the functions available on \textit{Etherless} by typing:
 \begin{center}
 	\code{etherless list}
 \end{center}
+
 \subsubsubsection{List owned functions}
 If you have deployed any function on \textit{Etherless}, you can get them back in a list by typing:
 \begin{center}
@@ -141,52 +162,103 @@ In particular, the following information will be shown:
 	\item \textbf{price}: the cost to run the function;
 	\item \textbf{description}: a brief description of the function.
 \end{itemize}
+\subsubsubsection*{Usage}
+Let's say you want to get more information about a function called \texttt{subtract} (which you know is available on the cloud for execution). To do this, type from your terminal window:
+\begin{center}
+	\code{etherless info subtract}
+\end{center}
+As stated above, after this command execution you will get back information such as the function owner, the function signature, its price and a brief description.
 
 \subsubsection{Search}
-If you're looking for a certain function, use the command \texttt{search}.To execute this command, the following syntax is required:
+You can use the \texttt{search} command if you're looking for a certain function. To execute this command, the following syntax is required:
 \begin{center}
 	\code{etherless search <keyword>}
 \end{center}
 
-A list of functions whose name matches the search will be displayed. For each function the following data will be provided:
+A list of functions whose name matches the keyword used will be displayed. For each function, the following information will be provided:
 \begin{itemize}
 	\item \textbf{name}: the name of the function;
 	\item \textbf{price}: the cost to run the function.
 \end{itemize}
+\subsubsubsection*{Usage}
+Let's say you want to find a function to execute a subtraction. You decide to use the keyword \texttt{sub} instead of \texttt{subtract} to get back as many results as possible. To do this, type from your terminal window:
+\begin{center}
+	\code{etherless search sub}
+\end{center}
+You should get back all the functions whose name contains the keyword \texttt{sub}.
 
 \subsubsection{History}
-The command \texttt{history} displays a list of the commands you previously executed since logging in. To use this command, use the syntax:
+The \texttt{history} command displays a list of the commands you previously executed since logging into \textit{therless}. To use this command, follow the syntax:
 \begin{center}
 	\code{etherless history [-limit]}
 \end{center}
-Where \texttt{limit} is an optional flag you can use to indicate the maximum number of elements you want to see. \\
-This command returns
+Where \texttt{limit} is an optional flag you can use to indicate the maximum number of elements you want to be displayed.
+\subsubsubsection*{Usage}
+So for example, if you want to see the last ten commands you executed since you logged in, just type from your terminal window:
+\begin{center}
+	\code{etherless history -10}
+\end{center}
 
 \subsubsection{Run}
-The \texttt{run} command is used to run a specific function, with the following syntax: \\
+The \texttt{run} command is used to run a specific function that has already been deployed on AWS Lambda. You can execute this command using the following syntax: \\
 \begin{center}
 	\code{etherless run <function\_name> [params..]}
 \end{center}
-Because \textit{Etherless} runs on the blockchain, execution takes some time to retrieve the result. Once the task is completed the result will be displayed. If the request was not successful an error will be displayed instead and the cost will be refunded. On the other hand, if the function is executed correctly the price amount is detracted from the current user wallet.
+Because \textit{Etherless} runs on the blockchain, execution takes some time to retrieve the result. Once the task is completed the result will be displayed. If the function is executed correctly the price amount is detracted from the current user wallet. On the other hand, if the request is not successful, an error will be displayed instead and the cost will be refunded.
+\subsubsubsection*{Usage}
+Let's say you want to run a subtraction function called \texttt{subtract}. You know that in order to execute this function needs two parameters in the form of numbers. To correctly execute this command, just type from your terminal window:
+\begin{center}
+	\code{etherless run subtract 3 2}
+\end{center}
+After waiting some time for the command to execute (which you will be notified about) you should get back the result of said subtraction, which in this case should be \texttt{1}. \\
+Note that you can only execute functions which have already been deployed on the cloud. To verify which functions are available for execution, use the \texttt{list} command (see section \ref{list} for more information about this).
 
-\subsubsection{Deploy}
+\subsubsection{Deploy}\label{deploy}
 You can deploy a function on AWS Lambda using the \texttt{deploy} command following the syntax:
 \begin{center}
-	\code{etherless delete <function\_name> <path> <desc>}
+	\code{etherless deploy <function\_name> <path> <desc>}
 \end{center}
 \noindent where:
 \begin{itemize}
 	\item \texttt{function\_name}: is the name of the function to be deployed;
-	\item \texttt{path}: is the relative path from the current position to the source file;
-	\item \texttt{desc}: is a description of the function.
+	\item \texttt{path}: is the relative path to the source file from the current directory;
+	\item \texttt{desc}: is a function description.
 \end{itemize}
-At the moment of execution the price is fixed: the cost of your function will be chosen by the system. We plan to determine it dynamically (based on the amount of resources used by the function) in the future. After the execution of such command the application will either show an error or a success message depending on the outcome of the operation.
+At the moment of execution the price is fixed, that is to say the cost of your function will be chosen by the system. In the future we plan to determine it dynamically, based on the amount of resources required by the function to execute. \\
+As a result the application will either show an error or a success message depending on the outcome of the operation.
+\subsubsubsection*{Usage}
+Let's say you want to deploy a multiplication function called \texttt{mul}, whose source code (a file named \texttt{mul.js}) is located in the same directory you're in. To deploy such function on AWS Lambda using \textit{Etherless}, the following steps are required:
+\begin{itemize}
+\item make sure no other function with the same name has been deployed. To do so, use the \texttt{list} command (see section \ref{list} for more information). If your function's name already exists, choose a different name;
+\item if the name you have chosen to deploy your function is unique, type from your terminal window:
+\begin{center}
+	\code{etherless deploy mul mul.js "This is a multiplication function"}
+\end{center}
+Since the file \texttt{mul.js} is located in the current directory, only its name is required for the command to properly execute. However, supposing \texttt{mul.js} is contained within a folder named \texttt{source\_code} in the current directory, the \texttt{deploy} command would change as follows:
+\begin{center}
+	\code{etherless deploy mul ./source\_code/mul.js "This is a multiplication function"}
+\end{center}
+Meaning \texttt{path} should contain the relative path to the source code from the current directory.
+\end{itemize}
 
 \subsubsection{Edit}
-You can edit a previously deployed function of your own through the \texttt{edit} command, using the following syntax:
+You can edit a previously deployed function of your own through the \texttt{edit} command. Respectively, you can choose to either edit the function's description or its source code. The syntax to do so is as follows:
 \begin{center}
-	\code{etherless edit <function\_name>}
+	\code{etherless edit <function\_name> -d "new description" | -s <path>}
 \end{center}
+\subsubsection{Edit a function's description}
+In order to edit a function's description, the syntax to be used is as follows:
+\begin{center}
+	\code{etherless edit <function\_name> -d "new description"}
+\end{center}
+Where \texttt{"new description"} is a string containing the updated description you want to upload. If your description only consists of one word, quotation marks can be omitted.
+
+\subsubsection{Edit a function's source code}
+To edit a function's source code, the syntax to be used is as follows:
+\begin{center}
+	\code{etherless edit <function\_name> -s path}
+\end{center}
+Where \texttt{path} is the relative path of the source file from the current directory you want to upload. For more information regarding \texttt{path}, see section \ref{deploy}.
 
 \subsubsection{Delete}
 You can delete a previously deployed function of your own through the \texttt{delete} command, using the following syntax:
@@ -194,3 +266,8 @@ You can delete a previously deployed function of your own through the \texttt{de
 	\code{etherless delete <function\_name>}
 \end{center}
 After the execution of this command, the application will either show an error or a success message, depending on the outcome of the operation.
+\subsubsubsection*{Usage}
+Let's say you want to delete a function called \texttt{mul} you previously deployed. To do that, just type from your terminal window:
+\begin{center}
+	\code{etherless delete mul}
+\end{center}
