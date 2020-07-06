@@ -53,6 +53,8 @@ To get information about the signup and authentication process you can use the \
 	\code{etherless init}
 \end{center}
 \subsubsubsection*{Usage}
+If you don't know how to sign up or log in and want to get more information about it, just type from your terminal window the \texttt{init} command you see in the above paragraph.
+You will get back a list of useful commands you can execute and the respective explanation of what they do.
 
 \subsubsection{Signup}
 The \texttt{signup} command allows you to create a new Ethereum$_{G}$ account to log into the application. The account created has no Ethers$_{G}$ in the wallet associated with it. This means that, by simply creating an account, you cannot perform all the functionalities that \textit{Etherless} provides, since some of them require a certain amount of cryptocurrency to be executed. \\
@@ -111,13 +113,14 @@ On the other hand, you might want to use your private key to log in. For the sak
 	\code{etherless login 0000...001}
 \end{center}
 
-
 \subsubsection{Whoami}
 By executing this command you get the address of the wallet associated with the current session. If you try to execute this command without being logged in, an error message will be shown. The command syntax is as follows: 
 \begin{center}
 	\code{etherless whoami}
 \end{center}
 Following the command execution the address of the wallet associated with the current session will be displayed.
+\subsubsubsection*{Usage}
+Let's suppose you have logged into \textit{Etherless} and, for some reason, you need to retrieve information regarding your account. In order to get that information just type from your terminal window the \texttt{whoami} command found in the above paragraph.
 
 \subsubsection{Logout}
 You can run this command to log out from the Ethereum$_{G}$ network. The command syntax is:
@@ -125,6 +128,8 @@ You can run this command to log out from the Ethereum$_{G}$ network. The command
 	\code{etherless logout}
 \end{center}
 After executing this command, all the information about the previous user session will be deleted.
+\subsubsubsection*{Usage}
+Suppose you have logged into \textit{Etherless}, deployed some functions and executed others. You had finished doing what you had to and you want to log out from the platform. To do that, just type from your terminal window the \texttt{logout} command in the paragraph above.
 
 \subsubsection{List}\label{list}
 \textit{Etherless} allows you to list of all the functions available for execution inside the platform. Moreover, you can list all the functions of you property, if you have deployed any. \\
@@ -146,6 +151,16 @@ You can get back the name and the price of all the functions available on \texti
 
 \subsubsubsection{List owned functions}
 If you have deployed any function on \textit{Etherless}, you can get them back in a list by typing:
+\begin{center}
+	\code{etherless list -m}
+\end{center}
+
+\subsubsubsection*{Usage}
+Let's say you want to know which functions are available for execution on \textit{Etherless}. To get that information, just type from your terminal window:
+\begin{center}
+	\code{etherless list}
+\end{center}
+On the other hand, if you want to get information about all the functions you have deployed, type:
 \begin{center}
 	\code{etherless list -m}
 \end{center}
@@ -188,15 +203,15 @@ Let's say you want to find a function to execute a subtraction. You decide to us
 You should get back all the functions whose name contains the keyword \texttt{sub}.
 
 \subsubsection{History}
-The \texttt{history} command displays a list of the commands you previously executed since logging into \textit{therless}. To use this command, follow the syntax:
+The \texttt{history} command displays a list of the all the request you made that were previously executed since logging into \textit{Etherless}. These requests are displayed with the respective results they produced. To use this command, follow the syntax:
 \begin{center}
-	\code{etherless history [-limit]}
+	\code{etherless history [limit]}
 \end{center}
 Where \texttt{limit} is an optional flag you can use to indicate the maximum number of elements you want to be displayed.
 \subsubsubsection*{Usage}
-So for example, if you want to see the last ten commands you executed since you logged in, just type from your terminal window:
+So for example, if you want to see the last ten successful requests you've made since you logged in, just type from your terminal window:
 \begin{center}
-	\code{etherless history -10}
+	\code{etherless history 10}
 \end{center}
 
 \subsubsection{Run}
@@ -256,9 +271,20 @@ Where \texttt{"new description"} is a string containing the updated description 
 \subsubsection{Edit a function's source code}
 To edit a function's source code, the syntax to be used is as follows:
 \begin{center}
-	\code{etherless edit <function\_name> -s path}
+	\code{etherless edit <function\_name> -s <path>}
 \end{center}
 Where \texttt{path} is the relative path of the source file from the current directory you want to upload. For more information regarding \texttt{path}, see section \ref{deploy}.
+
+\subsubsubsection*{Usage}
+Suppose you have deployed a function called \texttt{mul} some time ago and now you want to change its behaviour. In particular, you want to update its source code, which is contained in a file \texttt{mul.js} in the current directory. To do that, type from your terminal window:
+\begin{center}
+	\code{etherless edit mul -s mul.js}
+\end{center}
+Where \texttt{path} is thoroughly described in section \ref{deploy}.
+Now that you've updated your function's behaviour, you want the description to match. To change a function's description, just type from your terminal window:
+\begin{center}
+	\code{etherless edit mul -d "Now the mul function does this and this and that"}
+\end{center}
 
 \subsubsection{Delete}
 You can delete a previously deployed function of your own through the \texttt{delete} command, using the following syntax:
