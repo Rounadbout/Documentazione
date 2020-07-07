@@ -82,6 +82,7 @@ The aim of this section is to present a list of all the technologies used during
 	minimist & $\geq$1.2.5 \tabularnewline
 	ganache & $\geq$6.4.4 \tabularnewline
 	ganache-cli & $\geq$6.9.1 \tabularnewline
+	adm-zip & $\geq$0.4.16 \tabularnewline
 
 \end{longtable}
 \subsection{Requirements}
@@ -139,68 +140,127 @@ To interact with the contracts on the Ethereum blockchain, a \texttt{smartConfig
 }
 \end{quote}
 The parameters within angular brackets should be replaced with the actual credentials and both files be moved to the \texttt{Config} directory inside Etherless-server.
+\subsubsection{Enable \texttt{etherless} commands}
+To enable using commands with the keyword \texttt{etherless} you should open a shell and change to the main directory. Then you should run the command \texttt{npm link} as Administrator.
 \subsubsection{Truffle Suite Configuration}
 	In order to interact with the Ropsten$_{G}$ testnet, before beginning the installation process you need two keys: an Infura$_{G}$ project id (from your own Infura$_{G}$ account) and the mnemonic phrase of your Ethereum account. Having these credentials you need to edit the \textit{truffle-config.js} file, replacing the matching fields at the top with your own. Now you are ready to interact with the Ropsten$_{G}$ test network directly from Truffle$_{G}$.\\
 	To interact only with a Ganache-cli local blockchain no further configuration is needed, as the information is already stored in the \textit{truffle-config.js} file.
 \subsection{Functionalities}
 	This section lists all the available functionalities of \textit{Etherless} and the corresponding CLI commands that trigger them.
 	\subsubsection{Signup}
-	Creates a new account with an empty Ethereum wallet.
+	This function creates a new account with an empty Ethereum wallet and displays its address, private key and mnemonic phrase. This is a relatively fast operation, that interacts only with Etherless-smart.
 	\subsubsection*{Command}
 	\texttt{etherless signup}
 	\subsubsection{Login}
-	Creates a login session with the given private key or mnemonic phrase, allowing to make requests on the \textit{Etherless} platform.
+	Creates a login session with the given private key or mnemonic phrase, allowing to make requests on the \textit{Etherless} platform. After this command has been executed, the user is asked to type in a password to encrypt a wallet, which will be locally instantiated. The password is required each time a command that involves an Ethereum transaction is executed. This is a relatively fast operation, that interacts only with Etherless-smart.
 	\subsubsection*{Command}
 	\texttt{etherless login <private\_key>} \\
 	\texttt{etherless login -m <mnemonic\_phrase>}
 	\subsubsection{Logout}
-	Closes a previously created login session.
+	Closes a previously created login session, deleting the local instance of the wallet used for the Ethereum transactions. This is a relatively fast operation, that interacts only with Etherless-smart.
 	\subsubsection*{Command}
 	\texttt{etherless logout}
 	\subsubsection{Who am I}
-	Shows the address of the logged user.
+	Displays the address of the logged user. This is a relatively fast operation, that interacts only with Etherless-smart.
 	\subsubsection*{Command}
 	\texttt{etherless whoami}
 	\subsubsection{Init}
-	Shows a brief description of the \texttt{login} and \texttt{signup} functionalities.
+	Displays a brief description of the \texttt{login} and \texttt{signup} functionalities, allowing a new user to quickly understand how to start interacting with the platform.
 	\subsubsection*{Command}
 	\texttt{etherless init}
 	\subsubsection{Info}
-	Returns informations related to a given function, specifically the developer address, the function name, the function signature, the function price and a brief description.
+	Displays the following information of a given function:
+	\begin{itemize}
+		\item developer address;
+		\item function name;
+		\item function signature;
+		\item function price;
+		\item a brief description of the function.
+	\end{itemize}
+	This is a relatively fast operation, that interacts only with Etherless-smart.
 	\subsubsection*{Command}
 	\texttt{etherless info <function\_name>}
 	\subsubsection{History}
-	Lists all the past executions of the user, can be limited to a certain amount of executions.
+	Displays a list of all the run requests made by the current user. The list can be limited to a maximum number of requests. For each run request, the following information is shown:
+	\begin{itemize}
+		\item request unique identifier;
+		\item the name of the called function;
+		\item list of parameters the function was called with;
+		\item request result;
+		\item date and time of the request.
+	\end{itemize}
+	This is a relatively fast operation, that interacts only with Etherless-smart.
 	\subsubsection*{Command}
 	\texttt{etherless history [limit]}
 	\subsubsection{Search}
-	Returns a list of functions that contain the given keyword inside the name.
+	Displays a list of functions that contain the given keyword inside the function's name. For each function, the following information is shown:
+	\begin{itemize}
+		\item function signature;
+		\item function cost;
+		\item function owner.
+	\end{itemize}
+	This is a relatively fast operation, that interacts only with Etherless-smart.
 	\subsubsection*{Command}
 	\texttt{etherless search <keyword>}
 	\subsubsection{List}
-	Displays a list of all available functions inside the \textit{Etherless} platform.
+	Displays a list of all the available functions inside the \textit{Etherless} platform. If the optional flag \texttt{-m} is used, only functions owned by the current user are displayed. For each function, the following information is shown:
+	\begin{itemize}
+		\item function signature;
+		\item function cost;
+		\item function owner.
+	\end{itemize}This is a relatively fast operation, that interacts only with Etherless-smart.
 	\subsubsection*{Command}
-	\texttt{etherless list [m]}
+	\texttt{etherless list [-m]}
 	\subsubsection{Run}
-	Requests the execution of a given function with the given spaced parameters.
+	Requests the execution of a function with the given spaced parameters. This command requires the user's password, used to decrypt their wallet. A run request is then created and handled by the following process:
+	\begin{itemize}
+		\item the request is sent to Etherless-smart and an Ethereum escrow transaction is generated;
+		\item the request is forwarded to Etherless-server, which processes it by running the specified function in AWS Lambda;
+		\item the result is returned to Etherless-smart, thus completing the escrow transaction;
+		\item the result is sent back to Etherless-cli, to be displayed to the user.
+	\end{itemize}
+	As described, this operation interacts with both Etherless-smart and Etherless-server, making it a relatively slow operation.
 	\subsubsection*{Command}
 	\texttt{etherless run <function\_name> [parameter\_list]}
 	\subsubsection{Deploy}
-	Requests the deployment of a new function, using the given source file path, function name and description.
+	Requests the deployment of a new function, using the given source file path, function name and description. This command requires the user's password, used to decrypt their wallet. The following process is then started:
+	\begin{itemize}
+		\item the specified source file is uploaded to IPFS, and its IPFS identifying code is displayed;
+		\item a deployment request is sent to Etherless-smart and an Ethereum escrow transaction is generated;
+		\item the request is forwarded to Etherless-server, which processes it by getting the source file from IPFS and creating a function in AWS Lambda;
+		\item the result is returned to Etherless-smart, thus completing the escrow transaction. The newly deployed function is then added to the list of functions in Etherless-smart;
+		\item the result is sent back to Etherless-cli, to be displayed to the user.
+	\end{itemize}
+	As described, this operation interacts with both Etherless-smart and Etherless-server, making it a relatively slow operation.
 	\subsubsection*{Command}
-	\texttt{etherless deploy <path> <function\_name> <function\_desc>}
+	\texttt{etherless deploy <function\_name> <path> <function\_desc>}
 	\subsubsection{Edit}
-	Requests the editing of an existing function, using the given function name and the field to modify (a new description or the path of the new source file).
+	Requests the editing of an existing function, specifying the function's name and the field to be edited (a new description or the path of the new source file). This command requires the user's password, used to decrypt their wallet. The following process is then started:
+	\begin{itemize}
+		\item the specified source file is uploaded to IPFS, and its IPFS identifing code is displayed;
+		\item an edit request is sent to Etherless-smart and an Ethereum escrow transaction is generated;
+		\item the request is forwarded to Etherless-server, which processes it by getting the source file from IPFS and updating the specified function code in AWS Lambda;
+		\item the result is returned to Etherless-smart, thus completing the escrow transaction.
+		\item the result is sent back to Etherless-cli, to be displayed to the user.
+	\end{itemize}
+	As described, this operation interacts with both Etherless-smart and Etherless-server, making it a relatively slow operation.
 	\subsubsection*{Command}
 	\texttt{etherless edit <function\_name> [path] [newDesc]}
 	\subsubsection{Delete}
-	Requests the delete of an existing function, using the given function name.
+	Requests the removal of an existing function, using a given function name. A delete request is then created and handled by the following process:
+	\begin{itemize}
+		\item the request is sent to Etherless-smart and an Ethereum escrow transaction is generated;
+		\item the request is forwarded to Etherless-server, which processes it by removing the specified function from AWS Lambda;
+		\item the result is returned to Etherless-smart, thus completing the escrow transaction. The function is then removed from the list of functions;
+		\item the result is sent back to Etherless-cli, to be displayed to the user.
+	\end{itemize}
+	As described, this operation interacts with both Etherless-smart and Etherless-server, making it a relatively slow operation.
 	\subsubsection*{Command}
 	\texttt{etherless delete <function\_name>}
 \subsection{Testing}
 \subsubsection{Etherless}
 Launching the \texttt{npm test} command inside the \textit{Etherless} directory will automatically trigger all the developed tests for the software product.
 \subsubsection{Etherless-cli and Etherless-server}
-It is possible to test the Etherless-cli and Etherless-server modules indipendently by launching the \texttt{npm test} command inside their directories.
+It is possible to test the Etherless-cli and Etherless-server modules independently by launching the \texttt{npm test} command inside their directories.
 \subsubsection{Etherless-smart}
 It is possible to test the Etherless-smart module by launching the \texttt{truffle test} command inside the module's directory.
