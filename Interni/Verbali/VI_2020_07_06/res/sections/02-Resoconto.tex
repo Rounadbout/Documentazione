@@ -5,7 +5,7 @@
 	\begin{itemize}
 		\item \textbf{Funzionalità implementate con successo}: sono state implementate con successo le funzionalità di: \texttt{history} ed \texttt{edit}; 
 		\item \textbf{Implementazione dei messaggi di errore}: nonostante l'aggiunta di forza lavoro, l'implementazione dei messaggi di errore relativi alle varie tipologie di errore riscontrabili nell'utilizzo dell'applicativo richiede ancora del lavoro. Ciò è principalmente dovuto a degli impegni accademici dei membri che hanno deciso di cimentarsi in questo compito. E' stato fissato perciò il suo completamento per la prossima milestone;
-		\item \textbf{Funzionalità di deploy con dipendenze}: è stato implementato completamente il deployment in presenza lato server, resta da ultimarne la codifica lato cli. Per quanto riguarda il lato server, questo è stato reso possibile grazie all'uso di una libreria chiamata \texttt{adm-zip} usata per gestire i file zip e ritornare un buffer. Questo procedimento viene usato sia per gestire il deployment di file singoli che per quelli che presentano dipendenze.
+		\item \textbf{Funzionalità di deploy con dipendenze}: è stato implementato completamente il deployment con dipendenze lato server, resta da ultimarne la codifica lato cli. Per quanto riguarda il lato server, questo è stato reso possibile grazie all'uso di una libreria chiamata \texttt{adm-zip} usata per generare uno zip direttamente da una directory e ritornare un buffer. Questo procedimento viene usato sia per gestire il deployment di file sorgente singoli, sia per quelli che presentano dipendenze. Inoltre, il processo di installazione delle dipendenze viene svolto anch'esso all'interno della funzione Lambda adibita al deployment.
 		\item \textbf{Gestione della concorrenza delle richieste su blockchain Ethereum}: è stato deciso di aggiungere una funzione all'interno dello smart contract per verificare che non sia già stata fatta una richiesta di deployment di una funzione con lo stesso nome.
 	\end{itemize}
 	\subsection{Contenuto da presentare al prossimo incontro con il Proponente}
@@ -15,11 +15,11 @@
 			\item \texttt{edit};
 			\item \texttt{history}.
 		\end{itemize}
-Inoltre, specifiche domande da porre sono state riportate in un apposito documento condiviso su Teams.
+Inoltre, specifiche domande da porre sono state riportate in un apposito documento condiviso su Microsoft Teams.
 
 	\subsection{Stesura degli obiettivi per la prossima milestone}
 	Sono stati discussi gli obiettivi da raggiungere per la prossima milestone. Questi sono stati inclusi in un'apposito documento condiviso su Microsoft Teams.
-			
+	\pagebreak
 	\subsection{Prossima riunione}
 		La prossima riunione è stata fissata come segue:
 		\begin{itemize}
