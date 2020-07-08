@@ -1,0 +1,142 @@
+\def\arraystretch{1.75}
+\rowcolors{2}{lightRowColor}{darkRowColor}
+\begin{longtable}{
+		>{\centering}p{0.12\textwidth}
+		>{}p{0.5\textwidth}
+		>{\centering}p{0.17\textwidth}
+		>{\centering}p{0.12\textwidth} }
+
+	\caption{Tabella dei Test di Sistema} \\
+	\coloredTableHead
+	\textbf{\color{white}Id Test} &
+	\centering\textbf{\color{white}Descrizione} &
+	\centering\textbf{\color{white}Implementato} &
+	\textbf{\color{white}Superato}
+	\endfirsthead
+
+	\rowcolor{white}\caption[]{(continua)}\\
+	\coloredTableHead
+	\textbf{\color{white}Id Test} &
+	\centering\textbf{\color{white}Descrizione} &
+	\centering\textbf{\color{white}Implementato} &
+	\textbf{\color{white}Superato}
+	\endhead
+	
+	
+%Funzionalità
+		TF1 & Viene verificata la corretta esecuzione della funzionalità "signup" &
+		No &
+		No \tabularnewline
+		
+		TF2 & Viene verificata la corretta esecuzione della funzionalità "login" con private key &
+		No &
+		No \tabularnewline
+		
+		TF3 & Viene verificata la corretta esecuzione della funzionalità "login" co mnemonic phrase &
+		No &
+		No \tabularnewline
+		
+		TF4 & Viene verificata la corretta esecuzione della funzionalità "logout" &
+		No &
+		No \tabularnewline
+		
+		TF5 & Viene verificata la corretta esecuzione della funzionalità "whoami" &
+		No &
+		No \tabularnewline
+		
+		TF6 & Viene verificata la corretta esecuzione della funzionalità "init" &
+		No &
+		No \tabularnewline
+		
+		TF7 & Viene verificata la corretta esecuzione della funzionalità "history" &
+		No &
+		No \tabularnewline
+		
+		TF8 & Viene verificata la corretta esecuzione della funzionalità "search" &
+		No &
+		No \tabularnewline
+		
+		TF9 & Viene verificata la corretta esecuzione della funzionalità "list" con tutte le funzioni &
+		No &
+		No \tabularnewline
+		
+		TF10 & Viene verificata la corretta esecuzione della funzionalità "list" con solo le funzioni del proprietario &
+		No &
+		No \tabularnewline
+		
+		TF11 & Viene verificata la corretta esecuzione della funzionalità "run" &
+		No &
+		No \tabularnewline
+		
+		TF12 & Viene verificata la corretta esecuzione della funzionalità "deploy" senza dipendenze &
+		No &
+		No \tabularnewline
+		
+		TF13 & Viene verificata la corretta esecuzione della funzionalità "deploy" con dipendenze &
+		No &
+		No \tabularnewline
+		
+		TF14 & Viene verificata la corretta esecuzione della funzionalità "edit" &
+		No &
+		No \tabularnewline
+		
+		TF15 & Viene verificata la corretta esecuzione della funzionalità "delete" &
+		No &
+		No \tabularnewline
+		
+		
+		
+		
+%Sicurezza
+		TSIC1 & Viene verificata la non possibilità di eseguire la funzionalità "edit" su funzioni non del proprietario &
+		No &
+		No \tabularnewline
+		
+		TSIC2 & Viene verificata la non possibilità di eseguire la funzionalità "delete" su funzioni non del proprietario &
+		No &
+		No \tabularnewline
+		
+		TSIC3 & Viene verificato il corretto ritorno delle credenziali AWS\ped{\textit{G}} dall'esecuzione di una funzione lambda\ped{\textit{G}} &
+		No &
+		No \tabularnewline
+		
+		
+		
+		
+%Usabilità	Da valutare
+
+%Performance	Da valutare
+
+%Memoria/Archiviazione	Da Valutare
+
+
+
+
+
+%Test di carico
+		TC1 & Viene verificato il corretto funzionamento in caso di 1000 richieste concorrenti &
+		No &
+		No \tabularnewline
+		
+
+
+
+%Test di stress
+		TC2 & Viene verificato il corretto funzionamento in caso di oltre 1000 richieste concorrenti &
+		No &
+		No \tabularnewline
+		
+		
+		
+		
+%Test di configurazione
+		TCONF1 & Viene verificata la corretta installazione in ambiente Windows &
+		No &
+		No \tabularnewline
+		
+		TCONF2 & Viene verificata la corretta installazione in ambiente Linux &
+		No &
+		No \tabularnewline
+
+
+\end{longtable}
