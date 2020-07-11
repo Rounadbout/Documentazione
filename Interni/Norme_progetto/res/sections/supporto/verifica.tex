@@ -58,9 +58,23 @@
          
 			\item \textbf{Test di sistema:} il sistema viene testato nella sua interezza e i  risultati confrontati con quanto richiesto dall'\AdR{} \textit{4.0.0}. In questo modo è possibile accertarsi delle caratteristiche del sistema e della copertura dei requisiti funzionali. Tali test devono essere indicati nel seguente modo: 
 			\begin{center}
-				\textbf{TS[id]}
+				\textbf{T[id\_prop][id]}
 			\end{center}
-			dove \textit{id} rappresenta il codice identificativo crescente del componente da verificare. 
+			Dove:
+			\begin{itemize}
+				\item \textbf{id\_prop}: rappresenta il codice identificativo relativo alla particolare proprietà globale. Può assumere i valori:
+				\begin{itemize}
+					\item{\textbf{F}: per test delle funzionalità;}
+					\item{\textbf{SIC}: per test di sicurezza;}
+					\item{\textbf{U}: per test di usabilità.}
+					\item{\textbf{P}: per test di performance.}
+					\item{\textbf{M}: per test di memoria/archiviazione.}
+					\item{\textbf{C}: per test di carico.}
+					\item{\textbf{STR}: per test di stress.}
+					\item{\textbf{CONF}: per test di configurazione.}
+				\end{itemize}
+				\item \textbf{id}: rappresenta il codice identificativo crescente del componente da verificare.
+			\end{itemize} 
          
           \item \textbf{Test di regressione}: si effettua in seguito ad una modifica del sistema, in modo da controllare che essa non abbia compromesso le funzionalità già testate in precedenza. Un test di regressione consiste nella reiterazione dei test già esistenti sia per l'unità modifica sia per quelle che si relazionano con essa.
         \end{itemize}
