@@ -221,7 +221,14 @@ The parameters within angular brackets should be replaced with the actual creden
 	\subsubsection*{Command}
 	\texttt{etherless run <function\_name> [parameter\_list]}
 	\subsubsection{Deploy}
-	Requests the deployment of a new function, using the given source file path, function name and description. This command requires the user's password, used to decrypt their wallet. The following process is then started:
+	Requests the deployment of a new function, using the given source file/folder path, function name and description. If the specified path is relative to a single source file, the deployment will be performed without considering any external dependencies. If the specified path is relative to a directory, it should contain the following named files:
+	\begin{itemize}
+		\item \textbf{index.js}: source code file;
+		\item \textbf{package.json}: file used to handle external dependencies;
+		\item \textbf{package-lock.json}: file used to handle external dependencies.
+	\end{itemize}
+	In this case, the system will manage the deployment of the source code and serverlessly install the given dependencies.
+	This command requires the user's password, used to decrypt their wallet. The following process is then started:
 	\begin{itemize}
 		\item the specified source file is uploaded to IPFS, and its IPFS identifying code is displayed;
 		\item a deployment request is sent to Etherless-smart and an Ethereum escrow transaction is generated;
@@ -229,12 +236,23 @@ The parameters within angular brackets should be replaced with the actual creden
 		\item the result is returned to Etherless-smart, thus completing the escrow transaction. The newly deployed function is then added to the list of functions in Etherless-smart;
 		\item the result is sent back to Etherless-cli, to be displayed to the user.
 	\end{itemize}
-	If the optional flag \texttt{-d} is used, the deployment will also include any external dependencies specified in the package.json and package-lock.json files (these files must be present in the source code file directory). The installation of these dependencies will be handled serverlessly by Etherless-server.
 	As described, this operation interacts with both Etherless-smart and Etherless-server, making it a relatively slow operation.
 	\subsubsection*{Command}
-	\texttt{etherless deploy [-d] <function\_name> <path>  <function\_desc>}
+	\texttt{etherless deploy <function\_name> <path>  <function\_desc>}
 	\subsubsection{Edit}
-	Requests the editing of an existing function, specifying the function's name and the field to be edited (a new description or the path of the new source file). This command requires the user's password, used to decrypt their wallet. The following process is then started:
+	Requests the editing of an existing function, specifying the function name and the fields to be edited with a flag, followed by the required information:
+	\begin{itemize}
+		\item \textbf{\texttt{-d}}: update only the function description, with the given description;
+		\item \textbf{\texttt{-s}}: update only the function code, with the source code in the given path;
+		\item \textbf{no flag}: update both description and function code, with the given description and the source code in the given path.
+	\end{itemize}
+	If the specified path is relative to a single source file, the editing will be performed without considering any external dependencies. If the specified path is relative to a directory, it should contain the following named files:
+	\begin{itemize}
+		\item \textbf{index.js}: source code file;
+		\item \textbf{package.json}: file used to handle external dependencies;
+		\item \textbf{package-lock.json}: file used to handle external dependencies.
+	\end{itemize}
+	In this case, the system will manage the editing of the source code and serverlessly install the given dependencies. This command requires the user's password, used to decrypt their wallet. The following process is then started:
 	\begin{itemize}
 		\item the specified source file is uploaded to IPFS, and its IPFS identifing code is displayed;
 		\item an edit request is sent to Etherless-smart and an Ethereum escrow transaction is generated;
@@ -242,10 +260,11 @@ The parameters within angular brackets should be replaced with the actual creden
 		\item the result is returned to Etherless-smart, thus completing the escrow transaction.
 		\item the result is sent back to Etherless-cli, to be displayed to the user.
 	\end{itemize}
-	If the optional flag \texttt{-d} is used, the edit will also include any external dependencies specified in the package.json and package-lock.json files (these files must be present in the source code file directory). The installation of these dependencies will be handled serverlessly by Etherless-server.
 	As described, this operation interacts with both Etherless-smart and Etherless-server, making it a relatively slow operation.
 	\subsubsection*{Command}
-	\texttt{etherless edit [-d] <function\_name> [path] [newDesc]}
+	\texttt{etherless edit <function\_name> -d [newDesc]} \\
+	\texttt{etherless edit <function\_name> -s [path]} \\
+	\texttt{etherless edit <function\_name> [path] [newDesc]} \\
 	\subsubsection{Delete}
 	Requests the removal of an existing function, using a given function name. A delete request is then created and handled by the following process:
 	\begin{itemize}
