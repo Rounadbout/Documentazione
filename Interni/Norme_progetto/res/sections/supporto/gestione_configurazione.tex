@@ -5,27 +5,27 @@
     \subsubsection{Attività}
     \subsubsubsection{Versionamento}
       \subsubsubsection*{Codice di versione}
-        Tutti i documenti prodotti vengono conservati in una repository\ped{\textit{G}} e devono essere versionati tramite un sistema identificativo. I numeri di versione rispettano la struttura seguente:
+        Tutto il materiale prodotto viene conservato in una repository\ped{\textit{G}} e deve essere versionato tramite un sistema identificativo semantico. Il numero di versione rispetta la struttura seguente:
         \begin{center}
           \textbf{X.Y.Z}
         \end{center}
         Dove:
         \begin{itemize}
-          \item \textbf{X:} rappresenta una versione completa del documento pronta al rilascio esterno:
+          \item \textbf{X:} rappresenta una versione con modifiche, rispetto alla precedente, sostanziali e non retro-compatibili:
             \begin{itemize}
               \item parte da 0 (puó soltanto aumentare);
-              \item viene incrementato soltanto dopo l'approvazione del documento da parte del Responsabile di progetto.
+              \item viene incrementato solamente a seguito di modifiche maggiori e non retro-compatibili.
             \end{itemize}
-          \item \textbf{Y:} rappresenta una versione del documento che è stata oggetto di verifica, da parte di un Verificatore:
+          \item \textbf{Y:} rappresenta una versione con modifiche, rispetto alla precedente, anche maggiori ma sempre retro-compatibili:
             \begin{itemize}
               \item parte da 0;
-              \item viene incrementato ad ogni verifica dell'intero documento;
+              \item viene incrementato con l'aggiunta di nuove funzionalità nel caso di software o capitoli nel caso di documentazione, che siano sempre retro-compatibili;
               \item si resetta ad ogni incremento di X.
             \end{itemize}
-          \item \textbf{Z:} rappresenta una versione del documento in fase di stesura:
+          \item \textbf{Z:} rappresenta una versione con modifiche, rispetto alla precedente, minori e retro-compatibili:
             \begin{itemize}
               \item parte da 0;
-              \item incrementato dal redattore\ped{\textit{G}} ad ogni modifica validata da un Verificatore;
+              \item viene incrementato a seguito di modifiche minori e retro-compatibili;
               \item si resetta ad ogni incremento di Y.
             \end{itemize}
         \end{itemize}
