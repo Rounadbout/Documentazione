@@ -144,11 +144,14 @@ The parameters within angular brackets should be replaced with the actual creden
 	In order to interact with the Ropsten$_{G}$ testnet, before beginning the installation process you need two keys: an Infura$_{G}$ project id (from your own Infura$_{G}$ account) and the mnemonic phrase of your Ethereum account. Having these credentials you need to edit the \textit{truffle-config.js} file, replacing the matching fields at the top with your own. Now you are ready to interact with the Ropsten$_{G}$ test network directly from Truffle$_{G}$.\\
 	To interact only with a Ganache-cli local blockchain no further configuration is needed, as the information is already stored in the \textit{truffle-config.js} file.
 \subsection{Functionalities}
-	This section lists all the available functionalities of \textit{Etherless} and the corresponding CLI commands that trigger them.
+	This section lists all the available functionalities of \textit{Etherless} and the corresponding CLI commands that trigger them. The following descriptions are also accessible from the CLI itself, by executing the command followed by the \texttt{---help} option. To display the command current version, one should execute the command followed by the \texttt{---version} option.
+	\subsubsection*{Exemples}
+	\texttt{etherless <command> ---help} \\
+	\texttt{etherless <command> ---version} 
 	\subsubsection{Signup}
-	This function creates a new account with an empty Ethereum wallet and displays its address, private key and mnemonic phrase. This is a relatively fast operation, that interacts only with Etherless-smart.
+	This function creates a new account with an empty Ethereum wallet and displays its address, private key and mnemonic phrase. It is possible to save the credentials on a local .txt file, by adding the \texttt{---save} option after the command. This is a relatively fast operation, that interacts only with Etherless-smart.
 	\subsubsection*{Command}
-	\texttt{etherless signup}
+	\texttt{etherless signup [---save]}
 	\subsubsection{Login}
 	Creates a login session with the given private key or mnemonic phrase, allowing to make requests on the \textit{Etherless} platform. After this command has been executed, the user is asked to type in a password to encrypt a wallet, which will be locally instantiated. The password is required each time a command that involves an Ethereum transaction is executed. This is a relatively fast operation, that interacts only with Etherless-smart.
 	\subsubsection*{Command}
@@ -187,9 +190,10 @@ The parameters within angular brackets should be replaced with the actual creden
 		\item request result;
 		\item date and time of the request.
 	\end{itemize}
+	It is possibile to limit the number of executions displayed, by adding the \texttt{---limit} option followed by the number of desired executions (or just the number of desired executions), after the command.
 	This is a relatively fast operation, that interacts only with Etherless-smart.
 	\subsubsection*{Command}
-	\texttt{etherless history [limit]}
+	\texttt{etherless history [---limit] [number\_of\_executions]}
 	\subsubsection{Search}
 	Displays a list of functions that contain the given keyword inside the function's name. For each function, the following information is shown:
 	\begin{itemize}
@@ -219,7 +223,7 @@ The parameters within angular brackets should be replaced with the actual creden
 	\end{itemize}
 	As described, this operation interacts with both Etherless-smart and Etherless-server, making it a relatively slow operation.
 	\subsubsection*{Command}
-	\texttt{etherless run <function\_name> [parameter\_list]}
+	\texttt{etherless run <function\_name> [---params] [parameter\_list]}
 	\subsubsection{Deploy}
 	Requests the deployment of a new function, using the given source file/folder path, function name and description. If the specified path is relative to a single source file, the deployment will be performed without considering any external dependencies. If the specified path is relative to a directory, it should contain the following named files:
 	\begin{itemize}
@@ -262,9 +266,9 @@ The parameters within angular brackets should be replaced with the actual creden
 	\end{itemize}
 	As described, this operation interacts with both Etherless-smart and Etherless-server, making it a relatively slow operation.
 	\subsubsection*{Command}
-	\texttt{etherless edit <function\_name> -d [newDesc]} \\
-	\texttt{etherless edit <function\_name> -s [path]} \\
-	\texttt{etherless edit <function\_name> [path] [newDesc]} \\
+	\texttt{etherless edit <function\_name> -d <newDesc>} \\
+	\texttt{etherless edit <function\_name> -s <path>} \\
+	\texttt{etherless edit <function\_name> <path> <newDesc>} \\
 	\subsubsection{Delete}
 	Requests the removal of an existing function, using a given function name. A delete request is then created and handled by the following process:
 	\begin{itemize}
