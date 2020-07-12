@@ -106,8 +106,10 @@ This section describes all the steps needed to install \textit{Etherless}.
 	For information on how to install Git on different OS, follow the official guide on: \href{https://git-scm.com/book/en/v2/Getting-Started-Installing-Git}{How to install Git}.
 \subsubsection{Node}
 	Download the the latest version of the executable file from the \href{https://nodejs.org/it/download/}{Node official website} and follow the given instructions. This will also install Node package manager.
+\subsubsection{Serverless Framework}
+	Open a shell and run the command: \texttt{npm install -g serverless} to install the Serverless Framework. 
 \subsubsection{Ganache}
-	Ganache$_{G}$ is available in two variants, CLI and GUI. Refer to the \href{https://www.trufflesuite.com/docs/ganache/quickstart}{Ganache$_{G}$ official website} for installation and usage.
+	Ganache$_{G}$ is available in two variants, CLI and GUI. Refer to the \href{https://www.trufflesuite.com/docs/ganache/quickstart}{Ganache$_{G}$ official website} for installation and usage.	
 \subsubsection{Truffle}
  In order to install Truffle$_{G}$ you need to run \texttt{npm install truffle -g} from your terminal window. The minimum version required is 4.0.0.
 \subsection{Configuration}
@@ -127,6 +129,7 @@ Any developer who might want to work with a local version of Etherless-server sh
 		"awsRegion": <<insert AWS region>> \\
 	\}\\
 }
+\pagebreak
 \end{quote}
 To interact with the contracts on the Ethereum blockchain, a \texttt{smartConfig.json} file should be created with the following structure:
 \begin{quote}
@@ -143,6 +146,22 @@ The parameters within angular brackets should be replaced with the actual creden
 \subsubsection{Truffle Suite Configuration}
 	In order to interact with the Ropsten$_{G}$ testnet, before beginning the installation process you need two keys: an Infura$_{G}$ project id (from your own Infura$_{G}$ account) and the mnemonic phrase of your Ethereum account. Having these credentials you need to edit the \textit{truffle-config.js} file, replacing the matching fields at the top with your own. Now you are ready to interact with the Ropsten$_{G}$ test network directly from Truffle$_{G}$.\\
 	To interact only with a Ganache-cli local blockchain no further configuration is needed, as the information is already stored in the \textit{truffle-config.js} file.
+\subsubsection{Deployment on AWS Elastic Beanstalk and Lambda}
+	In order to keep the Etherless-server module always active and running, it should be deployed on an AWS Elastic Beanstalk environment. To do that, you should:
+	\begin{itemize}
+		\item log into AWS and go to AWS Elastic Beanstalk;
+		\item create a new application inside the EBS service;
+		\item locally generate a zip archive with the content of the \texttt{etherless-server} folder;
+		\item deploy the zip archive as a new application version on EBS, which creates an EBS Node.js environment where your application will run;
+	\end{itemize}
+	In addition to this process, in order to allow the serverless deployment of new functions on the platform, you should deploy on AWS Lambda a deployer function. The content of the deployer function is stored inside the \texttt{serverless} folder in the Etherless-server directory. To deploy this function using the Serverless Framework you should:
+	\begin{itemize}
+		\item position yourself inside the \texttt{serverless} folder;
+		\item run the \texttt{serverless} command;
+		\item follow the prompt instructions to configure your AWS and Serverless account;
+		\item run the \texttt{serverless deploy} command, which will use the already present \texttt{serverless.yml} configuration file, to perform the deployment on AWS Lambda.
+	\end{itemize}
+	
 \subsection{Functionalities}
 	This section lists all the available functionalities of \textit{Etherless} and the corresponding CLI commands that trigger them. The following descriptions are also accessible from the CLI itself, by executing the command followed by the \texttt{---help} option. To display the command current version, one should execute the command followed by the \texttt{---version} option.
 	\subsubsection*{Exemples}
@@ -214,7 +233,7 @@ The parameters within angular brackets should be replaced with the actual creden
 	\subsubsection*{Command}
 	\texttt{etherless list [-m]}
 	\subsubsection{Run}
-	Requests the execution of a function with the given spaced parameters. This command requires the user's password, used to decrypt their wallet. A run request is then created and handled by the following process:
+	Requests the execution of a function with the given spaced parameters, the \texttt{---params} option is implicit if any parameters are given. This command requires the user's password, used to decrypt their wallet. A run request is then created and handled by the following process:
 	\begin{itemize}
 		\item the request is sent to Etherless-smart and an Ethereum escrow transaction is generated;
 		\item the request is forwarded to Etherless-server, which processes it by running the specified function in AWS Lambda;
