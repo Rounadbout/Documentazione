@@ -132,14 +132,15 @@ After executing this command, all the information about the previous user sessio
 Suppose you have logged into \textit{Etherless}, deployed some functions and executed others. You had finished doing what you had to and you want to log out from the platform. To do that, just type from your terminal window the \texttt{logout} command in the paragraph above.
 
 \subsubsection{List}\label{list}
-\textit{Etherless} allows you to list of all the functions available for execution inside the platform. Moreover, you can list all the functions of you property, if you have deployed any. \\
-The syntax needed to do this is as follows:
+\textit{Etherless} allows you to list all the functions available for execution inside the platform. Moreover, you can list all the functions of you property, if you have deployed any. \\
+Respectively, the syntax needed to do this is as follows:
 \begin{center}
 	\code{etherless list | list -m}
 \end{center}
 \noindent In both cases, for each function the following data will be provided:
 \begin{itemize}
 	\item \textbf{name}: the function name;
+	\item \textbf{signature}: the parameters the function needs to execute properly;
 	\item \textbf{price}: the cost required to run the function.
 \end{itemize}
 
@@ -233,7 +234,7 @@ You can deploy a function on AWS Lambda using the \texttt{deploy} command follow
 \begin{center}
 	\code{etherless deploy <function\_name> <path> <desc>}
 \end{center}
-\noindent where:
+\noindent Where:
 \begin{itemize}
 	\item \texttt{function\_name}: is the name of the function to be deployed;
 	\item \texttt{path}: is the relative path to the source file from the current directory;
@@ -257,7 +258,18 @@ Meaning \texttt{path} should contain the relative path to the source code from t
 \end{itemize}
 
 \subsubsection{Edit}
-You can edit a previously deployed function of your own through the \texttt{edit} command. Respectively, you can choose to either edit the function's description or its source code. The syntax to do so is as follows:
+You can edit a previously deployed function of your own through the \texttt{edit} command. To edit both a function's source code and its description, just type from your terminal window:
+\begin{center}
+	\code{etherless edit <function\_name> <path> <"new description">}
+\end{center}
+Where:
+\begin{itemize}
+\item \texttt{function\_name}: is the name of the function you want to edit;
+\item \texttt{path}: is the relative path to the source file from the current directory. For more information regarding \texttt{path}, see section \ref{deploy};
+\item \texttt{new description}: is a string containing the updated description you want to upload. If your description only consists of one word, quotation marks can be omitted.
+ \end{itemize}
+
+On the other hand, you can choose to only edit the function's description or its source code. Respectvely, the syntax to do so is as follows:
 \begin{center}
 	\code{etherless edit <function\_name> -d "new description" | -s <path>}
 \end{center}
@@ -266,24 +278,25 @@ In order to edit a function's description, the syntax to be used is as follows:
 \begin{center}
 	\code{etherless edit <function\_name> -d "new description"}
 \end{center}
-Where \texttt{"new description"} is a string containing the updated description you want to upload. If your description only consists of one word, quotation marks can be omitted.
 
 \subsubsection{Edit a function's source code}
 To edit a function's source code, the syntax to be used is as follows:
 \begin{center}
 	\code{etherless edit <function\_name> -s <path>}
 \end{center}
-Where \texttt{path} is the relative path of the source file from the current directory you want to upload. For more information regarding \texttt{path}, see section \ref{deploy}.
 
 \subsubsubsection*{Usage}
-Suppose you have deployed a function called \texttt{mul} some time ago and now you want to change its behaviour. In particular, you want to update its source code, which is contained in a file \texttt{mul.js} in the current directory. To do that, type from your terminal window:
+Suppose some time ago you deployed a function called \texttt{mul} and now you want to change its behaviour. In particular, you want to update its source code, which is contained in a file called \texttt{mul.js} in the current directory. To do that, type from your terminal window:
 \begin{center}
 	\code{etherless edit mul -s mul.js}
 \end{center}
-Where \texttt{path} is thoroughly described in section \ref{deploy}.
 Now that you've updated your function's behaviour, you want the description to match. To change a function's description, just type from your terminal window:
 \begin{center}
 	\code{etherless edit mul -d "Now the mul function does this and this and that"}
+\end{center}
+However, if you want to modify both the source code and the function's description at the same time, just type from your terminal window:
+\begin{center}
+	\code{etherless edit mul mul.js "Now the mul function does this and this and that"}
 \end{center}
 
 \subsubsection{Delete}
