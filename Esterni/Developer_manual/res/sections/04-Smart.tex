@@ -25,6 +25,7 @@
 		\item \textbf{serverAddress:} server address;
 		\item \textbf{contractBalance:} amount of ETH stored in the smart contract;
 		\item \textbf{requestId:} unique identifier used to mark each request that needs payment;
+		\item \textbf{fprice:} price the users will have to pay to execute functions. This is also the price the developers have to pay to perform operations on one of their functions. These operations include: function deployment, function modification (both source code and description) and function deletion;
 		\item \textbf{ethStorage:} instance of EtherlessStorage contract;
 		\item \textbf{escrow:} instance of EtherlessEscrow contract;
 	\end{itemize}
@@ -34,27 +35,30 @@
 	\end{itemize}
 \subsubsubsection*{Events}
 	\begin{itemize}
-		\item \textbf{runRequest:} event emitted when a request of a function execution is received;
 		\item \textbf{deployRequest:} event emitted when a request of a function deployment is received;
-		\item \textbf{editRequest:} event emitted when a request of a function modification is received;
+		\item \textbf{runRequest:} event emitted when a request of a function execution is received;
 		\item \textbf{deleteRequest:} event emitted when a request of a function deletion is received;
+		\item \textbf{editRequest:} event emitted when a request of a function modification is received;
 		\item \textbf{resultOK:} event emitted when the result of a certain execution has to be communicated;
 		\item \textbf{resultError:} event emitted when the failure of a certain execution has to be communicated;
 	\end{itemize}
 \subsubsubsection*{Methods}
 	\begin{itemize}
+		\item \textbf{initialize:} used by \texttt{OpenZeppelin} as the function's constructor. This function should contain all the setup logic;
 		\item \textbf{deployFunction:} requests the deployment of a certain function;
 		\item \textbf{runFunction:} requests the execution of a certain function;
-		\item \textbf{editFunction:} requests the modification of a certain function;
 		\item \textbf{deleteFunction:} requests the deletion of a certain function; can only be invoked by the developer of said function;
+		\item \textbf{editFunction:} requests the modification of a certain function;
+		\item \textbf{editFuncDescr:} edits the function's description;
 		\item \textbf{deployResult:} communicates the result of a function deployment; can only be invoked by the server address;
 		\item \textbf{runResult:} communicates the result of a function execution; can only be invoked by the server address;
-		\item \textbf{editResult:} communicates the result of a function modification; can only be invoked by the server address;
 		\item \textbf{deleteResult:} communicates the result of a function deletion; can only be invoked by the server address;
+		\item \textbf{editResult:} communicates the result of a function modification; can only be invoked by the server address;
 		\item \textbf{getCost:} returns the cost of execution of a function;
 		\item \textbf{getInfo:} returns all the information regarding a certain function;
 		\item \textbf{getFuncList:} returns the names of all functions that have been deployed;
 		\item \textbf{getOwnedList:} returns the names of all functions that have been deployed by a certain developer;
+		\item \textbf{getDeposit:} returns the deposited ether of a specific request id;
 		\item \textbf{getNewId:} returns \texttt{requestId} incremented by one;
 		\item \textbf{getId:} returns \texttt{requestId}.
 	\end{itemize}
@@ -76,16 +80,20 @@
 		\item \textbf{singleFuncJson:} converts the content of a \texttt{jsFunction} struct into a string written in JSON format;
 		\item \textbf{addressToString:} converts an address into a string;
 		\item \textbf{uintToString:} converts an unsigned integer into a string;
+		\item \textbf{compareString:} compares two strings using a reasonable gas amount.
 		\item \textbf{existsFunction:} checks if a function is in \texttt{availableFunctions};
+		\item \textbf{isDeploying:} checks if a certain function is in the \texttt{availableFunctions} list;
 		\item \textbf{insertNewFunction:} adds a function to the \texttt{availableFunctions} mapping;
-		\item \textbf{removeFunction:} removes a function from the \texttt{availableFunctions} mapping;
 		\item \textbf{insertInArray:} adds a function to the \texttt{functionNames} array;
+		\item \textbf{removeFunction:} removes a function from the \texttt{availableFunctions} mapping;
 		\item \textbf{removeFromArray:} removes a function from the \texttt{functionNames} array;
+		\item \textbf{modifyFunction:} modifies a function's signature;
+		\item \textbf{modifyFuncDescr:} modifies a function's description;
 		\item \textbf{getFuncPrice:} returns the price of execution of a certain function;
 		\item \textbf{getFuncDev:} returns the developer address of a certain function;
 		\item \textbf{getList:} returns the name of all functions a user can execute when using \textit{Etherless};
+		\item \textbf{getDevList:} returns a list of functions deployed by a given account;
 		\item \textbf{getFuncInfo:} returns all information regarding a function;
-		\item \textbf{compareString:} compares two strings using a reasonable gas amount.
 	\end{itemize}
 
 \subsubsection{EtherlessEscrow}
@@ -101,6 +109,7 @@
 		\end{itemize}
 \subsubsubsection*{Methods}
 	\begin{itemize}
+		\item \textbf{initialize:} used by \texttt{OpenZeppelin} as the function's constructor. This function should contain all the setup logic;
 		\item \textbf{getBeneficiary:} returns the beneficiary of the transaction from the \texttt{deposits} mapping having the key \texttt{index};
 		\item \textbf{getSender:} returns the sender of the transaction from the \texttt{deposits} mapping having the key \texttt{index};
 		\item \textbf{depositsOf:} returns the amount deposited in \texttt{deposits} identified by the key \texttt{index};
