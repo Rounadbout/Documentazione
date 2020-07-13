@@ -34,7 +34,7 @@
         \end{itemize}
         Esistono diversi tipi di test:
         \begin{itemize}
-          \item \textbf{Test di unità}: verificano l'unità, cioè il più piccolo sottosistema possibile che può essere testato separatamente. L'approccio più comune al test di unità prevede la scrittura di driver\ped{\textit{G}} e stub\ped{\textit{G}}, dove il primo simula un'unità chiamante mentre il secondo un'unità chiamata. Tali test devono essere indicati nel seguente modo: 
+          \item \textbf{Test di Unità}: verificano l'unità, cioè il più piccolo sottosistema possibile che può essere testato separatamente. L'approccio più comune al Test di Unità prevede la scrittura di driver\ped{\textit{G}} e stub\ped{\textit{G}}, dove il primo simula un'unità chiamante mentre il secondo un'unità chiamata. Tali test devono essere indicati nel seguente modo: 
           \begin{center}
           	\textbf{TU[id\_modulo].[id\_test]}
           \end{center}
@@ -48,15 +48,15 @@
         	\end{itemize}
       	  	\item \textbf{id\_test}: rappresenta il codice identificativo incrementale del test da effettuare.
       	  \end{itemize}
-      	  È responsabilità del singolo Programmatore scrivere i test delle unità più semplici da lui sviluppate. Nel caso in cui l'unità sia più complessa la scrittura del test di unità deve essere compiuta da un Verificatore. 
+      	  È responsabilità del singolo Programmatore scrivere i Test delle Unità più semplici da lui sviluppate. Nel caso in cui l'unità sia più complessa la scrittura del test di unità deve essere compiuta da un Verificatore. 
         
-          \item \textbf{Test di integrazione}: test eseguiti per verificare che siano rispettati i contratti di interfaccia tra più moduli o sub-system. La forma più semplice di questo tipo di test prevede che le componenti vengano verificate in maniera incrementale, con l'aggiunta di altre unità o gruppi di unità corretti, fino ad arrivare al sistema completo. Tali test devono essere indicati nel seguente modo: 
+          \item \textbf{Test di Integrazione}: test eseguiti per verificare che siano rispettati i contratti di interfaccia tra più moduli o sub-system. La forma più semplice di questo tipo di test prevede che le componenti vengano verificate in maniera incrementale, con l'aggiunta di altre unità o gruppi di unità corretti, fino ad arrivare al sistema completo. Tali test devono essere indicati nel seguente modo: 
           \begin{center}
           	\textbf{TI[id]}
           \end{center}
       		dove \textit{id} indica il codice identificativo crescente del componente da verificare. 
          
-			\item \textbf{Test di sistema:} il sistema viene testato nella sua interezza e i  risultati confrontati con quanto richiesto dall'\AdR{} \textit{4.0.0}. In questo modo è possibile accertarsi delle caratteristiche del sistema e della copertura dei requisiti funzionali. Tali test devono essere indicati nel seguente modo: 
+			\item \textbf{Test di Sistema:} il sistema viene testato nella sua interezza e i  risultati confrontati con quanto richiesto dall'\AdR{} \textit{4.0.0}. In questo modo è possibile accertarsi delle caratteristiche del sistema e della copertura dei requisiti funzionali. Tali test devono essere indicati nel seguente modo: 
 			\begin{center}
 				\textbf{T[id\_prop][id]}
 			\end{center}
@@ -64,19 +64,19 @@
 			\begin{itemize}
 				\item \textbf{id\_prop}: rappresenta il codice identificativo relativo alla particolare proprietà globale. Può assumere i valori:
 				\begin{itemize}
-					\item{\textbf{F}: per test delle funzionalità;}
-					\item{\textbf{SIC}: per test di sicurezza;}
-					\item{\textbf{US}: per test di usabilità.}
-					\item{\textbf{P}: per test di performance.}
-					\item{\textbf{M}: per test di memoria/archiviazione.}
-					\item{\textbf{C}: per test di carico.}
-					\item{\textbf{STR}: per test di stress.}
-					\item{\textbf{CONF}: per test di configurazione.}
+					\item{\textbf{F}: per Test delle Funzionalità;}
+					\item{\textbf{SIC}: per Test di Sicurezza;}
+					\item{\textbf{US}: per Test di Usabilità.}
+					\item{\textbf{P}: per Test di Performance.}
+					\item{\textbf{M}: per Test di Memoria/Archiviazione.}
+					\item{\textbf{C}: per Test di Carico.}
+					\item{\textbf{STR}: per Test di Stress.}
+					\item{\textbf{CONF}: per Test di Configurazione.}
 				\end{itemize}
-				\item \textbf{id}: rappresenta il codice identificativo crescente del componente da verificare.
+				\item \textbf{id}: rappresenta il codice identificativo crescente della componente da verificare.
 			\end{itemize} 
          
-          \item \textbf{Test di regressione}: si effettua in seguito ad una modifica del sistema, in modo da controllare che essa non abbia compromesso le funzionalità già testate in precedenza. Un test di regressione consiste nella reiterazione dei test già esistenti sia per l'unità modifica sia per quelle che si relazionano con essa.
+          \item \textbf{Test di Regressione}: si effettua in seguito ad una modifica del sistema, in modo da controllare che essa non abbia compromesso le funzionalità già testate in precedenza. Un Test di Regressione consiste nella reiterazione dei test già esistenti sia per l'unità modifica sia per quelle che si relazionano con essa.
         \end{itemize}
 
 	\subsubsection{Metriche}
@@ -119,7 +119,7 @@
     	\end{center}
     
     	\subsubsubsection{Truffle suite}
-    	Truffle\ped{\textit{G}} viene fornito di serie con un framework\ped{\textit{G}} di test automatizzato. Viene utilizzato per effettuare il test di codice Javascript\ped{\textit{G}} e Solidity\ped{\textit{G}}.
+    	Truffle\ped{\textit{G}} viene fornito di serie con un framework\ped{\textit{G}} di test automatizzato. Viene utilizzato per effettuare il testing di codice Javascript\ped{\textit{G}} e Solidity\ped{\textit{G}}.
     	\begin{center}
     		\url{https://www.trufflesuite.com/}
     	\end{center}
