@@ -206,14 +206,25 @@ You should get back all the functions whose name contains the keyword \texttt{su
 \subsubsection{History}
 The \texttt{history} command displays a list of the all the request you made that were previously executed since logging into \textit{Etherless}. These requests are displayed with the respective results they produced. To use this command, follow the syntax:
 \begin{center}
-	\code{etherless history [limit]}
+	\code{etherless history [--limit] [number\_of\_executions]}
 \end{center}
-Where \texttt{limit} is an optional flag you can use to indicate the maximum number of elements you want to be displayed.
+Where \texttt{limit} is an optional flag you can use to indicate the maximum number of elements you want to be displayed. \\
 \subsubsubsection*{Usage}
-So for example, if you want to see the last ten successful requests you've made since you logged in, just type from your terminal window:
+The \texttt{history} command can be executed in three ways, in particular:
+\begin{itemize}
+\item you can display all the requests you've made since logging in by typing from your terminal window:
 \begin{center}
-	\code{etherless history 10}
+\code{etherless history}
 \end{center}
+\item Alternatively, you can choose to limit the number of elements you get back (let's say you want to see the last ten requests you've made) either by typing:
+\begin{center}
+\code{etherless history 10}
+\end{center}
+Or by typing:
+\begin{center}
+\code{etherless history --limit 10}
+\end{center}
+\end{itemize}
 
 \subsubsection{Run}
 The \texttt{run} command is used to run a specific function that has already been deployed on AWS Lambda. You can execute this command using the following syntax: \\
