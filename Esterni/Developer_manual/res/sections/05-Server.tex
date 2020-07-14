@@ -36,10 +36,10 @@
 		\item \textbf{sendDeployResult}: sends the result of a previously received deploy request back to the event source. The response contains a message and useful request related information.
 		\item \textbf{sendEditResult}: sends the result of a previously received edit request back to the event source. The response contains a message and useful request related information.
 		\item \textbf{sendDeleteResult}: sends the result of a previously received delete request back to the event source. The response contains a message and useful request related information;
-		\item \textbf{onRun}: allows to subscribe a callback to the runEventDispatcher attribute;
-		\item \textbf{onDeploy}: allows to subscribe a callback to the deployEventDispatcher attribute;
-		\item \textbf{onEdit}: allows to subscribe a callback to the editEventDispatcher attribute;
-		\item \textbf{onDelete}: allows to subscribe a callback to the deleteEventDispatcher attribute;
+		\item \textbf{onRun}: allows the subscription of a callback to the runEventDispatcher. It will be called to process any Run events;
+		\item \textbf{onDeploy}: allows the subscription of a callback to the deployEventDispatcher. It will be called to process any Deploy events;
+		\item \textbf{onEdit}: allows the subscription of a callback to the editEventDispatcher. It will be called to process any Edit events;
+		\item \textbf{onDelete}: allows the subscription of a callback to the deleteEventDispatcher. It will be called to process any Delete events;
 		\item \textbf{dispatchRunEvent}: runs all callbacks in the runEventDispatcher callbacks array with data as parameter;
 		\item \textbf{dispatchDeployEvent}: runs all callbacks in the deployEventDispatcher callbacks array with data as parameter;
 		\item \textbf{dispatchEditEvent}: runs all callbacks in the editEventDispatcher callbacks array with data as parameter;
@@ -171,8 +171,8 @@
 	\end{itemize}
 	\subsubsubsection*{Methods}
 	\begin{itemize}
-		\item \textbf{getFileContent}: used to retrieve functions' data in string format from IPFS$_{G}$.
-		\item \textbf{saveOnIpfs}: used to save data in string format to IPFS$_{G}$.
+		\item \textbf{getFileContent}: used to retrieve functions' data in JSON format from IPFS$_{G}$.
+		\item \textbf{saveOnIpfs}: used to save data in string format on IPFS$_{G}$.
 	\end{itemize}
 	\subsubsection{Config}
 	This package is used to create and manage configuration objects used by the services that operate inside the system.
