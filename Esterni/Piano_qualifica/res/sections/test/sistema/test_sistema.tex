@@ -25,121 +25,185 @@
 	
 %Funzionalità
 		TF1 & Viene verificata la corretta esecuzione della funzionalità "signup". &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TF2 & Viene verificata la corretta esecuzione della funzionalità "login" con private key. &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TF3 & Viene verificata la corretta esecuzione della funzionalità "login" con mnemonic phrase. &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TF4 & Viene verificata la corretta esecuzione della funzionalità "logout". &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TF5 & Viene verificata la corretta esecuzione della funzionalità "whoami". &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TF6 & Viene verificata la corretta esecuzione della funzionalità "init". &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TF7 & Viene verificata la corretta esecuzione della funzionalità "history". &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TF8 & Viene verificata la corretta esecuzione della funzionalità "search". &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TF9 & Viene verificata la corretta esecuzione della funzionalità "list" con tutte le funzioni. &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TF10 & Viene verificata la corretta esecuzione della funzionalità "list" con solo le funzioni del proprietario. &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TF11 & Viene verificata la corretta esecuzione della funzionalità "run". &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TF12 & Viene verificata la corretta esecuzione della funzionalità "deploy" senza dipendenze. &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TF13 & Viene verificata la corretta esecuzione della funzionalità "deploy" con dipendenze. &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TF14 & Viene verificata la corretta esecuzione della funzionalità "edit" senza dipendenze. &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TF15 & Viene verificata la corretta esecuzione della funzionalità "edit" con dipendenze. &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TF16 & Viene verificata la corretta esecuzione della funzionalità "delete". &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		
 		
 		
 %Sicurezza
-		TSIC1 & Viene verificata la non possibilità di eseguire la funzionalità "edit" su funzioni non del proprietario. &
-		No &
-		No \tabularnewline
+		TSIC1 & Viene verificata la possibilità di eseguire la funzionalità "edit" su funzioni Sin del proprietario. &
+		Si &
+		Si \tabularnewline
 		
-		TSIC2 & Viene verificata la non possibilità di eseguire la funzionalità "delete" su funzioni non del proprietario. &
-		No &
-		No \tabularnewline
+		TSIC2 & Viene verificata la possibilità di eseguire la funzionalità "delete" su funzioni Sin del proprietario. &
+		Si &
+		Si \tabularnewline
 		
-		TSIC3 & Viene verificata la non possibilità di ritorno delle credenziali AWS\ped{\textit{G}} del sistema, tramite l'esecuzione di una funzione Lambda\ped{\textit{G}}. &
-		No &
-		No \tabularnewline
+		TSIC3 & Viene verificata la possibilità di ritorno delle credenziali AWS\ped{\textit{G}} del sistema, tramite l'esecuzione di una funzione Lambda\ped{\textit{G}}. &
+		Si &
+		Si \tabularnewline
+		
+		TSIC4 & Viene verificata la possibilità di esecuzione funzioni con tempo di esecuzione o richiesta risorse infiniti.  &
+		Si &
+		Si \tabularnewline
+		
+		
 		
 		
 		
 		
 %Usabilità
 		TUS1 & Viene valutata la leggibilità dei manuali, tramite il calcolo di valori accettabili per l'indice di Flesh. &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TUS2 & Viene valutato il numero di funzionalità a supporto dell'utente. &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 
 
 
 
 %Performance
-		TP1 & Viene valutato il costo di esecuzione delle funzionalità. &
-		No &
-		No \tabularnewline
+		TP1 & Viene valutato il costo di esecuzione della funzionalità "signup". &
+		Si &
+		Si \tabularnewline
+		
+		TP2 & Viene valutato il costo di esecuzione della funzionalità "login". &
+		Si &
+		Si \tabularnewline
+		
+		TP3 & Viene valutato il costo di esecuzione della funzionalità "logout". &
+		Si &
+		Si \tabularnewline
+		
+		TP4 & Viene valutato il costo di esecuzione della funzionalità "whoami". &
+		Si &
+		Si \tabularnewline
+		
+		TP5 & Viene valutato il costo di esecuzione della funzionalità "init". &
+		Si &
+		Si \tabularnewline
+		
+		TP6 & Viene valutato il costo di esecuzione della funzionalità "history". &
+		Si &
+		Si \tabularnewline
+		
+		TP7 & Viene valutato il costo di esecuzione della funzionalità "search". &
+		Si &
+		Si \tabularnewline
+		
+		TP8 & Viene valutato il costo di esecuzione della funzionalità "list". &
+		Si &
+		Si \tabularnewline
+		
+		TP9 & Viene valutato il costo di esecuzione della funzionalità "list" con solo le funzioni del proprietario. &
+		Si &
+		Si \tabularnewline
+		
+		TP10 & Viene valutato il costo di esecuzione della funzionalità "run". &
+		Si &
+		Si \tabularnewline
+		
+		TP11 & Viene valutato il costo di esecuzione della funzionalità "deploy" senza dipendenze. &
+		Si &
+		Si \tabularnewline
+		
+		TP12 & Viene valutato il costo di esecuzione della funzionalità "deploy" con dipendenze. &
+		Si &
+		Si \tabularnewline
+		
+		TP13 & Viene valutato il costo di esecuzione della funzionalità "edit" senza dipendenze. &
+		Si &
+		Si \tabularnewline
+		
+		TP14 & Viene valutato il costo di esecuzione della funzionalità "edit" con dipendenze. &
+		Si &
+		Si \tabularnewline
+		
+		TP15 & Viene valutato il costo di esecuzione della funzionalità "delete". &
+		Si &
+		Si \tabularnewline
 		
 		
 		
 		
-
-%Memoria/Archiviazione	Da Valutare
+		
+		
+		
+%Memoria/Archiviazione
 		TM1 & Viene valutato il quantitativo di memoria necessario all'installazione dell'applicativo. &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TM2 & Viene valutato il quantitativo di memoria utilizzata da EBS per il mantenimento del server. &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TM3 & Viene valutato il quantitativo di memoria utilizzata da AWS Lambda per l'esecuzione di funzioni. &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 
 
@@ -147,28 +211,28 @@
 
 %Test di carico
 		TC1 & Viene verificato il corretto funzionamento in caso di 1000 richieste concorrenti. &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 
 
 
 %Test di stress
 		TSTR1 & Viene verificato il corretto funzionamento in caso di oltre 1000 richieste concorrenti. &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		
 		
 		
 %Test di configurazione
 		TCONF1 & Viene verificata la corretta installazione in ambiente Windows. &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 		
 		TCONF2 & Viene verificata la corretta installazione in ambiente Linux. &
-		No &
-		No \tabularnewline
+		Si &
+		Si \tabularnewline
 
 
 \end{longtable}
