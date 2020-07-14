@@ -25,44 +25,50 @@
 	Abstract class whose derivatives allow to listen to external events, create processing requests and send responses to the external events source.
 	\subsubsubsection*{Attributes}
 	\begin{itemize}
-		\item \textbf{runDispatcher}: EventDispatcher object, used to dispatch run processing requests represented by RunEventData objects;
-		\item \textbf{deployDispatcher}: EventDispatcher object, used to dispatch deploy processing requests represented by DeployEventData objects;
-		\item \textbf{editDispatcher}: EventDispatcher object, used to dispatch edit processing requests represented by EditEventData objects;
-		\item \textbf{deleteDispatcher}: EventDispatcher object, used to dispatch delete processing requests represented by DeleteEventData objects;
+		\item \textbf{runEventDispatcher}: EventDispatcher object, used to dispatch run processing requests represented by RunEventData objects;
+		\item \textbf{deployEventDispatcher}: EventDispatcher object, used to dispatch deploy processing requests represented by DeployEventData objects;
+		\item \textbf{editEventDispatcher}: EventDispatcher object, used to dispatch edit processing requests represented by EditEventData objects;
+		\item \textbf{deleteEventDispatcher}: EventDispatcher object, used to dispatch delete processing requests represented by DeleteEventData objects;
 	\end{itemize}
 	\subsubsubsection*{Methods}
 	\begin{itemize}
-		\item \textbf{sendRunResponse}: sends the result of a previously received run request back to the event source. The response contains a message and useful request related information.
-		\item \textbf{sendDeployResponse}: sends the result of a previously received deploy request back to the event source. The response contains a message and useful request related information.
-		\item \textbf{sendEditResponse}: sends the result of a previously received edit request back to the event source. The response contains a message and useful request related information.
-		\item \textbf{sendDeleteResponse}: sends the result of a previously received delete request back to the event source. The response contains a message and useful request related information;
-		\item \textbf{onRunEvent}: allows to subscribe a callback to the runDispatcher attribute;
-		\item \textbf{onDeployEvent}: allows to subscribe a callback to the deployDispatcher attribute;
-		\item \textbf{onEditEvent}: allows to subscribe a callback to the editDispatcher attribute;
-		\item \textbf{onDeleteEvent}: allows to subscribe a callback to the deleteDispatcher attribute;
-		\item \textbf{listen}: allows the activation of the blockchain events listening process.
+		\item \textbf{sendRunResult}: sends the result of a previously received run request back to the event source. The response contains a message and useful request related information.
+		\item \textbf{sendDeployResult}: sends the result of a previously received deploy request back to the event source. The response contains a message and useful request related information.
+		\item \textbf{sendEditResult}: sends the result of a previously received edit request back to the event source. The response contains a message and useful request related information.
+		\item \textbf{sendDeleteResult}: sends the result of a previously received delete request back to the event source. The response contains a message and useful request related information;
+		\item \textbf{onRun}: allows to subscribe a callback to the runEventDispatcher attribute;
+		\item \textbf{onDeploy}: allows to subscribe a callback to the deployEventDispatcher attribute;
+		\item \textbf{onEdit}: allows to subscribe a callback to the editEventDispatcher attribute;
+		\item \textbf{onDelete}: allows to subscribe a callback to the deleteEventDispatcher attribute;
+		\item \textbf{dispatchRunEvent}: runs all callbacks in the runEventDispatcher callbacks array with data as parameter;
+		\item \textbf{dispatchDeployEvent}: runs all callbacks in the deployEventDispatcher callbacks array with data as parameter;
+		\item \textbf{dispatchEditEvent}: runs all callbacks in the editEventDispatcher callbacks array with data as parameter;
+		\item \textbf{dispatchDeleteEvent}: runs all callbacks in the deleteEventDispatcher callbacks array with data as parameter.
 	\end{itemize}
 	\subsubsubsection{ETHSmartManager}
 	Class derived from SmartManager, which acts as an Ethereum events listener.
 	\subsubsubsection*{Attributes}
 	\begin{itemize}
 		\item \textbf{contract}: instance of an Ethereum smart contract used to listen to Ethereum events and communicate with the smart contract itself;
-		\item \textbf{runDispatcher}: EventDispatcher object used to dispatch run processing requests represented by RunEventData objects;
-		\item \textbf{deployDispatcher}: EventDispatcher object used to dispatch deploy processing requests represented by DeployEventData objects;
-		\item \textbf{editDispatcher}: EventDispatcher object used to dispatch edit processing requests represented by EditEventData objects;
-		\item \textbf{deleteDispatcher}: EventDispatcher object used to dispatch delete processing requests represented by DeleteEventData objects;
+		\item \textbf{runEventDispatcher}: EventDispatcher object used to dispatch run processing requests represented by RunEventData objects;
+		\item \textbf{deployEventDispatcher}: EventDispatcher object used to dispatch deploy processing requests represented by DeployEventData objects;
+		\item \textbf{editEventDispatcher}: EventDispatcher object used to dispatch edit processing requests represented by EditEventData objects;
+		\item \textbf{deleteEventDispatcher}: EventDispatcher object used to dispatch delete processing requests represented by DeleteEventData objects;
 	\end{itemize}
 	\subsubsubsection*{Methods}
 	\begin{itemize}
-		\item \textbf{sendRunResponse}: sends the result of a previously received run request back to Etherless-smart. The response contains a message and useful request related information.
-		\item \textbf{sendDeployResponse}: sends the result of a previously received deploy request back to Etherless-smart. The response contains a message and useful request related information.
-		\item \textbf{sendEditResponse}: sends the result of a previously received edit request back to Etherless-smart. The response contains a message and useful request related information.
-		\item \textbf{sendDeleteResponse}: sends the result of a previously received delete request back to Etherless-smart. The response contains a message and useful request related information;
-		\item \textbf{onRunEvent}: allows to subscribe a callback to the runDispatcher attribute;
-		\item \textbf{onDeployEvent}: allows to subscribe a callback to the deployDispatcher attribute;
-		\item \textbf{onEditEvent}: allows to subscribe a callback to the editDispatcher attribute;
-		\item \textbf{onDeleteEvent}: allows to subscribe a callback to the deleteDispatcher attribute;
-		\item \textbf{listen}: allows the activation of the Ethereum events listening process.
+		\item \textbf{sendRunResult}: sends the result of a previously received run request back to Etherless-smart. The response contains a message and useful request related information.
+		\item \textbf{sendDeployResult}: sends the result of a previously received deploy request back to Etherless-smart. The response contains a message and useful request related information.
+		\item \textbf{sendEditResult}: sends the result of a previously received edit request back to Etherless-smart. The response contains a message and useful request related information.
+		\item \textbf{sendDeleteResult}: sends the result of a previously received delete request back to Etherless-smart. The response contains a message and useful request related information;
+		\item \textbf{onRun}: allows to subscribe a callback to the runDispatcher attribute;
+		\item \textbf{onDeploy}: allows to subscribe a callback to the deployDispatcher attribute;
+		\item \textbf{onEdit}: allows to subscribe a callback to the editDispatcher attribute;
+		\item \textbf{onDelete}: allows to subscribe a callback to the deleteDispatcher attribute;
+		\item \textbf{dispatchRunEvent}: runs all callbacks in the runEventDispatcher callbacks array with data as parameter;
+		\item \textbf{dispatchDeployEvent}: runs all callbacks in the deployEventDispatcher callbacks array with data as parameter;
+		\item \textbf{dispatchEditEvent}: runs all callbacks in the editEventDispatcher callbacks array with data as parameter;
+		\item \textbf{dispatchDeleteEvent}: runs all callbacks in the deleteEventDispatcher callbacks array with data as parameter.
 	\end{itemize}
 
 	\subsubsubsection{IEventProcessor}
@@ -111,13 +117,16 @@
 	\begin{itemize}
 		\item \textbf{id}: integer number provided by Etherless-smart and used to uniquely identify a processing deploy request;
 		\item \textbf{functionName}: string identifying the name of the function to be deployed;
-		\item \textbf{hash}: string which identifies the IPFS$_{G}$ location of the file to be used for the deployment.
+		\item \textbf{parametersCount}: the number of parameters required by the function to be deployed;
+		\item \textbf{ipfsPath}: string which identifies the IPFS$_{G}$ location of the file to be used for the deployment.
 	\end{itemize}
 	\subsubsubsection*{Attributes - EditEventData}
 	\begin{itemize}
 		\item \textbf{id}: integer number provided by Etherless-smart and used to uniquely identify a processing edit request;
 		\item \textbf{functionName}: string identifying the name of the function to be edited;
-		\item \textbf{hash}: string which identifies the IPFS$_{G}$ location of the file to be used for the edit.
+		\item \textbf{signature}: function parameters signature;
+		\item \textbf{parametersCount}: the number of parameters required by the function to be edited;
+		\item \textbf{ipfsPath}: string which identifies the IPFS$_{G}$ location of the file to be used for the edit.
 	\end{itemize}
 	\subsubsubsection*{Attributes - DeleteEventData}
 	\begin{itemize}
@@ -143,8 +152,8 @@
 	\subsubsubsection*{Methods}
 	\begin{itemize}
 		\item \textbf{invokeLambda}: invokes a Lambda$_{G}$ function using the given function name and parameters, returning an asynchronous response or an error message;
-		\item \textbf{deployLambda}: invokes the AWSDeployer Lambda$_{G}$ function using the name and the content of the Lambda$_{G}$ function to be deployed, returning an asynchronous success or error response;
-		\item \textbf{editLambda}: invokes the AWSDeployer Lambda$_{G}$ function using the name and the new content of the Lambda$_{G}$ function to be edited, returning an asynchronous success or error response;
+		\item \textbf{deployLambda}: invokes the AWSDeployer Lambda$_{G}$ function using the name, the number of parameters and the content of the Lambda$_{G}$ function to be deployed, returning an asynchronous success or error response;
+		\item \textbf{editLambda}: invokes the AWSDeployer Lambda$_{G}$ function using the name, the number of parameters and the new content of the Lambda$_{G}$ function to be edited, returning an asynchronous success or error response;
 		\item \textbf{deleteLambda}: deletes an existing Lambda$_{G}$ function identified by the given function name, returning an asynchronous success or error response.
 	\end{itemize}
 	\subsubsection{IPFS}
@@ -158,11 +167,12 @@
 	Class used to communicate with the IPFS$_{G}$ service, specifically to retrieve functions' data in string format. To establish a connection with the IPFS$_{G}$ network we use \texttt{ipfs-mini} API$_{G}$. 
 	\subsubsubsection*{Attributes}
 	\begin{itemize}
-		\item \textbf{connection}: object through which the class can interact with the \texttt{ipfs-mini} API$_{G}$.
+		\item \textbf{ipfs}: object through which the class can interact with the \texttt{ipfs-mini} API$_{G}$.
 	\end{itemize}
 	\subsubsubsection*{Methods}
 	\begin{itemize}
-		\item \textbf{getContent}: used to retrieve functions' data in string format from IPFS$_{G}$.
+		\item \textbf{getFileContent}: used to retrieve functions' data in string format from IPFS$_{G}$.
+		\item \textbf{saveOnIpfs}: used to save data in string format to IPFS$_{G}$.
 	\end{itemize}
 	\subsubsection{Config}
 	This package is used to create and manage configuration objects used by the services that operate inside the system.
@@ -178,13 +188,15 @@
 		\item \textbf{smartConfigPath}: string containing the path to the Ethereum configuration file;
 		\item \textbf{abiPath}: string containing the path to the abi of the smart contract used for Ethereum communications;
 		\item \textbf{awsConfigPath}: string containing the path to the AWS$_{G}$ configuration file.
+		\item \textbf{ipfsConfigPath}: string containing the path to the IPFS$_{G}$ configuration file.
 	\end{itemize}
 	\subsubsubsection*{Methods}
 	\begin{itemize}
-		\item \textbf{getSmartConfig}: returns an ETHSmartConfig object, created using the Ethereum configurations;
+		\item \textbf{getEthSmartConfig}: returns an ETHSmartConfig object, created using the Ethereum configurations;
 		\item \textbf{getAWSConfig}: returns an AWSConfig object, created using the AWS$_{G}$ configurations.
+		\item \textbf{getIpfsConfig}: returns an IpfsConfig object, created using the IPFS$_{G}$ configurations.
 	\end{itemize}
-	\subsubsubsection{ETHSmartConfig}
+	\subsubsubsection{EthSmartConfig}
 	Class containing the configurations used to communicate with an Ethereum smart contract, allowing the creation of instances of said contract using the Ethers.js$_{G}$ library.
 	\subsubsubsection*{Attributes}
 	\begin{itemize}
@@ -194,9 +206,9 @@
 	\end{itemize}
 	\subsubsubsection*{Methods}
 	\begin{itemize}
-		\item \textbf{createContract}: returns an instance of an Ethereum smart contract created with the configurations contained in the ETHSmartConfig.
+		\item \textbf{createSmartContract}: returns an instance of an Ethereum smart contract created with the configurations contained in the EthSmartConfig.
 	\end{itemize}
-	\subsubsubsection{AWSConfig}
+	\subsubsubsection{AwsConfig}
 	Class containing the configurations used to communicate with the AWS$_{G}$, allowing the creation of instances of said services using the aws-sdk library.
 	\subsubsubsection*{Attributes}
 	\begin{itemize}
@@ -206,7 +218,7 @@
 	\end{itemize}
 	\subsubsubsection*{Methods}
 	\begin{itemize}
-		\item \textbf{createLambda}: sets the current AWS$_{G}$ configuration to the ones contained in the AWSConfig object, and returns an instance of a Lambda$_{G}$ service interface object.
+		\item \textbf{createLambda}: sets the current AWS$_{G}$ configuration to the ones contained in the AwsConfig object, and returns an instance of a Lambda$_{G}$ service interface object.
 	\end{itemize}
 	\subsubsection{Lambda}
 	This package is a reference to the Lambda$_{G}$ functions the AWS$_{G}$ package interacts with.
@@ -215,18 +227,16 @@
 		\includegraphics[width=0.7\linewidth]{diagrammi/etherless-server/Lambda}
 		\caption{Class diagram of the Lambda$_{G}$ package.}
 	\end{figure}
-	\subsubsubsection{AWSDeployer}
+	\subsubsubsection{deployer}
 	AWS Lambda$_{G}$ function used to create a handler for the function to be deployed, as well as building a Lambda$_{G}$ deployment package and requesting the deployment itself.
 	\subsubsubsection*{Attributes}
-	\begin{itemize}
-		\item \textbf{lambda}: service interface object used to interact with the AWS Lambda$_{G}$ service.
-	\end{itemize}
+	This Lambda$_{G}$ function does not contain any attributes.
 	\subsubsubsection*{Methods}
 	\begin{itemize}
 		\item \textbf{injectHandler}: used to create and inject a handler for the function to be deployed which will be used by Lambda$_{G}$ to handle parameterized invocations to the function;
 		\item \textbf{buildZip}: used to build a Lambda$_{G}$ deployment package which consists of a Zip file containing the function to be deployed and all the dependencies required by Lambda$_{G}$;
-		\item \textbf{deploy}: used to request the deployment of the given Lambda$_{G}$ deployment package to the AWS Lambda$_{G}$ service;
-		\item \textbf{edit}: used to request the deployment of the given Lambda$_{G}$ deployment package to the AWS Lambda$_{G}$ service, in order to update the code of an existing Lambda$_{G}$ function.
+		\item \textbf{deployFunction}: used to request the deployment of the given Lambda$_{G}$ deployment package to the AWS Lambda$_{G}$ service;
+		\item \textbf{editFunction}: used to request the deployment of the given Lambda$_{G}$ deployment package to the AWS Lambda$_{G}$ service, in order to update the code of an existing Lambda$_{G}$ function.
 	\end{itemize}
 	\newgeometry{a4paper,left=1in,right=1in,top=1in,bottom=1in,nohead}
 	\begin{landscape}
