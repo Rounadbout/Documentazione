@@ -252,6 +252,7 @@ You can deploy a function on AWS Lambda using the \texttt{deploy} command follow
 	\item \texttt{desc}: is a function description.
 \end{itemize}
 At the moment of execution the price is fixed, that is to say the cost of your function will be chosen by the system. In the future we plan to determine it dynamically, based on the amount of resources required by the function to execute. \\
+\textbf{N.B.} the name of the function must be at most 30 characters long and the description at most 150 characters long. \\
 As a result the application will either show an error or a success message depending on the outcome of the operation.
 \subsubsubsection*{Usage}
 Let's say you want to deploy a multiplication function called \texttt{mul}, whose source code (a file named \texttt{mul.js}) is located in the same directory you're in. To deploy such function on AWS Lambda using \textit{Etherless}, the following steps are required:
@@ -289,6 +290,7 @@ In order to edit a function's description, the syntax to be used is as follows:
 \begin{center}
 	\code{etherless edit <function\_name> -d "new description"}
 \end{center}
+\textbf{N.B.} the new description must be at most 150 characters long. \\
 
 \subsubsection{Edit a function's source code}
 To edit a function's source code, the syntax to be used is as follows:
