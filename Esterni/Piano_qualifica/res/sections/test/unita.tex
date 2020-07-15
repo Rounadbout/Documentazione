@@ -19,7 +19,7 @@
 			ylabel={\textbf{\% Test di Unità}},
 			date coordinates in=x,
 			ymin=-1,
-			ymax=102,
+			ymax=115,
 			xtick=data,
 			xticklabel style={
 				rotate=90,
@@ -29,7 +29,7 @@
 			]
 			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/test/unita/impl.csv};	% al 2020-06-11 sono stati individuati 93 Test
 			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/test/unita/sup.csv};
-			\draw [line width=0.1, red](2020-6-1, 100)--(2020-6-30, 100);
+			\draw [line width=0.1, red](2020-6-1, 100)--(2020-7-30, 100);
 			\legend{$Test\;implementati$, $Test\;superati$};
 			\end{axis}
 			\end{tikzpicture} 
