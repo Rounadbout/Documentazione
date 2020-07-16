@@ -3,7 +3,7 @@
 Il compito del modulo Etherless-cli è quello di mettere a disposizione agli utenti finali dei comandi per interagire con la piattaforma \textit{Etherless}. Per permettere ciò abbiamo sviluppato le seguenti classi:
 \begin{itemize}
 	\item \textbf{Command}: classe astratta che si occupa di definire l'interfaccia necessaria per rappresentare correttamente un comando messo a disposizione dalla CLI;
-	\item \textbf{CommandManager}: classe che si occupa di gestire i comandi. Permette la corretta interazione tra le classi derivate da Command e la libreria Yargs;
+	\item \textbf{CommandManager}: classe che si occupa di gestire i comandi. Permette la corretta interazione tra le classi derivate da Command e la libreria Yargs$_{G}$;
 	\item \textbf{UserSession}: interfaccia che fornisce i metodi necessari per la gestione di una sessione utente;
 	\item \textbf{EthereumUserSession}: implementazione dell'interfaccia UserSession, in particolare si occupa di gestire sessioni utente in ambiente Ethereum;
 	\item \textbf{EtherlessContract}: interfaccia usata per definire le funzionalità che devono essere fornite dal modulo Etherless-smart;
