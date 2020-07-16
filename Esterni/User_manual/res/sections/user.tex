@@ -58,8 +58,8 @@ You will get back a list of useful commands you can execute and the respective e
 
 \subsubsection{Signup}
 The \texttt{signup} command allows you to create a new Ethereum$_{G}$ account to log into the application. The account created has no Ethers$_{G}$ in the wallet associated with it. This means that, by simply creating an account, you cannot perform all the functionalities that \textit{Etherless} provides, since some of them require a certain amount of cryptocurrency to be executed. \\
-To fully use the account you need to add some currency through other online services. The \href{https://ethereum.org/en/wallets/}{Ethereum official website} provides some useful references to do this.\\
-You can sing up to \textit{Etherless} using the following syntax:
+To fully use the account you need to add some currency through other online services. The \href{https://ethereum.org/en/wallets/}{Ethereum$_{G}$ official website} provides some useful references to do this.\\
+You can sign up to \textit{Etherless} using the following syntax:
 \begin{center}
 	\code{etherless signup [---save]}
 \end{center}
@@ -69,7 +69,7 @@ You can sing up to \textit{Etherless} using the following syntax:
 	\item the private key$_{G}$ associated with the Ethereum$_{G}$ account;
 	\item the mnemonic phrase$_{G}$ associated with the Ethereum$_{G}$ account.
 \end{itemize}
-Appending the optional flag \texttt{save} to the command lets you save the credentials into a file that will be created in the current directory. \\
+Appending the optional flag \texttt{---save} to the command lets you save the credentials into a file that will be created in the current directory. \\
 Note that the \texttt{signup} command creates an account, but it does not log you in. To do that, you have to use the designated \texttt{login} command.
 \subsubsubsection*{Usage}
 Let's suppose you want to sign up without saving your credentials. You should then just type from your terminal window:
@@ -103,12 +103,12 @@ You can log inside your Ethereum$_{G}$ wallet using the associated mnemonic phra
 \end{center}
 
 \subsubsubsection*{Usage}
-Let's suppose you already have an Ethereum account and you want to log in using your mnemonic phrase, which is \texttt{this is one mnemonic phrase example}. To do this, just type from your terminal window:
+Let's suppose you already have an Ethereum$_{G}$ account and you want to log in using your mnemonic phrase$_{G}$, which is \texttt{this is one mnemonic phrase example}. To do this, just type from your terminal window:
 \begin{center}
 	\code{etherless login -m this is one mnemonic phrase example}
 \end{center}
 
-On the other hand, you might want to use your private key to log in. For the sake of the example,  let's suppose your private key is 00000...001. To do this, just type from your terminal window:
+On the other hand, you might want to use your private key$_{G}$ to log in. For the sake of the example,  let's suppose your private key$_{G}$ is 00000...001. To do this, just type from your terminal window:
 \begin{center}
 	\code{etherless login 0000...001}
 \end{center}
@@ -132,10 +132,10 @@ After executing this command, all the information about the previous user sessio
 Suppose you have logged into \textit{Etherless}, deployed some functions and executed others. You had finished doing what you had to and you want to log out from the platform. To do that, just type from your terminal window the \texttt{logout} command in the paragraph above.
 
 \subsubsection{List}\label{list}
-\textit{Etherless} allows you to list all the functions available for execution inside the platform. Moreover, you can list all the functions of you property, if you have deployed any. \\
+\textit{Etherless} allows you to list all the functions available for execution inside the platform. Moreover, you can list all the functions of you property using the \texttt{-m} flag, if you have deployed any. \\
 Respectively, the syntax needed to do this is as follows:
 \begin{center}
-	\code{etherless list | list -m}
+	\code{etherless list [-m]}
 \end{center}
 \noindent In both cases, for each function the following data will be provided:
 \begin{itemize}
@@ -179,7 +179,7 @@ In particular, the following information will be shown:
 	\item \textbf{description}: a brief description of the function.
 \end{itemize}
 \subsubsubsection*{Usage}
-Let's say you want to get more information about a function called \texttt{subtract} (which you know is available on the cloud for execution). To do this, type from your terminal window:
+Let's say you want to get more information about a function called \texttt{subtract} (which you know is available on the cloud$_{G}$ for execution). To do this, type from your terminal window:
 \begin{center}
 	\code{etherless info subtract}
 \end{center}
@@ -229,16 +229,16 @@ Or by typing:
 \subsubsection{Run}
 The \texttt{run} command is used to run a specific function that has already been deployed on AWS Lambda. You can execute this command using the following syntax: \\
 \begin{center}
-	\code{etherless run <function\_name> [params..]}
+	\code{etherless run <function\_name> [parameter\_list]}
 \end{center}
-Because \textit{Etherless} runs on the blockchain, execution takes some time to retrieve the result. Once the task is completed the result will be displayed. If the function is executed correctly the price amount is detracted from the current user wallet. On the other hand, if the request is not successful, an error will be displayed instead and the cost will be refunded.
+Since \textit{Etherless} runs on the blockchain$_{G}$, execution takes some time to retrieve the result. Once the task is completed the result will be displayed. If the function is executed correctly the price amount is detracted from the current user wallet. On the other hand, if the request is not successful, an error will be displayed instead and, if the error was caused by the system, the cost will be refunded.
 \subsubsubsection*{Usage}
 Let's say you want to run a subtraction function called \texttt{subtract}. You know that in order to execute this function needs two parameters in the form of numbers. To correctly execute this command, just type from your terminal window:
 \begin{center}
 	\code{etherless run subtract 3 2}
 \end{center}
 After waiting some time for the command to execute (which you will be notified about) you should get back the result of said subtraction, which in this case should be \texttt{1}. \\
-Note that you can only execute functions which have already been deployed on the cloud. To verify which functions are available for execution, use the \texttt{list} command (see section \ref{list} for more information about this).
+Note that you can only execute functions which have already been deployed on the cloud$_{G}$. To verify which functions are available for execution, use the \texttt{list} command (see section \ref{list} for more information about this).
 
 \subsubsection{Deploy}\label{deploy}
 You can deploy a function on AWS Lambda using the \texttt{deploy} command following the syntax:
@@ -253,7 +253,7 @@ You can deploy a function on AWS Lambda using the \texttt{deploy} command follow
 \end{itemize}
 At the moment of execution the price is fixed, that is to say the cost of your function will be chosen by the system. In the future we plan to determine it dynamically, based on the amount of resources required by the function to execute. \\
 As a result the application will either show an error or a success message depending on the outcome of the operation.
-\subsubsubsection{Deployment with dependencies}\label{dep}
+\subsubsubsection{Deploy with dependencies}\label{dep}
 If the specified \texttt{path} is relative to a directory, the latter should contain the following named files:
 \begin{itemize}
 \item \textbf{index.js}: the source code file;
@@ -295,14 +295,14 @@ On the other hand, you can choose to only edit the function's description or its
 \begin{center}
 	\code{etherless edit <function\_name> -d "new description" | -s <path>}
 \end{center}
-\subsubsection{Edit a function's description}
+\subsubsubsection{Edit a function's description}
 In order to edit a function's description, the syntax to be used is as follows:
 \begin{center}
 	\code{etherless edit <function\_name> -d "new description"}
 \end{center}
 \textbf{N.B.} the new description must be at most 150 characters long. \\
 
-\subsubsection{Edit a function's source code}
+\subsubsubsection{Edit a function's source code}
 To edit a function's source code, the syntax to be used is as follows:
 \begin{center}
 	\code{etherless edit <function\_name> -s <path>}
