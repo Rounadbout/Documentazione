@@ -49,7 +49,8 @@
 				\item \textbf{RunCommand}: this class implements the run command, allowing the user to execute a function inside the \textit{Etherless} platform; 
 				\item \textbf{EditCommand}: this class implements the edit command, allowing the user to modify the description or the source code of an owned function; 
 				\item \textbf{SearchCommand}: this class implements the search command, allowing the user to get a list of all functions that contains the given keyword inside their name; 
-				\item \textbf{InfoCommand}: this class implements the info command, allowing the user to get details about a function; 
+				\item \textbf{InfoCommand}: this class implements the info command, allowing the user to get details about a function;
+				\item \textbf{ListCommand}: this class implements the list command, allowing the user to get a list of all functions inside Etherless platform; 
 				\item \textbf{DeleteCommand}: this class implements the delete command, allowing the user to delete an owned function; 
 				\item \textbf{HistoryCommand}: this class implements the history command, allowing the user to see his past run requests;
 				\item \textbf{DeployCommand}: this class implements the deploy command, allowing the user to deploy a function to the \textit{Etherless} platform.
@@ -195,7 +196,15 @@
 		\includegraphics[width=0.85\linewidth]{diagrammi/etherless-cli/Classi}
 		\caption{Class diagram of the Commands package.}
 	\end{figure}
-			
+
+\subsection{Cli settings}
+To modify the cli settings you have to update the .env file. In particular, if you want to change the Ethereum network used by the CLI, you have to update the NETWORK field inside the .env file. 
+If the Etherless-smart module has changed, you have to:
+\begin{itemize}
+	\item update the abi of the smart contract inside the contracts folder;
+	\item if the smart contract address has changed, the field SMART\_ADDRESS inside the .env file has to be update.
+\end{itemize}
+	
 \subsection{Extensions}  
 In order to allow for the integration of new functionalities in the system without heavy alterations of the existing architecture different design choices were implemented.
 
