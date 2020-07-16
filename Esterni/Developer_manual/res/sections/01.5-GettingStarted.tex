@@ -138,7 +138,7 @@ To install all the packages and libraries needed to work with \textit{Etherless}
 	\end{itemize}
 \subsubsection{Etherless-server}
 \subsubsubsection{AWS, Ethereum, IPFS configurations and contract ABI}
-The files containing the Ethereum and AWS$_{G}$ credentials and the IPFS configurations used to interact with the corresponding services are not included in the cloned repository for security reasons. These are present on the Etherless-server version already uploaded and are active on AWS Elastic Beanstalk$_{G}$.
+The files containing the Ethereum and AWS$_{G}$ credentials and the IPFS$_{G}$ configurations used to interact with the corresponding services are not included in the cloned repository for security reasons. These are present on the Etherless-server version already uploaded and are active on AWS Elastic Beanstalk$_{G}$.
 Any developer who might want to work with a local version of Etherless-server should create an \texttt{awsConfig.json} file structured as follows:
 \begin{quote}
 	\texttt{ \\
@@ -180,12 +180,12 @@ The parameters within angular brackets should be replaced with the actual creden
 		\item locally generate a zip archive with the content of the \texttt{etherless-server} folder;
 		\item deploy the zip archive as a new application version on EBS, which creates an EBS Node.js$_{G}$ environment where your application will run;
 	\end{itemize}
-	In addition to this process, in order to allow the serverless deployment of new functions on the platform, you should deploy on AWS Lambda$_{G}$ a deployer function. The content of the deployer function is stored inside the \texttt{serverless} folder in the Etherless-server directory. To deploy this function using the Serverless Framework you should:
+	In addition to this process, in order to allow the serverless deployment of new functions on the platform, you should deploy on AWS Lambda$_{G}$ a deployer function. The content of the deployer function is stored inside the \texttt{serverless} folder in the Etherless-server directory. To deploy this function using the Serverless Framework$_{G}$ you should:
 	\begin{itemize}
 		\item position yourself inside the \texttt{serverless} folder;
 		\item run the \texttt{serverless} command;
-		\item follow the prompt instructions to configure your AWS$_{G}$ and Serverless account;
-		\item run the \texttt{serverless deploy} command, which will use the already present \texttt{serverless.yml} configuration file, to perform the deployment on AWS Lambda.
+		\item follow the prompt instructions to configure your AWS$_{G}$ and Serverless$_{G}$ account;
+		\item run the \texttt{serverless deploy} command, which will use the already present \texttt{serverless.yml} configuration file, to perform the deployment on AWS Lambda$_{G}$.
 	\end{itemize}
 
 \subsection{Functionalities}
@@ -303,7 +303,7 @@ The parameters within angular brackets should be replaced with the actual creden
 	\begin{itemize}
 		\item the specified source file is uploaded to IPFS$_{G}$, and its IPFS$_{G}$ identifing code is displayed;
 		\item an edit request is sent to Etherless-smart and an Ethereum escrow transaction is generated;
-		\item the request is forwarded to Etherless-server, which processes it by getting the source file from IPFS and updating the specified function code in AWS Lambda$_{G}$;
+		\item the request is forwarded to Etherless-server, which processes it by getting the source file from IPFS$_{G}$ and updating the specified function code in AWS Lambda$_{G}$;
 		\item the result is returned to Etherless-smart, thus completing the escrow transaction.
 		\item the result is sent back to Etherless-cli, to be displayed to the user.
 	\end{itemize}
