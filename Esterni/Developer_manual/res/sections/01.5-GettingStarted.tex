@@ -176,6 +176,21 @@ The parameters within angular brackets should be replaced with the actual creden
 		\item run the \texttt{serverless deploy} command, which will use the already present \texttt{serverless.yml} configuration file, to perform the deployment on AWS Lambda.
 	\end{itemize}
 
+\subsection{Update the package}
+	This section describes all the steps needed to update the package. \\
+	Before continuing with the following steps make sure you have updated the version of the package in file 'package.json';
+	It is also important that the package name is not changed, otherwise the npm package cannot be updated. \\
+	The steps needed to update the package are:
+	\begin{itemize}
+		\item position yourself inside the repository cloned before and open a terminal;
+		\item compile typescript source files by running \texttt{npm run build};
+		\item commit the changes and push all to the repository;
+		\item login with an npm account of a maintainer which can make changes in the package. \\
+			  If you don't have credentials or your account is not a maintainer of the package, contact the organization;
+		\item run the command \texttt{npm publish --access public};
+		\item run the command \texttt{npm logout} to logout from the npm account.
+	\end{itemize}
+
 \subsection{Functionalities}
 	This section lists all the available functionalities of \textit{Etherless} and the corresponding CLI commands that trigger them. The following descriptions are also accessible from the CLI itself, by executing the command followed by the \texttt{---help} option. To display the command current version, one should execute the command followed by the \texttt{---version} option.
 	\subsubsection*{Exemples}
