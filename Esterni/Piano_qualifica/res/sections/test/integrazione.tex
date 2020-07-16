@@ -24,7 +24,7 @@
 			ylabel={\textbf{\% Test di Integrazione}},
 			date coordinates in=x,
 			ymin=-1,
-			ymax=102,
+			ymax=115,
 			xtick=data,
 			xticklabel style={
 				rotate=90,
@@ -32,9 +32,9 @@
 			},
 			xticklabel=\year-\month-\day,
 			]
-			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/test/accettazione/impl.csv};	% al 2020-06-11 sono stati individuati 9 Test
-			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/test/accettazione/sup.csv};
-			\draw [line width=0.1, red](2020-6-1, 100)--(2020-6-30, 100);
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/test/integrazione/impl.csv};	% al 2020-06-11 sono stati individuati 9 Test
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/test/integrazione/sup.csv};
+			\draw [line width=0.1, red](2020-6-1, 100)--(2020-7-30, 100);
 			\legend{$Test\;implementati$, $Test\;superati$};
 			\end{axis}
 			\end{tikzpicture} 
