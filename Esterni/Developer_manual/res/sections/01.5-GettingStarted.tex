@@ -118,9 +118,9 @@ This section shows how to configure the work environment to be able to execute, 
 To download the software product on your machine you should open a shell and change to the location you want the software to be in. Then you should use the command \texttt{git clone https://github.com/RoundaboutTeam/etherless.git} and switch to the \texttt{master} branch.
 \subsubsection{Installing the dependencies}
 To install all the packages and libraries needed to work with \textit{Etherless} you should open a shell and change to the main directory. Then you should run the command \texttt{npm install -g}, which will take care of installing all the dependencies specified in the \texttt{package.json} file.
-\subsubsection{AWS and Ethereum configurations}
-The files containing Ethereum and AWS$_{G}$ credentials used to interact with the corresponding services are not included in the cloned repository for security reasons. These are present on the Etherless-server version already uploaded and are active on AWS Elastic Beanstalk$_{G}$.
-Any developer who might want to work with a local version of Etherless-server should create an \texttt{AWSconfig.json} file structured as follows:
+\subsubsection{AWS, Ethereum, IPFS configurations and contract ABI}
+The files containing the Ethereum and AWS$_{G}$ credentials and the IPFS configurations used to interact with the corresponding services are not included in the cloned repository for security reasons. These are present on the Etherless-server version already uploaded and are active on AWS Elastic Beanstalk$_{G}$.
+Any developer who might want to work with a local version of Etherless-server should create an \texttt{awsConfig.json} file structured as follows:
 \begin{quote}
 \texttt{ \\
 	\{\\
@@ -133,15 +133,26 @@ Any developer who might want to work with a local version of Etherless-server sh
 \end{quote}
 To interact with the contracts on the Ethereum blockchain, a \texttt{smartConfig.json} file should be created with the following structure:
 \begin{quote}
-\texttt{ \\
-	\{\\
-	"walletAddress": <<insert wallet address>>, \\
-	"privateKey": <<insert private key>>, \\
-	"contractAddress": <<insert contract address>>, \\
-	"networkName": <<insert network name>> \\
-	\}\\
-}
+	\texttt{ \\
+		\{\\
+		"walletAddress": <<insert wallet address>>, \\
+		"privateKey": <<insert private key>>, \\
+		"contractAddress": <<insert contract address>>, \\
+		"networkName": <<insert network name>> \\
+		\}\\
+	}
 \end{quote}
+To interact with IPFS, using the ipfs-mini API, an \texttt{ipfsConfig.json} file should be created with the following structure:
+\begin{quote}
+	\texttt{ \\
+		\{\\
+		"host": "ipfs.infura.io", \\
+		"port": 5001, \\
+		"protocol": "https", \\
+		\}\\
+	}
+\end{quote}
+Lastly, the code needs the ABI of the smart contract it will interact with. An \texttt{abi.json} file containing the Etherless-smart contract ABI should then be created.
 The parameters within angular brackets should be replaced with the actual credentials and both files be moved to the \texttt{Config} directory inside Etherless-server.
 \subsubsection{Truffle Suite Configuration}
 	In order to interact with the Ropsten$_{G}$ testnet, before beginning the installation process you need two keys: an Infura$_{G}$ project id (from your own Infura$_{G}$ account) and the mnemonic phrase of your Ethereum account. Having these credentials you need to edit the \textit{truffle-config.js} file, replacing the matching fields at the top with your own. Now you are ready to interact with the Ropsten$_{G}$ test network directly from Truffle$_{G}$.\\
