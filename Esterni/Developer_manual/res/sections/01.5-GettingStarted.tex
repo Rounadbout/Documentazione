@@ -107,7 +107,7 @@ This section describes all the steps needed to install \textit{Etherless}.
 \subsubsection{Node}
 	Download the the latest version of the executable file from the \href{https://nodejs.org/it/download/}{Node official website} and follow the given instructions. This will also install Node package manager.
 \subsubsection{Serverless Framework}
-	Open a shell and run the command: \texttt{npm install -g serverless} to install the Serverless Framework.
+	Open a shell and run the command: \texttt{npm install -g serverless} to install the Serverless Framework$_{G}$.
 \subsubsection{Ganache}
 	Ganache$_{G}$ is available in two variants, CLI and GUI. Refer to the \href{https://www.trufflesuite.com/docs/ganache/quickstart}{Ganache$_{G}$ official website} for installation and usage.
 \subsubsection{Truffle}
@@ -119,17 +119,17 @@ This section shows how to configure the work environment to be able to execute, 
 To download the software product on your machine you should open a shell and change to the location you want the software to be in. Then you should use the command \texttt{git clone https://github.com/RoundaboutTeam/etherless.git} and switch to the \texttt{master} branch.
 \subsubsubsection{Installing the dependencies}
 To install all the packages and libraries needed to work with \textit{Etherless} you should open a shell and change to the directory of the Etherless module you want to work with. Then you should run the command \texttt{npm install}, which will take care of installing all the dependencies specified in the \texttt{package.json} file. If you want to work with all three modules, you should repeat this process for each one of them.
-\subsubsubsection{Etherless-smart}
-\subsubsection{Truffle Suite Configuration}
+\subsubsection{Etherless-smart}
+\subsubsubsection{Truffle Suite Configuration}
 	In order to interact with the Ropsten$_{G}$ testnet, before beginning the installation process you need two keys: an Infura$_{G}$ project id (from your own Infura$_{G}$ account) and the mnemonic phrase of your Ethereum account. Having these credentials you need to edit the \textit{truffle-config.js} file, replacing the matching fields at the top with your own. Now you are ready to interact with the Ropsten$_{G}$ test network directly from Truffle$_{G}$.\\
 	To interact only with a Ganache-cli local blockchain no further configuration is needed, as the information is already stored in the \textit{truffle-config.js} file.
-\subsubsection{Etherless-smart contracts deployment}
-	In order to be accessible, Etherless-smart contracts should be deployed. The contracts should be deployed using the Openzeppelin-cli, in order to easily upgrade them in the future. For detailed instructions on deploying a contract from with the Openzeppeln-cli refer to the \href{https://docs.openzeppelin.com/learn/deploying-and-interacting#deploying-a-smart-contract}{documentation}.\\
-	The contracts should be deployed to the chosen network from the ones, defined in the \texttt{networks.js} file, as follows:
+\subsubsubsection{Etherless-smart contracts deployment}
+	In order to be accessible, Etherless-smart contracts should be deployed, to the chosen network from the ones, defined in the \texttt{networks.js} file, in the same file values like gasLimit and gasPrice can be set. The contract deployment should be done using the Openzeppelin-cli, in order to easily upgrade the contracts in the future. For detailed instructions on deploying a contract from the Openzeppeln-cli refer to the \href{https://docs.openzeppelin.com/learn/deploying-and-interacting#deploying-a-smart-contract}{documentation}.\\
+	The contracts should be deployed as follows:
 	\begin{itemize}
 		\item run the command \texttt{truffle compile};
-		\item first the EtherlessStorage contract should be deployed using \texttt{npx oz deploy} and the resulting contract address should be stored somewhere safe;
-		\item then the EtherlessSmart contract should be deployed using \texttt{npx oz deploy} and calling the initialize function as prompted by the cli. The initializer functions requires:
+		\item the EtherlessStorage contract should be deployed first, using \texttt{npx oz deploy} and the resulting contract address should be stored somewhere safe;
+		\item then the EtherlessSmart contract should be deployed, using \texttt{npx oz deploy} and calling the initialize function as prompted by the cli. The initializer functions requires:
 		\begin{itemize}
 			\item the address of the storage contract, previously deployed;
 			\item the address used for the Etherless-server module;
@@ -138,7 +138,7 @@ To install all the packages and libraries needed to work with \textit{Etherless}
 	\end{itemize}
 \subsubsection{Etherless-server}
 \subsubsubsection{AWS, Ethereum, IPFS configurations and contract ABI}
-The files containing the Ethereum and AWS$_{G}$ credentials and the IPFS configurations used to interact with the corresponding services are not included in the cloned repository for security reasons. These are present on the Etherless-server version already uploaded and are active on AWS Elastic Beanstalk$_{G}$.
+The files containing the Ethereum and AWS$_{G}$ credentials and the IPFS$_{G}$ configurations used to interact with the corresponding services are not included in the cloned repository for security reasons. These are present on the Etherless-server version already uploaded and are active on AWS Elastic Beanstalk$_{G}$.
 Any developer who might want to work with a local version of Etherless-server should create an \texttt{awsConfig.json} file structured as follows:
 \begin{quote}
 	\texttt{ \\
@@ -160,7 +160,7 @@ To interact with the contracts on the Ethereum blockchain, a \texttt{smartConfig
 		\}\\
 	}
 \end{quote}
-To interact with IPFS, using the ipfs-mini API, an \texttt{ipfsConfig.json} file should be created with the following structure:
+To interact with IPFS$_{G}$, using the ipfs-mini API$_{G}$, an \texttt{ipfsConfig.json} file should be created with the following structure:
 \begin{quote}
 	\texttt{ \\
 		\{\\
@@ -173,19 +173,19 @@ To interact with IPFS, using the ipfs-mini API, an \texttt{ipfsConfig.json} file
 Lastly, the code needs the ABI of the smart contract it will interact with. An \texttt{abi.json} file containing the Etherless-smart contract ABI should then be created.
 The parameters within angular brackets should be replaced with the actual credentials and all the files be moved to the \texttt{Config} directory inside Etherless-server.
 \subsubsubsection{Deployment on AWS Elastic Beanstalk and Lambda}
-	In order to keep the Etherless-server module always active and running, it should be deployed on an AWS Elastic Beanstalk environment. To do that, you should:
+	In order to keep the Etherless-server module always active and running, it should be deployed on an AWS$_{G}$ Elastic Beanstalk environment. To do that, you should:
 	\begin{itemize}
-		\item log into AWS and go to AWS Elastic Beanstalk;
+		\item log into AWS$_{G}$ and go to AWS$_{G}$ Elastic Beanstalk;
 		\item create a new application inside the EBS service;
 		\item locally generate a zip archive with the content of the \texttt{etherless-server} folder;
-		\item deploy the zip archive as a new application version on EBS, which creates an EBS Node.js environment where your application will run;
+		\item deploy the zip archive as a new application version on EBS, which creates an EBS Node.js$_{G}$ environment where your application will run;
 	\end{itemize}
-	In addition to this process, in order to allow the serverless deployment of new functions on the platform, you should deploy on AWS Lambda a deployer function. The content of the deployer function is stored inside the \texttt{serverless} folder in the Etherless-server directory. To deploy this function using the Serverless Framework you should:
+	In addition to this process, in order to allow the serverless deployment of new functions on the platform, you should deploy on AWS Lambda$_{G}$ a deployer function. The content of the deployer function is stored inside the \texttt{serverless} folder in the Etherless-server directory. To deploy this function using the Serverless Framework$_{G}$ you should:
 	\begin{itemize}
 		\item position yourself inside the \texttt{serverless} folder;
 		\item run the \texttt{serverless} command;
-		\item follow the prompt instructions to configure your AWS and Serverless account;
-		\item run the \texttt{serverless deploy} command, which will use the already present \texttt{serverless.yml} configuration file, to perform the deployment on AWS Lambda.
+		\item follow the prompt instructions to configure your AWS$_{G}$ and Serverless$_{G}$ account;
+		\item run the \texttt{serverless deploy} command, which will use the already present \texttt{serverless.yml} configuration file, to perform the deployment on AWS Lambda$_{G}$.
 	\end{itemize}
 
 \subsection{Functionalities}
@@ -194,7 +194,7 @@ The parameters within angular brackets should be replaced with the actual creden
 	\texttt{etherless <command> ---help} \\
 	\texttt{etherless <command> ---version}
 	\subsubsection{Signup}
-	This function creates a new account with an empty Ethereum wallet and displays its address, private key and mnemonic phrase. It is possible to save the credentials on a local .txt file, by adding the \texttt{---save} option after the command. 
+	This function creates a new account with an empty Ethereum wallet and displays its address, private key and mnemonic phrase. It is possible to save the credentials on a local .txt file, by adding the \texttt{---save} option after the command.
 	\subsubsection*{Command}
 	\texttt{etherless signup [---save]}
 	\subsubsection{Login}
@@ -203,11 +203,11 @@ The parameters within angular brackets should be replaced with the actual creden
 	\texttt{etherless login <private\_key>} \\
 	\texttt{etherless login -m <mnemonic\_phrase>}
 	\subsubsection{Logout}
-	Closes a previously created login session, deleting the local instance of the wallet used for the Ethereum transactions. 
+	Closes a previously created login session, deleting the local instance of the wallet used for the Ethereum transactions.
 	\subsubsection*{Command}
 	\texttt{etherless logout}
 	\subsubsection{Who am I}
-	Displays the address of the logged user. 
+	Displays the address of the logged user.
 	\subsubsection*{Command}
 	\texttt{etherless whoami}
 	\subsubsection{Init}
@@ -260,7 +260,7 @@ The parameters within angular brackets should be replaced with the actual creden
 	Requests the execution of a function with the given spaced parameters, the \texttt{---params} option is implicit if any parameters are given. This command requires the user's password, used to decrypt their wallet. A run request is then created and handled by the following process:
 	\begin{itemize}
 		\item the request is sent to Etherless-smart and an Ethereum escrow transaction is generated;
-		\item the request is forwarded to Etherless-server, which processes it by running the specified function in AWS Lambda;
+		\item the request is forwarded to Etherless-server, which processes it by running the specified function in AWS Lambda$_{G}$;
 		\item the result is returned to Etherless-smart, thus completing the escrow transaction;
 		\item the result is sent back to Etherless-cli, to be displayed to the user.
 	\end{itemize}
@@ -277,9 +277,9 @@ The parameters within angular brackets should be replaced with the actual creden
 	In this case, the system will manage the deployment of the source code and serverlessly install the given dependencies.
 	This command requires the user's password, used to decrypt their wallet. The following process is then started:
 	\begin{itemize}
-		\item the specified source file is uploaded to IPFS, and its IPFS identifying code is displayed;
+		\item the specified source file is uploaded to IPFS$_{G}$, and its IPFS$_{G}$ identifying code is displayed;
 		\item a deployment request is sent to Etherless-smart and an Ethereum escrow transaction is generated;
-		\item the request is forwarded to Etherless-server, which processes it by getting the source file from IPFS and creating a function in AWS Lambda;
+		\item the request is forwarded to Etherless-server, which processes it by getting the source file from IPFS$_{G}$ and creating a function in AWS Lambda$_{G}$;
 		\item the result is returned to Etherless-smart, thus completing the escrow transaction. The newly deployed function is then added to the list of functions in Etherless-smart;
 		\item the result is sent back to Etherless-cli, to be displayed to the user.
 	\end{itemize}
@@ -301,9 +301,9 @@ The parameters within angular brackets should be replaced with the actual creden
 	\end{itemize}
 	In this case, the system will manage the editing of the source code and serverlessly install the given dependencies. This command requires the user's password, used to decrypt their wallet. The following process is then started:
 	\begin{itemize}
-		\item the specified source file is uploaded to IPFS, and its IPFS identifing code is displayed;
+		\item the specified source file is uploaded to IPFS$_{G}$, and its IPFS$_{G}$ identifing code is displayed;
 		\item an edit request is sent to Etherless-smart and an Ethereum escrow transaction is generated;
-		\item the request is forwarded to Etherless-server, which processes it by getting the source file from IPFS and updating the specified function code in AWS Lambda;
+		\item the request is forwarded to Etherless-server, which processes it by getting the source file from IPFS$_{G}$ and updating the specified function code in AWS Lambda$_{G}$;
 		\item the result is returned to Etherless-smart, thus completing the escrow transaction.
 		\item the result is sent back to Etherless-cli, to be displayed to the user.
 	\end{itemize}
@@ -316,7 +316,7 @@ The parameters within angular brackets should be replaced with the actual creden
 	Requests the removal of an existing function, using a given function name. A delete request is then created and handled by the following process:
 	\begin{itemize}
 		\item the request is sent to Etherless-smart and an Ethereum escrow transaction is generated;
-		\item the request is forwarded to Etherless-server, which processes it by removing the specified function from AWS Lambda;
+		\item the request is forwarded to Etherless-server, which processes it by removing the specified function from AWS Lambda$_{G}$;
 		\item the result is returned to Etherless-smart, thus completing the escrow transaction. The function is then removed from the list of functions;
 		\item the result is sent back to Etherless-cli, to be displayed to the user.
 	\end{itemize}
