@@ -208,20 +208,20 @@ The parameters within angular brackets should be replaced with the actual creden
 	\texttt{etherless <command> ---help} \\
 	\texttt{etherless <command> ---version}
 	\subsubsection{Signup}
-	This function creates a new account with an empty Ethereum wallet and displays its address, private key and mnemonic phrase. It is possible to save the credentials on a local .txt file, by adding the \texttt{---save} option after the command. This is a relatively fast operation, that interacts only with Etherless-smart.
+	This function creates a new account with an empty Ethereum wallet and displays its address, private key and mnemonic phrase. It is possible to save the credentials on a local .txt file, by adding the \texttt{---save} option after the command. 
 	\subsubsection*{Command}
 	\texttt{etherless signup [---save]}
 	\subsubsection{Login}
-	Creates a login session with the given private key or mnemonic phrase, allowing to make requests on the \textit{Etherless} platform. After this command has been executed, the user is asked to type in a password to encrypt a wallet, which will be locally instantiated. The password is required each time a command that involves an Ethereum transaction is executed. This is a relatively fast operation, that interacts only with Etherless-smart.
+	Creates a login session with the given private key or mnemonic phrase, allowing to make requests on the \textit{Etherless} platform. After this command has been executed, the user is asked to type in a password to encrypt a wallet, which will be locally instantiated. The password is required each time a command that involves an Ethereum transaction is executed.
 	\subsubsection*{Command}
 	\texttt{etherless login <private\_key>} \\
 	\texttt{etherless login -m <mnemonic\_phrase>}
 	\subsubsection{Logout}
-	Closes a previously created login session, deleting the local instance of the wallet used for the Ethereum transactions. This is a relatively fast operation, that interacts only with Etherless-smart.
+	Closes a previously created login session, deleting the local instance of the wallet used for the Ethereum transactions. 
 	\subsubsection*{Command}
 	\texttt{etherless logout}
 	\subsubsection{Who am I}
-	Displays the address of the logged user. This is a relatively fast operation, that interacts only with Etherless-smart.
+	Displays the address of the logged user. 
 	\subsubsection*{Command}
 	\texttt{etherless whoami}
 	\subsubsection{Init}
@@ -257,8 +257,7 @@ The parameters within angular brackets should be replaced with the actual creden
 	Displays a list of functions that contain the given keyword inside the function's name. For each function, the following information is shown:
 	\begin{itemize}
 		\item function signature;
-		\item function cost;
-		\item function owner.
+		\item function cost.
 	\end{itemize}
 	This is a relatively fast operation, that interacts only with Etherless-smart.
 	\subsubsection*{Command}
@@ -267,8 +266,7 @@ The parameters within angular brackets should be replaced with the actual creden
 	Displays a list of all the available functions inside the \textit{Etherless} platform. If the optional flag \texttt{-m} is used, only functions owned by the current user are displayed. For each function, the following information is shown:
 	\begin{itemize}
 		\item function signature;
-		\item function cost;
-		\item function owner.
+		\item function cost.
 	\end{itemize}This is a relatively fast operation, that interacts only with Etherless-smart.
 	\subsubsection*{Command}
 	\texttt{etherless list [-m]}
