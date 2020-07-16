@@ -37,32 +37,32 @@ Below you can find a list of errors you may get while using \textit{Etherless}, 
     \item \textbf{"The name of the function is already used":} a function with the same name already exists in \textit{Etherless}. Change the name or deploy a different function;
     \item \textbf{"ENOENT: no such file or directory, lstat '[path]'":} the file containing the code of the function to be deployed was not found in the given path. Check that the given path is correct and contains the function file;
     \item \textbf{"No function [name] found in file":} the name of the function inserted in the command must be the same present in the file;
-    \item \textbf{"The source file must be a Javascript file":} only Javascript functions can be deployed on the platform ;
-    \item \textbf{"The name must be at most 30 characters long":} the name of the function must be at most 30 characters long;
-    \item \textbf{"The description must be at most 150 characters long":} the description of the function must be at most 150 characters long;
+    \item \textbf{"The source file must be a Javascript file":} only Javascript functions can be deployed on the platform;
+    \item \textbf{"The name must be at most 30 characters long":} the name of the function must be at most 30 characters long. Try deploying your function again with a shorter name;
+    \item \textbf{"The description must be at most 150 characters long":} the description of the function must be at most 150 characters long. Try deploying your function again with a shorter description;
     \item \textbf{"Unexpected token ([line];[row])":} there is a syntax error in the Javascript file. You should correct it to deploy the function; 
-    \item \textbf{"Insufficient funds":} the amount of Ether you sent is not sufficient for deploying the function.
+    \item \textbf{"Insufficient funds":} the amount of Ether you sent is not sufficient for deploying the function. Try deploying your function again sending more Ether.
   \end{itemize}
   
   \subsection{Edit errors}
   \begin{itemize}
    \item \textbf{"The function you are looking for does not exist":} no function with the given name exists in \textit{Etherless}. Check you typed in the correct function name and try again;
-    \item \textbf{"You are not the owner of the function":} you can only edit function you own. Try checking if you are logged with the correct profile using \texttt{whoami} command;
+    \item \textbf{"You are not the owner of the function":} you can only edit a function you personally deployed. If you are sure you are the owner of the function, try checking if you are logged with the correct profile using the \texttt{whoami} command;
     \item \textbf{"ENOENT: no such file or directory, lstat '[path]'":} the file containing the code of the function to be edited was not found in the given path. Check that the given path is correct and contains the function file;
-     \item \textbf{"The source file must be a Javascript file":} only Javascript functions can be deployed on the platform so if you want to edit a function you must provide a Javascript source file;
-    \item \textbf{"The name must be at most 30 characters long":} the name of the function must be at most 30 characters long;
-    \item \textbf{"The description must be at most 150 characters long":} the description of the function must be at most 150 characters long;
+     \item \textbf{"The source file must be a Javascript file":} only Javascript functions can be deployed on the platform, so if you want to edit a function you must provide a Javascript source file;
+    \item \textbf{"The name must be at most 30 characters long":} the name of the function must be at most 30 characters long. Choose a shorter name and try again;
+    \item \textbf{"The description must be at most 150 characters long":} the description of the function must be at most 150 characters long;. Choose a shorter description and try again;
     \item \textbf{"Unexpected token ([line];[row])":} there is a syntax error in the Javascript file. You should correct it to edit the function; 
-    \item \textbf{"Insufficient funds":} the amount of Ether you sent is not sufficient for editing the function.
+    \item \textbf{"Insufficient funds":} the amount of Ether you sent is not sufficient for editing the function. Try again sending more Ether.
   \end{itemize}
   
   \subsection{Delete errors}
   \begin{itemize}
-    \item \textbf{"You are not the owner of the function":} the function you are trying to delete is not yours. You can only delete one of the functions you deployed;
-    \item \textbf{"The function you are looking for does not exist":} the function you are trying to delete is not present on the \textit{Etherless} platform.
+    \item \textbf{"You are not the owner of the function":} the function you are trying to delete is not yours. You can only delete the functions you deployed;
+    \item \textbf{"The function you are looking for does not exist":} the function you are trying to delete is not present on the \textit{Etherless} platform. Check you typed the correct name and try again.
   \end{itemize}
   
   \subsection{Info errors}
   \begin{itemize}
-    \item \textbf{"The function you are looking for does not exist":} no function with the given name exists in \textit{Etherless}.
+    \item \textbf{"The function you are looking for does not exist":} no function with the given name exists in \textit{Etherless}. Use the \texttt{list} command to get a list of all executable functions on \textit{Etherless} and check you typed the correct name.
   \end{itemize}

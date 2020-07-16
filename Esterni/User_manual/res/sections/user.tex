@@ -16,7 +16,7 @@ Moreover:
 \begin{itemize}
 	\item \texttt{<>}: terms within angular brackets are mandatory for the command to execute properly;
 	\item \texttt{[]}: terms within square brackets are optional. This means that command execution can happen either with or without them;
-	\item \texttt{-flag}: each term indicating a flag should be preceded by a dash.
+	\item \texttt{-flag}: each term indicating a flag should be preceded by at least one dash. Flags requiring two dashes to properly execute will be pointed out specifically in the command syntax;
 	\item \texttt{option\_1 | option\_2}: elements separated by a vertical line mean you can choose among them;
 \end{itemize}
 
@@ -31,7 +31,7 @@ Moreover:
 	\item \textbf{list}: lists all the functions you can execute;
 	\item \textbf{info}: returns detailed information about a certain function;
 	\item \textbf{search}: returns the search conducted on a certain keyword;
-	\item \textbf{history}: returns the log of the commands you have executed;
+	\item \textbf{history}: returns the log of the requests you have made;
 	\item \textbf{run}: requests the execution of a function;
 	\item \textbf{deploy}: requests the deployment of a function;
 	\item \textbf{edit}: requests the modification of a function;
@@ -58,7 +58,7 @@ You will get back a list of useful commands you can execute and the respective e
 
 \subsubsection{Signup}
 The \texttt{signup} command allows you to create a new Ethereum$_{G}$ account to log into the application. The account created has no Ethers$_{G}$ in the wallet associated with it. This means that, by simply creating an account, you cannot perform all the functionalities that \textit{Etherless} provides, since some of them require a certain amount of cryptocurrency to be executed. \\
-To fully use the account you need to add some currency through other online services. \\
+To fully use the account you need to add some currency through other online services. The \href{https://ethereum.org/en/wallets/}{Ethereum official website} provides some useful references to do this.\\
 You can sing up to \textit{Etherless} using the following syntax:
 \begin{center}
 	\code{etherless signup [-save]}
@@ -247,13 +247,19 @@ You can deploy a function on AWS Lambda using the \texttt{deploy} command follow
 \end{center}
 \noindent Where:
 \begin{itemize}
-	\item \texttt{function\_name}: is the name of the function to be deployed;
-	\item \texttt{path}: is the relative path to the source file from the current directory;
-	\item \texttt{desc}: is a function description.
+	\item \texttt{function\_name}: is the name of the function to be deployed. This field cannot be longer than 30 characters;
+	\item \texttt{path}: is the relative path to the source file/folder from the current directory. If the specified path is relative to a single source file, the deployment will be performed without considering any external dependencies. For more information about deploying a function with dependencies, see section \ref{dep};
+	\item \texttt{desc}: is the function's description. This field cannot exceed 150 characters.
 \end{itemize}
 At the moment of execution the price is fixed, that is to say the cost of your function will be chosen by the system. In the future we plan to determine it dynamically, based on the amount of resources required by the function to execute. \\
-\textbf{N.B.} the name of the function must be at most 30 characters long and the description at most 150 characters long. \\
 As a result the application will either show an error or a success message depending on the outcome of the operation.
+\subsubsubsection{Deployment with dependencies}\label{dep}
+If the specified \texttt{path} is relative to a directory, the latter should contain the following named files:
+\begin{itemize}
+\item \textbf{index.js}: the source code file;
+\item \textbf{package.json}: the file used to handle external dependencies. For more information about this, consult \href{https://docs.npmjs.com/files/package.json}{the official npm documentation};
+\item \textbf{package-lock.json}: another file used to handle external dependencies. For more information about this, consult \href{https://docs.npmjs.com/configuring-npm/package-lock-json.html}{the official npm documentation}.
+\end{itemize}
 \subsubsubsection*{Usage}
 Let's say you want to deploy a multiplication function called \texttt{mul}, whose source code (a file named \texttt{mul.js}) is located in the same directory you're in. To deploy such function on AWS Lambda using \textit{Etherless}, the following steps are required:
 \begin{itemize}
@@ -262,11 +268,15 @@ Let's say you want to deploy a multiplication function called \texttt{mul}, whos
 \begin{center}
 	\code{etherless deploy mul mul.js "This is a multiplication function"}
 \end{center}
-Since the file \texttt{mul.js} is located in the current directory, only its name is required for the command to properly execute. However, supposing \texttt{mul.js} is contained within a folder named \texttt{source\_code} in the current directory, the \texttt{deploy} command would change as follows:
+Since the file \texttt{mul.js} is located in the current directory, only its name is required for the command to properly execute. However, supposing \texttt{mul.js} is contained within a folder named \texttt{source\_code} in the current directory, the \texttt{deploy} command syntax would change as follows:
 \begin{center}
 	\code{etherless deploy mul ./source\_code/mul.js "This is a multiplication function"}
 \end{center}
-Meaning \texttt{path} should contain the relative path to the source code from the current directory.
+Meaning \texttt{path} should contain the relative path to the source code from the current directory. \\
+However, should you need to deploy more than one file (see section \ref{dep}), just type the folder path which contains the files you want to deploy as the \texttt{path}. So for example, if your directory called \texttt{source\_code} contains all the files you want to deploy, just type from your terminal window:
+\begin{center}
+	\code{etherless deploy mul ./source\_code "This is a multiplication function"}
+\end{center}
 \end{itemize}
 
 \subsubsection{Edit}
