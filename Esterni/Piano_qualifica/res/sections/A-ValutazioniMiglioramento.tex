@@ -303,7 +303,7 @@
 				Questa problematica riguardo lo studio delle tecnologie verrà monitorata anche durante i periodi successivi.
 					\\
 		
-				\textbf{Omogeneità dei documenti prodotti}: Considerato che la stesura di un documento può essere effettuata anche da più persone che ricoprono lo stesso ruolo in contemporanea, si è verificato il problema di omogeneità all'interno dei documenti
+				\textbf{Omogeneità dei documenti prodotti\ped{\textit{G}}}: Considerato che la stesura di un documento può essere effettuata anche da più persone che ricoprono lo stesso ruolo in contemporanea, si è verificato il problema di omogeneità all'interno dei documenti
 					&
 				La soluzione migliore è stata quella di concordare assieme nelle \textit{Norme di Progetto} gli utilizzi di maiuscole, minuscole, corsivo, grassetto, etc.
 					&
@@ -511,9 +511,178 @@
 				Questo studio più approfondito delle tecnologie ci ha permesso di comprendere il modo in cui sviluppare test efficaci ed esaustivi.
 					\\
 			\end{longtable}
-	%\subsection{Validazione e collaudo}
-		%\subsubsection{Segnalazioni RQ}
-		%\subsubsection{Valutazioni sul periodo}
-	
+		
+		
+	\subsection{Validazione e Collaudo}
+		\subsubsection{Segnalazioni RQ}
+			La tabella seguente presenta tutti i cambiamenti e miglioramenti apportati a seguito delle segnalazioni
+			da parte del Committente\ped{\textit{G}} e del Proponente\ped{\textit{G}} presenti nell'esito della Revisione di Qualifica.
+			
+			\rowcolors{2}{lightRowColor}{darkRowColor}	
+			\begin{longtable}{ 
+					>{\centering}p{0.2\textwidth} 
+					>{\centering}p{0.35\textwidth}
+					>{\centering\arraybackslash}p{0.35\textwidth}}
+				
+				\rowcolor{white} \caption {Risoluzione segnalazioni RQ} \\
+				
+				\coloredTableHead
+				\textbf{\color{white}Processo} &
+				\textbf{\color{white}Segnalazione} &
+				\textbf{\color{white}Soluzione}
+				\endfirsthead
+				
+				\rowcolor{white}\caption[]{(continua)}\\
+				\coloredTableHead
+				\textbf{\color{white}Processo} &
+				\textbf{\color{white}Segnalazione} &
+				\textbf{\color{white}Soluzione}
+				\endhead
+				
+				\hline \multicolumn{3}{c}{\textit{Continua nella prossima pagina}} \\
+				\endfoot
+				\hline
+				\endlastfoot	
+				
+				% Contenuto della tabella
+				% Processo & Segnalazione & Soluzione \\
+				
+				Documentazione - Registro delle Modifiche
+				&
+				Non compreso e non sanato l’errore metodologico già più volte segnalato in precedenza, segno di un modo di procedere frettoloso, che cerca l’avanzamento senza curarsi di aver prima posato buone fondamenta di metodo.
+				&
+				Aggiornata la metodologia di gestione del Registro delle modifiche, in modo che faccia diretto riferimento all’impatto della modifica stessa ed alla sua retrocompatibilità o meno. (Vedi \textit{Norme di Progetto 4.0.0} per info più specifiche)
+				\\
+				
+				
+				Documentazione - Stile Tipografico
+				&
+				Nel segno di quanto sopra, permangono anche e ancora inconsistenze nell’uso di iniziali maiuscole nei titoli delle parti di documento. 
+				&
+				I documenti sono stati revisionati con attenzione, e corrette le inconsistenze rilevate. 
+				\\
+				
+				
+				Documentazione - Stile Redazionale
+				&
+				Le appendici sono tali perché hanno una diversa numerazione, che rende superfluo l’uso del prefisso “Appendice” nel loro titolo.
+				&
+				Rimosso il prefisso “Appendice” dal titolo delle appendici.
+				\\
+				
+				
+				Documentazione - Verbali
+				&
+				Scarse invece le testimonianze di contatti con il Proponente\ped{\textit{G}}. 
+				&
+				Tentativo di comunicazione più frequente con il Proponente\ped{\textit{G}} nell’ultimo periodo, precedente la RA.
+				\\
+				
+				
+				Documentazione - Manuale Utente
+				&
+				Documento redatto in modo molto sbrigativo. Valutare un approccio in stile tutorial per guidare l’utente attraverso le funzionalità offerte dal prodotto\ped{\textit{G}}. 
+				&
+				Resa più chiara la sintassi usata per illustrare i comandi (che è stata anche spiegata più approfonditamente nella sezione apposita).
+				Aggiunta una sottosezione ‘Usage’ all’interno della sezione esplicativa di ogni comando che fornisce degli esempi d’uso pratici stile ‘tutorial’.
+				Approfondita la parte 'Troubleshooting error' con tutti gli errori che potrebbero comparire all’utente allo stato attuale di sviluppo.\\
+				
+				
+				Documentazione - Manuale Sviluppatore
+				&
+				I riferimenti forniti sono troppo generici e quindi poco informativi.
+				&
+				Migliorati i riferimenti, rendendoli più precisi ed utili.
+				\\
+				
+				
+				Documentazione - Manuale Sviluppatore
+				&
+				Le informazioni presenti in §2.5 vanno estese e completate.
+				&
+				Estese di molto le informazioni relative alle singole funzionalità, con riferimenti al processo di gestione delle singole richieste e delle varie opzioni disponibili per i comandi stessi. 
+				\\
+				
+				
+				Documentazione - Manuale Sviluppatore
+				&
+				§3.3: ha tono di slogan, inadatto allo scopo. Cercate di fornire esempi concreti, altrimenti, eliminate la sezione.
+				&
+				Eliminata la sezione, in quanto semplice reindirizzamento verso le omonime sezioni dei singoli moduli\ped{\textit{G}}. 
+				\\
+				
+				
+				Documentazione - Manuale Sviluppatore
+				&
+				Quale valore informativo fornisce al lettore l’utilizzo del tipo “any” nei diagrammi? 
+				&
+				Ristrutturati i diagrammi ed inserite tipizzazioni più precise a sostituzione degli identificativi “any”.
+				\\
+				
+				
+				Documentazione - Piano di Qualifica
+				&
+				La risoluzione del difetto segnalato intorno al titolo di §4 è “furbetta” ma poco lungimirante, perché il titolo attuale è diventato “monco”, cioè non descrive i contenuti della sezione. 
+				&
+				Eliminato il titolo Test, il quale non fornisce informazioni aggiuntive riguardo alla sezione. Ciascun test viene definito in una propria sezione corredata da titolo. 
+				\\
+				
+				
+				Documentazione - Piano di Qualifica
+				&
+				I cruscotti di avanzamento associati a ogni blocco di test segnalano che lo stato corrente è gravemente arretrato rispetto alle attese minime correlate con l’accesso alla RQ. Non vi è traccia, tuttavia, di una presa d’atto di tale situazione.
+				&
+				Viene posta maggiore attenzione nel descrivere le motivazioni per le quali alcune parti di documento possono presentano carenze. Lo stato dei test notevolmente migliorato, sanando eventuali ritardi presenti nella precedente revisione.
+				\\
+				
+				
+				Documentazione - Piano di Qualifica
+				&
+				Il contenuto delle appendici A e B è buono per stile di presentazione e ampiezza, ma riflette un atteggiamento retrospettivo, ancora non maturo abbastanza da spostare lo sforzo sull’adozione di misure proattive di automiglioramento.
+				&
+				Viene posta maggiore attenzione nella scrittura delle parti di documento portate all'attenzione, adottando un pensiero lungimirante orientato all'automiglioramento.
+				\\
+				
+				
+			\end{longtable}
+			
+		\subsubsection{Valutazioni sul periodo}
+			\rowcolors{2}{lightRowColor}{darkRowColor}
+			\begin{longtable}{ 
+					>{\centering}p{0.3\textwidth}
+					>{\centering}p{0.3\textwidth}
+					>{\centering\arraybackslash}p{0.3\textwidth}}
+				
+				\rowcolor{white} \caption {Valutazioni sul periodo di Validazione e Collaudo}		\\
+				
+				\coloredTableHead
+				\textbf{\color{white}Problema} &
+				\textbf{\color{white}Contromisura} &
+				\textbf{\color{white}Riscontri} 
+				\endfirsthead
+				
+				\rowcolor{white}\caption[]{(continua)}\\
+				\coloredTableHead
+				\textbf{\color{white}Problema} &
+				\textbf{\color{white}Contromisura} &
+				\textbf{\color{white}Riscontri} 
+				\endhead
+				
+				\hline \multicolumn{3}{c}{\textit{Continua nella prossima pagina}} \\
+				\endfoot
+				\hline
+				\endlastfoot	
+				
+				% Contenuto della tabella
+				% Problema & Soluzione\\
+				\hline \multicolumn{3}{c}{Organizzazione} \\ \hline
+				\textbf{Concomitanza ultimi esami}: vista la sovrapposizione del periodo di Validazione e Collaudo alla sessione estiva degli esami universitari, è stato opportuno prevedere l'assenza di alcuni membri del gruppo per dedicare del tempo al completamento degli ultimi esami rimanenti.
+				&
+				Ci siamo impegnati a comunicare tra di noi le date necessarie allo studio personale, permettendo quindi di programmare al meglio il periodo, evitando così ritardi.
+				&
+				La contromisura adottata ha permesso di prevedere i possibili ritardi evitandoli pianificando le risorse disponibili.
+				\\
+				
+			\end{longtable}
 	%\subsection{Revisione di accettazione}
 	

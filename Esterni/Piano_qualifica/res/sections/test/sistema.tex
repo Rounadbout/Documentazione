@@ -1,13 +1,18 @@
-\subsection{Test di Sistema}
+\section{Test di Sistema}
 
-	\subsubsection{Specifica}
+	\subsection{Specifica}
 		I Test di Sistema hanno l'obiettivo di testare particolari proprietà globali. In particolare:
 		\begin{enumerate}
-			\item{\textbf{test di stress}: valutazione del sistema in condizioni di sovraccarico;}
-			\item{\textbf{test di robustezza}: valutazione del sistema in presenza di dati non corretti;}
-			\item{\textbf{test di sicurezza}: valutazione del livello di sicurezza del sistema.}
+			\item{\textbf{Test delle Funzionalità}: valutazione del comportamento del sistema all'esecuzione delle diverse funzionalità;}
+			\item{\textbf{Test di Sicurezza}: valutazione del livello di sicurezza del sistema;}
+			\item{\textbf{Test di Usabilità}: valutazione del livello di usabilità del sistema;}
+			\item{\textbf{Test di Performance}: valutazione del costo di esecuzione delle funzionalità;}
+			\item{\textbf{Test di Memoria/Archiviazione}: valutazioni su quantitativi di memoria necessari alla corretta esecuzione;}
+			\item{\textbf{Test di Carico}: valutazione del comportamento del sistema in condizioni di carico massimo;}
+			\item{\textbf{Test di Stress}: valutazione del comportamento del sistema in condizioni di sovraccarico;}
+			\item{\textbf{Test di Configurazione}: valutazione del sistema in diversi ambienti di esecuzione;}
 		\end{enumerate}
-		Per rispettare il livello qualitativo richiesto è necessario adempiere la seguente metrica:
+		Per rispettare il livello qualitativo richiesto è necessario mantenere il valore della seguente metrica entro i limiti previsti:
 		\begin{itemize}
 			\item{misurazione: numero di test soddisfatti;}
 			\item{valore minimo accettabile: 100\%;}
@@ -15,5 +20,13 @@
 		\end{itemize}
 	
 	
-	\subsubsection{Stato}
-		In vista della prossima revisione verrà valutato lo sviluppo di questa tipologia di test.
+	\subsection{Stato}
+		
+		% Grafico
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.6\textwidth]{./res/sections/test/sistema/graph.png}
+			\caption{Suddivisione dei Test di Sistema}
+		\end{figure}
+	
+		\input{./res/sections/test/sistema/test_sistema.tex}

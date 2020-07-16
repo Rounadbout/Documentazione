@@ -1,55 +1,23 @@
-\subsection{Test di Accettazione}
+\section{Test di Accettazione}
 
-	\subsubsection{Specifica}
-		Questa sezione vuole descrivere tutti i test relativi ai requisiti che il prodotto\ped{\textit{G}} finale dovrà superare.\\
+	\subsection{Specifica}
+		Questa sezione vuole descrivere tutti i test relativi ai requisiti che il prodotto\ped{\textit{G}} finale dovrà superare durante l'accettazione del Proponente\ped{\textit{G}}.\\
 		Nel dettaglio, questi test sono:
 		\begin{enumerate}
-			\item Test Funzionali;
-			\item Test di Qualità;
-			\item Test di Vincolo;
-			\item Test Prestazionali.
+			\item \textbf{Test Funzionali};
+			\item \textbf{Test di Qualità};
+			\item \textbf{Test di Vincolo};
+			\item \textbf{Test Prestazionali}.
 		\end{enumerate}
-		Come esposto nel documento \AdR{} 3.0.0, relativamente ai requisiti prestazionali non sono previsti Test di Accettazione. \\
-		Per rispettare il livello qualitativo richiesto è necessario adempiere la seguente metrica:
-		\begin{itemize}
-			\item{misurazione: numero di test soddisfatti;}
-			\item{valore minimo accettabile: 100\%;}
-			\item{valore preferibile: 100\%.}
-		\end{itemize}
+		Come esposto nel documento \AdR{} 4.0.0, relativamente ai requisiti prestazionali non sono previsti Test di Accettazione. \\
 	
+	\subsection{Stato}
 	
-	\subsubsection{Stato}
-	
-		\begin{figure}[H]
-			\centering
-			\begin{tikzpicture} [scale = 0.7]
-			\begin{axis}[
-			xlabel={\textbf{Tempo}},
-			ylabel={\textbf{\% Test di Unità}},
-			date coordinates in=x,
-			ymin=-1,
-			ymax=102,
-			xtick=data,
-			xticklabel style={
-				rotate=90,
-				anchor=near xticklabel,
-			},
-			xticklabel=\year-\month-\day,
-			]
-			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/test/accettazione/impl.csv};	% al 2020-06-11 sono stati individuati 70 Test
-			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/test/accettazione/sup.csv};
-			\draw [line width=0.1, red](2020-6-1, 100)--(2020-6-30, 100);
-			\legend{$Test\;implementati$, $Test\;superati$};
-			\end{axis}
-			\end{tikzpicture} 
-			\caption{\% Test di Unità}
-		\end{figure}
-	
-		\subsubsubsection{Test Funzionali}
+		\subsubsection{Test Funzionali}
 			\input{./res/sections/test/accettazione/funzionali.tex}
 			\pagebreak
-		\subsubsubsection{Test di Qualità}
+		\subsubsection{Test di Qualità}
 			\input{./res/sections/test/accettazione/qualita.tex}
 			\pagebreak
-		\subsubsubsection{Test di Vincolo}
+		\subsubsection{Test di Vincolo}
 			\input{./res/sections/test/accettazione/vincolo.tex}

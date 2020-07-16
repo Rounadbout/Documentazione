@@ -1,12 +1,12 @@
-\subsection{Test di Integrazione}
+\section{Test di Integrazione}
 
-	\subsubsection{Specifica}
-		I Test di Integrazione hanno l'obiettivo di verificare la correttezza funzionale nell’interazione tra più moduli\ped{\textit{G}}. In particolare questa tipologia di test verifica:
+	\subsection{Specifica}
+		I Test di Integrazione hanno l'obiettivo di verificare la correttezza funzionale nell’interazione tra più unità. In particolare questa tipologia di test verifica:
 		\begin{enumerate}
-			\item{l'assemblamento dei vari moduli\ped{\textit{G}} aggiunti incrementalmente;}
-			\item{l'assemblamento di tutti i moduli\ped{\textit{G}} facenti parte del programma.}
+			\item{l'assemblamento delle varie unità aggiunte incrementalmente;}
+			\item{l'assemblamento di tutte le unità facenti parte di un modulo\ped{\textit{G}}.}
 		\end{enumerate}
-		Per rispettare il livello qualitativo richiesto è necessario adempiere la seguente metrica:
+		Per rispettare il livello qualitativo richiesto è necessario mantenere il valore della seguente metrica entro i limiti previsti:
 		\begin{itemize}
 			\item{misurazione: numero di test soddisfatti;}
 			\item{valore minimo accettabile: 100\%;}
@@ -14,7 +14,7 @@
 		\end{itemize}
 
 
-	\subsubsection{Stato}
+	\subsection{Stato}
 	
 		\begin{figure}[H]
 			\centering
@@ -24,7 +24,7 @@
 			ylabel={\textbf{\% Test di Integrazione}},
 			date coordinates in=x,
 			ymin=-1,
-			ymax=102,
+			ymax=115,
 			xtick=data,
 			xticklabel style={
 				rotate=90,
@@ -32,9 +32,9 @@
 			},
 			xticklabel=\year-\month-\day,
 			]
-			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/test/accettazione/impl.csv};	% al 2020-06-11 sono stati individuati 9 Test
-			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/test/accettazione/sup.csv};
-			\draw [line width=0.1, red](2020-6-1, 100)--(2020-6-30, 100);
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/test/integrazione/impl.csv};	% al 2020-06-11 sono stati individuati 9 Test
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/test/integrazione/sup.csv};
+			\draw [line width=0.1, red](2020-6-1, 100)--(2020-7-30, 100);
 			\legend{$Test\;implementati$, $Test\;superati$};
 			\end{axis}
 			\end{tikzpicture} 
