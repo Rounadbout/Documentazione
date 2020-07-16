@@ -107,9 +107,9 @@ This section describes all the steps needed to install \textit{Etherless}.
 \subsubsection{Node}
 	Download the the latest version of the executable file from the \href{https://nodejs.org/it/download/}{Node official website} and follow the given instructions. This will also install Node package manager.
 \subsubsection{Serverless Framework}
-	Open a shell and run the command: \texttt{npm install -g serverless} to install the Serverless Framework. 
+	Open a shell and run the command: \texttt{npm install -g serverless} to install the Serverless Framework.
 \subsubsection{Ganache}
-	Ganache$_{G}$ is available in two variants, CLI and GUI. Refer to the \href{https://www.trufflesuite.com/docs/ganache/quickstart}{Ganache$_{G}$ official website} for installation and usage.	
+	Ganache$_{G}$ is available in two variants, CLI and GUI. Refer to the \href{https://www.trufflesuite.com/docs/ganache/quickstart}{Ganache$_{G}$ official website} for installation and usage.
 \subsubsection{Truffle}
  In order to install Truffle$_{G}$ you need to run \texttt{npm install truffle -g} from your terminal window. The minimum version required is 4.0.0.
 \subsection{Configuration}
@@ -146,6 +146,20 @@ The parameters within angular brackets should be replaced with the actual creden
 \subsubsection{Truffle Suite Configuration}
 	In order to interact with the Ropsten$_{G}$ testnet, before beginning the installation process you need two keys: an Infura$_{G}$ project id (from your own Infura$_{G}$ account) and the mnemonic phrase of your Ethereum account. Having these credentials you need to edit the \textit{truffle-config.js} file, replacing the matching fields at the top with your own. Now you are ready to interact with the Ropsten$_{G}$ test network directly from Truffle$_{G}$.\\
 	To interact only with a Ganache-cli local blockchain no further configuration is needed, as the information is already stored in the \textit{truffle-config.js} file.
+\subsubsection{Etherless-smart contracts deployment}
+	In order to be accessible, Etherless-smart contracts should be deployed. The contracts should be deployed using the Openzeppelin-cli, in order to easily upgrade them in the future. For detailed instructions on deploying a contract from with the Openzeppeln-cli refer to the \href{https://docs.openzeppelin.com/learn/deploying-and-interacting#deploying-a-smart-contract}{documentation}.\\
+	The contracts should be deployed to the chosen network from the ones, defined in the \texttt{networks.js} file, as follows:
+	\begin{itemize}
+		\item run the command \texttt{truffle compile};
+		\item first the EtherlessStorage contract should be deployed using \texttt{npx oz deploy} and the resulting contract address should be stored somewhere safe;
+		\item then the EtherlessSmart contract should be deployed using \texttt{npx oz deploy} and calling the initialize function as prompted by the cli. The initializer functions requires:
+		\begin{itemize}
+			\item the address of the storage contract, previously deployed;
+			\item the address used for the Etherless-server module;
+			\item the service fee that should be applied to the requests;
+		\end{itemize}
+	\end{itemize}
+
 \subsubsection{Deployment on AWS Elastic Beanstalk and Lambda}
 	In order to keep the Etherless-server module always active and running, it should be deployed on an AWS Elastic Beanstalk environment. To do that, you should:
 	\begin{itemize}
@@ -161,12 +175,12 @@ The parameters within angular brackets should be replaced with the actual creden
 		\item follow the prompt instructions to configure your AWS and Serverless account;
 		\item run the \texttt{serverless deploy} command, which will use the already present \texttt{serverless.yml} configuration file, to perform the deployment on AWS Lambda.
 	\end{itemize}
-	
+
 \subsection{Functionalities}
 	This section lists all the available functionalities of \textit{Etherless} and the corresponding CLI commands that trigger them. The following descriptions are also accessible from the CLI itself, by executing the command followed by the \texttt{---help} option. To display the command current version, one should execute the command followed by the \texttt{---version} option.
 	\subsubsection*{Exemples}
 	\texttt{etherless <command> ---help} \\
-	\texttt{etherless <command> ---version} 
+	\texttt{etherless <command> ---version}
 	\subsubsection{Signup}
 	This function creates a new account with an empty Ethereum wallet and displays its address, private key and mnemonic phrase. It is possible to save the credentials on a local .txt file, by adding the \texttt{---save} option after the command. This is a relatively fast operation, that interacts only with Etherless-smart.
 	\subsubsection*{Command}
