@@ -61,7 +61,7 @@ The \texttt{signup} command allows you to create a new Ethereum$_{G}$ account to
 To fully use the account you need to add some currency through other online services. The \href{https://ethereum.org/en/wallets/}{Ethereum official website} provides some useful references to do this.\\
 You can sing up to \textit{Etherless} using the following syntax:
 \begin{center}
-	\code{etherless signup [-save]}
+	\code{etherless signup [---save]}
 \end{center}
 \noindent The execution of this command returns the credentials of the newly created account, which are:
 \begin{itemize}
@@ -78,7 +78,7 @@ Let's suppose you want to sign up without saving your credentials. You should th
 \end{center}
 On the other hand, if you want your credentials to be saved on a file in the current directory, you should type:
 \begin{center}
-	\code{etherless signup -save}
+	\code{etherless signup ---save}
 \end{center}
 Note that saving your credentials on a file does not automate the authentication process, meaning when logging in you still have to insert them manually.
 
@@ -120,7 +120,7 @@ By executing this command you get the address of the wallet associated with the 
 \end{center}
 Following the command execution the address of the wallet associated with the current session will be displayed.
 \subsubsubsection*{Usage}
-Let's suppose you have logged into \textit{Etherless} and, for some reason, you need to retrieve information regarding your account. In order to get that information just type from your terminal window the \texttt{whoami} command found in the above paragraph.
+Let's suppose you have logged into \textit{Etherless} and, for some reason, you need to retrieve information regarding your account address. In order to get that information just type from your terminal window the \texttt{whoami} command found in the above paragraph.
 
 \subsubsection{Logout}
 You can run this command to log out from the Ethereum$_{G}$ network. The command syntax is:
@@ -206,7 +206,7 @@ You should get back all the functions whose name contains the keyword \texttt{su
 \subsubsection{History}
 The \texttt{history} command displays a list of the all the request you made that were previously executed since logging into \textit{Etherless}. These requests are displayed with the respective results they produced. To use this command, follow the syntax:
 \begin{center}
-	\code{etherless history [--limit] [number\_of\_executions]}
+	\code{etherless history [---limit] [number\_of\_executions]}
 \end{center}
 Where \texttt{limit} is an optional flag you can use to indicate the maximum number of elements you want to be displayed. \\
 \subsubsubsection*{Usage}
@@ -222,7 +222,7 @@ The \texttt{history} command can be executed in three ways, in particular:
 \end{center}
 Or by typing:
 \begin{center}
-\code{etherless history --limit 10}
+\code{etherless history ---limit 10}
 \end{center}
 \end{itemize}
 
@@ -273,7 +273,7 @@ Since the file \texttt{mul.js} is located in the current directory, only its nam
 	\code{etherless deploy mul ./source\_code/mul.js "This is a multiplication function"}
 \end{center}
 Meaning \texttt{path} should contain the relative path to the source code from the current directory. \\
-However, should you need to deploy more than one file (see section \ref{dep}), just type the folder path which contains the files you want to deploy as the \texttt{path}. So for example, if your directory called \texttt{source\_code} contains all the files you want to deploy, just type from your terminal window:
+However, should you need to deploy a function with its external dependencies (see section \ref{dep}), just type the folder path which contains the function you want to deploy a as the \texttt{path}. So for example, if your directory called \texttt{source\_code} contains the function you want to deploy and its dependencies files, just type from your terminal window:
 \begin{center}
 	\code{etherless deploy mul ./source\_code "This is a multiplication function"}
 \end{center}
@@ -321,6 +321,7 @@ However, if you want to modify both the source code and the function's descripti
 \begin{center}
 	\code{etherless edit mul mul.js "Now the mul function does this and this and that"}
 \end{center}
+The Edit function can handle functions external dependencies the same way the Deploy function does (see \ref{dep}). 
 
 \subsubsection{Delete}
 You can delete a previously deployed function of your own through the \texttt{delete} command, using the following syntax:
