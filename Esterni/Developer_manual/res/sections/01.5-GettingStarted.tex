@@ -119,17 +119,17 @@ This section shows how to configure the work environment to be able to execute, 
 To download the software product on your machine you should open a shell and change to the location you want the software to be in. Then you should use the command \texttt{git clone https://github.com/RoundaboutTeam/etherless.git} and switch to the \texttt{master} branch.
 \subsubsubsection{Installing the dependencies}
 To install all the packages and libraries needed to work with \textit{Etherless} you should open a shell and change to the directory of the Etherless module you want to work with. Then you should run the command \texttt{npm install}, which will take care of installing all the dependencies specified in the \texttt{package.json} file. If you want to work with all three modules, you should repeat this process for each one of them.
-\subsubsubsection{Etherless-smart}
-\subsubsection{Truffle Suite Configuration}
+\subsubsection{Etherless-smart}
+\subsubsubsection{Truffle Suite Configuration}
 	In order to interact with the Ropsten$_{G}$ testnet, before beginning the installation process you need two keys: an Infura$_{G}$ project id (from your own Infura$_{G}$ account) and the mnemonic phrase of your Ethereum account. Having these credentials you need to edit the \textit{truffle-config.js} file, replacing the matching fields at the top with your own. Now you are ready to interact with the Ropsten$_{G}$ test network directly from Truffle$_{G}$.\\
 	To interact only with a Ganache-cli local blockchain no further configuration is needed, as the information is already stored in the \textit{truffle-config.js} file.
-\subsubsection{Etherless-smart contracts deployment}
-	In order to be accessible, Etherless-smart contracts should be deployed. The contracts should be deployed using the Openzeppelin-cli, in order to easily upgrade them in the future. For detailed instructions on deploying a contract from with the Openzeppeln-cli refer to the \href{https://docs.openzeppelin.com/learn/deploying-and-interacting#deploying-a-smart-contract}{documentation}.\\
-	The contracts should be deployed to the chosen network from the ones, defined in the \texttt{networks.js} file, as follows:
+\subsubsubsection{Etherless-smart contracts deployment}
+	In order to be accessible, Etherless-smart contracts should be deployed, to the chosen network from the ones, defined in the \texttt{networks.js} file, in the same file values like gasLimit and gasPrice can be set. The contract deployment should be done using the Openzeppelin-cli, in order to easily upgrade the contracts in the future. For detailed instructions on deploying a contract from the Openzeppeln-cli refer to the \href{https://docs.openzeppelin.com/learn/deploying-and-interacting#deploying-a-smart-contract}{documentation}.\\
+	The contracts should be deployed as follows:
 	\begin{itemize}
 		\item run the command \texttt{truffle compile};
-		\item first the EtherlessStorage contract should be deployed using \texttt{npx oz deploy} and the resulting contract address should be stored somewhere safe;
-		\item then the EtherlessSmart contract should be deployed using \texttt{npx oz deploy} and calling the initialize function as prompted by the cli. The initializer functions requires:
+		\item the EtherlessStorage contract should be deployed first, using \texttt{npx oz deploy} and the resulting contract address should be stored somewhere safe;
+		\item then the EtherlessSmart contract should be deployed, using \texttt{npx oz deploy} and calling the initialize function as prompted by the cli. The initializer functions requires:
 		\begin{itemize}
 			\item the address of the storage contract, previously deployed;
 			\item the address used for the Etherless-server module;
