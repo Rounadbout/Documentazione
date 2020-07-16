@@ -82,6 +82,7 @@ The aim of this section is to present a list of all the technologies used during
 	minimist & $\geq$1.2.5 \tabularnewline
 	ganache & $\geq$6.4.4 \tabularnewline
 	ganache-cli & $\geq$6.9.1 \tabularnewline
+	adm-zip & $\geq$0.4.16 \tabularnewline
 
 \end{longtable}
 \subsection{Requirements}
@@ -105,104 +106,239 @@ This section describes all the steps needed to install \textit{Etherless}.
 	For information on how to install Git on different OS, follow the official guide on: \href{https://git-scm.com/book/en/v2/Getting-Started-Installing-Git}{How to install Git}.
 \subsubsection{Node}
 	Download the the latest version of the executable file from the \href{https://nodejs.org/it/download/}{Node official website} and follow the given instructions. This will also install Node package manager.
+\subsubsection{Serverless Framework}
+	Open a shell and run the command: \texttt{npm install -g serverless} to install the Serverless Framework.
 \subsubsection{Ganache}
 	Ganache$_{G}$ is available in two variants, CLI and GUI. Refer to the \href{https://www.trufflesuite.com/docs/ganache/quickstart}{Ganache$_{G}$ official website} for installation and usage.
 \subsubsection{Truffle}
  In order to install Truffle$_{G}$ you need to run \texttt{npm install truffle -g} from your terminal window. The minimum version required is 4.0.0.
 \subsection{Configuration}
 This section shows how to configure the work environment to be able to execute, test and develop on \textit{Etherless}. These configuration steps should be followed in the given order.
-\subsubsection{Cloning the repository}
+\subsubsection{General}
+\subsubsubsection{Cloning the repository}
 To download the software product on your machine you should open a shell and change to the location you want the software to be in. Then you should use the command \texttt{git clone https://github.com/RoundaboutTeam/etherless.git} and switch to the \texttt{master} branch.
-\subsubsection{Installing the dependencies}
-To install all the packages and libraries needed to work with \textit{Etherless} you should open a shell and change to the main directory. Then you should run the command \texttt{npm install}, which will take care of installing all the dependencies specified in the \texttt{package.json} file.
-\subsubsection{AWS and Ethereum configurations}
-The files containing Ethereum and AWS$_{G}$ credentials used to interact with the corresponding services are not included in the cloned repository for security reasons. These are present on the Etherless-server version already uploaded and are active on AWS Elastic Beanstalk$_{G}$.
-Any developer who might want to work with a local version of Etherless-server should create an \texttt{AWSconfig.json} file structured as follows:
-\begin{quote}
-\texttt{ \\
-	\{\\
-		"awsKey": <<insert AWS key>>, \\
-		"awsSecretKey": <<insert AWS secret key>>, \\
-		"awsRegion": <<insert AWS region>> \\
-	\}\\
-}
-\end{quote}
-To interact with the contracts on the Ethereum blockchain, a \texttt{smartConfig.json} file should be created with the following structure:
-\begin{quote}
-\texttt{ \\
-	\{\\
-	"walletAddress": <<insert wallet address>>, \\
-	"privateKey": <<insert private key>>, \\
-	"contractAddress": <<insert contract address>>, \\
-	"networkName": <<insert network name>> \\
-	\}\\
-}
-\end{quote}
-The parameters within angular brackets should be replaced with the actual credentials and both files be moved to the \texttt{Config} directory inside Etherless-server.
-\subsubsection{Enable \texttt{etherless} commands}
-To enable using commands with the keyword \texttt{etherless} you should open a shell and change to the main directory. Then you should run the command \texttt{npm link} as Administrator.
+\subsubsubsection{Installing the dependencies}
+To install all the packages and libraries needed to work with \textit{Etherless} you should open a shell and change to the directory of the Etherless module you want to work with. Then you should run the command \texttt{npm install}, which will take care of installing all the dependencies specified in the \texttt{package.json} file. If you want to work with all three modules, you should repeat this process for each one of them.
+\subsubsubsection{Etherless-smart}
 \subsubsection{Truffle Suite Configuration}
 	In order to interact with the Ropsten$_{G}$ testnet, before beginning the installation process you need two keys: an Infura$_{G}$ project id (from your own Infura$_{G}$ account) and the mnemonic phrase of your Ethereum account. Having these credentials you need to edit the \textit{truffle-config.js} file, replacing the matching fields at the top with your own. Now you are ready to interact with the Ropsten$_{G}$ test network directly from Truffle$_{G}$.\\
 	To interact only with a Ganache-cli local blockchain no further configuration is needed, as the information is already stored in the \textit{truffle-config.js} file.
+\subsubsection{Etherless-smart contracts deployment}
+	In order to be accessible, Etherless-smart contracts should be deployed. The contracts should be deployed using the Openzeppelin-cli, in order to easily upgrade them in the future. For detailed instructions on deploying a contract from with the Openzeppeln-cli refer to the \href{https://docs.openzeppelin.com/learn/deploying-and-interacting#deploying-a-smart-contract}{documentation}.\\
+	The contracts should be deployed to the chosen network from the ones, defined in the \texttt{networks.js} file, as follows:
+	\begin{itemize}
+		\item run the command \texttt{truffle compile};
+		\item first the EtherlessStorage contract should be deployed using \texttt{npx oz deploy} and the resulting contract address should be stored somewhere safe;
+		\item then the EtherlessSmart contract should be deployed using \texttt{npx oz deploy} and calling the initialize function as prompted by the cli. The initializer functions requires:
+		\begin{itemize}
+			\item the address of the storage contract, previously deployed;
+			\item the address used for the Etherless-server module;
+			\item the service fee that should be applied to the requests;
+		\end{itemize}
+	\end{itemize}
+\subsubsection{Etherless-server}
+\subsubsubsection{AWS, Ethereum, IPFS configurations and contract ABI}
+The files containing the Ethereum and AWS$_{G}$ credentials and the IPFS configurations used to interact with the corresponding services are not included in the cloned repository for security reasons. These are present on the Etherless-server version already uploaded and are active on AWS Elastic Beanstalk$_{G}$.
+Any developer who might want to work with a local version of Etherless-server should create an \texttt{awsConfig.json} file structured as follows:
+\begin{quote}
+	\texttt{ \\
+		\{\\
+		"awsKey": <<insert AWS key>>, \\
+		"awsSecretKey": <<insert AWS secret key>>, \\
+		"awsRegion": <<insert AWS region>> \\
+		\}\\
+	}
+\end{quote}
+To interact with the contracts on the Ethereum blockchain, a \texttt{smartConfig.json} file should be created with the following structure:
+\begin{quote}
+	\texttt{ \\
+		\{\\
+		"walletAddress": <<insert wallet address>>, \\
+		"privateKey": <<insert private key>>, \\
+		"contractAddress": <<insert contract address>>, \\
+		"networkName": <<insert network name>> \\
+		\}\\
+	}
+\end{quote}
+To interact with IPFS, using the ipfs-mini API, an \texttt{ipfsConfig.json} file should be created with the following structure:
+\begin{quote}
+	\texttt{ \\
+		\{\\
+		"host": "ipfs.infura.io", \\
+		"port": 5001, \\
+		"protocol": "https", \\
+		\}\\
+	}
+\end{quote}
+Lastly, the code needs the ABI of the smart contract it will interact with. An \texttt{abi.json} file containing the Etherless-smart contract ABI should then be created.
+The parameters within angular brackets should be replaced with the actual credentials and all the files be moved to the \texttt{Config} directory inside Etherless-server.
+\subsubsubsection{Deployment on AWS Elastic Beanstalk and Lambda}
+	In order to keep the Etherless-server module always active and running, it should be deployed on an AWS Elastic Beanstalk environment. To do that, you should:
+	\begin{itemize}
+		\item log into AWS and go to AWS Elastic Beanstalk;
+		\item create a new application inside the EBS service;
+		\item locally generate a zip archive with the content of the \texttt{etherless-server} folder;
+		\item deploy the zip archive as a new application version on EBS, which creates an EBS Node.js environment where your application will run;
+	\end{itemize}
+	In addition to this process, in order to allow the serverless deployment of new functions on the platform, you should deploy on AWS Lambda a deployer function. The content of the deployer function is stored inside the \texttt{serverless} folder in the Etherless-server directory. To deploy this function using the Serverless Framework you should:
+	\begin{itemize}
+		\item position yourself inside the \texttt{serverless} folder;
+		\item run the \texttt{serverless} command;
+		\item follow the prompt instructions to configure your AWS and Serverless account;
+		\item run the \texttt{serverless deploy} command, which will use the already present \texttt{serverless.yml} configuration file, to perform the deployment on AWS Lambda.
+	\end{itemize}
+
 \subsection{Functionalities}
-	This section lists all the available functionalities of \textit{Etherless} and the corresponding CLI commands that trigger them.
+	This section lists all the available functionalities of \textit{Etherless} and the corresponding CLI commands that trigger them. The following descriptions are also accessible from the CLI itself, by executing the command followed by the \texttt{---help} option. To display the command current version, one should execute the command followed by the \texttt{---version} option.
+	\subsubsection*{Exemples}
+	\texttt{etherless <command> ---help} \\
+	\texttt{etherless <command> ---version}
 	\subsubsection{Signup}
-	Creates a new account with an empty Ethereum wallet.
+	This function creates a new account with an empty Ethereum wallet and displays its address, private key and mnemonic phrase. It is possible to save the credentials on a local .txt file, by adding the \texttt{---save} option after the command. 
 	\subsubsection*{Command}
-	\texttt{etherless signup}
+	\texttt{etherless signup [---save]}
 	\subsubsection{Login}
-	Creates a login session with the given private key or mnemonic phrase, allowing to make requests on the \textit{Etherless} platform.
+	Creates a login session with the given private key or mnemonic phrase, allowing to make requests on the \textit{Etherless} platform. After this command has been executed, the user is asked to type in a password to encrypt a wallet, which will be locally instantiated. The password is required each time a command that involves an Ethereum transaction is executed.
 	\subsubsection*{Command}
 	\texttt{etherless login <private\_key>} \\
 	\texttt{etherless login -m <mnemonic\_phrase>}
 	\subsubsection{Logout}
-	Closes a previously created login session.
+	Closes a previously created login session, deleting the local instance of the wallet used for the Ethereum transactions. 
 	\subsubsection*{Command}
 	\texttt{etherless logout}
 	\subsubsection{Who am I}
-	Shows the address of the logged user.
+	Displays the address of the logged user. 
 	\subsubsection*{Command}
 	\texttt{etherless whoami}
 	\subsubsection{Init}
-	Shows a brief description of the \texttt{login} and \texttt{signup} functionalities.
+	Displays a brief description of the \texttt{login} and \texttt{signup} functionalities, allowing a new user to quickly understand how to start interacting with the platform.
 	\subsubsection*{Command}
 	\texttt{etherless init}
 	\subsubsection{Info}
-	Returns informations related to a given function, specifically the developer address, the function name, the function signature, the function price and a brief description.
+	Displays the following information of a given function:
+	\begin{itemize}
+		\item developer address;
+		\item function name;
+		\item function signature;
+		\item function price;
+		\item a brief description of the function.
+	\end{itemize}
+	This is a relatively fast operation, that interacts only with Etherless-smart.
 	\subsubsection*{Command}
 	\texttt{etherless info <function\_name>}
 	\subsubsection{History}
-	Lists all the past executions of the user, can be limited to a certain amount of executions.
+	Displays a list of all the run requests made by the current user. The list can be limited to a maximum number of requests. For each run request, the following information is shown:
+	\begin{itemize}
+		\item request unique identifier;
+		\item the name of the called function;
+		\item list of parameters the function was called with;
+		\item request result;
+		\item date and time of the request.
+	\end{itemize}
+	It is possibile to limit the number of executions displayed, by adding the \texttt{---limit} option followed by the number of desired executions (or just the number of desired executions), after the command.
+	This is a relatively fast operation, that interacts only with Etherless-smart.
 	\subsubsection*{Command}
-	\texttt{etherless history [limit]}
+	\texttt{etherless history [---limit] [number\_of\_executions]}
 	\subsubsection{Search}
-	Returns a list of functions that contain the given keyword inside the name.
+	Displays a list of functions that contain the given keyword inside the function's name. For each function, the following information is shown:
+	\begin{itemize}
+		\item function signature;
+		\item function cost.
+	\end{itemize}
+	This is a relatively fast operation, that interacts only with Etherless-smart.
 	\subsubsection*{Command}
 	\texttt{etherless search <keyword>}
 	\subsubsection{List}
-	Displays a list of all available functions inside the \textit{Etherless} platform.
+	Displays a list of all the available functions inside the \textit{Etherless} platform. If the optional flag \texttt{-m} is used, only functions owned by the current user are displayed. For each function, the following information is shown:
+	\begin{itemize}
+		\item function signature;
+		\item function cost.
+	\end{itemize}This is a relatively fast operation, that interacts only with Etherless-smart.
 	\subsubsection*{Command}
-	\texttt{etherless list [m]}
+	\texttt{etherless list [-m]}
 	\subsubsection{Run}
-	Requests the execution of a given function with the given spaced parameters.
+	Requests the execution of a function with the given spaced parameters, the \texttt{---params} option is implicit if any parameters are given. This command requires the user's password, used to decrypt their wallet. A run request is then created and handled by the following process:
+	\begin{itemize}
+		\item the request is sent to Etherless-smart and an Ethereum escrow transaction is generated;
+		\item the request is forwarded to Etherless-server, which processes it by running the specified function in AWS Lambda;
+		\item the result is returned to Etherless-smart, thus completing the escrow transaction;
+		\item the result is sent back to Etherless-cli, to be displayed to the user.
+	\end{itemize}
+	As described, this operation interacts with both Etherless-smart and Etherless-server, making it a relatively slow operation.
 	\subsubsection*{Command}
-	\texttt{etherless run <function\_name> [parameter\_list]}
+	\texttt{etherless run <function\_name> [---params] [parameter\_list]}
 	\subsubsection{Deploy}
-	Requests the deployment of a new function, using the given source file path, function name and description.
+	Requests the deployment of a new function, using the given source file/folder path, function name and description. If the specified path is relative to a single source file, the deployment will be performed without considering any external dependencies. If the specified path is relative to a directory, it should contain the following named files:
+	\begin{itemize}
+		\item \textbf{index.js}: source code file;
+		\item \textbf{package.json}: file used to handle external dependencies;
+		\item \textbf{package-lock.json}: file used to handle external dependencies.
+	\end{itemize}
+	In this case, the system will manage the deployment of the source code and serverlessly install the given dependencies.
+	This command requires the user's password, used to decrypt their wallet. The following process is then started:
+	\begin{itemize}
+		\item the specified source file is uploaded to IPFS, and its IPFS identifying code is displayed;
+		\item a deployment request is sent to Etherless-smart and an Ethereum escrow transaction is generated;
+		\item the request is forwarded to Etherless-server, which processes it by getting the source file from IPFS and creating a function in AWS Lambda;
+		\item the result is returned to Etherless-smart, thus completing the escrow transaction. The newly deployed function is then added to the list of functions in Etherless-smart;
+		\item the result is sent back to Etherless-cli, to be displayed to the user.
+	\end{itemize}
+	As described, this operation interacts with both Etherless-smart and Etherless-server, making it a relatively slow operation.
 	\subsubsection*{Command}
-	\texttt{etherless deploy <path> <function\_name> <function\_desc>}
+	\texttt{etherless deploy <function\_name> <path>  <function\_desc>}
 	\subsubsection{Edit}
-	Requests the editing of an existing function, using the given function name and the field to modify (a new description or the path of the new source file).
+	Requests the editing of an existing function, specifying the function name and the fields to be edited with a flag, followed by the required information:
+	\begin{itemize}
+		\item \textbf{\texttt{-d}}: update only the function description, with the given description;
+		\item \textbf{\texttt{-s}}: update only the function code, with the source code in the given path;
+		\item \textbf{no flag}: update both description and function code, with the given description and the source code in the given path.
+	\end{itemize}
+	If the specified path is relative to a single source file, the editing will be performed without considering any external dependencies. If the specified path is relative to a directory, it should contain the following named files:
+	\begin{itemize}
+		\item \textbf{index.js}: source code file;
+		\item \textbf{package.json}: file used to handle external dependencies;
+		\item \textbf{package-lock.json}: file used to handle external dependencies.
+	\end{itemize}
+	In this case, the system will manage the editing of the source code and serverlessly install the given dependencies. This command requires the user's password, used to decrypt their wallet. The following process is then started:
+	\begin{itemize}
+		\item the specified source file is uploaded to IPFS, and its IPFS identifing code is displayed;
+		\item an edit request is sent to Etherless-smart and an Ethereum escrow transaction is generated;
+		\item the request is forwarded to Etherless-server, which processes it by getting the source file from IPFS and updating the specified function code in AWS Lambda;
+		\item the result is returned to Etherless-smart, thus completing the escrow transaction.
+		\item the result is sent back to Etherless-cli, to be displayed to the user.
+	\end{itemize}
+	As described, this operation interacts with both Etherless-smart and Etherless-server, making it a relatively slow operation.
 	\subsubsection*{Command}
-	\texttt{etherless edit <function\_name> [path] [newDesc]}
+	\texttt{etherless edit <function\_name> -d <newDesc>} \\
+	\texttt{etherless edit <function\_name> -s <path>} \\
+	\texttt{etherless edit <function\_name> <path> <newDesc>} \\
 	\subsubsection{Delete}
-	Requests the delete of an existing function, using the given function name.
+	Requests the removal of an existing function, using a given function name. A delete request is then created and handled by the following process:
+	\begin{itemize}
+		\item the request is sent to Etherless-smart and an Ethereum escrow transaction is generated;
+		\item the request is forwarded to Etherless-server, which processes it by removing the specified function from AWS Lambda;
+		\item the result is returned to Etherless-smart, thus completing the escrow transaction. The function is then removed from the list of functions;
+		\item the result is sent back to Etherless-cli, to be displayed to the user.
+	\end{itemize}
+	As described, this operation interacts with both Etherless-smart and Etherless-server, making it a relatively slow operation.
 	\subsubsection*{Command}
 	\texttt{etherless delete <function\_name>}
 \subsection{Testing}
-\subsubsection{Etherless}
-Launching the \texttt{npm test} command inside the \textit{Etherless} directory will automatically trigger all the developed tests for the software product.
 \subsubsection{Etherless-cli and Etherless-server}
-It is possible to test the Etherless-cli and Etherless-server modules indipendently by launching the \texttt{npm test} command inside their directories.
+It is possible to test the Etherless-cli and Etherless-server modules independently by launching the \texttt{npm test} command inside their directories.
 \subsubsection{Etherless-smart}
 It is possible to test the Etherless-smart module by launching the \texttt{truffle test} command inside the module's directory.
+\subsection{Update the package}
+This section describes all the steps needed to update the package. \\
+Before continuing with the following steps make sure you have updated the version of the package in the Etherless-cli file \texttt{package.json};
+It is also important that the package name is not changed, otherwise the npm package cannot be updated. \\
+The steps needed to update the package are:
+\begin{itemize}
+	\item position yourself inside the Etherless-cli repository and open a terminal;
+	\item compile typescript source files by running \texttt{npm run build};
+	\item commit the changes and push all to the repository;
+	\item login with an npm account of a maintainer which can make changes in the package. \\
+	If you don't have credentials or your account is not a maintainer of the package, contact the organization;
+	\item run the command \texttt{npm publish --access public};
+	\item run the command \texttt{npm logout} to logout from the npm account.
+\end{itemize}
