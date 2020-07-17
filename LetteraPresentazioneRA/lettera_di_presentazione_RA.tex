@@ -1,0 +1,178 @@
+\documentclass[a4paper]{letter}
+
+\input{../Latex/common_commands.tex}
+
+\usepackage[top=1in,bottom=0.5in,left=1in,right=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\usepackage{tabularx} % tabelle
+\usepackage[table]{xcolor} % definizione colore di sfondo per tabelle
+\usepackage{longtable} % permette di estendere le tabelle su più pagine
+
+
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[official]{eurosym}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=magenta,
+	urlcolor=blue,
+}
+
+% tabelle
+\def\arraystretch{1.5} % padding
+% comandi e colori tabelle
+\definecolor{lightRowColor}{HTML}{fafafa}
+\definecolor{darkRowColor}{HTML}{ffcccb}
+
+\newcommand{\coloredTableHead}{\rowcolor[HTML]{b61827}}
+\newcommand{\lightTableRow}{\rowcolor{lightRowColor}}
+\newcommand{\darkTableRow}{\rowcolor{darkRowColor}}
+
+\pagestyle{fancy}
+\title{Lettera di Presentazione}
+\author{Marco Positello}
+\fancypagestyle{plain}{
+\fancyhead[l]{\includegraphics[width=0.5\textwidth]{./res/img/cropped_logo.png}\hfill\includegraphics[width=0.15\textwidth]{./res/img/logo_uni.png}}
+\fancyfoot[c]{}
+}
+\pagestyle{plain}
+
+\makeatletter
+\let\ps@empty\ps@plain
+\let\ps@firstpage\ps@plain
+\address{Via Trieste 63, 35131, Padova (PD)}
+
+\longindentation=0pt
+
+\begin{document}
+% \thispagestyle{fancy}
+\begin{letter} {Alla cordiale attenzione di \\ \TV \\ \RC \\ Via Trieste 63, 35131, Padova\\ Dipartimento di Matematica \\ Università degli studi di Padova }
+  \vspace*{-0.4\baselineskip}
+\date{17 Luglio 2020}
+\opening{Egregi Professori,}
+con la presente il gruppo \Gruppo{} intende comunicarVi ufficialmente la propria partecipazione alla Revisione di Accettazione in data 20 Luglio 2020, allo scopo di esporVi il prodotto da Voi commissionato, denominato:
+  \begin{center}
+    \textbf{Etherless: piattaforma cloud per il deploy di funzioni Javascript e gestione del pagamento per la loro esecuzione tramite Ethereum}
+  \end{center}
+  proposto dall'azienda \Proponente.\\
+  In allegato potrete trovare i seguenti documenti, che illustrano l'offerta:
+  \begin{itemize}
+    \item \AdR{} \textit{v3.0.0} (Esterni/analisi\_dei\_requisiti\_v3.0.0.pdf);
+    \item \PdP{} \textit{v4.0.0} (Esterni/piano\_di\_progetto\_v4.0.0.pdf);
+    \item \PdQ{} \textit{v4.0.0} (Esterni/piano\_di\_qualifica\_v4.0.0.pdf);
+    \item \Glossario{} \textit{v4.0.0} (Esterni/glossario\_v4.0.0.pdf);
+		\item \textit{User Manual v1.0.0} (Esterni/user\_manual\_v1.0.0.pdf);
+		\item \textit{Developer Manual v1.0.0} (Esterni/developer\_manual\_v1.0.0.pdf);
+    \item \NdP{} \textit{v4.0.0} (Interni/norme\_di\_progetto\_v4.0.0.pdf);
+    \item \SdF{} \textit{v1.0.0} (Interni/studio\_di\_fattibilità\_v.1.0.0.pdf);
+    \item Verbali delle riunioni interne:
+      \begin{itemize}
+      				\item \textit{VI\_2020\_03\_10} (Interni/Verbali/VI\_2020\_03\_10.pdf);
+				\item \textit{VI\_2020\_03\_13} (Interni/Verbali/VI\_2020\_03\_13.pdf);
+				\item \textit{VI\_2020\_03\_17} (Interni/Verbali/VI\_2020\_03\_17.pdf);
+				\item \textit{VI\_2020\_03\_20} (Interni/Verbali/VI\_2020\_03\_20.pdf);
+				\item \textit{VI\_2020\_03\_24} (Interni/Verbali/VI\_2020\_03\_24.pdf);
+				\item \textit{VI\_2020\_03\_27} (Interni/Verbali/VI\_2020\_03\_27.pdf);
+				\item \textit{VI\_2020\_03\_30} (Interni/Verbali/VI\_2020\_03\_30.pdf);
+				\item \textit{VI\_2020\_04\_04} (Interni/Verbali/VI\_2020\_04\_04.pdf);
+				\item \textit{VI\_2020\_04\_06} (Interni/Verbali/VI\_2020\_04\_06.pdf);
+				\item \textit{VI\_2020\_04\_08} (Interni/Verbali/VI\_2020\_04\_08.pdf);
+				\item \textit{VI\_2020\_04\_21} (Interni/Verbali/VI\_2020\_04\_21.pdf);
+				\item \textit{VI\_2020\_04\_22} (Interni/Verbali/VI\_2020\_04\_22.pdf);
+				\item \textit{VI\_2020\_04\_25} (Interni/Verbali/VI\_2020\_04\_25.pdf);
+				\item \textit{VI\_2020\_04\_28} (Interni/Verbali/VI\_2020\_04\_28.pdf);
+				\item \textit{VI\_2020\_04\_30} (Interni/Verbali/VI\_2020\_04\_30.pdf);
+				\item \textit{VI\_2020\_05\_05} (Interni/Verbali/VI\_2020\_05\_05.pdf);
+				\item \textit{VI\_2020\_05\_08} (Interni/Verbali/VI\_2020\_05\_08.pdf);
+				\item \textit{VI\_2020\_05\_12} (Interni/Verbali/VI\_2020\_05\_12.pdf);
+				\item \textit{VI\_2020\_05\_13} (Interni/Verbali/VI\_2020\_05\_13.pdf);
+				\item \textit{VI\_2020\_05\_19} (Interni/Verbali/VI\_2020\_05\_19.pdf);
+				\item \textit{VI\_2020\_05\_23} (Interni/Verbali/VI\_2020\_05\_23.pdf);
+				\item \textit{VI\_2020\_05\_26} (Interni/Verbali/VI\_2020\_05\_26.pdf);
+				\item \textit{VI\_2020\_06\_02} (Interni/Verbali/VI\_2020\_06\_02.pdf);
+				\item \textit{VI\_2020\_06\_05} (Interni/Verbali/VI\_2020\_06\_05.pdf);
+				\item \textit{VI\_2020\_06\_12} (Interni/Verbali/VI\_2020\_06\_12.pdf);
+				\item \textit{VI\_2020\_06\_20} (Interni/Verbali/VI\_2020\_06\_20.pdf);
+				\item \textit{VI\_2020\_06\_22} (Interni/Verbali/VI\_2020\_06\_22.pdf);
+				\item \textit{VI\_2020\_06\_26} (Interni/Verbali/VI\_2020\_06\_26.pdf);
+				\item \textit{VI\_2020\_07\_02} (Interni/Verbali/VI\_2020\_07\_02.pdf);
+				\item \textit{VI\_2020\_07\_06} (Interni/Verbali/VI\_2020\_07\_06.pdf);
+				\item \textit{VI\_2020\_07\_13} (Interni/Verbali/VI\_2020\_07\_13.pdf);
+				\item \textit{VI\_2020\_07\_15} (Interni/Verbali/VI\_2020\_07\_15.pdf).
+      \end{itemize}
+    \item Verbali delle riunioni esterne:
+      \begin{itemize}
+      				\item \textit{VE\_2020\_03\_18} (Esterni/Verbali/VE\_2020\_03\_18.pdf);
+				\item \textit{VE\_2020\_03\_27} (Esterni/Verbali/VE\_2020\_03\_27.pdf);
+				\item \textit{VE\_2020\_04\_10} (Esterni/Verbali/VE\_2020\_04\_10.pdf);
+				\item \textit{VE\_2020\_04\_23} (Esterni/Verbali/VE\_2020\_04\_23.pdf);
+				\item \textit{VE\_2020\_04\_30} (Esterni/Verbali/VE\_2020\_04\_30.pdf);
+				\item \textit{VE\_2020\_05\_04} (Esterni/Verbali/VE\_2020\_05\_04.pdf);
+				\item \textit{VE\_2020\_05\_21} (Esterni/Verbali/VE\_2020\_05\_21.pdf);
+				\item \textit{VE\_2020\_05\_26} (Esterni/Verbali/VE\_2020\_05\_26.pdf);
+				\item \textit{VE\_2020\_05\_28} (Esterni/Verbali/VE\_2020\_05\_28.pdf);
+				\item \textit{VE\_2020\_06\_15} (Esterni/Verbali/VE\_2020\_06\_15.pdf);
+				\item \textit{VE\_2020\_07\_07} (Esterni/Verbali/VE\_2020\_07\_07.pdf);
+				\item \textit{VE\_2020\_07\_15} (Esterni/Verbali/VE\_2020\_07\_15.pdf).
+      \end{itemize}
+  \end{itemize}
+%\newpage
+
+%In termini di tempi e costi di consegna, il gruppo \Gruppo{} conferma quanto proposto alla revisione precedente. \\
+%Come descritto nel documento \PdP{} \textit{v3.0.0}, il preventivo di costo finale è pari all'importo totale di \textbf{15.036,00\euro{}}.\\
+Il codice del prodotto e la documentazione ufficiale sono disponibili al seguente indirizzo, corrispondente al repository ufficiale del gruppo \Gruppo{}:
+\begin{center}
+\url{https://github.com/RoundaboutTeam/etherless}
+\end{center}
+Il gruppo consegna il prodotto il giorno 2020-07-17, con relativo collaudo fissato in data 2020-07-20.\\
+Come descritto nel documento \PdP{} \textit{v4.0.0}, il costo finale è pari all'importo totale di \textbf{15.013,00\euro{}}.\\
+Al momento della consegna dei documenti, l'organigramma del gruppo \Gruppo{} è il seguente:
+\newpage
+\rowcolors{2}{lightRowColor}{darkRowColor}
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
+			>{\centering}p{0.15\textwidth}
+			>{\centering\arraybackslash}p{0.4\textwidth} }
+
+			\coloredTableHead
+			\textbf{\color{white}Nome} &
+			\textbf{\color{white}Matricola} &
+			\textbf{\color{white}Indirizzo email}
+			\tabularnewline
+			\endhead
+
+			% Contenuto della tabella
+			% Nome & Matricola & Indirizzo email\\
+			\VB & 1143463 & veronica.barbieri.1@studenti.unipd.it \\
+			\LB & 1122109 & luca.benetazzo@studenti.unipd.it \\
+			\NF & 1143541 & nicoletta.fabro@studenti.unipd.it \\
+			\EG & 1187021 & egon.galvani@studenti.unipd.it \\
+			\FJ & 1163064 & feim.jakupi@studenti.unipd.it \\
+			\MP & 1167693 & marco.positello@studenti.unipd.it \\
+			\AS & 1144363 & alessandro.sgreva@studenti.unipd.it \\
+			\AZ & 1171766 & antonio.zlatkovski@studenti.unipd.it \\
+
+			\rowcolor{white}\caption {Componenti} \\
+
+		\end{longtable}
+	Rimaniamo a Vostra disposizione per qualsiasi comunicazione o chiarimento.\\
+
+\closing{
+  Cordiali saluti,
+  \fromsig{\includegraphics[scale=0.08]{./res/img/firma_NF.jpg}\\
+  }
+  \fromname{Nicoletta Fabro\\
+  Responsabile di progetto del gruppo \Gruppo{}\\
+  Email: \href{mailto:\Mail}{\Mail{}}
+  }
+}
+
+\end{letter}
+\end{document}
