@@ -7,7 +7,7 @@
 		\item{Codifica.}
 	\end{itemize}
 
-	In particolare, l'obiettivo del team è sviluppare un prodotto\ped{\textit{G}} software che superi i test, soddisfi le richieste ed i requisiti, fissati dal Proponente\ped{\textit{G}}.
+	In particolare, l'obiettivo del team è sviluppare un prodotto\ped{\textit{G}} software che superi i test e soddisfi le richieste ed i requisiti fissati dal Proponente\ped{\textit{G}}.
 
     \subsubsection{Attività}
     	\subsubsubsection{Analisi}
@@ -55,7 +55,7 @@
 
 		\noindent Dove:
 		\begin{itemize}
-         	\item{\textbf{codice padre}: numero che identifica univocamente i casi d'uso\ped{\textit{G}} generici;}
+         	\item{\textbf{codice padre}: numero che identifica univocamente i casi d'uso\ped{\textit{G}} di primo livello;}
          	\item{\textbf{codice figlio}: numero progressivo che identifica i sottocasi. Può a sua volta includere altri livelli.}
 		\end{itemize}
 
@@ -123,11 +123,11 @@
 
 
     \subsubsubsection{Progettazione}
-        L'attività di progettazione definisce una soluzione del problema presentato soddisfacente per tutti gli stakeholders, in relazione ai requisiti specificati nel documento \AdR{} \textit{3.0.0}. Questo garantisce che il prodotto\ped{\textit{G}} sviluppato soddisfi le proprietà e i bisogni specificati dal Proponente\ped{\textit{G}}.
+        L'attività di progettazione definisce una soluzione del problema presentato soddisfacente per tutti gli stakeholders, in relazione ai requisiti specificati nel documento \AdR{} \textit{4.0.0}. Questo garantisce che il prodotto\ped{\textit{G}} sviluppato soddisfi le proprietà e i bisogni specificati dal Proponente\ped{\textit{G}}.
         La progettazione ha quindi come obiettivo l'elaborazione di una struttura adeguata per il sistema, e si divide in:
         \begin{itemize}
         	\item{\textbf{Progettazione Architetturale}}: vengono svolte operazioni di incremento, verifica dei requisiti e progettazione ad alto livello di un'architettura adeguata alla realizzazione del progetto. La Technology Baseline\ped{\textit{G}} del progetto si ottiene alla fine di questo periodo;
-        	\item{\textbf{Progettazione di Dettaglio}}: vengono svolte operazioni di incremento, verifica dei documenti redatti; vengono definite le specifiche di dettaglio dell'architettura del prodotto\ped{\textit{G}}, partendo dalla Tecnology Baseline\ped{\textit{G}}. Particolare attenzione viene data alla codifica di tale prodotto\ped{\textit{G}} ed alla creazione di un manuale utente e di un manuale sviluppatore. La Product Baseline\ped{\textit{G}} del progetto si ottiene alla fine di questo periodo;
+        	\item{\textbf{Progettazione di Dettaglio}}: vengono svolte operazioni di incremento e di verifica dei documenti redatti; vengono definite le specifiche di dettaglio dell'architettura del prodotto\ped{\textit{G}}, partendo dalla Tecnology Baseline\ped{\textit{G}}. Particolare attenzione viene data alla codifica di tale prodotto\ped{\textit{G}} ed alla creazione di un manuale utente e di un manuale sviluppatore. La Product Baseline\ped{\textit{G}} del progetto si ottiene alla fine di questo periodo;
         \end{itemize}
     	I rispettivi output sono:
         \begin{itemize}
@@ -139,7 +139,7 @@
   Deve contenere:
   \begin{itemize}
 		\item \textbf{tracciamento delle componenti}: viene rappresentata la relazione tra ogni requisito ed il componente che lo soddisfa, dimostrando concretamente il loro soddisfacimento;
-		\item \textbf{test di integrazione}: vengono definite delle classi di verifica per accertarsi che ogni componente del sistema funzioni come previsto;
+		\item \textbf{Test di Integrazione}: vengono definite delle classi di verifica per accertarsi che ogni componente del sistema funzioni come previsto;
 		\item \textbf{tecnologie utilizzate}: devono essere descritte le tecnologie utilizzate, specificandone l'utilizzo nel progetto e le motivazioni per cui sono state scelte.
 		\item \textbf{PoC\ped{\textit{G}} (Proof of Concept)}: eseguibile funzionale alla dimostrazione dell'adeguatezza delle scelte architetturali;
   \end{itemize}
@@ -157,7 +157,7 @@
 		\item \textbf{design pattern}\ped{\textit{G}}: vengono esplicitati chiaramente i design pattern\ped{\textit{G}} utilizzati per l'architettura, accompagnandoli con una descrizione ed un diagramma così da esporne il significato e la struttura;
 		\item \textbf{definizione delle classi}: ogni classe viene descritta illustrandone lo scopo e le funzionalità;
 		\item \textbf{tracciamento delle classi}: ogni requisito viene tracciato, in modo da garantire che ogni classe ne soddisfi almeno uno;
-		\item \textbf{test di unità}: vengono definiti dei test di unità per verificare che le componenti del sistema funzionino come previsto.
+		\item \textbf{Test di Unità}: vengono definiti dei Test di Unità per verificare che le componenti del sistema funzionino come previsto.
   \end{itemize}
 
     	\subsubsection*{Diagrammi delle classi}
@@ -263,14 +263,14 @@
     	\subsubsubsection*{Qualità dell'architettura}
     	In seguito alla definizione dei requisiti, che consolida le funzionalità richieste, ci si occupa della realizzazione dell'architettura del sistema. Tale architettura dovrà godere delle seguenti proprietà:
     	\begin{itemize}
-    		\item{\textbf{sufficienza}}: deve soddisfare i requisiti definiti nel documento \AdR{} \textit{3.0.0};
+    		\item{\textbf{sufficienza}}: deve soddisfare i requisiti definiti nel documento \AdR{} \textit{4.0.0};
     		\item{\textbf{comprensibilità}}: deve essere capibile da tutti gli stakeholder;
     		\item{\textbf{modularità}}: deve essere suddivisa in parti chiare e ben distinte;
     		\item{\textbf{robustezza}}: deve essere in grado di sopportare ingressi diversi, sia da parte dell'utente che dell'ambiente;
     		\item{\textbf{estensibilità}}: deve permettere di essere estesa nelle sue funzionalità senza sostanziali modifiche e a costi contenuti al variare dei requisiti;
     		\item{\textbf{efficienza}}: deve gestire le risorse in maniera da ridurre eventuali sprechi;
     		\item{\textbf{affidabilità}}: l'architettura deve garantire una buona usabilità del prodotto\ped{\textit{G}} una volta implementata;
-    		\item{\textbf{disponibilità}}: la manutenzione delle sue parti deve richiedere un tempo limitato e non andare ad affliggere il corretto funzionamento di tutto il sistema;
+    		\item{\textbf{disponibilità}}: la manutenzione delle sue parti deve richiedere un tempo limitato e non deve affliggere il corretto funzionamento di tutto il sistema;
     		\item{\textbf{sicurezza}}: non deve presentare gravi malfunzionamenti o essere vulnerabile ad intrusioni;
     		\item{\textbf{semplicità}}: ogni sua parte deve contenere solo il necessario e nulla di superfluo;
     		\item{\textbf{incapsulazione}}: costituita da componenti le cui informazioni interne non sono visibii da fuori;
@@ -289,10 +289,10 @@
        	\item migliorare la qualità del prodotto\ped{\textit{G}}.
    	\end{itemize}
 
-   	\noindent La scrittura del codice dovrà inoltre perseguire gli obiettivi di qualità stabiliti nel documento \textit{\PdQ{} 3.0.0}, in modo da garantire una buona qualità del codice.
+   	\noindent La scrittura del codice dovrà inoltre perseguire gli obiettivi di qualità stabiliti nel documento \textit{\PdQ{} 4.0.0}, in modo da garantire una buona qualità del codice.
     	\subsubsection*{Stile di codifica}
    \begin{itemize}
-         \item{\textbf{indentazione}: i blocchi innestati devono essere correttamente indentati, usando per ciascun livello di indentazione quattro (4) spazi, fatta eccezione per i commenti. Ogni programmatore dovrà configurare adeguatamente il proprio IDE\ped{\textit{G}} al fine di rispettare tale norma;}
+         \item{\textbf{indentazione}: i blocchi innestati devono essere correttamente indentati, usando per ciascun livello di indentazione due (2) spazi, fatta eccezione per i commenti. Ogni programmatore dovrà configurare adeguatamente il proprio IDE\ped{\textit{G}} al fine di rispettare tale norma;}
 		\item{\textbf{parentesizzazione}: le parentesi di delimitazione dei costrutti vanno inserite in linea e non al di sotto di essi;}
 		\item{\textbf{lunghezza dei metodi}: ove possibile, preferire metodi brevi (poche righe di codice) e che assolvano il minor numero di compiti possibile;}
 		\item{\textbf{univocità dei nomi}: classi, variabili e metodi devono avere un nome univoco ed esplicativo (nome parlante), al fine di evitare ambiguità e consentire ad eventuali lettori di comprendere lo scopo di quel preciso elemento, anche senza conoscenze informatiche pregresse;}
@@ -309,16 +309,40 @@
 
 \subsubsection{Metriche}
 	\subsubsubsection{Metriche di analisi dei requisiti}
-	\subsubsection*{Percentuale dei Requisiti Obbligatori Soddisfatti}
-		\begin{itemize}
-			\item{\textbf{Descrizione}}: la metrica indica la percentuale di requisiti obbligatori soddisfatti sui requisiti totali;
-			\item{\textbf{unità di misura}}: la metrica viene espressa in percentuale;
-			\item{\textbf{formula}}: $ PROS = \displaystyle\frac{\#requisiti\_obbligatori\_soddisfatti}{\#requisti\_obbligatori\_totali}\times100$;
-			\item{\textbf{risultato}}: il risultato è compreso tra 0\% e 100\%, in particolare:
+		\subsubsection*{Percentuale dei Requisiti Obbligatori Soddisfatti}
+			\begin{itemize}
+				\item{\textbf{Descrizione}}: la metrica indica la percentuale di requisiti obbligatori soddisfatti sui requisiti totali;
+				\item{\textbf{unità di misura}}: la metrica viene espressa in percentuale;
+				\item{\textbf{formula}}: $ PROS = \displaystyle\frac{\#requisiti\_obbligatori\_soddisfatti}{\#requisti\_obbligatori\_totali}\times100$;
+				\item{\textbf{risultato}}: il risultato è compreso tra 0\% e 100\%, in particolare:
+					\begin{itemize}
+						\item una valore inferiore al 100\%, indica la presenza di alcuni requisiti obbligatori non ancora soddisfatti;
+						\item una valore pari al 100\%, indica che tutti i requisiti obbligatori presentati sono stati soddisfatti.
+					\end{itemize}
+			\end{itemize}
+
+		\subsubsection*{Percentuale dei Requisiti Desiderabili Soddisfatti}
+			\begin{itemize}
+				\item{\textbf{Descrizione}}: la metrica indica la percentuale di requisiti desiderabili soddisfatti sui requisiti totali;
+				\item{\textbf{unità di misura}}: la metrica viene espressa in percentuale;
+				\item{\textbf{formula}}: $ PRDesS = \displaystyle\frac{\#requisiti\_desiderabili\_soddisfatti}{\#requisti\_desiderabili\_totali}\times100$;
+				\item{\textbf{risultato}}: il risultato è compreso tra 0\% e 100\%, in particolare:
 				\begin{itemize}
-					\item una valore inferiore al 100\%, indica la presenza di alcuni requisiti obbligatori non ancora soddisfatti;
-					\item una valore pari al 100\%, indica che tutti i requisiti obbligatori presentati sono stati soddisfatti.
+					\item una valore inferiore al 100\%, indica la presenza di alcuni requisiti desiderabili non ancora soddisfatti;
+					\item una valore pari al 100\%, indica che tutti i requisiti desiderabili presentati sono stati soddisfatti.
 				\end{itemize}
+			\end{itemize}
+
+		\subsubsection*{Percentuale dei Requisiti Opzionali Soddisfatti}
+		\begin{itemize}
+			\item{\textbf{Descrizione}}: la metrica indica la percentuale di requisiti opzionali soddisfatti sui requisiti totali;
+			\item{\textbf{unità di misura}}: la metrica viene espressa in percentuale;
+			\item{\textbf{formula}}: $ PROpzS = \displaystyle\frac{\#requisiti\_opzionali\_soddisfatti}{\#requisti\_opzionali\_totali}\times100$;
+			\item{\textbf{risultato}}: il risultato è compreso tra 0\% e 100\%, in particolare:
+			\begin{itemize}
+				\item una valore inferiore al 100\%, indica la presenza di alcuni requisiti opzionali non ancora soddisfatti;
+				\item una valore pari al 100\%, indica che tutti i requisiti opzionali presentati sono stati soddisfatti.
+			\end{itemize}
 		\end{itemize}
 
 	\subsubsubsection{Metriche di progettazione}
@@ -463,7 +487,7 @@
 	\end{center}
 
 	\subsubsubsection{Visual Studio Code}
-	Visual Studio Code è l'IDE\ped{\textit{G}} scelto per la parte di codifica, in particolare tale scelta è dovuta a:
+	Visual Studio Code$_{G}$ è l'IDE\ped{\textit{G}} scelto per la codifica. Tale scelta è dovuta ai seguenti fattori:
 	\begin{itemize}
 		\item completa compatibilità con Windows, Linux e macOs: in questo modo tutti i membri del gruppo possono riferirsi ad un unico strumento senza essere vincolati dal sistema operativo da loro utilizzato;
 		\item supporto per sistemi di debugging;

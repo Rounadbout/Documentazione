@@ -8,7 +8,7 @@
 		ylabel={\textbf{Densità errori}},
 		date coordinates in=x,
 		ymin=-2,
-		ymax=20,
+		ymax=100,
 		xtick=data,
 		xticklabel style={
 			rotate=90,
@@ -19,7 +19,7 @@
 		\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/affidabilita/Cli.csv};
 		\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/affidabilita/Smart.csv};
 		\addplot table [col sep=comma,x=date,y=value,blue] {res/sections/B/affidabilita/Server.csv};
-		\draw [line width=0.1, red](2020-5-1, 10)--(2020-6-30, 10);
+		\draw [line width=0.1, red](2020-5-1, 10)--(2020-7-30, 10);
 		\legend{$Cli$ ,$Smart$ ,$Server$};
 		\end{axis}
 		\end{tikzpicture} 

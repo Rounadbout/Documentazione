@@ -1,8 +1,8 @@
 \subsection{Verifica}
     \subsubsection{Descrizione}
 	Il processo di Verifica determina se il prodotto\ped{\textit{G}} di un'attività sia conforme o meno alle specifiche e alle aspettative già confermate, individuando quindi possibili difetti nel software e nella documentazione, e garantendo prodotti\ped{\textit{G}} corretti e completi. \\
-	Il gruppo si impegna inoltre a garantire una verifica costante dei requisiti mantenendosi in stretto contatto con il Proponente\ped{\textit{G}}. 
-		
+	Il gruppo si impegna inoltre a garantire una verifica costante dei requisiti mantenendosi in stretto contatto con il Proponente\ped{\textit{G}}.
+
     \subsubsection{Attività}
       \subsubsubsection{Analisi}
         \subsubsubsection*{Analisi statica}
@@ -34,7 +34,7 @@
         \end{itemize}
         Esistono diversi tipi di test:
         \begin{itemize}
-          \item \textbf{Test di unità}: verificano l'unità, cioè il più piccolo sottosistema possibile che può essere testato separatamente. L'approccio più comune al test di unità prevede la scrittura di driver\ped{\textit{G}} e stub\ped{\textit{G}}, dove il primo simula un'unità chiamante mentre il secondo un'unità chiamata. Tali test devono essere indicati nel seguente modo: 
+          \item \textbf{Test di Unità}: verificano l'unità, cioè il più piccolo sottosistema possibile che può essere testato separatamente. L'approccio più comune al Test di Unità prevede la scrittura di driver\ped{\textit{G}} e stub\ped{\textit{G}}, dove il primo simula un'unità chiamante mentre il secondo un'unità chiamata. Tali test devono essere indicati nel seguente modo:
           \begin{center}
           	\textbf{TU[id\_modulo].[id\_test]}
           \end{center}
@@ -48,66 +48,78 @@
         	\end{itemize}
       	  	\item \textbf{id\_test}: rappresenta il codice identificativo incrementale del test da effettuare.
       	  \end{itemize}
-      	  È responsabilità del singolo Programmatore scrivere i test delle unità più semplici da lui sviluppate. Nel caso in cui l'unità sia più complessa la scrittura del test di unità deve essere compiuta da un Verificatore. 
-        
-          \item \textbf{Test di integrazione}: test eseguiti per verificare che siano rispettati i contratti di interfaccia tra più moduli o sub-system. La forma più semplice di questo tipo di test prevede che le componenti vengano verificate in maniera incrementale, con l'aggiunta di altre unità o gruppi di unità corretti, fino ad arrivare al sistema completo. Tali test devono essere indicati nel seguente modo: 
+      	  È responsabilità del singolo Programmatore scrivere i Test delle Unità più semplici da lui sviluppate. Nel caso in cui l'unità sia più complessa la scrittura del test di unità deve essere compiuta da un Verificatore.
+
+          \item \textbf{Test di Integrazione}: test eseguiti per verificare che siano rispettati i contratti di interfaccia tra più moduli o sub-system. La forma più semplice di questo tipo di test prevede che le componenti vengano verificate in maniera incrementale, con l'aggiunta di altre unità o gruppi di unità corretti, fino ad arrivare al sistema completo. Tali test devono essere indicati nel seguente modo:
           \begin{center}
           	\textbf{TI[id]}
           \end{center}
-      		dove \textit{id} indica il codice identificativo crescente del componente da verificare. 
-         
-			\item \textbf{Test di sistema:} il sistema viene testato nella sua interezza e i  risultati confrontati con quanto richiesto dall'\AdR{} \textit{3.0.0}. In questo modo è possibile accertarsi delle caratteristiche del sistema e della copertura dei requisiti funzionali. Tali test devono essere indicati nel seguente modo: 
+      		dove \textit{id} indica il codice identificativo crescente del componente da verificare.
+
+			\item \textbf{Test di Sistema:} il sistema viene testato nella sua interezza e i  risultati confrontati con quanto richiesto dall'\AdR{} \textit{4.0.0}. In questo modo è possibile accertarsi delle caratteristiche del sistema e della copertura dei requisiti funzionali. Tali test devono essere indicati nel seguente modo:
 			\begin{center}
-				\textbf{TS[id]}
+				\textbf{T[id\_prop][id]}
 			\end{center}
-			dove \textit{id} rappresenta il codice identificativo crescente del componente da verificare. 
-         
-          \item \textbf{Test di regressione}: si effettua in seguito ad una modifica del sistema, in modo da controllare che essa non abbia compromesso le funzionalità già testate in precedenza. Un test di regressione consiste nella reiterazione dei test già esistenti sia per l'unità modifica sia per quelle che si relazionano con essa.
+			Dove:
+			\begin{itemize}
+				\item \textbf{id\_prop}: rappresenta il codice identificativo relativo alla particolare proprietà globale. Può assumere i valori:
+				\begin{itemize}
+					\item{\textbf{F}: per Test delle Funzionalità;}
+					\item{\textbf{SIC}: per Test di Sicurezza;}
+					\item{\textbf{US}: per Test di Usabilità.}
+					\item{\textbf{P}: per Test di Performance.}
+					\item{\textbf{M}: per Test di Memoria/Archiviazione.}
+					\item{\textbf{C}: per Test di Carico.}
+					\item{\textbf{STR}: per Test di Stress.}
+					\item{\textbf{CONF}: per Test di Configurazione.}
+				\end{itemize}
+				\item \textbf{id}: rappresenta il codice identificativo crescente della componente da verificare.
+			\end{itemize}
+
+          \item \textbf{Test di Regressione}: si effettua in seguito ad una modifica del sistema, in modo da controllare che essa non abbia compromesso le funzionalità già testate in precedenza. Un Test di Regressione consiste nella reiterazione dei test già esistenti sia per l'unità modifica sia per quelle che si relazionano con essa.
         \end{itemize}
 
 	\subsubsection{Metriche}
 		\subsubsubsection{Metriche sui test}
 			\paragraph{Code coverage (CC)}
 				\begin{itemize}
-					\item{\textbf{Descrizione}}: la metrica CC indica la percentuale di righe di codice percorse durante il test rispetto alle linee di codice totali. A granularità più fine, la code coverage misura quattro aspetti: 
+					\item{\textbf{Descrizione}}: la metrica CC indica la percentuale di righe di codice percorse durante il test rispetto alle linee di codice totali. A granularità più fine, la code coverage misura quattro aspetti:
 						\begin{itemize}
-							\item{\textbf{statement coverage}}: percentuale di statement percorsi dai test; 
-							\item{\textbf{branch\ped{\textit{G}} coverage}}: percentuale di diramazioni percorse dai test; 
-							\item{\textbf{function converage}}: percentuale di funzioni percorse dai test; 
-							\item{\textbf{line coverage}}: percentuale di righe di codice percorse dai test; 
-						\end{itemize} 
+							\item{\textbf{statement coverage}}: percentuale di statement percorsi dai test;
+							\item{\textbf{branch\ped{\textit{G}} coverage}}: percentuale di diramazioni percorse dai test;
+							\item{\textbf{function converage}}: percentuale di funzioni percorse dai test;
+							\item{\textbf{line coverage}}: percentuale di righe di codice percorse dai test;
+						\end{itemize}
 					\item{\textbf{unità di misura}}: la metrica viene espressa tramite una percentuale;
 					\item{\textbf{formula: }} $ CC = \displaystyle\frac{\#linee\_di\_codice\_eseguite\_dal\_test}{\#linee\_di\_codice\_totali}\times100$;
-					\item{\textbf{risultato}}: il risultato è compreso tra 0.0\% e 100.0\%, in particolare: 
+					\item{\textbf{risultato}}: il risultato è compreso tra 0.0\% e 100.0\%, in particolare:
 						\begin{itemize}
-							\item se il risultato è pari a 0\%, allora non sono presenti test all'interno dell'applicativo; 
-							\item se il risultato è pari a 100\%, allora i test coprono in maniera completa il codice che costituisce l'applicativo. 
-						\end{itemize} 
+							\item se il risultato è pari a 0\%, allora non sono presenti test all'interno dell'applicativo;
+							\item se il risultato è pari a 100\%, allora i test coprono in maniera completa il codice che costituisce l'applicativo.
+						\end{itemize}
 				\end{itemize}
 
     \subsubsection{Strumenti}
 	    \subsubsubsection{Verifica ortografica}
-	    Per la verifica ortografica durante la redazione dei documenti viene utilizzato lo strumento integrato negli editor di testo scelti dai singoli componenti del gruppo. In questo modo, durante la fase di scrittura, è possibile individuare e prontamente correggere gli errori ortografici. 
-	    
+	    Per la verifica ortografica durante la redazione dei documenti viene utilizzato lo strumento integrato negli editor di testo scelti dai singoli componenti del gruppo. In questo modo, durante la fase di scrittura, è possibile individuare e prontamente correggere gli errori ortografici.
+
     	\subsubsubsection{ESLint e Typescript}
-    	Per la verifica del codice software durante la sua scrittura, vengono utilizzati due strumenti: ESLint\ped{\textit{G}} e Typescript\ped{\textit{G}}, integrati come estensioni nell'ambiente di Visual Studio Code. Questi strumenti possono essere appositamente configurati, tramite regole, per guidare lo sviluppatore ad una quanto più corretta e coerente scrittura del codice. Diventa quindi obbligatorio correggere gli errori sollevati da tali strumenti prima di procedere con la compilazione.
-    	
+    	Per la verifica del codice software durante la sua scrittura, vengono utilizzati due strumenti: ESLint\ped{\textit{G}} e Typescript\ped{\textit{G}}, integrati come estensioni nell'ambiente di Visual Studio Code$_{G}$. Questi strumenti possono essere appositamente configurati, tramite regole, per guidare lo sviluppatore ad una quanto più corretta e coerente scrittura del codice. Diventa quindi obbligatorio correggere gli errori sollevati da tali strumenti prima di procedere con la compilazione.
+
     	\subsubsubsection{Jest}
     	Jest\ped{\textit{G}} è un framework\ped{\textit{G}} di test universale, con la capacità di adattarsi a qualsiasi altra libreria o framework\ped{\textit{G}} JavaScript\ped{\textit{G}}.
     	\begin{center}
     		\url{https://jestjs.io/}
     	\end{center}
-    	
+
     	\subsubsubsection{Travis CI}
     	Travis\ped{\textit{G}} è un servizio di integrazione continua\ped{\textit{G}} utilizzato per effettuare build e test automatici del prodotto\ped{\textit{G}}, a seguito dell'inserimento di nuovo codice nella repository\ped{\textit{G}} di prodotto, in GitHub\ped{\textit{G}}.
     	\begin{center}
     		\url{https://travis-ci.org/}
     	\end{center}
-    
+
     	\subsubsubsection{Truffle suite}
-    	Truffle\ped{\textit{G}} viene fornito di serie con un framework\ped{\textit{G}} di test automatizzato. Viene utilizzato per effettuare il test di codice Javascript\ped{\textit{G}} e Solidity\ped{\textit{G}}.
+    	Truffle\ped{\textit{G}} viene fornito di serie con un framework\ped{\textit{G}} di test automatizzato. Viene utilizzato per effettuare il testing di codice Javascript\ped{\textit{G}} e Solidity\ped{\textit{G}}.
     	\begin{center}
     		\url{https://www.trufflesuite.com/}
     	\end{center}
-	    
-    	

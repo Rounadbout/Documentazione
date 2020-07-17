@@ -1,0 +1,44 @@
+\subsubsection{Periodo complessivo}
+
+	\subsubsubsection{Consuntivo}
+		\begin{longtable}{
+			>{\centering}p{0.25\textwidth}
+			>{\centering}p{0.08\textwidth}
+			>{\centering}p{0.08\textwidth}
+			>{\centering}p{0.15\textwidth}
+			>{\centering\arraybackslash}p{0.15\textwidth} }
+
+		\coloredTableHead
+		\textbf{\color{white}Ruolo} &
+		\textbf{\color{white}Ore} &
+		\textbf{\color{white}Delta ore} &
+		\textbf{\color{white}Costo in \euro{}} &
+		\textbf{\color{white}Delta costo}
+		\tabularnewline
+		\endhead
+
+		% Contenuto della tabella
+		% Ruolo & OreEffettive & DeltaOre & Costo & DeltaCosto \\
+		Responsabile    & 22  & +0 &  660,00  & +  0,00 \\
+		Amministratore  & 16  & -1 &  320,00  & - 20,00 \\
+		Analista        & 0   & +0 &  0,00    & + 0,00 \\
+		Progettista     & 18  & +0 &  396,00  & + 0,00 \\
+		Programmatore   & 56  & +9 &  840,00  & + 135,00 \\
+		Verificatore    & 71  & -1 &  1065,00 & - 15,00 \\
+		\textbf{Totale Effettivo} & \multicolumn{2}{c}{\textbf{183}} & \multicolumn{2}{c}{\textbf{3281,00}} \\
+		\textbf{Delta} & \multicolumn{2}{c}{\textbf{+7}} & \multicolumn{2}{c}{\textbf{+100,00}} \\
+
+		\rowcolor{white}\caption{Consuntivo per il periodo di Validazione e Collaudo}	\\
+
+	\end{longtable}
+
+	\subsubsubsection{Conclusioni}
+	Il bilancio finale è \textbf{Negativo}, con una spesa in eccesso di \textbf{100,00\euro}. \\ Come riportato nella tabella del consuntivo per il periodo di Validazione e Collaudo, il numero di ore preventivate per il ruolo di Responsabile e Progettista si è dimostrato adeguato. \\ Segue un'analisi delle motivazioni per cui gli altri ruoli hanno necessitato di un numero di ore differente da quanto previsto:
+	\begin{itemize}
+		\item \textbf{Amministratore}: il numero limitato di modifiche necessarie alle \NdP{} hanno portato ad un risparmio di 1 ora di lavoro;
+		\item \textbf{Programmatore}: lo sviluppo di alcuni requisiti desiderabili ha richiesto piú ore del previsto, oltre alla correzione di alcuni errori minori rilevati nel sistema anche in seguito al miglioramento della suite di test rispetto al periodo precedente nel modulo\ped{\textit{G}} Etherless-cli;
+		\item \textbf{Verificatore}: il numero di ore preventivate per questo ruolo si sono rivelate piú che sufficienti allo svolgimento delle attivitá di verifica.
+	\end{itemize}
+
+	\subsubsubsection{Preventivo a finire}
+	Il bilancio finale del periodo risulta \textbf{Negativo}. Arrivare all'ultima fase del progetto con un bilancio di periodo negativo non é certamente ottimale, tuttavia grazie al risparmio durante i periodi precedenti questo costo in eccesso viene bilanciato e il progetto viene concluso senza eccessi rispetto al preventivo.
